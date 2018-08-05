@@ -436,7 +436,7 @@ const rightNumberOfBackboneNotes = sequence([
     rightNumberOfBackboneTwentyfourNotes,
 ])
 
-const umowchuwowiestCrossedWithStepwiseOneNotes = sequence([
+const zdaubyaosOneNotes = sequence([
     // season 1
     umowwwNotes,
     umowchuwowiestNotes,
@@ -457,7 +457,7 @@ const umowchuwowiestCrossedWithStepwiseOneNotes = sequence([
     stepwiseForUmowchuwowiestCrossedWithStepwiseUmowchuwowiestNotes,
     setOfBackbonesHigherAndHigher,
 ])
-const umowchuwowiestCrossedWithStepwiseTwoNotes = sequence([
+const zdaubyaosTwoNotes = sequence([
     // season 1
     umowwwRestNotes,
     umowchuwowiestNotes,
@@ -478,7 +478,7 @@ const umowchuwowiestCrossedWithStepwiseTwoNotes = sequence([
     stepwiseForUmowchuwowiestCrossedWithStepwiseInbetweenNotes,
     setOfBackbones,
 ])
-const umowchuwowiestCrossedWithStepwiseThreeNotes = sequence([
+const zdaubyaosThreeNotes = sequence([
     // season 1
     umowwwRestNotes,
     umowchuwowiestNotes,
@@ -501,7 +501,7 @@ const umowchuwowiestCrossedWithStepwiseThreeNotes = sequence([
 ])
 
 export {
-    umowchuwowiestCrossedWithStepwiseOneNotes,
-    umowchuwowiestCrossedWithStepwiseTwoNotes,
-    umowchuwowiestCrossedWithStepwiseThreeNotes,
+    zdaubyaosOneNotes,
+    zdaubyaosTwoNotes,
+    zdaubyaosThreeNotes,
 }

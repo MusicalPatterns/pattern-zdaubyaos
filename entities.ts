@@ -1,14 +1,14 @@
 import buildVoice from '../../src/buildVoice'
 import {
-    umowchuwowiestCrossedWithStepwiseOneNotes,
-    umowchuwowiestCrossedWithStepwiseTwoNotes,
-    umowchuwowiestCrossedWithStepwiseThreeNotes,
+    zdaubyaosOneNotes,
+    zdaubyaosTwoNotes,
+    zdaubyaosThreeNotes,
 } from './notes'
 import {dubparticularSeriesPitches, subparticularSeriesPitches} from './pitches'
 import {harmonicSeriesPitches} from '../../src/pitches'
 
-const umowchuwowiestCrossedWithStepwiseOne = {
-    notes: umowchuwowiestCrossedWithStepwiseOneNotes,
+const zdaubyaosOne = {
+    notes: zdaubyaosOneNotes,
     pitches: subparticularSeriesPitches,
     voice: buildVoice('square'),
     voiceGain: .2,
@@ -17,8 +17,8 @@ const umowchuwowiestCrossedWithStepwiseOne = {
     nextOnset: 0,
     nextOffset: 0,
 }
-const umowchuwowiestCrossedWithStepwiseTwo = {
-    notes: umowchuwowiestCrossedWithStepwiseTwoNotes,
+const zdaubyaosTwo = {
+    notes: zdaubyaosTwoNotes,
     pitches: dubparticularSeriesPitches,
     voice: buildVoice('sawtooth'),
     voiceGain: .2,
@@ -27,8 +27,8 @@ const umowchuwowiestCrossedWithStepwiseTwo = {
     nextOnset: 0,
     nextOffset: 0,
 }
-const umowchuwowiestCrossedWithStepwiseThree = {
-    notes: umowchuwowiestCrossedWithStepwiseThreeNotes,
+const zdaubyaosThree = {
+    notes: zdaubyaosThreeNotes,
     pitches: harmonicSeriesPitches,
     voice: buildVoice('sine'),
     voiceGain: .2,
@@ -38,12 +38,12 @@ const umowchuwowiestCrossedWithStepwiseThree = {
     nextOffset: 0,
 }
 
-const umowchuwowiestCrossedWithStepwise = [
-    umowchuwowiestCrossedWithStepwiseOne,
-    umowchuwowiestCrossedWithStepwiseTwo,
-    umowchuwowiestCrossedWithStepwiseThree,
+const zdaubyaos = [
+    zdaubyaosOne,
+    zdaubyaosTwo,
+    zdaubyaosThree,
 ]
 
 export {
-    umowchuwowiestCrossedWithStepwise,
+    zdaubyaos,
 }
