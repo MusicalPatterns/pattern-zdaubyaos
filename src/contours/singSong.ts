@@ -27,12 +27,12 @@ const stepwiseForUmowchuwowiestCrossedWithStepwiseStepwiseNotesDelayedHarmonic: 
     3, 4, 3, 2, 3,
     4, 5, 6,
     7, 8,
-    9, 6,
+    9, 8,
     // Inscape and noodling in 24
-    9, 7, 5, 3,
-    1, 3, 5, 7, 5, 3,
-    1, 3, 5, 7, 5, 3,
-    1, 3, 5, 7, 5, 3,
+    6, 4, 2, 4, 6,
+    8, 6, 4, 2, 4,
+    6, 4, 2, 4, 6,
+    8, 6, 4, 2, 4, 2,
     // No ascent in 24 ...?
 ]
 
