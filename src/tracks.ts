@@ -1,89 +1,92 @@
 import sequence from '../../../src/sequence'
-import { Note } from '../../../src/types'
 import {
-    rightNumberOfBackboneNotes,
-    setOfBackboneHigherAndHigherNotes, setOfBackboneHigherNotes,
-    setOfBackboneNotes,
-    shiftedRhythmNotes,
-    umowchuwowiestAltNotes,
-    umowchuwowiestDoubleAltNotes,
-    umowchuwowiestNotes,
-} from './compoundNotes'
+    backboneseasonA,
+    backboneseasonB,
+    backboneseasonC,
+} from './seasons/backbone'
+import { breatherFall, breatherRest, breatherSpring, breatherSummer, breatherWinter } from './seasons/breather'
+import { trueseasonYetOfBackbone } from './seasons/other'
 import {
-    backboneTwentyfourNotes,
-    shiftedSingSongNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseInbetweenNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseStepwiseNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseStepwiseNotesDelayedHarmonicNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseUmowchuwowiestNotes,
-    umowwwAltAndNotNotes,
-    umowwwAltNotes,
-    umowwwNotes,
-    umowwwRestNotes,
-} from './notes'
+    shiftyseasonA, shiftyseasonB,
+} from './seasons/shifty'
+import {
+    trueseasonYaosInaidjiyaiouzdSummerToSpring,
+    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+    trueseasonYaosUmowchuwowiestSpringToSummer,
+    trueseasonYaosUmowchuwowiestSummerToSpring,
+} from './seasons/trueYaos'
+import {
+    trueseasonZdaubBony,
+    trueseasonZdaubGlis,
+    trueseasonZdaubGlisVariant,
+    trueseasonZdaubTrem,
+} from './seasons/trueZdaub'
+import { Track } from './types'
 
-const zdaubyaosOneNotes: Note[] = sequence([
+const zdaubyaosOneNotes: Track = sequence([
     // Season 1
-    umowwwNotes,
-    umowchuwowiestNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseStepwiseNotes,
+    breatherSpring,
+    trueseasonYaosUmowchuwowiestSpringToSummer,
+    trueseasonZdaubGlis,
     // Season 2
-    umowwwRestNotes,
-    umowchuwowiestAltNotes,
-    umowchuwowiestAltNotes,
-    umowchuwowiestDoubleAltNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestSummerToSpring,
+    trueseasonYaosUmowchuwowiestSummerToSpring,
+    trueseasonYaosInaidjiyaiouzdSummerToSpring,
     // Season 3
-    umowwwRestNotes,
-    rightNumberOfBackboneNotes,
-    rightNumberOfBackboneNotes,
-    shiftedRhythmNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+    trueseasonYetOfBackbone,
+    shiftyseasonA,
     // Season 4
-    umowwwRestNotes,
-    umowchuwowiestNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseUmowchuwowiestNotes,
-    setOfBackboneHigherAndHigherNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestSpringToSummer,
+    trueseasonZdaubTrem,
+    backboneseasonC,
 ])
-const zdaubyaosTwoNotes: Note[] = sequence([
+
+const zdaubyaosTwoNotes: Track = sequence([
     // Season 1
-    umowwwRestNotes,
-    umowchuwowiestNotes,
-    umowchuwowiestNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestSpringToSummer,
+    trueseasonYaosUmowchuwowiestSpringToSummer,
     // Season 2
-    umowwwAltNotes,
-    umowchuwowiestAltNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseStepwiseNotes,
-    umowchuwowiestDoubleAltNotes,
+    breatherSummer,
+    trueseasonYaosUmowchuwowiestSummerToSpring,
+    trueseasonZdaubGlis,
+    trueseasonYaosInaidjiyaiouzdSummerToSpring,
     // Season 3
-    umowwwRestNotes,
-    rightNumberOfBackboneNotes,
-    rightNumberOfBackboneNotes,
-    shiftedSingSongNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+    trueseasonYetOfBackbone,
+    shiftyseasonB,
     // Season 4
-    umowwwRestNotes,
-    umowchuwowiestAltNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseInbetweenNotes,
-    setOfBackboneNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestSummerToSpring,
+    trueseasonZdaubBony,
+    backboneseasonA,
 ])
-const zdaubyaosThreeNotes: Note[] = sequence([
+
+const zdaubyaosThreeNotes: Track = sequence([
     // Season 1
-    umowwwRestNotes,
-    umowchuwowiestNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseUmowchuwowiestNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestSpringToSummer,
+    trueseasonZdaubTrem,
     // Season 2
-    umowwwRestNotes,
-    umowchuwowiestAltNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseStepwiseNotesDelayedHarmonicNotes,
-    umowchuwowiestDoubleAltNotes,
+    breatherRest,
+    trueseasonYaosUmowchuwowiestSummerToSpring,
+    trueseasonZdaubGlisVariant,
+    trueseasonYaosInaidjiyaiouzdSummerToSpring,
     // Season 3
-    backboneTwentyfourNotes,
-    rightNumberOfBackboneNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseInbetweenNotes,
-    shiftedSingSongNotes,
+    breatherFall,
+    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+    trueseasonZdaubBony,
+    shiftyseasonB,
     // Season 4
-    umowwwAltAndNotNotes,
-    umowchuwowiestDoubleAltNotes,
-    stepwiseForUmowchuwowiestCrossedWithStepwiseStepwiseNotes,
-    setOfBackboneHigherNotes,
+    breatherWinter,
+    trueseasonYaosInaidjiyaiouzdSummerToSpring,
+    trueseasonZdaubGlis,
+    backboneseasonB,
 ])
 
 export {

@@ -1,13 +1,15 @@
+import {
+    PLACEHOLDER_PITCH_TO_AVOID_NULL_POINTER_ISSUES,
+    SEPARATION_FOR_NEIGHBORING_NOTES,
+    SILENT,
+} from '../../../src/constants'
 import { Note } from '../../../src/types'
 
 const REST: number = 0
-const SILENT: number = 0
 const MAX_GAIN: number = 1
 const SINGLE_DURATION: number = 1
-const SEPARATION_FOR_NEIGHBORING_NOTES: number = 0.1
-const PLACEHOLDER_PITCH_TO_AVOID_NULL_POINTER_ISSUES: number = 1
 
-const stepwiseForUmowchuwowiestNoteType: (harmonic: number) => Note =
+const glisNoteType: (harmonic: number) => Note =
     (harmonic: number): Note => {
         if (harmonic === REST) {
             return {
@@ -26,7 +28,7 @@ const stepwiseForUmowchuwowiestNoteType: (harmonic: number) => Note =
         }
     }
 
-const umowchuwowiestNoteType: (harmonic: number) => Note =
+const tremNoteType: (harmonic: number) => Note =
     (harmonic: number): Note => ({
         duration: SINGLE_DURATION,
         gain: harmonic === REST ? REST : MAX_GAIN,
@@ -34,7 +36,7 @@ const umowchuwowiestNoteType: (harmonic: number) => Note =
         sustain: SINGLE_DURATION - SEPARATION_FOR_NEIGHBORING_NOTES,
     })
 
-const inbetweenNoteType: (harmonicAndDuration: number[]) => Note =
+const manualNoteType: (harmonicAndDuration: number[]) => Note =
     ([harmonic, duration]: number[]): Note => ({
         duration,
         gain: MAX_GAIN,
@@ -43,7 +45,7 @@ const inbetweenNoteType: (harmonicAndDuration: number[]) => Note =
     })
 
 export {
-    stepwiseForUmowchuwowiestNoteType,
-    umowchuwowiestNoteType,
-    inbetweenNoteType,
+    glisNoteType,
+    tremNoteType,
+    manualNoteType,
 }

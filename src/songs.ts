@@ -1,10 +1,14 @@
 import { Song } from '../../../src/types'
-import { zdaubyaosOne, zdaubyaosThree, zdaubyaosTwo } from './entities'
+import {
+    zdaubyaosDuperparticularSaw,
+    zdaubyaosSubarmonicSine,
+    zdaubyaosSuperparticularSquare,
+} from './entities'
 
 const zdaubyaos: Song = [
-    zdaubyaosOne,
-    zdaubyaosTwo,
-    zdaubyaosThree,
+    zdaubyaosSuperparticularSquare,
+    zdaubyaosDuperparticularSaw,
+    zdaubyaosSubarmonicSine,
 ]
 
 export {
