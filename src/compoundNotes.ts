@@ -1,8 +1,8 @@
 // tslint:disable:no-magic-numbers
 
-import repeat from '../../src/repeat'
-import sequence from '../../src/sequence'
-import { Note } from '../../src/types'
+import repeat from '../../../src/repeat'
+import sequence from '../../../src/sequence'
+import { Note } from '../../../src/types'
 import {
     chuwow,
     chuwowAlt,

@@ -5,7 +5,7 @@ import {
     duperparticularSeriesPitches,
     subparticularSeriesPitches,
     superparticularSeriesPitches,
-} from '../pitches'
+} from '../src/pitches'
 
 describe('pitches', () => {
     describe('subparticular series', () => {

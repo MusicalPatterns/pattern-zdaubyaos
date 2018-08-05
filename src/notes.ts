@@ -1,4 +1,4 @@
-import { Note } from '../../src/types'
+import { Note } from '../../../src/types'
 import {
     backboneFifteen,
     backboneFifteenHigher,

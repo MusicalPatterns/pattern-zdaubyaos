@@ -1,4 +1,4 @@
-import { Note } from '../../src/types'
+import { Note } from '../../../src/types'
 
 const REST: number = 0
 const SILENT: number = 0

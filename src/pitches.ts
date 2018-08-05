@@ -1,4 +1,4 @@
-import numbers from '../../src/numbers'
+import numbers from '../../../src/numbers'
 
 const SUPER: number = 1
 const DUPER: number = 2

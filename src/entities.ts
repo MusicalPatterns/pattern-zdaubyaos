@@ -1,7 +1,7 @@
-import buildEntity from '../../src/buildEntity'
-import buildVoice from '../../src/buildVoice'
-import { harmonicSeriesPitches } from '../../src/pitches'
-import { Entity } from '../../src/types'
+import buildEntity from '../../../src/buildEntity'
+import buildVoice from '../../../src/buildVoice'
+import { harmonicSeriesPitches } from '../../../src/pitches'
+import { Entity } from '../../../src/types'
 import { dubparticularSeriesPitches, subparticularSeriesPitches } from './pitches'
 import {
     zdaubyaosOneNotes,
