@@ -75,15 +75,15 @@ const djiyaiiiFall: Contour = [
     1, 6,
 ]
 
-const inaiiiAlternatingspringandsummer: Contour = [
-    0, 2, 3,
-    1, 0, 3,
-    0, 2, 3,
-    1, 0, 3,
-    0, 2, 3,
-    1, 0, 3,
-    0, 2, 3,
-    1, 0, 3,
+const inaiiiVariety: number[][] = [
+    [0, 1], [2, 1], [3, 1],
+    [1, 1], [0, 1], [3, 1],
+    [0, 1], [2, 1], [3, 1],
+    [1, 1], [0, 1], [3, 1],
+    [0, 1], [2, 1], [3, 1],
+    [1, 1], [0, 1], [3, 1],
+    [1, 1], [2, 2],
+    [1, 1], [2, 2],
 ]
 
 export {
@@ -95,5 +95,5 @@ export {
     djiyaiiiSummer,
     umowwwFall,
     djiyaiiiFall,
-    inaiiiAlternatingspringandsummer,
+    inaiiiVariety,
 }

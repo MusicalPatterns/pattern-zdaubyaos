@@ -21,76 +21,102 @@ import {
     trueseasonZdaubGlisVariant,
     trueseasonZdaubTrem,
 } from './seasons/trueZdaub'
-import { Track } from './types'
+import { Season, Track } from './types'
 
-const zdaubyaosOneNotes: Track = sequence([
-    // Season 1
-    breatherSpring,
-    trueseasonYaosUmowchuwowiestSpringToSummer,
-    trueseasonZdaubGlis,
-    // Season 2
-    breatherRest,
-    trueseasonYaosUmowchuwowiestSummerToSpring,
-    trueseasonYaosUmowchuwowiestSummerToSpring,
-    trueseasonYaosInaidjiyaiouzdSummerToSpring,
-    // Season 3
-    breatherRest,
-    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
-    trueseasonYetOfBackbone,
-    shiftyseasonA,
-    // Season 4
-    breatherRest,
-    trueseasonYaosUmowchuwowiestSpringToSummer,
-    trueseasonZdaubTrem,
-    backboneseasonC,
-])
+let zdaubyaosTrackA: Track = []
+let zdaubyaosTrackB: Track = []
+let zdaubyaosTrackC: Track = []
 
-const zdaubyaosTwoNotes: Track = sequence([
+const seasonTracks: Season[][] = [
     // Season 1
-    breatherRest,
-    trueseasonYaosUmowchuwowiestSpringToSummer,
-    trueseasonYaosUmowchuwowiestSpringToSummer,
+    [
+        breatherSpring,
+        breatherRest,
+        breatherRest,
+    ],
+    [
+        trueseasonYaosUmowchuwowiestSpringToSummer,
+        trueseasonYaosUmowchuwowiestSpringToSummer,
+        trueseasonYaosUmowchuwowiestSpringToSummer,
+    ],
+    [
+        trueseasonZdaubGlis,
+        trueseasonYaosUmowchuwowiestSpringToSummer,
+        trueseasonZdaubTrem,
+    ],
     // Season 2
-    breatherSummer,
-    trueseasonYaosUmowchuwowiestSummerToSpring,
-    trueseasonZdaubGlis,
-    trueseasonYaosInaidjiyaiouzdSummerToSpring,
+    [
+        breatherRest,
+        breatherSummer,
+        breatherRest,
+    ],
+    [
+        trueseasonYaosUmowchuwowiestSummerToSpring,
+        trueseasonYaosUmowchuwowiestSummerToSpring,
+        trueseasonYaosUmowchuwowiestSummerToSpring,
+    ],
+    [
+        trueseasonYaosUmowchuwowiestSummerToSpring,
+        trueseasonZdaubGlis,
+        trueseasonZdaubGlisVariant,
+    ],
+    [
+        trueseasonYaosInaidjiyaiouzdSummerToSpring,
+        trueseasonYaosInaidjiyaiouzdSummerToSpring,
+        trueseasonYaosInaidjiyaiouzdSummerToSpring,
+    ],
     // Season 3
-    breatherRest,
-    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
-    trueseasonYetOfBackbone,
-    shiftyseasonB,
+    [
+        breatherRest,
+        breatherRest,
+        breatherFall,
+    ],
+    [
+        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+    ],
+    [
+        trueseasonYetOfBackbone,
+        trueseasonYetOfBackbone,
+        trueseasonZdaubBony,
+    ],
+    [
+        shiftyseasonA,
+        shiftyseasonB,
+        shiftyseasonB,
+    ],
     // Season 4
-    breatherRest,
-    trueseasonYaosUmowchuwowiestSummerToSpring,
-    trueseasonZdaubBony,
-    backboneseasonA,
-])
+    [
+        breatherWinter,
+        breatherWinter,
+        breatherWinter,
+    ],
+    [
+        trueseasonYaosUmowchuwowiestSpringToSummer,
+        trueseasonYaosUmowchuwowiestSummerToSpring,
+        trueseasonYaosInaidjiyaiouzdSummerToSpring,
+    ],
+    [
+        trueseasonZdaubTrem,
+        trueseasonZdaubBony,
+        trueseasonZdaubGlis,
+    ],
+    [
+        backboneseasonC,
+        backboneseasonA,
+        backboneseasonB,
+    ],
+]
 
-const zdaubyaosThreeNotes: Track = sequence([
-    // Season 1
-    breatherRest,
-    trueseasonYaosUmowchuwowiestSpringToSummer,
-    trueseasonZdaubTrem,
-    // Season 2
-    breatherRest,
-    trueseasonYaosUmowchuwowiestSummerToSpring,
-    trueseasonZdaubGlisVariant,
-    trueseasonYaosInaidjiyaiouzdSummerToSpring,
-    // Season 3
-    breatherFall,
-    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
-    trueseasonZdaubBony,
-    shiftyseasonB,
-    // Season 4
-    breatherWinter,
-    trueseasonYaosInaidjiyaiouzdSummerToSpring,
-    trueseasonZdaubGlis,
-    backboneseasonB,
-])
+seasonTracks.forEach((tracks: Season[]): void => {
+    zdaubyaosTrackA = zdaubyaosTrackA.concat(tracks[0])
+    zdaubyaosTrackB = zdaubyaosTrackB.concat(tracks[1])
+    zdaubyaosTrackC = zdaubyaosTrackC.concat(tracks[2])
+})
 
 export {
-    zdaubyaosOneNotes,
-    zdaubyaosTwoNotes,
-    zdaubyaosThreeNotes,
+    zdaubyaosTrackA,
+    zdaubyaosTrackB,
+    zdaubyaosTrackC,
 }

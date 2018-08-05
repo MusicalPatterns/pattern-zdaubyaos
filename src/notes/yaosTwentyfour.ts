@@ -1,12 +1,15 @@
 import {
-    chuwowwwFall, chuwowwwSpring,
-    djiyaiiiFall, djiyaiiiSpring, djiyaiiiSummer,
-    inaiiiAlternatingspringandsummer,
+    chuwowwwFall,
+    chuwowwwSpring,
+    djiyaiiiFall,
+    djiyaiiiSpring,
+    djiyaiiiSummer,
+    inaiiiVariety,
     inaiiiSpring,
     inaiiiSummer,
     umowwwFall,
 } from '../contours/yaosTwentyfour'
-import { glisNoteType, tremNoteType } from '../noteTypes'
+import { glisNoteType, manualNoteType, tremNoteType } from '../noteTypes'
 import { Notes } from '../types'
 
 const chuwowwwSpringNotes: Notes = chuwowwwSpring.map(tremNoteType)
@@ -25,7 +28,7 @@ const chuwowwwFallNotes: Notes = chuwowwwFall.map(glisNoteType)
 
 const djiyaiiiFallNotes: Notes = djiyaiiiFall.map(glisNoteType)
 
-const inaiiiAlternatingspringandsummerNotes: Notes = inaiiiAlternatingspringandsummer.map(tremNoteType)
+const inaiiiVarietyNotes: Notes = inaiiiVariety.map(manualNoteType)
 
 export {
     chuwowwwSpringNotes,
@@ -36,5 +39,5 @@ export {
     umowwwFallNotes,
     chuwowwwFallNotes,
     djiyaiiiFallNotes,
-    inaiiiAlternatingspringandsummerNotes,
+    inaiiiVarietyNotes,
 }

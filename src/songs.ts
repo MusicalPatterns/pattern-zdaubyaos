@@ -1,14 +1,17 @@
 import { Song } from '../../../src/types'
 import {
+    zdaubyaosDubparticularSaw,
     zdaubyaosDuperparticularSaw,
-    zdaubyaosSubarmonicSine,
+    zdaubyaosHarmonicSine,
+    zdaubyaosSubharmonicSine,
+    zdaubyaosSubparticularSquare,
     zdaubyaosSuperparticularSquare,
 } from './entities'
 
 const zdaubyaos: Song = [
-    zdaubyaosSuperparticularSquare,
-    zdaubyaosDuperparticularSaw,
-    zdaubyaosSubarmonicSine,
+    zdaubyaosSubparticularSquare,
+    zdaubyaosDubparticularSaw,
+    zdaubyaosHarmonicSine,
 ]
 
 export {
