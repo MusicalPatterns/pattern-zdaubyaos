@@ -1,12 +1,15 @@
 import numbers from '../../src/numbers'
 
-const subparticularSeriesPitches  = numbers.map(n => n / (n + 1))
+const SUPER: number = 1
+const DUPER: number = 2
 
-const superparticularSeriesPitches = numbers.map(n => (n + 1) / n)
+const subparticularSeriesPitches: number[]  = numbers.map((n: number): number => n / (n + SUPER))
 
-const dubparticularSeriesPitches = numbers.map(n => n / (n + 2))
+const superparticularSeriesPitches: number[] = numbers.map((n: number): number => (n + SUPER) / n)
 
-const duperparticularSeriesPitches = numbers.map(n => (n + 2) / n)
+const dubparticularSeriesPitches: number[] = numbers.map((n: number): number => n / (n + DUPER))
+
+const duperparticularSeriesPitches: number[] = numbers.map((n: number): number => (n + DUPER) / n)
 
 export {
     subparticularSeriesPitches,

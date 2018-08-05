@@ -1,3 +1,5 @@
+// tslint:disable:no-magic-numbers
+
 import {
     dubparticularSeriesPitches,
     duperparticularSeriesPitches,
@@ -13,7 +15,7 @@ describe('pitches', () => {
                 2 / 3,
                 3 / 4,
                 4 / 5,
-            ].forEach((expectedPitch, index) => {
+            ].forEach((expectedPitch: number, index: number): void => {
                 expect(subparticularSeriesPitches[index]).toEqual(expectedPitch)
             })
         })
@@ -26,7 +28,7 @@ describe('pitches', () => {
                 2 / 4,
                 3 / 5,
                 4 / 6,
-            ].forEach((expectedPitch, index) => {
+            ].forEach((expectedPitch: number, index: number): void => {
                 expect(dubparticularSeriesPitches[index]).toEqual(expectedPitch)
             })
         })
@@ -39,7 +41,7 @@ describe('pitches', () => {
                 3 / 2,
                 4 / 3,
                 5 / 4,
-            ].forEach((expectedPitch, index) => {
+            ].forEach((expectedPitch: number, index: number): void => {
                 expect(superparticularSeriesPitches[index]).toEqual(expectedPitch)
             })
         })
@@ -52,7 +54,7 @@ describe('pitches', () => {
                 4 / 2,
                 5 / 3,
                 6 / 4,
-            ].forEach((expectedPitch, index) => {
+            ].forEach((expectedPitch: number, index: number): void => {
                 expect(duperparticularSeriesPitches[index]).toEqual(expectedPitch)
             })
         })

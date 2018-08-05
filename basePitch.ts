@@ -1,4 +1,4 @@
-const ZDAUBYAOS_BASE_PITCH = 440
+const ZDAUBYAOS_BASE_PITCH: number = 440
 
 export {
     ZDAUBYAOS_BASE_PITCH,

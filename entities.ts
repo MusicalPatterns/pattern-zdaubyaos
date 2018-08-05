@@ -1,49 +1,39 @@
+import buildEntity from '../../src/buildEntity'
 import buildVoice from '../../src/buildVoice'
+import { harmonicSeriesPitches } from '../../src/pitches'
+import { Entity } from '../../src/types'
+import { dubparticularSeriesPitches, subparticularSeriesPitches } from './pitches'
 import {
     zdaubyaosOneNotes,
-    zdaubyaosTwoNotes,
     zdaubyaosThreeNotes,
-} from './notes'
-import {dubparticularSeriesPitches, subparticularSeriesPitches} from './pitches'
-import {harmonicSeriesPitches} from '../../src/pitches'
+    zdaubyaosTwoNotes,
+} from './tracks'
 
-const zdaubyaosOne = {
+const TO_AVOID_BLOW_OUT: number = 0.2
+
+const zdaubyaosOne: Entity = buildEntity({
     notes: zdaubyaosOneNotes,
     pitches: subparticularSeriesPitches,
     voice: buildVoice('square'),
-    voiceGain: .2,
-    id: 10,
-    noteIndex: 0,
-    nextOnset: 0,
-    nextOffset: 0,
-}
-const zdaubyaosTwo = {
+    voiceGain: TO_AVOID_BLOW_OUT,
+})
+
+const zdaubyaosTwo: Entity = buildEntity({
     notes: zdaubyaosTwoNotes,
     pitches: dubparticularSeriesPitches,
     voice: buildVoice('sawtooth'),
-    voiceGain: .2,
-    id: 14,
-    noteIndex: 0,
-    nextOnset: 0,
-    nextOffset: 0,
-}
-const zdaubyaosThree = {
+    voiceGain: TO_AVOID_BLOW_OUT,
+})
+
+const zdaubyaosThree: Entity = buildEntity({
     notes: zdaubyaosThreeNotes,
     pitches: harmonicSeriesPitches,
     voice: buildVoice('sine'),
-    voiceGain: .2,
-    id: 15,
-    noteIndex: 0,
-    nextOnset: 0,
-    nextOffset: 0,
-}
+    voiceGain: TO_AVOID_BLOW_OUT,
+})
 
-const zdaubyaos = [
+export {
     zdaubyaosOne,
     zdaubyaosTwo,
     zdaubyaosThree,
-]
-
-export {
-    zdaubyaos,
 }
