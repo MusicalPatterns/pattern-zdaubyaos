@@ -4,6 +4,7 @@ import {
     chuwowwwSummer,
     djiyaiiiFall,
     djiyaiiiSpring,
+    djiyaiiiSpringySummer,
     djiyaiiiSummer,
     iestttFall,
     iestttSpring,
@@ -48,6 +49,8 @@ const ouzdddFallNotes: Notes = ouzdddFall.map(glisNoteType)
 
 const inaiiiVarietyNotes: Notes = inaiiiVariety.map(manualNoteType)
 
+const djiyaiiiSpringySummerNotes: Notes = djiyaiiiSpringySummer.map(tremNoteType)
+
 export {
     umowwwSpringNotes,
     chuwowwwSpringNotes,
@@ -68,4 +71,5 @@ export {
     djiyaiiiFallNotes,
     ouzdddFallNotes,
     inaiiiVarietyNotes,
+    djiyaiiiSpringySummerNotes,
 }

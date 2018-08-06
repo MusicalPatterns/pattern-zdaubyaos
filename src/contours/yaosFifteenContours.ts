@@ -1,49 +1,24 @@
-import { chuwow, djiyai, iest, inai, ouzd, umow } from '../blocks/yaosFifteenBlocks'
+import yaosFifteenBlocks from '../blocks/yaosFifteenBlocks'
 import render from '../render'
-import { fall, spring, summer } from '../renderings'
-import { Contour } from '../types'
+import renderings from '../renderings'
+import { Blocks, Contour, Rendering } from '../types'
 
-const umowSpring: Contour = render(umow, spring)
-const chuwowSpring: Contour = render(chuwow, spring)
-const iestSpring: Contour = render(iest, spring)
+const contoursByRenderingThenBlocks: { [index: string]: {[index: string]: Contour} } = {}
+const contoursByBlocksThenRendering: { [index: string]: {[index: string]: Contour} } = {}
 
-const umowSummer: Contour = render(umow, summer)
-const chuwowSummer: Contour = render(chuwow, summer)
-const iestSummer: Contour = render(iest, summer)
+Object.entries(yaosFifteenBlocks).forEach(([blocksName, blocks]: [string, Blocks]): void => {
+    Object.entries(renderings).forEach(([renderingName, rendering]: [string, Rendering]): void => {
+        const contour: Contour = render(blocks, rendering)
 
-const umowFall: Contour = render(umow, fall)
-const chuwowFall: Contour = render(chuwow, fall)
-const iestFall: Contour =  render(iest, fall)
+        contoursByRenderingThenBlocks[renderingName] = contoursByRenderingThenBlocks[renderingName] || {}
+        contoursByRenderingThenBlocks[renderingName][blocksName] = contour
 
-const inaiSpring: Contour = render(inai, spring)
-const djiyaiSpring: Contour = render(djiyai, spring)
-const ouzdSpring: Contour = render(ouzd, spring)
-
-const inaiSummer: Contour = render(inai, summer)
-const djiyaiSummer: Contour = render(djiyai, summer)
-const ouzdSummer: Contour = render(ouzd, summer)
-
-const inaiFall: Contour = render(inai, fall)
-const djiyaiFall: Contour = render(djiyai, fall)
-const ouzdFall: Contour = render(ouzd, fall)
+        contoursByBlocksThenRendering[blocksName] = contoursByBlocksThenRendering[blocksName] || {}
+        contoursByBlocksThenRendering[blocksName][renderingName] = contour
+    })
+})
 
 export {
-    umowSpring,
-    chuwowSpring,
-    iestSpring,
-    umowSummer,
-    chuwowSummer,
-    iestSummer,
-    umowFall,
-    chuwowFall,
-    iestFall,
-    inaiSpring,
-    djiyaiSpring,
-    ouzdSpring,
-    inaiSummer,
-    djiyaiSummer,
-    ouzdSummer,
-    inaiFall,
-    djiyaiFall,
-    ouzdFall,
+    contoursByRenderingThenBlocks,
+    contoursByBlocksThenRendering,
 }

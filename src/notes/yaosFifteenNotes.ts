@@ -1,52 +1,36 @@
-import {
-    chuwowFall,
-    chuwowSpring,
-    chuwowSummer,
-    djiyaiSummer,
-    iestFall,
-    iestSpring,
-    iestSummer,
-    inaiFall,
-    inaiSummer,
-    ouzdFall,
-    ouzdSpring,
-    ouzdSummer,
-    umowFall,
-    umowSpring,
-    umowSummer,
-} from '../contours/yaosFifteenContours'
+import { contoursByBlocksThenRendering } from '../contours/yaosFifteenContours'
 import { glisNoteType, tremNoteType } from '../noteTypes'
 import { Notes } from '../types'
 
-const umowSpringNotes: Notes = umowSpring.map(tremNoteType)
+const umowSpringNotes: Notes = contoursByBlocksThenRendering.umow.spring.map(tremNoteType)
 
-const chuwowSpringNotes: Notes = chuwowSpring.map(tremNoteType)
+const chuwowSpringNotes: Notes = contoursByBlocksThenRendering.chuwow.spring.map(tremNoteType)
 
-const iestSpringNotes: Notes = iestSpring.map(tremNoteType)
+const iestSpringNotes: Notes = contoursByBlocksThenRendering.iest.spring.map(tremNoteType)
 
-const ouzdSpringNotes: Notes = ouzdSpring.map(tremNoteType)
+const ouzdSpringNotes: Notes = contoursByBlocksThenRendering.ouzd.spring.map(tremNoteType)
 
-const umowSummerNotes: Notes = umowSummer.map(tremNoteType)
+const umowSummerNotes: Notes = contoursByBlocksThenRendering.umow.summer.map(tremNoteType)
 
-const chuwowSummerNotes: Notes = chuwowSummer.map(tremNoteType)
+const chuwowSummerNotes: Notes = contoursByBlocksThenRendering.chuwow.summer.map(tremNoteType)
 
-const iestSummerNotes: Notes = iestSummer.map(tremNoteType)
+const iestSummerNotes: Notes = contoursByBlocksThenRendering.iest.summer.map(tremNoteType)
 
-const inaiSummerNotes: Notes = inaiSummer.map(tremNoteType)
+const inaiSummerNotes: Notes = contoursByBlocksThenRendering.inai.summer.map(tremNoteType)
 
-const djiyaiSummerNotes: Notes = djiyaiSummer.map(tremNoteType)
+const djiyaiSummerNotes: Notes = contoursByBlocksThenRendering.djiyai.summer.map(tremNoteType)
 
-const ouzdSummerNotes: Notes = ouzdSummer.map(tremNoteType)
+const ouzdSummerNotes: Notes = contoursByBlocksThenRendering.ouzd.summer.map(tremNoteType)
 
-const umowFallNotes: Notes = umowFall.map(glisNoteType)
+const umowFallNotes: Notes = contoursByBlocksThenRendering.umow.fall.map(glisNoteType)
 
-const chuwowFallNotes: Notes = chuwowFall.map(glisNoteType)
+const chuwowFallNotes: Notes = contoursByBlocksThenRendering.chuwow.fall.map(glisNoteType)
 
-const iestFallNotes: Notes = iestFall.map(glisNoteType)
+const iestFallNotes: Notes = contoursByBlocksThenRendering.iest.fall.map(glisNoteType)
 
-const ouzdFallNotes: Notes = ouzdFall.map(glisNoteType)
+const ouzdFallNotes: Notes = contoursByBlocksThenRendering.ouzd.fall.map(glisNoteType)
 
-const inaiFallNotes: Notes = inaiFall.map(glisNoteType)
+const inaiFallNotes: Notes = contoursByBlocksThenRendering.inai.fall.map(glisNoteType)
 
 export {
     umowSpringNotes,

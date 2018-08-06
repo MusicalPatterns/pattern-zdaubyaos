@@ -9,11 +9,11 @@ const inai: Blocks = [4, 4, 4, 3]
 const djiyai: Blocks = [3, 5, 7]
 const ouzd: Blocks = [8, 7]
 
-export {
-    umow,
+export default {
     chuwow,
+    djiyai,
     iest,
     inai,
-    djiyai,
     ouzd,
+    umow,
 }
