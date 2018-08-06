@@ -1,18 +1,7 @@
 import repeat from '../../../../src/repeat'
 import sequence from '../../../../src/sequence'
 import {
-    chuwowFallNotes,
-    chuwowSpringNotes,
-    chuwowSummerNotes,
-    djiyaiSummerNotes,
-    iestSpringNotes,
-    iestSummerNotes,
-    inaiFallNotes,
-    inaiSummerNotes,
-    ouzdFallNotes,
-    ouzdSummerNotes,
-    umowSpringNotes,
-    umowSummerNotes,
+    yaosFifteenNotesByBlocksThenRendering,
 } from '../notes/yaosFifteenNotes'
 import {
     chuwowwwFallNotes,
@@ -24,38 +13,38 @@ import {
 import { Season } from '../types'
 
 const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
-    repeat(chuwowSpringNotes, 4),
-    iestSpringNotes,
-    umowSpringNotes,
-    iestSpringNotes,
-    umowSpringNotes,
+    repeat(yaosFifteenNotesByBlocksThenRendering.chuwow.spring, 4),
+    yaosFifteenNotesByBlocksThenRendering.iest.spring,
+    yaosFifteenNotesByBlocksThenRendering.umow.spring,
+    yaosFifteenNotesByBlocksThenRendering.iest.spring,
+    yaosFifteenNotesByBlocksThenRendering.umow.spring,
     repeat(djiyaiiiSummerNotes, 4),
 ])
 
 const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
-    repeat(chuwowSummerNotes, 4),
-    iestSummerNotes,
-    umowSummerNotes,
-    iestSummerNotes,
-    umowSummerNotes,
+    repeat(yaosFifteenNotesByBlocksThenRendering.chuwow.summer, 4),
+    yaosFifteenNotesByBlocksThenRendering.iest.summer,
+    yaosFifteenNotesByBlocksThenRendering.umow.summer,
+    yaosFifteenNotesByBlocksThenRendering.iest.summer,
+    yaosFifteenNotesByBlocksThenRendering.umow.summer,
     repeat(djiyaiiiSpringNotes, 4),
 ])
 
 const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
-    repeat(djiyaiSummerNotes, 4),
-    ouzdSummerNotes,
-    inaiSummerNotes,
-    ouzdSummerNotes,
-    inaiSummerNotes,
+    repeat(yaosFifteenNotesByBlocksThenRendering.djiyai.summer, 4),
+    yaosFifteenNotesByBlocksThenRendering.ouzd.summer,
+    yaosFifteenNotesByBlocksThenRendering.inai.summer,
+    yaosFifteenNotesByBlocksThenRendering.ouzd.summer,
+    yaosFifteenNotesByBlocksThenRendering.inai.summer,
     repeat(chuwowwwSpringNotes, 4),
 ])
 
 const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash: Season = sequence([
-    repeat(chuwowFallNotes, 4),
-    ouzdFallNotes,
-    inaiFallNotes,
-    ouzdFallNotes,
-    inaiFallNotes,
+    repeat(yaosFifteenNotesByBlocksThenRendering.chuwow.fall, 4),
+    yaosFifteenNotesByBlocksThenRendering.ouzd.fall,
+    yaosFifteenNotesByBlocksThenRendering.inai.fall,
+    yaosFifteenNotesByBlocksThenRendering.ouzd.fall,
+    yaosFifteenNotesByBlocksThenRendering.inai.fall,
     chuwowwwFallNotes,
     djiyaiiiFallNotes,
     chuwowwwFallNotes,

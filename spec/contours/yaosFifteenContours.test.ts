@@ -1,17 +1,10 @@
-import {
-    contoursByBlocksThenRendering,
-    contoursByRenderingThenBlocks,
-} from '../../src/contours/yaosFifteenContours'
+import { yaosFifteenContoursByBlocksThenRendering } from '../../src/contours/yaosFifteenContours'
 
 describe('yaos contours of length 15', () => {
-    it('is the case that the two different methods of grouping agree with each other', () => {
-        expect(contoursByRenderingThenBlocks.fall.umow).toEqual(contoursByBlocksThenRendering.umow.fall)
-    })
-
     describe('spring renderings', () => {
         describe('umowchuowiest blocks', () => {
             it('handles umow spring', () => {
-                expect(contoursByRenderingThenBlocks.spring.umow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.umow.spring).toEqual([
                     0, 2, 3,
                     0, 2, 3,
                     0, 2, 3,
@@ -21,7 +14,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles chuwow spring', () => {
-                expect(contoursByRenderingThenBlocks.spring.chuwow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.chuwow.spring).toEqual([
                     0, 2, 3,
                     0, 2, 3, 4,
                     0, 2, 3,
@@ -30,7 +23,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles iest spring', () => {
-                expect(contoursByRenderingThenBlocks.spring.iest).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.iest.spring).toEqual([
                     0, 2, 3, 4, 5,
                     0, 2, 3, 4, 5,
                     0, 2, 3, 4, 5,
@@ -40,7 +33,7 @@ describe('yaos contours of length 15', () => {
 
         describe('inaidjiyaiouzd blocks', () => {
             it('handles inai spring', () => {
-                expect(contoursByRenderingThenBlocks.spring.inai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.inai.spring).toEqual([
                     0, 2, 3, 4,
                     0, 2, 3, 4,
                     0, 2, 3, 4,
@@ -49,7 +42,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles djiyai spring', () => {
-                expect(contoursByRenderingThenBlocks.spring.djiyai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.djiyai.spring).toEqual([
                     0, 2, 3,
                     0, 2, 3, 4, 5,
                     0, 2, 3, 4, 5, 6, 7,
@@ -57,7 +50,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles ouzd spring', () => {
-                expect(contoursByRenderingThenBlocks.spring.ouzd).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.ouzd.spring).toEqual([
                     0, 2, 3, 4, 5, 6, 7, 8,
                     0, 2, 3, 4, 5, 6, 7,
                 ])
@@ -68,7 +61,7 @@ describe('yaos contours of length 15', () => {
     describe('summer renderings', () => {
         describe('umowchuowiest blocks', () => {
             it('handles umow summer', () => {
-                expect(contoursByRenderingThenBlocks.summer.umow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.umow.summer).toEqual([
                     1, 0, 3,
                     1, 0, 3,
                     1, 0, 3,
@@ -78,7 +71,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles chuwow summer', () => {
-                expect(contoursByRenderingThenBlocks.summer.chuwow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.chuwow.summer).toEqual([
                     1, 0, 3,
                     1, 0, 3, 0,
                     1, 0, 3,
@@ -87,7 +80,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles iest summer', () => {
-                expect(contoursByRenderingThenBlocks.summer.iest).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.iest.summer).toEqual([
                     1, 0, 3, 0, 5,
                     1, 0, 3, 0, 5,
                     1, 0, 3, 0, 5,
@@ -97,7 +90,7 @@ describe('yaos contours of length 15', () => {
 
         describe('inaidjiyaiouzd blocks', () => {
             it('handles inai summer', () => {
-                expect(contoursByRenderingThenBlocks.summer.inai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.inai.summer).toEqual([
                     1, 0, 3, 0,
                     1, 0, 3, 0,
                     1, 0, 3, 0,
@@ -106,7 +99,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles djiyai summer', () => {
-                expect(contoursByRenderingThenBlocks.summer.djiyai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.djiyai.summer).toEqual([
                     1, 0, 3,
                     1, 0, 3, 0, 5,
                     1, 0, 3, 0, 5, 0, 7,
@@ -114,7 +107,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles ouzd summer', () => {
-                expect(contoursByRenderingThenBlocks.summer.ouzd).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.ouzd.summer).toEqual([
                     1, 0, 3, 0, 5, 0, 7, 0,
                     1, 0, 3, 0, 5, 0, 7,
                 ])
@@ -125,7 +118,7 @@ describe('yaos contours of length 15', () => {
     describe('fall renderings', () => {
         describe('umowchuowiest blocks', () => {
             it('handles umow fall', () => {
-                expect(contoursByRenderingThenBlocks.fall.umow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.umow.fall).toEqual([
                     1, 2,
                     1, 2,
                     1, 2,
@@ -135,7 +128,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles chuwow fall', () => {
-                expect(contoursByRenderingThenBlocks.fall.chuwow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.chuwow.fall).toEqual([
                     1, 2,
                     1, 3,
                     1, 2,
@@ -144,7 +137,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles iest fall', () => {
-                expect(contoursByRenderingThenBlocks.fall.iest).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.iest.fall).toEqual([
                     1, 4,
                     1, 4,
                     1, 4,
@@ -154,7 +147,7 @@ describe('yaos contours of length 15', () => {
 
         describe('inaidjiyaiouzd blocks', () => {
             it('handles inai fall', () => {
-                expect(contoursByRenderingThenBlocks.fall.inai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.inai.fall).toEqual([
                     1, 3,
                     1, 3,
                     1, 3,
@@ -163,7 +156,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles djiyai fall', () => {
-                expect(contoursByRenderingThenBlocks.fall.djiyai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.djiyai.fall).toEqual([
                     1, 2,
                     1, 4,
                     1, 6,
@@ -171,7 +164,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles ouzd fall', () => {
-                expect(contoursByRenderingThenBlocks.fall.ouzd).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.ouzd.fall).toEqual([
                     1, 7,
                     1, 6,
                 ])
@@ -182,7 +175,7 @@ describe('yaos contours of length 15', () => {
     describe('summery spring renderings', () => {
         describe('umowchuwowiest blocks', () => {
             it('handles umow summery spring', () => {
-                expect(contoursByRenderingThenBlocks.summerySpring.umow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.umow.summerySpring).toEqual([
                     0, 1, 3,
                     0, 1, 3,
                     0, 1, 3,
@@ -192,7 +185,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles chuwow summery spring', () => {
-                expect(contoursByRenderingThenBlocks.summerySpring.chuwow).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.chuwow.summerySpring).toEqual([
                     0, 1, 3,
                     0, 1, 3, 5,
                     0, 1, 3,
@@ -201,7 +194,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles iest summery spring', () => {
-                expect(contoursByRenderingThenBlocks.summerySpring.iest).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.iest.summerySpring).toEqual([
                     0, 1, 3, 5, 7,
                     0, 1, 3, 5, 7,
                     0, 1, 3, 5, 7,
@@ -211,7 +204,7 @@ describe('yaos contours of length 15', () => {
 
         describe('inaidjiyaiouzd blocks', () => {
             it('handles inai summery spring', () => {
-                expect(contoursByRenderingThenBlocks.summerySpring.inai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.inai.summerySpring).toEqual([
                     0, 1, 3, 5,
                     0, 1, 3, 5,
                     0, 1, 3, 5,
@@ -220,7 +213,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles djiyai summery spring', () => {
-                expect(contoursByRenderingThenBlocks.summerySpring.djiyai).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.djiyai.summerySpring).toEqual([
                     0, 1, 3,
                     0, 1, 3, 5, 7,
                     0, 1, 3, 5, 7, 9, 11,
@@ -228,7 +221,7 @@ describe('yaos contours of length 15', () => {
             })
 
             it('handles ouzd summery spring', () => {
-                expect(contoursByRenderingThenBlocks.summerySpring.ouzd).toEqual([
+                expect(yaosFifteenContoursByBlocksThenRendering.ouzd.summerySpring).toEqual([
                     0, 1, 3, 5, 7, 9, 11, 13,
                     0, 1, 3, 5, 7, 9, 11,
                 ])

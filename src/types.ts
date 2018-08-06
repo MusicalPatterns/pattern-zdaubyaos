@@ -12,6 +12,8 @@ type Track = Note[]
 
 type Rendering = (_: number) => number[]
 
+type NoteType = (_: number) => Note
+
 export {
     Blocks,
     Contour,
@@ -19,4 +21,5 @@ export {
     Season,
     Track,
     Rendering,
+    NoteType,
 }

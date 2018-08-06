@@ -4,6 +4,7 @@ import {
     SILENT,
 } from '../../../src/constants'
 import { Note } from '../../../src/types'
+import { NoteType } from './types'
 
 const REST: number = 0
 const MAX_GAIN: number = 1
@@ -16,7 +17,7 @@ const singleRest: Note = {
     sustain: SINGLE_DURATION - SEPARATION_FOR_NEIGHBORING_NOTES,
 }
 
-const glisNoteType: (_: number) => Note =
+const glisNoteType: NoteType =
     (pitch: number): Note => {
         if (pitch === REST) { return singleRest }
 
@@ -28,7 +29,7 @@ const glisNoteType: (_: number) => Note =
         }
     }
 
-const tremNoteType: (_: number) => Note =
+const tremNoteType: NoteType =
     (pitch: number): Note => {
         if (pitch === REST) { return singleRest }
 
