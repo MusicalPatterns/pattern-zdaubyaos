@@ -21,17 +21,18 @@ import {
 } from '../notes/zdaubTwentyfourNotes'
 import { glisNoteType } from '../noteTypes'
 import { Season } from '../types'
+import repeatCall from '../../../../src/repeatCall'
 
 const trueseasonZdaubGlis: Season = sequence([
-    repeat(noodlingFifteenGlisNotes, 3),
+    repeatCall(() => noodlingFifteenGlisNotes, 3),
     escapeFifteenGlisNotes,
     ascentFifteenGlisNotes,
     inscapeTwentyfourGlisNotes,
-    repeat(noodlingTwentyfourGlisNotes, 3),
+    repeatCall(() => noodlingTwentyfourGlisNotes, 3),
 ])
 
 const trueseasonZdaubGlisVariant: Season = sequence([
-    repeat(noodlingFifteenGlisNotes, 4),
+    repeatCall(() => noodlingFifteenGlisNotes, 4),
     escapeFifteenGlisNotes,
     [
         4, 5, 6,
@@ -45,19 +46,19 @@ const trueseasonZdaubGlisVariant: Season = sequence([
 ])
 
 const trueseasonZdaubBony: Season = sequence([
-    repeat(noodlingFifteenBonyNotes, 3),
+    repeatCall(() => noodlingFifteenBonyNotes, 3),
     escapeFifteenBonyNotes,
     ascentFifteenBonyNotes,
     inscapeTwentyfourBonyNotes,
-    repeat(noodlingTwentyfourBonyNotes, 3),
+    repeatCall(() => noodlingTwentyfourBonyNotes, 3),
 ])
 
 const trueseasonZdaubTrem: Season = sequence([
-    repeat(noodlingFifteenTremNotes, 3),
+    repeatCall(() => noodlingFifteenTremNotes, 3),
     escapeFifteenTremNotes,
     ascentFifteenTremNotes,
     inscapeTwentyfourTremNotes,
-    repeat(noodlingTwentyfourTremNotes, 3),
+    repeatCall(() => noodlingTwentyfourTremNotes, 3),
 ])
 
 export {

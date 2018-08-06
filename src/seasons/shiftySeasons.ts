@@ -7,11 +7,12 @@ import {
     shiftyTwentyfourVariantNotes,
 } from '../notes/shiftyNotes'
 import { Season } from '../types'
+import repeatCall from '../../../../src/repeatCall'
 
 const shiftyseasonA: Season = sequence([
-    repeat(shiftyFifteenNotes, 3),
-    repeat(shiftyTwentyfourNotes, 4),
-    repeat(shiftyTwentyfourVariantNotes, 3),
+    repeatCall(() => shiftyFifteenNotes, 3),
+    repeatCall(() => shiftyTwentyfourNotes, 4),
+    repeatCall(() => shiftyTwentyfourVariantNotes, 3),
 ])
 
 const shiftyseasonB: Season = shiftyNotes

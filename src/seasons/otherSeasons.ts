@@ -3,26 +3,27 @@ import sequence from '../../../../src/sequence'
 import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import { Season } from '../types'
 import getYaosNotes from '../notes/getYaosNotes'
+import repeatCall from '../../../../src/repeatCall'
 
 const trueseasonYetOfBackbone: Season = sequence([
-    repeat(backboneFifteenANotes, 8),
-    repeat(backboneTwentyfourCNotes, 4),
+    repeatCall(() => backboneFifteenANotes, 8),
+    repeatCall(() => backboneTwentyfourCNotes, 4),
 ])
 
 const experimentWithIesttt: Season = sequence([
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         duration: 'twentyfour',
         blockstrategy: 'umowchuwowiest',
         blockresolution: 'highregular',
         rendering: 'spring',
     }), 3),
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         duration: 'twentyfour',
         blockstrategy: 'umowchuwowiest',
         blockresolution: 'highregular',
         rendering: 'summer',
     }), 3),
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         duration: 'twentyfour',
         blockstrategy: 'umowchuwowiest',
         blockresolution: 'highregular',
@@ -31,19 +32,19 @@ const experimentWithIesttt: Season = sequence([
 ])
 
 const experimentWithUmowww: Season = sequence([
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         duration: 'twentyfour',
         blockstrategy: 'umowchuwowiest',
         blockresolution: 'lowregular',
         rendering: 'spring',
     }), 3),
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         duration: 'twentyfour',
         blockstrategy: 'umowchuwowiest',
         blockresolution: 'lowregular',
         rendering: 'summer',
     }), 3),
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         duration: 'twentyfour',
         blockstrategy: 'umowchuwowiest',
         blockresolution: 'lowregular',

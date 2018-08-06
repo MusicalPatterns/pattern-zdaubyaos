@@ -4,9 +4,10 @@ import repeat from '../../../../src/repeat'
 import sequence from '../../../../src/sequence'
 import getYaosNotes from '../notes/getYaosNotes'
 import { Season } from '../types'
+import repeatCall from '../../../../src/repeatCall'
 
 const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'fifteen',
@@ -36,7 +37,7 @@ const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
         duration: 'fifteen',
         rendering: 'spring',
     }),
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'twentyfour',
@@ -45,7 +46,7 @@ const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
 ])
 
 const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'fifteen',
@@ -75,7 +76,7 @@ const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
         duration: 'fifteen',
         rendering: 'summer',
     }),
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'twentyfour',
@@ -84,7 +85,7 @@ const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
 ])
 
 const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'fifteen',
@@ -114,7 +115,7 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
         duration: 'fifteen',
         rendering: 'summer',
     }),
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
@@ -123,7 +124,7 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
 ])
 
 const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash: Season = sequence([
-    repeat(getYaosNotes({
+    repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'fifteen',

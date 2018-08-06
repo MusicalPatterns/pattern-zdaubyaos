@@ -1,4 +1,5 @@
 import repeat from '../../../../src/repeat'
+import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
 import {
     backboneFifteenANotes,
@@ -11,18 +12,18 @@ import {
 import { Season } from '../types'
 
 const backboneseasonA: Season = sequence([
-    repeat(backboneFifteenANotes, 5),
-    repeat(backboneTwentyfourCNotes, 6),
+    repeatCall(() => backboneFifteenANotes, 5),
+    repeatCall(() => backboneTwentyfourCNotes, 6),
 ])
 
 const backboneseasonB: Season = sequence([
-    repeat(backboneFifteenBNotes, 5),
-    repeat(backboneTwentyfourENotes, 6),
+    repeatCall(() => backboneFifteenBNotes, 5),
+    repeatCall(() => backboneTwentyfourENotes, 6),
 ])
 
 const backboneseasonC: Season = sequence([
-    repeat(backboneFifteenCNotes, 5),
-    repeat(backboneTwentyfourGNotes, 6),
+    repeatCall(() => backboneFifteenCNotes, 5),
+    repeatCall(() => backboneTwentyfourGNotes, 6),
 ])
 
 export {
