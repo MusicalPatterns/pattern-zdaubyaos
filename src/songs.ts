@@ -17,6 +17,9 @@ const zdaubyaos: Song = [
     zdaubyaosSubparticularSquare,
 ]
 
+// tslint:disable-next-line:no-console
+// Console.log(zdaubyaos)
+
 export {
     zdaubyaos,
 }

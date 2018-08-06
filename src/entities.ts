@@ -1,7 +1,5 @@
-import buildEntity from '../../../src/buildEntity'
-import buildVoice from '../../../src/buildVoice'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
-import { Entity } from '../../../src/types'
+import { EntityConfig } from '../../../src/types'
 import {
     dubparticularSeriesPitches,
     duperparticularSeriesPitches,
@@ -19,47 +17,47 @@ import {
 
 const TO_AVOID_BLOW_OUT: number = 0.2
 
-const zdaubyaosSubparticularSquare: Entity = buildEntity({
+const zdaubyaosSubparticularSquare: EntityConfig = {
     notes: zdaubyaosTrackA,
     pitches: subparticularSeriesPitches,
-    voice: buildVoice('square'),
+    voiceConfig: {timbre: 'square', voiceType: 'oscillator'},
     voiceGain: TO_AVOID_BLOW_OUT,
-})
+}
 
-const zdaubyaosDubparticularSaw: Entity = buildEntity({
+const zdaubyaosDubparticularSaw: EntityConfig = {
     notes: zdaubyaosTrackB,
     pitches: dubparticularSeriesPitches,
-    voice: buildVoice('sawtooth'),
+    voiceConfig: {timbre: 'sawtooth', voiceType: 'oscillator'},
     voiceGain: TO_AVOID_BLOW_OUT,
-})
+}
 
-const zdaubyaosHarmonicSine: Entity = buildEntity({
+const zdaubyaosHarmonicSine: EntityConfig = {
     notes: zdaubyaosTrackC,
     pitches: harmonicSeriesPitches,
-    voice: buildVoice('sine'),
+    voiceConfig: {timbre: 'sine', voiceType: 'oscillator'},
     voiceGain: TO_AVOID_BLOW_OUT,
-})
+}
 
-const zdaubyaosSuperparticularSquare: Entity = buildEntity({
+const zdaubyaosSuperparticularSquare: EntityConfig = {
     notes: zdaubyaosTrackD,
     pitches: superparticularSeriesPitches,
-    voice: buildVoice('square'),
+    voiceConfig: {timbre: 'square', voiceType: 'oscillator'},
     voiceGain: TO_AVOID_BLOW_OUT,
-})
+}
 
-const zdaubyaosDuperparticularSaw: Entity = buildEntity({
+const zdaubyaosDuperparticularSaw: EntityConfig = {
     notes: zdaubyaosTrackE,
     pitches: duperparticularSeriesPitches,
-    voice: buildVoice('sawtooth'),
+    voiceConfig: {timbre: 'sawtooth', voiceType: 'oscillator'},
     voiceGain: TO_AVOID_BLOW_OUT,
-})
+}
 
-const zdaubyaosSubharmonicSine: Entity = buildEntity({
+const zdaubyaosSubharmonicSine: EntityConfig = {
     notes: zdaubyaosTrackF,
     pitches: subharmonicSeriesPitches,
-    voice: buildVoice('sine'),
+    voiceConfig: {timbre: 'sine', voiceType: 'oscillator'},
     voiceGain: TO_AVOID_BLOW_OUT,
-})
+}
 
 export {
     zdaubyaosSubparticularSquare,
