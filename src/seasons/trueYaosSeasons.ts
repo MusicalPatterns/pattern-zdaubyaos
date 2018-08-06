@@ -1,45 +1,182 @@
+// tslint:disable:max-file-line-count
+
 import repeat from '../../../../src/repeat'
 import sequence from '../../../../src/sequence'
-import { yaosNotesByDurationBlocksThenRendering } from '../notes/yaosNotes'
+import getYaosNotes from '../notes/getYaosNotes'
 import { Season } from '../types'
 
 const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
-    repeat(yaosNotesByDurationBlocksThenRendering.fifteen.chuwow.spring, 4),
-    yaosNotesByDurationBlocksThenRendering.fifteen.iest.spring,
-    yaosNotesByDurationBlocksThenRendering.fifteen.umow.spring,
-    yaosNotesByDurationBlocksThenRendering.fifteen.iest.spring,
-    yaosNotesByDurationBlocksThenRendering.fifteen.umow.spring,
-    repeat(yaosNotesByDurationBlocksThenRendering.twentyfour.djiyaiii.summer, 4),
+    repeat(getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'spring',
+    }),    4),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'spring',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'spring',
+    }),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'spring',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'spring',
+    }),
+    repeat(getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'twentyfour',
+        rendering: 'summer',
+    }),    4),
 ])
 
 const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
-    repeat(yaosNotesByDurationBlocksThenRendering.fifteen.chuwow.summer, 4),
-    yaosNotesByDurationBlocksThenRendering.fifteen.iest.summer,
-    yaosNotesByDurationBlocksThenRendering.fifteen.umow.summer,
-    yaosNotesByDurationBlocksThenRendering.fifteen.iest.summer,
-    yaosNotesByDurationBlocksThenRendering.fifteen.umow.summer,
-    repeat(yaosNotesByDurationBlocksThenRendering.twentyfour.djiyaiii.spring, 4),
+    repeat(getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),    4),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    repeat(getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'twentyfour',
+        rendering: 'spring',
+    }),    4),
 ])
 
 const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
-    repeat(yaosNotesByDurationBlocksThenRendering.fifteen.djiyai.summer, 4),
-    yaosNotesByDurationBlocksThenRendering.fifteen.ouzd.summer,
-    yaosNotesByDurationBlocksThenRendering.fifteen.inai.summer,
-    yaosNotesByDurationBlocksThenRendering.fifteen.ouzd.summer,
-    yaosNotesByDurationBlocksThenRendering.fifteen.inai.summer,
-    repeat(yaosNotesByDurationBlocksThenRendering.twentyfour.chuwowww.spring, 4),
+    repeat(getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),    4),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'summer',
+    }),
+    repeat(getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'spring',
+    }),    4),
 ])
 
 const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash: Season = sequence([
-    repeat(yaosNotesByDurationBlocksThenRendering.fifteen.chuwow.fall, 4),
-    yaosNotesByDurationBlocksThenRendering.fifteen.ouzd.fall,
-    yaosNotesByDurationBlocksThenRendering.fifteen.inai.fall,
-    yaosNotesByDurationBlocksThenRendering.fifteen.ouzd.fall,
-    yaosNotesByDurationBlocksThenRendering.fifteen.inai.fall,
-    yaosNotesByDurationBlocksThenRendering.twentyfour.chuwowww.fall,
-    yaosNotesByDurationBlocksThenRendering.twentyfour.djiyaiii.fall,
-    yaosNotesByDurationBlocksThenRendering.twentyfour.chuwowww.fall,
-    yaosNotesByDurationBlocksThenRendering.twentyfour.djiyaiii.fall,
+    repeat(getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'fifteen',
+        rendering: 'fall',
+    }),    4),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'twentyfour',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'twentyfour',
+        rendering: 'fall',
+    }),
 ])
 
 export {

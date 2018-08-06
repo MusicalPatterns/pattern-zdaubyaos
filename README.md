@@ -20,13 +20,13 @@ ouzd: 8,7
 
 #### of 24
 
-umowww: 4,4,4,4,4,4
-chuwowww: 3,4,5,3,5,4
-iesttt: 6,6,6,6
+umow: 4,4,4,4,4,4
+chuwow: 3,4,5,3,5,4
+iest: 6,6,6,6
 
-inaiii: 3,3,3,3,3,3,3,3
-djiyaiii: 3,3,5,3,3,7
-ouzddd: 8,8,8
+inai: 3,3,3,3,3,3,3,3
+djiyai: 3,3,5,3,3,7
+ouzd: 8,8,8
 
 ### renderings
 

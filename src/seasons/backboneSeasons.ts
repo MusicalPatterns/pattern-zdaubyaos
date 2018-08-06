@@ -5,7 +5,8 @@ import {
     backboneFifteenBNotes,
     backboneFifteenCNotes,
     backboneTwentyfourCNotes,
-    backboneTwentyfourENotes, backboneTwentyfourGNotes,
+    backboneTwentyfourENotes,
+    backboneTwentyfourGNotes,
 } from '../notes/backboneNotes'
 import { Season } from '../types'
 

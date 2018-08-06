@@ -1,5 +1,4 @@
-import yaosFifteenBlocks from '../blocks/yaosFifteenBlocks'
-import yaosTwentyfourBlocks from '../blocks/yaosTwentyfourBlocks'
+import { yaosBlocksByDuration } from '../blocks/yaosBlocks'
 import render from '../render'
 import renderings from '../renderings'
 import { Blocks, Contour, Rendering } from '../types'
@@ -22,7 +21,7 @@ const yaosContoursByDurationBlocksThenRendering: ContoursPackage = {
     twentyfour: {},
 }
 
-Object.entries(yaosFifteenBlocks).forEach(([blocksName, blocks]: [string, Blocks]): void => {
+Object.entries(yaosBlocksByDuration.fifteen).forEach(([blocksName, blocks]: [string, Blocks]): void => {
     Object.entries(renderings).forEach(([renderingName, rendering]: [string, Rendering]): void => {
         const contour: Contour = render(blocks, rendering)
 
@@ -32,7 +31,7 @@ Object.entries(yaosFifteenBlocks).forEach(([blocksName, blocks]: [string, Blocks
     })
 })
 
-Object.entries(yaosTwentyfourBlocks).forEach(([blocksName, blocks]: [string, Blocks]): void => {
+Object.entries(yaosBlocksByDuration.twentyfour).forEach(([blocksName, blocks]: [string, Blocks]): void => {
     Object.entries(renderings).forEach(([renderingName, rendering]: [string, Rendering]): void => {
         const contour: Contour = render(blocks, rendering)
 

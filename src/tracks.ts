@@ -1,5 +1,6 @@
 // tslint:disable:max-file-line-count
 
+import { yaosNoteUsagesByDurationBlocksThenRendering } from './notes/getYaosNotes'
 import { backboneseasonA, backboneseasonB, backboneseasonC } from './seasons/backboneSeasons'
 import {
     breatherFall,
@@ -140,6 +141,9 @@ seasonTracks.slice(START, END + INCLUSIVE).forEach((tracks: Season[]): void => {
     zdaubyaosTrackB = zdaubyaosTrackB.concat(tracks[B])
     zdaubyaosTrackC = zdaubyaosTrackC.concat(tracks[C])
 })
+
+// tslint:disable-next-line:no-console
+console.log(yaosNoteUsagesByDurationBlocksThenRendering)
 
 export {
     zdaubyaosTrackA,

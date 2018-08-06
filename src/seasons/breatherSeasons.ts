@@ -1,14 +1,30 @@
 import rest from '../../../../src/rest'
 import { backboneTwentyfourCNotes } from '../notes/backboneNotes'
-import { inaiiiVarietyNotes, yaosNotesByDurationBlocksThenRendering } from '../notes/yaosNotes'
+import getYaosNotes from '../notes/getYaosNotes'
+import { inaiiiVarietyNotes } from '../notes/yaosNotes'
 import { Season } from '../types'
 
 const breatherRest: Season = rest(24)
-const breatherSpring: Season = yaosNotesByDurationBlocksThenRendering.twentyfour.inaiii.spring
-const breatherSummer: Season = yaosNotesByDurationBlocksThenRendering.twentyfour.inaiii.summer
+const breatherSpring: Season = getYaosNotes({
+    blockresolution: 'lowregular',
+    blockstrategy: 'inaidjiyaiouzd',
+    duration: 'twentyfour',
+    rendering: 'spring',
+})
+const breatherSummer: Season = getYaosNotes({
+    blockresolution: 'lowregular',
+    blockstrategy: 'inaidjiyaiouzd',
+    duration: 'twentyfour',
+    rendering: 'summer',
+})
 const breatherFall: Season = backboneTwentyfourCNotes
 const breatherVariety: Season = inaiiiVarietyNotes
-const breatherSpringAlt: Season = yaosNotesByDurationBlocksThenRendering.twentyfour.ouzddd.spring
+const breatherSpringAlt: Season = getYaosNotes({
+    blockresolution: 'highregular',
+    blockstrategy: 'inaidjiyaiouzd',
+    duration: 'twentyfour',
+    rendering: 'spring',
+})
 
 export {
     breatherRest,
