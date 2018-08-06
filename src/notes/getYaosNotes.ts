@@ -28,7 +28,7 @@ export const yaosNoteUsagesByDurationBlocksThenRendering: UsageGrouping = {
     twentyfour: {},
 }
 
-const getYaosNotes: (_: YaosNotesQuery) => Notes =
+const getYaosNotes: (yaosNotesQuery: YaosNotesQuery) => Notes =
     ({duration, blockresolution, blockstrategy, rendering}: YaosNotesQuery): Notes => {
         const blocks: string = BLOCKS_BY_STRATEGY_THEN_RESOLUTION[blockstrategy][blockresolution]
 

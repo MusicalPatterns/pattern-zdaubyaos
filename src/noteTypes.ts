@@ -41,7 +41,7 @@ const tremNoteType: NoteType =
         }
     }
 
-const manualNoteType: (_: number[]) => Note =
+const manualNoteType: ([pitchIndex, duration]: number[]) => Note =
     ([pitchIndex, duration]: number[]): Note => {
         if (pitchIndex === REST) { return singleRest }
 

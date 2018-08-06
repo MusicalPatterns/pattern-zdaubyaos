@@ -10,9 +10,9 @@ type Part = Note[]
 
 type Track = Note[]
 
-type Rendering = (_: number) => number[]
+type Rendering = (block: number) => number[]
 
-type NoteType = (_: number) => Note
+type NoteType = (contourElement: number) => Note
 
 type Segment = Part[]
 
