@@ -9,11 +9,11 @@ const inaiii: Blocks = repeat([3], 8)
 const djiyaiii: Blocks = [3, 3, 5, 3, 3, 7]
 const ouzddd: Blocks = repeat([8], 3)
 
-export {
-    umowww,
+export default {
     chuwowww,
+    djiyaiii,
     iesttt,
     inaiii,
-    djiyaiii,
     ouzddd,
+    umowww,
 }
