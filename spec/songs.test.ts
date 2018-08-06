@@ -5324,10 +5324,454 @@ describe('songs', () => {
                             "sustain": 2.9
                         },
                         {
-                            "duration": 213,
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 7,
+                            "gain": 1,
+                            "pitchIndex": 7,
+                            "sustain": 6.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 7,
+                            "gain": 1,
+                            "pitchIndex": 7,
+                            "sustain": 6.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 7,
+                            "gain": 1,
+                            "pitchIndex": 7,
+                            "sustain": 6.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 210,
                             "gain": 0,
                             "pitchIndex": 1,
-                            "sustain": 212.9
+                            "sustain": 209.9
                         },
                         {
                             "duration": 24,
@@ -9466,10 +9910,238 @@ describe('songs', () => {
                             "sustain": 2.9
                         },
                         {
-                            "duration": 213,
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 7,
+                            "gain": 1,
+                            "pitchIndex": 7,
+                            "sustain": 6.9
+                        },
+                        {
+                            "duration": 9,
+                            "gain": 1,
+                            "pitchIndex": 9,
+                            "sustain": 8.9
+                        },
+                        {
+                            "duration": 11,
+                            "gain": 1,
+                            "pitchIndex": 11,
+                            "sustain": 10.9
+                        },
+                        {
+                            "duration": 13,
+                            "gain": 1,
+                            "pitchIndex": 13,
+                            "sustain": 12.9
+                        },
+                        {
+                            "duration": 15,
+                            "gain": 1,
+                            "pitchIndex": 15,
+                            "sustain": 14.9
+                        },
+                        {
+                            "duration": 17,
+                            "gain": 1,
+                            "pitchIndex": 17,
+                            "sustain": 16.9
+                        },
+                        {
+                            "duration": 19,
+                            "gain": 1,
+                            "pitchIndex": 19,
+                            "sustain": 18.9
+                        },
+                        {
+                            "duration": 21,
+                            "gain": 1,
+                            "pitchIndex": 21,
+                            "sustain": 20.9
+                        },
+                        {
+                            "duration": 23,
+                            "gain": 1,
+                            "pitchIndex": 23,
+                            "sustain": 22.9
+                        },
+                        {
+                            "duration": 25,
+                            "gain": 1,
+                            "pitchIndex": 25,
+                            "sustain": 24.9
+                        },
+                        {
+                            "duration": 210,
                             "gain": 0,
                             "pitchIndex": 1,
-                            "sustain": 212.9
+                            "sustain": 209.9
                         },
                         {
                             "duration": 24,
@@ -12330,10 +13002,736 @@ describe('songs', () => {
                             "sustain": 2.9
                         },
                         {
-                            "duration": 213,
-                            "gain": 0,
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
                             "pitchIndex": 1,
-                            "sustain": 212.9
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 7,
+                            "gain": 1,
+                            "pitchIndex": 7,
+                            "sustain": 6.9
+                        },
+                        {
+                            "duration": 9,
+                            "gain": 1,
+                            "pitchIndex": 9,
+                            "sustain": 8.9
+                        },
+                        {
+                            "duration": 11,
+                            "gain": 1,
+                            "pitchIndex": 11,
+                            "sustain": 10.9
+                        },
+                        {
+                            "duration": 13,
+                            "gain": 1,
+                            "pitchIndex": 13,
+                            "sustain": 12.9
+                        },
+                        {
+                            "duration": 15,
+                            "gain": 1,
+                            "pitchIndex": 15,
+                            "sustain": 14.9
+                        },
+                        {
+                            "duration": 17,
+                            "gain": 1,
+                            "pitchIndex": 17,
+                            "sustain": 16.9
+                        },
+                        {
+                            "duration": 19,
+                            "gain": 1,
+                            "pitchIndex": 19,
+                            "sustain": 18.9
+                        },
+                        {
+                            "duration": 21,
+                            "gain": 1,
+                            "pitchIndex": 21,
+                            "sustain": 20.9
+                        },
+                        {
+                            "duration": 23,
+                            "gain": 1,
+                            "pitchIndex": 23,
+                            "sustain": 22.9
+                        },
+                        {
+                            "duration": 25,
+                            "gain": 1,
+                            "pitchIndex": 25,
+                            "sustain": 24.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 5,
+                            "gain": 1,
+                            "pitchIndex": 5,
+                            "sustain": 4.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
                         },
                         {
                             "duration": 24,
@@ -17780,10 +19178,10 @@ describe('songs', () => {
                             "sustain": 215.9
                         },
                         {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
+                            "duration": 213,
+                            "gain": 0,
+                            "pitchIndex": 1,
+                            "sustain": 212.9
                         },
                         {
                             "duration": 1,
@@ -17798,64 +19196,10 @@ describe('songs', () => {
                             "sustain": 1.9
                         },
                         {
-                            "duration": 1,
+                            "duration": 3,
                             "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
+                            "pitchIndex": 3,
+                            "sustain": 2.9
                         },
                         {
                             "duration": 1,
@@ -17882,18 +19226,6 @@ describe('songs', () => {
                             "sustain": 3.9
                         },
                         {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
                             "duration": 1,
                             "gain": 1,
                             "pitchIndex": 1,
@@ -17904,36 +19236,6 @@ describe('songs', () => {
                             "gain": 1,
                             "pitchIndex": 2,
                             "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
                         },
                         {
                             "duration": 3,
@@ -17942,200 +19244,650 @@ describe('songs', () => {
                             "sustain": 2.9
                         },
                         {
-                            "duration": 5,
+                            "duration": 1,
                             "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 7,
-                            "gain": 1,
-                            "pitchIndex": 7,
-                            "sustain": 6.9
-                        },
-                        {
-                            "duration": 9,
-                            "gain": 1,
-                            "pitchIndex": 9,
-                            "sustain": 8.9
-                        },
-                        {
-                            "duration": 11,
-                            "gain": 1,
-                            "pitchIndex": 11,
-                            "sustain": 10.9
-                        },
-                        {
-                            "duration": 13,
-                            "gain": 1,
-                            "pitchIndex": 13,
-                            "sustain": 12.9
-                        },
-                        {
-                            "duration": 15,
-                            "gain": 1,
-                            "pitchIndex": 15,
-                            "sustain": 14.9
-                        },
-                        {
-                            "duration": 17,
-                            "gain": 1,
-                            "pitchIndex": 17,
-                            "sustain": 16.9
-                        },
-                        {
-                            "duration": 19,
-                            "gain": 1,
-                            "pitchIndex": 19,
-                            "sustain": 18.9
-                        },
-                        {
-                            "duration": 21,
-                            "gain": 1,
-                            "pitchIndex": 21,
-                            "sustain": 20.9
-                        },
-                        {
-                            "duration": 23,
-                            "gain": 1,
-                            "pitchIndex": 23,
-                            "sustain": 22.9
-                        },
-                        {
-                            "duration": 25,
-                            "gain": 1,
-                            "pitchIndex": 25,
-                            "sustain": 24.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
-                            "pitchIndex": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 0.5,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
                             "pitchIndex": 2,
                             "sustain": 1.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 0.5,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 3,
+                            "gain": 1,
+                            "pitchIndex": 3,
+                            "sustain": 2.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1.5,
+                            "pitchIndex": 2,
+                            "sustain": 1.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.5,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 2,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 1.9
                         },
@@ -26446,232 +28198,16 @@ describe('songs', () => {
                             "sustain": 215.9
                         },
                         {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
+                            "duration": 213,
+                            "gain": 0,
                             "pitchIndex": 1,
-                            "sustain": 0.9
+                            "sustain": 212.9
                         },
                         {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
+                            "duration": 210,
+                            "gain": 0,
                             "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 5,
-                            "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 7,
-                            "gain": 1,
-                            "pitchIndex": 7,
-                            "sustain": 6.9
-                        },
-                        {
-                            "duration": 9,
-                            "gain": 1,
-                            "pitchIndex": 9,
-                            "sustain": 8.9
-                        },
-                        {
-                            "duration": 11,
-                            "gain": 1,
-                            "pitchIndex": 11,
-                            "sustain": 10.9
-                        },
-                        {
-                            "duration": 13,
-                            "gain": 1,
-                            "pitchIndex": 13,
-                            "sustain": 12.9
-                        },
-                        {
-                            "duration": 15,
-                            "gain": 1,
-                            "pitchIndex": 15,
-                            "sustain": 14.9
-                        },
-                        {
-                            "duration": 17,
-                            "gain": 1,
-                            "pitchIndex": 17,
-                            "sustain": 16.9
-                        },
-                        {
-                            "duration": 19,
-                            "gain": 1,
-                            "pitchIndex": 19,
-                            "sustain": 18.9
-                        },
-                        {
-                            "duration": 21,
-                            "gain": 1,
-                            "pitchIndex": 21,
-                            "sustain": 20.9
-                        },
-                        {
-                            "duration": 23,
-                            "gain": 1,
-                            "pitchIndex": 23,
-                            "sustain": 22.9
-                        },
-                        {
-                            "duration": 25,
-                            "gain": 1,
-                            "pitchIndex": 25,
-                            "sustain": 24.9
+                            "sustain": 209.9
                         },
                         {
                             "duration": 1,
@@ -26681,19 +28217,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
@@ -26705,7 +28241,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
@@ -26717,19 +28253,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
@@ -26741,7 +28277,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
@@ -26753,19 +28289,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
@@ -26777,31 +28313,31 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 1.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 1.9
                         },
@@ -30720,310 +32256,34 @@ describe('songs', () => {
                             "sustain": 215.9
                         },
                         {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
+                            "duration": 213,
+                            "gain": 0,
                             "pitchIndex": 1,
-                            "sustain": 0.9
+                            "sustain": 212.9
                         },
                         {
-                            "duration": 5,
+                            "duration": 19,
                             "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
+                            "pitchIndex": 19,
+                            "sustain": 18.9
                         },
                         {
-                            "duration": 1,
+                            "duration": 16,
                             "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
+                            "pitchIndex": 16,
+                            "sustain": 15.9
                         },
                         {
-                            "duration": 2,
+                            "duration": 13,
                             "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
+                            "pitchIndex": 13,
+                            "sustain": 12.9
                         },
                         {
-                            "duration": 4,
+                            "duration": 10,
                             "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 5,
-                            "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 5,
-                            "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 2,
-                            "gain": 1,
-                            "pitchIndex": 2,
-                            "sustain": 1.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 5,
-                            "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 5,
-                            "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 5,
-                            "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 5,
-                            "gain": 1,
-                            "pitchIndex": 5,
-                            "sustain": 4.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
-                        },
-                        {
-                            "duration": 4,
-                            "gain": 1,
-                            "pitchIndex": 4,
-                            "sustain": 3.9
+                            "pitchIndex": 10,
+                            "sustain": 9.9
                         },
                         {
                             "duration": 7,
@@ -31044,22 +32304,10 @@ describe('songs', () => {
                             "sustain": 0.9
                         },
                         {
-                            "duration": 3,
+                            "duration": 4,
                             "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
+                            "pitchIndex": 4,
+                            "sustain": 3.9
                         },
                         {
                             "duration": 1,
@@ -31072,6 +32320,168 @@ describe('songs', () => {
                             "gain": 1,
                             "pitchIndex": 4,
                             "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 13,
+                            "gain": 1,
+                            "pitchIndex": 13,
+                            "sustain": 12.9
+                        },
+                        {
+                            "duration": 10,
+                            "gain": 1,
+                            "pitchIndex": 10,
+                            "sustain": 9.9
                         },
                         {
                             "duration": 7,
@@ -31092,22 +32502,10 @@ describe('songs', () => {
                             "sustain": 0.9
                         },
                         {
-                            "duration": 3,
+                            "duration": 4,
                             "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitchIndex": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 3,
-                            "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
+                            "pitchIndex": 4,
+                            "sustain": 3.9
                         },
                         {
                             "duration": 1,
@@ -31122,10 +32520,10 @@ describe('songs', () => {
                             "sustain": 3.9
                         },
                         {
-                            "duration": 7,
+                            "duration": 1,
                             "gain": 1,
-                            "pitchIndex": 7,
-                            "sustain": 6.9
+                            "pitchIndex": 1,
+                            "sustain": 0.9
                         },
                         {
                             "duration": 4,
@@ -31140,10 +32538,10 @@ describe('songs', () => {
                             "sustain": 0.9
                         },
                         {
-                            "duration": 3,
+                            "duration": 4,
                             "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
+                            "pitchIndex": 4,
+                            "sustain": 3.9
                         },
                         {
                             "duration": 1,
@@ -31152,10 +32550,34 @@ describe('songs', () => {
                             "sustain": 0.9
                         },
                         {
-                            "duration": 3,
+                            "duration": 4,
                             "gain": 1,
-                            "pitchIndex": 3,
-                            "sustain": 2.9
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1,
+                            "pitchIndex": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 4,
+                            "gain": 1,
+                            "pitchIndex": 4,
+                            "sustain": 3.9
                         },
                         {
                             "duration": 1,
@@ -31171,19 +32593,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
@@ -31195,7 +32617,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
@@ -31207,19 +32629,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
@@ -31231,7 +32653,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
@@ -31243,19 +32665,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
@@ -31267,31 +32689,31 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 1.9
                         },
                         {
                             "duration": 1,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 0.5,
+                            "gain": 1.5,
                             "pitchIndex": 2,
                             "sustain": 1.9
                         },

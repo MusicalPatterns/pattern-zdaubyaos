@@ -21,7 +21,7 @@ const breatherSummer: Season = adjustGain(getYaosNotes({
     rendering: 'summer',
 }), 0.5)
 const breatherFall: Season = adjustGain(backboneTwentyfourCNotes, 0.5)
-const breatherVariety: Season = adjustGain(inaiiiVarietyNotes, 0.5)
+const breatherVariety: Season = adjustGain(inaiiiVarietyNotes, 1.5)
 const breatherSpringAlt: Season = adjustGain(getYaosNotes({
     blockresolution: 'highregular',
     blockstrategy: 'inaidjiyaiouzd',

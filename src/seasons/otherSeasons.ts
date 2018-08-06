@@ -2,6 +2,7 @@ import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
 import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
+import { thirtyfiveANotes, thirtyfiveBNotes, thirtyfiveCNotes } from '../notes/otherNotes'
 import { Season } from '../types'
 
 const trueseasonYetOfBackbone: Season = sequence([
@@ -9,7 +10,7 @@ const trueseasonYetOfBackbone: Season = sequence([
     repeatCall(() => backboneTwentyfourCNotes, 4),
 ])
 
-const experimentWithIesttt: Season = sequence([
+const experimentseasonWithIesttt: Season = sequence([
     repeatCall(() => getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'umowchuwowiest',
@@ -30,7 +31,7 @@ const experimentWithIesttt: Season = sequence([
     }),        3),
 ])
 
-const experimentWithUmowww: Season = sequence([
+const experimentseasonWithUmowww: Season = sequence([
     repeatCall(() => getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'umowchuwowiest',
@@ -50,9 +51,18 @@ const experimentWithUmowww: Season = sequence([
         rendering: 'fall',
     }),        3),
 ])
+
+const thirtyfiveseasonA: Season = thirtyfiveANotes
+
+const thirtyfiveseasonB: Season = thirtyfiveBNotes
+
+const thirtyfiveseasonC: Season = thirtyfiveCNotes
 
 export {
     trueseasonYetOfBackbone,
-    experimentWithIesttt,
-    experimentWithUmowww,
+    experimentseasonWithIesttt,
+    experimentseasonWithUmowww,
+    thirtyfiveseasonA,
+    thirtyfiveseasonB,
+    thirtyfiveseasonC,
 }

@@ -12,7 +12,14 @@ import {
     breatherSummer,
     breatherVariety,
 } from './seasons/breatherSeasons'
-import { experimentWithIesttt, experimentWithUmowww, trueseasonYetOfBackbone } from './seasons/otherSeasons'
+import {
+    experimentseasonWithIesttt,
+    experimentseasonWithUmowww,
+    thirtyfiveseasonA,
+    thirtyfiveseasonB,
+    thirtyfiveseasonC,
+    trueseasonYetOfBackbone,
+} from './seasons/otherSeasons'
 import { shiftyseasonA, shiftyseasonB } from './seasons/shiftySeasons'
 import {
     trueseasonYaosInaidjiyaiouzdSummerToSpring,
@@ -108,35 +115,42 @@ const seasonTracks: Season[][] = [
         shiftyseasonA,
         shiftyseasonB,
         shiftyseasonB,
-    ],           [false, false, false]),
+    ],           [true, true, true]),
     // 12
+    flipEntities([
+        thirtyfiveseasonC,
+        thirtyfiveseasonB,
+        thirtyfiveseasonA,
+    ],           [false, false, true]),
+    // 13
     flipEntities([
         breatherVariety,
         breatherVariety,
         breatherVariety,
     ],           [false, false, false]),
-    // 13
+    // 14
     flipEntities([
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonYaosUmowchuwowiestSummerToSpring,
         trueseasonYaosInaidjiyaiouzdSummerToSpring,
     ],           [false, false, false]),
-    // 14
+    // 15
     flipEntities([
         trueseasonZdaubTrem,
         trueseasonZdaubBonyWithSuperinscape,
         trueseasonZdaubGlis,
     ],           [false, false, false]),
-    // 15
+    // 16
     flipEntities([
         backboneseasonC,
         backboneseasonA,
         backboneseasonB,
     ],           [false, false, false]),
+    // 17
     flipEntities([
-        experimentWithIesttt,
-        experimentWithUmowww,
-        experimentWithUmowww,
+        experimentseasonWithIesttt,
+        experimentseasonWithUmowww,
+        experimentseasonWithUmowww,
     ],           [true, false, true]),
 ]
 
