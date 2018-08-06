@@ -12,6 +12,9 @@ import {
     zdaubyaosTrackA,
     zdaubyaosTrackB,
     zdaubyaosTrackC,
+    zdaubyaosTrackD,
+    zdaubyaosTrackE,
+    zdaubyaosTrackF,
 } from './tracks'
 
 const TO_AVOID_BLOW_OUT: number = 0.2
@@ -38,21 +41,21 @@ const zdaubyaosHarmonicSine: Entity = buildEntity({
 })
 
 const zdaubyaosSuperparticularSquare: Entity = buildEntity({
-    notes: zdaubyaosTrackA,
+    notes: zdaubyaosTrackD,
     pitches: superparticularSeriesPitches,
     voice: buildVoice('square'),
     voiceGain: TO_AVOID_BLOW_OUT,
 })
 
 const zdaubyaosDuperparticularSaw: Entity = buildEntity({
-    notes: zdaubyaosTrackB,
+    notes: zdaubyaosTrackE,
     pitches: duperparticularSeriesPitches,
     voice: buildVoice('sawtooth'),
     voiceGain: TO_AVOID_BLOW_OUT,
 })
 
 const zdaubyaosSubharmonicSine: Entity = buildEntity({
-    notes: zdaubyaosTrackC,
+    notes: zdaubyaosTrackF,
     pitches: subharmonicSeriesPitches,
     voice: buildVoice('sine'),
     voiceGain: TO_AVOID_BLOW_OUT,
