@@ -5093,7 +5093,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5105,13 +5105,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5123,13 +5123,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5141,13 +5141,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5159,13 +5159,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5177,13 +5177,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5195,13 +5195,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5213,13 +5213,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -5231,7 +5231,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9627,25 +9627,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -9657,25 +9657,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -9687,25 +9687,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -9717,13 +9717,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9735,13 +9735,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9753,13 +9753,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9771,13 +9771,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9789,13 +9789,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9807,25 +9807,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -9837,25 +9837,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -9867,25 +9867,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -9897,13 +9897,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9915,13 +9915,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9933,13 +9933,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9951,13 +9951,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -9969,13 +9969,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -10923,25 +10923,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -10953,25 +10953,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -10983,25 +10983,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -11013,13 +11013,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11031,13 +11031,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11049,13 +11049,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11067,13 +11067,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11085,13 +11085,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11103,25 +11103,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -11133,25 +11133,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -11163,25 +11163,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -11193,13 +11193,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11211,13 +11211,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11229,13 +11229,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11247,13 +11247,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -11265,13 +11265,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -13491,43 +13491,43 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 5,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 6,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 7,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 8,
                             "sustain": 0.9
                         },
@@ -13539,43 +13539,43 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 5,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 6,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 7,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 8,
                             "sustain": 0.9
                         },
@@ -13587,43 +13587,43 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 5,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 6,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 7,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 8,
                             "sustain": 0.9
                         },
@@ -15255,19 +15255,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -15279,7 +15279,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -15291,19 +15291,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -15315,7 +15315,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -15327,19 +15327,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -15351,31 +15351,31 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 1.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 1.9
                         },
@@ -19721,25 +19721,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -19751,25 +19751,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -19781,25 +19781,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -19811,13 +19811,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -19829,13 +19829,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -19847,13 +19847,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -19865,13 +19865,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -19883,13 +19883,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -19901,25 +19901,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -19931,25 +19931,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -19961,25 +19961,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -19991,13 +19991,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -20009,13 +20009,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -20027,13 +20027,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -20045,13 +20045,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -20063,13 +20063,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -23591,73 +23591,73 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 3,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 2.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 3,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 2.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 3,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 2.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 3,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 2.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 3,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 2.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 3,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 2.9
                         },
@@ -25301,19 +25301,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -25325,7 +25325,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -25337,19 +25337,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -25361,7 +25361,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -25373,19 +25373,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -25397,31 +25397,31 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 1.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 1.9
                         },
@@ -27541,13 +27541,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -27559,13 +27559,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -27577,13 +27577,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -27595,13 +27595,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -27613,13 +27613,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -27631,13 +27631,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -27649,13 +27649,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -27667,104 +27667,14 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 4,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 4,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 5,
                             "sustain": 0.9
                         },
                         {
@@ -28057,18 +27967,6 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
-                            "pitch": 4,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 5,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
                             "gain": 0,
                             "pitch": 1,
                             "sustain": 0.9
@@ -28089,114 +27987,6 @@ describe('songs', () => {
                             "duration": 1,
                             "gain": 1,
                             "pitch": 4,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 5,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 4,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 5,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 0,
-                            "pitch": 1,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 2,
-                            "sustain": 0.9
-                        },
-                        {
-                            "duration": 1,
-                            "gain": 1,
-                            "pitch": 3,
                             "sustain": 0.9
                         },
                         {
@@ -28255,25 +28045,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -28285,25 +28075,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -28315,13 +28105,43 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 4,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 5,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.5,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -28333,13 +28153,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -28351,13 +28171,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -28369,13 +28189,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -28387,13 +28207,193 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 4,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 5,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 4,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 5,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 4,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 1.25,
+                            "pitch": 5,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 3,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0,
+                            "pitch": 1,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
+                            "pitch": 2,
+                            "sustain": 0.9
+                        },
+                        {
+                            "duration": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31171,19 +31171,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -31195,7 +31195,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31207,19 +31207,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -31231,7 +31231,7 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31243,19 +31243,19 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
@@ -31267,31 +31267,31 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 1.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 1,
                             "sustain": 0.9
                         },
                         {
                             "duration": 2,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 1.9
                         },
@@ -31663,25 +31663,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -31693,25 +31693,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -31723,25 +31723,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -31753,13 +31753,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31771,13 +31771,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31789,13 +31789,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31807,13 +31807,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31825,13 +31825,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.5,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31843,25 +31843,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -31873,25 +31873,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -31903,25 +31903,25 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 3,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 4,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 1.25,
                             "pitch": 5,
                             "sustain": 0.9
                         },
@@ -31933,13 +31933,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31951,13 +31951,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31969,13 +31969,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -31987,13 +31987,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
@@ -32005,13 +32005,13 @@ describe('songs', () => {
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 2,
                             "sustain": 0.9
                         },
                         {
                             "duration": 1,
-                            "gain": 1,
+                            "gain": 0.75,
                             "pitch": 3,
                             "sustain": 0.9
                         },
