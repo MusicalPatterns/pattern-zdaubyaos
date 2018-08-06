@@ -10,7 +10,7 @@ import {
     breatherSummer,
     breatherVariety,
 } from './seasons/breatherSeasons'
-import { trueseasonYetOfBackbone } from './seasons/otherSeasons'
+import { experimentWithIesttt, experimentWithUmowww, trueseasonYetOfBackbone } from './seasons/otherSeasons'
 import { shiftyseasonA, shiftyseasonB } from './seasons/shiftySeasons'
 import {
     trueseasonYaosInaidjiyaiouzdSummerToSpring,
@@ -131,9 +131,14 @@ const seasonTracks: Season[][] = [
         backboneseasonA,
         backboneseasonB,
     ], [false, false, false]),
+    flipEntities([
+        experimentWithIesttt,
+        experimentWithUmowww,
+        experimentWithUmowww,
+    ], [true, false, true]),
 ]
 
-const START: number = 4
+const START: number = 0
 const END: number = seasonTracks.length
 const INCLUSIVE: number = 1
 const A: number = 0
