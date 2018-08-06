@@ -1,9 +1,8 @@
-import repeat from '../../../../src/repeat'
+import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
 import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
-import { Season } from '../types'
 import getYaosNotes from '../notes/getYaosNotes'
-import repeatCall from '../../../../src/repeatCall'
+import { Season } from '../types'
 
 const trueseasonYetOfBackbone: Season = sequence([
     repeatCall(() => backboneFifteenANotes, 8),
@@ -12,44 +11,44 @@ const trueseasonYetOfBackbone: Season = sequence([
 
 const experimentWithIesttt: Season = sequence([
     repeatCall(() => getYaosNotes({
-        duration: 'twentyfour',
-        blockstrategy: 'umowchuwowiest',
         blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
         rendering: 'spring',
-    }), 3),
+    }),        3),
     repeatCall(() => getYaosNotes({
-        duration: 'twentyfour',
-        blockstrategy: 'umowchuwowiest',
         blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
         rendering: 'summer',
-    }), 3),
+    }),        3),
     repeatCall(() => getYaosNotes({
-        duration: 'twentyfour',
-        blockstrategy: 'umowchuwowiest',
         blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
         rendering: 'fall',
-    }), 3),
+    }),        3),
 ])
 
 const experimentWithUmowww: Season = sequence([
     repeatCall(() => getYaosNotes({
-        duration: 'twentyfour',
-        blockstrategy: 'umowchuwowiest',
         blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
         rendering: 'spring',
-    }), 3),
+    }),        3),
     repeatCall(() => getYaosNotes({
-        duration: 'twentyfour',
-        blockstrategy: 'umowchuwowiest',
         blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
         rendering: 'summer',
-    }), 3),
+    }),        3),
     repeatCall(() => getYaosNotes({
-        duration: 'twentyfour',
-        blockstrategy: 'umowchuwowiest',
         blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
         rendering: 'fall',
-    }), 3),
+    }),        3),
 ])
 
 export {

@@ -1,4 +1,4 @@
-import repeat from '../../../../src/repeat'
+import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
 import {
     ascentFifteenBonyNotes,
@@ -21,7 +21,6 @@ import {
 } from '../notes/zdaubTwentyfourNotes'
 import { glisNoteType } from '../noteTypes'
 import { Season } from '../types'
-import repeatCall from '../../../../src/repeatCall'
 
 const trueseasonZdaubGlis: Season = sequence([
     repeatCall(() => noodlingFifteenGlisNotes, 3),

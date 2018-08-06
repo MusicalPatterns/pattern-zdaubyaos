@@ -1,8 +1,8 @@
-import { Season } from './types'
 import calculateDuration from '../../../src/calculateDuration'
 import rest from '../../../src/rest'
+import { Season } from './types'
 
-const FLIP_INDEX = 3
+const FLIP_INDEX: number = 3
 
 const flipEntities: (_: Season[], __: boolean[]) => Season[] =
     (seasons: Season[], flippings: boolean[]): Season[] => {

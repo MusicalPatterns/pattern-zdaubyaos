@@ -1,5 +1,6 @@
 // tslint:disable:max-file-line-count
 
+import flipEntities from './flipEntities'
 import { yaosNoteUsagesByDurationBlocksThenRendering } from './notes/getYaosNotes'
 import { backboneseasonA, backboneseasonB, backboneseasonC } from './seasons/backboneSeasons'
 import {
@@ -25,7 +26,6 @@ import {
     trueseasonZdaubTrem,
 } from './seasons/trueZdaubSeasons'
 import { Season, Track } from './types'
-import flipEntities from './flipEntities'
 
 let zdaubyaosTrackA: Track = []
 let zdaubyaosTrackB: Track = []
@@ -40,102 +40,102 @@ const seasonTracks: Season[][] = [
         breatherSpring,
         breatherRest,
         breatherRest,
-    ], [true, true, true]),
+    ],           [true, true, true]),
     // 1
     flipEntities([
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonYaosUmowchuwowiestSpringToSummer,
-    ], [true, true, true]),
+    ],           [true, true, true]),
     // 2
     flipEntities([
         trueseasonZdaubGlis,
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonZdaubTrem,
-    ], [true, true, true]),
+    ],           [true, true, true]),
     // 3
     flipEntities([
         breatherRest,
         breatherSummer,
         breatherRest,
-    ], [true, true, false]),
+    ],           [true, true, false]),
     // 4
     flipEntities([
         trueseasonYaosUmowchuwowiestSummerToSpring,
         trueseasonYaosUmowchuwowiestSummerToSpring,
         trueseasonYaosUmowchuwowiestSummerToSpring,
-    ], [true, false, false]),
+    ],           [true, false, false]),
     // 5
     flipEntities([
         trueseasonYaosUmowchuwowiestSummerToSpring,
         trueseasonZdaubGlis,
         trueseasonZdaubGlisVariant,
-    ], [true, false, false]),
+    ],           [true, false, false]),
     // 6
     flipEntities([
         breatherRest,
         breatherRest,
         breatherFall,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 7
     flipEntities([
         trueseasonYaosInaidjiyaiouzdSummerToSpring,
         trueseasonYaosInaidjiyaiouzdSummerToSpring,
         trueseasonYaosInaidjiyaiouzdSummerToSpring,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 8
     flipEntities([
         breatherRest,
         breatherSpringAlt,
         breatherRest,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 9
     flipEntities([
         trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
         trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
         trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 10
     flipEntities([
         trueseasonYetOfBackbone,
         trueseasonYetOfBackbone,
         trueseasonZdaubBony,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 11
     flipEntities([
         shiftyseasonA,
         shiftyseasonB,
         shiftyseasonB,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 12
     flipEntities([
         breatherVariety,
         breatherVariety,
         breatherVariety,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 13
     flipEntities([
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonYaosUmowchuwowiestSummerToSpring,
         trueseasonYaosInaidjiyaiouzdSummerToSpring,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 14
     flipEntities([
         trueseasonZdaubTrem,
         trueseasonZdaubBony,
         trueseasonZdaubGlis,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     // 15
     flipEntities([
         backboneseasonC,
         backboneseasonA,
         backboneseasonB,
-    ], [false, false, false]),
+    ],           [false, false, false]),
     flipEntities([
         experimentWithIesttt,
         experimentWithUmowww,
         experimentWithUmowww,
-    ], [true, false, true]),
+    ],           [true, false, true]),
 ]
 
 const START: number = 0

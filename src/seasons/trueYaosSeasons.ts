@@ -1,10 +1,9 @@
 // tslint:disable:max-file-line-count
 
-import repeat from '../../../../src/repeat'
+import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
 import getYaosNotes from '../notes/getYaosNotes'
 import { Season } from '../types'
-import repeatCall from '../../../../src/repeatCall'
 
 const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
     repeatCall(() => getYaosNotes({
@@ -12,7 +11,7 @@ const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
         blockstrategy: 'umowchuwowiest',
         duration: 'fifteen',
         rendering: 'spring',
-    }),    4),
+    }),        4),
     getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'umowchuwowiest',
@@ -42,7 +41,7 @@ const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'twentyfour',
         rendering: 'summer',
-    }),    4),
+    }),        4),
 ])
 
 const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
@@ -51,7 +50,7 @@ const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
         blockstrategy: 'umowchuwowiest',
         duration: 'fifteen',
         rendering: 'summer',
-    }),    4),
+    }),        4),
     getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'umowchuwowiest',
@@ -81,7 +80,7 @@ const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'twentyfour',
         rendering: 'spring',
-    }),    4),
+    }),        4),
 ])
 
 const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
@@ -90,7 +89,7 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'fifteen',
         rendering: 'summer',
-    }),    4),
+    }),        4),
     getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'inaidjiyaiouzd',
@@ -120,7 +119,7 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
         rendering: 'spring',
-    }),    4),
+    }),        4),
 ])
 
 const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash: Season = sequence([
@@ -129,7 +128,7 @@ const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash: Season = sequence([
         blockstrategy: 'umowchuwowiest',
         duration: 'fifteen',
         rendering: 'fall',
-    }),    4),
+    }),        4),
     getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'inaidjiyaiouzd',

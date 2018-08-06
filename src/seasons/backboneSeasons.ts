@@ -1,4 +1,3 @@
-import repeat from '../../../../src/repeat'
 import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
 import {
