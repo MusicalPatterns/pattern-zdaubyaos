@@ -1,6 +1,7 @@
 // tslint:disable:max-file-line-count
 
 import flipEntities from './flipEntities'
+// tslint:disable-next-line:no-unused-variable
 import { yaosNoteUsagesByDurationBlocksThenRendering } from './notes/getYaosNotes'
 import { backboneseasonA, backboneseasonB, backboneseasonC } from './seasons/backboneSeasons'
 import {
@@ -158,8 +159,8 @@ seasonTracks.slice(START, END + INCLUSIVE).forEach((tracks: Season[]): void => {
     zdaubyaosTrackF = zdaubyaosTrackF.concat(tracks[F])
 })
 
-// tslint:disable-next-line:no-console
-console.log(yaosNoteUsagesByDurationBlocksThenRendering)
+// tslint:disable-next-line:no-console comment-format
+// console.log(yaosNoteUsagesByDurationBlocksThenRendering)
 
 export {
     zdaubyaosTrackA,
