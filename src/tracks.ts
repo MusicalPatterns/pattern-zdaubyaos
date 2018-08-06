@@ -15,6 +15,7 @@ import { experimentWithIesttt, experimentWithUmowww, trueseasonYetOfBackbone } f
 import { shiftyseasonA, shiftyseasonB } from './seasons/shiftySeasons'
 import {
     trueseasonYaosInaidjiyaiouzdSummerToSpring,
+    trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy,
     trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
     trueseasonYaosUmowchuwowiestSpringToSummer,
     trueseasonYaosUmowchuwowiestSummerToSpring,
@@ -80,9 +81,9 @@ const seasonTracks: Season[][] = [
     // 7
     flipEntities([
         trueseasonYaosInaidjiyaiouzdSummerToSpring,
-        trueseasonYaosInaidjiyaiouzdSummerToSpring,
-        trueseasonYaosInaidjiyaiouzdSummerToSpring,
-    ],           [false, false, false]),
+        trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy,
+        trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy,
+    ],           [true, true, true]),
     // 8
     flipEntities([
         breatherRest,

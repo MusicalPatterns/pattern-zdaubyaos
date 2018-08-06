@@ -122,6 +122,45 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
     }),        4),
 ])
 
+const trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy: Season = sequence([
+    repeatCall(() => getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'springySummer',
+    }),        4),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'springySummer',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'springySummer',
+    }),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'springySummer',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'inaidjiyaiouzd',
+        duration: 'fifteen',
+        rendering: 'springySummer',
+    }),
+    repeatCall(() => getYaosNotes({
+        blockresolution: 'midirregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'summerySpring',
+    }),        4),
+])
+
 const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash: Season = sequence([
     repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
@@ -184,4 +223,5 @@ export {
     trueseasonYaosUmowchuwowiestSummerToSpring,
     trueseasonYaosInaidjiyaiouzdSummerToSpring,
     trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+    trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy,
 }
