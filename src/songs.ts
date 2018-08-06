@@ -1,4 +1,5 @@
 import { Song } from '../../../src/types'
+import { ZDAUBYAOS_BASE_PITCH } from './basePitch'
 import {
     zdaubyaosDubparticularSaw,
     zdaubyaosDuperparticularSaw,
@@ -8,14 +9,17 @@ import {
     zdaubyaosSuperparticularSquare,
 } from './entities'
 
-const zdaubyaos: Song = [
-    zdaubyaosSuperparticularSquare,
-    zdaubyaosDuperparticularSaw,
-    zdaubyaosSubharmonicSine,
-    zdaubyaosDubparticularSaw,
-    zdaubyaosHarmonicSine,
-    zdaubyaosSubparticularSquare,
-]
+const zdaubyaos: Song = {
+    basePitch: ZDAUBYAOS_BASE_PITCH,
+    entityConfigs: [
+        zdaubyaosSuperparticularSquare,
+        zdaubyaosDuperparticularSaw,
+        zdaubyaosSubharmonicSine,
+        zdaubyaosDubparticularSaw,
+        zdaubyaosHarmonicSine,
+        zdaubyaosSubparticularSquare,
+    ],
+}
 
 // tslint:disable-next-line:no-console comment-format
 // console.log(zdaubyaos)

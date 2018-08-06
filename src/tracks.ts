@@ -41,19 +41,19 @@ const seasonTracks: Season[][] = [
         breatherSpring,
         breatherRest,
         breatherRest,
-    ],           [true, true, true]),
+    ],           [false, false, false]),
     // 1
     flipEntities([
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonYaosUmowchuwowiestSpringToSummer,
-    ],           [true, true, true]),
+    ],           [false, false, false]),
     // 2
     flipEntities([
         trueseasonZdaubGlis,
         trueseasonYaosUmowchuwowiestSpringToSummer,
         trueseasonZdaubTrem,
-    ],           [true, true, true]),
+    ],           [false, false, false]),
     // 3
     flipEntities([
         breatherRest,
