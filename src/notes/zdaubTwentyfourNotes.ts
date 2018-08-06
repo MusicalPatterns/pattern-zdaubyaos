@@ -5,6 +5,9 @@ import {
     noodlingTwentyfourBony,
     noodlingTwentyfourGlis,
     noodlingTwentyfourTrem,
+    superinscapeTwentyfourBony,
+    superinscapeTwentyfourGlis,
+    superinscapeTwentyfourTrem,
 } from '../contours/zdaubTwentyfourContours'
 import { glisNoteType, manualNoteType, tremNoteType } from '../noteTypes'
 import { Notes } from '../types'
@@ -15,6 +18,9 @@ const inscapeTwentyfourTremNotes: Notes = inscapeTwentyfourTrem.map(tremNoteType
 const noodlingTwentyfourTremNotes: Notes = noodlingTwentyfourTrem.map(tremNoteType)
 const inscapeTwentyfourBonyNotes: Notes = inscapeTwentyfourBony.map(manualNoteType)
 const noodlingTwentyfourBonyNotes: Notes = noodlingTwentyfourBony.map(manualNoteType)
+const superinscapeTwentyfourGlisNotes: Notes = superinscapeTwentyfourGlis.map(glisNoteType)
+const superinscapeTwentyfourTremNotes: Notes = superinscapeTwentyfourTrem.map(tremNoteType)
+const superinscapeTwentyfourBonyNotes: Notes = superinscapeTwentyfourBony.map(manualNoteType)
 
 export {
     inscapeTwentyfourGlisNotes,
@@ -23,4 +29,7 @@ export {
     noodlingTwentyfourTremNotes,
     inscapeTwentyfourBonyNotes,
     noodlingTwentyfourBonyNotes,
+    superinscapeTwentyfourGlisNotes,
+    superinscapeTwentyfourTremNotes,
+    superinscapeTwentyfourBonyNotes,
 }

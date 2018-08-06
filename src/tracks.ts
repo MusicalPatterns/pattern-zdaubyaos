@@ -20,7 +20,7 @@ import {
     trueseasonYaosUmowchuwowiestSummerToSpring,
 } from './seasons/trueYaosSeasons'
 import {
-    trueseasonZdaubBony,
+    trueseasonZdaubBonyWithSuperinscape,
     trueseasonZdaubGlis,
     trueseasonZdaubGlisVariant,
     trueseasonZdaubTrem,
@@ -99,7 +99,7 @@ const seasonTracks: Season[][] = [
     flipEntities([
         trueseasonYetOfBackbone,
         trueseasonYetOfBackbone,
-        trueseasonZdaubBony,
+        trueseasonZdaubBonyWithSuperinscape,
     ],           [false, false, false]),
     // 11
     flipEntities([
@@ -122,7 +122,7 @@ const seasonTracks: Season[][] = [
     // 14
     flipEntities([
         trueseasonZdaubTrem,
-        trueseasonZdaubBony,
+        trueseasonZdaubBonyWithSuperinscape,
         trueseasonZdaubGlis,
     ],           [false, false, false]),
     // 15

@@ -18,6 +18,7 @@ import {
     noodlingTwentyfourBonyNotes,
     noodlingTwentyfourGlisNotes,
     noodlingTwentyfourTremNotes,
+    superinscapeTwentyfourBonyNotes,
 } from '../notes/zdaubTwentyfourNotes'
 import { glisNoteType } from '../noteTypes'
 import { Season } from '../types'
@@ -44,12 +45,13 @@ const trueseasonZdaubGlisVariant: Season = sequence([
     ].map(glisNoteType),
 ])
 
-const trueseasonZdaubBony: Season = sequence([
+const trueseasonZdaubBonyWithSuperinscape: Season = sequence([
     repeatCall(() => noodlingFifteenBonyNotes, 3),
     escapeFifteenBonyNotes,
     ascentFifteenBonyNotes,
+    superinscapeTwentyfourBonyNotes,
     inscapeTwentyfourBonyNotes,
-    repeatCall(() => noodlingTwentyfourBonyNotes, 3),
+    repeatCall(() => noodlingTwentyfourBonyNotes, 2),
 ])
 
 const trueseasonZdaubTrem: Season = sequence([
@@ -62,7 +64,7 @@ const trueseasonZdaubTrem: Season = sequence([
 
 export {
     trueseasonZdaubTrem,
-    trueseasonZdaubBony,
+    trueseasonZdaubBonyWithSuperinscape,
     trueseasonZdaubGlis,
     trueseasonZdaubGlisVariant,
 }
