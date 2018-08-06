@@ -5,22 +5,22 @@ import {
     chuwowSpringNotes,
     chuwowSummerNotes,
     djiyaiSummerNotes,
-    iestFallNotes,
     iestSpringNotes,
     iestSummerNotes,
+    inaiFallNotes,
     inaiSummerNotes,
+    ouzdFallNotes,
     ouzdSummerNotes,
     umowSpringNotes,
     umowSummerNotes,
-} from '../notes/yaosFifteen'
+} from '../notes/yaosFifteenNotes'
 import {
     chuwowwwFallNotes,
     chuwowwwSpringNotes,
     djiyaiiiFallNotes,
     djiyaiiiSpringNotes,
     djiyaiiiSummerNotes,
-    umowwwFallNotes,
-} from '../notes/yaosTwentyfour'
+} from '../notes/yaosTwentyfourNotes'
 import { Season } from '../types'
 
 const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
@@ -52,10 +52,10 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
 
 const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash: Season = sequence([
     repeat(chuwowFallNotes, 4),
-    iestFallNotes,
-    umowwwFallNotes,
-    iestFallNotes,
-    umowwwFallNotes,
+    ouzdFallNotes,
+    inaiFallNotes,
+    ouzdFallNotes,
+    inaiFallNotes,
     chuwowwwFallNotes,
     djiyaiiiFallNotes,
     chuwowwwFallNotes,

@@ -14,9 +14,9 @@ umow: 3,3,3,3,3
 chuwow: 3,4,3,5
 iest: 5,5,5
 
-inai: 3,4,4,4
+inai: 4,4,4,3
 djiyai: 3,5,7
-ouzd: 7,8
+ouzd: 8,7
 
 #### of 24
 

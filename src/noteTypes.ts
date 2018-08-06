@@ -18,7 +18,7 @@ const singleRest: Note = {
 
 const glisNoteType: (_: number) => Note =
     (pitch: number): Note => {
-        if (pitch === REST) return singleRest
+        if (pitch === REST) { return singleRest }
 
         return {
             duration: pitch,
@@ -30,7 +30,7 @@ const glisNoteType: (_: number) => Note =
 
 const tremNoteType: (_: number) => Note =
     (pitch: number): Note => {
-        if (pitch === REST) return singleRest
+        if (pitch === REST) { return singleRest }
 
         return {
             duration: SINGLE_DURATION,
@@ -42,7 +42,7 @@ const tremNoteType: (_: number) => Note =
 
 const manualNoteType: (_: number[]) => Note =
     ([pitch, duration]: number[]): Note => {
-        if (pitch === REST) return singleRest
+        if (pitch === REST) { return singleRest }
 
         return {
             duration,

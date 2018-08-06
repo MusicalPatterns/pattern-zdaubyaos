@@ -8,7 +8,7 @@ import {
     noodlingFifteenBony,
     noodlingFifteenGlis,
     noodlingFifteenTrem,
-} from '../contours/zdaubFifteen'
+} from '../contours/zdaubFifteenContours'
 import { glisNoteType, manualNoteType, tremNoteType } from '../noteTypes'
 import { Notes } from '../types'
 

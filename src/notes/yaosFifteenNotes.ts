@@ -6,12 +6,15 @@ import {
     iestFall,
     iestSpring,
     iestSummer,
+    inaiFall,
     inaiSummer,
+    ouzdFall,
+    ouzdSpring,
     ouzdSummer,
     umowFall,
     umowSpring,
     umowSummer,
-} from '../contours/yaosFifteen'
+} from '../contours/yaosFifteenContours'
 import { glisNoteType, tremNoteType } from '../noteTypes'
 import { Notes } from '../types'
 
@@ -20,6 +23,8 @@ const umowSpringNotes: Notes = umowSpring.map(tremNoteType)
 const chuwowSpringNotes: Notes = chuwowSpring.map(tremNoteType)
 
 const iestSpringNotes: Notes = iestSpring.map(tremNoteType)
+
+const ouzdSpringNotes: Notes = ouzdSpring.map(tremNoteType)
 
 const umowSummerNotes: Notes = umowSummer.map(tremNoteType)
 
@@ -39,10 +44,15 @@ const chuwowFallNotes: Notes = chuwowFall.map(glisNoteType)
 
 const iestFallNotes: Notes = iestFall.map(glisNoteType)
 
+const ouzdFallNotes: Notes = ouzdFall.map(glisNoteType)
+
+const inaiFallNotes: Notes = inaiFall.map(glisNoteType)
+
 export {
     umowSpringNotes,
     chuwowSpringNotes,
     iestSpringNotes,
+    ouzdSpringNotes,
     umowSummerNotes,
     chuwowSummerNotes,
     iestSummerNotes,
@@ -52,4 +62,6 @@ export {
     umowFallNotes,
     chuwowFallNotes,
     iestFallNotes,
+    ouzdFallNotes,
+    inaiFallNotes,
 }

@@ -3,6 +3,7 @@
     "../../../tslint.json"
   ],
   "rules": {
-    "no-magic-numbers": false
+    "no-magic-numbers": false,
+    "max-file-line-count": [false]
   }
 }

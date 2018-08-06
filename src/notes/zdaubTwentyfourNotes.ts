@@ -5,7 +5,7 @@ import {
     noodlingTwentyfourBony,
     noodlingTwentyfourGlis,
     noodlingTwentyfourTrem,
-} from '../contours/zdaubTwentyfour'
+} from '../contours/zdaubTwentyfourContours'
 import { glisNoteType, manualNoteType, tremNoteType } from '../noteTypes'
 import { Notes } from '../types'
 

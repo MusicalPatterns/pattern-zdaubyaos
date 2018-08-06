@@ -1,4 +1,4 @@
-import { shifty, shiftyFifteen, shiftyTwentyfour, shiftyTwentyfourVariant } from '../contours/shifty'
+import { shifty, shiftyFifteen, shiftyTwentyfour, shiftyTwentyfourVariant } from '../contours/shiftyContours'
 import { glisNoteType } from '../noteTypes'
 import { Notes } from '../types'
 

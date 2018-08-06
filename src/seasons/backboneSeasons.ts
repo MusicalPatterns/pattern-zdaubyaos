@@ -6,7 +6,7 @@ import {
     backboneFifteenCNotes,
     backboneTwentyfourCNotes,
     backboneTwentyfourENotes, backboneTwentyfourGNotes,
-} from '../notes/backbone'
+} from '../notes/backboneNotes'
 import { Season } from '../types'
 
 const backboneseasonA: Season = sequence([

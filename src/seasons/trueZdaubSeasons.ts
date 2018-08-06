@@ -10,7 +10,7 @@ import {
     noodlingFifteenBonyNotes,
     noodlingFifteenGlisNotes,
     noodlingFifteenTremNotes,
-} from '../notes/zdaubFifteen'
+} from '../notes/zdaubFifteenNotes'
 import {
     inscapeTwentyfourBonyNotes,
     inscapeTwentyfourGlisNotes,
@@ -18,7 +18,7 @@ import {
     noodlingTwentyfourBonyNotes,
     noodlingTwentyfourGlisNotes,
     noodlingTwentyfourTremNotes,
-} from '../notes/zdaubTwentyfour'
+} from '../notes/zdaubTwentyfourNotes'
 import { glisNoteType } from '../noteTypes'
 import { Season } from '../types'
 

@@ -5,7 +5,7 @@ import {
     backboneTwentyfourC,
     backboneTwentyfourE,
     backboneTwentyfourG,
-} from '../contours/backbone'
+} from '../contours/backboneContours'
 import { glisNoteType } from '../noteTypes'
 import { Notes } from '../types'
 

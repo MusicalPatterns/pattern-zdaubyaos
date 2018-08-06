@@ -1,6 +1,11 @@
 import repeat from '../../../../src/repeat'
 import sequence from '../../../../src/sequence'
-import { shiftyFifteenNotes, shiftyNotes, shiftyTwentyfourNotes, shiftyTwentyfourVariantNotes } from '../notes/shifty'
+import {
+    shiftyFifteenNotes,
+    shiftyNotes,
+    shiftyTwentyfourNotes,
+    shiftyTwentyfourVariantNotes,
+} from '../notes/shiftyNotes'
 import { Season } from '../types'
 
 const shiftyseasonA: Season = sequence([
