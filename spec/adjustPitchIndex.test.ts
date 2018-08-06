@@ -1,8 +1,8 @@
 import { Notes } from '../src/types'
-import adjustGain from '../src/adjustGain'
+import adjustPitchIndex from '../src/adjustPitchIndex'
 
-describe('adjust gain', () => {
-    it('adjusts the gain of every note', () => {
+describe('adjust pitch', () => {
+    it('adjusts the pitch of every note', () => {
         const notes: Notes = [
             {
                 duration: 1,
@@ -12,39 +12,39 @@ describe('adjust gain', () => {
             },
             {
                 duration: 1,
-                pitchIndex: 1,
+                pitchIndex: 2,
                 sustain: 1,
-                gain: 0.5,
+                gain: 1,
             },
             {
                 duration: 1,
-                pitchIndex: 1,
+                pitchIndex: 4,
                 sustain: 1,
-                gain: 0.25,
+                gain: 1,
             },
         ]
 
         const expectedNotes: Notes = [
             {
                 duration: 1,
-                pitchIndex: 1,
+                pitchIndex: 2,
                 sustain: 1,
-                gain: 0.5,
+                gain: 1,
             },
             {
                 duration: 1,
-                pitchIndex: 1,
+                pitchIndex: 3,
                 sustain: 1,
-                gain: 0.25,
+                gain: 1,
             },
             {
                 duration: 1,
-                pitchIndex: 1,
+                pitchIndex: 5,
                 sustain: 1,
-                gain: 0.125,
+                gain: 1,
             },
         ]
 
-        expect(adjustGain(notes, 0.5)).toEqual(expectedNotes)
+        expect(adjustPitchIndex(notes, 1)).toEqual(expectedNotes)
     })
 })

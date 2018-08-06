@@ -1,5 +1,5 @@
 import {
-    PLACEHOLDER_PITCH_TO_AVOID_NULL_POINTER_ISSUES,
+    PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
     SEPARATION_FOR_NEIGHBORING_NOTES,
     SILENT,
 } from '../../../src/constants'
@@ -13,42 +13,42 @@ const SINGLE_DURATION: number = 1
 const singleRest: Note = {
     duration: SINGLE_DURATION,
     gain: SILENT,
-    pitch: PLACEHOLDER_PITCH_TO_AVOID_NULL_POINTER_ISSUES,
+    pitchIndex: PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
     sustain: SINGLE_DURATION - SEPARATION_FOR_NEIGHBORING_NOTES,
 }
 
 const glisNoteType: NoteType =
-    (pitch: number): Note => {
-        if (pitch === REST) { return singleRest }
+    (pitchIndex: number): Note => {
+        if (pitchIndex === REST) { return singleRest }
 
         return {
-            duration: pitch,
+            duration: pitchIndex,
             gain: MAX_GAIN,
-            pitch,
-            sustain: pitch - SEPARATION_FOR_NEIGHBORING_NOTES,
+            pitchIndex,
+            sustain: pitchIndex - SEPARATION_FOR_NEIGHBORING_NOTES,
         }
     }
 
 const tremNoteType: NoteType =
-    (pitch: number): Note => {
-        if (pitch === REST) { return singleRest }
+    (pitchIndex: number): Note => {
+        if (pitchIndex === REST) { return singleRest }
 
         return {
             duration: SINGLE_DURATION,
             gain: MAX_GAIN,
-            pitch,
+            pitchIndex,
             sustain: SINGLE_DURATION - SEPARATION_FOR_NEIGHBORING_NOTES,
         }
     }
 
 const manualNoteType: (_: number[]) => Note =
-    ([pitch, duration]: number[]): Note => {
-        if (pitch === REST) { return singleRest }
+    ([pitchIndex, duration]: number[]): Note => {
+        if (pitchIndex === REST) { return singleRest }
 
         return {
             duration,
             gain: MAX_GAIN,
-            pitch,
+            pitchIndex,
             sustain: duration - SEPARATION_FOR_NEIGHBORING_NOTES,
         }
     }

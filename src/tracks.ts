@@ -17,7 +17,7 @@ import { shiftyseasonA, shiftyseasonB } from './seasons/shiftySeasons'
 import {
     trueseasonYaosInaidjiyaiouzdSummerToSpring,
     trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy,
-    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
+    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustment,
     trueseasonYaosUmowchuwowiestSpringToSummer,
     trueseasonYaosUmowchuwowiestSummerToSpring,
 } from './seasons/trueYaosSeasons'
@@ -90,19 +90,19 @@ const seasonTracks: Season[][] = [
         breatherRest,
         breatherSpringAlt,
         breatherRest,
-    ],           [false, false, false]),
+    ],           [true, true, true]),
     // 9
     flipEntities([
-        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
-        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
-        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplash,
-    ],           [false, false, false]),
+        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustment,
+        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustment,
+        trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustment,
+    ],           [true, true, true]),
     // 10
     flipEntities([
         trueseasonYetOfBackbone,
         trueseasonYetOfBackbone,
         trueseasonZdaubBonyWithSuperinscape,
-    ],           [false, false, false]),
+    ],           [true, true, true]),
     // 11
     flipEntities([
         shiftyseasonA,
