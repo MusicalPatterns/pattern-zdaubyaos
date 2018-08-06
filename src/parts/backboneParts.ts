@@ -8,25 +8,25 @@ import {
     backboneTwentyfourENotes,
     backboneTwentyfourGNotes,
 } from '../notes/backboneNotes'
-import { Season } from '../types'
+import { Part } from '../types'
 
-const backboneseasonA: Season = sequence([
+const backboneAPart: Part = sequence([
     repeatCall(() => backboneFifteenANotes, 5),
     repeatCall(() => backboneTwentyfourCNotes, 6),
 ])
 
-const backboneseasonB: Season = sequence([
+const backboneBPart: Part = sequence([
     repeatCall(() => backboneFifteenBNotes, 5),
     repeatCall(() => backboneTwentyfourENotes, 6),
 ])
 
-const backboneseasonC: Season = sequence([
+const backboneCPart: Part = sequence([
     repeatCall(() => backboneFifteenCNotes, 5),
     repeatCall(() => backboneTwentyfourGNotes, 6),
 ])
 
 export {
-    backboneseasonA,
-    backboneseasonB,
-    backboneseasonC,
+    backboneAPart,
+    backboneBPart,
+    backboneCPart,
 }

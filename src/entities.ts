@@ -1,19 +1,19 @@
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { EntityConfig } from '../../../src/types'
 import {
-    dubparticularSeriesPitches,
-    duperparticularSeriesPitches,
-    subparticularSeriesPitches,
-    superparticularSeriesPitches,
-} from './pitches'
-import {
     zdaubyaosTrackA,
     zdaubyaosTrackB,
     zdaubyaosTrackC,
     zdaubyaosTrackD,
     zdaubyaosTrackE,
     zdaubyaosTrackF,
-} from './tracks'
+} from './convertSegmentsToTracks'
+import {
+    dubparticularSeriesPitches,
+    duperparticularSeriesPitches,
+    subparticularSeriesPitches,
+    superparticularSeriesPitches,
+} from './pitches'
 
 const TO_AVOID_BLOW_OUT: number = 0.2
 

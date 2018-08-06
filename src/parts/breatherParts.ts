@@ -5,24 +5,24 @@ import adjustGain from '../adjustGain'
 import { backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import { inaiiiVarietyNotes } from '../notes/yaosNotes'
-import { Season } from '../types'
+import { Part } from '../types'
 
-const breatherRest: Season = rest(24)
-const breatherSpring: Season = adjustGain(getYaosNotes({
+const breatherRestPart: Part = rest(24)
+const breatherSpringPart: Part = adjustGain(getYaosNotes({
     blockresolution: 'lowregular',
     blockstrategy: 'inaidjiyaiouzd',
     duration: 'twentyfour',
     rendering: 'spring',
 }), 0.5)
-const breatherSummer: Season = adjustGain(getYaosNotes({
+const breatherSummerPart: Part = adjustGain(getYaosNotes({
     blockresolution: 'lowregular',
     blockstrategy: 'inaidjiyaiouzd',
     duration: 'twentyfour',
     rendering: 'summer',
 }), 0.5)
-const breatherFall: Season = adjustGain(backboneTwentyfourCNotes, 0.5)
-const breatherVariety: Season = adjustGain(inaiiiVarietyNotes, 1.5)
-const breatherSpringAlt: Season = adjustGain(getYaosNotes({
+const breatherFallPart: Part = adjustGain(backboneTwentyfourCNotes, 0.5)
+const breatherVarietyPart: Part = adjustGain(inaiiiVarietyNotes, 1.5)
+const breatherSpringAltPart: Part = adjustGain(getYaosNotes({
     blockresolution: 'highregular',
     blockstrategy: 'inaidjiyaiouzd',
     duration: 'twentyfour',
@@ -30,10 +30,10 @@ const breatherSpringAlt: Season = adjustGain(getYaosNotes({
 }), 0.5)
 
 export {
-    breatherRest,
-    breatherSpring,
-    breatherSummer,
-    breatherFall,
-    breatherVariety,
-    breatherSpringAlt,
+    breatherRestPart,
+    breatherSpringPart,
+    breatherSummerPart,
+    breatherFallPart,
+    breatherVarietyPart,
+    breatherSpringAltPart,
 }

@@ -1,5 +1,5 @@
 import calculateDuration from '../../../src/calculateDuration'
-import { zdaubyaosTrackA, zdaubyaosTrackB, zdaubyaosTrackC } from '../src/tracks'
+import { zdaubyaosTrackA, zdaubyaosTrackB, zdaubyaosTrackC } from '../src/convertSegmentsToTracks'
 
 describe('tracks', () => {
     it('is the case that they all have the same duration', () => {

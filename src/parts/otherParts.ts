@@ -3,14 +3,14 @@ import sequence from '../../../../src/sequence'
 import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import { thirtyfiveANotes, thirtyfiveBNotes, thirtyfiveCNotes } from '../notes/otherNotes'
-import { Season } from '../types'
+import { Part } from '../types'
 
-const trueseasonYetOfBackbone: Season = sequence([
+const trueYetOfBackbonePart: Part = sequence([
     repeatCall(() => backboneFifteenANotes, 8),
     repeatCall(() => backboneTwentyfourCNotes, 4),
 ])
 
-const experimentseasonWithIesttt: Season = sequence([
+const experimentWithIestttPart: Part = sequence([
     repeatCall(() => getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'umowchuwowiest',
@@ -31,7 +31,7 @@ const experimentseasonWithIesttt: Season = sequence([
     }),        3),
 ])
 
-const experimentseasonWithUmowww: Season = sequence([
+const experimentWithUmowwwPart: Part = sequence([
     repeatCall(() => getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'umowchuwowiest',
@@ -52,17 +52,17 @@ const experimentseasonWithUmowww: Season = sequence([
     }),        3),
 ])
 
-const thirtyfiveseasonA: Season = thirtyfiveANotes
+const thirtyfiveAPart: Part = thirtyfiveANotes
 
-const thirtyfiveseasonB: Season = thirtyfiveBNotes
+const thirtyfiveBPart: Part = thirtyfiveBNotes
 
-const thirtyfiveseasonC: Season = thirtyfiveCNotes
+const thirtyfiveCPart: Part = thirtyfiveCNotes
 
 export {
-    trueseasonYetOfBackbone,
-    experimentseasonWithIesttt,
-    experimentseasonWithUmowww,
-    thirtyfiveseasonA,
-    thirtyfiveseasonB,
-    thirtyfiveseasonC,
+    trueYetOfBackbonePart,
+    experimentWithIestttPart,
+    experimentWithUmowwwPart,
+    thirtyfiveAPart,
+    thirtyfiveBPart,
+    thirtyfiveCPart,
 }

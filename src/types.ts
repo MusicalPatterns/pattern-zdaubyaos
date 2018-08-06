@@ -6,7 +6,7 @@ type Contour = number[]
 
 type Notes = Note[]
 
-type Season = Note[]
+type Part = Note[]
 
 type Track = Note[]
 
@@ -14,12 +14,15 @@ type Rendering = (_: number) => number[]
 
 type NoteType = (_: number) => Note
 
+type Segment = Part[]
+
 export {
     Blocks,
     Contour,
     Notes,
-    Season,
+    Part,
     Track,
     Rendering,
     NoteType,
+    Segment,
 }

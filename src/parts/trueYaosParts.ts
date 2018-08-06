@@ -5,9 +5,9 @@ import sequence from '../../../../src/sequence'
 import adjustGain from '../adjustGain'
 import adjustPitchIndex from '../adjustPitchIndex'
 import getYaosNotes from '../notes/getYaosNotes'
-import { Season } from '../types'
+import { Part } from '../types'
 
-const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
+const trueYaosUmowchuwowiestSpringToSummerPart: Part = sequence([
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
@@ -46,7 +46,7 @@ const trueseasonYaosUmowchuwowiestSpringToSummer: Season = sequence([
     }), 4), 1), 0),
 ])
 
-const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
+const trueYaosUmowchuwowiestSummerToSpringPart: Part = sequence([
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
@@ -85,7 +85,7 @@ const trueseasonYaosUmowchuwowiestSummerToSpring: Season = sequence([
     }), 4), 1), 0),
 ])
 
-const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
+const trueYaosInaidjiyaiouzdSummerToSpringPart: Part = sequence([
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'inaidjiyaiouzd',
@@ -124,7 +124,7 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpring: Season = sequence([
     }), 4), 1), 0),
 ])
 
-const trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy: Season = sequence([
+const trueYaosInaidjiyaiouzdSummerToSpringComplementyPart: Part = sequence([
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'inaidjiyaiouzd',
@@ -163,7 +163,7 @@ const trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy: Season = sequence([
     }), 4), 1), 0),
 ])
 
-const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustment: Season = sequence([
+const trueYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustmentPart: Part = sequence([
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
@@ -221,9 +221,9 @@ const trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustment: Seas
 ])
 
 export {
-    trueseasonYaosUmowchuwowiestSpringToSummer,
-    trueseasonYaosUmowchuwowiestSummerToSpring,
-    trueseasonYaosInaidjiyaiouzdSummerToSpring,
-    trueseasonYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustment,
-    trueseasonYaosInaidjiyaiouzdSummerToSpringComplementy,
+    trueYaosUmowchuwowiestSpringToSummerPart,
+    trueYaosUmowchuwowiestSummerToSpringPart,
+    trueYaosInaidjiyaiouzdSummerToSpringPart,
+    trueYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustmentPart,
+    trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
 }

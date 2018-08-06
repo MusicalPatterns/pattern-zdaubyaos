@@ -1,3 +1,5 @@
+// tslint:disable:no-console comment-format no-unused-variable
+
 import { Song } from '../../../src/types'
 import { ZDAUBYAOS_BASE_PITCH } from './basePitch'
 import {
@@ -8,6 +10,7 @@ import {
     zdaubyaosSubparticularSquare,
     zdaubyaosSuperparticularSquare,
 } from './entities'
+import { yaosNoteUsagesByDurationBlocksThenRendering } from './notes/getYaosNotes'
 
 const zdaubyaos: Song = {
     basePitch: ZDAUBYAOS_BASE_PITCH,
@@ -21,8 +24,8 @@ const zdaubyaos: Song = {
     ],
 }
 
-// tslint:disable-next-line:no-console comment-format
 // console.log(zdaubyaos)
+// console.log(yaosNoteUsagesByDurationBlocksThenRendering)
 
 export {
     zdaubyaos,

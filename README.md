@@ -6,7 +6,7 @@
 a rhythmic element
 inherited from oumaotcou'aoiest
 
-### breakdowns
+### blocks
 
 #### 15
 
@@ -40,7 +40,7 @@ fall: 3 => 1,2; 4 => 1,3; 5 => 1,4; 6 => 1,5 ...
 a melodic element
 proceeds mostly with notes shifting by 1 in both pitch and duration (inherited from stepwise)
 
-### breakdowns
+### blocks
 
 noodling: hovering around the bottom, fitting into either 15 or 24
 escape/inscape: from ascent/descent
@@ -57,7 +57,7 @@ bony: each one of these notes is broken down into pieces whis durations fit a ba
 
 interject some weird stuff now and then
 
-### breakdowns
+### blocks
 
 backboneFifteenA: 3,3,3,3,3
 backboneFifteenB: 5,5,5
@@ -77,28 +77,46 @@ backboneTwentyfourG: 24
 4 => 1,3; 6 => 2,4; 8 => 3,5 ...
 
 
-## compositional level: seasons
+## compositional levels
 
-note that a "season" at the track level is still several of these pieces together...
+blocks: just raw patterns of numbers
+contours: what you get after you map renderings onto them
+notes: are what you get when you map a note type onto a contour (renderings assume a note type, but you can get weird compositional distortions by overriding it)
 
-## trueseason
+notes are the lowest compositional building blocks of the song, aside from individual notes
+then once you have some notes you can assemble what is currently called a "part"
+which is still for a single entity to play
 
-a segment of the piece which lasts 8x 15 + 4x 24 
+put together a set of parts? that set is not sequential, but simultaneous, and you've got a "segment" (of the song)
+
+## truepart
+
+a part which lasts 8x 15 + 4x 24 
 
 and where the three entities are each either a yaos or a zdaub
 
-### backboneseason
+### breather
 
-lasts 5x 15 + 6x 24 
+a part which lasts 0x 15 + 1x 24
+
+brief moments of respite between parts where only one entity is there, doing some simple version of what's coming to introduce it
+
+### shiftypart
+
+a part which lasts 8x 15 + 5x 24 
+
+was originally kind of based on coagulating bits of backbones and it's kind of in-between a yaos and a zdaub
+
+### backbonepart
+
+a part which lasts 5x 15 + 6x 24 
 
 and where the three entities are all backboning
 
-### breather
+### experimentpart
 
-brief moments of respite between seasons where only one entity is there, doing some simple version of what's coming to introduce it
+a part which lasts 0x 15 + 9x 24
 
-### shiftyseason
+### thirtyfivepart
 
-was originally kind of based on coagulating bits of backbones
-i dunno this one is a mess right now: a weird season with an extra bar of 24 at the end
-and it's kind of in-between a yaos and a zdaub
+a part which lasts 6x 35!!

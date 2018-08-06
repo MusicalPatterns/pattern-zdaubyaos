@@ -6,17 +6,17 @@ import {
     shiftyTwentyfourNotes,
     shiftyTwentyfourVariantNotes,
 } from '../notes/shiftyNotes'
-import { Season } from '../types'
+import { Part } from '../types'
 
-const shiftyseasonA: Season = sequence([
+const shiftyAPart: Part = sequence([
     repeatCall(() => shiftyFifteenNotes, 3),
     repeatCall(() => shiftyTwentyfourNotes, 4),
     repeatCall(() => shiftyTwentyfourVariantNotes, 3),
 ])
 
-const shiftyseasonB: Season = shiftyNotes
+const shiftyBPart: Part = shiftyNotes
 
 export {
-    shiftyseasonA,
-    shiftyseasonB,
+    shiftyAPart,
+    shiftyBPart,
 }
