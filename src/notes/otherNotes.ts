@@ -1,4 +1,9 @@
-import { thirtyfiveYaosAccidentInspired, thirtyfiveYaosBass, thirtyfiveZdaub } from '../contours/otherContours'
+import {
+    thirtyfiveYaosAccidentInspired,
+    thirtyfiveYaosBass,
+    thirtyfiveZdaub,
+    thirtyfiveZdaubOnlyWiggle,
+} from '../contours/otherContours'
 import { glisNoteType } from '../noteTypes'
 import { Notes } from '../types'
 
@@ -8,8 +13,11 @@ const thirtyfiveYaosAccidentInspiredNotes: Notes = thirtyfiveYaosAccidentInspire
 
 const thirtyfiveZdaubNotes: Notes = thirtyfiveZdaub.map(glisNoteType)
 
+const thirtyfiveZdaubOnlyWiggleNotes: Notes = thirtyfiveZdaubOnlyWiggle.map(glisNoteType)
+
 export {
     thirtyfiveYaosBassNotes,
     thirtyfiveYaosAccidentInspiredNotes,
     thirtyfiveZdaubNotes,
+    thirtyfiveZdaubOnlyWiggleNotes,
 }

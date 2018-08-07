@@ -41,7 +41,7 @@ const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = alterSegment
         breatherSpringAltPart,
         breatherRestPart,
     ],
-    [{}, {gainAdjust: 0.5, flipHarmonically: true}, {}],
+    [{}, {gainAdjust: 0.5}, {}],
 )
 
 const breatherVarietyQuiteTheReveilleSegment: Segment = alterSegmentParts(
@@ -50,7 +50,10 @@ const breatherVarietyQuiteTheReveilleSegment: Segment = alterSegmentParts(
         breatherVarietyPart,
         breatherVarietyPart,
     ],
-    [{gainAdjust: 1.5}, {gainAdjust: 1.5}, {gainAdjust: 1.5}],
+    [
+        {gainAdjust: 1.5, flipHarmonically: true}, {gainAdjust: 1.5, flipHarmonically: true},
+        {gainAdjust: 1.5, flipHarmonically: true},
+    ],
 )
 
 export {

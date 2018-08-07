@@ -5,7 +5,12 @@ import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
 import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
-import { thirtyfiveYaosAccidentInspiredNotes, thirtyfiveYaosBassNotes, thirtyfiveZdaubNotes } from '../notes/otherNotes'
+import {
+    thirtyfiveYaosAccidentInspiredNotes,
+    thirtyfiveYaosBassNotes,
+    thirtyfiveZdaubNotes,
+    thirtyfiveZdaubOnlyWiggleNotes,
+} from '../notes/otherNotes'
 import { Part } from '../types'
 
 const trueYetOfBackbonePart: Part = sequence([
@@ -26,16 +31,25 @@ const experimentWithUmowwwPart: Part = sequence([
 ])
 
 const thirtyfiveYaosBassPart: Part = sequence([
-    repeat(thirtyfiveYaosBassNotes, 4),
+    repeat(thirtyfiveYaosBassNotes, 5),
 ])
 
 const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
-    repeat(thirtyfiveYaosAccidentInspiredNotes, 4),
+    repeat(thirtyfiveYaosAccidentInspiredNotes, 5),
 ])
 
 const thirtyfiveZdaubPart: Part = sequence([
+    repeat(rest(calculateDuration(thirtyfiveZdaubNotes)), 1),
     repeat(thirtyfiveZdaubNotes, 2),
-    repeat(rest(calculateDuration(thirtyfiveZdaubNotes)), 2),
+    repeat(thirtyfiveZdaubOnlyWiggleNotes, 6),
+])
+
+const polyrhythmicYaosFifteenPart: Part = sequence([
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'fifteen', 'summer'), 8),
+])
+
+const polyrhythmicYaosTwentyfourPart: Part = sequence([
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'summerySpring'), 5),
 ])
 
 export {
@@ -45,4 +59,6 @@ export {
     thirtyfiveYaosBassPart,
     thirtyfiveYaosAccidentInspiredPart,
     thirtyfiveZdaubPart,
+    polyrhythmicYaosFifteenPart,
+    polyrhythmicYaosTwentyfourPart,
 }

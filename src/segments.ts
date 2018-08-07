@@ -6,23 +6,30 @@ import {
     breatherSummerSegment,
     breatherVarietyQuiteTheReveilleSegment,
 } from './segments/breatherSegments'
-import { experimentWithIestttAndUmowwwSegment, thirtyfiveSegment } from './segments/otherSegments'
+import {
+    experimentWithIestttAndUmowwwSegment,
+    polyrhythmicAllYaosSegment,
+    thirtyfiveSegment,
+    untrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+} from './segments/otherSegments'
 import { shiftySegment } from './segments/shiftySegments'
 import {
     trueAllYaosAllRhythmsAtOnceSegment,
-    trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     trueSpringAllYaosUmowchuwowiestSegment,
-    trueSummerAllYaosInaidjiyaiouzdSegment,
     trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
 } from './segments/trueYaosSegments'
 
 import {
-    trueAllZdaubTriumphantAndExperienceThePowerOfTheThreeScalesTogetherSegment,
+    trueAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     trueSpringWithZdaubSegment,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
 } from './segments/trueZdaubSegments'
 import { Segment } from './types'
+
+const START: number = 0
+const END: number = 15
+const INCLUSIVE: number = 1
 
 const segments: Segment[] = [
     // 0
@@ -33,38 +40,29 @@ const segments: Segment[] = [
     // 3
     breatherSummerSegment,
     trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
-    // This transition feels a little harmonically odd, though i can't figure why, since they match really well...
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
 
     // 6
     breatherFallWhichIsGoodIntroForJigSegment,
-    // Maybe this bony jig intro goes on a little too long ?
-    trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+    untrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-    // Awkward transition
-    shiftySegment,
+    shiftySegment, // Awkward transition STILL
 
     // 10
     breatherSpringAltNiceAsABreatherToABreatherSegment,
     breatherVarietyQuiteTheReveilleSegment,
     trueAllYaosAllRhythmsAtOnceSegment,
-    trueAllZdaubTriumphantAndExperienceThePowerOfTheThreeScalesTogetherSegment,
+    trueAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
 
     // 14
-    // I'm really not sure how we're ever supposed to transition into this thing,
-    // But as for transitioning out, i wonder if i shouldn't really just have this be the end of the song,
-    // Like repeat a couple times and then have the high voice stop and then just fade out
     thirtyfiveSegment,
-]
+].slice(START, END + INCLUSIVE)
 
 // tslint:disable-next-line:no-unused-variable
 const notsureyetSegments: Segment[] = [
-    trueSummerAllYaosInaidjiyaiouzdSegment,
-    // I'm concerned if i don't include this we're really missing out on the inaidjiyaiouzd material...
-    // Besides in the fall rendering form which is not super clear
-    // Ok we definitely did get the 345354 and the 78 in
-    // "TrueFallAllYaosAndBothBlockStrategiesBonyJigIntroAllTogetherAndHappyGoLuckyAndRhythmicallySpasticSegment"
-
+    // Without this we never REALLY get the 357357 or the 345354
+    // Except both are hidden in the "all rhythms at once" segment, and they are kind of achieved in the pre-jig
+    polyrhythmicAllYaosSegment,
     // These two sound really similar to each other and aren't good
     backboneSegment,
     experimentWithIestttAndUmowwwSegment,

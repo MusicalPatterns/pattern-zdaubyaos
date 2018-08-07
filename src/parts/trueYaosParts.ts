@@ -32,23 +32,14 @@ const trueYaosInaidjiyaiouzdSummerToSpringPart: Part = sequence([
     repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'spring'), 4),
 ])
 
-const trueYaosInaidjiyaiouzdSummerToSpringComplementyPart: Part = sequence([
-    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 4),
-    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
-    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'summerySpring'), 4),
-])
-
-const trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'fall'), 4),
+const untrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'fall'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'fall'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
     repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
     repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
     repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
     repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'fall'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'fall'), 1),
     repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'fall'), 1),
     repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'fall'), 1),
 ])
@@ -57,6 +48,5 @@ export {
     trueYaosUmowchuwowiestSpringToSummerPart,
     trueYaosUmowchuwowiestSummerToSpringPart,
     trueYaosInaidjiyaiouzdSummerToSpringPart,
-    trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-    trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
+    untrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
 }

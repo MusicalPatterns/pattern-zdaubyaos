@@ -20,11 +20,16 @@ const thirtyfiveYaosAccidentInspired: Contour = repeat([
 ],                                                     6)
 
 const thirtyfiveZdaub: Contour = [
+    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
+    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
+    13, 10, 7, 4, 1,
+    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
     19, 16,
     13, 10, 7, 4, 1,
+]
+
+const thirtyfiveZdaubOnlyWiggle: Contour = [
     4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
-    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
-    13, 10, 7, 4, 1,
     4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
 ]
 
@@ -32,4 +37,5 @@ export {
     thirtyfiveYaosBass,
     thirtyfiveYaosAccidentInspired,
     thirtyfiveZdaub,
+    thirtyfiveZdaubOnlyWiggle,
 }

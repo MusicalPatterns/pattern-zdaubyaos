@@ -40,7 +40,7 @@ const trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = alterSeg
     [{gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33}],
 )
 
-const trueAllZdaubTriumphantAndExperienceThePowerOfTheThreeScalesTogetherSegment: Segment = alterSegmentParts(
+const trueAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment: Segment = alterSegmentParts(
     [
         trueZdaubTremPart,
         trueZdaubBonyPart,
@@ -53,5 +53,5 @@ export {
     trueSpringWithZdaubSegment,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-    trueAllZdaubTriumphantAndExperienceThePowerOfTheThreeScalesTogetherSegment,
+    trueAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
 }

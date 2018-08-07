@@ -1,7 +1,6 @@
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
-    trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
-    trueYaosInaidjiyaiouzdSummerToSpringPart, trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
+    trueYaosInaidjiyaiouzdSummerToSpringPart,
     trueYaosUmowchuwowiestSpringToSummerPart,
     trueYaosUmowchuwowiestSummerToSpringPart,
 } from '../parts/trueYaosParts'
@@ -25,24 +24,6 @@ const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment
     [{flipHarmonically: true}, {}, {}],
 )
 
-const trueSummerAllYaosInaidjiyaiouzdSegment: Segment = alterSegmentParts(
-    [
-        trueYaosInaidjiyaiouzdSummerToSpringPart,
-        trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
-        trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
-    ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
-)
-
-const trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = alterSegmentParts(
-    [
-        trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-        trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-        trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-    ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
-)
-
 const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
     [
         trueYaosUmowchuwowiestSpringToSummerPart,
@@ -55,7 +36,5 @@ const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
 export {
     trueSpringAllYaosUmowchuwowiestSegment,
     trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
-    trueSummerAllYaosInaidjiyaiouzdSegment,
-    trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     trueAllYaosAllRhythmsAtOnceSegment,
 }
