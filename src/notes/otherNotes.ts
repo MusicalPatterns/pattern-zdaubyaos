@@ -1,23 +1,23 @@
 import {
-    thirtyfiveYaosAccidentInspired,
-    thirtyfiveYaosBass,
-    thirtyfiveZdaub,
-    thirtyfiveZdaubOnlyWiggle,
+    polyrhythmicAscentA,
+    polyrhythmicAscentB,
+    polyrhythmicAscentC,
+    secretLongChord,
 } from '../contours/otherContours'
 import { glisNoteType } from '../noteTypes'
 import { Notes } from '../types'
 
-const thirtyfiveYaosBassNotes: Notes = thirtyfiveYaosBass.map(glisNoteType)
+const polyrhythmicAscentANotes: Notes = polyrhythmicAscentA.map(glisNoteType)
 
-const thirtyfiveYaosAccidentInspiredNotes: Notes = thirtyfiveYaosAccidentInspired.map(glisNoteType)
+const polyrhythmicAscentBNotes: Notes = polyrhythmicAscentB.map(glisNoteType)
 
-const thirtyfiveZdaubNotes: Notes = thirtyfiveZdaub.map(glisNoteType)
+const polyrhythmicAscentCNotes: Notes = polyrhythmicAscentC.map(glisNoteType)
 
-const thirtyfiveZdaubOnlyWiggleNotes: Notes = thirtyfiveZdaubOnlyWiggle.map(glisNoteType)
+const secretLongChordNotes: Notes = secretLongChord.map(glisNoteType)
 
 export {
-    thirtyfiveYaosBassNotes,
-    thirtyfiveYaosAccidentInspiredNotes,
-    thirtyfiveZdaubNotes,
-    thirtyfiveZdaubOnlyWiggleNotes,
+    polyrhythmicAscentANotes,
+    polyrhythmicAscentBNotes,
+    polyrhythmicAscentCNotes,
+    secretLongChordNotes,
 }

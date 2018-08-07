@@ -2,25 +2,20 @@ import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     experimentWithIestttPart,
     experimentWithUmowwwPart,
+    polyrhythmicAscentAPart,
+    polyrhythmicAscentBPart,
+    polyrhythmicAscentCPart,
     polyrhythmicYaosFifteenPart,
     polyrhythmicYaosTwentyfourPart,
-    thirtyfiveYaosAccidentInspiredPart,
-    thirtyfiveYaosBassPart,
-    thirtyfiveZdaubPart,
+    secretLongChordPart,
+    untrueExtendedEndingZdaubBonyPart,
+    untrueExtendedEndingZdaubGlisPart,
+    untrueExtendedEndingZdaubTremPart,
 } from '../parts/otherParts'
 import {
     untrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
 } from '../parts/trueYaosParts'
 import { Segment } from '../types'
-
-const thirtyfiveSegment: Segment = alterSegmentParts(
-    [
-        thirtyfiveZdaubPart,
-        thirtyfiveYaosAccidentInspiredPart,
-        thirtyfiveYaosBassPart,
-    ],
-    [{gainAdjust: 0.66}, {}, {gainAdjust: 2, flipHarmonically: true}],
-)
 
 const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
     [
@@ -53,9 +48,42 @@ const polyrhythmicAllYaosSegment: Segment = alterSegmentParts(
     ],
 )
 
+const polyrhythmicAscent: Segment = alterSegmentParts(
+    [
+        polyrhythmicAscentAPart,
+        polyrhythmicAscentBPart,
+        polyrhythmicAscentCPart,
+    ],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
+)
+
+const untrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment: Segment = alterSegmentParts(
+    [
+        untrueExtendedEndingZdaubTremPart,
+        untrueExtendedEndingZdaubBonyPart,
+        untrueExtendedEndingZdaubGlisPart,
+    ],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
+)
+
+const secretLongChordSegment: Segment = alterSegmentParts(
+    [
+        secretLongChordPart,
+        secretLongChordPart,
+        secretLongChordPart,
+    ],
+    [
+        {pitchIndexOffset: -54, flipHarmonically: true, gainAdjust: 0.33},
+        {pitchIndexOffset: -61, flipHarmonically: true, gainAdjust: 0.33},
+        {pitchIndexOffset: -56, flipHarmonically: true, gainAdjust: 0.33},
+    ],
+)
+
 export {
-    thirtyfiveSegment,
     experimentWithIestttAndUmowwwSegment,
     untrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     polyrhythmicAllYaosSegment,
+    polyrhythmicAscent,
+    untrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
+    secretLongChordSegment,
 }

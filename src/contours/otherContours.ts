@@ -1,41 +1,37 @@
-import repeat from '../../../../src/utilities/repeat'
 import { Contour } from '../types'
 
-const thirtyfiveYaosBass: Contour = repeat([
-    1, 5,
-    1, 5,
-    1, 3,
-    1, 5,
-    1, 5,
-    1, 3,
-    1, 2,
-],                                         6)
-
-const thirtyfiveYaosAccidentInspired: Contour = repeat([
-    1, 2, 3,
-    1, 2, 3, 4,
-    1, 2, 3,
-    1, 2, 3, 4,
-    1, 2,
-],                                                     6)
-
-const thirtyfiveZdaub: Contour = [
-    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
-    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
-    13, 10, 7, 4, 1,
-    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
-    19, 16,
-    13, 10, 7, 4, 1,
+const polyrhythmicAscentA: Contour = [
+    21, 19, 17, 15,
+    // Lasts three
+    // Lasts three
+    13, 11,
+    9, 7, 5, 3,
 ]
 
-const thirtyfiveZdaubOnlyWiggle: Contour = [
-    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
-    4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
+const polyrhythmicAscentB: Contour = [
+    14, 13, 12, 11, 10,
+    // Lasts four
+    // Lasts four
+    // Lasts four
+    11, 10, 9,
+    // Lasts two
+    8, 7,
+    6, 5, 4,
 ]
+
+const polyrhythmicAscentC: Contour = [
+    25, 23,
+    // Lasts two
+    21, 19, 17, 15,
+    // Lasts three
+    // Lasts three
+]
+
+const secretLongChord: Contour = [63]
 
 export {
-    thirtyfiveYaosBass,
-    thirtyfiveYaosAccidentInspired,
-    thirtyfiveZdaub,
-    thirtyfiveZdaubOnlyWiggle,
+    polyrhythmicAscentA,
+    polyrhythmicAscentB,
+    polyrhythmicAscentC,
+    secretLongChord,
 }

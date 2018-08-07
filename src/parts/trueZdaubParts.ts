@@ -54,14 +54,6 @@ const trueZdaubBonyWithSuperinscapePart: Part = sequence([
     repeatCall(() => noodlingTwentyfourBonyNotes, 2),
 ])
 
-const trueZdaubBonyPart: Part = sequence([
-    repeatCall(() => noodlingFifteenBonyNotes, 3),
-    escapeFifteenBonyNotes,
-    ascentFifteenBonyNotes,
-    inscapeTwentyfourBonyNotes,
-    repeatCall(() => noodlingTwentyfourBonyNotes, 3),
-])
-
 const trueZdaubTremPart: Part = sequence([
     repeatCall(() => noodlingFifteenTremNotes, 3),
     escapeFifteenTremNotes,
@@ -75,5 +67,4 @@ export {
     trueZdaubBonyWithSuperinscapePart,
     trueZdaubGlisPart,
     trueZdaubGlisVariantPart,
-    trueZdaubBonyPart,
 }

@@ -1,4 +1,4 @@
-import { thirtyfiveYaosBassNotes, thirtyfiveYaosAccidentInspiredNotes, thirtyfiveZdaubNotes } from '../../src/notes/otherNotes'
+import { thirtyfiveYaosBassNotes, thirtyfiveYaosAccidentInspiredNotes, thirtyfiveZdaubNotes } from '../../src/notes/thirtyfiveNotes'
 import calculateDuration from '../../../../src/utilities/calculateDuration'
 
 describe('thirtyfive notes', () => {

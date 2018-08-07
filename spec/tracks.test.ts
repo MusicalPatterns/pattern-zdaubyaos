@@ -3,7 +3,7 @@ import { zdaubyaosTrackA, zdaubyaosTrackB, zdaubyaosTrackC } from '../src/conver
 
 describe('tracks', () => {
     it('is the case that they all have the same duration', () => {
-        const expectedTotalSongDuration: number = 3048
+        const expectedTotalSongDuration: number = 3096
         expect(calculateDuration(zdaubyaosTrackA)).toEqual(expectedTotalSongDuration)
         expect(calculateDuration(zdaubyaosTrackB)).toEqual(expectedTotalSongDuration)
         expect(calculateDuration(zdaubyaosTrackC)).toEqual(expectedTotalSongDuration)

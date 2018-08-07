@@ -5,7 +5,6 @@ import {
     trueYaosUmowchuwowiestSummerToSpringPart,
 } from '../parts/trueYaosParts'
 import {
-    trueZdaubBonyPart,
     trueZdaubBonyWithSuperinscapePart,
     trueZdaubGlisPart,
     trueZdaubGlisVariantPart,
@@ -40,18 +39,8 @@ const trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = alterSeg
     [{gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33}],
 )
 
-const trueAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment: Segment = alterSegmentParts(
-    [
-        trueZdaubTremPart,
-        trueZdaubBonyPart,
-        trueZdaubGlisPart,
-    ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
-)
-
 export {
     trueSpringWithZdaubSegment,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-    trueAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
 }
