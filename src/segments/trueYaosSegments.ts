@@ -3,6 +3,7 @@ import {
     trueYaosInaidjiyaiouzdSummerToSpringPart,
     trueYaosUmowchuwowiestSpringToSummerPart,
     trueYaosUmowchuwowiestSummerToSpringPart,
+    trueYaosUmowchuwowiestSummerToSpringPartWithFun,
 } from '../parts/trueYaosParts'
 import { Segment } from '../types'
 
@@ -15,11 +16,11 @@ const trueSpringAllYaosUmowchuwowiestSegment: Segment = alterSegmentParts(
     [{}, {}, {}],
 )
 
-const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = alterSegmentParts(
+const almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun: Segment = alterSegmentParts(
     [
-        trueYaosUmowchuwowiestSummerToSpringPart,
-        trueYaosUmowchuwowiestSummerToSpringPart,
-        trueYaosUmowchuwowiestSummerToSpringPart,
+        trueYaosUmowchuwowiestSummerToSpringPartWithFun,
+        trueYaosUmowchuwowiestSummerToSpringPartWithFun,
+        trueYaosUmowchuwowiestSummerToSpringPartWithFun,
     ],
     [{flipHarmonically: true}, {}, {}],
 )
@@ -35,6 +36,6 @@ const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
 
 export {
     trueSpringAllYaosUmowchuwowiestSegment,
-    trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
+    almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun,
     trueAllYaosAllRhythmsAtOnceSegment,
 }

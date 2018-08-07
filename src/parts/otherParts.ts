@@ -8,25 +8,6 @@ import {
     polyrhythmicAscentCNotes,
     secretLongChordNotes,
 } from '../notes/otherNotes'
-import {
-    ascentFifteenBonyNotes,
-    ascentFifteenGlisNotes,
-    ascentFifteenTremNotes,
-    escapeFifteenBonyNotes,
-    escapeFifteenGlisNotes,
-    escapeFifteenTremNotes,
-    noodlingFifteenBonyNotes,
-    noodlingFifteenGlisNotes,
-    noodlingFifteenTremNotes,
-} from '../notes/zdaubFifteenNotes'
-import {
-    inscapeTwentyfourBonyNotes,
-    inscapeTwentyfourGlisNotes,
-    inscapeTwentyfourTremNotes,
-    noodlingTwentyfourBonyNotes,
-    noodlingTwentyfourGlisNotes,
-    noodlingTwentyfourTremNotes,
-} from '../notes/zdaubTwentyfourNotes'
 import { Part } from '../types'
 
 const trueYetOfBackbonePart: Part = sequence([

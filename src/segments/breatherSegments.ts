@@ -1,10 +1,12 @@
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
-    breatherFallPart,
     breatherRestPart,
     breatherSpringAltPart,
     breatherSpringPart,
-    breatherSummerPart, breatherVarietyPart,
+    breatherSummerPart,
+    breatherVarietyPart,
+    doubleBreatherFallPart,
+    doubleBreatherRestPart,
 } from '../parts/breatherParts'
 import { Segment } from '../types'
 
@@ -26,11 +28,11 @@ const breatherSummerSegment: Segment = alterSegmentParts(
     [{}, {gainAdjust: 0.5, flipHarmonically: true}, {}],
 )
 
-const breatherFallWhichIsGoodIntroForJigSegment: Segment = alterSegmentParts(
+const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = alterSegmentParts(
     [
-        breatherRestPart,
-        breatherRestPart,
-        breatherFallPart,
+        doubleBreatherRestPart,
+        doubleBreatherRestPart,
+        doubleBreatherFallPart,
     ],
     [{}, {}, {gainAdjust: 0.5, pitchIndexOffset: -1}],
 )
@@ -51,15 +53,16 @@ const breatherVarietyQuiteTheReveilleSegment: Segment = alterSegmentParts(
         breatherVarietyPart,
     ],
     [
-        {gainAdjust: 1.5, flipHarmonically: true}, {gainAdjust: 1.5, flipHarmonically: true},
-        {gainAdjust: 1.5, flipHarmonically: true},
+        {gainAdjust: 1, flipHarmonically: true},
+        {gainAdjust: 1, flipHarmonically: true},
+        {gainAdjust: 1, flipHarmonically: true},
     ],
 )
 
 export {
     breatherSpringSegment,
     breatherSummerSegment,
-    breatherFallWhichIsGoodIntroForJigSegment,
+    doubleBreatherFallWhichIsGoodIntroForJigSegment,
     breatherSpringAltNiceAsABreatherToABreatherSegment,
     breatherVarietyQuiteTheReveilleSegment,
 }

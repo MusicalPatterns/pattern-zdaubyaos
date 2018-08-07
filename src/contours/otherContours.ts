@@ -27,11 +27,18 @@ const polyrhythmicAscentC: Contour = [
     // Lasts three
 ]
 
-const secretLongChord: Contour = [63]
+const secretLongChord: number[][] = [
+    [63, 15],
+]
+
+const funBetweenFifteenAndTwentyfourMoment: number[][] = [
+    [0, 2], [5, 1], [6, 4],
+]
 
 export {
     polyrhythmicAscentA,
     polyrhythmicAscentB,
     polyrhythmicAscentC,
     secretLongChord,
+    funBetweenFifteenAndTwentyfourMoment,
 }

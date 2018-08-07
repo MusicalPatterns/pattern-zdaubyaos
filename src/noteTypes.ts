@@ -43,7 +43,14 @@ const tremNoteType: NoteType =
 
 const manualNoteType: ([pitchIndex, duration]: number[]) => Note =
     ([pitchIndex, duration]: number[]): Note => {
-        if (pitchIndex === REST) { return singleRest }
+        if (pitchIndex === REST) {
+            return {
+                duration,
+                gain: SILENT,
+                pitchIndex: PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
+                sustain: duration - SEPARATION_FOR_NEIGHBORING_NOTES,
+            }
+        }
 
         return {
             duration,

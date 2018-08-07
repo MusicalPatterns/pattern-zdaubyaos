@@ -1,10 +1,14 @@
+import {
+    almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
+    almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+} from './segments/almostTrueSegments'
 import { backboneSegment } from './segments/backboneSegments'
 import {
-    breatherFallWhichIsGoodIntroForJigSegment,
     breatherSpringAltNiceAsABreatherToABreatherSegment,
     breatherSpringSegment,
     breatherSummerSegment,
     breatherVarietyQuiteTheReveilleSegment,
+    doubleBreatherFallWhichIsGoodIntroForJigSegment,
 } from './segments/breatherSegments'
 import {
     experimentWithIestttAndUmowwwSegment,
@@ -15,20 +19,17 @@ import {
 import { shiftySegment } from './segments/shiftySegments'
 import { thirtyfiveSegment } from './segments/thirtyfiveSegments'
 import {
+    almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun,
     trueAllYaosAllRhythmsAtOnceSegment,
     trueSpringAllYaosUmowchuwowiestSegment,
-    trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
 } from './segments/trueYaosSegments'
 import {
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     trueSpringWithZdaubSegment,
+    trueSpringySummerTotallyOutThereSegment,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
 } from './segments/trueZdaubSegments'
 import { Segment } from './types'
-import {
-    almostTrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
-    almostTrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment
-} from './segments/almostTrueSegments'
 
 const START: number = 0
 const END: number = 15
@@ -42,24 +43,25 @@ const segments: Segment[] = [
 
     // 3
     breatherSummerSegment,
-    trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
+    almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
+    secretLongChordSegment,
+    shiftySegment,
 
-    // 6
-    breatherFallWhichIsGoodIntroForJigSegment,
-    // TODO: Ah ha ... maybe we're not ready for the jig yet and instead we should go into the 357 bit
-    // And let's do it in springy summer
-    almostTrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+    // 8
+    doubleBreatherFallWhichIsGoodIntroForJigSegment,
+    almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-    shiftySegment, // Awkward transition into this STILL
+
+    // Okay now this is the last transition in trouble ...
 
     // 10
     breatherSpringAltNiceAsABreatherToABreatherSegment,
     breatherVarietyQuiteTheReveilleSegment,
     trueAllYaosAllRhythmsAtOnceSegment,
-    almostTrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
+    almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
 
-    // 14
+    // 15
     thirtyfiveSegment,
 ].slice(START, END + INCLUSIVE)
 
@@ -82,6 +84,9 @@ const segmentsWhichIHaveNotFoundAHomeForYetAndMayNever: Segment[] = [
     // That lasts like 39 or something? or 8 times 6? which is 2x 24? so how about 9x 7's?
     // Answer is nope... this is nice but I can't fit in anywhere
     secretLongChordSegment,
+
+    // Man I really like the 'tude of this thing but I can't fit in anywhere
+    trueSpringySummerTotallyOutThereSegment,
 ]
 
 export default segments

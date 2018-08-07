@@ -11,18 +11,18 @@ import {
 import { Part } from '../types'
 
 const backboneAPart: Part = sequence([
-    repeatCall(() => backboneFifteenANotes, 3),
-    repeatCall(() => backboneTwentyfourCNotes, 2),
+    repeatCall(() => backboneFifteenANotes, 1),
+    repeatCall(() => backboneTwentyfourCNotes, 1),
 ])
 
 const backboneBPart: Part = sequence([
-    repeatCall(() => backboneFifteenBNotes, 3),
-    repeatCall(() => backboneTwentyfourENotes, 2),
+    repeatCall(() => backboneFifteenBNotes, 1),
+    repeatCall(() => backboneTwentyfourENotes, 1),
 ])
 
 const backboneCPart: Part = sequence([
-    repeatCall(() => backboneFifteenCNotes, 3),
-    repeatCall(() => backboneTwentyfourGNotes, 2),
+    repeatCall(() => backboneFifteenCNotes, 1),
+    repeatCall(() => backboneTwentyfourGNotes, 1),
 ])
 
 export {

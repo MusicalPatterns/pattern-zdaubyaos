@@ -1,4 +1,3 @@
-import { Segment } from '../types'
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     almostTrueExtendedEndingZdaubBonyPart,
@@ -6,8 +5,9 @@ import {
     almostTrueExtendedEndingZdaubTremPart,
     almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
 } from '../parts/almostTrueParts'
+import { Segment } from '../types'
 
-const almostTrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = alterSegmentParts(
+const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = alterSegmentParts(
     [
         almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
         almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
@@ -16,7 +16,7 @@ const almostTrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomF
     [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
 )
 
-const almostTrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment: Segment = alterSegmentParts(
+const almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment: Segment = alterSegmentParts(
     [
         almostTrueExtendedEndingZdaubTremPart,
         almostTrueExtendedEndingZdaubBonyPart,
@@ -26,6 +26,6 @@ const almostTrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonic
 )
 
 export {
-    almostTrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
-    almostTrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
+    almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+    almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
 }

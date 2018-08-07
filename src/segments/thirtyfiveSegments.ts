@@ -12,7 +12,7 @@ const thirtyfiveSegment: Segment = alterSegmentParts(
         thirtyfiveYaosAccidentInspiredPart,
         thirtyfiveYaosBassPart,
     ],
-    [{gainAdjust: 0.66}, {}, {gainAdjust: 2, flipHarmonically: true}],
+    [{gainAdjust: 0.66}, {}, {gainAdjust: 1.25, flipHarmonically: true}],
 )
 
 export {

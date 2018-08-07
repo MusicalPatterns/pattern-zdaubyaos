@@ -1,6 +1,5 @@
-import { Part } from '../types'
-import sequence from '../../../../src/utilities/sequence'
 import repeatCall from '../../../../src/utilities/repeatCall'
+import sequence from '../../../../src/utilities/sequence'
 import getYaosNotes from '../notes/getYaosNotes'
 import {
     ascentFifteenBonyNotes,
@@ -21,6 +20,7 @@ import {
     noodlingTwentyfourGlisNotes,
     noodlingTwentyfourTremNotes,
 } from '../notes/zdaubTwentyfourNotes'
+import { Part } from '../types'
 
 const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
     repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'fall'), 1),

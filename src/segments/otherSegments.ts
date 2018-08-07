@@ -17,9 +17,12 @@ const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
         experimentWithUmowwwPart,
         experimentWithUmowwwPart,
     ],
-    [{flipHarmonically: true, pitchIndexOffset: 2}, {}, {flipHarmonically: true}],
+    [
+        {flipHarmonically: true, pitchIndexOffset: 0, gainAdjust: 1},
+        {gainAdjust: 0.5},
+        {flipHarmonically: true, gainAdjust: 1},
+    ],
 )
-
 
 const polyrhythmicAllYaosSegment: Segment = alterSegmentParts(
     [
@@ -30,7 +33,7 @@ const polyrhythmicAllYaosSegment: Segment = alterSegmentParts(
     [
         {flipHarmonically: true, pitchIndexOffset: 3},
         {flipHarmonically: false, pitchIndexOffset: 3},
-        {flipHarmonically: false, pitchIndexOffset: 3},
+        {flipHarmonically: true, pitchIndexOffset: 3},
     ],
 )
 
@@ -50,9 +53,9 @@ const secretLongChordSegment: Segment = alterSegmentParts(
         secretLongChordPart,
     ],
     [
-        {pitchIndexOffset: -54, flipHarmonically: true, gainAdjust: 0.33},
-        {pitchIndexOffset: -61, flipHarmonically: true, gainAdjust: 0.33},
-        {pitchIndexOffset: -56, flipHarmonically: true, gainAdjust: 0.33},
+        {pitchIndexOffset: -59, flipHarmonically: true, gainAdjust: 0.8},
+        {pitchIndexOffset: -61, flipHarmonically: true, gainAdjust: 0.8},
+        {pitchIndexOffset: -56, flipHarmonically: true, gainAdjust: 0.8},
     ],
 )
 
