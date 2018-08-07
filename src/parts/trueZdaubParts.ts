@@ -1,5 +1,6 @@
 import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
+import adjustGain from '../adjustGain'
 import {
     ascentFifteenBonyNotes,
     ascentFifteenGlisNotes,
@@ -45,14 +46,14 @@ const trueZdaubGlisVariantPart: Part = sequence([
     ].map(glisNoteType),
 ])
 
-const trueZdaubBonyWithSuperinscapePart: Part = sequence([
+const trueZdaubBonyWithSuperinscapePart: Part = adjustGain(sequence([
     repeatCall(() => noodlingFifteenBonyNotes, 3),
     escapeFifteenBonyNotes,
     ascentFifteenBonyNotes,
     superinscapeTwentyfourBonyNotes,
     inscapeTwentyfourBonyNotes,
     repeatCall(() => noodlingTwentyfourBonyNotes, 2),
-])
+]),                                                        0.33)
 
 const trueZdaubBonyPart: Part = sequence([
     repeatCall(() => noodlingFifteenBonyNotes, 3),

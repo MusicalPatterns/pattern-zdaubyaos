@@ -10,46 +10,46 @@ import { Segment } from '../types'
 
 const breatherSpringSegment: Segment = flipEntities(
     [
-    breatherSpringPart,
-    breatherRestPart,
-    breatherRestPart,
-],
+        breatherSpringPart,
+        breatherRestPart,
+        breatherRestPart,
+    ],
     [false, false, false],
 )
 
 const breatherSummerSegment: Segment = flipEntities(
     [
-    breatherRestPart,
-    breatherSummerPart,
-    breatherRestPart,
-],
+        breatherRestPart,
+        breatherSummerPart,
+        breatherRestPart,
+    ],
     [true, true, false],
 )
 
 const breatherFallWhichIsGoodIntroForJigSegment: Segment = flipEntities(
     [
-    breatherRestPart,
-    breatherRestPart,
-    breatherFallPart,
-],
+        breatherRestPart,
+        breatherRestPart,
+        breatherFallPart,
+    ],
     [false, false, false],
 )
 
 const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = flipEntities(
     [
-    breatherRestPart,
-    breatherSpringAltPart,
-    breatherRestPart,
-],
+        breatherRestPart,
+        breatherSpringAltPart,
+        breatherRestPart,
+    ],
     [true, true, true],
 )
 
 const breatherVarietyQuiteTheReveilleSegment: Segment = flipEntities(
     [
-    breatherVarietyPart,
-    breatherVarietyPart,
-    breatherVarietyPart,
-],
+        breatherVarietyPart,
+        breatherVarietyPart,
+        breatherVarietyPart,
+    ],
     [false, false, false],
 )
 

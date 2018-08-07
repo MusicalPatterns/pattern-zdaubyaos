@@ -1,70 +1,92 @@
+import calculateDuration from '../../../../src/calculateDuration'
+import repeat from '../../../../src/repeat'
 import repeatCall from '../../../../src/repeatCall'
+import rest from '../../../../src/rest'
 import sequence from '../../../../src/sequence'
+import adjustGain from '../adjustGain'
+import adjustPitchIndex from '../adjustPitchIndex'
 import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
-import { thirtyfiveANotes, thirtyfiveBNotes, thirtyfiveCNotes } from '../notes/otherNotes'
+import { thirtyfiveYaosAccidentInspiredNotes, thirtyfiveYaosBassNotes, thirtyfiveZdaubNotes } from '../notes/otherNotes'
 import { Part } from '../types'
-import adjustPitchIndex from '../adjustPitchIndex'
-import repeat from '../../../../src/repeat'
 
 const trueYetOfBackbonePart: Part = sequence([
-    repeatCall(() => backboneFifteenANotes, 8),
-    repeatCall(() => backboneTwentyfourCNotes, 4),
+    adjustGain(repeatCall(() => backboneFifteenANotes, 8), 0.33),
+    adjustGain(repeatCall(() => backboneTwentyfourCNotes, 4), 0.33),
 ])
 
 const experimentWithIestttPart: Part = sequence([
-    adjustPitchIndex(repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'fall',
-    }),        1), 2),
-    // repeatCall(() => getYaosNotes({
-    //     blockresolution: 'highregular',
-    //     blockstrategy: 'umowchuwowiest',
-    //     duration: 'twentyfour',
-    //     rendering: 'spring',
-    // }),        1),
-    // repeatCall(() => getYaosNotes({
-    //     blockresolution: 'highregular',
-    //     blockstrategy: 'umowchuwowiest',
-    //     duration: 'twentyfour',
-    //     rendering: 'summer',
-    // }),        1),
+    adjustPitchIndex(
+        repeatCall(
+            () => getYaosNotes({
+                blockresolution: 'highregular',
+                blockstrategy: 'umowchuwowiest',
+                duration: 'twentyfour',
+                rendering: 'fall',
+            }),
+            1,
+        ),
+        2,
+    ),
+    repeatCall(
+        () => getYaosNotes({
+            blockresolution: 'highregular',
+            blockstrategy: 'umowchuwowiest',
+            duration: 'twentyfour',
+            rendering: 'spring',
+        }),
+        1,
+    ),
+    repeatCall(
+        () => getYaosNotes({
+            blockresolution: 'highregular',
+            blockstrategy: 'umowchuwowiest',
+            duration: 'twentyfour',
+            rendering: 'summer',
+        }),
+        1,
+    ),
 ])
 
 const experimentWithUmowwwPart: Part = sequence([
-    adjustPitchIndex(repeatCall(() => getYaosNotes({
+    adjustPitchIndex(getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
         rendering: 'fall',
-    }),        1), 2),
-    // repeatCall(() => getYaosNotes({
-    //     blockresolution: 'lowregular',
-    //     blockstrategy: 'umowchuwowiest',
-    //     duration: 'twentyfour',
-    //     rendering: 'spring',
-    // }),        1),
-    // repeatCall(() => getYaosNotes({
-    //     blockresolution: 'lowregular',
-    //     blockstrategy: 'umowchuwowiest',
-    //     duration: 'twentyfour',
-    //     rendering: 'summer',
-    // }),        1),
+    }),              2),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'spring',
+    }),
+    getYaosNotes({
+        blockresolution: 'lowregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'summer',
+    }),
 ])
 
-const thirtyfiveAPart: Part = repeat(thirtyfiveANotes, 2)
+const thirtyfiveYaosBassPart: Part = sequence([
+    repeat(adjustGain(thirtyfiveYaosBassNotes, 2), 4),
+])
 
-const thirtyfiveBPart: Part = repeat(thirtyfiveBNotes, 2)
+const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
+    repeat(thirtyfiveYaosAccidentInspiredNotes, 4),
+])
 
-const thirtyfiveCPart: Part = repeat(thirtyfiveCNotes, 2)
+const thirtyfiveZdaubPart: Part = sequence([
+    repeat(adjustGain(thirtyfiveZdaubNotes, 0.66), 2),
+    repeat(rest(calculateDuration(thirtyfiveZdaubNotes)), 2),
+])
 
 export {
     trueYetOfBackbonePart,
     experimentWithIestttPart,
     experimentWithUmowwwPart,
-    thirtyfiveAPart,
-    thirtyfiveBPart,
-    thirtyfiveCPart,
+    thirtyfiveYaosBassPart,
+    thirtyfiveYaosAccidentInspiredPart,
+    thirtyfiveZdaubPart,
 }

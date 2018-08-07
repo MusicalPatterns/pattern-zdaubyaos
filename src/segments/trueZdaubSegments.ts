@@ -5,11 +5,11 @@ import {
     trueYaosUmowchuwowiestSummerToSpringPart,
 } from '../parts/trueYaosParts'
 import {
+    trueZdaubBonyPart,
     trueZdaubBonyWithSuperinscapePart,
     trueZdaubGlisPart,
     trueZdaubGlisVariantPart,
     trueZdaubTremPart,
-    trueZdaubBonyPart,
 } from '../parts/trueZdaubParts'
 import { Segment } from '../types'
 
@@ -22,7 +22,7 @@ const trueSpringWithZdaubSegment: Segment = flipEntities(
     [false, false, false],
 )
 
-const trueSummerWithZdaubAndTheZdaubSeparationVariantAndItGetsPleasantlyGnarlyHarmonicallySegment: Segment = flipEntities(
+const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment: Segment = flipEntities(
     [
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueZdaubGlisPart,
@@ -46,12 +46,12 @@ const trueAllZdaubTriumphantAndExperienceThePowerOfTheThreeScalesTogetherSegment
         trueZdaubBonyPart,
         trueZdaubGlisPart,
     ],
-    [false, false, false],
+    [true, true, true],
 )
 
 export {
     trueSpringWithZdaubSegment,
-    trueSummerWithZdaubAndTheZdaubSeparationVariantAndItGetsPleasantlyGnarlyHarmonicallySegment,
+    trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     trueAllZdaubTriumphantAndExperienceThePowerOfTheThreeScalesTogetherSegment,
 }

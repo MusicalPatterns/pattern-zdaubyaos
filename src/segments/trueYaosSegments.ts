@@ -34,7 +34,7 @@ const trueSummerAllYaosInaidjiyaiouzdSegment: Segment = flipEntities(
     [true, true, true],
 )
 
-const trueFallAllYaosAndBothBlockStrategiesBonyJigIntroAllTogetherAndHappyGoLuckyAndRhythmicallySpasticSegment: Segment = flipEntities(
+const trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = flipEntities(
     [
         trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
         trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
@@ -43,19 +43,19 @@ const trueFallAllYaosAndBothBlockStrategiesBonyJigIntroAllTogetherAndHappyGoLuck
     [true, true, true],
 )
 
-const trueAllYaosSupposedToBeAllTheRenderingsAtOnceAlthoughMaybeTheIdeaIsActuallyNotToIncludeFallButToIncludeOneInaidjiyaiouzdBecauseWhateverItIsItsPrettyDenseAndAwesomeSegment: Segment = flipEntities(
+const trueAllYaosAllRhythmsAtOnceSegment: Segment = flipEntities(
     [
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueYaosInaidjiyaiouzdSummerToSpringPart,
     ],
-    [false, false, false],
+    [true, true, false],
 )
 
 export {
     trueSpringAllYaosUmowchuwowiestSegment,
     trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
     trueSummerAllYaosInaidjiyaiouzdSegment,
-    trueFallAllYaosAndBothBlockStrategiesBonyJigIntroAllTogetherAndHappyGoLuckyAndRhythmicallySpasticSegment,
-    trueAllYaosSupposedToBeAllTheRenderingsAtOnceAlthoughMaybeTheIdeaIsActuallyNotToIncludeFallButToIncludeOneInaidjiyaiouzdBecauseWhateverItIsItsPrettyDenseAndAwesomeSegment,
+    trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+    trueAllYaosAllRhythmsAtOnceSegment,
 }

@@ -2,17 +2,17 @@ import flipEntities from '../flipEntities'
 import {
     experimentWithIestttPart,
     experimentWithUmowwwPart,
-    thirtyfiveAPart,
-    thirtyfiveBPart,
-    thirtyfiveCPart,
+    thirtyfiveYaosAccidentInspiredPart,
+    thirtyfiveYaosBassPart,
+    thirtyfiveZdaubPart,
 } from '../parts/otherParts'
 import { Segment } from '../types'
 
 const thirtyfiveSegment: Segment = flipEntities(
     [
-        thirtyfiveCPart,
-        thirtyfiveBPart,
-        thirtyfiveAPart,
+        thirtyfiveZdaubPart,
+        thirtyfiveYaosAccidentInspiredPart,
+        thirtyfiveYaosBassPart,
     ],
     [false, false, true],
 )

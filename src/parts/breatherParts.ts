@@ -2,6 +2,7 @@
 
 import rest from '../../../../src/rest'
 import adjustGain from '../adjustGain'
+import adjustPitchIndex from '../adjustPitchIndex'
 import { backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import { inaiiiVarietyNotes } from '../notes/yaosNotes'
@@ -20,7 +21,7 @@ const breatherSummerPart: Part = adjustGain(getYaosNotes({
     duration: 'twentyfour',
     rendering: 'summer',
 }), 0.5)
-const breatherFallPart: Part = adjustGain(backboneTwentyfourCNotes, 0.5)
+const breatherFallPart: Part = adjustPitchIndex(adjustGain(backboneTwentyfourCNotes, 0.5), -1)
 const breatherVarietyPart: Part = adjustGain(inaiiiVarietyNotes, 1.5)
 const breatherSpringAltPart: Part = adjustGain(getYaosNotes({
     blockresolution: 'highregular',

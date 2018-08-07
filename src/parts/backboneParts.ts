@@ -1,5 +1,6 @@
 import repeatCall from '../../../../src/repeatCall'
 import sequence from '../../../../src/sequence'
+import adjustPitchIndex from '../adjustPitchIndex'
 import {
     backboneFifteenANotes,
     backboneFifteenBNotes,
@@ -9,7 +10,6 @@ import {
     backboneTwentyfourGNotes,
 } from '../notes/backboneNotes'
 import { Part } from '../types'
-import adjustPitchIndex from '../adjustPitchIndex'
 
 const backboneAPart: Part = sequence([
     adjustPitchIndex(repeatCall(() => backboneFifteenANotes, 3), 1),

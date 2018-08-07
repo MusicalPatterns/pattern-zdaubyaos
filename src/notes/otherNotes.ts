@@ -1,15 +1,15 @@
-import { thirtyfiveA, thirtyfiveB, thirtyfiveC } from '../contours/otherContours'
+import { thirtyfiveYaosAccidentInspired, thirtyfiveYaosBass, thirtyfiveZdaub } from '../contours/otherContours'
 import { glisNoteType } from '../noteTypes'
 import { Notes } from '../types'
 
-const thirtyfiveANotes: Notes = thirtyfiveA.map(glisNoteType)
+const thirtyfiveYaosBassNotes: Notes = thirtyfiveYaosBass.map(glisNoteType)
 
-const thirtyfiveBNotes: Notes = thirtyfiveB.map(glisNoteType)
+const thirtyfiveYaosAccidentInspiredNotes: Notes = thirtyfiveYaosAccidentInspired.map(glisNoteType)
 
-const thirtyfiveCNotes: Notes = thirtyfiveC.map(glisNoteType)
+const thirtyfiveZdaubNotes: Notes = thirtyfiveZdaub.map(glisNoteType)
 
 export {
-    thirtyfiveANotes,
-    thirtyfiveBNotes,
-    thirtyfiveCNotes,
+    thirtyfiveYaosBassNotes,
+    thirtyfiveYaosAccidentInspiredNotes,
+    thirtyfiveZdaubNotes,
 }
