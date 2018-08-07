@@ -1,6 +1,6 @@
-import repeatCall from '../../../../src/repeatCall'
-import sequence from '../../../../src/sequence'
-import adjustPitchIndex from '../adjustPitchIndex'
+import repeatCall from '../../../../src/utilities/repeatCall'
+import sequence from '../../../../src/utilities/sequence'
+import adjustPitchIndex from '../alterations/adjustPitchIndex'
 import {
     backboneFifteenANotes,
     backboneFifteenBNotes,

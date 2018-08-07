@@ -1,4 +1,4 @@
-import numbers from '../../../src/numbers'
+import numbers from '../../../src/utilities/numbers'
 import { Contour, Rendering } from './types'
 
 const INITIAL: number = 0

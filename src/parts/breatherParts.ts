@@ -1,8 +1,8 @@
 // tslint:disable:align
 
 import rest from '../../../../src/rest'
-import adjustGain from '../adjustGain'
-import adjustPitchIndex from '../adjustPitchIndex'
+import adjustGain from '../alterations/adjustGain'
+import adjustPitchIndex from '../alterations/adjustPitchIndex'
 import { backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import { inaiiiVarietyNotes } from '../notes/yaosNotes'

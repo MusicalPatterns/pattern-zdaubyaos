@@ -1,5 +1,5 @@
 import { thirtyfiveYaosBassNotes, thirtyfiveYaosAccidentInspiredNotes, thirtyfiveZdaubNotes } from '../../src/notes/otherNotes'
-import calculateDuration from '../../../../src/calculateDuration'
+import calculateDuration from '../../../../src/utilities/calculateDuration'
 
 describe('thirtyfive notes', () => {
     it('is the case that they are all actually length multiples of 35', () => {

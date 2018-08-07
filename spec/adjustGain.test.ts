@@ -1,5 +1,5 @@
 import { Notes } from '../src/types'
-import adjustGain from '../src/adjustGain'
+import adjustGain from '../src/alterations/adjustGain'
 
 describe('adjust gain', () => {
     it('adjusts the gain of every note', () => {

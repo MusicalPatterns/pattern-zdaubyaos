@@ -1,4 +1,4 @@
-import calculateDuration from '../../../src/calculateDuration'
+import calculateDuration from '../../../src/utilities/calculateDuration'
 import { zdaubyaosTrackA, zdaubyaosTrackB, zdaubyaosTrackC } from '../src/convertSegmentsToTracks'
 
 describe('tracks', () => {

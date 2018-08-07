@@ -1,4 +1,4 @@
-import calculateDuration from '../../../../src/calculateDuration'
+import calculateDuration from '../../../../src/utilities/calculateDuration'
 import { yaosNotesByDurationBlocksThenRendering } from '../../src/notes/yaosNotes'
 import { Notes } from '../../src/types'
 

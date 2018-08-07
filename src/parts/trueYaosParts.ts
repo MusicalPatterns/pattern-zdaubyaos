@@ -1,9 +1,9 @@
 // tslint:disable:max-file-line-count align
 
-import repeatCall from '../../../../src/repeatCall'
-import sequence from '../../../../src/sequence'
-import adjustGain from '../adjustGain'
-import adjustPitchIndex from '../adjustPitchIndex'
+import repeatCall from '../../../../src/utilities/repeatCall'
+import sequence from '../../../../src/utilities/sequence'
+import adjustGain from '../alterations/adjustGain'
+import adjustPitchIndex from '../alterations/adjustPitchIndex'
 import getYaosNotes from '../notes/getYaosNotes'
 import { Part } from '../types'
 

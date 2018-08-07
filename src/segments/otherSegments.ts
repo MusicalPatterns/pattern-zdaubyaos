@@ -1,4 +1,4 @@
-import alterSegmentParts from '../alterSegmentParts'
+import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     experimentWithIestttPart,
     experimentWithUmowwwPart,

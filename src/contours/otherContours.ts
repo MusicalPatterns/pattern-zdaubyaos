@@ -1,4 +1,4 @@
-import repeat from '../../../../src/repeat'
+import repeat from '../../../../src/utilities/repeat'
 import { Contour } from '../types'
 
 const thirtyfiveYaosBass: Contour = repeat([

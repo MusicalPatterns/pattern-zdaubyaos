@@ -1,4 +1,4 @@
-import repeat from '../../../../src/repeat'
+import repeat from '../../../../src/utilities/repeat'
 import { Blocks } from '../types'
 
 const yaosBlocksByDuration: { [index: string]: { [index: string]: Blocks } } = {

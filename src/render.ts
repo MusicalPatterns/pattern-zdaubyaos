@@ -1,4 +1,4 @@
-import sequence from '../../../src/sequence'
+import sequence from '../../../src/utilities/sequence'
 import { Blocks, Contour, Rendering } from './types'
 
 const render: (contour: Blocks, rendering: Rendering) => Contour =

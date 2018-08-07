@@ -1,4 +1,4 @@
-import alterSegmentParts from '../alterSegmentParts'
+import alterSegmentParts from '../alterations/alterSegmentParts'
 import { shiftyAPart, shiftyBPart } from '../parts/shiftyParts'
 import { Segment } from '../types'
 

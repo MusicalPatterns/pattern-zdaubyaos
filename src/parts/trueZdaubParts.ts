@@ -1,6 +1,6 @@
-import repeatCall from '../../../../src/repeatCall'
-import sequence from '../../../../src/sequence'
-import adjustGain from '../adjustGain'
+import repeatCall from '../../../../src/utilities/repeatCall'
+import sequence from '../../../../src/utilities/sequence'
+import adjustGain from '../alterations/adjustGain'
 import {
     ascentFifteenBonyNotes,
     ascentFifteenGlisNotes,

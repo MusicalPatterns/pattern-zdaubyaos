@@ -1,6 +1,6 @@
-import calculateDuration from '../../../src/calculateDuration'
-import rest from '../../../src/rest'
-import { Part, Segment } from './types'
+import rest from '../../../../src/rest'
+import calculateDuration from '../../../../src/utilities/calculateDuration'
+import { Part, Segment } from '../types'
 
 const FLIP_INDEX: number = 3
 

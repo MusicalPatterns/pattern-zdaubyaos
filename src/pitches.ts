@@ -1,5 +1,5 @@
 import { HARMONIC_SHIFT } from '../../../src/constants'
-import numbers from '../../../src/numbers'
+import numbers from '../../../src/utilities/numbers'
 
 const SUPER: number = 1
 const DUPER: number = 2

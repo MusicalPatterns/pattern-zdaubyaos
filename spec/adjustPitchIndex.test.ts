@@ -1,5 +1,5 @@
 import { Notes } from '../src/types'
-import adjustPitchIndex from '../src/adjustPitchIndex'
+import adjustPitchIndex from '../src/alterations/adjustPitchIndex'
 
 describe('adjust pitch', () => {
     it('adjusts the pitch of every note', () => {
