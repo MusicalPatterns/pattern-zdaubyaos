@@ -11,8 +11,6 @@ import {
     polyrhythmicAllYaosSegment,
     polyrhythmicAscent,
     secretLongChordSegment,
-    untrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
-    untrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
 } from './segments/otherSegments'
 import { shiftySegment } from './segments/shiftySegments'
 import { thirtyfiveSegment } from './segments/thirtyfiveSegments'
@@ -27,6 +25,10 @@ import {
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
 } from './segments/trueZdaubSegments'
 import { Segment } from './types'
+import {
+    almostTrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
+    almostTrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment
+} from './segments/almostTrueSegments'
 
 const START: number = 0
 const END: number = 15
@@ -46,7 +48,8 @@ const segments: Segment[] = [
     // 6
     breatherFallWhichIsGoodIntroForJigSegment,
     // TODO: Ah ha ... maybe we're not ready for the jig yet and instead we should go into the 357 bit
-    untrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+    // And let's do it in springy summer
+    almostTrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     shiftySegment, // Awkward transition into this STILL
 
@@ -54,7 +57,7 @@ const segments: Segment[] = [
     breatherSpringAltNiceAsABreatherToABreatherSegment,
     breatherVarietyQuiteTheReveilleSegment,
     trueAllYaosAllRhythmsAtOnceSegment,
-    untrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
+    almostTrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
 
     // 14
     thirtyfiveSegment,

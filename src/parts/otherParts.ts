@@ -56,28 +56,6 @@ const polyrhythmicAscentAPart: Part = polyrhythmicAscentANotes
 const polyrhythmicAscentBPart: Part = polyrhythmicAscentBNotes
 const polyrhythmicAscentCPart: Part = polyrhythmicAscentCNotes
 
-const untrueExtendedEndingZdaubTremPart: Part = sequence([
-    repeatCall(() => noodlingFifteenTremNotes, 3),
-    escapeFifteenTremNotes,
-    ascentFifteenTremNotes,
-    inscapeTwentyfourTremNotes,
-    repeatCall(() => noodlingTwentyfourTremNotes, 5),
-])
-const untrueExtendedEndingZdaubBonyPart: Part = sequence([
-    repeatCall(() => noodlingFifteenBonyNotes, 3),
-    escapeFifteenBonyNotes,
-    ascentFifteenBonyNotes,
-    inscapeTwentyfourBonyNotes,
-    repeatCall(() => noodlingTwentyfourBonyNotes, 5),
-])
-const untrueExtendedEndingZdaubGlisPart: Part = sequence([
-    repeatCall(() => noodlingFifteenGlisNotes, 3),
-    escapeFifteenGlisNotes,
-    ascentFifteenGlisNotes,
-    inscapeTwentyfourGlisNotes,
-    repeatCall(() => noodlingTwentyfourGlisNotes, 5),
-])
-
 const secretLongChordPart: Part = secretLongChordNotes
 
 export {
@@ -89,8 +67,5 @@ export {
     polyrhythmicAscentAPart,
     polyrhythmicAscentBPart,
     polyrhythmicAscentCPart,
-    untrueExtendedEndingZdaubTremPart,
-    untrueExtendedEndingZdaubBonyPart,
-    untrueExtendedEndingZdaubGlisPart,
     secretLongChordPart,
 }

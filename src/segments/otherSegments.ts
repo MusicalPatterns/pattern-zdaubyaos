@@ -8,13 +8,7 @@ import {
     polyrhythmicYaosFifteenPart,
     polyrhythmicYaosTwentyfourPart,
     secretLongChordPart,
-    untrueExtendedEndingZdaubBonyPart,
-    untrueExtendedEndingZdaubGlisPart,
-    untrueExtendedEndingZdaubTremPart,
 } from '../parts/otherParts'
-import {
-    untrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-} from '../parts/trueYaosParts'
 import { Segment } from '../types'
 
 const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
@@ -26,14 +20,6 @@ const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
     [{flipHarmonically: true, pitchIndexOffset: 2}, {}, {flipHarmonically: true}],
 )
 
-const untrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = alterSegmentParts(
-    [
-        untrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-        untrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-        untrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-    ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
-)
 
 const polyrhythmicAllYaosSegment: Segment = alterSegmentParts(
     [
@@ -57,15 +43,6 @@ const polyrhythmicAscent: Segment = alterSegmentParts(
     [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
 )
 
-const untrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment: Segment = alterSegmentParts(
-    [
-        untrueExtendedEndingZdaubTremPart,
-        untrueExtendedEndingZdaubBonyPart,
-        untrueExtendedEndingZdaubGlisPart,
-    ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
-)
-
 const secretLongChordSegment: Segment = alterSegmentParts(
     [
         secretLongChordPart,
@@ -81,9 +58,7 @@ const secretLongChordSegment: Segment = alterSegmentParts(
 
 export {
     experimentWithIestttAndUmowwwSegment,
-    untrueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     polyrhythmicAllYaosSegment,
     polyrhythmicAscent,
-    untrueExtendedEndingAllZdaubTriumphantAllThreeNoteTypesFlippedHarmonicallySegment,
     secretLongChordSegment,
 }
