@@ -7,26 +7,11 @@ import { inaiiiVarietyNotes } from '../notes/yaosNotes'
 import { Part } from '../types'
 
 const breatherRestPart: Part = rest(24)
-const breatherSpringPart: Part = getYaosNotes({
-    blockresolution: 'lowregular',
-    blockstrategy: 'inaidjiyaiouzd',
-    duration: 'twentyfour',
-    rendering: 'spring',
-})
-const breatherSummerPart: Part = getYaosNotes({
-    blockresolution: 'lowregular',
-    blockstrategy: 'inaidjiyaiouzd',
-    duration: 'twentyfour',
-    rendering: 'summer',
-})
+const breatherSpringPart: Part = getYaosNotes('lowregular', 'inaidjiyaiouzd', 'twentyfour', 'spring')
+const breatherSummerPart: Part = getYaosNotes('lowregular', 'inaidjiyaiouzd', 'twentyfour', 'summer')
 const breatherFallPart: Part = backboneTwentyfourCNotes
 const breatherVarietyPart: Part = inaiiiVarietyNotes
-const breatherSpringAltPart: Part = getYaosNotes({
-    blockresolution: 'highregular',
-    blockstrategy: 'inaidjiyaiouzd',
-    duration: 'twentyfour',
-    rendering: 'spring',
-})
+const breatherSpringAltPart: Part = getYaosNotes('highregular', 'inaidjiyaiouzd', 'twentyfour', 'spring')
 
 export {
     breatherRestPart,

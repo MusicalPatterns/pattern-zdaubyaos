@@ -6,216 +6,51 @@ import getYaosNotes from '../notes/getYaosNotes'
 import { Part } from '../types'
 
 const trueYaosUmowchuwowiestSpringToSummerPart: Part = sequence([
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'spring',
-    }), 4),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'spring',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'spring',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'spring',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'spring',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'twentyfour',
-        rendering: 'summer',
-    }), 4),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'spring'), 4),
+    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'spring'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'spring'), 1),
+    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'spring'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'spring'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'summer'), 4),
 ])
 
 const trueYaosUmowchuwowiestSummerToSpringPart: Part = sequence([
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 4),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'twentyfour',
-        rendering: 'spring',
-    }), 4),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'summer'), 4),
+    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'spring'), 4),
 ])
 
 const trueYaosInaidjiyaiouzdSummerToSpringPart: Part = sequence([
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 4),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'summer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'spring',
-    }), 4),
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'fifteen', 'summer'), 4),
+    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'spring'), 4),
 ])
 
 const trueYaosInaidjiyaiouzdSummerToSpringComplementyPart: Part = sequence([
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'springySummer',
-    }), 4),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'springySummer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'springySummer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'springySummer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'springySummer',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'summerySpring',
-    }), 4),
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 4),
+    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
+    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'summerySpring'), 4),
 ])
 
 const trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'fifteen',
-        rendering: 'fall',
-    }), 4),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'fall',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'fall',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'fall',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'fifteen',
-        rendering: 'fall',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'fall',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'twentyfour',
-        rendering: 'fall',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'fall',
-    }), 1),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'midirregular',
-        blockstrategy: 'inaidjiyaiouzd',
-        duration: 'twentyfour',
-        rendering: 'fall',
-    }), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'fall'), 4),
+    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
+    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'fall'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'fall'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'fall'), 1),
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'fall'), 1),
 ])
 
 export {

@@ -14,45 +14,15 @@ const trueYetOfBackbonePart: Part = sequence([
 ])
 
 const experimentWithIestttPart: Part = sequence([
-    getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'fall',
-    }),
-    getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'spring',
-    }),
-    getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'summer',
-    }),
+    getYaosNotes('highregular', 'umowchuwowiest', 'twentyfour', 'fall'),
+    getYaosNotes('highregular', 'umowchuwowiest', 'twentyfour', 'spring'),
+    getYaosNotes('highregular', 'umowchuwowiest', 'twentyfour', 'summer'),
 ])
 
 const experimentWithUmowwwPart: Part = sequence([
-    getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'fall',
-    }),
-    getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'spring',
-    }),
-    getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'summer',
-    }),
+    getYaosNotes('lowregular', 'umowchuwowiest', 'twentyfour', 'fall'),
+    getYaosNotes('lowregular', 'umowchuwowiest', 'twentyfour', 'spring'),
+    getYaosNotes('lowregular', 'umowchuwowiest', 'twentyfour', 'summer'),
 ])
 
 const thirtyfiveYaosBassPart: Part = sequence([

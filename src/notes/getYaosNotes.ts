@@ -1,14 +1,7 @@
 import { Notes } from '../types'
 import { yaosNotesByDurationBlocksThenRendering } from './yaosNotes'
 
-interface YaosNotesQuery {
-    blockresolution: string,
-    blockstrategy: string,
-    duration: string,
-    rendering: string,
-}
-
-const BLOCKS_BY_STRATEGY_THEN_RESOLUTION: { [index: string]: { [index: string]: string } } = {
+const BLOCKS_BY_STRATEGY_THEN_RESOLUTION: {[index: string]: {[index: string]: string}} = {
     inaidjiyaiouzd: {
         highregular: 'ouzd',
         lowregular: 'inai',
@@ -21,16 +14,18 @@ const BLOCKS_BY_STRATEGY_THEN_RESOLUTION: { [index: string]: { [index: string]: 
     },
 }
 
-interface UsageGrouping { [index: string]: { [index: string]: { [index: string]: number } } }
+interface UsageGrouping {
+    [index: string]: {[index: string]: {[index: string]: number}}
+}
 
 export const yaosNoteUsagesByDurationBlocksThenRendering: UsageGrouping = {
     fifteen: {},
     twentyfour: {},
 }
 
-const getYaosNotes: (yaosNotesQuery: YaosNotesQuery) => Notes =
-    ({duration, blockresolution, blockstrategy, rendering}: YaosNotesQuery): Notes => {
-        const blocks: string = BLOCKS_BY_STRATEGY_THEN_RESOLUTION[blockstrategy][blockresolution]
+const getYaosNotes: (blockResolution: string, blockStrategy: string, duration: string, rendering: string) => Notes =
+    (blockResolution: string, blockStrategy: string, duration: string, rendering: string): Notes => {
+        const blocks: string = BLOCKS_BY_STRATEGY_THEN_RESOLUTION[blockStrategy][blockResolution]
 
         yaosNoteUsagesByDurationBlocksThenRendering[duration][blocks] =
             yaosNoteUsagesByDurationBlocksThenRendering[duration][blocks] || {}
