@@ -3,58 +3,44 @@ import calculateDuration from '../../../../src/utilities/calculateDuration'
 import repeat from '../../../../src/utilities/repeat'
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import adjustGain from '../alterations/adjustGain'
-import adjustPitchIndex from '../alterations/adjustPitchIndex'
 import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import { thirtyfiveYaosAccidentInspiredNotes, thirtyfiveYaosBassNotes, thirtyfiveZdaubNotes } from '../notes/otherNotes'
 import { Part } from '../types'
 
 const trueYetOfBackbonePart: Part = sequence([
-    adjustGain(repeatCall(() => backboneFifteenANotes, 8), 0.33),
-    adjustGain(repeatCall(() => backboneTwentyfourCNotes, 4), 0.33),
+    repeatCall(() => backboneFifteenANotes, 8),
+    repeatCall(() => backboneTwentyfourCNotes, 4),
 ])
 
 const experimentWithIestttPart: Part = sequence([
-    adjustPitchIndex(
-        repeatCall(
-            () => getYaosNotes({
-                blockresolution: 'highregular',
-                blockstrategy: 'umowchuwowiest',
-                duration: 'twentyfour',
-                rendering: 'fall',
-            }),
-            1,
-        ),
-        2,
-    ),
-    repeatCall(
-        () => getYaosNotes({
-            blockresolution: 'highregular',
-            blockstrategy: 'umowchuwowiest',
-            duration: 'twentyfour',
-            rendering: 'spring',
-        }),
-        1,
-    ),
-    repeatCall(
-        () => getYaosNotes({
-            blockresolution: 'highregular',
-            blockstrategy: 'umowchuwowiest',
-            duration: 'twentyfour',
-            rendering: 'summer',
-        }),
-        1,
-    ),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'fall',
+    }),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'spring',
+    }),
+    getYaosNotes({
+        blockresolution: 'highregular',
+        blockstrategy: 'umowchuwowiest',
+        duration: 'twentyfour',
+        rendering: 'summer',
+    }),
 ])
 
 const experimentWithUmowwwPart: Part = sequence([
-    adjustPitchIndex(getYaosNotes({
+    getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
         rendering: 'fall',
-    }),              2),
+    }),
     getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'umowchuwowiest',
@@ -70,7 +56,7 @@ const experimentWithUmowwwPart: Part = sequence([
 ])
 
 const thirtyfiveYaosBassPart: Part = sequence([
-    repeat(adjustGain(thirtyfiveYaosBassNotes, 2), 4),
+    repeat(thirtyfiveYaosBassNotes, 4),
 ])
 
 const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
@@ -78,7 +64,7 @@ const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
 ])
 
 const thirtyfiveZdaubPart: Part = sequence([
-    repeat(adjustGain(thirtyfiveZdaubNotes, 0.66), 2),
+    repeat(thirtyfiveZdaubNotes, 2),
     repeat(rest(calculateDuration(thirtyfiveZdaubNotes)), 2),
 ])
 

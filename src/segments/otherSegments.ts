@@ -14,7 +14,7 @@ const thirtyfiveSegment: Segment = alterSegmentParts(
         thirtyfiveYaosAccidentInspiredPart,
         thirtyfiveYaosBassPart,
     ],
-    [{}, {}, {flipHarmonically: true}],
+    [{gainAdjust: 0.66}, {}, {gainAdjust: 2, flipHarmonically: true}],
 )
 
 const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
@@ -23,7 +23,7 @@ const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
         experimentWithUmowwwPart,
         experimentWithUmowwwPart,
     ],
-    [{flipHarmonically: true}, {}, {flipHarmonically: true}],
+    [{flipHarmonically: true, pitchIndexOffset: 2}, {}, {flipHarmonically: true}],
 )
 
 export {

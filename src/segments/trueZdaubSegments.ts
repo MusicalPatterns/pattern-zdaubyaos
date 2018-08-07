@@ -37,7 +37,7 @@ const trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = alterSeg
         trueYetOfBackbonePart,
         trueZdaubBonyWithSuperinscapePart,
     ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {}],
+    [{gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33}],
 )
 
 const trueAllZdaubTriumphantAndExperienceThePowerOfTheThreeScalesTogetherSegment: Segment = alterSegmentParts(

@@ -8,7 +8,7 @@ const backboneSegment: Segment = alterSegmentParts(
         backboneAPart,
         backboneBPart,
     ],
-    [{}, {}, {}],
+    [{pitchIndexOffset: 1}, {pitchIndexOffset: 1}, {pitchIndexOffset: 1}],
 )
 
 export {
