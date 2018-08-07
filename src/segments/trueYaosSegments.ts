@@ -1,4 +1,4 @@
-import flipEntities from '../flipEntities'
+import alterSegmentParts from '../alterSegmentParts'
 import {
     trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
     trueYaosInaidjiyaiouzdSummerToSpringPart, trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
@@ -7,49 +7,49 @@ import {
 } from '../parts/trueYaosParts'
 import { Segment } from '../types'
 
-const trueSpringAllYaosUmowchuwowiestSegment: Segment = flipEntities(
+const trueSpringAllYaosUmowchuwowiestSegment: Segment = alterSegmentParts(
     [
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueYaosUmowchuwowiestSpringToSummerPart,
     ],
-    [false, false, false],
+    [{}, {}, {}],
 )
 
-const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = flipEntities(
+const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = alterSegmentParts(
     [
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueYaosUmowchuwowiestSummerToSpringPart,
     ],
-    [true, false, false],
+    [{flipHarmonically: true}, {}, {}],
 )
 
-const trueSummerAllYaosInaidjiyaiouzdSegment: Segment = flipEntities(
+const trueSummerAllYaosInaidjiyaiouzdSegment: Segment = alterSegmentParts(
     [
         trueYaosInaidjiyaiouzdSummerToSpringPart,
         trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
         trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
     ],
-    [true, true, true],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
 )
 
-const trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = flipEntities(
+const trueFallAllYaosAndBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = alterSegmentParts(
     [
         trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
         trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
         trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
     ],
-    [true, true, true],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
 )
 
-const trueAllYaosAllRhythmsAtOnceSegment: Segment = flipEntities(
+const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
     [
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueYaosInaidjiyaiouzdSummerToSpringPart,
     ],
-    [true, true, false],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {}],
 )
 
 export {

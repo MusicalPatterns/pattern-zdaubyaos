@@ -1,4 +1,4 @@
-import flipEntities from '../flipEntities'
+import alterSegmentParts from '../alterSegmentParts'
 import {
     experimentWithIestttPart,
     experimentWithUmowwwPart,
@@ -8,22 +8,22 @@ import {
 } from '../parts/otherParts'
 import { Segment } from '../types'
 
-const thirtyfiveSegment: Segment = flipEntities(
+const thirtyfiveSegment: Segment = alterSegmentParts(
     [
         thirtyfiveZdaubPart,
         thirtyfiveYaosAccidentInspiredPart,
         thirtyfiveYaosBassPart,
     ],
-    [false, false, true],
+    [{}, {}, {flipHarmonically: true}],
 )
 
-const experimentWithIestttAndUmowwwSegment: Segment = flipEntities(
+const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
     [
         experimentWithIestttPart,
         experimentWithUmowwwPart,
         experimentWithUmowwwPart,
     ],
-    [true, false, true],
+    [{flipHarmonically: true}, {}, {flipHarmonically: true}],
 )
 
 export {

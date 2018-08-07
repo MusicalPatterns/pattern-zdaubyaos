@@ -1,14 +1,14 @@
-import flipEntities from '../flipEntities'
+import alterSegmentParts from '../alterSegmentParts'
 import { backboneAPart, backboneBPart, backboneCPart } from '../parts/backboneParts'
 import { Segment } from '../types'
 
-const backboneSegment: Segment = flipEntities(
+const backboneSegment: Segment = alterSegmentParts(
     [
         backboneCPart,
         backboneAPart,
         backboneBPart,
     ],
-    [false, false, false],
+    [{}, {}, {}],
 )
 
 export {

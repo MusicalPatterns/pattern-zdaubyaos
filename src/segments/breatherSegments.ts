@@ -1,4 +1,4 @@
-import flipEntities from '../flipEntities'
+import alterSegmentParts from '../alterSegmentParts'
 import {
     breatherFallPart,
     breatherRestPart,
@@ -8,49 +8,49 @@ import {
 } from '../parts/breatherParts'
 import { Segment } from '../types'
 
-const breatherSpringSegment: Segment = flipEntities(
+const breatherSpringSegment: Segment = alterSegmentParts(
     [
         breatherSpringPart,
         breatherRestPart,
         breatherRestPart,
     ],
-    [false, false, false],
+    [{}, {}, {}],
 )
 
-const breatherSummerSegment: Segment = flipEntities(
+const breatherSummerSegment: Segment = alterSegmentParts(
     [
         breatherRestPart,
         breatherSummerPart,
         breatherRestPart,
     ],
-    [true, true, false],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {}],
 )
 
-const breatherFallWhichIsGoodIntroForJigSegment: Segment = flipEntities(
+const breatherFallWhichIsGoodIntroForJigSegment: Segment = alterSegmentParts(
     [
         breatherRestPart,
         breatherRestPart,
         breatherFallPart,
     ],
-    [false, false, false],
+    [{}, {}, {}],
 )
 
-const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = flipEntities(
+const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = alterSegmentParts(
     [
         breatherRestPart,
         breatherSpringAltPart,
         breatherRestPart,
     ],
-    [true, true, true],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
 )
 
-const breatherVarietyQuiteTheReveilleSegment: Segment = flipEntities(
+const breatherVarietyQuiteTheReveilleSegment: Segment = alterSegmentParts(
     [
         breatherVarietyPart,
         breatherVarietyPart,
         breatherVarietyPart,
     ],
-    [false, false, false],
+    [{}, {}, {}],
 )
 
 export {

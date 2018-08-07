@@ -1,14 +1,14 @@
-import flipEntities from '../flipEntities'
+import alterSegmentParts from '../alterSegmentParts'
 import { shiftyAPart, shiftyBPart } from '../parts/shiftyParts'
 import { Segment } from '../types'
 
-const shiftySegment: Segment = flipEntities(
+const shiftySegment: Segment = alterSegmentParts(
     [
         shiftyAPart,
         shiftyBPart,
         shiftyBPart,
     ],
-    [true, true, true],
+    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
 )
 
 export {
