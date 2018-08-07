@@ -26,7 +26,7 @@ const breatherSummerSegment: Segment = flipEntities(
     [true, true, false],
 )
 
-const breatherFallSegment: Segment = flipEntities(
+const breatherFallWhichIsGoodIntroForJigSegment: Segment = flipEntities(
     [
     breatherRestPart,
     breatherRestPart,
@@ -35,7 +35,7 @@ const breatherFallSegment: Segment = flipEntities(
     [false, false, false],
 )
 
-const breatherSpringAltSegment: Segment = flipEntities(
+const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = flipEntities(
     [
     breatherRestPart,
     breatherSpringAltPart,
@@ -44,7 +44,7 @@ const breatherSpringAltSegment: Segment = flipEntities(
     [true, true, true],
 )
 
-const breatherVarietySegment: Segment = flipEntities(
+const breatherVarietyQuiteTheReveilleSegment: Segment = flipEntities(
     [
     breatherVarietyPart,
     breatherVarietyPart,
@@ -56,7 +56,7 @@ const breatherVarietySegment: Segment = flipEntities(
 export {
     breatherSpringSegment,
     breatherSummerSegment,
-    breatherFallSegment,
-    breatherSpringAltSegment,
-    breatherVarietySegment,
+    breatherFallWhichIsGoodIntroForJigSegment,
+    breatherSpringAltNiceAsABreatherToABreatherSegment,
+    breatherVarietyQuiteTheReveilleSegment,
 }

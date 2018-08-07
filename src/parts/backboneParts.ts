@@ -9,20 +9,21 @@ import {
     backboneTwentyfourGNotes,
 } from '../notes/backboneNotes'
 import { Part } from '../types'
+import adjustPitchIndex from '../adjustPitchIndex'
 
 const backboneAPart: Part = sequence([
-    repeatCall(() => backboneFifteenANotes, 5),
-    repeatCall(() => backboneTwentyfourCNotes, 6),
+    adjustPitchIndex(repeatCall(() => backboneFifteenANotes, 3), 1),
+    adjustPitchIndex(repeatCall(() => backboneTwentyfourCNotes, 2), 1),
 ])
 
 const backboneBPart: Part = sequence([
-    repeatCall(() => backboneFifteenBNotes, 5),
-    repeatCall(() => backboneTwentyfourENotes, 6),
+    adjustPitchIndex(repeatCall(() => backboneFifteenBNotes, 3), 1),
+    adjustPitchIndex(repeatCall(() => backboneTwentyfourENotes, 2), 1),
 ])
 
 const backboneCPart: Part = sequence([
-    repeatCall(() => backboneFifteenCNotes, 5),
-    repeatCall(() => backboneTwentyfourGNotes, 6),
+    adjustPitchIndex(repeatCall(() => backboneFifteenCNotes, 3), 1),
+    adjustPitchIndex(repeatCall(() => backboneTwentyfourGNotes, 2), 1),
 ])
 
 export {

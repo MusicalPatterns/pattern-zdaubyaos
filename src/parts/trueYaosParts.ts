@@ -163,67 +163,67 @@ const trueYaosInaidjiyaiouzdSummerToSpringComplementyPart: Part = sequence([
     }), 4), 1), 0),
 ])
 
-const trueYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustmentPart: Part = sequence([
+const trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'fifteen',
         rendering: 'fall',
-    }), 4), 1), 2),
+    }), 4), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'fifteen',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'fifteen',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'fifteen',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'fifteen',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'twentyfour',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
     adjustPitchIndex(adjustGain(repeatCall(() => getYaosNotes({
         blockresolution: 'midirregular',
         blockstrategy: 'inaidjiyaiouzd',
         duration: 'twentyfour',
         rendering: 'fall',
-    }), 1), 1), 2),
+    }), 1), 1), 0),
 ])
 
 export {
     trueYaosUmowchuwowiestSpringToSummerPart,
     trueYaosUmowchuwowiestSummerToSpringPart,
     trueYaosInaidjiyaiouzdSummerToSpringPart,
-    trueYaosUmowchuwowiestFallWithDjiyaiiiSplashAndPitchAdjustmentPart,
+    trueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
     trueYaosInaidjiyaiouzdSummerToSpringComplementyPart,
 }

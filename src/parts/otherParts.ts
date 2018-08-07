@@ -4,6 +4,8 @@ import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backbo
 import getYaosNotes from '../notes/getYaosNotes'
 import { thirtyfiveANotes, thirtyfiveBNotes, thirtyfiveCNotes } from '../notes/otherNotes'
 import { Part } from '../types'
+import adjustPitchIndex from '../adjustPitchIndex'
+import repeat from '../../../../src/repeat'
 
 const trueYetOfBackbonePart: Part = sequence([
     repeatCall(() => backboneFifteenANotes, 8),
@@ -11,52 +13,52 @@ const trueYetOfBackbonePart: Part = sequence([
 ])
 
 const experimentWithIestttPart: Part = sequence([
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'spring',
-    }),        3),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'highregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'summer',
-    }),        3),
-    repeatCall(() => getYaosNotes({
+    adjustPitchIndex(repeatCall(() => getYaosNotes({
         blockresolution: 'highregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
         rendering: 'fall',
-    }),        3),
+    }),        1), 2),
+    // repeatCall(() => getYaosNotes({
+    //     blockresolution: 'highregular',
+    //     blockstrategy: 'umowchuwowiest',
+    //     duration: 'twentyfour',
+    //     rendering: 'spring',
+    // }),        1),
+    // repeatCall(() => getYaosNotes({
+    //     blockresolution: 'highregular',
+    //     blockstrategy: 'umowchuwowiest',
+    //     duration: 'twentyfour',
+    //     rendering: 'summer',
+    // }),        1),
 ])
 
 const experimentWithUmowwwPart: Part = sequence([
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'spring',
-    }),        3),
-    repeatCall(() => getYaosNotes({
-        blockresolution: 'lowregular',
-        blockstrategy: 'umowchuwowiest',
-        duration: 'twentyfour',
-        rendering: 'summer',
-    }),        3),
-    repeatCall(() => getYaosNotes({
+    adjustPitchIndex(repeatCall(() => getYaosNotes({
         blockresolution: 'lowregular',
         blockstrategy: 'umowchuwowiest',
         duration: 'twentyfour',
         rendering: 'fall',
-    }),        3),
+    }),        1), 2),
+    // repeatCall(() => getYaosNotes({
+    //     blockresolution: 'lowregular',
+    //     blockstrategy: 'umowchuwowiest',
+    //     duration: 'twentyfour',
+    //     rendering: 'spring',
+    // }),        1),
+    // repeatCall(() => getYaosNotes({
+    //     blockresolution: 'lowregular',
+    //     blockstrategy: 'umowchuwowiest',
+    //     duration: 'twentyfour',
+    //     rendering: 'summer',
+    // }),        1),
 ])
 
-const thirtyfiveAPart: Part = thirtyfiveANotes
+const thirtyfiveAPart: Part = repeat(thirtyfiveANotes, 2)
 
-const thirtyfiveBPart: Part = thirtyfiveBNotes
+const thirtyfiveBPart: Part = repeat(thirtyfiveBNotes, 2)
 
-const thirtyfiveCPart: Part = thirtyfiveCNotes
+const thirtyfiveCPart: Part = repeat(thirtyfiveCNotes, 2)
 
 export {
     trueYetOfBackbonePart,
