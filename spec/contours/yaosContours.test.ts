@@ -1,11 +1,12 @@
 import { inaiiiVariety, yaosContoursByBarDurationBlockStyleThenRendering } from '../../src/contours/yaosContours'
+import { BarDuration, BlockStyle, Rendering } from '../../src/types'
 
 describe('yaos contours', () => {
     describe('of duration 15', () => {
         describe('spring renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.umow.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.UMOW][Rendering.SPRING]).toEqual([
                         0, 2, 3,
                         0, 2, 3,
                         0, 2, 3,
@@ -15,7 +16,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles chuwow spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.chuwow.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.CHUWOW][Rendering.SPRING]).toEqual([
                         0, 2, 3,
                         0, 2, 3, 4,
                         0, 2, 3,
@@ -24,7 +25,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles iest spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.iest.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.IEST][Rendering.SPRING]).toEqual([
                         0, 2, 3, 4, 5,
                         0, 2, 3, 4, 5,
                         0, 2, 3, 4, 5,
@@ -34,7 +35,7 @@ describe('yaos contours', () => {
 
             describe('inaidjiyaiouzd blocks', () => {
                 it('handles inai spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.inai.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.INAI][Rendering.SPRING]).toEqual([
                         0, 2, 3, 4,
                         0, 2, 3, 4,
                         0, 2, 3, 4,
@@ -43,7 +44,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles djiyai spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.djiyai.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.DJIYAI][Rendering.SPRING]).toEqual([
                         0, 2, 3,
                         0, 2, 3, 4, 5,
                         0, 2, 3, 4, 5, 6, 7,
@@ -51,7 +52,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles ouzd spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.ouzd.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.OUZD][Rendering.SPRING]).toEqual([
                         0, 2, 3, 4, 5, 6, 7, 8,
                         0, 2, 3, 4, 5, 6, 7,
                     ])
@@ -62,7 +63,7 @@ describe('yaos contours', () => {
         describe('summer renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.umow.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.UMOW][Rendering.SUMMER]).toEqual([
                         1, 0, 3,
                         1, 0, 3,
                         1, 0, 3,
@@ -72,7 +73,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles chuwow summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.chuwow.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.CHUWOW][Rendering.SUMMER]).toEqual([
                         1, 0, 3,
                         1, 0, 3, 0,
                         1, 0, 3,
@@ -81,7 +82,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles iest summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.iest.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.IEST][Rendering.SUMMER]).toEqual([
                         1, 0, 3, 0, 5,
                         1, 0, 3, 0, 5,
                         1, 0, 3, 0, 5,
@@ -91,7 +92,7 @@ describe('yaos contours', () => {
 
             describe('inaidjiyaiouzd blocks', () => {
                 it('handles inai summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.inai.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.INAI][Rendering.SUMMER]).toEqual([
                         1, 0, 3, 0,
                         1, 0, 3, 0,
                         1, 0, 3, 0,
@@ -100,7 +101,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles djiyai summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.djiyai.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.DJIYAI][Rendering.SUMMER]).toEqual([
                         1, 0, 3,
                         1, 0, 3, 0, 5,
                         1, 0, 3, 0, 5, 0, 7,
@@ -108,7 +109,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles ouzd summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.ouzd.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.OUZD][Rendering.SUMMER]).toEqual([
                         1, 0, 3, 0, 5, 0, 7, 0,
                         1, 0, 3, 0, 5, 0, 7,
                     ])
@@ -119,7 +120,7 @@ describe('yaos contours', () => {
         describe('fall renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.umow.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.UMOW][Rendering.FALL]).toEqual([
                         1, 2,
                         1, 2,
                         1, 2,
@@ -129,7 +130,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles chuwow fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.chuwow.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.CHUWOW][Rendering.FALL]).toEqual([
                         1, 2,
                         1, 3,
                         1, 2,
@@ -138,7 +139,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles iest fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.iest.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.IEST][Rendering.FALL]).toEqual([
                         1, 4,
                         1, 4,
                         1, 4,
@@ -148,7 +149,7 @@ describe('yaos contours', () => {
 
             describe('inaidjiyaiouzd blocks', () => {
                 it('handles inai fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.inai.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.INAI][Rendering.FALL]).toEqual([
                         1, 3,
                         1, 3,
                         1, 3,
@@ -157,7 +158,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles djiyai fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.djiyai.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.DJIYAI][Rendering.FALL]).toEqual([
                         1, 2,
                         1, 4,
                         1, 6,
@@ -165,7 +166,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles ouzd fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.ouzd.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.OUZD][Rendering.FALL]).toEqual([
                         1, 7,
                         1, 6,
                     ])
@@ -176,7 +177,7 @@ describe('yaos contours', () => {
         describe('summery spring renderings', () => {
             describe('umowchuwowiest blocks', () => {
                 it('handles umow summery spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.umow.summerySpring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.UMOW][Rendering.SUMMERY_SPRING]).toEqual([
                         0, 1, 3,
                         0, 1, 3,
                         0, 1, 3,
@@ -186,7 +187,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles chuwow summery spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.chuwow.summerySpring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.CHUWOW][Rendering.SUMMERY_SPRING]).toEqual([
                         0, 1, 3,
                         0, 1, 3, 5,
                         0, 1, 3,
@@ -195,7 +196,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles iest summery spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.iest.summerySpring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.IEST][Rendering.SUMMERY_SPRING]).toEqual([
                         0, 1, 3, 5, 7,
                         0, 1, 3, 5, 7,
                         0, 1, 3, 5, 7,
@@ -205,7 +206,7 @@ describe('yaos contours', () => {
 
             describe('inaidjiyaiouzd blocks', () => {
                 it('handles inai summery spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.inai.summerySpring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.INAI][Rendering.SUMMERY_SPRING]).toEqual([
                         0, 1, 3, 5,
                         0, 1, 3, 5,
                         0, 1, 3, 5,
@@ -214,7 +215,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles djiyai summery spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.djiyai.summerySpring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.DJIYAI][Rendering.SUMMERY_SPRING]).toEqual([
                         0, 1, 3,
                         0, 1, 3, 5, 7,
                         0, 1, 3, 5, 7, 9, 11,
@@ -222,7 +223,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles ouzd summery spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.fifteen.ouzd.summerySpring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.FIFTEEN][BlockStyle.OUZD][Rendering.SUMMERY_SPRING]).toEqual([
                         0, 1, 3, 5, 7, 9, 11, 13,
                         0, 1, 3, 5, 7, 9, 11,
                     ])
@@ -235,7 +236,7 @@ describe('yaos contours', () => {
         describe('spring renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.umow.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.UMOW][Rendering.SPRING]).toEqual([
                         0, 2, 3, 4,
                         0, 2, 3, 4,
                         0, 2, 3, 4,
@@ -246,7 +247,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles chuwow spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.chuwow.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.CHUWOW][Rendering.SPRING]).toEqual([
                         0, 2, 3,
                         0, 2, 3, 4,
                         0, 2, 3, 4, 5,
@@ -257,7 +258,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles iest spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.iest.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.IEST][Rendering.SPRING]).toEqual([
                         0, 2, 3, 4, 5, 6,
                         0, 2, 3, 4, 5, 6,
                         0, 2, 3, 4, 5, 6,
@@ -268,7 +269,7 @@ describe('yaos contours', () => {
 
             describe('inaidjiyaiouzd blocks', () => {
                 it('handles inai spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.inai.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.INAI][Rendering.SPRING]).toEqual([
                         0, 2, 3,
                         0, 2, 3,
                         0, 2, 3,
@@ -281,7 +282,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles djiyai spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.djiyai.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.DJIYAI][Rendering.SPRING]).toEqual([
                         0, 2, 3,
                         0, 2, 3,
                         0, 2, 3, 4, 5,
@@ -292,7 +293,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles ouzd spring', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.ouzd.spring).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.OUZD][Rendering.SPRING]).toEqual([
                         0, 2, 3, 4, 5, 6, 7, 8,
                         0, 2, 3, 4, 5, 6, 7, 8,
                         0, 2, 3, 4, 5, 6, 7, 8,
@@ -304,7 +305,7 @@ describe('yaos contours', () => {
         describe('summer renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.umow.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.UMOW][Rendering.SUMMER]).toEqual([
                         1, 0, 3, 0,
                         1, 0, 3, 0,
                         1, 0, 3, 0,
@@ -315,7 +316,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles chuwow summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.chuwow.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.CHUWOW][Rendering.SUMMER]).toEqual([
                         1, 0, 3,
                         1, 0, 3, 0,
                         1, 0, 3, 0, 5,
@@ -326,7 +327,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles iest summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.iest.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.IEST][Rendering.SUMMER]).toEqual([
                         1, 0, 3, 0, 5, 0,
                         1, 0, 3, 0, 5, 0,
                         1, 0, 3, 0, 5, 0,
@@ -337,7 +338,7 @@ describe('yaos contours', () => {
 
             describe('inaidjiyaiouzd blocks', () => {
                 it('handles inai summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.inai.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.INAI][Rendering.SUMMER]).toEqual([
                         1, 0, 3,
                         1, 0, 3,
                         1, 0, 3,
@@ -350,7 +351,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles djiyai summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.djiyai.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.DJIYAI][Rendering.SUMMER]).toEqual([
                         1, 0, 3,
                         1, 0, 3,
                         1, 0, 3, 0, 5,
@@ -361,7 +362,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles ouzd summer', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.ouzd.summer).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.OUZD][Rendering.SUMMER]).toEqual([
                         1, 0, 3, 0, 5, 0, 7, 0,
                         1, 0, 3, 0, 5, 0, 7, 0,
                         1, 0, 3, 0, 5, 0, 7, 0,
@@ -373,7 +374,7 @@ describe('yaos contours', () => {
         describe('fall renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.umow.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.UMOW][Rendering.FALL]).toEqual([
                         1, 3,
                         1, 3,
                         1, 3,
@@ -384,7 +385,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles chuwow fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.chuwow.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.CHUWOW][Rendering.FALL]).toEqual([
                         1, 2,
                         1, 3,
                         1, 4,
@@ -395,7 +396,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles iest fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.iest.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.IEST][Rendering.FALL]).toEqual([
                         1, 5,
                         1, 5,
                         1, 5,
@@ -406,7 +407,7 @@ describe('yaos contours', () => {
 
             describe('inaidjiyaiouzd blocks', () => {
                 it('handles inai fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.inai.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.INAI][Rendering.FALL]).toEqual([
                         1, 2,
                         1, 2,
                         1, 2,
@@ -419,7 +420,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles djiyai fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.djiyai.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.DJIYAI][Rendering.FALL]).toEqual([
                         1, 2,
                         1, 2,
                         1, 4,
@@ -430,7 +431,7 @@ describe('yaos contours', () => {
                 })
 
                 it('handles ouzd fall', () => {
-                    expect(yaosContoursByBarDurationBlockStyleThenRendering.twentyfour.ouzd.fall).toEqual([
+                    expect(yaosContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][BlockStyle.OUZD][Rendering.FALL]).toEqual([
                         1, 7,
                         1, 7,
                         1, 7,

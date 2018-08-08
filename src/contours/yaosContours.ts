@@ -1,7 +1,7 @@
 import { yaosBlocksByBarDurationThenBlockStyle } from '../blocks/yaosBlocks'
 import render from '../render'
 import renderings from '../renderings'
-import { Blocks, Contour, RenderingFunction, BarDuration, BlockStyle, Rendering } from '../types'
+import { BarDuration, Blocks, BlockStyle, Contour, Rendering, RenderingFunction } from '../types'
 
 const inaiiiVariety: number[][] = [
     [0, 1], [2, 1], [3, 1],
@@ -21,23 +21,26 @@ type YaosContours = { [x in BarDuration]: ByBlockStyle }
 // @ts-ignore
 const yaosContoursByBarDurationBlockStyleThenRendering: YaosContours = {}
 
+Object.entries(yaosBlocksByBarDurationThenBlockStyle).forEach(
 // @ts-ignore
-Object.entries(yaosBlocksByBarDurationThenBlockStyle).forEach(([barDuration, blocksBy]: [BarDuration, ByBlockStyle]): void => {
-    // @ts-ignore
-    Object.entries(blocksBy).forEach(([blocksName, blocks]: [BlockStyle, Blocks]): void => {
-        // @ts-ignore
-        Object.entries(renderings).forEach(([renderingName, rendering]: [Rendering, RenderingFunction]): void => {
-            const contour: Contour = render(blocks, rendering)
+    ([barDuration, blocksBy]: [BarDuration, ByBlockStyle]): void => {
+        Object.entries(blocksBy).forEach(
+            // @ts-ignore
+            ([blocksName, blocks]: [BlockStyle, Blocks]): void => {
+                Object.entries(renderings).forEach(
+                    // @ts-ignore
+                    ([renderingName, rendering]: [Rendering, RenderingFunction]): void => {
+                        const contour: Contour = render(blocks, rendering)
 
-            yaosContoursByBarDurationBlockStyleThenRendering[barDuration] =
-                yaosContoursByBarDurationBlockStyleThenRendering[barDuration] || {}
-            yaosContoursByBarDurationBlockStyleThenRendering[barDuration][blocksName] =
-                yaosContoursByBarDurationBlockStyleThenRendering[barDuration][blocksName] || {}
-            yaosContoursByBarDurationBlockStyleThenRendering[barDuration][blocksName][renderingName] = contour
-        })
-
+                        yaosContoursByBarDurationBlockStyleThenRendering[barDuration] =
+                            yaosContoursByBarDurationBlockStyleThenRendering[barDuration] || {}
+                        yaosContoursByBarDurationBlockStyleThenRendering[barDuration][blocksName] =
+                            yaosContoursByBarDurationBlockStyleThenRendering[barDuration][blocksName] || {}
+                        yaosContoursByBarDurationBlockStyleThenRendering[barDuration][blocksName][renderingName] =
+                            contour
+                    })
+            })
     })
-})
 
 export {
     inaiiiVariety,

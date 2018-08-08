@@ -1,24 +1,24 @@
 import { glisNoteType, tremNoteType } from './noteTypes'
-import { BlockStyle, ByBlockStrategy, NoteType } from './types'
+import { BlockResolution, BlockStrategy, BlockStyle, ByBlockStrategy, NoteType, Rendering } from './types'
 
-const NOTE_TYPES_FOR_RENDERINGS: {[index: string]: NoteType } = {
-    fall: glisNoteType,
-    spring: tremNoteType,
-    springySummer: tremNoteType,
-    summer: tremNoteType,
-    summerySpring: tremNoteType,
+const NOTE_TYPES_FOR_RENDERINGS: {[x in Rendering]: NoteType } = {
+    [Rendering.FALL]: glisNoteType,
+    [Rendering.SPRING]: tremNoteType,
+    [Rendering.SPRINGY_SUMMER]: tremNoteType,
+    [Rendering.SUMMER]: tremNoteType,
+    [Rendering.SUMMERY_SPRING]: tremNoteType,
 }
 
 const BLOCKS_BY_STRATEGY_THEN_RESOLUTION: ByBlockStrategy = {
-    inaidjiyaiouzd: {
-        highregular: BlockStyle.OUZD,
-        lowregular: BlockStyle.INAI,
-        midirregular: BlockStyle.DJIYAI,
+    [BlockStrategy.INAIDJIYAIOUZD]: {
+        [BlockResolution.HIGHREGULAR]: BlockStyle.OUZD,
+        [BlockResolution.LOWREGULAR]: BlockStyle.INAI,
+        [BlockResolution.MIDIRREGULAR]: BlockStyle.DJIYAI,
     },
-    umowchuwowiest: {
-        highregular: BlockStyle.IEST,
-        lowregular: BlockStyle.UMOW,
-        midirregular: BlockStyle.CHUWOW,
+    [BlockStrategy.UMOWCHUWOWIEST]: {
+        [BlockResolution.HIGHREGULAR]: BlockStyle.IEST,
+        [BlockResolution.LOWREGULAR]: BlockStyle.UMOW,
+        [BlockResolution.MIDIRREGULAR]: BlockStyle.CHUWOW,
     },
 }
 
