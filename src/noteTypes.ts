@@ -5,50 +5,61 @@ import {
     SILENT,
 } from '../../../src/constants'
 import { Note } from '../../../src/types'
-import { NoteType } from './types'
+import * as from from '../../../src/utilities/from'
+import { Time } from '../../../src/utilities/nominalTypes'
+import * as to from '../../../src/utilities/to'
+import { ManualContourElement, NoteType } from './types'
+import * as zdaubyaosFrom from './utilities/from'
+import { ContourElement } from './utilities/nominalTypes'
 
-const REST: number = 0
-const SINGLE_DURATION: number = 1
+// tslint:disable-next-line:no-any no-magic-numbers
+const REST: ContourElement | number = 0 as any
+// tslint:disable-next-line:no-any no-magic-numbers
+const SINGLE_DURATION: Time = 1 as any
+const SINGLE_DURATION_SUSTAIN: Time =
+    to.Time(from.Time(SINGLE_DURATION) - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES))
 
 const singleRest: Note = {
     duration: SINGLE_DURATION,
     gain: SILENT,
     pitchIndex: PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
-    sustain: SINGLE_DURATION - SEPARATION_FOR_NEIGHBORING_NOTES,
+    sustain: to.Time(from.Time(SINGLE_DURATION) - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES)),
 }
 
 const glisNoteType: NoteType =
-    (pitchIndex: number): Note => {
-        if (pitchIndex === REST) { return singleRest }
+    (contourElement: ContourElement): Note => {
+        if (contourElement === REST) { return singleRest }
+
+        const rawContourElement: number = zdaubyaosFrom.ContourElement(contourElement)
 
         return {
-            duration: pitchIndex,
+            duration: to.Time(rawContourElement),
             gain: MAX_GAIN,
-            pitchIndex,
-            sustain: pitchIndex - SEPARATION_FOR_NEIGHBORING_NOTES,
+            pitchIndex: rawContourElement,
+            sustain: to.Time(rawContourElement - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES)),
         }
     }
 
 const tremNoteType: NoteType =
-    (pitchIndex: number): Note => {
-        if (pitchIndex === REST) { return singleRest }
+    (contourElement: ContourElement): Note => {
+        if (contourElement === REST) { return singleRest }
 
         return {
             duration: SINGLE_DURATION,
             gain: MAX_GAIN,
-            pitchIndex,
-            sustain: SINGLE_DURATION - SEPARATION_FOR_NEIGHBORING_NOTES,
+            pitchIndex: zdaubyaosFrom.ContourElement(contourElement),
+            sustain: SINGLE_DURATION_SUSTAIN,
         }
     }
 
-const manualNoteType: ([pitchIndex, duration]: number[]) => Note =
-    ([pitchIndex, duration]: number[]): Note => {
+const manualNoteType: ([pitchIndex, duration]: ManualContourElement) => Note =
+    ([pitchIndex, duration]: ManualContourElement): Note => {
         if (pitchIndex === REST) {
             return {
                 duration,
                 gain: SILENT,
                 pitchIndex: PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
-                sustain: duration - SEPARATION_FOR_NEIGHBORING_NOTES,
+                sustain: to.Time(from.Time(duration) - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES)),
             }
         }
 
@@ -56,7 +67,7 @@ const manualNoteType: ([pitchIndex, duration]: number[]) => Note =
             duration,
             gain: MAX_GAIN,
             pitchIndex,
-            sustain: duration - SEPARATION_FOR_NEIGHBORING_NOTES,
+            sustain: to.Time(from.Time(duration) - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES)),
         }
     }
 

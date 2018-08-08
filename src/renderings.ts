@@ -1,20 +1,29 @@
+import { Offset, Scalar } from '../../../src/utilities/nominalTypes'
 import numbers from '../../../src/utilities/numbers'
-import { Block, Contour, Rendering, RenderingFunction } from './types'
+import offset from '../../../src/utilities/offset'
+import scale from '../../../src/utilities/scale'
+import { Contour, Rendering, RenderingFunction } from './types'
 import * as from from './utilities/from'
+import { Block, ContourElement } from './utilities/nominalTypes'
+import * as to from './utilities/to'
 
 const INITIAL: number = 0
 const EVEN: number = 2
 const ZERO: number = 0
 const ONE: number = 1
-const SUMMERY_SPRING_OFFSET: number = 1.5
-const SUMMERY_SPRING_SCALAR: number = 2
-const SPRINGY_SUMMER_OFFSET: number = 3
-const SPRINGY_SUMMER_SCALAR: number = 0.5
+// tslint:disable-next-line:no-any no-magic-numbers
+const SUMMERY_SPRING_OFFSET: Offset = -1.5 as any
+// tslint:disable-next-line:no-any no-magic-numbers
+const SUMMERY_SPRING_SCALAR: Scalar = 2 as any
+// tslint:disable-next-line:no-any no-magic-numbers
+const SPRINGY_SUMMER_OFFSET: Offset = 3 as any
+// tslint:disable-next-line:no-any no-magic-numbers
+const SPRINGY_SUMMER_SCALAR: Scalar = 0.5 as any
 
 const spring: RenderingFunction =
     (block: Block): Contour => {
-        const contour: Contour = numbers.slice(0, from.Block(block))
-        contour[INITIAL] = 0
+        const contour: Contour = to.Contour(numbers.slice(0, from.Block(block)))
+        contour[INITIAL] = to.ContourElement(ZERO)
 
         return contour
     }
@@ -23,19 +32,20 @@ const summer: RenderingFunction =
     (block: Block): Contour =>
         numbers
             .slice(INITIAL, from.Block(block))
-            .map((n: number): number => n % EVEN === ZERO ? ZERO : n)
+            .map((n: number): ContourElement => to.ContourElement(n % EVEN === ZERO ? ZERO : n))
 
 const fall: RenderingFunction =
     (block: Block): Contour =>
-        [ONE, from.Block(block) - ONE]
+        to.Contour([ONE, from.Block(block) - ONE])
 
 const summerySpring: RenderingFunction =
     (block: Block): Contour => {
         const contour: Contour = numbers
             .slice(0, from.Block(block))
-            .map((n: number): number => (n - SUMMERY_SPRING_OFFSET) * SUMMERY_SPRING_SCALAR)
+            .map((n: number): ContourElement =>
+                to.ContourElement(scale(offset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR)))
 
-        contour[INITIAL] = 0
+        contour[INITIAL] = to.ContourElement(ZERO)
 
         return contour
     }
@@ -44,7 +54,11 @@ const springySummer: RenderingFunction =
     (block: Block): Contour =>
         numbers
             .slice(0, from.Block(block))
-            .map((n: number): number => n % EVEN === ZERO ? ZERO : (n + SPRINGY_SUMMER_OFFSET) * SPRINGY_SUMMER_SCALAR)
+            .map((n: number): ContourElement => {
+                if (n % EVEN === ZERO) { return to.ContourElement(ZERO) }
+
+                return to.ContourElement(scale(offset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR))
+            })
 
 const renderings: { [x in Rendering]: RenderingFunction } = {
     [Rendering.SPRING]: spring,

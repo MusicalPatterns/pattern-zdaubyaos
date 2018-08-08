@@ -1,9 +1,10 @@
 import { yaosBlocksByBarDurationThenBlockStyle } from '../blocks/yaosBlocks'
 import render from '../render'
 import renderings from '../renderings'
-import { BarDuration, Blocks, BlockStyle, Contour, Rendering, RenderingFunction } from '../types'
+import { BarDuration, Blocks, BlockStyle, Contour, ManualContour, Rendering, RenderingFunction } from '../types'
+import * as to from '../utilities/to'
 
-const inaiiiVariety: number[][] = [
+const inaiiiVariety: ManualContour = to.ManualContour([
     [0, 1], [2, 1], [3, 1],
     [1, 1], [0, 1], [3, 1],
     [0, 1], [2, 1], [3, 1],
@@ -12,7 +13,7 @@ const inaiiiVariety: number[][] = [
     [1, 1], [0, 1], [3, 1],
     [1, 1], [2, 2],
     [1, 1], [2, 2],
-]
+])
 
 type ByRendering = { [z in Rendering]: Contour }
 type ByBlockStyle = { [y in BlockStyle]: ByRendering }

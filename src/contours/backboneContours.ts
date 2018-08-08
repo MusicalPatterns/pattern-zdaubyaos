@@ -1,41 +1,42 @@
 import { Contour } from '../types'
+import * as to from '../utilities/to'
 
-const backboneFifteenA: Contour = [
+const backboneFifteenA: Contour = to.Contour([
     1, 2,
     1, 2,
     1, 2,
     1, 2,
     1, 2,
-]
+])
 
-const backboneFifteenB: Contour = [
+const backboneFifteenB: Contour = to.Contour([
     2, 3,
     2, 3,
     2, 3,
-]
+])
 
-const backboneFifteenC: Contour = [
+const backboneFifteenC: Contour = to.Contour([
     7, 8,
-]
+])
 
-const backboneTwentyfourC: Contour = [
+const backboneTwentyfourC: Contour = to.Contour([
     1, 3,
     1, 3,
     1, 3,
     1, 3,
     1, 3,
     1, 3,
-]
+])
 
-const backboneTwentyfourE: Contour = [
+const backboneTwentyfourE: Contour = to.Contour([
     3, 5,
     3, 5,
     3, 5,
-]
+])
 
-const backboneTwentyfourG: Contour = [
+const backboneTwentyfourG: Contour = to.Contour([
     11, 13,
-]
+])
 
 export {
     backboneFifteenA,

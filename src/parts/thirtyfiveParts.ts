@@ -19,7 +19,7 @@ const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
 ])
 
 const thirtyfiveZdaubPart: Part = sequence([
-    repeat(rest(calculateDuration(thirtyfiveZdaubNotes)), 1),
+    rest(calculateDuration(thirtyfiveZdaubNotes)),
     repeat(thirtyfiveZdaubNotes, 2),
     repeat(thirtyfiveZdaubOnlyWiggleNotes, 6),
 ])

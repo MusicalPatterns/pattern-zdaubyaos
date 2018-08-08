@@ -8,13 +8,13 @@ import {
     noodlingFifteenGlisNotes,
     noodlingFifteenTremNotes,
 } from '../notes/zdaubFifteenNotes'
+import { zdaubGlisVariantNotes } from '../notes/zdaubOtherNotes'
 import {
     inscapeTwentyfourGlisNotes,
     inscapeTwentyfourTremNotes,
     noodlingTwentyfourGlisNotes,
     noodlingTwentyfourTremNotes,
 } from '../notes/zdaubTwentyfourNotes'
-import { glisNoteType } from '../noteTypes'
 import { Part } from '../types'
 
 const trueZdaubGlisPart: Part = sequence([
@@ -28,15 +28,7 @@ const trueZdaubGlisPart: Part = sequence([
 const trueZdaubGlisVariantPart: Part = sequence([
     repeatCall(() => noodlingFifteenGlisNotes, 4),
     escapeFifteenGlisNotes,
-    [
-        4, 5, 6,
-        7, 8,
-        9, 8,
-        6, 4, 2, 4, 6,
-        8, 6, 4, 2, 4,
-        6, 4, 2, 4, 6,
-        8, 6, 4, 2, 4, 2,
-    ].map(glisNoteType),
+    zdaubGlisVariantNotes,
 ])
 
 const trueZdaubTremPart: Part = sequence([

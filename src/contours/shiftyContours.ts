@@ -1,24 +1,25 @@
 import { Contour } from '../types'
+import * as to from '../utilities/to'
 
-const shiftyFifteen: Contour = [
+const shiftyFifteen: Contour = to.Contour([
     2, 1,
     5, 1,
     2, 4,
-]
+])
 
-const shiftyTwentyfour: Contour = [
+const shiftyTwentyfour: Contour = to.Contour([
     3, 1,
     3, 1,
     3, 4,
     5, 4,
-]
+])
 
-const shiftyTwentyfourVariant: Contour = [
+const shiftyTwentyfourVariant: Contour = to.Contour([
     4, 7, 4,
     1, 3, 1, 3, 1,
-]
+])
 
-const shifty: Contour = [
+const shifty: Contour = to.Contour([
     2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
     2, 1, 2, 1, 2, 3, 4,
     3, 2, 1, 2, 1, 2, 1, 2, 1,
@@ -29,7 +30,7 @@ const shifty: Contour = [
     // (this spreads across 3 bars)
     23, 25,
     // (this spreads across 2 bars)
-]
+])
 
 export {
     shiftyFifteen,

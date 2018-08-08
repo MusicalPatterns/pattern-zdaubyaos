@@ -1,7 +1,8 @@
 import repeat from '../../../../src/utilities/repeat'
 import { Contour } from '../types'
+import * as to from '../utilities/to'
 
-const thirtyfiveYaosBass: Contour = repeat([
+const thirtyfiveYaosBass: Contour = to.Contour(repeat([
     1, 5,
     1, 5,
     1, 3,
@@ -9,29 +10,29 @@ const thirtyfiveYaosBass: Contour = repeat([
     1, 5,
     1, 3,
     1, 2,
-],                                         6)
+],                                                    6))
 
-const thirtyfiveYaosAccidentInspired: Contour = repeat([
+const thirtyfiveYaosAccidentInspired: Contour = to.Contour(repeat([
     1, 2, 3,
     1, 2, 3, 4,
     1, 2, 3,
     1, 2, 3, 4,
     1, 2,
-],                                                     6)
+],                                                                6))
 
-const thirtyfiveZdaub: Contour = [
+const thirtyfiveZdaub: Contour = to.Contour([
     4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
     4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
     13, 10, 7, 4, 1,
     4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
     19, 16,
     13, 10, 7, 4, 1,
-]
+])
 
-const thirtyfiveZdaubOnlyWiggle: Contour = [
+const thirtyfiveZdaubOnlyWiggle: Contour = to.Contour([
     4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
     4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1,
-]
+])
 
 export {
     thirtyfiveYaosBass,

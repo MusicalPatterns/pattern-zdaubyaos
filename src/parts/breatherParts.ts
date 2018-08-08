@@ -2,12 +2,13 @@
 
 import rest from '../../../../src/rest'
 import repeat from '../../../../src/utilities/repeat'
+import * as to from '../../../../src/utilities/to'
 import { backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import { inaiiiVarietyNotes } from '../notes/yaosNotes'
 import { BarDuration, BlockResolution, BlockStrategy, Part, Rendering } from '../types'
 
-const breatherRestPart: Part = rest(24)
+const breatherRestPart: Part = rest(to.Time(24))
 const breatherSpringPart: Part = getYaosNotes(
     BlockResolution.LOWREGULAR,
     BlockStrategy.INAIDJIYAIOUZD,
@@ -28,7 +29,7 @@ const breatherSpringAltPart: Part = getYaosNotes(
     BarDuration.TWENTYFOUR,
     Rendering.SPRING,
 )
-const doubleBreatherRestPart: Part = rest(48)
+const doubleBreatherRestPart: Part = rest(to.Time(48))
 
 export {
     breatherRestPart,

@@ -1,12 +1,10 @@
 import { Note } from '../../../src/types'
-
-interface Block extends Number {
-    _BlockBrand: string,
-}
+import { Time } from '../../../src/utilities/nominalTypes'
+import { Block, ContourElement } from './utilities/nominalTypes'
 
 type Blocks = Block[]
 
-type Contour = number[]
+type Contour = ContourElement[]
 
 type Notes = Note[]
 
@@ -16,7 +14,7 @@ type Track = Note[]
 
 type RenderingFunction = (block: Block) => Contour
 
-type NoteType = (contourElement: number) => Note
+type NoteType = (contourElement: ContourElement) => Note
 
 type Segment = Part[]
 
@@ -60,8 +58,11 @@ type ByBlockResolution = {
     [x in BlockResolution]: BlockStyle
 }
 
+type ManualContourElement = [number, Time]
+
+type ManualContour = ManualContourElement[]
+
 export {
-    Block,
     Blocks,
     Contour,
     Notes,
@@ -77,4 +78,6 @@ export {
     Rendering,
     ByBlockResolution,
     ByBlockStrategy,
+    ManualContourElement,
+    ManualContour,
 }
