@@ -1,5 +1,5 @@
 {
-  "basePitch": 440,
+  "baseFrequency": 440,
   "entityConfigs": [
     {
       "notes": [

@@ -1,4 +1,5 @@
 import {
+    MAX_GAIN,
     PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
     SEPARATION_FOR_NEIGHBORING_NOTES,
     SILENT,
@@ -7,7 +8,6 @@ import { Note } from '../../../src/types'
 import { NoteType } from './types'
 
 const REST: number = 0
-const MAX_GAIN: number = 1
 const SINGLE_DURATION: number = 1
 
 const singleRest: Note = {

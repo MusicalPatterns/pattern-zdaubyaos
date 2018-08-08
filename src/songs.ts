@@ -13,7 +13,7 @@ import {
 import { yaosNoteUsagesByDurationBlocksThenRendering } from './notes/getYaosNotes'
 
 const zdaubyaos: Song = {
-    basePitch: ZDAUBYAOS_BASE_PITCH,
+    baseFrequency: ZDAUBYAOS_BASE_PITCH,
     entityConfigs: [
         zdaubyaosSuperparticularSquare,
         zdaubyaosDuperparticularSaw,

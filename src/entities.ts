@@ -1,6 +1,7 @@
 import { EntityConfig } from '../../../src/compile/types'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { OscillatorName, VoiceType } from '../../../src/types'
+import { Scalar } from '../../../src/utilities/nominalTypes'
 import {
     zdaubyaosTrackA,
     zdaubyaosTrackB,
@@ -16,7 +17,8 @@ import {
     superparticularSeriesPitches,
 } from './pitches'
 
-const TO_AVOID_BLOW_OUT: number = 0.2
+// tslint:disable-next-line:no-any no-magic-numbers
+const TO_AVOID_BLOW_OUT: Scalar = 0.2 as any
 
 const zdaubyaosSubparticularSquare: EntityConfig = {
     notes: zdaubyaosTrackA,
