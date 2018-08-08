@@ -1,5 +1,5 @@
 import { Note } from '../../../src/types'
-import { Time } from '../../../src/utilities/nominalTypes'
+import { Index, Time } from '../../../src/utilities/nominalTypes'
 import { Block, ContourElement } from './utilities/nominalTypes'
 
 type Blocks = Block[]
@@ -58,7 +58,7 @@ type ByBlockResolution = {
     [x in BlockResolution]: BlockStyle
 }
 
-type ManualContourElement = [number, Time]
+type ManualContourElement = [Index, Time]
 
 type ManualContour = ManualContourElement[]
 

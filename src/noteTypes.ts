@@ -6,14 +6,14 @@ import {
 } from '../../../src/constants'
 import { Note } from '../../../src/types'
 import * as from from '../../../src/utilities/from'
-import { Time } from '../../../src/utilities/nominalTypes'
+import { Index, Time } from '../../../src/utilities/nominalTypes'
 import * as to from '../../../src/utilities/to'
 import { ManualContourElement, NoteType } from './types'
 import * as zdaubyaosFrom from './utilities/from'
 import { ContourElement } from './utilities/nominalTypes'
 
 // tslint:disable-next-line:no-any no-magic-numbers
-const REST: ContourElement | number = 0 as any
+const REST: ContourElement | Index = 0 as any
 // tslint:disable-next-line:no-any no-magic-numbers
 const SINGLE_DURATION: Time = 1 as any
 const SINGLE_DURATION_SUSTAIN: Time =
@@ -35,7 +35,7 @@ const glisNoteType: NoteType =
         return {
             duration: to.Time(rawContourElement),
             gain: MAX_GAIN,
-            pitchIndex: rawContourElement,
+            pitchIndex: to.Index(rawContourElement),
             sustain: to.Time(rawContourElement - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES)),
         }
     }
@@ -47,7 +47,7 @@ const tremNoteType: NoteType =
         return {
             duration: SINGLE_DURATION,
             gain: MAX_GAIN,
-            pitchIndex: zdaubyaosFrom.ContourElement(contourElement),
+            pitchIndex: to.Index(zdaubyaosFrom.ContourElement(contourElement)),
             sustain: SINGLE_DURATION_SUSTAIN,
         }
     }
