@@ -1,8 +1,9 @@
 import { Notes } from '../src/types'
-import adjustGain from '../src/alterations/adjustGain'
+import scaleGain from '../src/alterations/scaleGain'
+import * as to from '../../../src/utilities/to'
 
-describe('adjust gain', () => {
-    it('adjusts the gain of every note', () => {
+describe('scale gain', () => {
+    it('scales the gain of every note', () => {
         const notes: Notes = [
             {
                 duration: 1,
@@ -45,6 +46,6 @@ describe('adjust gain', () => {
             },
         ]
 
-        expect(adjustGain(notes, 0.5)).toEqual(expectedNotes)
+        expect(scaleGain(notes, to.Scalar(0.5))).toEqual(expectedNotes)
     })
 })

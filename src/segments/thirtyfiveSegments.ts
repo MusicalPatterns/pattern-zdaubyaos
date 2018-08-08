@@ -1,3 +1,4 @@
+import * as to from '../../../../src/utilities/to'
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     thirtyfiveYaosAccidentInspiredPart,
@@ -12,7 +13,11 @@ const thirtyfiveSegment: Segment = alterSegmentParts(
         thirtyfiveYaosAccidentInspiredPart,
         thirtyfiveYaosBassPart,
     ],
-    [{gainAdjust: 0.66}, {}, {gainAdjust: 1.25, flipHarmonically: true}],
+    [
+        {gainScalar: to.Scalar(0.66)},
+        {},
+        {gainScalar: to.Scalar(1.25), flipHarmonically: true},
+    ],
 )
 
 export {

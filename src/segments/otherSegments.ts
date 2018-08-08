@@ -1,3 +1,4 @@
+import * as to from '../../../../src/utilities/to'
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     experimentWithIestttPart,
@@ -19,9 +20,9 @@ const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
         experimentWithUmowwwPart,
     ],
     [
-        {flipHarmonically: true, pitchIndexOffset: 0, gainAdjust: 1},
-        {gainAdjust: 0.5},
-        {flipHarmonically: true, gainAdjust: 1},
+        {flipHarmonically: true},
+        {gainScalar: to.Scalar(0.5)},
+        {flipHarmonically: true},
     ],
 )
 
@@ -32,9 +33,9 @@ const polyrhythmicAllYaosSegment: Segment = alterSegmentParts(
         polyrhythmicYaosTwentyfourPart,
     ],
     [
-        {flipHarmonically: true, pitchIndexOffset: 3},
-        {flipHarmonically: false, pitchIndexOffset: 3},
-        {flipHarmonically: true, pitchIndexOffset: 3},
+        {flipHarmonically: true, pitchIndexOffset: to.Offset(3)},
+        {pitchIndexOffset: to.Offset(3)},
+        {flipHarmonically: true, pitchIndexOffset: to.Offset(3)},
     ],
 )
 
@@ -54,9 +55,9 @@ const secretLongChordSegment: Segment = alterSegmentParts(
         secretLongChordPart,
     ],
     [
-        {pitchIndexOffset: 4, flipHarmonically: true, gainAdjust: 0.8},
-        {pitchIndexOffset: 6, flipHarmonically: true, gainAdjust: 0.8},
-        {pitchIndexOffset: 3, flipHarmonically: true, gainAdjust: 0.8},
+        {pitchIndexOffset: to.Offset(4), flipHarmonically: true, gainScalar: to.Scalar(0.8)},
+        {pitchIndexOffset: to.Offset(6), flipHarmonically: true, gainScalar: to.Scalar(0.8)},
+        {pitchIndexOffset: to.Offset(3), flipHarmonically: true, gainScalar: to.Scalar(0.8)},
     ],
 )
 
@@ -67,9 +68,9 @@ const totallyOutThereIntroSegment: Segment = alterSegmentParts(
         totallyOutTherePart,
     ],
     [
-        {pitchIndexOffset: 2},
-        {pitchIndexOffset: -2, flipHarmonically: false},
-        {pitchIndexOffset: -3},
+        {pitchIndexOffset: to.Offset(2)},
+        {pitchIndexOffset: to.Offset(-2)},
+        {pitchIndexOffset: to.Offset(-3)},
     ],
 )
 

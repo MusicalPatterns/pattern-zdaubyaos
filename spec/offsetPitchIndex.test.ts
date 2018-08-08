@@ -1,8 +1,9 @@
 import { Notes } from '../src/types'
-import adjustPitchIndex from '../src/alterations/adjustPitchIndex'
+import offsetPitchIndex from '../src/alterations/offsetPitchIndex'
+import * as to from '../../../src/utilities/to'
 
-describe('adjust pitch', () => {
-    it('adjusts the pitch of every note', () => {
+describe('offset pitch', () => {
+    it('offsets the pitch of every note', () => {
         const notes: Notes = [
             {
                 duration: 1,
@@ -45,6 +46,6 @@ describe('adjust pitch', () => {
             },
         ]
 
-        expect(adjustPitchIndex(notes, 1)).toEqual(expectedNotes)
+        expect(offsetPitchIndex(notes, to.Offset(1))).toEqual(expectedNotes)
     })
 })

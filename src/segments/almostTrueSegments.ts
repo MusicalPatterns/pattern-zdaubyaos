@@ -1,3 +1,4 @@
+import * as to from '../../../../src/utilities/to'
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     almostTrueExtendedEndingZdaubBonyPart,
@@ -34,7 +35,11 @@ const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = al
         almostTrueYetOfBackbonePart,
         almostTrueZdaubBonyWithSuperinscapePart,
     ],
-    [{gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33}],
+    [
+        {gainScalar: to.Scalar(0.33), flipHarmonically: true},
+        {gainScalar: to.Scalar(0.33), flipHarmonically: true},
+        {gainScalar: to.Scalar(0.33)},
+    ],
 )
 
 const almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun: Segment = alterSegmentParts(

@@ -1,15 +1,16 @@
 import rest from '../../../../src/rest'
 import calculateDuration from '../../../../src/utilities/calculateDuration'
+import { Offset, Scalar } from '../../../../src/utilities/nominalTypes'
 import { Part, Segment } from '../types'
-import adjustGain from './adjustGain'
-import adjustPitchIndex from './adjustPitchIndex'
+import offsetPitchIndex from './offsetPitchIndex'
+import scaleGain from './scaleGain'
 
 const FLIP_INDEX: number = 3
 
 interface Alteration {
     flipHarmonically?: boolean,
-    gainAdjust?: number,
-    pitchIndexOffset?: number,
+    gainScalar?: Scalar,
+    pitchIndexOffset?: Offset,
 }
 
 const alterSegmentParts: (segment: Segment, alterations: Alteration[]) => Segment =
@@ -17,14 +18,14 @@ const alterSegmentParts: (segment: Segment, alterations: Alteration[]) => Segmen
         const alteredSegment: Segment = []
         segment.forEach((part: Part, index: number): void => {
             let alteredPart: Part = part
-            const {flipHarmonically, gainAdjust, pitchIndexOffset} = alterations[index]
+            const {flipHarmonically, gainScalar, pitchIndexOffset} = alterations[index]
 
             if (pitchIndexOffset) {
-                alteredPart = adjustPitchIndex(alteredPart, pitchIndexOffset)
+                alteredPart = offsetPitchIndex(alteredPart, pitchIndexOffset)
             }
 
-            if (gainAdjust) {
-                alteredPart = adjustGain(alteredPart, gainAdjust)
+            if (gainScalar) {
+                alteredPart = scaleGain(alteredPart, gainScalar)
             }
 
             if (flipHarmonically) {

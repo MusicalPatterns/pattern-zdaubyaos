@@ -1,3 +1,4 @@
+import * as to from '../../../../src/utilities/to'
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
@@ -26,7 +27,7 @@ const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySeg
         trueZdaubGlisPart,
         trueZdaubGlisVariantPart,
     ],
-    [{flipHarmonically: true, pitchIndexOffset: 2}, {}, {}],
+    [{flipHarmonically: true, pitchIndexOffset: to.Offset(2)}, {}, {}],
 )
 
 const trueSpringySummerTotallyOutThereSegment: Segment = alterSegmentParts(
@@ -36,9 +37,9 @@ const trueSpringySummerTotallyOutThereSegment: Segment = alterSegmentParts(
         trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
     ],
     [
-        {pitchIndexOffset: 2},
-        {pitchIndexOffset: -2, flipHarmonically: false},
-        {pitchIndexOffset: -3},
+        {pitchIndexOffset: to.Offset(2)},
+        {pitchIndexOffset: to.Offset(-2)},
+        {pitchIndexOffset: to.Offset(-3)},
     ],
 )
 
