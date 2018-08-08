@@ -1,6 +1,6 @@
+import repeat from '../../../../src/utilities/repeat'
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import {
     polyrhythmicAscentANotes,
@@ -9,11 +9,6 @@ import {
     secretLongChordNotes,
 } from '../notes/otherNotes'
 import { Part } from '../types'
-
-const trueYetOfBackbonePart: Part = sequence([
-    repeatCall(() => backboneFifteenANotes, 8),
-    repeatCall(() => backboneTwentyfourCNotes, 4),
-])
 
 const experimentWithIestttPart: Part = sequence([
     getYaosNotes('highregular', 'umowchuwowiest', 'twentyfour', 'fall'),
@@ -39,8 +34,12 @@ const polyrhythmicAscentCPart: Part = polyrhythmicAscentCNotes
 
 const secretLongChordPart: Part = secretLongChordNotes
 
+const totallyOutTherePart: Part = repeat(
+    getYaosNotes('midirregular', 'inaidjiyaiouzd', 'fifteen', 'springySummer').slice(0, 8),
+    3,
+)
+
 export {
-    trueYetOfBackbonePart,
     experimentWithIestttPart,
     experimentWithUmowwwPart,
     polyrhythmicYaosFifteenPart,
@@ -49,4 +48,5 @@ export {
     polyrhythmicAscentBPart,
     polyrhythmicAscentCPart,
     secretLongChordPart,
+    totallyOutTherePart,
 }

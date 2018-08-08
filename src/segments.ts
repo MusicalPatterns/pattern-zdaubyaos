@@ -1,6 +1,8 @@
 import {
+    almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
     almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+    almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun,
 } from './segments/almostTrueSegments'
 import { backboneSegment } from './segments/backboneSegments'
 import {
@@ -15,16 +17,15 @@ import {
     polyrhythmicAllYaosSegment,
     polyrhythmicAscent,
     secretLongChordSegment,
+    totallyOutThereIntroSegment,
 } from './segments/otherSegments'
 import { shiftySegment } from './segments/shiftySegments'
 import { thirtyfiveSegment } from './segments/thirtyfiveSegments'
 import {
-    almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun,
     trueAllYaosAllRhythmsAtOnceSegment,
     trueSpringAllYaosUmowchuwowiestSegment,
 } from './segments/trueYaosSegments'
 import {
-    trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     trueSpringWithZdaubSegment,
     trueSpringySummerTotallyOutThereSegment,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
@@ -32,7 +33,7 @@ import {
 import { Segment } from './types'
 
 const START: number = 0
-const END: number = 15
+const END: number = 17
 const INCLUSIVE: number = 1
 
 const segments: Segment[] = [
@@ -51,17 +52,17 @@ const segments: Segment[] = [
     // 8
     doubleBreatherFallWhichIsGoodIntroForJigSegment,
     almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
-    trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
+    almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
+    totallyOutThereIntroSegment,
+    trueSpringySummerTotallyOutThereSegment,
 
-    // Okay now this is the last transition in trouble ...
-
-    // 10
+    // 13
     breatherSpringAltNiceAsABreatherToABreatherSegment,
     breatherVarietyQuiteTheReveilleSegment,
     trueAllYaosAllRhythmsAtOnceSegment,
     almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
 
-    // 15
+    // 17
     thirtyfiveSegment,
 ].slice(START, END + INCLUSIVE)
 

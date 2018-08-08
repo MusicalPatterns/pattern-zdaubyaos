@@ -8,6 +8,7 @@ import {
     polyrhythmicYaosFifteenPart,
     polyrhythmicYaosTwentyfourPart,
     secretLongChordPart,
+    totallyOutTherePart,
 } from '../parts/otherParts'
 import { Segment } from '../types'
 
@@ -53,9 +54,22 @@ const secretLongChordSegment: Segment = alterSegmentParts(
         secretLongChordPart,
     ],
     [
-        {pitchIndexOffset: -59, flipHarmonically: true, gainAdjust: 0.8},
-        {pitchIndexOffset: -61, flipHarmonically: true, gainAdjust: 0.8},
-        {pitchIndexOffset: -56, flipHarmonically: true, gainAdjust: 0.8},
+        {pitchIndexOffset: 4, flipHarmonically: true, gainAdjust: 0.8},
+        {pitchIndexOffset: 6, flipHarmonically: true, gainAdjust: 0.8},
+        {pitchIndexOffset: 3, flipHarmonically: true, gainAdjust: 0.8},
+    ],
+)
+
+const totallyOutThereIntroSegment: Segment = alterSegmentParts(
+    [
+        totallyOutTherePart,
+        totallyOutTherePart,
+        totallyOutTherePart,
+    ],
+    [
+        {pitchIndexOffset: 2},
+        {pitchIndexOffset: -2, flipHarmonically: false},
+        {pitchIndexOffset: -3},
     ],
 )
 
@@ -64,4 +78,5 @@ export {
     polyrhythmicAllYaosSegment,
     polyrhythmicAscent,
     secretLongChordSegment,
+    totallyOutThereIntroSegment,
 }

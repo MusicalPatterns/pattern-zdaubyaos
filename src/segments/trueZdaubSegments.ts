@@ -1,12 +1,10 @@
 import alterSegmentParts from '../alterations/alterSegmentParts'
-import { trueYetOfBackbonePart } from '../parts/otherParts'
 import {
     trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
     trueYaosUmowchuwowiestSpringToSummerPart,
     trueYaosUmowchuwowiestSummerToSpringPart,
 } from '../parts/trueYaosParts'
 import {
-    trueZdaubBonyWithSuperinscapePart,
     trueZdaubGlisPart,
     trueZdaubGlisVariantPart,
     trueZdaubTremPart,
@@ -31,15 +29,6 @@ const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySeg
     [{flipHarmonically: true, pitchIndexOffset: 2}, {}, {}],
 )
 
-const trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = alterSegmentParts(
-    [
-        trueYetOfBackbonePart,
-        trueYetOfBackbonePart,
-        trueZdaubBonyWithSuperinscapePart,
-    ],
-    [{gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33, flipHarmonically: true}, {gainAdjust: 0.33}],
-)
-
 const trueSpringySummerTotallyOutThereSegment: Segment = alterSegmentParts(
     [
         trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
@@ -56,6 +45,5 @@ const trueSpringySummerTotallyOutThereSegment: Segment = alterSegmentParts(
 export {
     trueSpringWithZdaubSegment,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
-    trueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     trueSpringySummerTotallyOutThereSegment,
 }

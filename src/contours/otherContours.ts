@@ -28,7 +28,7 @@ const polyrhythmicAscentC: Contour = [
 ]
 
 const secretLongChord: number[][] = [
-    [63, 15],
+    [1, 24],
 ]
 
 const funBetweenFifteenAndTwentyfourMoment: number[][] = [

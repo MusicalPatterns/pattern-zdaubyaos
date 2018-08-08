@@ -3,7 +3,6 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
 import getYaosNotes from '../notes/getYaosNotes'
-import { funBetweenFifteenAndTwentyfourMomentNotes } from '../notes/otherNotes'
 import { Part } from '../types'
 
 const trueYaosUmowchuwowiestSpringToSummerPart: Part = sequence([
@@ -21,16 +20,6 @@ const trueYaosUmowchuwowiestSummerToSpringPart: Part = sequence([
     repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
     repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
     repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'spring'), 4),
-])
-
-const trueYaosUmowchuwowiestSummerToSpringPartWithFun: Part = sequence([
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'summer'), 4),
-    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    funBetweenFifteenAndTwentyfourMomentNotes,
     repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'spring'), 4),
 ])
 
@@ -57,5 +46,4 @@ export {
     trueYaosUmowchuwowiestSummerToSpringPart,
     trueYaosInaidjiyaiouzdSummerToSpringPart,
     trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
-    trueYaosUmowchuwowiestSummerToSpringPartWithFun,
 }

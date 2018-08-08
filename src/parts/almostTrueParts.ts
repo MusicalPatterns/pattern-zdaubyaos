@@ -1,6 +1,8 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
+import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
+import { funBetweenFifteenAndTwentyfourMomentNotes } from '../notes/otherNotes'
 import {
     ascentFifteenBonyNotes,
     ascentFifteenGlisNotes,
@@ -19,6 +21,7 @@ import {
     noodlingTwentyfourBonyNotes,
     noodlingTwentyfourGlisNotes,
     noodlingTwentyfourTremNotes,
+    superinscapeTwentyfourBonyNotes,
 } from '../notes/zdaubTwentyfourNotes'
 import { Part } from '../types'
 
@@ -41,6 +44,7 @@ const almostTrueExtendedEndingZdaubTremPart: Part = sequence([
     inscapeTwentyfourTremNotes,
     repeatCall(() => noodlingTwentyfourTremNotes, 5),
 ])
+
 const almostTrueExtendedEndingZdaubBonyPart: Part = sequence([
     repeatCall(() => noodlingFifteenBonyNotes, 3),
     escapeFifteenBonyNotes,
@@ -48,6 +52,7 @@ const almostTrueExtendedEndingZdaubBonyPart: Part = sequence([
     inscapeTwentyfourBonyNotes,
     repeatCall(() => noodlingTwentyfourBonyNotes, 5),
 ])
+
 const almostTrueExtendedEndingZdaubGlisPart: Part = sequence([
     repeatCall(() => noodlingFifteenGlisNotes, 3),
     escapeFifteenGlisNotes,
@@ -56,9 +61,36 @@ const almostTrueExtendedEndingZdaubGlisPart: Part = sequence([
     repeatCall(() => noodlingTwentyfourGlisNotes, 5),
 ])
 
+const almostTrueYetOfBackbonePart: Part = sequence([
+    repeatCall(() => backboneFifteenANotes, 8),
+    repeatCall(() => backboneTwentyfourCNotes, 3),
+])
+
+const almostTrueZdaubBonyWithSuperinscapePart: Part = sequence([
+    repeatCall(() => noodlingFifteenBonyNotes, 3),
+    escapeFifteenBonyNotes,
+    ascentFifteenBonyNotes,
+    superinscapeTwentyfourBonyNotes,
+    inscapeTwentyfourBonyNotes,
+    noodlingTwentyfourBonyNotes,
+])
+
+const almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun: Part = sequence([
+    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'summer'), 4),
+    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    funBetweenFifteenAndTwentyfourMomentNotes,
+    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'spring'), 4),
+])
+
 export {
     almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
     almostTrueExtendedEndingZdaubTremPart,
     almostTrueExtendedEndingZdaubBonyPart,
     almostTrueExtendedEndingZdaubGlisPart,
+    almostTrueYetOfBackbonePart,
+    almostTrueZdaubBonyWithSuperinscapePart,
+    almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun,
 }
