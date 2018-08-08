@@ -1,5 +1,5 @@
 import numbers from '../../../src/utilities/numbers'
-import { Contour, RenderingFunction } from './types'
+import { Contour, Rendering, RenderingFunction } from './types'
 
 const INITIAL: number = 0
 const EVEN: number = 2
@@ -45,10 +45,12 @@ const springySummer: RenderingFunction =
             .slice(0, duration)
             .map((n: number): number => n % EVEN === ZERO ? ZERO : (n + SPRINGY_SUMMER_OFFSET) * SPRINGY_SUMMER_SCALAR)
 
-export default {
-    fall,
-    spring,
-    springySummer,
-    summer,
-    summerySpring,
+const renderings: { [x in Rendering]: RenderingFunction } = {
+    [Rendering.SPRING]: spring,
+    [Rendering.SUMMER]: summer,
+    [Rendering.FALL]: fall,
+    [Rendering.SUMMERY_SPRING]: summerySpring,
+    [Rendering.SPRINGY_SUMMER]: springySummer,
 }
+
+export default renderings

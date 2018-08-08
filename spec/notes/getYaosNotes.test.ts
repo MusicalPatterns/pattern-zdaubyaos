@@ -1,5 +1,5 @@
 import getYaosNotes from '../../src/notes/getYaosNotes'
-import { yaosNotesByDurationBlocksThenRendering } from '../../src/notes/yaosNotes'
+import { yaosNotesByBarDurationBlockStyleThenRendering } from '../../src/notes/yaosNotes'
 import { BarDuration, BlockResolution, BlockStrategy, Rendering } from '../../src/types'
 
 describe('get yaos notes', () => {
@@ -7,7 +7,7 @@ describe('get yaos notes', () => {
         expect(
             getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, Rendering.SUMMER)
         ).toEqual(
-            yaosNotesByDurationBlocksThenRendering.twentyfour.djiyai.summer,
+            yaosNotesByBarDurationBlockStyleThenRendering.twentyfour.djiyai.summer,
         )
     })
 })

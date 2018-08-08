@@ -1,38 +1,38 @@
 import { NOTE_TYPES_FOR_RENDERINGS } from '../constants'
-import { inaiiiVariety, yaosContoursByDurationBlocksThenRendering } from '../contours/yaosContours'
+import { inaiiiVariety, yaosContoursByBarDurationBlockStyleThenRendering } from '../contours/yaosContours'
 import { manualNoteType } from '../noteTypes'
-import { Contour, Notes } from '../types'
+import { BarDuration, BlockStyle, Contour, Notes, Rendering } from '../types'
 
-const yaosNotesByDurationBlocksThenRendering: { [index: string]: { [index: string]: { [index: string]: Notes } } } = {
-    fifteen: {},
-    twentyfour: {},
-}
+type ByRendering = { [z in Rendering]: Notes }
+type ByBlockStyle = { [y in BlockStyle]: ByRendering }
+type YaosNotes = { [x in BarDuration]: ByBlockStyle }
 
-Object.entries(yaosContoursByDurationBlocksThenRendering.fifteen).forEach(
-    ([blocksName, contoursByRendering]: [string, { [index: string]: Contour }]) => {
-        Object.entries(contoursByRendering).forEach(([renderingName, contour]: [string, Contour]): void => {
-            const notes: Notes = contour.map(NOTE_TYPES_FOR_RENDERINGS[renderingName])
+// @ts-ignore
+const yaosNotesByBarDurationBlockStyleThenRendering: YaosNotes = {}
 
-            yaosNotesByDurationBlocksThenRendering.fifteen[blocksName] =
-                yaosNotesByDurationBlocksThenRendering.fifteen[blocksName] || {}
-            yaosNotesByDurationBlocksThenRendering.fifteen[blocksName][renderingName] = notes
-        })
-    })
+Object.entries(yaosContoursByBarDurationBlockStyleThenRendering).forEach(
+    // @ts-ignore
+    ([barDuration, contoursByBlockStyle]: [BarDuration, ByBlockStyle]): void => {
+        Object.entries(contoursByBlockStyle).forEach(
+            // @ts-ignore
+            ([blockStyle, contoursByRendering]: [BlockStyle, ByRendering]): void => {
+                Object.entries(contoursByRendering).forEach(
+                    // @ts-ignore
+                    ([rendering, contour]: [Rendering, Contour]): void => {
+                        const notes: Notes = contour.map(NOTE_TYPES_FOR_RENDERINGS[rendering])
 
-Object.entries(yaosContoursByDurationBlocksThenRendering.twentyfour).forEach(
-    ([blocksName, contoursByRendering]: [string, { [index: string]: Contour }]) => {
-        Object.entries(contoursByRendering).forEach(([renderingName, contour]: [string, Contour]): void => {
-            const notes: Notes = contour.map(NOTE_TYPES_FOR_RENDERINGS[renderingName])
-
-            yaosNotesByDurationBlocksThenRendering.twentyfour[blocksName] =
-                yaosNotesByDurationBlocksThenRendering.twentyfour[blocksName] || {}
-            yaosNotesByDurationBlocksThenRendering.twentyfour[blocksName][renderingName] = notes
-        })
+                        yaosNotesByBarDurationBlockStyleThenRendering[barDuration] =
+                            yaosNotesByBarDurationBlockStyleThenRendering[barDuration] || {}
+                        yaosNotesByBarDurationBlockStyleThenRendering[barDuration][blockStyle] =
+                            yaosNotesByBarDurationBlockStyleThenRendering[barDuration][blockStyle] || {}
+                        yaosNotesByBarDurationBlockStyleThenRendering[barDuration][blockStyle][rendering] = notes
+                    })
+            })
     })
 
 const inaiiiVarietyNotes: Notes = inaiiiVariety.map(manualNoteType)
 
 export {
-    yaosNotesByDurationBlocksThenRendering,
+    yaosNotesByBarDurationBlockStyleThenRendering,
     inaiiiVarietyNotes,
 }

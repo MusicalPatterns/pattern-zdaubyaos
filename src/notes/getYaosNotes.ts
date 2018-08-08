@@ -1,6 +1,6 @@
 import { BLOCKS_BY_STRATEGY_THEN_RESOLUTION } from '../constants'
 import { BarDuration, BlockResolution, BlockStrategy, BlockStyle, Notes, Rendering } from '../types'
-import { yaosNotesByDurationBlocksThenRendering } from './yaosNotes'
+import { yaosNotesByBarDurationBlockStyleThenRendering } from './yaosNotes'
 
 type UsageCount = number
 
@@ -45,7 +45,7 @@ const getYaosNotes: GetYaosNotes =
             }
         }
 
-        return yaosNotesByDurationBlocksThenRendering[barDuration][blockStyle][rendering]
+        return yaosNotesByBarDurationBlockStyleThenRendering[barDuration][blockStyle][rendering]
     }
 
 export default getYaosNotes

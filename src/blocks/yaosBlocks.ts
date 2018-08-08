@@ -1,25 +1,25 @@
 import repeat from '../../../../src/utilities/repeat'
-import { Blocks } from '../types'
+import { BarDuration, Blocks, BlockStyle } from '../types'
 
-const yaosBlocksByDuration: { [index: string]: { [index: string]: Blocks } } = {
-    fifteen: {
-        chuwow: [3, 4, 3, 5],
-        djiyai: [3, 5, 7],
-        iest: repeat([5], 3),
-        inai: [4, 4, 4, 3],
-        ouzd: [8, 7],
-        umow: repeat([3], 5),
+const yaosBlocksByBarDurationThenBlockStyle: { [x in BarDuration]: { [y in BlockStyle]: Blocks } } = {
+    [BarDuration.FIFTEEN]: {
+        [BlockStyle.CHUWOW]: [3, 4, 3, 5],
+        [BlockStyle.DJIYAI]: [3, 5, 7],
+        [BlockStyle.IEST]: repeat([5], 3),
+        [BlockStyle.INAI]: [4, 4, 4, 3],
+        [BlockStyle.OUZD]: [8, 7],
+        [BlockStyle.UMOW]: repeat([3], 5),
     },
-    twentyfour: {
-        chuwow: [3, 4, 5, 3, 5, 4],
-        djiyai: [3, 3, 5, 3, 3, 7],
-        iest: repeat([6], 4),
-        inai: repeat([3], 8),
-        ouzd: repeat([8], 3),
-        umow: repeat([4], 6),
+    [BarDuration.TWENTYFOUR]: {
+        [BlockStyle.CHUWOW]: [3, 4, 5, 3, 5, 4],
+        [BlockStyle.DJIYAI]: [3, 3, 5, 3, 3, 7],
+        [BlockStyle.IEST]: repeat([6], 4),
+        [BlockStyle.INAI]: repeat([3], 8),
+        [BlockStyle.OUZD]: repeat([8], 3),
+        [BlockStyle.UMOW]: repeat([4], 6),
     },
 }
 
 export {
-    yaosBlocksByDuration,
+    yaosBlocksByBarDurationThenBlockStyle,
 }
