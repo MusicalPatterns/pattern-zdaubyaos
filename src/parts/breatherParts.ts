@@ -5,14 +5,29 @@ import repeat from '../../../../src/utilities/repeat'
 import { backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
 import { inaiiiVarietyNotes } from '../notes/yaosNotes'
-import { Part } from '../types'
+import { BarDuration, BlockResolution, BlockStrategy, Part, Rendering } from '../types'
 
 const breatherRestPart: Part = rest(24)
-const breatherSpringPart: Part = getYaosNotes('lowregular', 'inaidjiyaiouzd', 'twentyfour', 'spring')
-const breatherSummerPart: Part = getYaosNotes('lowregular', 'inaidjiyaiouzd', 'twentyfour', 'summer')
+const breatherSpringPart: Part = getYaosNotes(
+    BlockResolution.LOWREGULAR,
+    BlockStrategy.INAIDJIYAIOUZD,
+    BarDuration.TWENTYFOUR,
+    Rendering.SPRING,
+)
+const breatherSummerPart: Part = getYaosNotes(
+    BlockResolution.LOWREGULAR,
+    BlockStrategy.INAIDJIYAIOUZD,
+    BarDuration.TWENTYFOUR,
+    Rendering.SUMMER,
+)
 const doubleBreatherFallPart: Part = repeat(backboneTwentyfourCNotes, 2)
 const breatherVarietyPart: Part = inaiiiVarietyNotes
-const breatherSpringAltPart: Part = getYaosNotes('highregular', 'inaidjiyaiouzd', 'twentyfour', 'spring')
+const breatherSpringAltPart: Part = getYaosNotes(
+    BlockResolution.HIGHREGULAR,
+    BlockStrategy.INAIDJIYAIOUZD,
+    BarDuration.TWENTYFOUR,
+    Rendering.SPRING,
+)
 const doubleBreatherRestPart: Part = rest(48)
 
 export {

@@ -23,18 +23,18 @@ import {
     noodlingTwentyfourTremNotes,
     superinscapeTwentyfourBonyNotes,
 } from '../notes/zdaubTwentyfourNotes'
-import { Part } from '../types'
+import { BarDuration, BlockResolution, BlockStrategy, Part, Rendering } from '../types'
 
 const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('highregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'inaidjiyaiouzd', 'fifteen', 'fall'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'twentyfour', 'fall'), 1),
-    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'fall'), 1),
+    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.FALL),
+    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.FALL),
+    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
+    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
+    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
+    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
+    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
+    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.TWENTYFOUR, Rendering.FALL),
+    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, Rendering.FALL),
 ])
 
 const almostTrueExtendedEndingZdaubTremPart: Part = sequence([
@@ -44,7 +44,6 @@ const almostTrueExtendedEndingZdaubTremPart: Part = sequence([
     inscapeTwentyfourTremNotes,
     repeatCall(() => noodlingTwentyfourTremNotes, 5),
 ])
-
 const almostTrueExtendedEndingZdaubBonyPart: Part = sequence([
     repeatCall(() => noodlingFifteenBonyNotes, 3),
     escapeFifteenBonyNotes,
@@ -52,7 +51,6 @@ const almostTrueExtendedEndingZdaubBonyPart: Part = sequence([
     inscapeTwentyfourBonyNotes,
     repeatCall(() => noodlingTwentyfourBonyNotes, 5),
 ])
-
 const almostTrueExtendedEndingZdaubGlisPart: Part = sequence([
     repeatCall(() => noodlingFifteenGlisNotes, 3),
     escapeFifteenGlisNotes,
@@ -76,13 +74,17 @@ const almostTrueZdaubBonyWithSuperinscapePart: Part = sequence([
 ])
 
 const almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun: Part = sequence([
-    repeatCall(() => getYaosNotes('midirregular', 'umowchuwowiest', 'fifteen', 'summer'), 4),
-    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    repeatCall(() => getYaosNotes('highregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
-    repeatCall(() => getYaosNotes('lowregular', 'umowchuwowiest', 'fifteen', 'summer'), 1),
+    repeatCall(() => getYaosNotes(
+        BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER,
+    ),         4),
+    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
+    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
+    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
+    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
     funBetweenFifteenAndTwentyfourMomentNotes,
-    repeatCall(() => getYaosNotes('midirregular', 'inaidjiyaiouzd', 'twentyfour', 'spring'), 4),
+    repeatCall(() => getYaosNotes(
+        BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, Rendering.SPRING,
+    ),         4),
 ])
 
 export {

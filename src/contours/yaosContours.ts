@@ -1,7 +1,7 @@
 import { yaosBlocksByDuration } from '../blocks/yaosBlocks'
 import render from '../render'
 import renderings from '../renderings'
-import { Blocks, Contour, Rendering } from '../types'
+import { Blocks, Contour, RenderingFunction } from '../types'
 
 const inaiiiVariety: number[][] = [
     [0, 1], [2, 1], [3, 1],
@@ -22,7 +22,7 @@ const yaosContoursByDurationBlocksThenRendering: ContoursPackage = {
 }
 
 Object.entries(yaosBlocksByDuration.fifteen).forEach(([blocksName, blocks]: [string, Blocks]): void => {
-    Object.entries(renderings).forEach(([renderingName, rendering]: [string, Rendering]): void => {
+    Object.entries(renderings).forEach(([renderingName, rendering]: [string, RenderingFunction]): void => {
         const contour: Contour = render(blocks, rendering)
 
         yaosContoursByDurationBlocksThenRendering.fifteen[blocksName] =
@@ -32,7 +32,7 @@ Object.entries(yaosBlocksByDuration.fifteen).forEach(([blocksName, blocks]: [str
 })
 
 Object.entries(yaosBlocksByDuration.twentyfour).forEach(([blocksName, blocks]: [string, Blocks]): void => {
-    Object.entries(renderings).forEach(([renderingName, rendering]: [string, Rendering]): void => {
+    Object.entries(renderings).forEach(([renderingName, rendering]: [string, RenderingFunction]): void => {
         const contour: Contour = render(blocks, rendering)
 
         yaosContoursByDurationBlocksThenRendering.twentyfour[blocksName] =

@@ -1,39 +1,51 @@
-import { Notes } from '../types'
+import { BLOCKS_BY_STRATEGY_THEN_RESOLUTION } from '../constants'
+import { BarDuration, BlockResolution, BlockStrategy, BlockStyle, Notes, Rendering } from '../types'
 import { yaosNotesByDurationBlocksThenRendering } from './yaosNotes'
 
-const BLOCKS_BY_STRATEGY_THEN_RESOLUTION: {[index: string]: {[index: string]: string}} = {
-    inaidjiyaiouzd: {
-        highregular: 'ouzd',
-        lowregular: 'inai',
-        midirregular: 'djiyai',
-    },
-    umowchuwowiest: {
-        highregular: 'iest',
-        lowregular: 'umow',
-        midirregular: 'chuwow',
-    },
+type UsageCount = number
+
+type UsageGrouping = {
+    [x in BarDuration]: {[y in BlockStyle]?: UsageCountByRendering}
 }
 
-interface UsageGrouping {
-    [index: string]: {[index: string]: {[index: string]: number}}
-}
+type UsageCountByRendering = {[z in Rendering]?: UsageCount}
 
 export const yaosNoteUsagesByDurationBlocksThenRendering: UsageGrouping = {
     fifteen: {},
     twentyfour: {},
 }
 
-const getYaosNotes: (blockResolution: string, blockStrategy: string, duration: string, rendering: string) => Notes =
-    (blockResolution: string, blockStrategy: string, duration: string, rendering: string): Notes => {
-        const blocks: string = BLOCKS_BY_STRATEGY_THEN_RESOLUTION[blockStrategy][blockResolution]
+type GetYaosNotes = (
+    blockResolution: BlockResolution,
+    blockStrategy: BlockStrategy,
+    barDuration: BarDuration,
+    rendering: Rendering,
+) => Notes
 
-        yaosNoteUsagesByDurationBlocksThenRendering[duration][blocks] =
-            yaosNoteUsagesByDurationBlocksThenRendering[duration][blocks] || {}
-        yaosNoteUsagesByDurationBlocksThenRendering[duration][blocks][rendering] =
-            yaosNoteUsagesByDurationBlocksThenRendering[duration][blocks][rendering] || 0
-        yaosNoteUsagesByDurationBlocksThenRendering[duration][blocks][rendering] += 1
+const getYaosNotes: GetYaosNotes =
+    (
+        blockResolution: BlockResolution,
+        blockStrategy: BlockStrategy,
+        barDuration: BarDuration,
+        rendering: Rendering,
+    ): Notes => {
+        const blockStyle: BlockStyle = BLOCKS_BY_STRATEGY_THEN_RESOLUTION[blockStrategy][blockResolution]
 
-        return yaosNotesByDurationBlocksThenRendering[duration][blocks][rendering]
+        yaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] =
+            yaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] || {}
+        const byBlockStyle: UsageCountByRendering | undefined =
+            yaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle]
+        if (byBlockStyle !== undefined) {
+            let byRendering: UsageCount | undefined = byBlockStyle[rendering]
+            if (byRendering !== undefined) {
+                byRendering += 1
+                byBlockStyle[rendering] = byRendering
+            } else {
+                byBlockStyle[rendering] = 1
+            }
+        }
+
+        return yaosNotesByDurationBlocksThenRendering[barDuration][blockStyle][rendering]
     }
 
 export default getYaosNotes
