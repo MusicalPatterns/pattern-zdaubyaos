@@ -1,5 +1,6 @@
 import numbers from '../../../src/utilities/numbers'
-import { Contour, Rendering, RenderingFunction } from './types'
+import { Block, Contour, Rendering, RenderingFunction } from './types'
+import * as from from './utilities/from'
 
 const INITIAL: number = 0
 const EVEN: number = 2
@@ -11,27 +12,27 @@ const SPRINGY_SUMMER_OFFSET: number = 3
 const SPRINGY_SUMMER_SCALAR: number = 0.5
 
 const spring: RenderingFunction =
-    (duration: number): Contour => {
-        const contour: Contour = numbers.slice(0, duration)
+    (block: Block): Contour => {
+        const contour: Contour = numbers.slice(0, from.Block(block))
         contour[INITIAL] = 0
 
         return contour
     }
 
 const summer: RenderingFunction =
-    (duration: number): Contour =>
+    (block: Block): Contour =>
         numbers
-            .slice(INITIAL, duration)
+            .slice(INITIAL, from.Block(block))
             .map((n: number): number => n % EVEN === ZERO ? ZERO : n)
 
 const fall: RenderingFunction =
-    (duration: number): Contour =>
-        [ONE, duration - ONE]
+    (block: Block): Contour =>
+        [ONE, from.Block(block) - ONE]
 
 const summerySpring: RenderingFunction =
-    (duration: number): Contour => {
+    (block: Block): Contour => {
         const contour: Contour = numbers
-            .slice(0, duration)
+            .slice(0, from.Block(block))
             .map((n: number): number => (n - SUMMERY_SPRING_OFFSET) * SUMMERY_SPRING_SCALAR)
 
         contour[INITIAL] = 0
@@ -40,9 +41,9 @@ const summerySpring: RenderingFunction =
     }
 
 const springySummer: RenderingFunction =
-    (duration: number): Contour =>
+    (block: Block): Contour =>
         numbers
-            .slice(0, duration)
+            .slice(0, from.Block(block))
             .map((n: number): number => n % EVEN === ZERO ? ZERO : (n + SPRINGY_SUMMER_OFFSET) * SPRINGY_SUMMER_SCALAR)
 
 const renderings: { [x in Rendering]: RenderingFunction } = {

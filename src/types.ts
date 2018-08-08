@@ -1,6 +1,10 @@
 import { Note } from '../../../src/types'
 
-type Blocks = number[]
+interface Block extends Number {
+    _BlockBrand: string,
+}
+
+type Blocks = Block[]
 
 type Contour = number[]
 
@@ -10,7 +14,7 @@ type Part = Note[]
 
 type Track = Note[]
 
-type RenderingFunction = (block: number) => number[]
+type RenderingFunction = (block: Block) => Contour
 
 type NoteType = (contourElement: number) => Note
 
@@ -57,6 +61,7 @@ type ByBlockResolution = {
 }
 
 export {
+    Block,
     Blocks,
     Contour,
     Notes,
