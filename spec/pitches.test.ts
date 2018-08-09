@@ -6,6 +6,7 @@ import {
     subparticularSeriesPitches,
     superparticularSeriesPitches,
 } from '../src/pitches'
+import * as to from '../../../src/utilities/to'
 
 describe('pitches', () => {
     describe('subparticular series', () => {
@@ -16,7 +17,7 @@ describe('pitches', () => {
                 3 / 4,
                 4 / 5,
             ].forEach((expectedPitch: number, index: number): void => {
-                expect(subparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(subparticularSeriesPitches[index]).toEqual(to.Scalar(expectedPitch))
             })
         })
     })
@@ -29,7 +30,7 @@ describe('pitches', () => {
                 3 / 5,
                 4 / 6,
             ].forEach((expectedPitch: number, index: number): void => {
-                expect(dubparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(dubparticularSeriesPitches[index]).toEqual(to.Scalar(expectedPitch))
             })
         })
     })
@@ -42,7 +43,7 @@ describe('pitches', () => {
                 4 / 3,
                 5 / 4,
             ].forEach((expectedPitch: number, index: number): void => {
-                expect(superparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(superparticularSeriesPitches[index]).toEqual(to.Scalar(expectedPitch))
             })
         })
     })
@@ -55,7 +56,7 @@ describe('pitches', () => {
                 5 / 3,
                 6 / 4,
             ].forEach((expectedPitch: number, index: number): void => {
-                expect(duperparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(duperparticularSeriesPitches[index]).toEqual(to.Scalar(expectedPitch))
             })
         })
     })
