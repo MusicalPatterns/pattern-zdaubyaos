@@ -11,17 +11,17 @@ import {
 import { Part } from '../types'
 
 const thirtyfiveYaosBassPart: Part = sequence([
-    repeat(thirtyfiveYaosBassNotes, 5),
+    repeat(thirtyfiveYaosBassNotes, 30),
 ])
 
 const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
-    repeat(thirtyfiveYaosAccidentInspiredNotes, 5),
+    repeat(thirtyfiveYaosAccidentInspiredNotes, 30),
 ])
 
 const thirtyfiveZdaubPart: Part = sequence([
     rest(calculateDuration(thirtyfiveZdaubNotes)),
     repeat(thirtyfiveZdaubNotes, 2),
-    repeat(thirtyfiveZdaubOnlyWiggleNotes, 6),
+    repeat(thirtyfiveZdaubOnlyWiggleNotes, 12),
 ])
 
 export {
