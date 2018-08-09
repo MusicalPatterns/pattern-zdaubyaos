@@ -10,17 +10,12 @@ import {
 } from '../notes/otherNotes'
 import { getYaosNotes } from '../notes/yaosNotes'
 import { Part } from '../types'
-import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosRendering } from '../zdaubyaosTypes'
+import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 
 const secretLongChordPart: Part = secretLongChordNotes
 
 const totallyOutTherePart: Part = repeat(
-    getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
-        BarDuration.FIFTEEN,
-        YaosRendering.SPRINGY_SUMMER,
-    ).slice(0, 8),
+    getYaosNotes(YaosBlockStyle.DJIYAI, BarDuration.FIFTEEN, YaosRendering.SPRINGY_SUMMER).slice(0, 8),
     3,
 )
 

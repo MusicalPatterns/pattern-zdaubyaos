@@ -1,14 +1,3 @@
-enum YaosBlockStrategy {
-    INAIDJIYAIOUZD = 'inaidjiyaiouzd',
-    UMOWCHUWOWIEST = 'umowchuwowiest',
-}
-
-enum YaosBlockResolution {
-    HIGHREG = 'highregular',
-    LOWREG = 'lowregular',
-    MIDIRREG = 'midirregular',
-}
-
 enum YaosBlockStyle {
     OUZD = 'ouzd',
     INAI = 'inai',
@@ -43,21 +32,10 @@ enum ZdaubRendering {
     TREM = 'trem',
 }
 
-type ByBlockStrategy = {
-    [x in YaosBlockStrategy]: ByBlockResolution
-}
-type ByBlockResolution = {
-    [x in YaosBlockResolution]: YaosBlockStyle
-}
-
 export {
-    YaosBlockStyle,
-    YaosBlockResolution,
-    YaosBlockStrategy,
     BarDuration,
+    YaosBlockStyle,
     YaosRendering,
-    ByBlockResolution,
-    ByBlockStrategy,
     ZdaubBlockStyle,
     ZdaubRendering,
 }

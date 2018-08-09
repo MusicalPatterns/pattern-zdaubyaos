@@ -1,68 +1,18 @@
 import sequence from '../../../../src/utilities/sequence'
 import { getYaosNotes } from '../notes/yaosNotes'
 import { Part } from '../types'
-import {
-    BarDuration,
-    YaosBlockResolution,
-    YaosBlockStrategy,
-    YaosRendering,
-} from '../zdaubyaosTypes'
+import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 
 const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
-    getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.UMOWCHUWOWIEST,
-        BarDuration.FIFTEEN,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.UMOWCHUWOWIEST,
-        BarDuration.FIFTEEN,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
-        BarDuration.FIFTEEN,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.HIGHREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
-        BarDuration.FIFTEEN,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.LOWREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
-        BarDuration.FIFTEEN,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.HIGHREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
-        BarDuration.FIFTEEN,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.LOWREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
-        BarDuration.FIFTEEN,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.UMOWCHUWOWIEST,
-        BarDuration.TWENTYFOUR,
-        YaosRendering.FALL,
-    ),
-    getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
-        BarDuration.TWENTYFOUR,
-        YaosRendering.FALL,
-    ),
+    getYaosNotes(YaosBlockStyle.CHUWOW, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.CHUWOW, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.DJIYAI, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.OUZD, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.INAI, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.OUZD, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.INAI, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.CHUWOW, BarDuration.TWENTYFOUR, YaosRendering.FALL),
+    getYaosNotes(YaosBlockStyle.DJIYAI, BarDuration.TWENTYFOUR, YaosRendering.FALL),
 ])
 
 export {

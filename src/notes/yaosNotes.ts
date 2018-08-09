@@ -1,8 +1,7 @@
-import { YAOS_BLOCK_STYLES_BY_STRATEGY_THEN_RESOLUTION } from '../constants'
 import { inaiiiVarietyContour, yaosContoursByBarDurationBlockStyleThenRendering } from '../contours/yaosContours'
 import makeNote from '../makeNote'
 import { Contour, Notes } from '../types'
-import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
+import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 
 type ByRendering = { [z in YaosRendering]: Notes }
 type ByBlockStyle = { [y in YaosBlockStyle]: ByRendering }
@@ -47,21 +46,17 @@ export const yaosNoteUsagesByDurationBlocksThenRendering: UsageGrouping = {
 }
 
 type GetYaosNotes = (
-    blockResolution: YaosBlockResolution,
-    blockStrategy: YaosBlockStrategy,
+    blockStyle: YaosBlockStyle,
     barDuration: BarDuration,
     rendering: YaosRendering,
 ) => Notes
 
 const getYaosNotes: GetYaosNotes =
     (
-        blockResolution: YaosBlockResolution,
-        blockStrategy: YaosBlockStrategy,
+        blockStyle: YaosBlockStyle,
         barDuration: BarDuration,
         rendering: YaosRendering,
     ): Notes => {
-        const blockStyle: YaosBlockStyle = YAOS_BLOCK_STYLES_BY_STRATEGY_THEN_RESOLUTION[blockStrategy][blockResolution]
-
         yaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] =
             yaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] || {}
         const byBlockStyle: UsageCountByRendering | undefined =

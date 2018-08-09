@@ -2,85 +2,70 @@ import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
 import { getYaosNotes } from '../notes/yaosNotes'
 import { Part } from '../types'
-import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosRendering } from '../zdaubyaosTypes'
+import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 
-const trueFormulaicYaosPart: (
-    fifteenRendering: YaosRendering, twentyfourRendering: YaosRendering, firstBlockStrategy: YaosBlockStrategy,
-) => Part = (
-    fifteenRendering: YaosRendering, twentyfourRendering: YaosRendering, firstBlockStrategy: YaosBlockStrategy,
-): Part => {
-    const secondBlockStrategy: YaosBlockStrategy = firstBlockStrategy === YaosBlockStrategy.UMOWCHUWOWIEST ?
-        YaosBlockStrategy.INAIDJIYAIOUZD :
-        YaosBlockStrategy.UMOWCHUWOWIEST
+type FormulaicTrueYaosPart = (fifteenRendering: YaosRendering, twentyfourRendering: YaosRendering) => Part
 
-    return sequence([
-        repeatCall(() => getYaosNotes(
-            YaosBlockResolution.MIDIRREG, firstBlockStrategy, BarDuration.FIFTEEN, fifteenRendering,
-        ),         4),
-        repeatCall(() => getYaosNotes(
-            YaosBlockResolution.HIGHREG, firstBlockStrategy, BarDuration.FIFTEEN, fifteenRendering,
-        ),         1),
-        repeatCall(() => getYaosNotes(
-            YaosBlockResolution.LOWREG, firstBlockStrategy, BarDuration.FIFTEEN, fifteenRendering,
-        ),         1),
-        repeatCall(() => getYaosNotes(
-            YaosBlockResolution.HIGHREG, firstBlockStrategy, BarDuration.FIFTEEN, fifteenRendering,
-        ),         1),
-        repeatCall(() => getYaosNotes(
-            YaosBlockResolution.LOWREG, firstBlockStrategy, BarDuration.FIFTEEN, fifteenRendering,
-        ),         1),
-        repeatCall(() => getYaosNotes(
-            YaosBlockResolution.MIDIRREG, secondBlockStrategy, BarDuration.TWENTYFOUR, twentyfourRendering,
-        ),         4),
-    ])
-}
+const trueFormulaicUmowchuwowiestToInaidjiyaiouzdPart: FormulaicTrueYaosPart = (
+    fifteenRendering: YaosRendering, twentyfourRendering: YaosRendering): Part => sequence([
+    repeatCall(() => getYaosNotes(YaosBlockStyle.CHUWOW, BarDuration.FIFTEEN, fifteenRendering), 4),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.IEST, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.UMOW, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.IEST, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.UMOW, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.DJIYAI, BarDuration.TWENTYFOUR, twentyfourRendering), 4),
+])
 
-const trueYaosUmowchuwowiestSpringToSummerPart: Part = trueFormulaicYaosPart(
-    YaosRendering.SPRING, YaosRendering.SUMMER, YaosBlockStrategy.UMOWCHUWOWIEST,
+const trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosPart: FormulaicTrueYaosPart = (
+    fifteenRendering: YaosRendering, twentyfourRendering: YaosRendering): Part => sequence([
+    repeatCall(() => getYaosNotes(YaosBlockStyle.DJIYAI, BarDuration.FIFTEEN, fifteenRendering), 4),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.OUZD, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.INAI, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.OUZD, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.INAI, BarDuration.FIFTEEN, fifteenRendering), 1),
+    repeatCall(() => getYaosNotes(YaosBlockStyle.CHUWOW, BarDuration.TWENTYFOUR, twentyfourRendering), 4),
+])
+
+const trueYaosUmowchuwowiestSpringToSummerPart: Part = trueFormulaicUmowchuwowiestToInaidjiyaiouzdPart(
+    YaosRendering.SPRING, YaosRendering.SUMMER,
 )
 
-const trueYaosUmowchuwowiestSummerToSpringPart: Part = trueFormulaicYaosPart(
-    YaosRendering.SUMMER, YaosRendering.SPRING, YaosBlockStrategy.UMOWCHUWOWIEST,
+const trueYaosUmowchuwowiestSummerToSpringPart: Part = trueFormulaicUmowchuwowiestToInaidjiyaiouzdPart(
+    YaosRendering.SUMMER, YaosRendering.SPRING,
 )
 
-const trueYaosInaidjiyaiouzdSummerToSpringPart: Part = trueFormulaicYaosPart(
-    YaosRendering.SUMMER, YaosRendering.SPRING, YaosBlockStrategy.INAIDJIYAIOUZD,
+const trueYaosInaidjiyaiouzdSummerToSpringPart: Part = trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosPart(
+    YaosRendering.SUMMER, YaosRendering.SPRING,
 )
 
 const trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart: Part = sequence([
     repeatCall(() => getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
+        YaosBlockStyle.DJIYAI,
         BarDuration.FIFTEEN,
         YaosRendering.SPRINGY_SUMMER,
     ),         4),
     repeatCall(() => getYaosNotes(
-        YaosBlockResolution.HIGHREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
+        YaosBlockStyle.OUZD,
         BarDuration.FIFTEEN,
         YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        YaosBlockResolution.LOWREG,
-        YaosBlockStrategy.UMOWCHUWOWIEST,
+        YaosBlockStyle.UMOW,
         BarDuration.FIFTEEN,
         YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        YaosBlockResolution.HIGHREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
+        YaosBlockStyle.OUZD,
         BarDuration.FIFTEEN,
         YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.INAIDJIYAIOUZD,
+        YaosBlockStyle.DJIYAI,
         BarDuration.FIFTEEN,
         YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        YaosBlockResolution.MIDIRREG,
-        YaosBlockStrategy.UMOWCHUWOWIEST,
+        YaosBlockStyle.CHUWOW,
         BarDuration.TWENTYFOUR,
         YaosRendering.SUMMERY_SPRING,
     ),         4),
