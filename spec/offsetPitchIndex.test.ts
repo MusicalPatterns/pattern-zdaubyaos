@@ -6,43 +6,43 @@ describe('offset pitch', () => {
     it('offsets the pitch of every note', () => {
         const notes: Notes = [
             {
-                duration: 1,
-                pitchIndex: 1,
-                sustain: 1,
-                gain: 1,
+                duration: to.Time(1),
+                pitchIndex: to.Index(1),
+                sustain: to.Time(1),
+                gain: to.Scalar(1),
             },
             {
-                duration: 1,
-                pitchIndex: 2,
-                sustain: 1,
-                gain: 1,
+                duration: to.Time(1),
+                pitchIndex: to.Index(2),
+                sustain: to.Time(1),
+                gain: to.Scalar(1),
             },
             {
-                duration: 1,
-                pitchIndex: 4,
-                sustain: 1,
-                gain: 1,
+                duration: to.Time(1),
+                pitchIndex: to.Index(4),
+                sustain: to.Time(1),
+                gain: to.Scalar(1),
             },
         ]
 
         const expectedNotes: Notes = [
             {
-                duration: 1,
-                pitchIndex: 2,
-                sustain: 1,
-                gain: 1,
+                duration: to.Time(1),
+                pitchIndex: to.Index(2),
+                sustain: to.Time(1),
+                gain: to.Scalar(1),
             },
             {
-                duration: 1,
-                pitchIndex: 3,
-                sustain: 1,
-                gain: 1,
+                duration: to.Time(1),
+                pitchIndex: to.Index(3),
+                sustain: to.Time(1),
+                gain: to.Scalar(1),
             },
             {
-                duration: 1,
-                pitchIndex: 5,
-                sustain: 1,
-                gain: 1,
+                duration: to.Time(1),
+                pitchIndex: to.Index(5),
+                sustain: to.Time(1),
+                gain: to.Scalar(1),
             },
         ]
 

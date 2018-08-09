@@ -1,7 +1,8 @@
 import { NOTE_TYPES_BY_YAOS_RENDERINGS } from '../constants'
 import { inaiiiVariety, yaosContoursByBarDurationBlockStyleThenRendering } from '../contours/yaosContours'
 import { manualNoteType } from '../noteTypes'
-import { BarDuration, YaosBlockStyle, Contour, Notes, YaosRendering } from '../types'
+import { Contour, Notes } from '../types'
+import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 
 type ByRendering = { [z in YaosRendering]: Notes }
 type ByBlockStyle = { [y in YaosBlockStyle]: ByRendering }
@@ -18,7 +19,8 @@ Object.entries(yaosContoursByBarDurationBlockStyleThenRendering).forEach(
             ([blockStyle, contoursByRendering]: [YaosBlockStyle, ByRendering]): void => {
                 Object.entries(contoursByRendering).forEach(
                     // @ts-ignore
-                    ([rendering, contour]: [YaosRendering, Contour]): void => {
+                    ([rendering, contour]: [YaosRendering, Contour | ManualContour]): void => {
+                        // tslint:disable-next-line:no-unsafe-any
                         const notes: Notes = contour.map(NOTE_TYPES_BY_YAOS_RENDERINGS[rendering])
 
                         yaosNotesByBarDurationBlockStyleThenRendering[barDuration] =

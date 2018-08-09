@@ -3,6 +3,9 @@
 import { Blocks, Contour, ManualContour, ManualContourElement } from '../types'
 import { Block, ContourElement } from './nominalTypes'
 
+const Block: (block: number) => Block =
+    (block: number): Block => block as any
+
 const Blocks: (_: Array<number | Block>) => Blocks =
     (blocks: Array<number | Block>): Blocks =>
         blocks.map((block: Block | number): Block => block as any)
@@ -19,6 +22,7 @@ const ContourElement: (contourElement: number) => ContourElement =
     (contourElement: number): ContourElement => contourElement as any
 
 export {
+    Block,
     Blocks,
     Contour,
     ManualContour,

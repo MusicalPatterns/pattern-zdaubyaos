@@ -1,42 +1,30 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import {
-    ascentFifteenGlisNotes,
-    ascentFifteenTremNotes,
-    escapeFifteenGlisNotes,
-    escapeFifteenTremNotes,
-    noodlingFifteenGlisNotes,
-    noodlingFifteenTremNotes,
-} from '../notes/zdaubFifteenNotes'
-import { zdaubGlisVariantNotes } from '../notes/zdaubOtherNotes'
-import {
-    inscapeTwentyfourGlisNotes,
-    inscapeTwentyfourTremNotes,
-    noodlingTwentyfourGlisNotes,
-    noodlingTwentyfourTremNotes,
-} from '../notes/zdaubTwentyfourNotes'
+import getZdaubNotes from '../notes/getZdaubNotes'
+import { zdaubGlisVariantNotes } from '../notes/zdaubNotes'
 import { Part } from '../types'
+import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../zdaubyaosTypes'
 
 const trueZdaubGlisPart: Part = sequence([
-    repeatCall(() => noodlingFifteenGlisNotes, 3),
-    escapeFifteenGlisNotes,
-    ascentFifteenGlisNotes,
-    inscapeTwentyfourGlisNotes,
-    repeatCall(() => noodlingTwentyfourGlisNotes, 3),
+    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.FIFTEEN, ZdaubRendering.GLIS), 3),
+    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.FIFTEEN, ZdaubRendering.GLIS),
+    getZdaubNotes(ZdaubBlockStyle.SCEND, BarDuration.FIFTEEN, ZdaubRendering.GLIS),
+    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.TWENTYFOUR, ZdaubRendering.GLIS),
+    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.TWENTYFOUR, ZdaubRendering.GLIS), 3),
 ])
 
 const trueZdaubGlisVariantPart: Part = sequence([
-    repeatCall(() => noodlingFifteenGlisNotes, 4),
-    escapeFifteenGlisNotes,
+    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.FIFTEEN, ZdaubRendering.GLIS), 4),
+    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.FIFTEEN, ZdaubRendering.GLIS),
     zdaubGlisVariantNotes,
 ])
 
 const trueZdaubTremPart: Part = sequence([
-    repeatCall(() => noodlingFifteenTremNotes, 3),
-    escapeFifteenTremNotes,
-    ascentFifteenTremNotes,
-    inscapeTwentyfourTremNotes,
-    repeatCall(() => noodlingTwentyfourTremNotes, 3),
+    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.FIFTEEN, ZdaubRendering.TREM), 3),
+    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.FIFTEEN, ZdaubRendering.TREM),
+    getZdaubNotes(ZdaubBlockStyle.SCEND, BarDuration.FIFTEEN, ZdaubRendering.TREM),
+    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.TWENTYFOUR, ZdaubRendering.TREM),
+    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.TWENTYFOUR, ZdaubRendering.TREM), 3),
 ])
 
 export {

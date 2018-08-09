@@ -1,8 +1,7 @@
-// tslint:disable:no-magic-numbers
-
 import repeat from '../../../../src/utilities/repeat'
-import { BarDuration, Blocks, YaosBlockStyle } from '../types'
+import { Blocks } from '../types'
 import * as to from '../utilities/to'
+import { BarDuration, YaosBlockStyle } from '../zdaubyaosTypes'
 
 const yaosBlocksByBarDurationThenBlockStyle: { [x in BarDuration]: { [y in YaosBlockStyle]: Blocks } } = {
     [BarDuration.FIFTEEN]: {

@@ -6,43 +6,43 @@ describe('scale gain', () => {
     it('scales the gain of every note', () => {
         const notes: Notes = [
             {
-                duration: 1,
-                pitchIndex: 1,
-                sustain: 1,
-                gain: 1,
+                duration: to.Time(1),
+                pitchIndex: to.Index(1),
+                sustain: to.Time(1),
+                gain: to.Scalar(1),
             },
             {
-                duration: 1,
-                pitchIndex: 1,
-                sustain: 1,
-                gain: 0.5,
+                duration: to.Time(1),
+                pitchIndex: to.Index(1),
+                sustain: to.Time(1),
+                gain: to.Scalar(0.5,)
             },
             {
-                duration: 1,
-                pitchIndex: 1,
-                sustain: 1,
-                gain: 0.25,
+                duration: to.Time(1),
+                pitchIndex: to.Index(1),
+                sustain: to.Time(1),
+                gain: to.Scalar(0.25),
             },
         ]
 
         const expectedNotes: Notes = [
             {
-                duration: 1,
-                pitchIndex: 1,
-                sustain: 1,
-                gain: 0.5,
+                duration: to.Time(1),
+                pitchIndex: to.Index(1),
+                sustain: to.Time(1),
+                gain: to.Scalar(0.5,)
             },
             {
-                duration: 1,
-                pitchIndex: 1,
-                sustain: 1,
-                gain: 0.25,
+                duration: to.Time(1),
+                pitchIndex: to.Index(1),
+                sustain: to.Time(1),
+                gain: to.Scalar(0.25),
             },
             {
-                duration: 1,
-                pitchIndex: 1,
-                sustain: 1,
-                gain: 0.125,
+                duration: to.Time(1),
+                pitchIndex: to.Index(1),
+                sustain: to.Time(1),
+                gain: to.Scalar(0.125),
             },
         ]
 

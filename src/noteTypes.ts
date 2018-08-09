@@ -8,7 +8,7 @@ import { Note } from '../../../src/types'
 import * as from from '../../../src/utilities/from'
 import { Index, Time } from '../../../src/utilities/nominalTypes'
 import * as to from '../../../src/utilities/to'
-import { ManualContourElement, NoteType } from './types'
+import { ManualContourElement, ManualNoteType, NoteType } from './types'
 import * as zdaubyaosFrom from './utilities/from'
 import { ContourElement } from './utilities/nominalTypes'
 
@@ -52,7 +52,7 @@ const tremNoteType: NoteType =
         }
     }
 
-const manualNoteType: ([pitchIndex, duration]: ManualContourElement) => Note =
+const manualNoteType: ManualNoteType =
     ([pitchIndex, duration]: ManualContourElement): Note => {
         if (pitchIndex === REST) {
             return {

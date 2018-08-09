@@ -1,18 +1,10 @@
-import {
-    BarDuration,
-    Contour,
-    ZdaubRendering,
-    ZdaubBlockStyle,
-    YaosBlockStyle,
-    Blocks,
-    YaosRendering,
-    RenderingFunction
-} from '../types'
 import { zdaubBlocksByBarDurationThenBlockStyle } from '../blocks/zdaubBlocks'
-import renderings from '../renderings'
-import render from '../render'
+import zdaubRenderings from '../renderings/zdaubRenderings'
+import { Blocks, Contour, ManualContour, RenderingFunction } from '../types'
+import * as to from '../utilities/to'
+import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../zdaubyaosTypes'
 
-type ByRendering = { [z in ZdaubRendering]: Contour }
+type ByRendering = { [z in ZdaubRendering]: Contour | ManualContour }
 type ByBlockStyle = { [y in ZdaubBlockStyle]: ByRendering }
 type ZdaubContours = { [x in BarDuration]: ByBlockStyle }
 
@@ -24,11 +16,11 @@ Object.entries(zdaubBlocksByBarDurationThenBlockStyle).forEach(
     ([barDuration, blocksBy]: [BarDuration, ByBlockStyle]): void => {
         Object.entries(blocksBy).forEach(
             // @ts-ignore
-            ([blocksName, blocks]: [YaosBlockStyle, Blocks]): void => {
-                Object.entries(renderings).forEach(
+            ([blocksName, blocks]: [ZdaubBlockStyle, Blocks]): void => {
+                Object.entries(zdaubRenderings).forEach(
                     // @ts-ignore
-                    ([renderingName, rendering]: [YaosRendering, RenderingFunction]): void => {
-                        const contour: Contour = render(blocks, rendering)
+                    ([renderingName, rendering]: [ZdaubRendering, RenderingFunction]): void => {
+                        const contour: Contour | ManualContour = rendering(blocks)
 
                         zdaubContoursByBarDurationBlockStyleThenRendering[barDuration] =
                             zdaubContoursByBarDurationBlockStyleThenRendering[barDuration] || {}
@@ -40,7 +32,17 @@ Object.entries(zdaubBlocksByBarDurationThenBlockStyle).forEach(
             })
     })
 
+const zdaubGlisVariantContour: Contour = to.Contour([
+    4, 5, 6,
+    7, 8,
+    9, 8,
+    6, 4, 2, 4, 6,
+    8, 6, 4, 2, 4,
+    6, 4, 2, 4, 6,
+    8, 6, 4, 2, 4, 2,
+])
 
 export {
     zdaubContoursByBarDurationBlockStyleThenRendering,
+    zdaubGlisVariantContour,
 }

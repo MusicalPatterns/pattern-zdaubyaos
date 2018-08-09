@@ -1,5 +1,6 @@
 import { YAOS_BLOCK_STYLES_BY_STRATEGY_THEN_RESOLUTION } from '../constants'
-import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosBlockStyle, Notes, YaosRendering } from '../types'
+import { Notes } from '../types'
+import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 import { yaosNotesByBarDurationBlockStyleThenRendering } from './yaosNotes'
 
 type UsageCount = number

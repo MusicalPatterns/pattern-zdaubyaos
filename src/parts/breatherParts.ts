@@ -6,17 +6,18 @@ import * as to from '../../../../src/utilities/to'
 import getYaosNotes from '../notes/getYaosNotes'
 import { backboneTwentyfourNotes } from '../notes/otherNotes'
 import { inaiiiVarietyNotes } from '../notes/yaosNotes'
-import { BarDuration, YaosBlockResolution, YaosBlockStrategy, Part, YaosRendering } from '../types'
+import { Part } from '../types'
+import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosRendering } from '../zdaubyaosTypes'
 
 const breatherRestPart: Part = rest(to.Time(24))
 const breatherSpringPart: Part = getYaosNotes(
-    YaosBlockResolution.LOWREGULAR,
+    YaosBlockResolution.LOWREG,
     YaosBlockStrategy.INAIDJIYAIOUZD,
     BarDuration.TWENTYFOUR,
     YaosRendering.SPRING,
 )
 const breatherSummerPart: Part = getYaosNotes(
-    YaosBlockResolution.LOWREGULAR,
+    YaosBlockResolution.LOWREG,
     YaosBlockStrategy.INAIDJIYAIOUZD,
     BarDuration.TWENTYFOUR,
     YaosRendering.SUMMER,
@@ -24,7 +25,7 @@ const breatherSummerPart: Part = getYaosNotes(
 const doubleBreatherFallPart: Part = repeat(backboneTwentyfourNotes, 2)
 const breatherVarietyPart: Part = inaiiiVarietyNotes
 const breatherSpringAltPart: Part = getYaosNotes(
-    YaosBlockResolution.HIGHREGULAR,
+    YaosBlockResolution.HIGHREG,
     YaosBlockStrategy.INAIDJIYAIOUZD,
     BarDuration.TWENTYFOUR,
     YaosRendering.SPRING,
