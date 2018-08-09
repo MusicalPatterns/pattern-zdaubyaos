@@ -1,7 +1,6 @@
-import { NOTE_TYPES_BY_ZDAUB_RENDERINGS } from '../constants'
 import { zdaubContoursByBarDurationBlockStyleThenRendering, zdaubGlisVariantContour } from '../contours/zdaubContours'
-import { glisNoteType } from '../noteTypes'
-import { Contour, ManualContour, Notes } from '../types'
+import makeNote from '../makeNote'
+import { Contour, Notes } from '../types'
 import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../zdaubyaosTypes'
 
 type ByRendering = { [z in ZdaubRendering]: Notes }
@@ -19,11 +18,9 @@ Object.entries(zdaubContoursByBarDurationBlockStyleThenRendering).forEach(
             ([blockStyle, contoursByRendering]: [ZdaubBlockStyle, ByRendering]): void => {
                 Object.entries(contoursByRendering).forEach(
                     // @ts-ignore
-                    ([rendering, contour]: [ZdaubRendering, Contour | ManualContour]): void => {
-                        // TODO: realllly not sure why this doesn't work but the same line works in yaosNotes
-                        // @ts-ignore
+                    ([rendering, contour]: [ZdaubRendering, Contour]): void => {
                         // tslint:disable-next-line:no-unsafe-any
-                        const notes: Notes = contour.map(NOTE_TYPES_BY_ZDAUB_RENDERINGS[rendering])
+                        const notes: Notes = contour.map(makeNote)
 
                         zdaubNotesByBarDurationBlockStyleThenRendering[barDuration] =
                             zdaubNotesByBarDurationBlockStyleThenRendering[barDuration] || {}
@@ -34,7 +31,7 @@ Object.entries(zdaubContoursByBarDurationBlockStyleThenRendering).forEach(
             })
     })
 
-const zdaubGlisVariantNotes: Notes = zdaubGlisVariantContour.map(glisNoteType)
+const zdaubGlisVariantNotes: Notes = zdaubGlisVariantContour.map(makeNote)
 
 export {
     zdaubNotesByBarDurationBlockStyleThenRendering,

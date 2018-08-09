@@ -1,10 +1,10 @@
 import { yaosBlocksByBarDurationThenBlockStyle } from '../blocks/yaosBlocks'
 import yaosRenderings from '../renderings/yaosRenderings'
-import { Blocks, Contour, ManualContour, RenderingFunction } from '../types'
+import { Blocks, Contour, RenderingFunction } from '../types'
 import * as to from '../utilities/to'
 import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 
-const inaiiiVariety: ManualContour = to.ManualContour([
+const inaiiiVariety: Contour = to.Contour([
     [0, 1], [2, 1], [3, 1],
     [1, 1], [0, 1], [3, 1],
     [0, 1], [2, 1], [3, 1],
@@ -15,7 +15,7 @@ const inaiiiVariety: ManualContour = to.ManualContour([
     [1, 1], [2, 2],
 ])
 
-type ByRendering = { [z in YaosRendering]: Contour | ManualContour }
+type ByRendering = { [z in YaosRendering]: Contour }
 type ByBlockStyle = { [y in YaosBlockStyle]: ByRendering }
 type YaosContours = { [x in BarDuration]: ByBlockStyle }
 
@@ -31,7 +31,7 @@ Object.entries(yaosBlocksByBarDurationThenBlockStyle).forEach(
                 Object.entries(yaosRenderings).forEach(
                     // @ts-ignore
                     ([renderingName, rendering]: [YaosRendering, RenderingFunction]): void => {
-                        const contour: Contour | ManualContour = rendering(blocks)
+                        const contour: Contour = rendering(blocks)
 
                         yaosContoursByBarDurationBlockStyleThenRendering[barDuration] =
                             yaosContoursByBarDurationBlockStyleThenRendering[barDuration] || {}

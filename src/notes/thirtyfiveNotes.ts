@@ -4,16 +4,16 @@ import {
     thirtyfiveZdaub,
     thirtyfiveZdaubOnlyWiggle,
 } from '../contours/thirtyfiveContours'
-import { glisNoteType } from '../noteTypes'
+import makeNote from '../makeNote'
 import { Notes } from '../types'
 
-const thirtyfiveYaosBassNotes: Notes = thirtyfiveYaosBass.map(glisNoteType)
+const thirtyfiveYaosBassNotes: Notes = thirtyfiveYaosBass.map(makeNote)
 
-const thirtyfiveYaosAccidentInspiredNotes: Notes = thirtyfiveYaosAccidentInspired.map(glisNoteType)
+const thirtyfiveYaosAccidentInspiredNotes: Notes = thirtyfiveYaosAccidentInspired.map(makeNote)
 
-const thirtyfiveZdaubNotes: Notes = thirtyfiveZdaub.map(glisNoteType)
+const thirtyfiveZdaubNotes: Notes = thirtyfiveZdaub.map(makeNote)
 
-const thirtyfiveZdaubOnlyWiggleNotes: Notes = thirtyfiveZdaubOnlyWiggle.map(glisNoteType)
+const thirtyfiveZdaubOnlyWiggleNotes: Notes = thirtyfiveZdaubOnlyWiggle.map(makeNote)
 
 export {
     thirtyfiveYaosBassNotes,

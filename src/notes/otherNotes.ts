@@ -7,22 +7,22 @@ import {
     shiftyTwentyfour,
     shiftyTwentyfourVariant,
 } from '../contours/otherContours'
-import { glisNoteType, manualNoteType } from '../noteTypes'
+import makeNote from '../makeNote'
 import { Notes } from '../types'
 
-const secretLongChordNotes: Notes = secretLongChord.map(manualNoteType)
+const secretLongChordNotes: Notes = secretLongChord.map(makeNote)
 
-const backboneFifteenNotes: Notes = backboneFifteenContour.map(glisNoteType)
+const backboneFifteenNotes: Notes = backboneFifteenContour.map(makeNote)
 
-const backboneTwentyfourNotes: Notes = backboneTwentyfourContour.map(glisNoteType)
+const backboneTwentyfourNotes: Notes = backboneTwentyfourContour.map(makeNote)
 
-const shiftyFifteenNotes: Notes = shiftyFifteen.map(glisNoteType)
+const shiftyFifteenNotes: Notes = shiftyFifteen.map(makeNote)
 
-const shiftyTwentyfourNotes: Notes = shiftyTwentyfour.map(glisNoteType)
+const shiftyTwentyfourNotes: Notes = shiftyTwentyfour.map(makeNote)
 
-const shiftyTwentyfourVariantNotes: Notes = shiftyTwentyfourVariant.map(glisNoteType)
+const shiftyTwentyfourVariantNotes: Notes = shiftyTwentyfourVariant.map(makeNote)
 
-const shiftyNotes: Notes = shifty.map(glisNoteType)
+const shiftyNotes: Notes = shifty.map(makeNote)
 
 export {
     secretLongChordNotes,

@@ -4,7 +4,7 @@ import offset from '../../../../src/utilities/offset'
 import repeat from '../../../../src/utilities/repeat'
 import sequence from '../../../../src/utilities/sequence'
 import * as to from '../../../../src/utilities/to'
-import { Blocks, Contour, ManualContour, RenderingFunction } from '../types'
+import { Blocks, Contour, ContourElement, RenderingFunction } from '../types'
 import * as zdaubyaosFrom from '../utilities/from'
 import { Block } from '../utilities/nominalTypes'
 import * as zdaubyaosTo from '../utilities/to'
@@ -12,15 +12,23 @@ import { ZdaubRendering } from '../zdaubyaosTypes'
 
 const glisBlock: (block: Block) => Contour =
     (block: Block): Contour =>
-        zdaubyaosTo.Contour([zdaubyaosFrom.Block(block)])
+        [
+            [
+                to.Index(zdaubyaosFrom.Block(block)),
+                to.Time(zdaubyaosFrom.Block(block)),
+            ],
+        ]
 
 const glis: RenderingFunction =
     (blocks: Blocks): Contour =>
         sequence(blocks.map(glisBlock))
 
 const tremBlock: (block: Block) => Contour =
-    (block: Block): Contour =>
-        zdaubyaosTo.Contour(repeat([zdaubyaosFrom.Block(block)], zdaubyaosFrom.Block(block)))
+    (block: Block): Contour => {
+        const contourElement: ContourElement = [to.Index(zdaubyaosFrom.Block(block)), to.Time(1)]
+
+        return repeat([contourElement], zdaubyaosFrom.Block(block))
+    }
 
 const trem: RenderingFunction =
     (blocks: Blocks): Contour =>
@@ -31,7 +39,7 @@ const FIFTEEN: Time = 15 as any
 // tslint:disable-next-line:no-any no-magic-numbers
 const TWENTYFOUR: Time = 24 as any
 
-const bony: RenderingFunction = (blocks: Blocks): ManualContour => {
+const bony: RenderingFunction = (blocks: Blocks): Contour => {
     const blocksClone: Blocks = blocks.slice()
     const blocksTotal: Time = to.Time(blocksClone.reduce((m: number, n: Block) => m + zdaubyaosFrom.Block(n), 0))
     const isBarDurationFifteen: boolean = from.Time(blocksTotal) % from.Time(FIFTEEN) === 0
@@ -42,7 +50,7 @@ const bony: RenderingFunction = (blocks: Blocks): ManualContour => {
         repeat([1, 2], barCount * 5) :
         // tslint:disable-next-line:no-magic-numbers
         repeat([1, 3], barCount * 6))
-    const output: ManualContour = []
+    const output: Contour = []
     let blocksIndexForPitchIndex: Index = to.Index(0)
 
     rhythmicBlocks.forEach((rhythmicBlock: Block): void => {
