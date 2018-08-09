@@ -1,4 +1,7 @@
-import { zdaubContoursByBarDurationBlockStyleThenRendering } from '../../src/contours/zdaubContours'
+import {
+    zdaubContoursByBarDurationBlockStyleThenRendering,
+    zdaubGlisVariantContour
+} from '../../src/contours/zdaubContours'
 import * as to from '../../src/utilities/to'
 import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../../src/zdaubyaosTypes'
 
@@ -73,6 +76,7 @@ describe('zdaub contours', () => {
             })
         })
     })
+
     describe('of duration 24', () => {
         describe('glis renderings', () => {
             it('handles nodle', () => {
@@ -134,6 +138,20 @@ describe('zdaub contours', () => {
                     [13, 1], [13, 3], [13, 1], [13, 3], [13, 1], [13, 3], [13, 1], [11, 3], [11, 1], [11, 3], [11, 1], [11, 3],
                 ]))
             })
+        })
+    })
+
+    describe('other durations', () => {
+        it('handles glis variant', () => {
+            expect(zdaubGlisVariantContour).toEqual(to.Contour([
+                [4, 4], [5, 5], [6, 6],
+                [7, 7], [8, 8],
+                [9, 9], [8, 8],
+                [6, 6], [4, 4], [2, 2], [4, 4], [6, 6],
+                [8, 8], [6, 6], [4, 4], [2, 2], [4, 4],
+                [6, 6], [4, 4], [2, 2], [4, 4], [6, 6],
+                [8, 8], [6, 6], [4, 4], [2, 2], [4, 4], [2, 2],
+            ]))
         })
     })
 })

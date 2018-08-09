@@ -1,4 +1,4 @@
-import { inaiiiVariety, yaosContoursByBarDurationBlockStyleThenRendering } from '../../src/contours/yaosContours'
+import { inaiiiVarietyContour, yaosContoursByBarDurationBlockStyleThenRendering } from '../../src/contours/yaosContours'
 import * as to from '../../src/utilities/to'
 import { BarDuration, YaosBlockStyle, YaosRendering } from '../../src/zdaubyaosTypes'
 
@@ -442,8 +442,8 @@ describe('yaos contours', () => {
         })
 
         describe('other renderings', () => {
-            it('handles inai variety', () => {
-                expect(inaiiiVariety).toEqual(to.Contour([
+            it('handles inaiii variety', () => {
+                expect(inaiiiVarietyContour).toEqual(to.Contour([
                     [0, 1], [2, 1], [3, 1],
                     [1, 1], [0, 1], [3, 1],
                     [0, 1], [2, 1], [3, 1],

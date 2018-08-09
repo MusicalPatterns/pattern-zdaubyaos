@@ -1,18 +1,9 @@
-import { zdaubBlocksByBarDurationThenBlockStyle } from '../blocks/zdaubBlocks'
+import { zdaubBlocksByBarDurationThenBlockStyle, zdaubGlisVariantBlocks } from '../blocks/zdaubBlocks'
 import zdaubRenderings from '../renderings/zdaubRenderings'
 import { Blocks, Contour, RenderingFunction } from '../types'
-import * as to from '../utilities/to'
 import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../zdaubyaosTypes'
 
-const zdaubGlisVariantContour: Contour = to.Contour([
-    [4, 4], [5, 5], [6, 6],
-    [7, 7], [8, 8],
-    [9, 9], [8, 8],
-    [6, 6], [4, 4], [2, 2], [4, 4], [6, 6],
-    [8, 8], [6, 6], [4, 4], [2, 2], [4, 4],
-    [6, 6], [4, 4], [2, 2], [4, 4], [6, 6],
-    [8, 8], [6, 6], [4, 4], [2, 2], [4, 4], [2, 2],
-])
+const zdaubGlisVariantContour: Contour = zdaubRenderings[ZdaubRendering.GLIS](zdaubGlisVariantBlocks)
 
 type ByRendering = { [z in ZdaubRendering]: Contour }
 type ByBlockStyle = { [y in ZdaubBlockStyle]: ByRendering }

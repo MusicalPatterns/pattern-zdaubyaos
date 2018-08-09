@@ -1,5 +1,5 @@
 import { YAOS_BLOCK_STYLES_BY_STRATEGY_THEN_RESOLUTION } from '../constants'
-import { inaiiiVariety, yaosContoursByBarDurationBlockStyleThenRendering } from '../contours/yaosContours'
+import { inaiiiVarietyContour, yaosContoursByBarDurationBlockStyleThenRendering } from '../contours/yaosContours'
 import makeNote from '../makeNote'
 import { Contour, Notes } from '../types'
 import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
@@ -31,7 +31,7 @@ Object.entries(yaosContoursByBarDurationBlockStyleThenRendering).forEach(
             })
     })
 
-const inaiiiVarietyNotes: Notes = inaiiiVariety.map(makeNote)
+const inaiiiVarietyNotes: Notes = inaiiiVarietyContour.map(makeNote)
 
 type UsageCount = number
 

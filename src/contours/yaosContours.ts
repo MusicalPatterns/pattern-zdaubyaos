@@ -1,19 +1,24 @@
+import sequence from '../../../../src/utilities/sequence'
 import { yaosBlocksByBarDurationThenBlockStyle } from '../blocks/yaosBlocks'
 import yaosRenderings from '../renderings/yaosRenderings'
 import { Blocks, Contour, RenderingFunction } from '../types'
-import * as to from '../utilities/to'
+import { Block } from '../utilities/nominalTypes'
 import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
 
-const inaiiiVariety: Contour = to.Contour([
-    [0, 1], [2, 1], [3, 1],
-    [1, 1], [0, 1], [3, 1],
-    [0, 1], [2, 1], [3, 1],
-    [1, 1], [0, 1], [3, 1],
-    [0, 1], [2, 1], [3, 1],
-    [1, 1], [0, 1], [3, 1],
-    [1, 1], [2, 2],
-    [1, 1], [2, 2],
-])
+const inaiiiVarietyContour: Contour = sequence(
+    yaosBlocksByBarDurationThenBlockStyle[BarDuration.TWENTYFOUR][YaosBlockStyle.INAI].map(
+        (block: Block, index: number): Contour =>
+            [
+                yaosRenderings[YaosRendering.SPRING],
+                yaosRenderings[YaosRendering.SUMMER],
+                yaosRenderings[YaosRendering.SPRING],
+                yaosRenderings[YaosRendering.SUMMER],
+                yaosRenderings[YaosRendering.SPRING],
+                yaosRenderings[YaosRendering.SUMMER],
+                yaosRenderings[YaosRendering.FALL],
+                yaosRenderings[YaosRendering.FALL],
+            ][index]([block])),
+)
 
 type ByRendering = { [z in YaosRendering]: Contour }
 type ByBlockStyle = { [y in YaosBlockStyle]: ByRendering }
@@ -44,6 +49,6 @@ Object.entries(yaosBlocksByBarDurationThenBlockStyle).forEach(
     })
 
 export {
-    inaiiiVariety,
+    inaiiiVarietyContour,
     yaosContoursByBarDurationBlockStyleThenRendering,
 }

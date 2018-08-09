@@ -31,6 +31,17 @@ const zdaubBlocksByBarDurationThenBlockStyle: { [x in BarDuration]: { [y in Zdau
     },
 }
 
+const zdaubGlisVariantBlocks: Blocks = to.Blocks([
+    4, 5, 6,
+    7, 8,
+    9, 8,
+    6, 4, 2, 4, 6,
+    8, 6, 4, 2, 4,
+    6, 4, 2, 4, 6,
+    8, 6, 4, 2, 4, 2,
+])
+
 export {
     zdaubBlocksByBarDurationThenBlockStyle,
+    zdaubGlisVariantBlocks,
 }
