@@ -5,7 +5,6 @@ import {
     almostTrueExtendedEndingZdaubGlisPart,
     almostTrueExtendedEndingZdaubTremPart,
     almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-    almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun,
     almostTrueYetOfBackbonePart,
     almostTrueZdaubBonyWithSuperinscapePart,
 } from '../parts/almostTrueParts'
@@ -42,18 +41,8 @@ const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = al
     ],
 )
 
-const almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun: Segment = alterSegmentParts(
-    [
-        almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun,
-        almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun,
-        almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun,
-    ],
-    [{flipHarmonically: true}, {}, {}],
-)
-
 export {
     almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
     almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
     almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-    almostTrueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegmentAndFun,
 }

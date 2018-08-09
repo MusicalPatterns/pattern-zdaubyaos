@@ -9,20 +9,12 @@ const noodlingTwentyfourGlis: Contour = to.Contour([
     1, 3, 5, 7, 5, 3,
 ])
 
-const superinscapeTwentyfourGlis: Contour = to.Contour([
-    13, 11,
-])
-
 const inscapeTwentyfourTrem: Contour = to.Contour([
     9, 9, 9, 9, 9, 9, 9, 9, 9, 7, 7, 7, 7, 7, 7, 7, 5, 5, 5, 5, 5, 3, 3, 3,
 ])
 
 const noodlingTwentyfourTrem: Contour = to.Contour([
     1, 3, 3, 3, 5, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 5, 5, 5, 5, 5, 3, 3, 3,
-])
-
-const superinscapeTwentyfourTrem: Contour = to.Contour([
-    13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11,
 ])
 
 const inscapeTwentyfourBony: ManualContour = to.ManualContour([
@@ -44,7 +36,5 @@ export {
     noodlingTwentyfourTrem,
     inscapeTwentyfourBony,
     noodlingTwentyfourBony,
-    superinscapeTwentyfourGlis,
-    superinscapeTwentyfourTrem,
     superinscapeTwentyfourBony,
 }

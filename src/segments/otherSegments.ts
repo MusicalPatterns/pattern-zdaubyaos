@@ -1,52 +1,7 @@
 import * as to from '../../../../src/utilities/to'
 import alterSegmentParts from '../alterations/alterSegmentParts'
-import {
-    experimentWithIestttPart,
-    experimentWithUmowwwPart,
-    polyrhythmicAscentAPart,
-    polyrhythmicAscentBPart,
-    polyrhythmicAscentCPart,
-    polyrhythmicYaosFifteenPart,
-    polyrhythmicYaosTwentyfourPart,
-    secretLongChordPart,
-    totallyOutTherePart,
-} from '../parts/otherParts'
+import { secretLongChordPart, shiftyAPart, shiftyBPart, totallyOutTherePart } from '../parts/otherParts'
 import { Segment } from '../types'
-
-const experimentWithIestttAndUmowwwSegment: Segment = alterSegmentParts(
-    [
-        experimentWithIestttPart,
-        experimentWithUmowwwPart,
-        experimentWithUmowwwPart,
-    ],
-    [
-        {flipHarmonically: true},
-        {gainScalar: to.Scalar(0.5)},
-        {flipHarmonically: true},
-    ],
-)
-
-const polyrhythmicAllYaosSegment: Segment = alterSegmentParts(
-    [
-        polyrhythmicYaosFifteenPart,
-        polyrhythmicYaosTwentyfourPart,
-        polyrhythmicYaosTwentyfourPart,
-    ],
-    [
-        {flipHarmonically: true, pitchIndexOffset: to.Offset(3)},
-        {pitchIndexOffset: to.Offset(3)},
-        {flipHarmonically: true, pitchIndexOffset: to.Offset(3)},
-    ],
-)
-
-const polyrhythmicAscent: Segment = alterSegmentParts(
-    [
-        polyrhythmicAscentAPart,
-        polyrhythmicAscentBPart,
-        polyrhythmicAscentCPart,
-    ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {flipHarmonically: true}],
-)
 
 const secretLongChordSegment: Segment = alterSegmentParts(
     [
@@ -74,10 +29,21 @@ const totallyOutThereIntroSegment: Segment = alterSegmentParts(
     ],
 )
 
+const shiftySegment: Segment = alterSegmentParts(
+    [
+        shiftyAPart,
+        shiftyBPart,
+        shiftyBPart,
+    ],
+    [
+        {flipHarmonically: true},
+        {flipHarmonically: true},
+        {flipHarmonically: true},
+    ],
+)
+
 export {
-    experimentWithIestttAndUmowwwSegment,
-    polyrhythmicAllYaosSegment,
-    polyrhythmicAscent,
     secretLongChordSegment,
     totallyOutThereIntroSegment,
+    shiftySegment,
 }

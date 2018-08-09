@@ -24,7 +24,17 @@ const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
     [{flipHarmonically: true}, {flipHarmonically: true}, {}],
 )
 
+const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = alterSegmentParts(
+    [
+        trueYaosUmowchuwowiestSummerToSpringPart,
+        trueYaosUmowchuwowiestSummerToSpringPart,
+        trueYaosUmowchuwowiestSummerToSpringPart,
+    ],
+    [{flipHarmonically: true}, {}, {}],
+)
+
 export {
     trueSpringAllYaosUmowchuwowiestSegment,
     trueAllYaosAllRhythmsAtOnceSegment,
+    trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
 }

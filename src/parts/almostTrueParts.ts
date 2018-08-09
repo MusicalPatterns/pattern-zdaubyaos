@@ -1,8 +1,7 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import { backboneFifteenANotes, backboneTwentyfourCNotes } from '../notes/backboneNotes'
 import getYaosNotes from '../notes/getYaosNotes'
-import { funBetweenFifteenAndTwentyfourMomentNotes } from '../notes/otherNotes'
+import { backboneFifteenNotes, backboneTwentyfourNotes } from '../notes/otherNotes'
 import {
     ascentFifteenBonyNotes,
     ascentFifteenGlisNotes,
@@ -60,8 +59,8 @@ const almostTrueExtendedEndingZdaubGlisPart: Part = sequence([
 ])
 
 const almostTrueYetOfBackbonePart: Part = sequence([
-    repeatCall(() => backboneFifteenANotes, 8),
-    repeatCall(() => backboneTwentyfourCNotes, 3),
+    repeatCall(() => backboneFifteenNotes, 8),
+    repeatCall(() => backboneTwentyfourNotes, 3),
 ])
 
 const almostTrueZdaubBonyWithSuperinscapePart: Part = sequence([
@@ -73,20 +72,6 @@ const almostTrueZdaubBonyWithSuperinscapePart: Part = sequence([
     noodlingTwentyfourBonyNotes,
 ])
 
-const almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun: Part = sequence([
-    repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER,
-    ),         4),
-    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
-    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
-    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
-    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER),
-    funBetweenFifteenAndTwentyfourMomentNotes,
-    repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, Rendering.SPRING,
-    ),         4),
-])
-
 export {
     almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
     almostTrueExtendedEndingZdaubTremPart,
@@ -94,5 +79,4 @@ export {
     almostTrueExtendedEndingZdaubGlisPart,
     almostTrueYetOfBackbonePart,
     almostTrueZdaubBonyWithSuperinscapePart,
-    almostTrueYaosUmowchuwowiestSummerToSpringPartWithFun,
 }

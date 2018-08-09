@@ -1,27 +1,35 @@
 import {
-    funBetweenFifteenAndTwentyfourMoment,
-    polyrhythmicAscentA,
-    polyrhythmicAscentB,
-    polyrhythmicAscentC,
+    backboneFifteenContour,
+    backboneTwentyfourContour,
     secretLongChord,
+    shifty,
+    shiftyFifteen,
+    shiftyTwentyfour,
+    shiftyTwentyfourVariant,
 } from '../contours/otherContours'
 import { glisNoteType, manualNoteType } from '../noteTypes'
 import { Notes } from '../types'
 
-const polyrhythmicAscentANotes: Notes = polyrhythmicAscentA.map(glisNoteType)
-
-const polyrhythmicAscentBNotes: Notes = polyrhythmicAscentB.map(glisNoteType)
-
-const polyrhythmicAscentCNotes: Notes = polyrhythmicAscentC.map(glisNoteType)
-
 const secretLongChordNotes: Notes = secretLongChord.map(manualNoteType)
 
-const funBetweenFifteenAndTwentyfourMomentNotes: Notes = funBetweenFifteenAndTwentyfourMoment.map(manualNoteType)
+const backboneFifteenNotes: Notes = backboneFifteenContour.map(glisNoteType)
+
+const backboneTwentyfourNotes: Notes = backboneTwentyfourContour.map(glisNoteType)
+
+const shiftyFifteenNotes: Notes = shiftyFifteen.map(glisNoteType)
+
+const shiftyTwentyfourNotes: Notes = shiftyTwentyfour.map(glisNoteType)
+
+const shiftyTwentyfourVariantNotes: Notes = shiftyTwentyfourVariant.map(glisNoteType)
+
+const shiftyNotes: Notes = shifty.map(glisNoteType)
 
 export {
-    polyrhythmicAscentANotes,
-    polyrhythmicAscentBNotes,
-    polyrhythmicAscentCNotes,
     secretLongChordNotes,
-    funBetweenFifteenAndTwentyfourMomentNotes,
+    backboneFifteenNotes,
+    backboneTwentyfourNotes,
+    shiftyFifteenNotes,
+    shiftyTwentyfourNotes,
+    shiftyTwentyfourVariantNotes,
+    shiftyNotes,
 }

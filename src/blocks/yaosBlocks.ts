@@ -1,3 +1,5 @@
+// tslint:disable:no-magic-numbers
+
 import repeat from '../../../../src/utilities/repeat'
 import { BarDuration, Blocks, BlockStyle } from '../types'
 import * as to from '../utilities/to'

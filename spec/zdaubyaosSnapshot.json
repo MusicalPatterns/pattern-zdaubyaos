@@ -748,24 +748,6 @@
           "sustain": 0.9
         },
         {
-          "duration": 2,
-          "gain": 0,
-          "pitchIndex": 1,
-          "sustain": 1.9
-        },
-        {
-          "duration": 1,
-          "gain": 1,
-          "pitchIndex": 5,
-          "sustain": 0.9
-        },
-        {
-          "duration": 4,
-          "gain": 1,
-          "pitchIndex": 6,
-          "sustain": 3.9
-        },
-        {
           "duration": 1,
           "gain": 0,
           "pitchIndex": 1,
@@ -7500,10 +7482,10 @@
           "sustain": 0.9
         },
         {
-          "duration": 223,
+          "duration": 216,
           "gain": 0,
           "pitchIndex": 1,
-          "sustain": 222.9
+          "sustain": 215.9
         },
         {
           "duration": 216,
@@ -11348,10 +11330,10 @@
           "sustain": 23.9
         },
         {
-          "duration": 223,
+          "duration": 216,
           "gain": 0,
           "pitchIndex": 1,
-          "sustain": 222.9
+          "sustain": 215.9
         },
         {
           "duration": 216,
@@ -18506,24 +18488,6 @@
           "gain": 1,
           "pitchIndex": 3,
           "sustain": 0.9
-        },
-        {
-          "duration": 2,
-          "gain": 0,
-          "pitchIndex": 1,
-          "sustain": 1.9
-        },
-        {
-          "duration": 1,
-          "gain": 1,
-          "pitchIndex": 5,
-          "sustain": 0.9
-        },
-        {
-          "duration": 4,
-          "gain": 1,
-          "pitchIndex": 6,
-          "sustain": 3.9
         },
         {
           "duration": 1,
@@ -26370,24 +26334,6 @@
           "sustain": 0.9
         },
         {
-          "duration": 2,
-          "gain": 0,
-          "pitchIndex": 1,
-          "sustain": 1.9
-        },
-        {
-          "duration": 1,
-          "gain": 1,
-          "pitchIndex": 5,
-          "sustain": 0.9
-        },
-        {
-          "duration": 4,
-          "gain": 1,
-          "pitchIndex": 6,
-          "sustain": 3.9
-        },
-        {
           "duration": 1,
           "gain": 0,
           "pitchIndex": 1,
@@ -32780,10 +32726,10 @@
           "sustain": 23.9
         },
         {
-          "duration": 223,
+          "duration": 216,
           "gain": 0,
           "pitchIndex": 1,
-          "sustain": 222.9
+          "sustain": 215.9
         },
         {
           "duration": 216,
