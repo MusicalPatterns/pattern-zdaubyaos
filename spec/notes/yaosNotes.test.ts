@@ -1,8 +1,8 @@
 import calculateDuration from '../../../../src/utilities/calculateDuration'
+import * as from from '../../../../src/utilities/from'
 import { yaosNotesByBarDurationBlockStyleThenRendering } from '../../src/notes/yaosNotes'
 import { Notes } from '../../src/types'
 import { BarDuration, YaosRendering } from '../../src/zdaubyaosTypes'
-import * as from from '../../../../src/utilities/from'
 
 describe('yaos notes', () => {
     describe('of length 15', () => {

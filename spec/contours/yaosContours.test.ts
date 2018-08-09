@@ -1,6 +1,6 @@
 import { inaiiiVariety, yaosContoursByBarDurationBlockStyleThenRendering } from '../../src/contours/yaosContours'
-import { BarDuration, YaosBlockStyle, YaosRendering } from '../../src/zdaubyaosTypes'
 import * as to from '../../src/utilities/to'
+import { BarDuration, YaosBlockStyle, YaosRendering } from '../../src/zdaubyaosTypes'
 
 describe('yaos contours', () => {
     describe('of duration 15', () => {

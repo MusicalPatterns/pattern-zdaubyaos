@@ -1,12 +1,12 @@
 // tslint:disable:no-magic-numbers
 
+import * as to from '../../../src/utilities/to'
 import {
     dubparticularSeriesPitches,
     duperparticularSeriesPitches,
     subparticularSeriesPitches,
     superparticularSeriesPitches,
 } from '../src/pitches'
-import * as to from '../../../src/utilities/to'
 
 describe('pitches', () => {
     describe('subparticular series', () => {

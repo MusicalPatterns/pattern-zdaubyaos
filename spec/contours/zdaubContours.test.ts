@@ -1,6 +1,6 @@
 import { zdaubContoursByBarDurationBlockStyleThenRendering } from '../../src/contours/zdaubContours'
-import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../../src/zdaubyaosTypes'
 import * as to from '../../src/utilities/to'
+import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../../src/zdaubyaosTypes'
 
 describe('zdaub contours', () => {
     describe('of duration 15', () => {
@@ -89,7 +89,7 @@ describe('zdaub contours', () => {
 
             it('handles scend', () => {
                 expect(zdaubContoursByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][ZdaubBlockStyle.SCEND][ZdaubRendering.GLIS]).toEqual(to.Contour([
-                    13, 11
+                    13, 11,
                     // Lasts 2 bars
                 ]))
             })

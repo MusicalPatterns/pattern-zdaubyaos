@@ -1,6 +1,6 @@
-import { thirtyfiveYaosBassNotes, thirtyfiveYaosAccidentInspiredNotes, thirtyfiveZdaubNotes } from '../../src/notes/thirtyfiveNotes'
 import calculateDuration from '../../../../src/utilities/calculateDuration'
 import * as from from '../../../../src/utilities/from'
+import { thirtyfiveYaosAccidentInspiredNotes, thirtyfiveYaosBassNotes, thirtyfiveZdaubNotes } from '../../src/notes/thirtyfiveNotes'
 
 describe('thirtyfive notes', () => {
     it('is the case that they are all actually length multiples of 35', () => {

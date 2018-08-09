@@ -5,7 +5,7 @@ import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosBlockStyle, Ya
 describe('get yaos notes', () => {
     it('gets the right set of notes out of its stash', () => {
         expect(
-            getYaosNotes(YaosBlockResolution.MIDIRREG, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, YaosRendering.SUMMER)
+            getYaosNotes(YaosBlockResolution.MIDIRREG, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, YaosRendering.SUMMER),
         ).toEqual(
             yaosNotesByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][YaosBlockStyle.DJIYAI][YaosRendering.SUMMER],
         )
