@@ -22,18 +22,18 @@ import {
     noodlingTwentyfourTremNotes,
     superinscapeTwentyfourBonyNotes,
 } from '../notes/zdaubTwentyfourNotes'
-import { BarDuration, BlockResolution, BlockStrategy, Part, Rendering } from '../types'
+import { BarDuration, YaosBlockResolution, YaosBlockStrategy, Part, YaosRendering } from '../types'
 
 const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
-    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.FALL),
-    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.FALL),
-    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
-    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
-    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
-    getYaosNotes(BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
-    getYaosNotes(BlockResolution.LOWREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.FALL),
-    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.TWENTYFOUR, Rendering.FALL),
-    getYaosNotes(BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, Rendering.FALL),
+    getYaosNotes(YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.TWENTYFOUR, YaosRendering.FALL),
+    getYaosNotes(YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, YaosRendering.FALL),
 ])
 
 const almostTrueExtendedEndingZdaubTremPart: Part = sequence([

@@ -1,89 +1,89 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
 import getYaosNotes from '../notes/getYaosNotes'
-import { BarDuration, BlockResolution, BlockStrategy, Part, Rendering } from '../types'
+import { BarDuration, YaosBlockResolution, YaosBlockStrategy, Part, YaosRendering } from '../types'
 
 const trueYaosUmowchuwowiestSpringToSummerPart: Part = sequence([
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SPRING,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SPRING,
     ),         4),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SPRING,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SPRING,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SPRING,
+        YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SPRING,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SPRING,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SPRING,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SPRING,
+        YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SPRING,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, Rendering.SUMMER,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, YaosRendering.SUMMER,
     ),         4),
 ])
 
 const trueYaosUmowchuwowiestSummerToSpringPart: Part = sequence([
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         4),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, Rendering.SPRING,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, YaosRendering.SPRING,
     ),         4),
 ])
 
 const trueYaosInaidjiyaiouzdSummerToSpringPart: Part = sequence([
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         4),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.LOWREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.LOWREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SUMMER,
+        YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.TWENTYFOUR, Rendering.SPRING,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.TWENTYFOUR, YaosRendering.SPRING,
     ),         4),
 ])
 
 const trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart: Part = sequence([
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SPRINGY_SUMMER,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SPRINGY_SUMMER,
     ),         4),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SPRINGY_SUMMER,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.LOWREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, Rendering.SPRINGY_SUMMER,
+        YaosBlockResolution.LOWREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.FIFTEEN, YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.HIGHREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SPRINGY_SUMMER,
+        YaosBlockResolution.HIGHREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, Rendering.SPRINGY_SUMMER,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.FIFTEEN, YaosRendering.SPRINGY_SUMMER,
     ),         1),
     repeatCall(() => getYaosNotes(
-        BlockResolution.MIDIRREGULAR, BlockStrategy.UMOWCHUWOWIEST, BarDuration.TWENTYFOUR, Rendering.SUMMERY_SPRING,
+        YaosBlockResolution.MIDIRREGULAR, YaosBlockStrategy.UMOWCHUWOWIEST, BarDuration.TWENTYFOUR, YaosRendering.SUMMERY_SPRING,
     ),         4),
 ])
 

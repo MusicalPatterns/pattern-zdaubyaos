@@ -2,7 +2,7 @@ import { Offset, Scalar } from '../../../src/utilities/nominalTypes'
 import numbers from '../../../src/utilities/numbers'
 import offset from '../../../src/utilities/offset'
 import scale from '../../../src/utilities/scale'
-import { Contour, Rendering, RenderingFunction } from './types'
+import { Contour, YaosRendering, RenderingFunction } from './types'
 import * as from from './utilities/from'
 import { Block, ContourElement } from './utilities/nominalTypes'
 import * as to from './utilities/to'
@@ -60,12 +60,12 @@ const springySummer: RenderingFunction =
                 return to.ContourElement(scale(offset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR))
             })
 
-const renderings: { [x in Rendering]: RenderingFunction } = {
-    [Rendering.SPRING]: spring,
-    [Rendering.SUMMER]: summer,
-    [Rendering.FALL]: fall,
-    [Rendering.SUMMERY_SPRING]: summerySpring,
-    [Rendering.SPRINGY_SUMMER]: springySummer,
+const renderings: { [x in YaosRendering]: RenderingFunction } = {
+    [YaosRendering.SPRING]: spring,
+    [YaosRendering.SUMMER]: summer,
+    [YaosRendering.FALL]: fall,
+    [YaosRendering.SUMMERY_SPRING]: summerySpring,
+    [YaosRendering.SPRINGY_SUMMER]: springySummer,
 }
 
 export default renderings

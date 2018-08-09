@@ -18,18 +18,18 @@ type NoteType = (contourElement: ContourElement) => Note
 
 type Segment = Part[]
 
-enum BlockStrategy {
+enum YaosBlockStrategy {
     INAIDJIYAIOUZD = 'inaidjiyaiouzd',
     UMOWCHUWOWIEST = 'umowchuwowiest',
 }
 
-enum BlockResolution {
+enum YaosBlockResolution {
     HIGHREGULAR = 'highregular',
     LOWREGULAR = 'lowregular',
     MIDIRREGULAR = 'midirregular',
 }
 
-enum BlockStyle {
+enum YaosBlockStyle {
     OUZD = 'ouzd',
     INAI = 'inai',
     DJIYAI = 'djiyai',
@@ -38,12 +38,18 @@ enum BlockStyle {
     CHUWOW = 'chuwow',
 }
 
+enum ZdaubBlockStyle {
+    NODLE = 'nodle',
+    LIMIN = 'limin',
+    SCEND = 'scend',
+}
+
 enum BarDuration {
     FIFTEEN = 'fifteen',
     TWENTYFOUR = 'twentyfour',
 }
 
-enum Rendering {
+enum YaosRendering {
     SPRING = 'spring',
     SUMMER = 'summer',
     FALL = 'fall',
@@ -51,11 +57,17 @@ enum Rendering {
     SPRINGY_SUMMER = 'springySummer',
 }
 
+enum ZdaubRendering {
+    GLIS = 'glis',
+    BONY = 'bony',
+    TREM = 'trem',
+}
+
 type ByBlockStrategy = {
-    [x in BlockStrategy]: ByBlockResolution
+    [x in YaosBlockStrategy]: ByBlockResolution
 }
 type ByBlockResolution = {
-    [x in BlockResolution]: BlockStyle
+    [x in YaosBlockResolution]: YaosBlockStyle
 }
 
 type ManualContourElement = [Index, Time]
@@ -71,13 +83,15 @@ export {
     RenderingFunction,
     NoteType,
     Segment,
-    BlockStyle,
-    BlockResolution,
-    BlockStrategy,
+    YaosBlockStyle,
+    YaosBlockResolution,
+    YaosBlockStrategy,
     BarDuration,
-    Rendering,
+    YaosRendering,
     ByBlockResolution,
     ByBlockStrategy,
     ManualContourElement,
     ManualContour,
+    ZdaubBlockStyle,
+    ZdaubRendering,
 }

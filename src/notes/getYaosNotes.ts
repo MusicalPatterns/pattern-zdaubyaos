@@ -1,14 +1,14 @@
-import { BLOCKS_BY_STRATEGY_THEN_RESOLUTION } from '../constants'
-import { BarDuration, BlockResolution, BlockStrategy, BlockStyle, Notes, Rendering } from '../types'
+import { YAOS_BLOCK_STYLES_BY_STRATEGY_THEN_RESOLUTION } from '../constants'
+import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosBlockStyle, Notes, YaosRendering } from '../types'
 import { yaosNotesByBarDurationBlockStyleThenRendering } from './yaosNotes'
 
 type UsageCount = number
 
 type UsageGrouping = {
-    [x in BarDuration]: {[y in BlockStyle]?: UsageCountByRendering}
+    [x in BarDuration]: {[y in YaosBlockStyle]?: UsageCountByRendering}
 }
 
-type UsageCountByRendering = {[z in Rendering]?: UsageCount}
+type UsageCountByRendering = {[z in YaosRendering]?: UsageCount}
 
 export const yaosNoteUsagesByDurationBlocksThenRendering: UsageGrouping = {
     fifteen: {},
@@ -16,20 +16,20 @@ export const yaosNoteUsagesByDurationBlocksThenRendering: UsageGrouping = {
 }
 
 type GetYaosNotes = (
-    blockResolution: BlockResolution,
-    blockStrategy: BlockStrategy,
+    blockResolution: YaosBlockResolution,
+    blockStrategy: YaosBlockStrategy,
     barDuration: BarDuration,
-    rendering: Rendering,
+    rendering: YaosRendering,
 ) => Notes
 
 const getYaosNotes: GetYaosNotes =
     (
-        blockResolution: BlockResolution,
-        blockStrategy: BlockStrategy,
+        blockResolution: YaosBlockResolution,
+        blockStrategy: YaosBlockStrategy,
         barDuration: BarDuration,
-        rendering: Rendering,
+        rendering: YaosRendering,
     ): Notes => {
-        const blockStyle: BlockStyle = BLOCKS_BY_STRATEGY_THEN_RESOLUTION[blockStrategy][blockResolution]
+        const blockStyle: YaosBlockStyle = YAOS_BLOCK_STYLES_BY_STRATEGY_THEN_RESOLUTION[blockStrategy][blockResolution]
 
         yaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] =
             yaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] || {}

@@ -9,16 +9,16 @@ import {
     shiftyTwentyfourNotes,
     shiftyTwentyfourVariantNotes,
 } from '../notes/otherNotes'
-import { BarDuration, BlockResolution, BlockStrategy, Part, Rendering } from '../types'
+import { BarDuration, YaosBlockResolution, YaosBlockStrategy, Part, YaosRendering } from '../types'
 
 const secretLongChordPart: Part = secretLongChordNotes
 
 const totallyOutTherePart: Part = repeat(
     getYaosNotes(
-        BlockResolution.MIDIRREGULAR,
-        BlockStrategy.INAIDJIYAIOUZD,
+        YaosBlockResolution.MIDIRREGULAR,
+        YaosBlockStrategy.INAIDJIYAIOUZD,
         BarDuration.FIFTEEN,
-        Rendering.SPRINGY_SUMMER,
+        YaosRendering.SPRINGY_SUMMER,
     ).slice(0, 8),
     3,
 )
