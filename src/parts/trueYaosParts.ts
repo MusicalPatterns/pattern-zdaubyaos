@@ -1,6 +1,6 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import getYaosNotes from '../notes/getYaosNotes'
+import { getYaosNotes } from '../notes/yaosNotes'
 import { Part } from '../types'
 import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosRendering } from '../zdaubyaosTypes'
 

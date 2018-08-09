@@ -1,8 +1,14 @@
 import calculateDuration from '../../../../src/utilities/calculateDuration'
 import * as from from '../../../../src/utilities/from'
-import { yaosNotesByBarDurationBlockStyleThenRendering } from '../../src/notes/yaosNotes'
+import { getYaosNotes, yaosNotesByBarDurationBlockStyleThenRendering } from '../../src/notes/yaosNotes'
 import { Notes } from '../../src/types'
-import { BarDuration, YaosRendering } from '../../src/zdaubyaosTypes'
+import {
+    BarDuration,
+    YaosBlockResolution,
+    YaosBlockStrategy,
+    YaosBlockStyle,
+    YaosRendering
+} from '../../src/zdaubyaosTypes'
 
 describe('yaos notes', () => {
     describe('of length 15', () => {
@@ -24,6 +30,16 @@ describe('yaos notes', () => {
                         expect(from.Time(calculateDuration(notes))).toBe(24)
                     })
                 })
+        })
+    })
+
+    describe('get yaos notes', () => {
+        it('gets the right set of notes out of its stash', () => {
+            expect(
+                getYaosNotes(YaosBlockResolution.MIDIRREG, YaosBlockStrategy.INAIDJIYAIOUZD, BarDuration.TWENTYFOUR, YaosRendering.SUMMER),
+            ).toEqual(
+                yaosNotesByBarDurationBlockStyleThenRendering[BarDuration.TWENTYFOUR][YaosBlockStyle.DJIYAI][YaosRendering.SUMMER],
+            )
         })
     })
 })

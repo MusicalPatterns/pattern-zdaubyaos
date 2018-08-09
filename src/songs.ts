@@ -10,7 +10,6 @@ import {
     zdaubyaosSubparticularSquare,
     zdaubyaosSuperparticularSquare,
 } from './entities'
-import { yaosNoteUsagesByDurationBlocksThenRendering } from './notes/getYaosNotes'
 
 const zdaubyaos: Song = {
     baseFrequency: ZDAUBYAOS_BASE_PITCH,

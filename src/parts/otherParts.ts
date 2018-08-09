@@ -1,7 +1,6 @@
 import repeat from '../../../../src/utilities/repeat'
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import getYaosNotes from '../notes/getYaosNotes'
 import {
     secretLongChordNotes,
     shiftyFifteenNotes,
@@ -9,6 +8,7 @@ import {
     shiftyTwentyfourNotes,
     shiftyTwentyfourVariantNotes,
 } from '../notes/otherNotes'
+import { getYaosNotes } from '../notes/yaosNotes'
 import { Part } from '../types'
 import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosRendering } from '../zdaubyaosTypes'
 

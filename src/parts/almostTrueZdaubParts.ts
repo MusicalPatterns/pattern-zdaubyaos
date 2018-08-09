@@ -1,7 +1,7 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import getZdaubNotes from '../notes/getZdaubNotes'
 import { backboneFifteenNotes, backboneTwentyfourNotes } from '../notes/otherNotes'
+import { getZdaubNotes } from '../notes/zdaubNotes'
 import { Part } from '../types'
 import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../zdaubyaosTypes'
 

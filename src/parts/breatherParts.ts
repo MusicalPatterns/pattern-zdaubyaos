@@ -3,9 +3,8 @@
 import rest from '../../../../src/rest'
 import repeat from '../../../../src/utilities/repeat'
 import * as to from '../../../../src/utilities/to'
-import getYaosNotes from '../notes/getYaosNotes'
 import { backboneTwentyfourNotes } from '../notes/otherNotes'
-import { inaiiiVarietyNotes } from '../notes/yaosNotes'
+import { getYaosNotes, inaiiiVarietyNotes } from '../notes/yaosNotes'
 import { Part } from '../types'
 import { BarDuration, YaosBlockResolution, YaosBlockStrategy, YaosRendering } from '../zdaubyaosTypes'
 
