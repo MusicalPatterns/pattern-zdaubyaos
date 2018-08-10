@@ -3,7 +3,7 @@
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song } from '../../../src/types'
 import { ZDAUBYAOS_BASE_PITCH } from './basePitch'
-import { zdaubyaosContoursByBarTargetBlockStyleThenRendering } from './contours/zdaubyaosContours'
+import { zdaubyaosContourUsages } from './contours/zdaubyaosContourUsage'
 import {
     zdaubyaosHarmonicOrSubharmonicSine,
     zdaubyaosSubparticularOrDubparticularSquare,
@@ -34,7 +34,7 @@ const zdaubyaos: Song = {
 }
 
 // console.log(zdaubyaos)
-// console.log(zdaubyaosContoursByBarTargetBlockStyleThenRendering)
+// console.log(zdaubyaosContourUsages)
 
 export {
     zdaubyaos,

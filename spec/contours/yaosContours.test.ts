@@ -1,12 +1,34 @@
 import * as to from '../../src/utilities/to'
 import { BarTarget, BlockStyle, Rendering } from '../../src/zdaubyaosTypes'
 import {
+    getZdaubyaosContours,
     inaiiiVarietyContour,
-    zdaubyaosContoursByBarTargetBlockStyleThenRendering
+    zdaubyaosContoursByBarTargetBlockStyleThenRendering,
 } from '../../src/contours/zdaubyaosContours'
+import { Contour } from '../../src/types'
+import * as from from '../../../../src/utilities/from'
+import calculateContourDuration from '../../src/contours/calculateContourDuration'
 
 describe('yaos contours', () => {
     describe('of duration 15', () => {
+        it('is true that when rendered with certain renderings their durations are multiples of 15', () => {
+            Object.entries(zdaubyaosContoursByBarTargetBlockStyleThenRendering[BarTarget.FIFTEEN]).forEach(
+                // @ts-ignore
+                ([blockStyle, contoursByRendering]: [BlockStyle, { [x in Rendering]: Contour }]): void => {
+                    // @ts-ignore
+                    Object.entries(contoursByRendering).forEach(([rendering, contours]: [Rendering, Contour]) => {
+                        switch (rendering) {
+                            case Rendering.SPRING:
+                            case Rendering.SUMMER:
+                            case Rendering.FALL:
+                            case Rendering.SUMMERY_SPRING:
+                            case Rendering.SPRINGY_SUMMER:
+                                expect(from.Time(calculateContourDuration(contours)) % 15).toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                        }
+                    })
+                })
+        })
+
         describe('spring renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow spring', () => {
@@ -237,6 +259,31 @@ describe('yaos contours', () => {
     })
 
     describe('of duration 24', () => {
+        it('is true that when rendered with certain renderings their durations are multiples of 24', () => {
+            Object.entries(zdaubyaosContoursByBarTargetBlockStyleThenRendering[BarTarget.TWENTYFOUR]).forEach(
+                // @ts-ignore
+                ([blockStyle, contoursByRendering]: [BlockStyle, { [x in Rendering]: Contour }]): void => {
+                    // @ts-ignore
+                    Object.entries(contoursByRendering).forEach(([rendering, contours]: [Rendering, Contour]): void => {
+                        switch (rendering) {
+                            case Rendering.GLIS:
+                            case Rendering.TREM:
+                                expect(from.Time(calculateContourDuration(contours)) % 24).toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                            case Rendering.BONY:
+                                switch (blockStyle) {
+                                    case BlockStyle.CHUWOW:
+                                    case BlockStyle.DJIYAI:
+                                    case BlockStyle.IEST:
+                                    case BlockStyle.INAI:
+                                        break
+                                    default:
+                                        expect(from.Time(calculateContourDuration(contours)) % 24).toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                                }
+                        }
+                    })
+                })
+        })
+
         describe('spring renderings', () => {
             describe('umowchuowiest blocks', () => {
                 it('handles umow spring', () => {
@@ -458,5 +505,11 @@ describe('yaos contours', () => {
                 ]))
             })
         })
+    })
+
+    it('gets the right set of contours out of its stash', () => {
+        expect(getZdaubyaosContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, Rendering.SUMMER)).toEqual(
+            zdaubyaosContoursByBarTargetBlockStyleThenRendering[BarTarget.TWENTYFOUR][BlockStyle.DJIYAI][Rendering.SUMMER],
+        )
     })
 })

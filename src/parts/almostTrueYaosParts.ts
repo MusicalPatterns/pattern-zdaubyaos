@@ -1,18 +1,18 @@
 import sequence from '../../../../src/utilities/sequence'
-import { getZdaubyaosNotes } from '../notes/zdaubyaosNotes'
+import { getZdaubyaosContours } from '../contours/zdaubyaosContours'
 import { Part } from '../types'
 import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
 
 const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
-    getZdaubyaosNotes(BlockStyle.CHUWOW, BarTarget.FIFTEEN, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.CHUWOW, BarTarget.FIFTEEN, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.OUZD, BarTarget.FIFTEEN, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.INAI, BarTarget.FIFTEEN, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.OUZD, BarTarget.FIFTEEN, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.INAI, BarTarget.FIFTEEN, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.CHUWOW, BarTarget.TWENTYFOUR, Rendering.FALL),
-    getZdaubyaosNotes(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.OUZD, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.INAI, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.OUZD, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.INAI, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.CHUWOW, BarTarget.TWENTYFOUR, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, Rendering.FALL),
 ])
 
 export {

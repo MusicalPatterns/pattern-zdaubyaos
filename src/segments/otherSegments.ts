@@ -1,9 +1,9 @@
 import * as to from '../../../../src/utilities/to'
-import alterSegmentParts from '../alterations/alterSegmentParts'
+import makeSegment from '../alterations/makeSegment'
 import { secretLongChordPart, shiftyAPart, shiftyBPart, totallyOutTherePart } from '../parts/otherParts'
 import { Segment } from '../types'
 
-const secretLongChordSegment: Segment = alterSegmentParts(
+const secretLongChordSegment: Segment = makeSegment(
     [
         secretLongChordPart,
         secretLongChordPart,
@@ -16,7 +16,7 @@ const secretLongChordSegment: Segment = alterSegmentParts(
     ],
 )
 
-const totallyOutThereIntroSegment: Segment = alterSegmentParts(
+const totallyOutThereIntroSegment: Segment = makeSegment(
     [
         totallyOutTherePart,
         totallyOutTherePart,
@@ -29,7 +29,7 @@ const totallyOutThereIntroSegment: Segment = alterSegmentParts(
     ],
 )
 
-const shiftySegment: Segment = alterSegmentParts(
+const shiftySegment: Segment = makeSegment(
     [
         shiftyAPart,
         shiftyBPart,

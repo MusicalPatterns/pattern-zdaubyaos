@@ -10,10 +10,10 @@ Each of these styles has its own Blocks and Renderings which create Contours mos
 ## compositional levels
 
 Blocks: just raw patterns of numbers; each number is a Block
-Contours: what you get after you map a Rendering onto some Blocks; each ContourElement represents a pitch (index) plus a duration
-Note: what you get when you hydrate a ContourElement w/ gain & sustain information, readying it to be played
-
-Notes: a sequence of Note; the smallest compositional object of the song, too small to write the song in directly
-Parts: a sequence of Notes; a large enough compositional object to write the song in directly
-
-Segment: a set of Parts of the same length to be played simultaneously by different Entities
+Contours: what you get after you map a Rendering onto some Blocks; each ContourElement represents a pitch (index) plus a duration;
+    contours are the smallest compositional object of the song, too small to write the song in directly
+Part: a concatenation of several contours together; a large enough compositional object to write the song in directly;
+    parts are still intended for just one Entity to play
+Segment: take a set of Parts, and each Part has all of its ContourElements mapped to a Note, 
+    and each Part's Notes total the same duration, so they can be played simultaneously by different Entities, but still sequenced together with other Segments
+Note: what you get when you hydrate a ContourElement w/ NoteStyle information, readying it to be played

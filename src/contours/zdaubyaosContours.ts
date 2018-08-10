@@ -4,6 +4,7 @@ import zdaubyaosRenderings from '../renderings/zdaubyaosRenderings'
 import { Blocks, Contour, RenderingFunction } from '../types'
 import { Block } from '../utilities/nominalTypes'
 import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
+import { countUsage } from './zdaubyaosContourUsage'
 
 type ByRendering = { [z in Rendering]: Contour }
 type ByBlockStyle = { [y in BlockStyle]: ByRendering }
@@ -50,8 +51,22 @@ const inaiiiVarietyContour: Contour = sequence(
             ][index]([block])),
 )
 
+type GetZdaubyaosContours = (
+    blockStyle: BlockStyle,
+    barTarget: BarTarget,
+    rendering: Rendering,
+) => Contour
+
+const getZdaubyaosContours: GetZdaubyaosContours =
+    (blockStyle: BlockStyle, barTarget: BarTarget, rendering: Rendering): Contour => {
+        countUsage(barTarget, blockStyle, rendering)
+
+        return zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle][rendering]
+    }
+
 export {
     zdaubyaosContoursByBarTargetBlockStyleThenRendering,
     zdaubGlisVariantContour,
     inaiiiVarietyContour,
+    getZdaubyaosContours,
 }

@@ -1,5 +1,5 @@
 import * as to from '../../../../src/utilities/to'
-import alterSegmentParts from '../alterations/alterSegmentParts'
+import makeSegment from '../alterations/makeSegment'
 import {
     breatherRestPart,
     breatherSpringAltPart,
@@ -11,7 +11,7 @@ import {
 } from '../parts/breatherParts'
 import { Segment } from '../types'
 
-const breatherSpringSegment: Segment = alterSegmentParts(
+const breatherSpringSegment: Segment = makeSegment(
     [
         breatherSpringPart,
         breatherRestPart,
@@ -24,7 +24,7 @@ const breatherSpringSegment: Segment = alterSegmentParts(
     ],
 )
 
-const breatherSummerSegment: Segment = alterSegmentParts(
+const breatherSummerSegment: Segment = makeSegment(
     [
         breatherRestPart,
         breatherSummerPart,
@@ -37,7 +37,7 @@ const breatherSummerSegment: Segment = alterSegmentParts(
     ],
 )
 
-const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = alterSegmentParts(
+const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = makeSegment(
     [
         doubleBreatherRestPart,
         doubleBreatherRestPart,
@@ -50,7 +50,7 @@ const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = alterSegmentPar
     ],
 )
 
-const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = alterSegmentParts(
+const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = makeSegment(
     [
         breatherRestPart,
         breatherSpringAltPart,
@@ -63,7 +63,7 @@ const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = alterSegment
     ],
 )
 
-const breatherVarietyQuiteTheReveilleSegment: Segment = alterSegmentParts(
+const breatherVarietyQuiteTheReveilleSegment: Segment = makeSegment(
     [
         breatherVarietyPart,
         breatherVarietyPart,

@@ -1,9 +1,12 @@
 import {
     thirtyfiveYaosAccidentInspiredContour,
     thirtyfiveYaosBassContour,
-    thirtyfiveZdaubContour, thirtyfiveZdaubOnlyWiggleContour
+    thirtyfiveZdaubContour,
+    thirtyfiveZdaubOnlyWiggleContour,
 } from '../../src/contours/thirtyfiveContours'
 import * as to from '../../src/utilities/to'
+import * as from from '../../../../src/utilities/from'
+import calculateContourDuration from '../../src/contours/calculateContourDuration'
 
 describe('thirtyfive contours', () => {
     it('handles yaos bass', () => {
@@ -50,5 +53,11 @@ describe('thirtyfive contours', () => {
             [4, 4], [1, 1],
             [4, 4], [1, 1],
         ]))
+    })
+
+    it('is the case that they are all actually length multiples of 35', () => {
+        expect(from.Time(calculateContourDuration(thirtyfiveYaosBassContour)) % 35).toBe(0)
+        expect(from.Time(calculateContourDuration(thirtyfiveYaosAccidentInspiredContour)) % 35).toBe(0)
+        expect(from.Time(calculateContourDuration(thirtyfiveZdaubContour)) % 35).toBe(0)
     })
 })

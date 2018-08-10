@@ -1,5 +1,5 @@
 import * as to from '../../../../src/utilities/to'
-import alterSegmentParts from '../alterations/alterSegmentParts'
+import makeSegment from '../alterations/makeSegment'
 import {
     trueYaosInaidjiyaiouzdSummerToSpringPart,
     trueYaosUmowchuwowiestSpringToSummerPart,
@@ -7,7 +7,7 @@ import {
 } from '../parts/trueYaosParts'
 import { Segment } from '../types'
 
-const trueSpringAllYaosUmowchuwowiestSegment: Segment = alterSegmentParts(
+const trueSpringAllYaosUmowchuwowiestSegment: Segment = makeSegment(
     [
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueYaosUmowchuwowiestSpringToSummerPart,
@@ -20,7 +20,7 @@ const trueSpringAllYaosUmowchuwowiestSegment: Segment = alterSegmentParts(
     ],
 )
 
-const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
+const trueAllYaosAllRhythmsAtOnceSegment: Segment = makeSegment(
     [
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueYaosUmowchuwowiestSummerToSpringPart,
@@ -33,7 +33,7 @@ const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
     ],
 )
 
-const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = alterSegmentParts(
+const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = makeSegment(
     [
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueYaosUmowchuwowiestSummerToSpringPart,

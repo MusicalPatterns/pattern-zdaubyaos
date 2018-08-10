@@ -1,5 +1,5 @@
 import * as to from '../../../../src/utilities/to'
-import alterSegmentParts from '../alterations/alterSegmentParts'
+import makeSegment from '../alterations/makeSegment'
 import { almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart } from '../parts/almostTrueYaosParts'
 import {
     almostTrueExtendedEndingZdaubBonyPart,
@@ -10,7 +10,7 @@ import {
 } from '../parts/almostTrueZdaubParts'
 import { Segment } from '../types'
 
-const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = alterSegmentParts(
+const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = makeSegment(
     [
         almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
         almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
@@ -23,7 +23,7 @@ const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeel
     ],
 )
 
-const almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment: Segment = alterSegmentParts(
+const almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment: Segment = makeSegment(
     [
         almostTrueExtendedEndingZdaubTremPart,
         almostTrueExtendedEndingZdaubBonyPart,
@@ -36,7 +36,7 @@ const almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallyS
     ],
 )
 
-const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = alterSegmentParts(
+const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = makeSegment(
     [
         almostTrueYetOfBackbonePart,
         almostTrueYetOfBackbonePart,

@@ -1,5 +1,5 @@
 import * as to from '../../../../src/utilities/to'
-import alterSegmentParts from '../alterations/alterSegmentParts'
+import makeSegment from '../alterations/makeSegment'
 import {
     trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
     trueYaosUmowchuwowiestSpringToSummerPart,
@@ -12,7 +12,7 @@ import {
 } from '../parts/trueZdaubParts'
 import { Segment } from '../types'
 
-const trueSpringWithZdaubSegment: Segment = alterSegmentParts(
+const trueSpringWithZdaubSegment: Segment = makeSegment(
     [
         trueZdaubGlisPart,
         trueYaosUmowchuwowiestSpringToSummerPart,
@@ -25,7 +25,7 @@ const trueSpringWithZdaubSegment: Segment = alterSegmentParts(
     ],
 )
 
-const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment: Segment = alterSegmentParts(
+const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment: Segment = makeSegment(
     [
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueZdaubGlisPart,
@@ -38,7 +38,7 @@ const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySeg
     ],
 )
 
-const trueSpringySummerTotallyOutThereSegment: Segment = alterSegmentParts(
+const trueSpringySummerTotallyOutThereSegment: Segment = makeSegment(
     [
         trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
         trueZdaubGlisPart,

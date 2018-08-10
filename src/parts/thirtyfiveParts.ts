@@ -1,27 +1,27 @@
 import rest from '../../../../src/rest'
-import calculateDuration from '../../../../src/utilities/calculateDuration'
 import repeat from '../../../../src/utilities/repeat'
 import sequence from '../../../../src/utilities/sequence'
+import calculateContourDuration from '../contours/calculateContourDuration'
 import {
-    thirtyfiveYaosAccidentInspiredNotes,
-    thirtyfiveYaosBassNotes,
-    thirtyfiveZdaubNotes,
-    thirtyfiveZdaubOnlyWiggleNotes,
-} from '../notes/thirtyfiveNotes'
+    thirtyfiveYaosAccidentInspiredContour,
+    thirtyfiveYaosBassContour,
+    thirtyfiveZdaubContour,
+    thirtyfiveZdaubOnlyWiggleContour,
+} from '../contours/thirtyfiveContours'
 import { Part } from '../types'
 
 const thirtyfiveYaosBassPart: Part = sequence([
-    repeat(thirtyfiveYaosBassNotes, 30),
+    repeat(thirtyfiveYaosBassContour, 30),
 ])
 
 const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
-    repeat(thirtyfiveYaosAccidentInspiredNotes, 30),
+    repeat(thirtyfiveYaosAccidentInspiredContour, 30),
 ])
 
 const thirtyfiveZdaubPart: Part = sequence([
-    rest(calculateDuration(thirtyfiveZdaubNotes)),
-    repeat(thirtyfiveZdaubNotes, 2),
-    repeat(thirtyfiveZdaubOnlyWiggleNotes, 12),
+    rest(calculateContourDuration(thirtyfiveZdaubContour)),
+    repeat(thirtyfiveZdaubContour, 2),
+    repeat(thirtyfiveZdaubOnlyWiggleContour, 12),
 ])
 
 export {

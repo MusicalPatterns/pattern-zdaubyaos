@@ -4,21 +4,21 @@ import { Block } from './utilities/nominalTypes'
 
 type Blocks = Block[]
 
-type Notes = Note[]
-
-type Part = Note[]
-
-type Track = Note[]
-
 type RenderingFunction = (blocks: Blocks) => Contour
-
-type MakeNote = (contourElement: ContourElement) => Note
-
-type Segment = Part[]
 
 type ContourElement = [Index, Time]
 
 type Contour = ContourElement[]
+
+type Part = Contour
+
+type MakeNote = (contourElement: ContourElement) => Note
+
+type Notes = Note[]
+
+type Segment = Notes[]
+
+type Track = Note[]
 
 export {
     Blocks,

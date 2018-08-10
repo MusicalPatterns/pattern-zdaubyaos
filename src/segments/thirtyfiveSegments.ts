@@ -1,5 +1,5 @@
 import * as to from '../../../../src/utilities/to'
-import alterSegmentParts from '../alterations/alterSegmentParts'
+import makeSegment from '../alterations/makeSegment'
 import {
     thirtyfiveYaosAccidentInspiredPart,
     thirtyfiveYaosBassPart,
@@ -7,7 +7,7 @@ import {
 } from '../parts/thirtyfiveParts'
 import { Segment } from '../types'
 
-const thirtyfiveSegment: Segment = alterSegmentParts(
+const thirtyfiveSegment: Segment = makeSegment(
     [
         thirtyfiveZdaubPart,
         thirtyfiveYaosAccidentInspiredPart,

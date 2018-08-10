@@ -3,25 +3,25 @@
 import rest from '../../../../src/rest'
 import repeat from '../../../../src/utilities/repeat'
 import * as to from '../../../../src/utilities/to'
-import { backboneTwentyfourNotes } from '../notes/otherNotes'
-import { getZdaubyaosNotes, inaiiiVarietyNotes } from '../notes/zdaubyaosNotes'
+import { backboneTwentyfourContour } from '../contours/otherContours'
+import { getZdaubyaosContours, inaiiiVarietyContour } from '../contours/zdaubyaosContours'
 import { Part } from '../types'
 import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
 
 const breatherRestPart: Part = rest(to.Time(24))
-const breatherSpringPart: Part = getZdaubyaosNotes(
+const breatherSpringPart: Part = getZdaubyaosContours(
     BlockStyle.INAI,
     BarTarget.TWENTYFOUR,
     Rendering.SPRING,
 )
-const breatherSummerPart: Part = getZdaubyaosNotes(
+const breatherSummerPart: Part = getZdaubyaosContours(
     BlockStyle.INAI,
     BarTarget.TWENTYFOUR,
     Rendering.SUMMER,
 )
-const doubleBreatherFallPart: Part = repeat(backboneTwentyfourNotes, 2)
-const breatherVarietyPart: Part = inaiiiVarietyNotes
-const breatherSpringAltPart: Part = getZdaubyaosNotes(
+const doubleBreatherFallPart: Part = repeat(backboneTwentyfourContour, 2)
+const breatherVarietyPart: Part = inaiiiVarietyContour
+const breatherSpringAltPart: Part = getZdaubyaosContours(
     BlockStyle.OUZD,
     BarTarget.TWENTYFOUR,
     Rendering.SPRING,
