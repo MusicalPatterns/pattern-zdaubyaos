@@ -1,6 +1,6 @@
 import * as from from '../../../../src/utilities/from'
 import * as to from '../../src/utilities/to'
-import calculateContourDuration from '../../src/contours/calculateContourDuration'
+import calculateContourDuration from '../../src/utilities/calculateContourDuration'
 import { Contour } from '../../src/types'
 
 describe('calculate contour duration', () => {

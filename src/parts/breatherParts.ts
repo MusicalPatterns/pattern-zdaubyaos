@@ -5,8 +5,7 @@ import repeat from '../../../../src/utilities/repeat'
 import * as to from '../../../../src/utilities/to'
 import { backboneTwentyfourContour } from '../contours/otherContours'
 import { getZdaubyaosContours, inaiiiVarietyContour } from '../contours/zdaubyaosContours'
-import { Part } from '../types'
-import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
+import { BarTarget, BlockStyle, Part, Rendering } from '../types'
 
 const breatherRestPart: Part = rest(to.Time(24))
 const breatherSpringPart: Part = getZdaubyaosContours(

@@ -4,11 +4,10 @@ import {
     thirtyfiveZdaubBlocks,
     thirtyfiveZdaubOnlyWiggleBlocks,
 } from '../blocks/thirtyfiveBlocks'
-import zdaubyaosRenderings from '../renderings/zdaubyaosRenderings'
-import { Contour, RenderingFunction } from '../types'
-import { Rendering } from '../zdaubyaosTypes'
+import renderings from '../renderings/renderings'
+import { Contour, Rendering, RenderingFunction } from '../types'
 
-const glis: RenderingFunction = zdaubyaosRenderings[Rendering.GLIS]
+const glis: RenderingFunction = renderings[Rendering.GLIS]
 
 const thirtyfiveYaosBassContour: Contour = glis(thirtyfiveYaosBassBlocks)
 const thirtyfiveYaosAccidentInspiredContour: Contour = glis(thirtyfiveYaosAccidentInspiredBlocks)

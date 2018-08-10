@@ -2,8 +2,7 @@ import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
 import { backboneFifteenContour, backboneTwentyfourContour } from '../contours/otherContours'
 import { getZdaubyaosContours } from '../contours/zdaubyaosContours'
-import { Part } from '../types'
-import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
+import { BarTarget, BlockStyle, Part, Rendering } from '../types'
 
 const almostTrueExtendedEndingZdaubPart:
     (rendering: Rendering) => Part = (rendering: Rendering): Part =>
@@ -31,10 +30,23 @@ const almostTrueZdaubBonyWithSuperinscapePart: Part = sequence([
     getZdaubyaosContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, Rendering.BONY),
 ])
 
+const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart: Part = sequence([
+    getZdaubyaosContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.OUZD, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.INAI, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.OUZD, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.INAI, BarTarget.FIFTEEN, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.CHUWOW, BarTarget.TWENTYFOUR, Rendering.FALL),
+    getZdaubyaosContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, Rendering.FALL),
+])
+
 export {
     almostTrueExtendedEndingZdaubTremPart,
     almostTrueExtendedEndingZdaubBonyPart,
     almostTrueExtendedEndingZdaubGlisPart,
     almostTrueYetOfBackbonePart,
     almostTrueZdaubBonyWithSuperinscapePart,
+    almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
 }

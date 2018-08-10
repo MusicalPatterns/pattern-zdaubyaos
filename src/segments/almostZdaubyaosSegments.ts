@@ -1,13 +1,13 @@
 import * as to from '../../../../src/utilities/to'
 import makeSegment from '../notes/makeSegment'
-import { almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart } from '../parts/almostTrueYaosParts'
 import {
     almostTrueExtendedEndingZdaubBonyPart,
     almostTrueExtendedEndingZdaubGlisPart,
     almostTrueExtendedEndingZdaubTremPart,
+    almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
     almostTrueYetOfBackbonePart,
     almostTrueZdaubBonyWithSuperinscapePart,
-} from '../parts/almostTrueZdaubParts'
+} from '../parts/almostZdaubyaosParts'
 import { Segment } from '../types'
 
 const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment = makeSegment(

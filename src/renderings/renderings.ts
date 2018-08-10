@@ -1,6 +1,5 @@
 import sequence from '../../../../src/utilities/sequence'
-import { Blocks, Contour, RenderingFunction } from '../types'
-import { Rendering } from '../zdaubyaosTypes'
+import { Blocks, Contour, Rendering, RenderingFunction } from '../types'
 import bony from './bony'
 import fallBlock from './fallBlock'
 import glisBlock from './glisBlock'
@@ -10,7 +9,7 @@ import summerBlock from './summerBlock'
 import summerySpringBlock from './summerySpringBlock'
 import tremBlock from './tremBlock'
 
-const zdaubyaosRenderings: { [x in Rendering]: RenderingFunction } = {
+const renderings: { [x in Rendering]: RenderingFunction } = {
     [Rendering.GLIS]: (blocks: Blocks): Contour => sequence(blocks.map(glisBlock)),
     [Rendering.TREM]: (blocks: Blocks): Contour => sequence(blocks.map(tremBlock)),
     [Rendering.BONY]: bony,
@@ -21,4 +20,4 @@ const zdaubyaosRenderings: { [x in Rendering]: RenderingFunction } = {
     [Rendering.SPRINGY_SUMMER]: (blocks: Blocks): Contour => sequence(blocks.map(springySummerBlock)),
 }
 
-export default zdaubyaosRenderings
+export default renderings

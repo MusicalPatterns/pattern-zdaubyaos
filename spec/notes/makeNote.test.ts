@@ -1,5 +1,5 @@
-import * as to from '../../../src/utilities/to'
-import makeNote from '../src/makeNote'
+import * as to from '../../../../src/utilities/to'
+import makeNote from '../../src/notes/makeNote'
 
 describe('make note', () => {
     describe('when the pitch index is 0', () => {

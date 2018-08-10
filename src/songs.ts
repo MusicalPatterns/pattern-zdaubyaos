@@ -3,7 +3,6 @@
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song } from '../../../src/types'
 import { ZDAUBYAOS_BASE_PITCH } from './basePitch'
-import { zdaubyaosContourUsages } from './contours/zdaubyaosContourUsage'
 import {
     zdaubyaosHarmonicOrSubharmonicSine,
     zdaubyaosSubparticularOrDubparticularSquare,
@@ -15,6 +14,7 @@ import {
     subparticularSeriesPitches,
     superparticularSeriesPitches,
 } from './pitches'
+import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
 const zdaubyaos: Song = {
     baseFrequency: ZDAUBYAOS_BASE_PITCH,

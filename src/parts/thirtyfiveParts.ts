@@ -1,7 +1,6 @@
 import rest from '../../../../src/rest'
 import repeat from '../../../../src/utilities/repeat'
 import sequence from '../../../../src/utilities/sequence'
-import calculateContourDuration from '../contours/calculateContourDuration'
 import {
     thirtyfiveYaosAccidentInspiredContour,
     thirtyfiveYaosBassContour,
@@ -9,6 +8,7 @@ import {
     thirtyfiveZdaubOnlyWiggleContour,
 } from '../contours/thirtyfiveContours'
 import { Part } from '../types'
+import calculateContourDuration from '../utilities/calculateContourDuration'
 
 const thirtyfiveYaosBassPart: Part = sequence([
     repeat(thirtyfiveYaosBassContour, 30),

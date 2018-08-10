@@ -1,10 +1,9 @@
 import sequence from '../../../../src/utilities/sequence'
 import { zdaubGlisVariantBlocks, zdaubyaosBlocksByBarTargetThenBlockStyle } from '../blocks/zdaubyaosBlocks'
-import zdaubyaosRenderings from '../renderings/zdaubyaosRenderings'
-import { Blocks, Contour, RenderingFunction } from '../types'
+import renderings from '../renderings/renderings'
+import { BarTarget, Blocks, BlockStyle, Contour, Rendering, RenderingFunction } from '../types'
 import { Block } from '../utilities/nominalTypes'
-import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
-import { countUsage } from './zdaubyaosContourUsage'
+import { countUsage } from '../utilities/zdaubyaosContourUsage'
 
 type ByRendering = { [z in Rendering]: Contour }
 type ByBlockStyle = { [y in BlockStyle]: ByRendering }
@@ -19,7 +18,7 @@ Object.entries(zdaubyaosBlocksByBarTargetThenBlockStyle).forEach(
         Object.entries(blocksBy).forEach(
             // @ts-ignore
             ([blockStyle, blocks]: [BlockStyle, Blocks]): void => {
-                Object.entries(zdaubyaosRenderings).forEach(
+                Object.entries(renderings).forEach(
                     // @ts-ignore
                     ([renderingName, rendering]: [Rendering, RenderingFunction]): void => {
                         const contour: Contour = rendering(blocks)
@@ -34,20 +33,20 @@ Object.entries(zdaubyaosBlocksByBarTargetThenBlockStyle).forEach(
             })
     })
 
-const zdaubGlisVariantContour: Contour = zdaubyaosRenderings[Rendering.GLIS](zdaubGlisVariantBlocks)
+const zdaubGlisVariantContour: Contour = renderings[Rendering.GLIS](zdaubGlisVariantBlocks)
 
 const inaiiiVarietyContour: Contour = sequence(
     zdaubyaosBlocksByBarTargetThenBlockStyle[BarTarget.TWENTYFOUR][BlockStyle.INAI].map(
         (block: Block, index: number): Contour =>
             [
-                zdaubyaosRenderings[Rendering.SPRING],
-                zdaubyaosRenderings[Rendering.SUMMER],
-                zdaubyaosRenderings[Rendering.SPRING],
-                zdaubyaosRenderings[Rendering.SUMMER],
-                zdaubyaosRenderings[Rendering.SPRING],
-                zdaubyaosRenderings[Rendering.SUMMER],
-                zdaubyaosRenderings[Rendering.FALL],
-                zdaubyaosRenderings[Rendering.FALL],
+                renderings[Rendering.SPRING],
+                renderings[Rendering.SUMMER],
+                renderings[Rendering.SPRING],
+                renderings[Rendering.SUMMER],
+                renderings[Rendering.SPRING],
+                renderings[Rendering.SUMMER],
+                renderings[Rendering.FALL],
+                renderings[Rendering.FALL],
             ][index]([block])),
 )
 

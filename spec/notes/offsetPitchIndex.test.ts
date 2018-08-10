@@ -1,6 +1,6 @@
-import * as to from '../../../src/utilities/to'
-import offsetPitchIndex from '../src/notes/offsetPitchIndex'
-import { Notes } from '../src/types'
+import * as to from '../../../../src/utilities/to'
+import offsetPitchIndex from '../../src/notes/offsetPitchIndex'
+import { Notes } from '../../src/types'
 
 describe('offset pitch', () => {
     it('offsets the pitch of every note', () => {

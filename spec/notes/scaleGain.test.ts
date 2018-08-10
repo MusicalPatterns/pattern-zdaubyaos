@@ -1,6 +1,6 @@
-import * as to from '../../../src/utilities/to'
-import scaleGain from '../src/notes/scaleGain'
-import { Notes } from '../src/types'
+import * as to from '../../../../src/utilities/to'
+import scaleGain from '../../src/notes/scaleGain'
+import { Notes } from '../../src/types'
 
 describe('scale gain', () => {
     it('scales the gain of every note', () => {

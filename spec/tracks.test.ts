@@ -1,6 +1,6 @@
 import { Time } from '../../../src/utilities/nominalTypes'
 import * as to from '../../../src/utilities/to'
-import { zdaubyaosSubparticularOrDubparticularTrack, zdaubyaosSuperparticularOrDuperparticularTrack, zdaubyaosHarmonicOrSubharmonicTrack } from '../src/convertSegmentsToTracks'
+import { zdaubyaosSubparticularOrDubparticularTrack, zdaubyaosSuperparticularOrDuperparticularTrack, zdaubyaosHarmonicOrSubharmonicTrack } from '../src/tracks'
 import calculateNotesDuration from '../../../src/utilities/calculateNotesDuration'
 
 describe('tracks', () => {

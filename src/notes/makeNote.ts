@@ -3,12 +3,12 @@ import {
     PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
     SEPARATION_FOR_NEIGHBORING_NOTES,
     SILENT,
-} from '../../../src/constants'
-import { Note } from '../../../src/types'
-import * as from from '../../../src/utilities/from'
-import { Index } from '../../../src/utilities/nominalTypes'
-import * as to from '../../../src/utilities/to'
-import { ContourElement, MakeNote } from './types'
+} from '../../../../src/constants'
+import { Note } from '../../../../src/types'
+import * as from from '../../../../src/utilities/from'
+import { Index } from '../../../../src/utilities/nominalTypes'
+import * as to from '../../../../src/utilities/to'
+import { ContourElement, MakeNote } from '../types'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const REST: Index = 0 as any

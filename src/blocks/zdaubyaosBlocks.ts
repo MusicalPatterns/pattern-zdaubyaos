@@ -1,7 +1,6 @@
 import repeat from '../../../../src/utilities/repeat'
-import { Blocks } from '../types'
+import { BarTarget, Blocks, BlockStyle } from '../types'
 import * as to from '../utilities/to'
-import { BarTarget, BlockStyle } from '../zdaubyaosTypes'
 
 const zdaubyaosBlocksByBarTargetThenBlockStyle: { [x in BarTarget]: { [y in BlockStyle]: Blocks } } = {
     [BarTarget.FIFTEEN]: {

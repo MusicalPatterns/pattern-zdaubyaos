@@ -2,7 +2,7 @@ import {
     almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
     almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
-} from './segments/almostTrueSegments'
+} from './segments/almostZdaubyaosSegments'
 import {
     breatherSpringAltNiceAsABreatherToABreatherSegment,
     breatherSpringSegment,
@@ -15,13 +15,10 @@ import { thirtyfiveSegment } from './segments/thirtyfiveSegments'
 import {
     trueAllYaosAllRhythmsAtOnceSegment,
     trueSpringAllYaosUmowchuwowiestSegment,
+    trueSpringWithZdaubSegment, trueSpringySummerTotallyOutThereSegment,
     trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
-} from './segments/trueYaosSegments'
-import {
-    trueSpringWithZdaubSegment,
-    trueSpringySummerTotallyOutThereSegment,
     trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
-} from './segments/trueZdaubSegments'
+} from './segments/zdaubyaosSegments'
 import { Segment } from './types'
 
 const START: number = 0

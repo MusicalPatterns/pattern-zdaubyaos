@@ -5,8 +5,8 @@ import { Contour, ContourElement } from '../types'
 
 const calculateContourDuration: (notes: Contour) => Time =
     (notes: Contour): Time =>
-        notes.reduce((m: Time, [_, duration]: ContourElement) => {
-            return to.Time(from.Time(m) + from.Time(duration))
-        }, to.Time(0))
+        notes.reduce((m: Time, [_, duration]: ContourElement) =>
+                to.Time(from.Time(m) + from.Time(duration)),
+                     to.Time(0))
 
 export default calculateContourDuration

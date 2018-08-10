@@ -6,7 +6,7 @@ import {
 } from '../../src/contours/thirtyfiveContours'
 import * as to from '../../src/utilities/to'
 import * as from from '../../../../src/utilities/from'
-import calculateContourDuration from '../../src/contours/calculateContourDuration'
+import calculateContourDuration from '../../src/utilities/calculateContourDuration'
 
 describe('thirtyfive contours', () => {
     it('handles yaos bass', () => {

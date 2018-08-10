@@ -9,8 +9,7 @@ import {
     shiftyTwentyfourVariantContour,
 } from '../contours/otherContours'
 import { getZdaubyaosContours } from '../contours/zdaubyaosContours'
-import { Part } from '../types'
-import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
+import { BarTarget, BlockStyle, Part, Rendering } from '../types'
 
 const secretLongChordPart: Part = secretLongChordContour
 

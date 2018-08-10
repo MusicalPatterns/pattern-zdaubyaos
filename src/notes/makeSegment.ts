@@ -1,7 +1,7 @@
 import { Index, Offset, Scalar } from '../../../../src/utilities/nominalTypes'
-import makeNote from '../makeNote'
 import { Notes, Part, Segment } from '../types'
 import applyScaleIndex from './applyScaleIndex'
+import makeNote from './makeNote'
 import offsetPitchIndex from './offsetPitchIndex'
 import scaleGain from './scaleGain'
 

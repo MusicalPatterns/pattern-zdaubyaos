@@ -5,7 +5,7 @@ import {
     zdaubyaosHarmonicOrSubharmonicTrack,
     zdaubyaosSubparticularOrDubparticularTrack,
     zdaubyaosSuperparticularOrDuperparticularTrack,
-} from './convertSegmentsToTracks'
+} from './tracks'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const TO_AVOID_BLOW_OUT: Scalar = 0.2 as any

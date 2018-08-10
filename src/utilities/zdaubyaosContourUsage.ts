@@ -1,4 +1,4 @@
-import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
+import { BarTarget, BlockStyle, Rendering } from '../types'
 
 type UsageCount = number
 
