@@ -14,20 +14,20 @@ const zdaubyaosContoursByBarTargetBlockStyleThenRendering: ZdaubyaosContours = {
 
 Object.entries(zdaubyaosBlocksByBarTargetThenBlockStyle).forEach(
 // @ts-ignore
-    ([barDuration, blocksBy]: [BarTarget, ByBlockStyle]): void => {
+    ([barTarget, blocksBy]: [BarTarget, ByBlockStyle]): void => {
         Object.entries(blocksBy).forEach(
             // @ts-ignore
-            ([blocksName, blocks]: [BlockStyle, Blocks]): void => {
+            ([blockStyle, blocks]: [BlockStyle, Blocks]): void => {
                 Object.entries(zdaubyaosRenderings).forEach(
                     // @ts-ignore
                     ([renderingName, rendering]: [Rendering, RenderingFunction]): void => {
                         const contour: Contour = rendering(blocks)
 
-                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barDuration] =
-                            zdaubyaosContoursByBarTargetBlockStyleThenRendering[barDuration] || {}
-                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barDuration][blocksName] =
-                            zdaubyaosContoursByBarTargetBlockStyleThenRendering[barDuration][blocksName] || {}
-                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barDuration][blocksName][renderingName] =
+                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget] =
+                            zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget] || {}
+                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle] =
+                            zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle] || {}
+                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle][renderingName] =
                             contour
                     })
             })

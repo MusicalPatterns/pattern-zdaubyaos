@@ -1,5 +1,6 @@
 import {
-    inaiiiVarietyContour, zdaubGlisVariantContour,
+    inaiiiVarietyContour,
+    zdaubGlisVariantContour,
     zdaubyaosContoursByBarTargetBlockStyleThenRendering,
 } from '../contours/zdaubyaosContours'
 import makeNote from '../makeNote'
@@ -15,7 +16,7 @@ const zdaubyaosNotesByBarTargetBlockStyleThenRendering: ZdaubyaosNotes = {}
 
 Object.entries(zdaubyaosContoursByBarTargetBlockStyleThenRendering).forEach(
     // @ts-ignore
-    ([barDuration, contoursByBlockStyle]: [BarTarget, ByBlockStyle]): void => {
+    ([barTarget, contoursByBlockStyle]: [BarTarget, ByBlockStyle]): void => {
         Object.entries(contoursByBlockStyle).forEach(
             // @ts-ignore
             ([blockStyle, contoursByRendering]: [BlockStyle, ByRendering]): void => {
@@ -24,11 +25,11 @@ Object.entries(zdaubyaosContoursByBarTargetBlockStyleThenRendering).forEach(
                     ([rendering, contour]: [Rendering, Contour]): void => {
                         const notes: Notes = contour.map(makeNote)
 
-                        zdaubyaosNotesByBarTargetBlockStyleThenRendering[barDuration] =
-                            zdaubyaosNotesByBarTargetBlockStyleThenRendering[barDuration] || {}
-                        zdaubyaosNotesByBarTargetBlockStyleThenRendering[barDuration][blockStyle] =
-                            zdaubyaosNotesByBarTargetBlockStyleThenRendering[barDuration][blockStyle] || {}
-                        zdaubyaosNotesByBarTargetBlockStyleThenRendering[barDuration][blockStyle][rendering] = notes
+                        zdaubyaosNotesByBarTargetBlockStyleThenRendering[barTarget] =
+                            zdaubyaosNotesByBarTargetBlockStyleThenRendering[barTarget] || {}
+                        zdaubyaosNotesByBarTargetBlockStyleThenRendering[barTarget][blockStyle] =
+                            zdaubyaosNotesByBarTargetBlockStyleThenRendering[barTarget][blockStyle] || {}
+                        zdaubyaosNotesByBarTargetBlockStyleThenRendering[barTarget][blockStyle][rendering] = notes
                     })
             })
     })
@@ -48,16 +49,16 @@ export const zdaubyaosNoteUsagesByDurationBlocksThenRendering: UsageGrouping = {
 
 type GetZdaubyaosNotes = (
     blockStyle: BlockStyle,
-    barDuration: BarTarget,
+    barTarget: BarTarget,
     rendering: Rendering,
 ) => Notes
 
 const getZdaubyaosNotes: GetZdaubyaosNotes =
-    (blockStyle: BlockStyle, barDuration: BarTarget, rendering: Rendering): Notes => {
-        zdaubyaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] =
-            zdaubyaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle] || {}
+    (blockStyle: BlockStyle, barTarget: BarTarget, rendering: Rendering): Notes => {
+        zdaubyaosNoteUsagesByDurationBlocksThenRendering[barTarget][blockStyle] =
+            zdaubyaosNoteUsagesByDurationBlocksThenRendering[barTarget][blockStyle] || {}
         const byBlockStyle: UsageCountByRendering | undefined =
-            zdaubyaosNoteUsagesByDurationBlocksThenRendering[barDuration][blockStyle]
+            zdaubyaosNoteUsagesByDurationBlocksThenRendering[barTarget][blockStyle]
         if (byBlockStyle !== undefined) {
             let byRendering: UsageCount | undefined = byBlockStyle[rendering]
             if (byRendering !== undefined) {
@@ -68,7 +69,7 @@ const getZdaubyaosNotes: GetZdaubyaosNotes =
             }
         }
 
-        return zdaubyaosNotesByBarTargetBlockStyleThenRendering[barDuration][blockStyle][rendering]
+        return zdaubyaosNotesByBarTargetBlockStyleThenRendering[barTarget][blockStyle][rendering]
     }
 
 const inaiiiVarietyNotes: Notes = inaiiiVarietyContour.map(makeNote)
