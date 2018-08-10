@@ -18,7 +18,11 @@ const trueSpringWithZdaubSegment: Segment = alterSegmentParts(
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueZdaubTremPart,
     ],
-    [{}, {}, {}],
+    [
+        {scaleIndex: to.Index(0)},
+        {scaleIndex: to.Index(1)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment: Segment = alterSegmentParts(
@@ -27,7 +31,11 @@ const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySeg
         trueZdaubGlisPart,
         trueZdaubGlisVariantPart,
     ],
-    [{flipHarmonically: true, pitchIndexOffset: to.Offset(2)}, {}, {}],
+    [
+        {scaleIndex: to.Index(3), pitchIndexOffset: to.Offset(2)},
+        {scaleIndex: to.Index(1)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 const trueSpringySummerTotallyOutThereSegment: Segment = alterSegmentParts(
@@ -37,9 +45,9 @@ const trueSpringySummerTotallyOutThereSegment: Segment = alterSegmentParts(
         trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
     ],
     [
-        {pitchIndexOffset: to.Offset(2)},
-        {pitchIndexOffset: to.Offset(-2)},
-        {pitchIndexOffset: to.Offset(-3)},
+        {scaleIndex: to.Index(0), pitchIndexOffset: to.Offset(2)},
+        {scaleIndex: to.Index(1), pitchIndexOffset: to.Offset(-2)},
+        {scaleIndex: to.Index(2), pitchIndexOffset: to.Offset(-3)},
     ],
 )
 

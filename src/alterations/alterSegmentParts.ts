@@ -1,24 +1,21 @@
-import rest from '../../../../src/rest'
-import calculateDuration from '../../../../src/utilities/calculateDuration'
-import { Offset, Scalar } from '../../../../src/utilities/nominalTypes'
+import { Index, Offset, Scalar } from '../../../../src/utilities/nominalTypes'
 import { Part, Segment } from '../types'
+import applyScaleIndex from './applyScaleIndex'
 import offsetPitchIndex from './offsetPitchIndex'
 import scaleGain from './scaleGain'
-
-const FLIP_INDEX: number = 3
 
 interface Alteration {
     flipHarmonically?: boolean,
     gainScalar?: Scalar,
     pitchIndexOffset?: Offset,
+    scaleIndex: Index,
 }
 
 const alterSegmentParts: (segment: Segment, alterations: Alteration[]) => Segment =
-    (segment: Segment, alterations: Alteration[]): Segment => {
-        const alteredSegment: Segment = []
-        segment.forEach((part: Part, index: number): void => {
+    (segment: Segment, alterations: Alteration[]): Segment =>
+        segment.map((part: Part, index: number): Part => {
             let alteredPart: Part = part
-            const {flipHarmonically, gainScalar, pitchIndexOffset} = alterations[index]
+            const {gainScalar, pitchIndexOffset, scaleIndex} = alterations[index]
 
             if (pitchIndexOffset) {
                 alteredPart = offsetPitchIndex(alteredPart, pitchIndexOffset)
@@ -28,16 +25,9 @@ const alterSegmentParts: (segment: Segment, alterations: Alteration[]) => Segmen
                 alteredPart = scaleGain(alteredPart, gainScalar)
             }
 
-            if (flipHarmonically) {
-                alteredSegment[index] = rest(calculateDuration(alteredPart))
-                alteredSegment[index + FLIP_INDEX] = alteredPart
-            } else {
-                alteredSegment[index] = alteredPart
-                alteredSegment[index + FLIP_INDEX] = rest(calculateDuration(alteredPart))
-            }
-        })
+            alteredPart = applyScaleIndex(alteredPart, scaleIndex)
 
-        return alteredSegment
-    }
+            return alteredPart
+        })
 
 export default alterSegmentParts

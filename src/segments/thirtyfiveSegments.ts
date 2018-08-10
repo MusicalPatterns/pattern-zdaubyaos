@@ -14,9 +14,9 @@ const thirtyfiveSegment: Segment = alterSegmentParts(
         thirtyfiveYaosBassPart,
     ],
     [
-        {gainScalar: to.Scalar(0.66)},
-        {},
-        {gainScalar: to.Scalar(1.25), flipHarmonically: true},
+        {scaleIndex: to.Index(0), gainScalar: to.Scalar(0.66)},
+        {scaleIndex: to.Index(1)},
+        {scaleIndex: to.Index(5), gainScalar: to.Scalar(1.25)},
     ],
 )
 

@@ -10,9 +10,9 @@ const secretLongChordSegment: Segment = alterSegmentParts(
         secretLongChordPart,
     ],
     [
-        {pitchIndexOffset: to.Offset(4), flipHarmonically: true, gainScalar: to.Scalar(0.8)},
-        {pitchIndexOffset: to.Offset(6), flipHarmonically: true, gainScalar: to.Scalar(0.8)},
-        {pitchIndexOffset: to.Offset(3), flipHarmonically: true, gainScalar: to.Scalar(0.8)},
+        {pitchIndexOffset: to.Offset(4), scaleIndex: to.Index(3), gainScalar: to.Scalar(0.8)},
+        {pitchIndexOffset: to.Offset(6), scaleIndex: to.Index(4), gainScalar: to.Scalar(0.8)},
+        {pitchIndexOffset: to.Offset(3), scaleIndex: to.Index(5), gainScalar: to.Scalar(0.8)},
     ],
 )
 
@@ -23,9 +23,9 @@ const totallyOutThereIntroSegment: Segment = alterSegmentParts(
         totallyOutTherePart,
     ],
     [
-        {pitchIndexOffset: to.Offset(2)},
-        {pitchIndexOffset: to.Offset(-2)},
-        {pitchIndexOffset: to.Offset(-3)},
+        {pitchIndexOffset: to.Offset(2), scaleIndex: to.Index(0)},
+        {pitchIndexOffset: to.Offset(-2), scaleIndex: to.Index(1)},
+        {pitchIndexOffset: to.Offset(-3), scaleIndex: to.Index(2)},
     ],
 )
 
@@ -36,9 +36,9 @@ const shiftySegment: Segment = alterSegmentParts(
         shiftyBPart,
     ],
     [
-        {flipHarmonically: true},
-        {flipHarmonically: true},
-        {flipHarmonically: true},
+        {scaleIndex: to.Index(3)},
+        {scaleIndex: to.Index(4)},
+        {scaleIndex: to.Index(5)},
     ],
 )
 

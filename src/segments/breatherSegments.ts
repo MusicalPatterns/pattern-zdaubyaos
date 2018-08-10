@@ -17,7 +17,11 @@ const breatherSpringSegment: Segment = alterSegmentParts(
         breatherRestPart,
         breatherRestPart,
     ],
-    [{gainScalar: to.Scalar(0.5)}, {}, {}],
+    [
+        {gainScalar: to.Scalar(0.5), scaleIndex: to.Index(0)},
+        {scaleIndex: to.Index(1)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 const breatherSummerSegment: Segment = alterSegmentParts(
@@ -26,7 +30,11 @@ const breatherSummerSegment: Segment = alterSegmentParts(
         breatherSummerPart,
         breatherRestPart,
     ],
-    [{}, {gainScalar: to.Scalar(0.5), flipHarmonically: true}, {}],
+    [
+        {scaleIndex: to.Index(0)},
+        {gainScalar: to.Scalar(0.5), scaleIndex: to.Index(4)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = alterSegmentParts(
@@ -35,7 +43,11 @@ const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = alterSegmentPar
         doubleBreatherRestPart,
         doubleBreatherFallPart,
     ],
-    [{}, {}, {gainScalar: to.Scalar(0.5), pitchIndexOffset: to.Offset(-1)}],
+    [
+        {scaleIndex: to.Index(0)},
+        {scaleIndex: to.Index(1)},
+        {gainScalar: to.Scalar(0.5), pitchIndexOffset: to.Offset(-1), scaleIndex: to.Index(2)},
+    ],
 )
 
 const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = alterSegmentParts(
@@ -44,7 +56,11 @@ const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = alterSegment
         breatherSpringAltPart,
         breatherRestPart,
     ],
-    [{}, {gainScalar: to.Scalar(0.5)}, {}],
+    [
+        {scaleIndex: to.Index(0)},
+        {gainScalar: to.Scalar(0.5), scaleIndex: to.Index(1)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 const breatherVarietyQuiteTheReveilleSegment: Segment = alterSegmentParts(
@@ -54,9 +70,9 @@ const breatherVarietyQuiteTheReveilleSegment: Segment = alterSegmentParts(
         breatherVarietyPart,
     ],
     [
-        { flipHarmonically: true},
-        { flipHarmonically: true},
-        { flipHarmonically: true},
+        {scaleIndex: to.Index(3)},
+        {scaleIndex: to.Index(4)},
+        {scaleIndex: to.Index(5)},
     ],
 )
 

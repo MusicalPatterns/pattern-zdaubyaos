@@ -1,3 +1,4 @@
+import * as to from '../../../../src/utilities/to'
 import alterSegmentParts from '../alterations/alterSegmentParts'
 import {
     trueYaosInaidjiyaiouzdSummerToSpringPart,
@@ -12,7 +13,11 @@ const trueSpringAllYaosUmowchuwowiestSegment: Segment = alterSegmentParts(
         trueYaosUmowchuwowiestSpringToSummerPart,
         trueYaosUmowchuwowiestSpringToSummerPart,
     ],
-    [{}, {}, {}],
+    [
+        {scaleIndex: to.Index(0)},
+        {scaleIndex: to.Index(1)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
@@ -21,7 +26,11 @@ const trueAllYaosAllRhythmsAtOnceSegment: Segment = alterSegmentParts(
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueYaosInaidjiyaiouzdSummerToSpringPart,
     ],
-    [{flipHarmonically: true}, {flipHarmonically: true}, {}],
+    [
+        {scaleIndex: to.Index(3)},
+        {scaleIndex: to.Index(4)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = alterSegmentParts(
@@ -30,7 +39,11 @@ const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment
         trueYaosUmowchuwowiestSummerToSpringPart,
         trueYaosUmowchuwowiestSummerToSpringPart,
     ],
-    [{flipHarmonically: true}, {}, {}],
+    [
+        {scaleIndex: to.Index(3)},
+        {scaleIndex: to.Index(1)},
+        {scaleIndex: to.Index(2)},
+    ],
 )
 
 export {
