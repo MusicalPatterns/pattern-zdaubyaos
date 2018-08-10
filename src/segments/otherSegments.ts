@@ -1,5 +1,5 @@
 import * as to from '../../../../src/utilities/to'
-import makeSegment from '../alterations/makeSegment'
+import makeSegment from '../notes/makeSegment'
 import { secretLongChordPart, shiftyAPart, shiftyBPart, totallyOutTherePart } from '../parts/otherParts'
 import { Segment } from '../types'
 

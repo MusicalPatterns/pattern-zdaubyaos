@@ -1,5 +1,5 @@
 import * as to from '../../../src/utilities/to'
-import scaleGain from '../src/alterations/scaleGain'
+import scaleGain from '../src/notes/scaleGain'
 import { Notes } from '../src/types'
 
 describe('scale gain', () => {

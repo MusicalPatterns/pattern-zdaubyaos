@@ -1,5 +1,5 @@
 import * as to from '../../../src/utilities/to'
-import offsetPitchIndex from '../src/alterations/offsetPitchIndex'
+import offsetPitchIndex from '../src/notes/offsetPitchIndex'
 import { Notes } from '../src/types'
 
 describe('offset pitch', () => {
