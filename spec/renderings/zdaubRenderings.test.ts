@@ -1,12 +1,12 @@
-import zdaubRenderings from '../../src/renderings/zdaubRenderings'
 import { RenderingFunction } from '../../src/types'
 import * as to from '../../src/utilities/to'
-import { ZdaubRendering } from '../../src/zdaubyaosTypes'
+import zdaubyaosRenderings from '../../src/renderings/zdaubyaosRenderings'
+import { Rendering } from '../../src/zdaubyaosTypes'
 
 describe('zdaub renderings', () => {
     describe('glis', () => {
         it('sustains a single note the entire block', () => {
-            const glis: RenderingFunction = zdaubRenderings[ZdaubRendering.GLIS]
+            const glis: RenderingFunction = zdaubyaosRenderings[Rendering.GLIS]
             expect(glis(to.Blocks([2]))).toEqual(to.Contour([
                 [2, 2]
             ]))
@@ -30,7 +30,7 @@ describe('zdaub renderings', () => {
 
     describe('trem', () => {
         it('fills the block with x notes of duration 1 with pitch x each', () => {
-            const trem: RenderingFunction = zdaubRenderings[ZdaubRendering.TREM]
+            const trem: RenderingFunction = zdaubyaosRenderings[Rendering.TREM]
             expect(trem(to.Blocks([2]))).toEqual(to.Contour([
                 [2, 1], [2, 1],
             ]))
@@ -55,7 +55,7 @@ describe('zdaub renderings', () => {
     describe('bony', () => {
         describe('when the sum of the blocks is 15', () => {
             it('alternates rhythmically 1 and 2', () => {
-                const bony: RenderingFunction = zdaubRenderings[ZdaubRendering.BONY]
+                const bony: RenderingFunction = zdaubyaosRenderings[Rendering.BONY]
                 expect(bony(to.Blocks([1, 2, 3, 4, 5]))).toEqual(to.Contour([
                     [1, 1], [2, 2], [3, 1], [3, 2], [4, 1], [4, 2], [4, 1], [5, 2], [5, 1], [5, 2],
                 ]))
@@ -64,7 +64,7 @@ describe('zdaub renderings', () => {
 
         describe('when the sum of the blocks is 24', () => {
             it('alternates rhythmically 1 and 3', () => {
-                const bony: RenderingFunction = zdaubRenderings[ZdaubRendering.BONY]
+                const bony: RenderingFunction = zdaubyaosRenderings[Rendering.BONY]
                 expect(bony(to.Blocks([9, 7, 5, 3]))).toEqual(to.Contour([
                     [9, 1], [9, 3], [9, 1], [9, 3], [9, 1], [7, 3], [7, 1], [7, 3], [5, 1], [5, 3], [5, 1], [3, 3],
                 ]))

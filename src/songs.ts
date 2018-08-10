@@ -2,6 +2,7 @@
 
 import { Song } from '../../../src/types'
 import { ZDAUBYAOS_BASE_PITCH } from './basePitch'
+import { zdaubyaosContoursByBarTargetBlockStyleThenRendering } from './contours/zdaubyaosContours'
 import {
     zdaubyaosDubparticularSaw,
     zdaubyaosDuperparticularSaw,
@@ -24,7 +25,7 @@ const zdaubyaos: Song = {
 }
 
 // console.log(zdaubyaos)
-// console.log(yaosNoteUsagesByDurationBlocksThenRendering)
+// console.log(zdaubyaosContoursByBarTargetBlockStyleThenRendering)
 
 export {
     zdaubyaos,

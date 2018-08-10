@@ -1,29 +1,29 @@
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
-import { getZdaubNotes, zdaubGlisVariantNotes } from '../notes/zdaubNotes'
+import { getZdaubyaosNotes, zdaubGlisVariantNotes } from '../notes/zdaubyaosNotes'
 import { Part } from '../types'
-import { BarDuration, ZdaubBlockStyle, ZdaubRendering } from '../zdaubyaosTypes'
+import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
 
 const trueZdaubGlisPart: Part = sequence([
-    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.FIFTEEN, ZdaubRendering.GLIS), 3),
-    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.FIFTEEN, ZdaubRendering.GLIS),
-    getZdaubNotes(ZdaubBlockStyle.SCEND, BarDuration.FIFTEEN, ZdaubRendering.GLIS),
-    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.TWENTYFOUR, ZdaubRendering.GLIS),
-    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.TWENTYFOUR, ZdaubRendering.GLIS), 3),
+    repeatCall(() => getZdaubyaosNotes(BlockStyle.NODLE, BarTarget.FIFTEEN, Rendering.GLIS), 3),
+    getZdaubyaosNotes(BlockStyle.LIMIN, BarTarget.FIFTEEN, Rendering.GLIS),
+    getZdaubyaosNotes(BlockStyle.SCEND, BarTarget.FIFTEEN, Rendering.GLIS),
+    getZdaubyaosNotes(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, Rendering.GLIS),
+    repeatCall(() => getZdaubyaosNotes(BlockStyle.NODLE, BarTarget.TWENTYFOUR, Rendering.GLIS), 3),
 ])
 
 const trueZdaubGlisVariantPart: Part = sequence([
-    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.FIFTEEN, ZdaubRendering.GLIS), 4),
-    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.FIFTEEN, ZdaubRendering.GLIS),
+    repeatCall(() => getZdaubyaosNotes(BlockStyle.NODLE, BarTarget.FIFTEEN, Rendering.GLIS), 4),
+    getZdaubyaosNotes(BlockStyle.LIMIN, BarTarget.FIFTEEN, Rendering.GLIS),
     zdaubGlisVariantNotes,
 ])
 
 const trueZdaubTremPart: Part = sequence([
-    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.FIFTEEN, ZdaubRendering.TREM), 3),
-    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.FIFTEEN, ZdaubRendering.TREM),
-    getZdaubNotes(ZdaubBlockStyle.SCEND, BarDuration.FIFTEEN, ZdaubRendering.TREM),
-    getZdaubNotes(ZdaubBlockStyle.LIMIN, BarDuration.TWENTYFOUR, ZdaubRendering.TREM),
-    repeatCall(() => getZdaubNotes(ZdaubBlockStyle.NODLE, BarDuration.TWENTYFOUR, ZdaubRendering.TREM), 3),
+    repeatCall(() => getZdaubyaosNotes(BlockStyle.NODLE, BarTarget.FIFTEEN, Rendering.TREM), 3),
+    getZdaubyaosNotes(BlockStyle.LIMIN, BarTarget.FIFTEEN, Rendering.TREM),
+    getZdaubyaosNotes(BlockStyle.SCEND, BarTarget.FIFTEEN, Rendering.TREM),
+    getZdaubyaosNotes(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, Rendering.TREM),
+    repeatCall(() => getZdaubyaosNotes(BlockStyle.NODLE, BarTarget.TWENTYFOUR, Rendering.TREM), 3),
 ])
 
 export {

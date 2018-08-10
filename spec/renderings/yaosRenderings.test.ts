@@ -1,12 +1,12 @@
-import yaosRenderings from '../../src/renderings/yaosRenderings'
 import { RenderingFunction } from '../../src/types'
 import * as to from '../../src/utilities/to'
-import { YaosRendering } from '../../src/zdaubyaosTypes'
+import zdaubyaosRenderings from '../../src/renderings/zdaubyaosRenderings'
+import { Rendering } from '../../src/zdaubyaosTypes'
 
 describe('yaos renderings', () => {
     describe('spring', () => {
         it('ascends from 1, by 1, muting the 1 itself', () => {
-            const spring: RenderingFunction = yaosRenderings[YaosRendering.SPRING]
+            const spring: RenderingFunction = zdaubyaosRenderings[Rendering.SPRING]
             expect(spring(to.Blocks([2]))).toEqual(to.Contour([
                 [0, 1], [2, 1],
             ]))
@@ -30,7 +30,7 @@ describe('yaos renderings', () => {
 
     describe('summer', () => {
         it('ascends from 1, by 1, muting all evens', () => {
-            const summer: RenderingFunction = yaosRenderings[YaosRendering.SUMMER]
+            const summer: RenderingFunction = zdaubyaosRenderings[Rendering.SUMMER]
             expect(summer(to.Blocks([2]))).toEqual(to.Contour([
                 [1, 1], [0, 1],
             ]))
@@ -54,7 +54,7 @@ describe('yaos renderings', () => {
 
     describe('fall', () => {
         it('first note pitch and duration 1, second note with the remaining duration and matching pitch', () => {
-            const fall: RenderingFunction = yaosRenderings[YaosRendering.FALL]
+            const fall: RenderingFunction = zdaubyaosRenderings[Rendering.FALL]
             expect(fall(to.Blocks([2]))).toEqual(to.Contour([
                 [1, 1], [1, 1],
             ]))
@@ -78,7 +78,7 @@ describe('yaos renderings', () => {
 
     describe('summery spring', () => {
         it('has the same pattern of mutes as spring with the pitches from summer', () => {
-            const summerySpring: RenderingFunction = yaosRenderings[YaosRendering.SUMMERY_SPRING]
+            const summerySpring: RenderingFunction = zdaubyaosRenderings[Rendering.SUMMERY_SPRING]
             expect(summerySpring(to.Blocks([2]))).toEqual(to.Contour([
                 [0, 1], [1, 1],
             ]))
@@ -102,7 +102,7 @@ describe('yaos renderings', () => {
 
     describe('springy summer', () => {
         it('has the same pattern of mutes as summer with the pitches from spring', () => {
-            const springySummer: RenderingFunction = yaosRenderings[YaosRendering.SPRINGY_SUMMER]
+            const springySummer: RenderingFunction = zdaubyaosRenderings[Rendering.SPRINGY_SUMMER]
             expect(springySummer(to.Blocks([2]))).toEqual(to.Contour([
                 [2, 1], [0, 1],
             ]))

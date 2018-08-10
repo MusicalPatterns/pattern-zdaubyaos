@@ -6,15 +6,15 @@ import {
     shiftyTwentyfourBlocks,
     shiftyTwentyfourVariantBlocks,
 } from '../blocks/otherBlocks'
-import zdaubRenderings from '../renderings/zdaubRenderings'
+import zdaubyaosRenderings from '../renderings/zdaubyaosRenderings'
 import { Contour, RenderingFunction } from '../types'
 import * as to from '../utilities/to'
-import { ZdaubRendering } from '../zdaubyaosTypes'
+import { Rendering } from '../zdaubyaosTypes'
 
 // tslint:disable-next-line:no-magic-numbers
 const secretLongChordContour: Contour = to.Contour([[1, 24]])
 
-const glis: RenderingFunction = zdaubRenderings[ZdaubRendering.GLIS]
+const glis: RenderingFunction = zdaubyaosRenderings[Rendering.GLIS]
 
 const backboneFifteenContour: Contour = glis(backboneFifteenBlocks)
 const backboneTwentyfourContour: Contour = glis(backboneTwentyfourBlocks)

@@ -4,16 +4,28 @@ import rest from '../../../../src/rest'
 import repeat from '../../../../src/utilities/repeat'
 import * as to from '../../../../src/utilities/to'
 import { backboneTwentyfourNotes } from '../notes/otherNotes'
-import { getYaosNotes, inaiiiVarietyNotes } from '../notes/yaosNotes'
+import { getZdaubyaosNotes, inaiiiVarietyNotes } from '../notes/zdaubyaosNotes'
 import { Part } from '../types'
-import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
+import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
 
 const breatherRestPart: Part = rest(to.Time(24))
-const breatherSpringPart: Part = getYaosNotes(YaosBlockStyle.INAI, BarDuration.TWENTYFOUR, YaosRendering.SPRING)
-const breatherSummerPart: Part = getYaosNotes(YaosBlockStyle.INAI, BarDuration.TWENTYFOUR, YaosRendering.SUMMER)
+const breatherSpringPart: Part = getZdaubyaosNotes(
+    BlockStyle.INAI,
+    BarTarget.TWENTYFOUR,
+    Rendering.SPRING,
+)
+const breatherSummerPart: Part = getZdaubyaosNotes(
+    BlockStyle.INAI,
+    BarTarget.TWENTYFOUR,
+    Rendering.SUMMER,
+)
 const doubleBreatherFallPart: Part = repeat(backboneTwentyfourNotes, 2)
 const breatherVarietyPart: Part = inaiiiVarietyNotes
-const breatherSpringAltPart: Part = getYaosNotes(YaosBlockStyle.OUZD, BarDuration.TWENTYFOUR, YaosRendering.SPRING)
+const breatherSpringAltPart: Part = getZdaubyaosNotes(
+    BlockStyle.OUZD,
+    BarTarget.TWENTYFOUR,
+    Rendering.SPRING,
+)
 const doubleBreatherRestPart: Part = rest(to.Time(48))
 
 export {

@@ -8,14 +8,14 @@ import {
     shiftyTwentyfourNotes,
     shiftyTwentyfourVariantNotes,
 } from '../notes/otherNotes'
-import { getYaosNotes } from '../notes/yaosNotes'
+import { getZdaubyaosNotes } from '../notes/zdaubyaosNotes'
 import { Part } from '../types'
-import { BarDuration, YaosBlockStyle, YaosRendering } from '../zdaubyaosTypes'
+import { BarTarget, BlockStyle, Rendering } from '../zdaubyaosTypes'
 
 const secretLongChordPart: Part = secretLongChordNotes
 
 const totallyOutTherePart: Part = repeat(
-    getYaosNotes(YaosBlockStyle.DJIYAI, BarDuration.FIFTEEN, YaosRendering.SPRINGY_SUMMER).slice(0, 8),
+    getZdaubyaosNotes(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.SPRINGY_SUMMER).slice(0, 8),
     3,
 )
 
