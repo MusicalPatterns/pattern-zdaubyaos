@@ -1,4 +1,4 @@
-import { Note } from '../../../src/types'
+import { Note, Notes } from '../../../src/types'
 import { Index, Time } from '../../../src/utilities/nominalTypes'
 import { Block } from './utilities/nominalTypes'
 
@@ -13,8 +13,6 @@ type Contour = ContourElement[]
 type Part = Contour
 
 type MakeNote = (contourElement: ContourElement) => Note
-
-type Notes = Note[]
 
 type Segment = Notes[]
 
@@ -50,7 +48,6 @@ enum BlockStyle {
 
 export {
     Blocks,
-    Notes,
     Part,
     Track,
     RenderingFunction,

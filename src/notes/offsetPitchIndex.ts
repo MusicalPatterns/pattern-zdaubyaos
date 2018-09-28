@@ -1,7 +1,6 @@
-import { Note } from '../../../../src/types'
+import { Note, Notes } from '../../../../src/types'
 import { Offset } from '../../../../src/utilities/nominalTypes'
 import offset from '../../../../src/utilities/offset'
-import { Notes } from '../types'
 
 const offsetPitchIndex: (notes: Notes, pitchIndexOffset: Offset) => Notes =
     (notes: Notes, pitchIndexOffset: Offset): Notes =>

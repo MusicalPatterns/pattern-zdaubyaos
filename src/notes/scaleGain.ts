@@ -1,7 +1,6 @@
-import { Note } from '../../../../src/types'
+import { Note, Notes } from '../../../../src/types'
 import { Scalar } from '../../../../src/utilities/nominalTypes'
 import scale from '../../../../src/utilities/scale'
-import { Notes } from '../types'
 
 const scaleGain: (notes: Notes, gainScalar: Scalar) => Notes =
     (notes: Notes, gainScalar: Scalar): Notes =>
