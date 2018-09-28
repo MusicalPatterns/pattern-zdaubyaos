@@ -13465,6 +13465,7 @@
           "sustain": 1.9
         }
       ],
+      "timeType": "atomic",
       "voiceConfig": {
         "timbre": "sawtooth",
         "voiceType": "oscillator"
@@ -26914,6 +26915,7 @@
           "sustain": 1.9
         }
       ],
+      "timeType": "atomic",
       "voiceConfig": {
         "timbre": "sine",
         "voiceType": "oscillator"
@@ -40979,6 +40981,7 @@
           "sustain": 0.9
         }
       ],
+      "timeType": "atomic",
       "voiceConfig": {
         "timbre": "square",
         "voiceType": "oscillator"
