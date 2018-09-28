@@ -20,6 +20,7 @@ const makeNote: MakeNote =
                 duration,
                 gain: SILENT,
                 pitchIndex: PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
+                pitchScalar: to.Scalar(1),
                 scaleIndex: to.Index(0),
                 sustain: to.Time(from.Time(duration) - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES)),
             }
@@ -29,6 +30,7 @@ const makeNote: MakeNote =
             duration,
             gain: MAX_GAIN,
             pitchIndex,
+            pitchScalar: to.Scalar(1),
             scaleIndex: to.Index(0),
             sustain: to.Time(from.Time(duration) - from.Time(SEPARATION_FOR_NEIGHBORING_NOTES)),
         }
