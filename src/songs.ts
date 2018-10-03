@@ -23,6 +23,7 @@ const zdaubyaos: Song = {
         zdaubyaosHarmonicOrSubharmonicSine,
         zdaubyaosSubparticularOrDubparticularSquare,
     ],
+    name: 'zdaubyaos',
     scales: [
         subparticularSeriesPitches,
         dubparticularSeriesPitches,
