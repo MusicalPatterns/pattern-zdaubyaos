@@ -1,49 +1,24 @@
+import { defaultNote } from '../../../../src/defaultNote'
+import { Note, Notes } from '../../../../src/types'
+import { Index } from '../../../../src/utilities/nominalTypes'
 import * as to from '../../../../src/utilities/to'
 import offsetPitchIndex from '../../src/notes/offsetPitchIndex'
-import { Notes } from '../../src/types'
+
+const testNote: (pitchIndex: Index) => Note =
+    (pitchIndex: Index): Note => ({...defaultNote, pitchIndex})
 
 describe('offset pitch', () => {
-    it('offsets the pitch of every note', () => {
+    it('offsets the pitch index of every note', () => {
         const notes: Notes = [
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(1),
-                pitchIndex: to.Index(1),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(1),
-                pitchIndex: to.Index(2),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(1),
-                pitchIndex: to.Index(4),
-                sustain: to.Time(1),
-            },
+            testNote(to.Index(1)),
+            testNote(to.Index(2)),
+            testNote(to.Index(4)),
         ]
 
         const expectedNotes: Notes = [
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(1),
-                pitchIndex: to.Index(2),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(1),
-                pitchIndex: to.Index(3),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(1),
-                pitchIndex: to.Index(5),
-                sustain: to.Time(1),
-            },
+            testNote(to.Index(2)),
+            testNote(to.Index(3)),
+            testNote(to.Index(5)),
         ]
 
         expect(offsetPitchIndex(notes, to.Offset(1))).toEqual(expectedNotes)

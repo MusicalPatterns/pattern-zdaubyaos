@@ -1,49 +1,24 @@
+import { defaultNote } from '../../../../src/defaultNote'
+import { Note, Notes } from '../../../../src/types'
+import { Scalar } from '../../../../src/utilities/nominalTypes'
 import * as to from '../../../../src/utilities/to'
 import scaleGain from '../../src/notes/scaleGain'
-import { Notes } from '../../src/types'
+
+const testNote: (gain: Scalar) => Note =
+    (gain: Scalar): Note => ({...defaultNote, gain})
 
 describe('scale gain', () => {
     it('scales the gain of every note', () => {
         const notes: Notes = [
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(1),
-                pitchIndex: to.Index(1),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(0.5),
-                pitchIndex: to.Index(1),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(0.25),
-                pitchIndex: to.Index(1),
-                sustain: to.Time(1),
-            },
+            testNote(to.Scalar(1)),
+            testNote(to.Scalar(0.666)),
+            testNote(to.Scalar(0.5)),
         ]
 
         const expectedNotes: Notes = [
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(0.5),
-                pitchIndex: to.Index(1),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(0.25),
-                pitchIndex: to.Index(1),
-                sustain: to.Time(1),
-            },
-            {
-                duration: to.Time(1),
-                gain: to.Scalar(0.125),
-                pitchIndex: to.Index(1),
-                sustain: to.Time(1),
-            },
+            testNote(to.Scalar(0.5)),
+            testNote(to.Scalar(0.333)),
+            testNote(to.Scalar(0.25)),
         ]
 
         expect(scaleGain(notes, to.Scalar(0.5))).toEqual(expectedNotes)

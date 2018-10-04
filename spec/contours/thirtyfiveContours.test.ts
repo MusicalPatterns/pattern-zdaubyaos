@@ -1,12 +1,12 @@
+import * as from from '../../../../src/utilities/from'
 import {
     thirtyfiveYaosAccidentInspiredContour,
     thirtyfiveYaosBassContour,
     thirtyfiveZdaubContour,
     thirtyfiveZdaubOnlyWiggleContour,
 } from '../../src/contours/thirtyfiveContours'
-import * as to from '../../src/utilities/to'
-import * as from from '../../../../src/utilities/from'
 import calculateContourDuration from '../../src/utilities/calculateContourDuration'
+import * as to from '../../src/utilities/to'
 
 describe('thirtyfive contours', () => {
     it('handles yaos bass', () => {

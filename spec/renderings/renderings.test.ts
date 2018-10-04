@@ -1,7 +1,6 @@
-import { RenderingFunction } from '../../src/types'
-import * as to from '../../src/utilities/to'
 import renderings from '../../src/renderings/renderings'
-import { Rendering } from '../../src/types'
+import { Rendering, RenderingFunction } from '../../src/types'
+import * as to from '../../src/utilities/to'
 
 describe('renderings', () => {
     describe('spring', () => {
@@ -128,22 +127,22 @@ describe('renderings', () => {
         it('sustains a single note the entire block', () => {
             const glis: RenderingFunction = renderings[Rendering.GLIS]
             expect(glis(to.Blocks([2]))).toEqual(to.Contour([
-                [2, 2]
+                [2, 2],
             ]))
             expect(glis(to.Blocks([3]))).toEqual(to.Contour([
-                [3, 3]
+                [3, 3],
             ]))
             expect(glis(to.Blocks([4]))).toEqual(to.Contour([
-                [4, 4]
+                [4, 4],
             ]))
             expect(glis(to.Blocks([5]))).toEqual(to.Contour([
-                [5, 5]
+                [5, 5],
             ]))
             expect(glis(to.Blocks([6]))).toEqual(to.Contour([
-                [6, 6]
+                [6, 6],
             ]))
             expect(glis(to.Blocks([7]))).toEqual(to.Contour([
-                [7, 7]
+                [7, 7],
             ]))
         })
     })

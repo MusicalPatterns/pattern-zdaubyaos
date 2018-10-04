@@ -1,7 +1,7 @@
+import calculateNotesDuration from '../../../src/utilities/calculateNotesDuration'
 import { Time } from '../../../src/utilities/nominalTypes'
 import * as to from '../../../src/utilities/to'
-import { zdaubyaosSubparticularOrDubparticularTrack, zdaubyaosSuperparticularOrDuperparticularTrack, zdaubyaosHarmonicOrSubharmonicTrack } from '../src/tracks'
-import calculateNotesDuration from '../../../src/utilities/calculateNotesDuration'
+import { zdaubyaosHarmonicOrSubharmonicTrack, zdaubyaosSubparticularOrDubparticularTrack, zdaubyaosSuperparticularOrDuperparticularTrack } from '../src/tracks'
 
 describe('tracks', () => {
     it('is the case that they all have the same duration', () => {

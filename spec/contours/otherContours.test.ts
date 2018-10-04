@@ -1,7 +1,7 @@
 import {
     backboneFifteenContour,
     backboneTwentyfourContour, shiftyContour,
-    shiftyFifteenContour, shiftyTwentyfourContour, shiftyTwentyfourVariantContour
+    shiftyFifteenContour, shiftyTwentyfourContour, shiftyTwentyfourVariantContour,
 } from '../../src/contours/otherContours'
 import * as to from '../../src/utilities/to'
 
