@@ -2,7 +2,7 @@
 
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song, SongName } from '../../../src/songTypes'
-import { ZDAUBYAOS_BASE_PITCH } from './basePitch'
+import { ZDAUBYAOS_BASE_FREQUENCY } from './basePitch'
 import {
     zdaubyaosHarmonicOrSubharmonicSine,
     zdaubyaosSubparticularOrDubparticularSquare,
@@ -17,7 +17,7 @@ import {
 import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
 const zdaubyaos: Song = {
-    baseFrequency: ZDAUBYAOS_BASE_PITCH,
+    baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
     entityConfigs: [
         zdaubyaosSuperparticularOrDuperparticularSaw,
         zdaubyaosHarmonicOrSubharmonicSine,
