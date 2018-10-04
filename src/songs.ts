@@ -1,7 +1,7 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
-import { Song } from '../../../src/types'
+import { Song, SongName } from '../../../src/songTypes'
 import { ZDAUBYAOS_BASE_PITCH } from './basePitch'
 import {
     zdaubyaosHarmonicOrSubharmonicSine,
@@ -23,7 +23,8 @@ const zdaubyaos: Song = {
         zdaubyaosHarmonicOrSubharmonicSine,
         zdaubyaosSubparticularOrDubparticularSquare,
     ],
-    name: 'zdaubyaos',
+    formattedName: 'Zdaubyaos',
+    name: SongName.ZDAUBYAOS,
     scales: [
         subparticularSeriesPitches,
         dubparticularSeriesPitches,
