@@ -1,5 +1,6 @@
 {
   "baseFrequency": 440,
+  "config": {},
   "entityConfigs": [
     {
       "notes": [

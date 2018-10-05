@@ -1,5 +1,6 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
+import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song, SongName } from '../../../src/songTypes'
 import { ZDAUBYAOS_BASE_FREQUENCY } from './basePitch'
@@ -18,6 +19,8 @@ import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
 const zdaubyaos: Song = {
     baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
+    compile: defaultSongCompile,
+    config: {},
     entityConfigs: [
         zdaubyaosSuperparticularOrDuperparticularSaw,
         zdaubyaosHarmonicOrSubharmonicSine,
