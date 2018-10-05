@@ -18,9 +18,8 @@ import {
 import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
 const zdaubyaos: Song = {
-    baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
     compile: defaultSongCompile,
-    config: {},
+    customConfig: {},
     entityConfigs: [
         zdaubyaosSuperparticularOrDuperparticularSaw,
         zdaubyaosHarmonicOrSubharmonicSine,
@@ -36,6 +35,9 @@ const zdaubyaos: Song = {
         duperparticularSeriesPitches,
         subharmonicSeriesPitches,
     ],
+    standardConfig: {
+        baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
+    },
 }
 
 // console.log(zdaubyaos)
