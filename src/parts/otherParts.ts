@@ -1,6 +1,7 @@
 import repeat from '../../../../src/utilities/repeat'
 import repeatCall from '../../../../src/utilities/repeatCall'
 import sequence from '../../../../src/utilities/sequence'
+import * as to from '../../../../src/utilities/to'
 import {
     secretLongChordContour,
     shiftyContour,
@@ -15,13 +16,13 @@ const secretLongChordPart: Part = secretLongChordContour
 
 const totallyOutTherePart: Part = repeat(
     getZdaubyaosContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.SPRINGY_SUMMER).slice(0, 8),
-    3,
+    to.Count(3),
 )
 
 const shiftyAPart: Part = sequence([
-    repeatCall(() => shiftyFifteenContour, 3),
-    repeatCall(() => shiftyTwentyfourContour, 4),
-    repeatCall(() => shiftyTwentyfourVariantContour, 3),
+    repeatCall(() => shiftyFifteenContour, to.Count(3)),
+    repeatCall(() => shiftyTwentyfourContour, to.Count(4)),
+    repeatCall(() => shiftyTwentyfourVariantContour, to.Count(3)),
 ])
 
 const shiftyBPart: Part = shiftyContour

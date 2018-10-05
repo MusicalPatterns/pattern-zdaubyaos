@@ -5,11 +5,10 @@ import * as zdaubyaosFrom from '../utilities/from'
 import { Block } from '../utilities/nominalTypes'
 import * as zdaubyaosTo from '../utilities/to'
 
-const INITIAL: number = 0
 const EVEN: number = 2
 
 const summerBlock: (block: Block) => Contour = (block: Block): Contour =>
-    zdaubyaosTo.Contour(numbers.slice(INITIAL, zdaubyaosFrom.Block(block))
+    zdaubyaosTo.Contour(numbers.slice(0, zdaubyaosFrom.Block(block))
         .map((n: number): ContourElement =>
             n % EVEN === 0 ? [to.Index(0), to.Time(1)] : [to.Index(n), to.Time(1)]))
 

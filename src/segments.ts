@@ -1,3 +1,6 @@
+import * as from from '../../../src/utilities/from'
+import { Index, Offset } from '../../../src/utilities/nominalTypes'
+import offset from '../../../src/utilities/offset'
 import {
     almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
     almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
@@ -21,9 +24,12 @@ import {
 } from './segments/zdaubyaosSegments'
 import { Segment } from './types'
 
-const START: number = 0
-const END: number = 17
-const INCLUSIVE: number = 1
+// tslint:disable-next-line:no-any no-magic-numbers
+const START: Index = 0 as any
+// tslint:disable-next-line:no-any no-magic-numbers
+const END: Index = 17 as any
+// tslint:disable-next-line:no-any no-magic-numbers
+const INCLUSIVE: Offset = 1 as any
 
 const segments: Segment[] = [
     // 0
@@ -53,6 +59,6 @@ const segments: Segment[] = [
 
     // 17
     thirtyfiveSegment,
-].slice(START, END + INCLUSIVE)
+].slice(from.Index(START), from.Index(offset(END, INCLUSIVE)))
 
 export default segments

@@ -1,6 +1,9 @@
+import { Count } from '../../../../src/utilities/nominalTypes'
+import offset from '../../../../src/utilities/offset'
+import * as to from '../../../../src/utilities/to'
 import { BarTarget, BlockStyle, Rendering } from '../types'
 
-type UsageCount = number
+type UsageCount = Count
 
 type UsageCountByRendering = { [z in Rendering]?: UsageCount }
 
@@ -23,10 +26,10 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, rendering: Rend
         if (byBlockStyle !== undefined) {
             let byRendering: UsageCount | undefined = byBlockStyle[rendering]
             if (byRendering !== undefined) {
-                byRendering += 1
+                byRendering = offset(byRendering, to.Offset(1))
                 byBlockStyle[rendering] = byRendering
             } else {
-                byBlockStyle[rendering] = 1
+                byBlockStyle[rendering] = to.Count(1)
             }
         }
     }

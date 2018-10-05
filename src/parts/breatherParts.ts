@@ -18,7 +18,7 @@ const breatherSummerPart: Part = getZdaubyaosContours(
     BarTarget.TWENTYFOUR,
     Rendering.SUMMER,
 )
-const doubleBreatherFallPart: Part = repeat(backboneTwentyfourContour, 2)
+const doubleBreatherFallPart: Part = repeat(backboneTwentyfourContour, to.Count(2))
 const breatherVarietyPart: Part = inaiiiVarietyContour
 const breatherSpringAltPart: Part = getZdaubyaosContours(
     BlockStyle.OUZD,

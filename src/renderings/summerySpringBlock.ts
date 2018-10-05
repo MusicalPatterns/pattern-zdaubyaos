@@ -1,4 +1,5 @@
-import { Offset, Scalar } from '../../../../src/utilities/nominalTypes'
+import * as from from '../../../../src/utilities/from'
+import { Index, Offset, Scalar } from '../../../../src/utilities/nominalTypes'
 import numbers from '../../../../src/utilities/numbers'
 import offset from '../../../../src/utilities/offset'
 import scale from '../../../../src/utilities/scale'
@@ -11,9 +12,10 @@ import { Block } from '../utilities/nominalTypes'
 const SUMMERY_SPRING_OFFSET: Offset = -1.5 as any
 // tslint:disable-next-line:no-any no-magic-numbers
 const SUMMERY_SPRING_SCALAR: Scalar = 2 as any
-
-const INDEX_OF_PITCH_INDEX: number = 0
-const INITIAL: number = 0
+// tslint:disable-next-line:no-any no-magic-numbers
+const INDEX_OF_PITCH_INDEX: Index = 0 as any
+// tslint:disable-next-line:no-any no-magic-numbers
+const INITIAL: Index = 0 as any
 
 const summerySpringBlock: (block: Block) => Contour =
     (block: Block): Contour => {
@@ -23,7 +25,7 @@ const summerySpringBlock: (block: Block) => Contour =
                 to.Index(scale(offset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR)),
                 to.Time(1),
             ]))
-        contour[INITIAL][INDEX_OF_PITCH_INDEX] = to.Index(0)
+        contour[from.Index(INITIAL)][from.Index(INDEX_OF_PITCH_INDEX)] = to.Index(0)
 
         return contour
     }

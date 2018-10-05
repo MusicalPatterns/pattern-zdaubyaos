@@ -1,5 +1,5 @@
 import {
-    MAX_GAIN,
+    FULL_GAIN,
     PLACEHOLDER_PITCH_INDEX_TO_AVOID_NULL_POINTER_ISSUES,
     SEPARATION_FOR_NEIGHBORING_NOTES,
     SILENT,
@@ -28,7 +28,7 @@ const makeNote: MakeNote =
 
         return {
             duration,
-            gain: MAX_GAIN,
+            gain: FULL_GAIN,
             pitchIndex,
             pitchScalar: to.Scalar(1),
             scaleIndex: to.Index(0),

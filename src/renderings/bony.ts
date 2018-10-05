@@ -1,7 +1,8 @@
 import * as from from '../../../../src/utilities/from'
-import { Index, Time } from '../../../../src/utilities/nominalTypes'
+import { Count, Index, Time } from '../../../../src/utilities/nominalTypes'
 import offset from '../../../../src/utilities/offset'
 import repeat from '../../../../src/utilities/repeat'
+import scale from '../../../../src/utilities/scale'
 import * as to from '../../../../src/utilities/to'
 import { FIFTEEN, TWENTYFOUR } from '../constants'
 import { Blocks, Contour, RenderingFunction } from '../types'
@@ -11,15 +12,19 @@ import * as zdaubyaosTo from '../utilities/to'
 
 const bony: RenderingFunction = (blocks: Blocks): Contour => {
     const blocksClone: Blocks = blocks.slice()
-    const blocksTotal: Time = to.Time(blocksClone.reduce((m: number, n: Block) => m + zdaubyaosFrom.Block(n), 0))
+    const blocksTotal: Time = blocksClone.reduce(
+        (m: Time, n: Block): Time => to.Time(from.Time(m) + zdaubyaosFrom.Block(n)),
+        to.Time(0),
+    )
     const isBarTargetFifteen: boolean = from.Time(blocksTotal) % from.Time(FIFTEEN) === 0
     const barDivisor: Time = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
-    const barCount: number = from.Time(blocksTotal) / from.Time(barDivisor)
+    const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
     const rhythmicBlocks: Blocks = zdaubyaosTo.Blocks(isBarTargetFifteen ?
         // tslint:disable-next-line:no-magic-numbers
-        repeat([1, 2], barCount * 5) :
+        repeat([1, 2], scale(barCount, to.Scalar(5))) :
         // tslint:disable-next-line:no-magic-numbers
-        repeat([1, 3], barCount * 6))
+        repeat([1, 3], scale(barCount, to.Scalar(6))),
+    )
     const output: Contour = []
     let blocksIndexForPitchIndex: Index = to.Index(0)
 

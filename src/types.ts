@@ -16,7 +16,7 @@ type MakeNote = (contourElement: ContourElement) => Note
 
 type Segment = Notes[]
 
-type Track = Note[]
+type Track = Notes
 
 enum BarTarget {
     FIFTEEN = 'fifteen',
