@@ -17,9 +17,9 @@ const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeel
         almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
     ],
     [
-        {scaleIndex: to.Index(3)},
-        {scaleIndex: to.Index(4)},
-        {scaleIndex: to.Index(5)},
+        { scaleIndex: to.Index(3) },
+        { scaleIndex: to.Index(4) },
+        { scaleIndex: to.Index(5) },
     ],
 )
 
@@ -30,9 +30,9 @@ const almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallyS
         almostTrueExtendedEndingZdaubGlisPart,
     ],
     [
-        {scaleIndex: to.Index(3)},
-        {scaleIndex: to.Index(4)},
-        {scaleIndex: to.Index(5)},
+        { scaleIndex: to.Index(3) },
+        { scaleIndex: to.Index(4) },
+        { scaleIndex: to.Index(5) },
     ],
 )
 
@@ -43,9 +43,9 @@ const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = ma
         almostTrueZdaubBonyWithSuperinscapePart,
     ],
     [
-        {gainScalar: to.Scalar(0.33), scaleIndex: to.Index(3)},
-        {gainScalar: to.Scalar(0.33), scaleIndex: to.Index(4)},
-        {gainScalar: to.Scalar(0.33), scaleIndex: to.Index(2)},
+        { gainScalar: to.Scalar(0.33), scaleIndex: to.Index(3) },
+        { gainScalar: to.Scalar(0.33), scaleIndex: to.Index(4) },
+        { gainScalar: to.Scalar(0.33), scaleIndex: to.Index(2) },
     ],
 )
 

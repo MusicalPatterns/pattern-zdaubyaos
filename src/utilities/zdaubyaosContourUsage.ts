@@ -28,7 +28,8 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, rendering: Rend
             if (byRendering !== undefined) {
                 byRendering = offset(byRendering, to.Offset(1))
                 byBlockStyle[rendering] = byRendering
-            } else {
+            }
+            else {
                 byBlockStyle[rendering] = to.Count(1)
             }
         }

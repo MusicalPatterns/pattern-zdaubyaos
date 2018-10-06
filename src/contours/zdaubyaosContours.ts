@@ -14,13 +14,13 @@ const zdaubyaosContoursByBarTargetBlockStyleThenRendering: ZdaubyaosContours = {
 
 Object.entries(zdaubyaosBlocksByBarTargetThenBlockStyle).forEach(
 // @ts-ignore
-    ([barTarget, blocksBy]: [BarTarget, ByBlockStyle]): void => {
+    ([ barTarget, blocksBy ]: [BarTarget, ByBlockStyle]): void => {
         Object.entries(blocksBy).forEach(
             // @ts-ignore
-            ([blockStyle, blocks]: [BlockStyle, Blocks]): void => {
+            ([ blockStyle, blocks ]: [BlockStyle, Blocks]): void => {
                 Object.entries(renderings).forEach(
                     // @ts-ignore
-                    ([renderingName, rendering]: [Rendering, RenderingFunction]): void => {
+                    ([ renderingName, rendering ]: [Rendering, RenderingFunction]): void => {
                         const contour: Contour = rendering(blocks)
 
                         zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget] =
@@ -47,7 +47,7 @@ const inaiiiVarietyContour: Contour = sequence(
                 renderings[Rendering.SUMMER],
                 renderings[Rendering.FALL],
                 renderings[Rendering.FALL],
-            ][index]([block])),
+            ][index]([ block ])),
 )
 
 type GetZdaubyaosContours = (

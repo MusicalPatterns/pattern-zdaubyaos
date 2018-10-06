@@ -15,7 +15,7 @@ const SINGLE_DURATION: Time = 1 as any
 
 const springBlock: (block: Block) => Contour = (block: Block): Contour => {
     const numbersWeNeed: number[] = numbers.slice(0, zdaubyaosFrom.Block(block))
-    const contour: Contour = numbersWeNeed.map((n: number): ContourElement => [to.Index(n), SINGLE_DURATION])
+    const contour: Contour = numbersWeNeed.map((n: number): ContourElement => [ to.Index(n), SINGLE_DURATION ])
     contour[from.Index(INITIAL)][from.Index(INDEX_OF_PITCH_INDEX)] = to.Index(0)
 
     return contour

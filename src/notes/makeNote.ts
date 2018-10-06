@@ -14,7 +14,7 @@ import { ContourElement, MakeNote } from '../types'
 const REST: Index = 0 as any
 
 const makeNote: MakeNote =
-    ([pitchIndex, duration]: ContourElement): Note => {
+    ([ pitchIndex, duration ]: ContourElement): Note => {
         if (pitchIndex === REST) {
             return {
                 duration,

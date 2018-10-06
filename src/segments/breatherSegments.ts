@@ -18,9 +18,9 @@ const breatherSpringSegment: Segment = makeSegment(
         breatherRestPart,
     ],
     [
-        {gainScalar: to.Scalar(0.5), scaleIndex: to.Index(0)},
-        {scaleIndex: to.Index(1)},
-        {scaleIndex: to.Index(2)},
+        { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(0) },
+        { scaleIndex: to.Index(1) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -31,9 +31,9 @@ const breatherSummerSegment: Segment = makeSegment(
         breatherRestPart,
     ],
     [
-        {scaleIndex: to.Index(0)},
-        {gainScalar: to.Scalar(0.5), scaleIndex: to.Index(4)},
-        {scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(0) },
+        { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(4) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -44,9 +44,9 @@ const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = makeSegment(
         doubleBreatherFallPart,
     ],
     [
-        {scaleIndex: to.Index(0)},
-        {scaleIndex: to.Index(1)},
-        {gainScalar: to.Scalar(0.5), pitchIndexOffset: to.Offset(-1), scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(0) },
+        { scaleIndex: to.Index(1) },
+        { gainScalar: to.Scalar(0.5), pitchIndexOffset: to.Offset(-1), scaleIndex: to.Index(2) },
     ],
 )
 
@@ -57,9 +57,9 @@ const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = makeSegment(
         breatherRestPart,
     ],
     [
-        {scaleIndex: to.Index(0)},
-        {gainScalar: to.Scalar(0.5), scaleIndex: to.Index(1)},
-        {scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(0) },
+        { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(1) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -70,9 +70,9 @@ const breatherVarietyQuiteTheReveilleSegment: Segment = makeSegment(
         breatherVarietyPart,
     ],
     [
-        {scaleIndex: to.Index(3)},
-        {scaleIndex: to.Index(4)},
-        {scaleIndex: to.Index(5)},
+        { scaleIndex: to.Index(3) },
+        { scaleIndex: to.Index(4) },
+        { scaleIndex: to.Index(5) },
     ],
 )
 

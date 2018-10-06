@@ -6,6 +6,6 @@ import { Block } from '../utilities/nominalTypes'
 import * as zdaubyaosTo from '../utilities/to'
 
 const tremBlock: (block: Block) => Contour = (block: Block): Contour =>
-    zdaubyaosTo.Contour(repeat([[zdaubyaosFrom.Block(block), 1]], to.Count(zdaubyaosFrom.Block(block))))
+    zdaubyaosTo.Contour(repeat([ [ zdaubyaosFrom.Block(block), 1 ] ], to.Count(zdaubyaosFrom.Block(block))))
 
 export default tremBlock

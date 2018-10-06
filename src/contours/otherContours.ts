@@ -11,7 +11,7 @@ import { Contour, Rendering, RenderingFunction } from '../types'
 import * as to from '../utilities/to'
 
 // tslint:disable-next-line:no-magic-numbers
-const secretLongChordContour: Contour = to.Contour([[1, 24]])
+const secretLongChordContour: Contour = to.Contour([ [ 1, 24 ] ])
 
 const glis: RenderingFunction = renderings[Rendering.GLIS]
 

@@ -17,10 +17,10 @@ const springySummerBlock: (block: Block) => Contour = (block: Block): Contour =>
     numbers.slice(0, zdaubyaosFrom.Block(block))
         .map((n: number): ContourElement => {
             if (n % EVEN === 0) {
-                return [to.Index(0), to.Time(1)]
+                return [ to.Index(0), to.Time(1) ]
             }
 
-            return [to.Index(scale(offset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR)), to.Time(1)]
+            return [ to.Index(scale(offset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR)), to.Time(1) ]
         })
 
 export default springySummerBlock

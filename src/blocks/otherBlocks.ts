@@ -3,9 +3,9 @@ import * as to from '../../../../src/utilities/to'
 import { Blocks } from '../types'
 import * as zdaubyaosTo from '../utilities/to'
 
-const backboneFifteenBlocks: Blocks = zdaubyaosTo.Blocks(repeat([1, 2], to.Count(5)))
+const backboneFifteenBlocks: Blocks = zdaubyaosTo.Blocks(repeat([ 1, 2 ], to.Count(5)))
 
-const backboneTwentyfourBlocks: Blocks = zdaubyaosTo.Blocks(repeat([1, 3], to.Count(6)))
+const backboneTwentyfourBlocks: Blocks = zdaubyaosTo.Blocks(repeat([ 1, 3 ], to.Count(6)))
 
 const shiftyFifteenBlocks: Blocks = zdaubyaosTo.Blocks([
     2, 1,

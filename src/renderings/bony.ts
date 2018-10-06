@@ -21,9 +21,9 @@ const bony: RenderingFunction = (blocks: Blocks): Contour => {
     const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
     const rhythmicBlocks: Blocks = zdaubyaosTo.Blocks(isBarTargetFifteen ?
         // tslint:disable-next-line:no-magic-numbers
-        repeat([1, 2], scale(barCount, to.Scalar(5))) :
+        repeat([ 1, 2 ], scale(barCount, to.Scalar(5))) :
         // tslint:disable-next-line:no-magic-numbers
-        repeat([1, 3], scale(barCount, to.Scalar(6))),
+        repeat([ 1, 3 ], scale(barCount, to.Scalar(6))),
     )
     const output: Contour = []
     let blocksIndexForPitchIndex: Index = to.Index(0)
@@ -40,7 +40,7 @@ const bony: RenderingFunction = (blocks: Blocks): Contour => {
             blocksIndexForPitchIndex = offset(blocksIndexForPitchIndex, to.Offset(1))
         }
 
-        output.push([pitchIndex, to.Time(zdaubyaosFrom.Block(rhythmicBlock))])
+        output.push([ pitchIndex, to.Time(zdaubyaosFrom.Block(rhythmicBlock)) ])
     })
 
     return output

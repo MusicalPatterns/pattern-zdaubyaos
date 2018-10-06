@@ -17,7 +17,7 @@ const makeSegment: (parts: Part[], noteStyle: NoteStyle[]) => Segment =
         parts.map((part: Part, index: number): Notes => {
             let notes: Notes = part.map(makeNote)
 
-            const {gainScalar, pitchIndexOffset, scaleIndex} = noteStyle[index]
+            const { gainScalar, pitchIndexOffset, scaleIndex } = noteStyle[index]
 
             if (pitchIndexOffset) {
                 notes = offsetPitchIndex(notes, pitchIndexOffset)

@@ -22,15 +22,15 @@ const thirtyfiveYaosAccidentInspiredBlocks: Blocks = zdaubyaosTo.Blocks([
     1, 2,
 ])
 
-const thirtyfiveZdaubOnlyWiggleBlocks: Blocks = zdaubyaosTo.Blocks(repeat([4, 1], to.Count(7)))
+const thirtyfiveZdaubOnlyWiggleBlocks: Blocks = zdaubyaosTo.Blocks(repeat([ 4, 1 ], to.Count(7)))
 
 const thirtyfiveZdaubBlocks: Blocks = zdaubyaosTo.Blocks(sequence([
     thirtyfiveZdaubOnlyWiggleBlocks,
     thirtyfiveZdaubOnlyWiggleBlocks,
-    zdaubyaosTo.Blocks([13, 10, 7, 4, 1]),
+    zdaubyaosTo.Blocks([ 13, 10, 7, 4, 1 ]),
     thirtyfiveZdaubOnlyWiggleBlocks,
-    zdaubyaosTo.Blocks([19, 16]),
-    zdaubyaosTo.Blocks([13, 10, 7, 4, 1]),
+    zdaubyaosTo.Blocks([ 19, 16 ]),
+    zdaubyaosTo.Blocks([ 13, 10, 7, 4, 1 ]),
 ]))
 
 export {

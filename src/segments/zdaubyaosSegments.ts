@@ -18,9 +18,9 @@ const trueSpringAllYaosUmowchuwowiestSegment: Segment = makeSegment(
         trueYaosUmowchuwowiestSpringToSummerPart,
     ],
     [
-        {scaleIndex: to.Index(0)},
-        {scaleIndex: to.Index(1)},
-        {scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(0) },
+        { scaleIndex: to.Index(1) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -31,9 +31,9 @@ const trueAllYaosAllRhythmsAtOnceSegment: Segment = makeSegment(
         trueYaosInaidjiyaiouzdSummerToSpringPart,
     ],
     [
-        {scaleIndex: to.Index(3)},
-        {scaleIndex: to.Index(4)},
-        {scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(3) },
+        { scaleIndex: to.Index(4) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -44,9 +44,9 @@ const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment
         trueYaosUmowchuwowiestSummerToSpringPart,
     ],
     [
-        {scaleIndex: to.Index(3)},
-        {scaleIndex: to.Index(1)},
-        {scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(3) },
+        { scaleIndex: to.Index(1) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -57,9 +57,9 @@ const trueSpringWithZdaubSegment: Segment = makeSegment(
         trueZdaubTremPart,
     ],
     [
-        {scaleIndex: to.Index(0)},
-        {scaleIndex: to.Index(1)},
-        {scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(0) },
+        { scaleIndex: to.Index(1) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -70,9 +70,9 @@ const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySeg
         trueZdaubGlisVariantPart,
     ],
     [
-        {scaleIndex: to.Index(3), pitchIndexOffset: to.Offset(2)},
-        {scaleIndex: to.Index(1)},
-        {scaleIndex: to.Index(2)},
+        { scaleIndex: to.Index(3), pitchIndexOffset: to.Offset(2) },
+        { scaleIndex: to.Index(1) },
+        { scaleIndex: to.Index(2) },
     ],
 )
 
@@ -83,9 +83,9 @@ const trueSpringySummerTotallyOutThereSegment: Segment = makeSegment(
         trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
     ],
     [
-        {scaleIndex: to.Index(0), pitchIndexOffset: to.Offset(2)},
-        {scaleIndex: to.Index(1), pitchIndexOffset: to.Offset(-2)},
-        {scaleIndex: to.Index(2), pitchIndexOffset: to.Offset(-3)},
+        { scaleIndex: to.Index(0), pitchIndexOffset: to.Offset(2) },
+        { scaleIndex: to.Index(1), pitchIndexOffset: to.Offset(-2) },
+        { scaleIndex: to.Index(2), pitchIndexOffset: to.Offset(-3) },
     ],
 )
 
