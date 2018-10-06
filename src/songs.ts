@@ -3,6 +3,7 @@
 import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song, SongName } from '../../../src/songTypes'
+import * as to from '../../../src/utilities/to'
 import { ZDAUBYAOS_BASE_FREQUENCY } from './basePitch'
 import {
     zdaubyaosHarmonicOrSubharmonicSine,
@@ -38,6 +39,7 @@ const zdaubyaos: Song = {
     ],
     standardConfig: {
         baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
+        durationScalar: to.Scalar(1),
     },
 }
 
