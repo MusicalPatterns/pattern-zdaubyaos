@@ -20,6 +20,7 @@ import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 const zdaubyaos: Song = {
     compile: defaultSongCompile,
     customConfig: {},
+    description: 'fun with the superparticular series & variants, plus stepwise motion within recurring bounds',
     entityConfigs: [
         zdaubyaosSuperparticularOrDuperparticularSaw,
         zdaubyaosHarmonicOrSubharmonicSine,
