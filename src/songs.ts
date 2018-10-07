@@ -1,6 +1,7 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
 import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
+import { defaultHandleCustomConfigChange } from '../../../src/interface/defaultHandleCustomConfigChange'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song, SongName } from '../../../src/songTypes'
 import * as to from '../../../src/utilities/to'
@@ -28,6 +29,7 @@ const zdaubyaos: Song = {
         zdaubyaosSubparticularOrDubparticularSquare,
     ],
     formattedName: 'Zdaubyaos',
+    handleCustomConfigChange: defaultHandleCustomConfigChange,
     name: SongName.ZDAUBYAOS,
     scales: [
         subparticularSeriesPitches,

@@ -5,7 +5,7 @@ import * as to from '../../../../src/utilities/to'
 import scaleGain from '../../src/notes/scaleGain'
 
 const testNote: (gain: Scalar) => Note =
-    (gain: Scalar): Note => ({...defaultNote, gain})
+    (gain: Scalar): Note => ({ ...defaultNote, gain })
 
 describe('scale gain', () => {
     it('scales the gain of every note', () => {

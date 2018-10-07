@@ -5,7 +5,7 @@ import * as to from '../../../../src/utilities/to'
 import offsetPitchIndex from '../../src/notes/offsetPitchIndex'
 
 const testNote: (pitchIndex: Index) => Note =
-    (pitchIndex: Index): Note => ({...defaultNote, pitchIndex})
+    (pitchIndex: Index): Note => ({ ...defaultNote, pitchIndex })
 
 describe('offset pitch', () => {
     it('offsets the pitch index of every note', () => {
