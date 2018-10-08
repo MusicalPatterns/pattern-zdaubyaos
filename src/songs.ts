@@ -1,7 +1,7 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
 import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
-import { defaultHandleCustomConfigChange } from '../../../src/interface/defaultHandleCustomConfigChange'
+import { defaultHandleConfigChange } from '../../../src/interface/defaultHandleConfigChange'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song, SongName } from '../../../src/songTypes'
 import * as to from '../../../src/utilities/to'
@@ -21,7 +21,10 @@ import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
 const zdaubyaos: Song = {
     compile: defaultSongCompile,
-    customConfig: {},
+    config: {
+        baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
+        durationScalar: to.Scalar(1),
+    },
     description: 'fun with the superparticular series & variants, plus stepwise motion within recurring bounds',
     entityConfigs: [
         zdaubyaosSuperparticularOrDuperparticularSaw,
@@ -29,7 +32,7 @@ const zdaubyaos: Song = {
         zdaubyaosSubparticularOrDubparticularSquare,
     ],
     formattedName: 'Zdaubyaos',
-    handleCustomConfigChange: defaultHandleCustomConfigChange,
+    handleConfigChange: defaultHandleConfigChange,
     name: SongName.ZDAUBYAOS,
     scales: [
         subparticularSeriesPitches,
@@ -39,10 +42,6 @@ const zdaubyaos: Song = {
         duperparticularSeriesPitches,
         subharmonicSeriesPitches,
     ],
-    standardConfig: {
-        baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
-        durationScalar: to.Scalar(1),
-    },
 }
 
 // console.log(zdaubyaos)
