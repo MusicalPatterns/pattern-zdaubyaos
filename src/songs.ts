@@ -1,7 +1,6 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
 import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
-import { handleConfigChange } from '../../../src/interface/handleConfigChange'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
 import { Song, SongName } from '../../../src/songTypes'
 import * as to from '../../../src/utilities/to'
