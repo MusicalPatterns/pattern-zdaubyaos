@@ -3,14 +3,14 @@
 import { Scalar } from '../../../src/utilities/nominalTypes'
 import * as to from '../../../src/utilities/to'
 import {
-    dubparticularSeriesPitches,
-    duperparticularSeriesPitches,
-    subparticularSeriesPitches,
-    superparticularSeriesPitches,
-} from '../src/pitches'
+    dubparticularSeriesScale,
+    duperparticularSeriesScale,
+    subparticularSeriesScale,
+    superparticularSeriesScale,
+} from '../src/scales'
 
-describe('pitches', () => {
-    describe('subparticular series', () => {
+describe('scales', () => {
+    describe('subparticular series scale', () => {
         it('has all the pitches whose numerator is one less than the denominator', () => {
             [
                 1 / 2,
@@ -18,12 +18,12 @@ describe('pitches', () => {
                 3 / 4,
                 4 / 5,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(subparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(subparticularSeriesScale[index]).toEqual(expectedPitch)
             })
         })
     })
 
-    describe('dubparticular series', () => {
+    describe('dubparticular series scale', () => {
         it('has all the pitches whose numerator is two less than the denominator', () => {
             [
                 1 / 3,
@@ -31,12 +31,12 @@ describe('pitches', () => {
                 3 / 5,
                 4 / 6,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(dubparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(dubparticularSeriesScale[index]).toEqual(expectedPitch)
             })
         })
     })
 
-    describe('superparticular series', () => {
+    describe('superparticular series scale', () => {
         it('has all the pitches whose numerator is one more than the denominator', () => {
             [
                 2 / 1,
@@ -44,12 +44,12 @@ describe('pitches', () => {
                 4 / 3,
                 5 / 4,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(superparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(superparticularSeriesScale[index]).toEqual(expectedPitch)
             })
         })
     })
 
-    describe('duperparticular series', () => {
+    describe('duperparticular series scale', () => {
         it('has all the pitches whose numerator is two more than the denominator', () => {
             [
                 3 / 1,
@@ -57,7 +57,7 @@ describe('pitches', () => {
                 5 / 3,
                 6 / 4,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(duperparticularSeriesPitches[index]).toEqual(expectedPitch)
+                expect(duperparticularSeriesScale[index]).toEqual(expectedPitch)
             })
         })
     })

@@ -1,48 +1,48 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
-import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
-import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
-import { SongConfig, SongID } from '../../../src/songTypes'
+import { defaultCompileSong } from '../../../src/compile/defaultCompileSong'
+import { harmonicSeriesScale, subharmonicSeriesScale } from '../../../src/scales'
+import { SongID, SongSpec } from '../../../src/songTypes'
 import * as to from '../../../src/utilities/to'
 import { ZDAUBYAOS_BASE_FREQUENCY } from './basePitch'
 import {
-    zdaubyaosHarmonicOrSubharmonicSine,
-    zdaubyaosSubparticularOrDubparticularSquare,
-    zdaubyaosSuperparticularOrDuperparticularSaw,
+    zdaubyaosHarmonicOrSubharmonicSineEntitySpec,
+    zdaubyaosSubparticularOrDubparticularSquareEntitySpec,
+    zdaubyaosSuperparticularOrDuperparticularSawEntitySpec,
 } from './entities'
 import {
-    dubparticularSeriesPitches,
-    duperparticularSeriesPitches,
-    subparticularSeriesPitches,
-    superparticularSeriesPitches,
-} from './pitches'
+    dubparticularSeriesScale,
+    duperparticularSeriesScale,
+    subparticularSeriesScale,
+    superparticularSeriesScale,
+} from './scales'
 import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
-const zdaubyaosSongConfig: SongConfig = {
-    compile: defaultSongCompile,
+const zdaubyaosSongSpec: SongSpec = {
+    compile: defaultCompileSong,
     config: {
         baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
         durationScalar: to.Scalar(1),
     },
-    entityConfigs: [
-        zdaubyaosSuperparticularOrDuperparticularSaw,
-        zdaubyaosHarmonicOrSubharmonicSine,
-        zdaubyaosSubparticularOrDubparticularSquare,
+    entitySpecs: [
+        zdaubyaosSuperparticularOrDuperparticularSawEntitySpec,
+        zdaubyaosHarmonicOrSubharmonicSineEntitySpec,
+        zdaubyaosSubparticularOrDubparticularSquareEntitySpec,
     ],
     scales: [
-        subparticularSeriesPitches,
-        dubparticularSeriesPitches,
-        harmonicSeriesPitches,
-        superparticularSeriesPitches,
-        duperparticularSeriesPitches,
-        subharmonicSeriesPitches,
+        subparticularSeriesScale,
+        dubparticularSeriesScale,
+        harmonicSeriesScale,
+        superparticularSeriesScale,
+        duperparticularSeriesScale,
+        subharmonicSeriesScale,
     ],
     songId: SongID.ZDAUBYAOS,
 }
 
-// console.log(zdaubyaosSongConfig)
+// console.log(zdaubyaosSongSpec)
 // console.log(zdaubyaosContourUsages)
 
 export {
-    zdaubyaosSongConfig,
+    zdaubyaosSongSpec,
 }

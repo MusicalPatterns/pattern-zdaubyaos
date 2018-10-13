@@ -1,7 +1,7 @@
 {
   "baseFrequency": 440,
   "config": {},
-  "entityConfigs": [
+  "entitySpecs": [
     {
       "notes": [
         {
@@ -15390,7 +15390,7 @@
         }
       ],
       "timeType": "atomic",
-      "voiceConfig": {
+      "voiceSpec": {
         "timbre": "sawtooth",
         "voiceType": "oscillator"
       },
@@ -30760,7 +30760,7 @@
         }
       ],
       "timeType": "atomic",
-      "voiceConfig": {
+      "voiceSpec": {
         "timbre": "sine",
         "voiceType": "oscillator"
       },
@@ -46834,7 +46834,7 @@
         }
       ],
       "timeType": "atomic",
-      "voiceConfig": {
+      "voiceSpec": {
         "timbre": "square",
         "voiceType": "oscillator"
       },

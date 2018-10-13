@@ -1,4 +1,4 @@
-import { EntityConfig, TimeType } from '../../../src/compile/types'
+import { EntitySpec, TimeType } from '../../../src/compile/types'
 import { OscillatorName, VoiceType } from '../../../src/types'
 import { Scalar } from '../../../src/utilities/nominalTypes'
 import {
@@ -10,29 +10,29 @@ import {
 // tslint:disable-next-line:no-any no-magic-numbers
 const TO_AVOID_BLOW_OUT: Scalar = 0.2 as any
 
-const zdaubyaosSubparticularOrDubparticularSquare: EntityConfig = {
+const zdaubyaosSubparticularOrDubparticularSquareEntitySpec: EntitySpec = {
     notes: zdaubyaosSubparticularOrDubparticularTrack,
     timeType: TimeType.ATOMIC,
-    voiceConfig: { timbre: OscillatorName.SQUARE, voiceType: VoiceType.OSCILLATOR },
     voiceGain: TO_AVOID_BLOW_OUT,
+    voiceSpec: { timbre: OscillatorName.SQUARE, voiceType: VoiceType.OSCILLATOR },
 }
 
-const zdaubyaosSuperparticularOrDuperparticularSaw: EntityConfig = {
+const zdaubyaosSuperparticularOrDuperparticularSawEntitySpec: EntitySpec = {
     notes: zdaubyaosSuperparticularOrDuperparticularTrack,
     timeType: TimeType.ATOMIC,
-    voiceConfig: { timbre: OscillatorName.SAWTOOTH, voiceType: VoiceType.OSCILLATOR },
     voiceGain: TO_AVOID_BLOW_OUT,
+    voiceSpec: { timbre: OscillatorName.SAWTOOTH, voiceType: VoiceType.OSCILLATOR },
 }
 
-const zdaubyaosHarmonicOrSubharmonicSine: EntityConfig = {
+const zdaubyaosHarmonicOrSubharmonicSineEntitySpec: EntitySpec = {
     notes: zdaubyaosHarmonicOrSubharmonicTrack,
     timeType: TimeType.ATOMIC,
-    voiceConfig: { timbre: OscillatorName.SINE, voiceType: VoiceType.OSCILLATOR },
     voiceGain: TO_AVOID_BLOW_OUT,
+    voiceSpec: { timbre: OscillatorName.SINE, voiceType: VoiceType.OSCILLATOR },
 }
 
 export {
-    zdaubyaosSubparticularOrDubparticularSquare,
-    zdaubyaosSuperparticularOrDuperparticularSaw,
-    zdaubyaosHarmonicOrSubharmonicSine,
+    zdaubyaosSubparticularOrDubparticularSquareEntitySpec,
+    zdaubyaosSuperparticularOrDuperparticularSawEntitySpec,
+    zdaubyaosHarmonicOrSubharmonicSineEntitySpec,
 }

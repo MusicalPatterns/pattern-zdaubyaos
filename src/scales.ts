@@ -8,21 +8,21 @@ const SUPER: Offset = 1 as any
 // tslint:disable-next-line:no-any no-magic-numbers
 const DUPER: Offset = 2 as any
 
-const subparticularSeriesPitches: Scalar[] = numbers.map((n: number): Scalar =>
+const subparticularSeriesScale: Scalar[] = numbers.map((n: number): Scalar =>
     to.Scalar(n / offset(n, SUPER)))
 
-const superparticularSeriesPitches: Scalar[] = numbers.map((n: number): Scalar =>
+const superparticularSeriesScale: Scalar[] = numbers.map((n: number): Scalar =>
     to.Scalar(offset(n, SUPER) / (n)))
 
-const dubparticularSeriesPitches: Scalar[] = numbers.map((n: number): Scalar =>
+const dubparticularSeriesScale: Scalar[] = numbers.map((n: number): Scalar =>
     to.Scalar(n / offset(n, DUPER)))
 
-const duperparticularSeriesPitches: Scalar[] = numbers.map((n: number): Scalar =>
+const duperparticularSeriesScale: Scalar[] = numbers.map((n: number): Scalar =>
     to.Scalar(offset(n, DUPER) / (n)))
 
 export {
-    subparticularSeriesPitches,
-    superparticularSeriesPitches,
-    dubparticularSeriesPitches,
-    duperparticularSeriesPitches,
+    subparticularSeriesScale,
+    superparticularSeriesScale,
+    dubparticularSeriesScale,
+    duperparticularSeriesScale,
 }
