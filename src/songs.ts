@@ -2,7 +2,7 @@
 
 import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
-import { Song, SongName } from '../../../src/songTypes'
+import { Song, SongID } from '../../../src/songTypes'
 import * as to from '../../../src/utilities/to'
 import { ZDAUBYAOS_BASE_FREQUENCY } from './basePitch'
 import {
@@ -31,7 +31,7 @@ const zdaubyaos: Song = {
         zdaubyaosSubparticularOrDubparticularSquare,
     ],
     formattedName: 'Zdaubyaos',
-    name: SongName.ZDAUBYAOS,
+    id: SongID.ZDAUBYAOS,
     scales: [
         subparticularSeriesPitches,
         dubparticularSeriesPitches,
