@@ -2,7 +2,7 @@
 
 import { defaultSongCompile } from '../../../src/compile/defaultSongCompile'
 import { harmonicSeriesPitches, subharmonicSeriesPitches } from '../../../src/pitches'
-import { Song, SongID } from '../../../src/songTypes'
+import { SongConfig, SongID } from '../../../src/songTypes'
 import * as to from '../../../src/utilities/to'
 import { ZDAUBYAOS_BASE_FREQUENCY } from './basePitch'
 import {
@@ -18,20 +18,17 @@ import {
 } from './pitches'
 import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
-const zdaubyaos: Song = {
+const zdaubyaosSongConfig: SongConfig = {
     compile: defaultSongCompile,
     config: {
         baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
         durationScalar: to.Scalar(1),
     },
-    description: 'fun with the superparticular series & variants, plus stepwise motion within recurring bounds',
     entityConfigs: [
         zdaubyaosSuperparticularOrDuperparticularSaw,
         zdaubyaosHarmonicOrSubharmonicSine,
         zdaubyaosSubparticularOrDubparticularSquare,
     ],
-    formattedName: 'Zdaubyaos',
-    id: SongID.ZDAUBYAOS,
     scales: [
         subparticularSeriesPitches,
         dubparticularSeriesPitches,
@@ -40,11 +37,12 @@ const zdaubyaos: Song = {
         duperparticularSeriesPitches,
         subharmonicSeriesPitches,
     ],
+    songId: SongID.ZDAUBYAOS,
 }
 
-// console.log(zdaubyaos)
+// console.log(zdaubyaosSongConfig)
 // console.log(zdaubyaosContourUsages)
 
 export {
-    zdaubyaos,
+    zdaubyaosSongConfig,
 }
