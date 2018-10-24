@@ -1,5 +1,5 @@
+import applyOffset from '../../../../src/utilities/applyOffset'
 import { Count } from '../../../../src/utilities/nominalTypes'
-import offset from '../../../../src/utilities/offset'
 import * as to from '../../../../src/utilities/to'
 import { BarTarget, BlockStyle, Rendering } from '../types'
 
@@ -26,7 +26,7 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, rendering: Rend
         if (byBlockStyle !== undefined) {
             let byRendering: UsageCount | undefined = byBlockStyle[rendering]
             if (byRendering !== undefined) {
-                byRendering = offset(byRendering, to.Offset(1))
+                byRendering = applyOffset(byRendering, to.Offset(1))
                 byBlockStyle[rendering] = byRendering
             }
             else {

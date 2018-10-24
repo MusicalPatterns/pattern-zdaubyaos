@@ -1,38 +1,41 @@
-import { EntitySpec, TimeType } from '../../../src/compile/types'
+import { Entities, Entity, TimeType } from '../../../src/compile/types'
+import { SongSpec } from '../../../src/songs'
 import { OscillatorName, VoiceType } from '../../../src/types'
-import { Scalar } from '../../../src/utilities/nominalTypes'
-import {
-    zdaubyaosHarmonicOrSubharmonicTrack,
-    zdaubyaosSubparticularOrDubparticularTrack,
-    zdaubyaosSuperparticularOrDuperparticularTrack,
-} from './tracks'
+import { buildZdaubyaosTracks } from './tracks'
 
-// tslint:disable-next-line:no-any no-magic-numbers
-const TO_AVOID_BLOW_OUT: Scalar = 0.2 as any
+const buildZdaubyaosEntities: (songSpec: SongSpec) => Entities =
+    (songSpec: SongSpec): Entities => {
+        const {
+            zdaubyaosSubparticularOrDubparticularTrack,
+            zdaubyaosHarmonicOrSubharmonicTrack,
+            zdaubyaosSuperparticularOrDuperparticularTrack,
+        } = buildZdaubyaosTracks(songSpec.songDurationScalar)
 
-const zdaubyaosSubparticularOrDubparticularSquareEntitySpec: EntitySpec = {
-    notes: zdaubyaosSubparticularOrDubparticularTrack,
-    timeType: TimeType.ATOMIC,
-    voiceGain: TO_AVOID_BLOW_OUT,
-    voiceSpec: { timbre: OscillatorName.SQUARE, voiceType: VoiceType.OSCILLATOR },
-}
+        const zdaubyaosSubparticularOrDubparticularSquareEntity: Entity = {
+            noteSpecs: zdaubyaosSubparticularOrDubparticularTrack,
+            timeType: TimeType.ATOMIC,
+            voiceSpec: { timbre: OscillatorName.SQUARE, voiceType: VoiceType.OSCILLATOR },
+        }
 
-const zdaubyaosSuperparticularOrDuperparticularSawEntitySpec: EntitySpec = {
-    notes: zdaubyaosSuperparticularOrDuperparticularTrack,
-    timeType: TimeType.ATOMIC,
-    voiceGain: TO_AVOID_BLOW_OUT,
-    voiceSpec: { timbre: OscillatorName.SAWTOOTH, voiceType: VoiceType.OSCILLATOR },
-}
+        const zdaubyaosSuperparticularOrDuperparticularSawEntity: Entity = {
+            noteSpecs: zdaubyaosSuperparticularOrDuperparticularTrack,
+            timeType: TimeType.ATOMIC,
+            voiceSpec: { timbre: OscillatorName.SAWTOOTH, voiceType: VoiceType.OSCILLATOR },
+        }
 
-const zdaubyaosHarmonicOrSubharmonicSineEntitySpec: EntitySpec = {
-    notes: zdaubyaosHarmonicOrSubharmonicTrack,
-    timeType: TimeType.ATOMIC,
-    voiceGain: TO_AVOID_BLOW_OUT,
-    voiceSpec: { timbre: OscillatorName.SINE, voiceType: VoiceType.OSCILLATOR },
-}
+        const zdaubyaosHarmonicOrSubharmonicSineEntity: Entity = {
+            noteSpecs: zdaubyaosHarmonicOrSubharmonicTrack,
+            timeType: TimeType.ATOMIC,
+            voiceSpec: { timbre: OscillatorName.SINE, voiceType: VoiceType.OSCILLATOR },
+        }
+
+        return [
+            zdaubyaosSuperparticularOrDuperparticularSawEntity,
+            zdaubyaosHarmonicOrSubharmonicSineEntity,
+            zdaubyaosSubparticularOrDubparticularSquareEntity,
+        ]
+    }
 
 export {
-    zdaubyaosSubparticularOrDubparticularSquareEntitySpec,
-    zdaubyaosSuperparticularOrDuperparticularSawEntitySpec,
-    zdaubyaosHarmonicOrSubharmonicSineEntitySpec,
+    buildZdaubyaosEntities,
 }

@@ -1,8 +1,8 @@
+import applyOffset from '../../../../src/utilities/applyOffset'
+import applyScale from '../../../../src/utilities/applyScale'
 import * as from from '../../../../src/utilities/from'
 import { Index, Offset, Scalar } from '../../../../src/utilities/nominalTypes'
 import numbers from '../../../../src/utilities/numbers'
-import offset from '../../../../src/utilities/offset'
-import scale from '../../../../src/utilities/scale'
 import * as to from '../../../../src/utilities/to'
 import { Contour, ContourElement } from '../types'
 import * as zdaubyaosFrom from '../utilities/from'
@@ -22,8 +22,8 @@ const summerySpringBlock: (block: Block) => Contour =
         const contour: Contour = numbers
             .slice(0, zdaubyaosFrom.Block(block))
             .map((n: number): ContourElement => ([
-                to.Index(scale(offset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR)),
-                to.Time(1),
+                to.Index(applyScale(applyOffset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR)),
+                to.Index(1),
             ]))
         contour[from.Index(INITIAL)][from.Index(INDEX_OF_PITCH_INDEX)] = to.Index(0)
 

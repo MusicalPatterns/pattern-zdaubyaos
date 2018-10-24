@@ -1,8 +1,8 @@
+import applyOffset from '../../../../src/utilities/applyOffset'
+import applyScale from '../../../../src/utilities/applyScale'
 import * as from from '../../../../src/utilities/from'
 import { Count, Index, Time } from '../../../../src/utilities/nominalTypes'
-import offset from '../../../../src/utilities/offset'
 import repeat from '../../../../src/utilities/repeat'
-import scale from '../../../../src/utilities/scale'
 import * as to from '../../../../src/utilities/to'
 import { FIFTEEN, TWENTYFOUR } from '../constants'
 import { Blocks, Contour, RenderingFunction } from '../types'
@@ -21,9 +21,9 @@ const bony: RenderingFunction = (blocks: Blocks): Contour => {
     const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
     const rhythmicBlocks: Blocks = zdaubyaosTo.Blocks(isBarTargetFifteen ?
         // tslint:disable-next-line:no-magic-numbers
-        repeat([ 1, 2 ], scale(barCount, to.Scalar(5))) :
+        repeat([ 1, 2 ], applyScale(barCount, to.Scalar(5))) :
         // tslint:disable-next-line:no-magic-numbers
-        repeat([ 1, 3 ], scale(barCount, to.Scalar(6))),
+        repeat([ 1, 3 ], applyScale(barCount, to.Scalar(6))),
     )
     const output: Contour = []
     let blocksIndexForPitchIndex: Index = to.Index(0)
@@ -31,16 +31,16 @@ const bony: RenderingFunction = (blocks: Blocks): Contour => {
     rhythmicBlocks.forEach((rhythmicBlock: Block): void => {
         const pitchIndex: Index = to.Index(zdaubyaosFrom.Block(blocks[from.Index(blocksIndexForPitchIndex)]))
 
-        blocksClone[0] = offset(blocksClone[0], to.Offset(-zdaubyaosFrom.Block(rhythmicBlock)))
+        blocksClone[0] = applyOffset(blocksClone[0], to.Offset(-zdaubyaosFrom.Block(rhythmicBlock)))
         if (blocksClone[0] < zdaubyaosTo.Block(0)) {
             return
         }
         if (blocksClone[0] === zdaubyaosTo.Block(0)) {
             blocksClone.shift()
-            blocksIndexForPitchIndex = offset(blocksIndexForPitchIndex, to.Offset(1))
+            blocksIndexForPitchIndex = applyOffset(blocksIndexForPitchIndex, to.Offset(1))
         }
 
-        output.push([ pitchIndex, to.Time(zdaubyaosFrom.Block(rhythmicBlock)) ])
+        output.push([ pitchIndex, to.Index(zdaubyaosFrom.Block(rhythmicBlock)) ])
     })
 
     return output

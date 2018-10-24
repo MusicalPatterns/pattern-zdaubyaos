@@ -7,7 +7,7 @@ import { backboneTwentyfourContour } from '../contours/otherContours'
 import { getZdaubyaosContours, inaiiiVarietyContour } from '../contours/zdaubyaosContours'
 import { BarTarget, BlockStyle, Part, Rendering } from '../types'
 
-const breatherRestPart: Part = rest(to.Time(24))
+const breatherRestPart: Part = rest(to.Index(24))
 const breatherSpringPart: Part = getZdaubyaosContours(
     BlockStyle.INAI,
     BarTarget.TWENTYFOUR,
@@ -25,7 +25,7 @@ const breatherSpringAltPart: Part = getZdaubyaosContours(
     BarTarget.TWENTYFOUR,
     Rendering.SPRING,
 )
-const doubleBreatherRestPart: Part = rest(to.Time(48))
+const doubleBreatherRestPart: Part = rest(to.Index(48))
 
 export {
     breatherRestPart,

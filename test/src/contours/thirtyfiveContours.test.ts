@@ -1,12 +1,12 @@
-import * as from from '../../../../src/utilities/from'
+import * as from from '../../../../../src/utilities/from'
 import {
     thirtyfiveYaosAccidentInspiredContour,
     thirtyfiveYaosBassContour,
     thirtyfiveZdaubContour,
     thirtyfiveZdaubOnlyWiggleContour,
-} from '../../src/contours/thirtyfiveContours'
-import calculateContourDuration from '../../src/utilities/calculateContourDuration'
-import * as to from '../../src/utilities/to'
+} from '../../../src/contours/thirtyfiveContours'
+import calculateContourDuration from '../../../src/utilities/calculateContourDuration'
+import * as to from '../../../src/utilities/to'
 
 describe('thirtyfive contours', () => {
     it('handles yaos bass', () => {
@@ -56,8 +56,8 @@ describe('thirtyfive contours', () => {
     })
 
     it('is the case that they are all actually length multiples of 35', () => {
-        expect(from.Time(calculateContourDuration(thirtyfiveYaosBassContour)) % 35).toBe(0)
-        expect(from.Time(calculateContourDuration(thirtyfiveYaosAccidentInspiredContour)) % 35).toBe(0)
-        expect(from.Time(calculateContourDuration(thirtyfiveZdaubContour)) % 35).toBe(0)
+        expect(from.Index(calculateContourDuration(thirtyfiveYaosBassContour)) % 35).toBe(0)
+        expect(from.Index(calculateContourDuration(thirtyfiveYaosAccidentInspiredContour)) % 35).toBe(0)
+        expect(from.Index(calculateContourDuration(thirtyfiveZdaubContour)) % 35).toBe(0)
     })
 })

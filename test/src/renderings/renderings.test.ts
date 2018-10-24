@@ -1,6 +1,6 @@
-import renderings from '../../src/renderings/renderings'
-import { Rendering, RenderingFunction } from '../../src/types'
-import * as to from '../../src/utilities/to'
+import renderings from '../../../src/renderings/renderings'
+import { Rendering, RenderingFunction } from '../../../src/types'
+import * as to from '../../../src/utilities/to'
 
 describe('renderings', () => {
     describe('spring', () => {

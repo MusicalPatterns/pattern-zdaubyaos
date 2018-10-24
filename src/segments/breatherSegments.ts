@@ -1,5 +1,7 @@
+import { Scalar } from '../../../../src/utilities/nominalTypes'
 import * as to from '../../../../src/utilities/to'
-import makeSegment from '../notes/makeSegment'
+import buildSegment from '../notes/buildSegment'
+import { SegmentsObject } from '../notes/types'
 import {
     breatherRestPart,
     breatherSpringAltPart,
@@ -11,75 +13,87 @@ import {
 } from '../parts/breatherParts'
 import { Segment } from '../types'
 
-const breatherSpringSegment: Segment = makeSegment(
-    [
-        breatherSpringPart,
-        breatherRestPart,
-        breatherRestPart,
-    ],
-    [
-        { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(0) },
-        { scaleIndex: to.Index(1) },
-        { scaleIndex: to.Index(2) },
-    ],
-)
+const buildBreatherSegments: (songDurationScalar: Scalar) => SegmentsObject =
+    (songDurationScalar: Scalar): SegmentsObject => {
+        const breatherSpringSegment: Segment = buildSegment(
+            [
+                breatherSpringPart,
+                breatherRestPart,
+                breatherRestPart,
+            ],
+            [
+                { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(0) },
+                { scaleIndex: to.Index(1) },
+                { scaleIndex: to.Index(2) },
+            ],
+            songDurationScalar,
+        )
 
-const breatherSummerSegment: Segment = makeSegment(
-    [
-        breatherRestPart,
-        breatherSummerPart,
-        breatherRestPart,
-    ],
-    [
-        { scaleIndex: to.Index(0) },
-        { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(4) },
-        { scaleIndex: to.Index(2) },
-    ],
-)
+        const breatherSummerSegment: Segment = buildSegment(
+            [
+                breatherRestPart,
+                breatherSummerPart,
+                breatherRestPart,
+            ],
+            [
+                { scaleIndex: to.Index(0) },
+                { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(4) },
+                { scaleIndex: to.Index(2) },
+            ],
+            songDurationScalar,
+        )
 
-const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = makeSegment(
-    [
-        doubleBreatherRestPart,
-        doubleBreatherRestPart,
-        doubleBreatherFallPart,
-    ],
-    [
-        { scaleIndex: to.Index(0) },
-        { scaleIndex: to.Index(1) },
-        { gainScalar: to.Scalar(0.5), pitchIndexOffset: to.Offset(-1), scaleIndex: to.Index(2) },
-    ],
-)
+        const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = buildSegment(
+            [
+                doubleBreatherRestPart,
+                doubleBreatherRestPart,
+                doubleBreatherFallPart,
+            ],
+            [
+                { scaleIndex: to.Index(0) },
+                { scaleIndex: to.Index(1) },
+                { gainScalar: to.Scalar(0.5), pitchIndexOffset: to.Offset(-1), scaleIndex: to.Index(2) },
+            ],
+            songDurationScalar,
+        )
 
-const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = makeSegment(
-    [
-        breatherRestPart,
-        breatherSpringAltPart,
-        breatherRestPart,
-    ],
-    [
-        { scaleIndex: to.Index(0) },
-        { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(1) },
-        { scaleIndex: to.Index(2) },
-    ],
-)
+        const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = buildSegment(
+            [
+                breatherRestPart,
+                breatherSpringAltPart,
+                breatherRestPart,
+            ],
+            [
+                { scaleIndex: to.Index(0) },
+                { gainScalar: to.Scalar(0.5), scaleIndex: to.Index(1) },
+                { scaleIndex: to.Index(2) },
+            ],
+            songDurationScalar,
+        )
 
-const breatherVarietyQuiteTheReveilleSegment: Segment = makeSegment(
-    [
-        breatherVarietyPart,
-        breatherVarietyPart,
-        breatherVarietyPart,
-    ],
-    [
-        { scaleIndex: to.Index(3) },
-        { scaleIndex: to.Index(4) },
-        { scaleIndex: to.Index(5) },
-    ],
-)
+        const breatherVarietyQuiteTheReveilleSegment: Segment = buildSegment(
+            [
+                breatherVarietyPart,
+                breatherVarietyPart,
+                breatherVarietyPart,
+            ],
+            [
+                { scaleIndex: to.Index(3) },
+                { scaleIndex: to.Index(4) },
+                { scaleIndex: to.Index(5) },
+            ],
+            songDurationScalar,
+        )
+
+        return {
+            breatherSpringAltNiceAsABreatherToABreatherSegment,
+            breatherSpringSegment,
+            breatherSummerSegment,
+            breatherVarietyQuiteTheReveilleSegment,
+            doubleBreatherFallWhichIsGoodIntroForJigSegment,
+        }
+    }
 
 export {
-    breatherSpringSegment,
-    breatherSummerSegment,
-    doubleBreatherFallWhichIsGoodIntroForJigSegment,
-    breatherSpringAltNiceAsABreatherToABreatherSegment,
-    breatherVarietyQuiteTheReveilleSegment,
+    buildBreatherSegments,
 }

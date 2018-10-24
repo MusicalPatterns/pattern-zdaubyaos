@@ -1,5 +1,5 @@
 import * as from from '../../../../src/utilities/from'
-import { Index, Time } from '../../../../src/utilities/nominalTypes'
+import { Index } from '../../../../src/utilities/nominalTypes'
 import numbers from '../../../../src/utilities/numbers'
 import * as to from '../../../../src/utilities/to'
 import { Contour, ContourElement } from '../types'
@@ -11,7 +11,7 @@ const INDEX_OF_PITCH_INDEX: Index = 0 as any
 // tslint:disable-next-line:no-any no-magic-numbers
 const INITIAL: Index = 0 as any
 // tslint:disable-next-line:no-any no-magic-numbers
-const SINGLE_DURATION: Time = 1 as any
+const SINGLE_DURATION: Index = 1 as any
 
 const springBlock: (block: Block) => Contour = (block: Block): Contour => {
     const numbersWeNeed: number[] = numbers.slice(0, zdaubyaosFrom.Block(block))

@@ -1,48 +1,21 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
-import { defaultCompileSong } from '../../../src/compile/defaultCompileSong'
-import { harmonicSeriesScale, subharmonicSeriesScale } from '../../../src/scales'
-import { SongID, SongSpec } from '../../../src/songTypes'
-import * as to from '../../../src/utilities/to'
-import { ZDAUBYAOS_BASE_FREQUENCY } from './basePitch'
-import {
-    zdaubyaosHarmonicOrSubharmonicSineEntitySpec,
-    zdaubyaosSubparticularOrDubparticularSquareEntitySpec,
-    zdaubyaosSuperparticularOrDuperparticularSawEntitySpec,
-} from './entities'
-import {
-    dubparticularSeriesScale,
-    duperparticularSeriesScale,
-    subparticularSeriesScale,
-    superparticularSeriesScale,
-} from './scales'
+import { Song } from '../../../src/songTypes'
+import { buildZdaubyaosEntities } from './entities'
+import { zdaubyaosSongMaterial } from './songMaterials'
+import { zdaubyaosSongMetadata } from './songMetadata'
+import { zdaubyaosSongSpec } from './songSpecs'
 import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
 
-const zdaubyaosSongSpec: SongSpec = {
-    compile: defaultCompileSong,
-    config: {
-        baseFrequency: ZDAUBYAOS_BASE_FREQUENCY,
-        durationScalar: to.Scalar(1),
-    },
-    entitySpecs: [
-        zdaubyaosSuperparticularOrDuperparticularSawEntitySpec,
-        zdaubyaosHarmonicOrSubharmonicSineEntitySpec,
-        zdaubyaosSubparticularOrDubparticularSquareEntitySpec,
-    ],
-    scales: [
-        subparticularSeriesScale,
-        dubparticularSeriesScale,
-        harmonicSeriesScale,
-        superparticularSeriesScale,
-        duperparticularSeriesScale,
-        subharmonicSeriesScale,
-    ],
-    songId: SongID.ZDAUBYAOS,
+const zdaubyaosSong: Song = {
+    material: zdaubyaosSongMaterial,
+    metadata: zdaubyaosSongMetadata,
+    spec: zdaubyaosSongSpec,
 }
 
-// console.log(zdaubyaosSongSpec)
 // console.log(zdaubyaosContourUsages)
+// console.log(buildZdaubyaosEntities(zdaubyaosSongSpec))
 
 export {
-    zdaubyaosSongSpec,
+    zdaubyaosSong,
 }

@@ -1,13 +1,13 @@
 // tslint:disable:no-magic-numbers
 
-import { Scalar } from '../../../src/utilities/nominalTypes'
-import * as to from '../../../src/utilities/to'
+import { Scalar } from '../../../../src/utilities/nominalTypes'
+import * as to from '../../../../src/utilities/to'
 import {
-    dubparticularSeriesScale,
-    duperparticularSeriesScale,
-    subparticularSeriesScale,
-    superparticularSeriesScale,
-} from '../src/scales'
+    dubparticularSeriesScalars,
+    duperparticularSeriesScalars,
+    subparticularSeriesScalars,
+    superparticularSeriesScalars,
+} from '../../src/scales'
 
 describe('scales', () => {
     describe('subparticular series scale', () => {
@@ -18,7 +18,7 @@ describe('scales', () => {
                 3 / 4,
                 4 / 5,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(subparticularSeriesScale[index]).toEqual(expectedPitch)
+                expect(subparticularSeriesScalars[index]).toEqual(expectedPitch)
             })
         })
     })
@@ -31,7 +31,7 @@ describe('scales', () => {
                 3 / 5,
                 4 / 6,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(dubparticularSeriesScale[index]).toEqual(expectedPitch)
+                expect(dubparticularSeriesScalars[index]).toEqual(expectedPitch)
             })
         })
     })
@@ -44,7 +44,7 @@ describe('scales', () => {
                 4 / 3,
                 5 / 4,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(superparticularSeriesScale[index]).toEqual(expectedPitch)
+                expect(superparticularSeriesScalars[index]).toEqual(expectedPitch)
             })
         })
     })
@@ -57,7 +57,7 @@ describe('scales', () => {
                 5 / 3,
                 6 / 4,
             ].map(to.Scalar).forEach((expectedPitch: Scalar, index: number): void => {
-                expect(duperparticularSeriesScale[index]).toEqual(expectedPitch)
+                expect(duperparticularSeriesScalars[index]).toEqual(expectedPitch)
             })
         })
     })

@@ -5,7 +5,7 @@ import { Block } from '../utilities/nominalTypes'
 
 const glisBlock: (block: Block) => Contour = (block: Block): Contour => ([ [
     to.Index(zdaubyaosFrom.Block(block)),
-    to.Time(zdaubyaosFrom.Block(block)),
+    to.Index(zdaubyaosFrom.Block(block)),
 ] ])
 
 export default glisBlock

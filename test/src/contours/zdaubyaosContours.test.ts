@@ -1,12 +1,13 @@
-import * as from from '../../../../src/utilities/from'
+import * as from from '../../../../../src/utilities/from'
 import {
     getZdaubyaosContours,
-    inaiiiVarietyContour, zdaubGlisVariantContour,
+    inaiiiVarietyContour,
+    zdaubGlisVariantContour,
     zdaubyaosContoursByBarTargetBlockStyleThenRendering,
-} from '../../src/contours/zdaubyaosContours'
-import { BarTarget, BlockStyle, Contour, Rendering } from '../../src/types'
-import calculateContourDuration from '../../src/utilities/calculateContourDuration'
-import * as to from '../../src/utilities/to'
+} from '../../../src/contours/zdaubyaosContours'
+import { BarTarget, BlockStyle, Contour, Rendering } from '../../../src/types'
+import calculateContourDuration from '../../../src/utilities/calculateContourDuration'
+import * as to from '../../../src/utilities/to'
 
 describe('zdaubyaos contours', () => {
     describe('zdaub contours', () => {
@@ -174,7 +175,7 @@ describe('zdaubyaos contours', () => {
                                 case Rendering.FALL:
                                 case Rendering.SUMMERY_SPRING:
                                 case Rendering.SPRINGY_SUMMER:
-                                    expect(from.Time(calculateContourDuration(contours)) % 15).toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                                    expect(from.Index(calculateContourDuration(contours)) % 15).toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                     break
                                 default:
                             }
@@ -421,7 +422,7 @@ describe('zdaubyaos contours', () => {
                             switch (rendering) {
                                 case Rendering.GLIS:
                                 case Rendering.TREM:
-                                    expect(from.Time(calculateContourDuration(contours)) % 24).toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                                    expect(from.Index(calculateContourDuration(contours)) % 24).toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                     break
                                 case Rendering.BONY:
                                     switch (blockStyle) {
@@ -431,7 +432,7 @@ describe('zdaubyaos contours', () => {
                                         case BlockStyle.INAI:
                                             break
                                         default:
-                                            expect(from.Time(calculateContourDuration(contours)) % 24).toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                                            expect(from.Index(calculateContourDuration(contours)) % 24).toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                     }
                                     break
                                 default:
