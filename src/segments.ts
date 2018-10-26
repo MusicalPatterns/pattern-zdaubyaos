@@ -1,4 +1,4 @@
-import { applyOffset, from, Index, Offset, Scalar } from '../../../src'
+import { applyOffset, DictionaryOf, from, Index, Offset, Scalar } from '../../../src'
 import {
     buildAlmostZdaubyaosSegments,
     buildBreatherSegments,
@@ -6,8 +6,7 @@ import {
     buildThirtyfiveSegments,
     buildTrueSegments,
 } from './levels'
-import { SegmentsObject } from './notes'
-import { Segments } from './types'
+import { Segment, Segments } from './types'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const START: Index = 0 as any
@@ -22,7 +21,7 @@ const buildSegments: (songDurationScalar: Scalar) => Segments =
             almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
             almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
             almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
-        }: SegmentsObject = buildAlmostZdaubyaosSegments(songDurationScalar)
+        }: DictionaryOf<Segment> = buildAlmostZdaubyaosSegments(songDurationScalar)
 
         const {
             breatherSpringAltNiceAsABreatherToABreatherSegment,
@@ -30,17 +29,17 @@ const buildSegments: (songDurationScalar: Scalar) => Segments =
             breatherSummerSegment,
             breatherVarietyQuiteTheReveilleSegment,
             doubleBreatherFallWhichIsGoodIntroForJigSegment,
-        }: SegmentsObject = buildBreatherSegments(songDurationScalar)
+        }: DictionaryOf<Segment> = buildBreatherSegments(songDurationScalar)
 
         const {
             secretLongChordSegment,
             shiftySegment,
             totallyOutThereIntroSegment,
-        }: SegmentsObject = buildOtherSegments(songDurationScalar)
+        }: DictionaryOf<Segment> = buildOtherSegments(songDurationScalar)
 
         const {
             thirtyfiveSegment,
-        }: SegmentsObject = buildThirtyfiveSegments(songDurationScalar)
+        }: DictionaryOf<Segment> = buildThirtyfiveSegments(songDurationScalar)
 
         const {
             trueAllYaosAllRhythmsAtOnceSegment,
@@ -49,7 +48,7 @@ const buildSegments: (songDurationScalar: Scalar) => Segments =
             trueSpringySummerTotallyOutThereSegment,
             trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
             trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
-        }: SegmentsObject = buildTrueSegments(songDurationScalar)
+        }: DictionaryOf<Segment> = buildTrueSegments(songDurationScalar)
 
         return [
             // 0

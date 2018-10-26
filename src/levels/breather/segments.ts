@@ -1,5 +1,5 @@
-import { Scalar, to } from '../../../../../src'
-import { buildSegment, SegmentsObject } from '../../notes'
+import { DictionaryOf, Scalar, to } from '../../../../../src'
+import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
 import {
     breatherRestPart,
@@ -11,8 +11,8 @@ import {
     doubleBreatherRestPart,
 } from './parts'
 
-const buildBreatherSegments: (songDurationScalar: Scalar) => SegmentsObject =
-    (songDurationScalar: Scalar): SegmentsObject => {
+const buildBreatherSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
+    (songDurationScalar: Scalar): DictionaryOf<Segment> => {
         const breatherSpringSegment: Segment = buildSegment(
             [
                 breatherSpringPart,

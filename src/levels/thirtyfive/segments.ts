@@ -1,5 +1,5 @@
-import { Scalar, to } from '../../../../../src'
-import { buildSegment, SegmentsObject } from '../../notes'
+import { DictionaryOf, Scalar, to } from '../../../../../src'
+import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
 import {
     thirtyfiveYaosAccidentInspiredPart,
@@ -7,8 +7,8 @@ import {
     thirtyfiveZdaubPart,
 } from './parts'
 
-const buildThirtyfiveSegments: (songDurationScalar: Scalar) => SegmentsObject =
-    (songDurationScalar: Scalar): SegmentsObject => {
+const buildThirtyfiveSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
+    (songDurationScalar: Scalar): DictionaryOf<Segment> => {
         const thirtyfiveSegment: Segment = buildSegment(
             [
                 thirtyfiveZdaubPart,

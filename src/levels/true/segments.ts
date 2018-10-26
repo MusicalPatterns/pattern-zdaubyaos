@@ -1,7 +1,7 @@
 // tslint:disable:max-file-line-count
 
-import { Scalar, to } from '../../../../../src'
-import { buildSegment, SegmentsObject } from '../../notes'
+import { DictionaryOf, Scalar, to } from '../../../../../src'
+import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
 import {
     trueYaosInaidjiyaiouzdSummerToSpringPart,
@@ -13,8 +13,8 @@ import {
     trueZdaubTremPart,
 } from './parts'
 
-const buildTrueSegments: (songDurationScalar: Scalar) => SegmentsObject =
-    (songDurationScalar: Scalar): SegmentsObject => {
+const buildTrueSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
+    (songDurationScalar: Scalar): DictionaryOf<Segment> => {
         const trueSpringAllYaosUmowchuwowiestSegment: Segment = buildSegment(
             [
                 trueYaosUmowchuwowiestSpringToSummerPart,
