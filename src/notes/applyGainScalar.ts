@@ -1,9 +1,7 @@
-import { NoteSpec, NoteSpecs } from '../../../../src/compile/types'
-import applyScale from '../../../../src/utilities/applyScale'
-import { Scalar } from '../../../../src/utilities/nominalTypes'
+import { applyScale, NoteSpec, Scalar } from '../../../../src'
 
-const applyGainScalar: (noteSpecs: NoteSpecs, gainScalar: Scalar) => NoteSpecs =
-    (noteSpecs: NoteSpecs, gainScalar: Scalar): NoteSpecs =>
+const applyGainScalar: (noteSpecs: NoteSpec[], gainScalar: Scalar) => NoteSpec[] =
+    (noteSpecs: NoteSpec[], gainScalar: Scalar): NoteSpec[] =>
         noteSpecs.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             gainSpec: noteSpec.gainSpec && {
@@ -12,4 +10,6 @@ const applyGainScalar: (noteSpecs: NoteSpecs, gainScalar: Scalar) => NoteSpecs =
             },
         }))
 
-export default applyGainScalar
+export {
+    applyGainScalar,
+}

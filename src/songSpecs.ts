@@ -1,6 +1,4 @@
-import { DEFAULT_DURATION_SCALAR } from '../../../src/constants'
-import { BaseSongSpec } from '../../../src/songTypes'
-import { Scalar } from '../../../src/utilities/nominalTypes'
+import { BaseSongSpec, DEFAULT_DURATION_SCALAR, Scalar } from '../../../src'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const ZDAUBYAOS_PITCH_SCALAR: Scalar = 440 as any

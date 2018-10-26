@@ -1,0 +1,1 @@
+export { zdaubyaosSong } from './src'

@@ -1,6 +1,4 @@
-import applyOffset from '../../../src/utilities/applyOffset'
-import * as from from '../../../src/utilities/from'
-import { Index, Offset, Scalar } from '../../../src/utilities/nominalTypes'
+import { applyOffset, from, Index, Offset, Scalar } from '../../../src'
 import { buildSegments } from './segments'
 import { Segment, Segments, Track, TrackDictionary } from './types'
 

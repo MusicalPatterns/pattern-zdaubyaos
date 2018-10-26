@@ -21,6 +21,6 @@ Each of these styles has its own Blocks and Renderings which create Contours mos
     parts are still intended for just one Entity to play
     
 **Segment**: take a set of Parts, and each Part has all of its ContourElements mapped to a Note, 
-    and each Part's Notes total the same duration, so they can be played simultaneously by different Entities, but still sequenced together with other Segments
+    and each Part's Notes total the same duration, so they can be played simultaneously by different Entity[], but still sequenced together with other Segments
     
 **Note**: what you get when you hydrate a ContourElement w/ NoteStyle information, readying it to be played

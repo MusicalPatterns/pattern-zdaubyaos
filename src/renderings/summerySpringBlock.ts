@@ -1,12 +1,6 @@
-import applyOffset from '../../../../src/utilities/applyOffset'
-import applyScale from '../../../../src/utilities/applyScale'
-import * as from from '../../../../src/utilities/from'
-import { Index, Offset, Scalar } from '../../../../src/utilities/nominalTypes'
-import numbers from '../../../../src/utilities/numbers'
-import * as to from '../../../../src/utilities/to'
+import { applyOffset, applyScale, from, Index, numbers, Offset, Scalar, to } from '../../../../src'
+import { Block, from as zdaubyaosFrom } from '../nominal'
 import { Contour, ContourElement } from '../types'
-import * as zdaubyaosFrom from '../utilities/from'
-import { Block } from '../utilities/nominalTypes'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const SUMMERY_SPRING_OFFSET: Offset = -1.5 as any
@@ -30,4 +24,6 @@ const summerySpringBlock: (block: Block) => Contour =
         return contour
     }
 
-export default summerySpringBlock
+export {
+    summerySpringBlock,
+}

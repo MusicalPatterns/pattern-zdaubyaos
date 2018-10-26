@@ -1,7 +1,5 @@
-import * as from from '../../../../../src/utilities/from'
-import { Contour } from '../../../src/types'
-import calculateContourDuration from '../../../src/utilities/calculateContourDuration'
-import * as to from '../../../src/utilities/to'
+import { from } from '../../../../../src/indexForTest'
+import { calculateContourDuration, Contour, to } from '../../../src/indexForTest'
 
 describe('calculate contour duration', () => {
     it('totals the durations of the contour', () => {

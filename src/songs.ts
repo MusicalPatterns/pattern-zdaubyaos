@@ -1,11 +1,11 @@
 // tslint:disable:no-console comment-format no-unused-variable
 
-import { Song } from '../../../src/songTypes'
+import { Song } from '../../../src'
 import { buildZdaubyaosEntities } from './entities'
 import { zdaubyaosSongMaterial } from './songMaterials'
 import { zdaubyaosSongMetadata } from './songMetadata'
 import { zdaubyaosSongSpec } from './songSpecs'
-import { zdaubyaosContourUsages } from './utilities/zdaubyaosContourUsage'
+import { zdaubyaosContourUsages } from './utilities'
 
 const zdaubyaosSong: Song = {
     material: zdaubyaosSongMaterial,

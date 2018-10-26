@@ -1,7 +1,6 @@
-import { Index } from '../../../../src/utilities/nominalTypes'
-import * as to from '../../../../src/utilities/to'
-import { buildZdaubyaosTracks } from '../../src/tracks'
-import calculateTotalZdaubyaosDuration from '../support/calculateTotalZdaubyaosDuration'
+import { SumOfIndices, to } from '../../../../src/indexForTest'
+import { buildZdaubyaosTracks } from '../../src/indexForTest'
+import { calculateTotalZdaubyaosDuration } from '../support'
 
 describe('tracks', () => {
     it('is the case that they all have the same duration', () => {
@@ -11,7 +10,7 @@ describe('tracks', () => {
             zdaubyaosSuperparticularOrDuperparticularTrack,
         } = buildZdaubyaosTracks(to.Scalar(1))
 
-        const expectedTotalSongDuration: Index = to.Index(3360)
+        const expectedTotalSongDuration: SumOfIndices = to.SumOfIndices(3360)
         expect(calculateTotalZdaubyaosDuration(zdaubyaosSubparticularOrDubparticularTrack)).toEqual(expectedTotalSongDuration)
         expect(calculateTotalZdaubyaosDuration(zdaubyaosSuperparticularOrDuperparticularTrack)).toEqual(expectedTotalSongDuration)
         expect(calculateTotalZdaubyaosDuration(zdaubyaosHarmonicOrSubharmonicTrack)).toEqual(expectedTotalSongDuration)

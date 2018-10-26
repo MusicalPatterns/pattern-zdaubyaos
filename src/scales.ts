@@ -1,11 +1,18 @@
-import { BuildScalesFunction } from '../../../src/compile/types'
-import { flatDurationsScale, harmonicSeriesScale, subharmonicSeriesScale } from '../../../src/scales'
-import { SongSpec } from '../../../src/songs'
-import { Scalars, Scale, Scales } from '../../../src/types'
-import applyOffset from '../../../src/utilities/applyOffset'
-import { Offset, Scalar } from '../../../src/utilities/nominalTypes'
-import numbers from '../../../src/utilities/numbers'
-import * as to from '../../../src/utilities/to'
+import {
+    applyOffset,
+    BuildScalesFunction,
+    flatDurationsScale,
+    harmonicSeriesScale,
+    numbers,
+    Offset,
+    Scalar,
+    Scalars,
+    Scale,
+    Scales,
+    SongSpec,
+    subharmonicSeriesScale,
+    to,
+} from '../../../src'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const SUPER: Offset = 1 as any

@@ -1,11 +1,7 @@
-import { NoteSpec, NoteSpecs } from '../../../src/compile/types'
-import { Index } from '../../../src/utilities/nominalTypes'
-import { DictionaryOf } from '../../../src/utilities/types'
-import { Block } from './utilities/nominalTypes'
+import { DictionaryOf, Index, NoteSpec } from '../../../src'
+import { Block } from './nominal'
 
-type Blocks = Block[]
-
-type RenderingFunction = (blocks: Blocks) => Contour
+type RenderingFunction = (blocks: Block[]) => Contour
 
 type ContourElement = [Index, Index]
 
@@ -15,11 +11,11 @@ type Part = Contour
 
 type BuildNoteSpec = (contourElement: ContourElement) => NoteSpec
 
-type Segment = NoteSpecs[]
+type Segment = NoteSpec[][]
 
 type Segments = Segment[]
 
-type Track = NoteSpecs
+type Track = NoteSpec[]
 
 enum BarTarget {
     FIFTEEN = 'fifteen',
@@ -52,7 +48,6 @@ enum BlockStyle {
 type TrackDictionary = DictionaryOf<Track>
 
 export {
-    Blocks,
     Part,
     Track,
     RenderingFunction,

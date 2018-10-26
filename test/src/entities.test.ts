@@ -1,14 +1,13 @@
 // tslint:disable:no-any no-require-imports no-unsafe-any
 
-import { Entities } from '../../../../src/compile/types'
-import { buildZdaubyaosEntities } from '../../src/entities'
-import { zdaubyaosSongSpec } from '../../src/songSpecs'
+import { Entity } from '../../../../src/indexForTest'
+import { buildZdaubyaosEntities, zdaubyaosSongSpec } from '../../src/indexForTest'
 
 declare const require: any
 
 describe('entities', () => {
     it('stay locked down unless I mean to change them', () => {
-        const zdaubyaosEntitiesSnapshot: Entities = require('../support/zdaubyaosEntitiesSnapshot')
+        const zdaubyaosEntitiesSnapshot: Entity[] = require('../support/zdaubyaosEntitiesSnapshot')
 
         expect(buildZdaubyaosEntities(zdaubyaosSongSpec)).toEqual(zdaubyaosEntitiesSnapshot)
     })

@@ -1,10 +1,6 @@
-import * as from from '../../../../src/utilities/from'
-import { Index } from '../../../../src/utilities/nominalTypes'
-import numbers from '../../../../src/utilities/numbers'
-import * as to from '../../../../src/utilities/to'
+import { from, Index, numbers, to } from '../../../../src'
+import { Block, from as zdaubyaosFrom } from '../nominal'
 import { Contour, ContourElement } from '../types'
-import * as zdaubyaosFrom from '../utilities/from'
-import { Block } from '../utilities/nominalTypes'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const INDEX_OF_PITCH_INDEX: Index = 0 as any
@@ -21,4 +17,6 @@ const springBlock: (block: Block) => Contour = (block: Block): Contour => {
     return contour
 }
 
-export default springBlock
+export {
+    springBlock,
+}

@@ -1,9 +1,12 @@
 import {
     backboneFifteenContour,
-    backboneTwentyfourContour, shiftyContour,
-    shiftyFifteenContour, shiftyTwentyfourContour, shiftyTwentyfourVariantContour,
-} from '../../../src/contours/otherContours'
-import * as to from '../../../src/utilities/to'
+    backboneTwentyfourContour,
+    shiftyContour,
+    shiftyFifteenContour,
+    shiftyTwentyfourContour,
+    shiftyTwentyfourVariantContour,
+    to,
+} from '../../../src/indexForTest'
 
 describe('other contours', () => {
     it('handles backbone fifteen', () => {

@@ -1,13 +1,12 @@
 // tslint:disable:no-magic-numbers
 
-import { Scalar } from '../../../../src/utilities/nominalTypes'
-import * as to from '../../../../src/utilities/to'
+import { Scalar, to } from '../../../../src/indexForTest'
 import {
     dubparticularSeriesScalars,
     duperparticularSeriesScalars,
     subparticularSeriesScalars,
     superparticularSeriesScalars,
-} from '../../src/scales'
+} from '../../src/indexForTest'
 
 describe('scales', () => {
     describe('subparticular series scale', () => {

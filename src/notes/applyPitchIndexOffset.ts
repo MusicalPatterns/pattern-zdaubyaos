@@ -1,9 +1,7 @@
-import { NoteSpec, NoteSpecs } from '../../../../src/compile/types'
-import applyOffset from '../../../../src/utilities/applyOffset'
-import { Offset } from '../../../../src/utilities/nominalTypes'
+import { applyOffset, NoteSpec, Offset } from '../../../../src'
 
-const applyPitchIndexOffset: (notes: NoteSpecs, pitchIndexOffset: Offset) => NoteSpecs =
-    (noteSpecs: NoteSpecs, pitchIndexOffset: Offset): NoteSpecs =>
+const applyPitchIndexOffset: (notes: NoteSpec[], pitchIndexOffset: Offset) => NoteSpec[] =
+    (noteSpecs: NoteSpec[], pitchIndexOffset: Offset): NoteSpec[] =>
         noteSpecs.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             pitchSpec: noteSpec.pitchSpec && {
@@ -12,4 +10,6 @@ const applyPitchIndexOffset: (notes: NoteSpecs, pitchIndexOffset: Offset) => Not
             },
         }))
 
-export default applyPitchIndexOffset
+export {
+    applyPitchIndexOffset,
+}

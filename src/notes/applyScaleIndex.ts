@@ -1,11 +1,12 @@
-import { NoteSpec, NoteSpecs } from '../../../../src/compile/types'
-import { Index } from '../../../../src/utilities/nominalTypes'
+import { Index, NoteSpec } from '../../../../src'
 
-const applyScaleIndex: (noteSpecs: NoteSpecs, scaleIndex: Index) => NoteSpecs =
-    (noteSpecs: NoteSpecs, scaleIndex: Index): NoteSpecs =>
+const applyScaleIndex: (noteSpecs: NoteSpec[], scaleIndex: Index) => NoteSpec[] =
+    (noteSpecs: NoteSpec[], scaleIndex: Index): NoteSpec[] =>
         noteSpecs.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             pitchSpec: { ...noteSpec.pitchSpec, scaleIndex },
         }))
 
-export default applyScaleIndex
+export {
+    applyScaleIndex,
+}

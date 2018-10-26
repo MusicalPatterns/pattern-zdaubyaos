@@ -1,7 +1,5 @@
-import { NotePropertySpec, NoteSpec } from '../../../../../src/compile/types'
-import { Index } from '../../../../../src/utilities/nominalTypes'
-import * as to from '../../../../../src/utilities/to'
-import buildNoteSpec from '../../../src/notes/buildNoteSpec'
+import { Index, NotePropertySpec, NoteSpec, to } from '../../../../../src/indexForTest'
+import { buildNoteSpec } from '../../../src/indexForTest'
 
 // tslint:disable-next-line:no-any no-magic-numbers
 const DURATIONS_AND_GAIN_SCALE_INDEX: Index = 6 as any

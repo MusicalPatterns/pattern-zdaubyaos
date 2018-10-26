@@ -1,12 +1,12 @@
-import applyOffset from '../../../src/utilities/applyOffset'
-import * as from from '../../../src/utilities/from'
-import { Index, Offset, Scalar } from '../../../src/utilities/nominalTypes'
-import { SegmentsObject } from './notes/types'
-import { buildAlmostZdaubyaosSegments } from './segments/almostZdaubyaosSegments'
-import { buildBreatherSegments } from './segments/breatherSegments'
-import { buildOtherSegments } from './segments/otherSegments'
-import { buildThirtyfiveSegments } from './segments/thirtyfiveSegments'
-import { buildZdaubyaosSegments } from './segments/zdaubyaosSegments'
+import { applyOffset, from, Index, Offset, Scalar } from '../../../src'
+import {
+    buildAlmostZdaubyaosSegments,
+    buildBreatherSegments,
+    buildOtherSegments,
+    buildThirtyfiveSegments,
+    buildTrueSegments,
+} from './levels'
+import { SegmentsObject } from './notes'
 import { Segments } from './types'
 
 // tslint:disable-next-line:no-any no-magic-numbers
@@ -49,7 +49,7 @@ const buildSegments: (songDurationScalar: Scalar) => Segments =
             trueSpringySummerTotallyOutThereSegment,
             trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
             trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
-        }: SegmentsObject = buildZdaubyaosSegments(songDurationScalar)
+        }: SegmentsObject = buildTrueSegments(songDurationScalar)
 
         return [
             // 0

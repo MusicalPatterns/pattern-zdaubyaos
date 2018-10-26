@@ -1,10 +1,7 @@
-import { NoteSpec, NoteSpecs } from '../../../../src/compile/types'
-import applyScale from '../../../../src/utilities/applyScale'
-import { Scalar } from '../../../../src/utilities/nominalTypes'
-import * as to from '../../../../src/utilities/to'
+import { applyScale, NoteSpec, Scalar, to } from '../../../../src'
 
-const applyDurationScalar: (noteSpecs: NoteSpecs, durationScalar: Scalar) => NoteSpecs =
-    (noteSpecs: NoteSpecs, durationScalar: Scalar): NoteSpecs =>
+const applyDurationScalar: (noteSpecs: NoteSpec[], durationScalar: Scalar) => NoteSpec[] =
+    (noteSpecs: NoteSpec[], durationScalar: Scalar): NoteSpec[] =>
         noteSpecs.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             durationSpec: noteSpec.durationSpec && {
@@ -13,4 +10,6 @@ const applyDurationScalar: (noteSpecs: NoteSpecs, durationScalar: Scalar) => Not
             },
         }))
 
-export default applyDurationScalar
+export {
+    applyDurationScalar,
+}

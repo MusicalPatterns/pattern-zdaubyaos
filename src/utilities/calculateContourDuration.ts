@@ -1,6 +1,4 @@
-import * as from from '../../../../src/utilities/from'
-import { Index } from '../../../../src/utilities/nominalTypes'
-import * as to from '../../../../src/utilities/to'
+import { from, Index, to } from '../../../../src'
 import { Contour, ContourElement } from '../types'
 
 const calculateContourDuration: (notes: Contour) => Index =
@@ -11,4 +9,6 @@ const calculateContourDuration: (notes: Contour) => Index =
             to.Index(0),
         )
 
-export default calculateContourDuration
+export {
+    calculateContourDuration,
+}

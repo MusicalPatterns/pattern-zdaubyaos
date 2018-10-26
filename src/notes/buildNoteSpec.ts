@@ -1,8 +1,11 @@
-import { NoteSpec } from '../../../../src/compile/types'
-import { FULL_GAIN, SEPARATION_FOR_NEIGHBORING_NOTES } from '../../../../src/constants'
-import { Index } from '../../../../src/utilities/nominalTypes'
-import shiftFromOneIndexedToZeroIndexed from '../../../../src/utilities/shiftFromOneIndexedToZeroIndexed'
-import * as to from '../../../../src/utilities/to'
+import {
+    FULL_GAIN,
+    Index,
+    NoteSpec,
+    SEPARATION_FOR_NEIGHBORING_NOTES,
+    shiftFromOneIndexedToZeroIndexed,
+    to,
+} from '../../../../src'
 import { BuildNoteSpec, ContourElement } from '../types'
 
 // tslint:disable-next-line:no-any no-magic-numbers
@@ -49,4 +52,6 @@ const buildNoteSpec: BuildNoteSpec =
         }
     }
 
-export default buildNoteSpec
+export {
+    buildNoteSpec,
+}

@@ -1,11 +1,12 @@
-import * as to from '../../../../src/utilities/to'
+import { to } from '../../../../src'
+import { Block, from } from '../nominal'
 import { Contour } from '../types'
-import * as zdaubyaosFrom from '../utilities/from'
-import { Block } from '../utilities/nominalTypes'
 
 const glisBlock: (block: Block) => Contour = (block: Block): Contour => ([ [
-    to.Index(zdaubyaosFrom.Block(block)),
-    to.Index(zdaubyaosFrom.Block(block)),
+    to.Index(from.Block(block)),
+    to.Index(from.Block(block)),
 ] ])
 
-export default glisBlock
+export {
+    glisBlock,
+}

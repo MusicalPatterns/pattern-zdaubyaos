@@ -1,14 +1,6 @@
-import applyOffset from '../../../../src/utilities/applyOffset'
-import { Count } from '../../../../src/utilities/nominalTypes'
-import * as to from '../../../../src/utilities/to'
-import { Maybe } from '../../../../src/utilities/types'
+import { applyOffset, Maybe, to } from '../../../../src'
 import { BarTarget, BlockStyle, Rendering } from '../types'
-
-type UsageCount = Count
-
-type UsageCountByRendering = { [z in Rendering]?: UsageCount }
-
-type UsageGrouping = { [x in BarTarget]: { [y in BlockStyle]?: UsageCountByRendering } }
+import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
 
 const zdaubyaosContourUsages: UsageGrouping = {
     [BarTarget.FIFTEEN]: {},

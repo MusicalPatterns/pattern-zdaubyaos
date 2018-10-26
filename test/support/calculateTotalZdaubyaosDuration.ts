@@ -1,10 +1,7 @@
-import { NoteSpec, NoteSpecs } from '../../../../src/compile/types'
-import * as from from '../../../../src/utilities/from'
-import { Index, SumOfIndices } from '../../../../src/utilities/nominalTypes'
-import * as to from '../../../../src/utilities/to'
+import { from, Index, NoteSpec, SumOfIndices, to } from '../../../../src/indexForTest'
 
-const calculateTotalZdaubyaosDuration: (noteSpecs: NoteSpecs) => SumOfIndices =
-    (noteSpecs: NoteSpecs): SumOfIndices =>
+const calculateTotalZdaubyaosDuration: (noteSpecs: NoteSpec[]) => SumOfIndices =
+    (noteSpecs: NoteSpec[]): SumOfIndices =>
         noteSpecs.reduce(
             (m: SumOfIndices, { durationSpec }: NoteSpec) => {
                 const durationIndex: Index = durationSpec && durationSpec.index || to.Index(0)
@@ -14,4 +11,6 @@ const calculateTotalZdaubyaosDuration: (noteSpecs: NoteSpecs) => SumOfIndices =
             to.SumOfIndices(0),
         )
 
-export default calculateTotalZdaubyaosDuration
+export {
+    calculateTotalZdaubyaosDuration,
+}
