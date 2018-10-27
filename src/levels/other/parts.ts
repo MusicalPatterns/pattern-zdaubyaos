@@ -16,7 +16,8 @@ const buildOtherParts: () => DictionaryOf<Part> =
         const secretLongChordPart: Part = secretLongChordContour
 
         const totallyOutTherePart: Part = repeat(
-            getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.SPRINGY_SUMMER).slice(0, 8),
+            getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.SPRINGY_SUMMER)
+                .slice(0, 8),
             to.Count(3),
         )
 

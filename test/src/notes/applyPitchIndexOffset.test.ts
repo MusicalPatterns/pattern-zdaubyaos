@@ -18,6 +18,7 @@ describe('apply pitch index offset', () => {
             testNoteSpec(to.Index(5)),
         ]
 
-        expect(applyPitchIndexOffset(notes, to.Offset(1))).toEqual(expectedNoteSpecs)
+        expect(applyPitchIndexOffset(notes, to.Offset(1)))
+            .toEqual(expectedNoteSpecs)
     })
 })

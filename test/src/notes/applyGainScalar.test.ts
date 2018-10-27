@@ -18,6 +18,7 @@ describe('scale gain', () => {
             testNoteSpec(to.Scalar(0.25)),
         ]
 
-        expect(applyGainScalar(noteSpecs, to.Scalar(0.5))).toEqual(expectedNoteSpecs)
+        expect(applyGainScalar(noteSpecs, to.Scalar(0.5)))
+            .toEqual(expectedNoteSpecs)
     })
 })

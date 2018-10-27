@@ -16,8 +16,8 @@ const buildAlmostTrueContours: () => DictionaryOf<Contour> =
         const zdaubGlisVariantContour: Contour = renderings[ Rendering.GLIS ](trueGlisVariantBlocks)
 
         const inaiiiVarietyContour: Contour = sequence(
-            buildTrueBlocks()[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ].map(
-                (block: Block, index: number): Contour =>
+            buildTrueBlocks()[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
+                .map((block: Block, index: number): Contour =>
                     [
                         renderings[ Rendering.SPRING ],
                         renderings[ Rendering.SUMMER ],
@@ -27,7 +27,8 @@ const buildAlmostTrueContours: () => DictionaryOf<Contour> =
                         renderings[ Rendering.SUMMER ],
                         renderings[ Rendering.FALL ],
                         renderings[ Rendering.FALL ],
-                    ][ index ]([ block ])),
+                    ][ index ]([ block ]),
+                ),
         )
 
         return {

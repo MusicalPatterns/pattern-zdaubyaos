@@ -7,6 +7,7 @@ describe('calculate contour duration', () => {
             [ 1, 3 ], [ 0, 4 ], [ 7, 3 ],
         ])
 
-        expect(from.Index(calculateContourDuration(contour))).toBe(10)
+        expect(from.Index(calculateContourDuration(contour)))
+            .toBe(10)
     })
 })

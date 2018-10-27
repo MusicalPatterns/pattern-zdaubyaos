@@ -25,19 +25,28 @@ const buildTrueContours: () => TrueContours =
     (): TrueContours => {
         const renderings: Renderings = buildRenderings()
 
-        Object.entries(buildTrueBlocks()).forEach(
-            // @ts-ignore
-            ([ barTarget, blocksBy ]: [ BarTarget, ByBlockStyle ]): void => {
-                Object.entries(blocksBy).forEach(
-                    // @ts-ignore
-                    ([ blockStyle, blocks ]: [ BlockStyle, Block[] ]): void => {
-                        Object.entries(renderings).forEach(
+        Object.entries(buildTrueBlocks())
+            .forEach(
+                // @ts-ignore
+                ([ barTarget, blocksBy ]: [ BarTarget, ByBlockStyle ]): void => {
+                    Object.entries(blocksBy)
+                        .forEach(
                             // @ts-ignore
-                            ([ renderingName, rendering ]: [ Rendering, RenderingFunction ]): void => {
-                                buildTrueContour({ rendering, blocks, barTarget, blockStyle, renderingName })
+                            ([ blockStyle, blocks ]: [ BlockStyle, Block[] ]): void => {
+                                Object.entries(renderings)
+                                    .forEach(
+                                        // @ts-ignore
+                                        ([ renderingName, rendering ]: [ Rendering, RenderingFunction ]): void => {
+                                            buildTrueContour({
+                                                barTarget,
+                                                blockStyle,
+                                                blocks,
+                                                rendering,
+                                                renderingName,
+                                            })
+                                        })
                             })
-                    })
-            })
+                })
 
         return zdaubyaosContoursByBarTargetBlockStyleThenRendering
     }

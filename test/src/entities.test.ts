@@ -9,6 +9,7 @@ describe('entities', () => {
     it('stay locked down unless I mean to change them', () => {
         const zdaubyaosEntitiesSnapshot: Entity[] = require('../support/zdaubyaosEntitiesSnapshot')
 
-        expect(buildZdaubyaosEntities(zdaubyaosSongSpec)).toEqual(zdaubyaosEntitiesSnapshot)
+        expect(buildZdaubyaosEntities(zdaubyaosSongSpec))
+            .toEqual(zdaubyaosEntitiesSnapshot)
     })
 })

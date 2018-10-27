@@ -18,11 +18,13 @@ describe('build note spec', () => {
             })
 
             it('uses the flat scale', () => {
-                expect(durationSpec.scaleIndex).toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
+                expect(durationSpec.scaleIndex)
+                    .toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(durationSpec.index).toBe(to.Index(5))
+                expect(durationSpec.index)
+                    .toBe(to.Index(5))
             })
         })
 
@@ -33,7 +35,8 @@ describe('build note spec', () => {
             })
 
             it('scales the gain to zero', () => {
-                expect(gainSpec.scalar).toBe(to.Scalar(0))
+                expect(gainSpec.scalar)
+                    .toBe(to.Scalar(0))
             })
         })
 
@@ -44,15 +47,18 @@ describe('build note spec', () => {
             })
 
             it('uses the flat scale', () => {
-                expect(sustainSpec.scaleIndex).toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
+                expect(sustainSpec.scaleIndex)
+                    .toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(sustainSpec.index).toBe(to.Index(5))
+                expect(sustainSpec.index)
+                    .toBe(to.Index(5))
             })
 
             it('offsets slightly (from total duration)', () => {
-                expect(sustainSpec.offset).toBe(to.Offset(-0.1))
+                expect(sustainSpec.offset)
+                    .toBe(to.Offset(-0.1))
             })
         })
     })
@@ -70,11 +76,13 @@ describe('build note spec', () => {
             })
 
             it('uses the flat scale', () => {
-                expect(durationSpec.scaleIndex).toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
+                expect(durationSpec.scaleIndex)
+                    .toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(durationSpec.index).toBe(to.Index(5))
+                expect(durationSpec.index)
+                    .toBe(to.Index(5))
             })
         })
 
@@ -85,11 +93,13 @@ describe('build note spec', () => {
             })
 
             it('scales the gain to full power', () => {
-                expect(gainSpec.scalar).toBe(to.Scalar(1))
+                expect(gainSpec.scalar)
+                    .toBe(to.Scalar(1))
             })
 
             it('uses the flat scale', () => {
-                expect(gainSpec.scaleIndex).toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
+                expect(gainSpec.scaleIndex)
+                    .toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
             })
         })
 
@@ -100,7 +110,8 @@ describe('build note spec', () => {
             })
 
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
-                expect(pitchSpec.index).toBe(to.Index(2))
+                expect(pitchSpec.index)
+                    .toBe(to.Index(2))
             })
         })
 
@@ -111,15 +122,18 @@ describe('build note spec', () => {
             })
 
             it('uses the flat scale', () => {
-                expect(sustainSpec.scaleIndex).toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
+                expect(sustainSpec.scaleIndex)
+                    .toBe(DURATIONS_AND_GAIN_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(sustainSpec.index).toBe(to.Index(5))
+                expect(sustainSpec.index)
+                    .toBe(to.Index(5))
             })
 
             it('offsets slightly (from total duration)', () => {
-                expect(sustainSpec.offset).toBe(to.Offset(-0.1))
+                expect(sustainSpec.offset)
+                    .toBe(to.Offset(-0.1))
             })
         })
     })

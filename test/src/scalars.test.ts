@@ -16,7 +16,8 @@ describe('scales', () => {
             ].map(to.Scalar)
 
             expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(subparticularSeriesScalars[ index ]).toEqual(expectedPitch)
+                expect(subparticularSeriesScalars[ index ])
+                    .toEqual(expectedPitch)
             })
         })
     })
@@ -33,7 +34,8 @@ describe('scales', () => {
             ].map(to.Scalar)
 
             expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(dubparticularSeriesScalars[ index ]).toEqual(expectedPitch)
+                expect(dubparticularSeriesScalars[ index ])
+                    .toEqual(expectedPitch)
             })
         })
     })
@@ -50,7 +52,8 @@ describe('scales', () => {
             ].map(to.Scalar)
 
             expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(superparticularSeriesScalars[ index ]).toEqual(expectedPitch)
+                expect(superparticularSeriesScalars[ index ])
+                    .toEqual(expectedPitch)
             })
         })
     })
@@ -67,7 +70,8 @@ describe('scales', () => {
             ].map(to.Scalar)
 
             expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(duperparticularSeriesScalars[ index ]).toEqual(expectedPitch)
+                expect(duperparticularSeriesScalars[ index ])
+                    .toEqual(expectedPitch)
             })
         })
     })
