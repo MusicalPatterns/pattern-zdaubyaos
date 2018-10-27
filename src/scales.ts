@@ -1,44 +1,27 @@
-import {
-    applyOffset,
-    BuildScalesFunction,
-    flatDurationsScale,
-    harmonicSeriesScale,
-    numbers,
-    Offset,
-    Scalar,
-    Scalars,
-    Scale,
-    Scales,
-    SongSpec,
-    subharmonicSeriesScale,
-    to,
-} from '../../../src'
+import { BuildScalesFunction, buildStandardScales, Scalar, Scale, SongSpec } from '../../../src'
+import { buildZdaubyaosScalars } from './scalars'
 
-// tslint:disable-next-line:no-any no-magic-numbers
-const SUPER: Offset = 1 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const DUPER: Offset = 2 as any
-
-const subparticularSeriesScalars: Scalars = numbers.map((n: number): Scalar =>
-    to.Scalar(n / applyOffset(n, SUPER)))
-
-const dubparticularSeriesScalars: Scalars = numbers.map((n: number): Scalar =>
-    to.Scalar(n / applyOffset(n, DUPER)))
-
-const superparticularSeriesScalars: Scalars = numbers.map((n: number): Scalar =>
-    to.Scalar(applyOffset(n, SUPER) / (n)))
-
-const duperparticularSeriesScalars: Scalars = numbers.map((n: number): Scalar =>
-    to.Scalar(applyOffset(n, DUPER) / (n)))
-
-const applySongPitchScalar: (scalars: Scalars, songPitchScalar: Scalar) => Scale =
-    (scalars: Scalars, songPitchScalar: Scalar): Scale => ({
+const applySongPitchScalar: (scalars: Scalar[], songPitchScalar: Scalar) => Scale =
+    (scalars: Scalar[], songPitchScalar: Scalar): Scale => ({
         scalar: songPitchScalar,
         scalars,
     })
 
-const buildZdaubyaosScales: BuildScalesFunction = (songSpec: SongSpec): Scales => {
+const buildZdaubyaosScales: BuildScalesFunction = (songSpec: SongSpec): Scale[] => {
     const songPitchScalar: Scalar = songSpec.songPitchScalar
+
+    const {
+        subparticularSeriesScalars,
+        dubparticularSeriesScalars,
+        superparticularSeriesScalars,
+        duperparticularSeriesScalars,
+    } = buildZdaubyaosScalars()
+
+    const {
+        flatDurationsScale,
+        harmonicSeriesScale,
+        subharmonicSeriesScale,
+    } = buildStandardScales()
 
     return [
         applySongPitchScalar(subparticularSeriesScalars, songPitchScalar),
@@ -52,9 +35,5 @@ const buildZdaubyaosScales: BuildScalesFunction = (songSpec: SongSpec): Scales =
 }
 
 export {
-    subparticularSeriesScalars,
-    superparticularSeriesScalars,
-    dubparticularSeriesScalars,
-    duperparticularSeriesScalars,
     buildZdaubyaosScales,
 }

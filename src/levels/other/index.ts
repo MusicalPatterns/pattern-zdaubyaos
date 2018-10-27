@@ -1,7 +1,2 @@
-export {
-    backboneFifteenContour,
-    backboneTwentyfourContour,
-} from './contours'
-export {
-    buildOtherSegments,
-} from './segments'
+export { buildOtherContours } from './contours'
+export { buildOtherSegments } from './segments'

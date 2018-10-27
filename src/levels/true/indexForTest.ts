@@ -1,8 +1,6 @@
 // tslint:disable:no-reaching-imports
 
+export { getTrueContours, buildTrueContours } from './contours'
 export {
-    getZdaubyaosContours,
-    inaiiiVarietyContour,
-    zdaubGlisVariantContour,
-    zdaubyaosContoursByBarTargetBlockStyleThenRendering,
-} from './contours'
+    TrueContours,
+} from './types'

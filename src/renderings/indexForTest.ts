@@ -1,3 +1,6 @@
 // tslint:disable:no-reaching-imports
 
-export { renderings } from './renderings'
+export { buildRenderings } from './renderings'
+export {
+    Renderings,
+} from './types'

@@ -1,3 +1,1 @@
-export {
-    buildThirtyfiveSegments,
-} from './segments'
+export { buildThirtyfiveSegments } from './segments'

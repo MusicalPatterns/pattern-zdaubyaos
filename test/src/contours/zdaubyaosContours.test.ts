@@ -2,17 +2,23 @@ import { from } from '../../../../../src/indexForTest'
 import {
     BarTarget,
     BlockStyle,
+    buildAlmostTrueContours,
+    buildTrueContours,
     calculateContourDuration,
     Contour,
-    getZdaubyaosContours,
-    inaiiiVarietyContour,
+    getTrueContours,
     Rendering,
     to,
-    zdaubGlisVariantContour,
-    zdaubyaosContoursByBarTargetBlockStyleThenRendering,
+    TrueContours,
 } from '../../../src/indexForTest'
 
 describe('zdaubyaos contours', () => {
+    let zdaubyaosContoursByBarTargetBlockStyleThenRendering: TrueContours
+
+    beforeEach(() => {
+        zdaubyaosContoursByBarTargetBlockStyleThenRendering = buildTrueContours()
+    })
+
     describe('zdaub contours', () => {
         describe('of duration 15', () => {
             describe('glis renderings', () => {
@@ -151,6 +157,8 @@ describe('zdaubyaos contours', () => {
 
         describe('other durations', () => {
             it('handles glis variant', () => {
+                const { zdaubGlisVariantContour } = buildAlmostTrueContours()
+
                 expect(zdaubGlisVariantContour).toEqual(to.Contour([
                     [ 4, 4 ], [ 5, 5 ], [ 6, 6 ],
                     [ 7, 7 ], [ 8, 8 ],
@@ -653,6 +661,8 @@ describe('zdaubyaos contours', () => {
 
             describe('other renderings', () => {
                 it('handles inaiii variety', () => {
+                    const { inaiiiVarietyContour } = buildAlmostTrueContours()
+
                     expect(inaiiiVarietyContour).toEqual(to.Contour([
                         [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
                         [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
@@ -668,7 +678,7 @@ describe('zdaubyaos contours', () => {
         })
 
         it('gets the right set of contours out of its stash', () => {
-            expect(getZdaubyaosContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, Rendering.SUMMER)).toEqual(
+            expect(getTrueContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, Rendering.SUMMER)).toEqual(
                 zdaubyaosContoursByBarTargetBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.DJIYAI ][ Rendering.SUMMER ],
             )
         })

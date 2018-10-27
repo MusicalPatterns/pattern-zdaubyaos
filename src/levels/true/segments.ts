@@ -3,18 +3,20 @@
 import { DictionaryOf, Scalar, to } from '../../../../../src'
 import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
-import {
-    trueYaosInaidjiyaiouzdSummerToSpringPart,
-    trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
-    trueYaosUmowchuwowiestSpringToSummerPart,
-    trueYaosUmowchuwowiestSummerToSpringPart,
-    trueZdaubGlisPart,
-    trueZdaubGlisVariantPart,
-    trueZdaubTremPart,
-} from './parts'
+import { buildTrueParts } from './parts'
 
 const buildTrueSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
     (songDurationScalar: Scalar): DictionaryOf<Segment> => {
+        const {
+            trueYaosInaidjiyaiouzdSummerToSpringPart,
+            trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdPart,
+            trueYaosUmowchuwowiestSpringToSummerPart,
+            trueYaosUmowchuwowiestSummerToSpringPart,
+            trueZdaubGlisPart,
+            trueZdaubGlisVariantPart,
+            trueZdaubTremPart,
+        } = buildTrueParts()
+
         const trueSpringAllYaosUmowchuwowiestSegment: Segment = buildSegment(
             [
                 trueYaosUmowchuwowiestSpringToSummerPart,

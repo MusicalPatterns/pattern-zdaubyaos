@@ -1,37 +1,48 @@
 // tslint:disable:align
 
-import { repeat, to } from '../../../../../src'
+import { DictionaryOf, repeat, to } from '../../../../../src'
 import { rest } from '../../rest'
 import { BarTarget, BlockStyle, Part, Rendering } from '../../types'
-import { backboneTwentyfourContour } from '../other'
-import { getZdaubyaosContours, inaiiiVarietyContour } from '../true'
+import { buildAlmostTrueContours } from '../almostTrue'
+import { buildOtherContours } from '../other'
+import { getTrueContours } from '../true'
 
-const breatherRestPart: Part = rest(to.Index(24))
-const breatherSpringPart: Part = getZdaubyaosContours(
-    BlockStyle.INAI,
-    BarTarget.TWENTYFOUR,
-    Rendering.SPRING,
-)
-const breatherSummerPart: Part = getZdaubyaosContours(
-    BlockStyle.INAI,
-    BarTarget.TWENTYFOUR,
-    Rendering.SUMMER,
-)
-const doubleBreatherFallPart: Part = repeat(backboneTwentyfourContour, to.Count(2))
-const breatherVarietyPart: Part = inaiiiVarietyContour
-const breatherSpringAltPart: Part = getZdaubyaosContours(
-    BlockStyle.OUZD,
-    BarTarget.TWENTYFOUR,
-    Rendering.SPRING,
-)
-const doubleBreatherRestPart: Part = rest(to.Index(48))
+const buildBreatherParts: () => DictionaryOf<Part> =
+    (): DictionaryOf<Part> => {
+        const { inaiiiVarietyContour } = buildAlmostTrueContours()
+        const { backboneTwentyfourContour } = buildOtherContours()
+
+        const breatherRestPart: Part = rest(to.Index(24))
+        const breatherSpringPart: Part = getTrueContours(
+            BlockStyle.INAI,
+            BarTarget.TWENTYFOUR,
+            Rendering.SPRING,
+        )
+        const breatherSummerPart: Part = getTrueContours(
+            BlockStyle.INAI,
+            BarTarget.TWENTYFOUR,
+            Rendering.SUMMER,
+        )
+        const doubleBreatherFallPart: Part = repeat(backboneTwentyfourContour, to.Count(2))
+        const breatherVarietyPart: Part = inaiiiVarietyContour
+        const breatherSpringAltPart: Part = getTrueContours(
+            BlockStyle.OUZD,
+            BarTarget.TWENTYFOUR,
+            Rendering.SPRING,
+        )
+        const doubleBreatherRestPart: Part = rest(to.Index(48))
+
+        return {
+            breatherRestPart,
+            breatherSpringAltPart,
+            breatherSpringPart,
+            breatherSummerPart,
+            breatherVarietyPart,
+            doubleBreatherFallPart,
+            doubleBreatherRestPart,
+        }
+    }
 
 export {
-    breatherRestPart,
-    breatherSpringPart,
-    breatherSummerPart,
-    doubleBreatherFallPart,
-    breatherVarietyPart,
-    breatherSpringAltPart,
-    doubleBreatherRestPart,
+    buildBreatherParts,
 }

@@ -5,14 +5,9 @@ export { buildZdaubyaosEntities } from './entities'
 export { zdaubyaosSongSpec } from './songSpecs'
 export { calculateContourDuration } from './utilities/indexForTest'
 export { to } from './nominal/indexForTest'
-export { renderings } from './renderings/indexForTest'
+export { buildRenderings, Renderings } from './renderings/indexForTest'
 export { applyGainScalar, applyPitchIndexOffset, buildNoteSpec } from './notes/indexForTest'
-export {
-    dubparticularSeriesScalars,
-    duperparticularSeriesScalars,
-    subparticularSeriesScalars,
-    superparticularSeriesScalars,
-} from './scales'
+export { buildZdaubyaosScalars } from './scalars'
 export {
     Contour,
     RenderingFunction,
@@ -21,18 +16,10 @@ export {
     BlockStyle,
 } from './types'
 export {
-    backboneFifteenContour,
-    backboneTwentyfourContour,
-    shiftyContour,
-    shiftyFifteenContour,
-    shiftyTwentyfourContour,
-    shiftyTwentyfourVariantContour,
-    thirtyfiveYaosAccidentInspiredContour,
-    thirtyfiveYaosBassContour,
-    thirtyfiveZdaubContour,
-    thirtyfiveZdaubOnlyWiggleContour,
-    getZdaubyaosContours,
-    inaiiiVarietyContour,
-    zdaubGlisVariantContour,
-    zdaubyaosContoursByBarTargetBlockStyleThenRendering,
+    buildOtherContours,
+    buildThirtyfiveContours,
+    getTrueContours,
+    buildTrueContours,
+    buildAlmostTrueContours,
+    TrueContours,
 } from './levels/indexForTest'

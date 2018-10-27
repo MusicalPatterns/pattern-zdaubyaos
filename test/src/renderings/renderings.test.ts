@@ -1,6 +1,11 @@
-import { Rendering, RenderingFunction, renderings, to } from '../../../src/indexForTest'
+import { buildRenderings, Rendering, RenderingFunction, Renderings, to } from '../../../src/indexForTest'
 
 describe('renderings', () => {
+    let renderings: Renderings
+    beforeEach(() => {
+        renderings = buildRenderings()
+    })
+
     describe('spring', () => {
         it('ascends from 1, by 1, muting the 1 itself', () => {
             const spring: RenderingFunction = renderings[Rendering.SPRING]

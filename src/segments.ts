@@ -1,6 +1,6 @@
 import { applyOffset, DictionaryOf, from, Index, Offset, Scalar } from '../../../src'
 import {
-    buildAlmostZdaubyaosSegments,
+    buildAlmostTrueSegments,
     buildBreatherSegments,
     buildOtherSegments,
     buildThirtyfiveSegments,
@@ -21,7 +21,7 @@ const buildSegments: (songDurationScalar: Scalar) => Segments =
             almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
             almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
             almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
-        }: DictionaryOf<Segment> = buildAlmostZdaubyaosSegments(songDurationScalar)
+        }: DictionaryOf<Segment> = buildAlmostTrueSegments(songDurationScalar)
 
         const {
             breatherSpringAltNiceAsABreatherToABreatherSegment,

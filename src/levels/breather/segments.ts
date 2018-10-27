@@ -1,18 +1,20 @@
 import { DictionaryOf, Scalar, to } from '../../../../../src'
 import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
-import {
-    breatherRestPart,
-    breatherSpringAltPart,
-    breatherSpringPart,
-    breatherSummerPart,
-    breatherVarietyPart,
-    doubleBreatherFallPart,
-    doubleBreatherRestPart,
-} from './parts'
+import { buildBreatherParts } from './parts'
 
 const buildBreatherSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
     (songDurationScalar: Scalar): DictionaryOf<Segment> => {
+        const {
+            breatherRestPart,
+            breatherSpringAltPart,
+            breatherSpringPart,
+            breatherSummerPart,
+            breatherVarietyPart,
+            doubleBreatherFallPart,
+            doubleBreatherRestPart,
+        } = buildBreatherParts()
+
         const breatherSpringSegment: Segment = buildSegment(
             [
                 breatherSpringPart,

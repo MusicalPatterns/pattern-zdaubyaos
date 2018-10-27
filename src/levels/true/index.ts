@@ -1,7 +1,3 @@
-export {
-    getZdaubyaosContours,
-    inaiiiVarietyContour,
-} from './contours'
-export {
-    buildTrueSegments,
-} from './segments'
+export { getTrueContours } from './contours'
+export { buildTrueSegments } from './segments'
+export { buildTrueBlocks } from './blocks'

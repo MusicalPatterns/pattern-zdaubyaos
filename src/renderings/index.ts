@@ -1,3 +1,4 @@
+export { buildRenderings } from './renderings'
 export {
-    renderings,
-} from './renderings'
+    Renderings,
+} from './types'

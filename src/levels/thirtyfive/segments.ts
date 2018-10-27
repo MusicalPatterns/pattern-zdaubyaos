@@ -1,14 +1,16 @@
 import { DictionaryOf, Scalar, to } from '../../../../../src'
 import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
-import {
-    thirtyfiveYaosAccidentInspiredPart,
-    thirtyfiveYaosBassPart,
-    thirtyfiveZdaubPart,
-} from './parts'
+import { buildThirtyfiveParts } from './parts'
 
 const buildThirtyfiveSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
     (songDurationScalar: Scalar): DictionaryOf<Segment> => {
+        const {
+            thirtyfiveYaosAccidentInspiredPart,
+            thirtyfiveYaosBassPart,
+            thirtyfiveZdaubPart,
+        } = buildThirtyfiveParts()
+
         const thirtyfiveSegment: Segment = buildSegment(
             [
                 thirtyfiveZdaubPart,

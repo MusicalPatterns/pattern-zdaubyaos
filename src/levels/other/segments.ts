@@ -1,10 +1,12 @@
 import { DictionaryOf, Scalar, to } from '../../../../../src'
 import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
-import { secretLongChordPart, shiftyAPart, shiftyBPart, totallyOutTherePart } from './parts'
+import { buildOtherParts } from './parts'
 
 const buildOtherSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
     (songDurationScalar: Scalar): DictionaryOf<Segment> => {
+        const { secretLongChordPart, shiftyAPart, shiftyBPart, totallyOutTherePart } = buildOtherParts()
+
         const secretLongChordSegment: Segment = buildSegment(
             [
                 secretLongChordPart,

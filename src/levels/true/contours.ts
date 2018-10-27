@@ -1,62 +1,57 @@
-import { sequence } from '../../../../../src'
 import { Block } from '../../nominal'
-import { renderings } from '../../renderings'
+import { buildRenderings, Renderings } from '../../renderings'
 import { BarTarget, BlockStyle, Contour, Rendering, RenderingFunction } from '../../types'
 import { countUsage } from '../../utilities'
-import { trueBlocksByBarTargetThenBlockStyle, trueGlisVariantBlocks } from './blocks'
-import { ByBlockStyle, GetZdaubyaosContours, ZdaubyaosContours } from './types'
+import { buildTrueBlocks } from './blocks'
+import { BuildTrueContourParameters, ByBlockStyle, GetTrueContours, TrueContours } from './types'
 
 // @ts-ignore
-const zdaubyaosContoursByBarTargetBlockStyleThenRendering: ZdaubyaosContours = {}
+const zdaubyaosContoursByBarTargetBlockStyleThenRendering: TrueContours = {}
 
-Object.entries(trueBlocksByBarTargetThenBlockStyle).forEach(
-// @ts-ignore
-    ([ barTarget, blocksBy ]: [BarTarget, ByBlockStyle]): void => {
-        Object.entries(blocksBy).forEach(
+const buildTrueContour: (parameters: BuildTrueContourParameters) => void =
+    (parameters: BuildTrueContourParameters): void => {
+        const { rendering, blocks, barTarget, blockStyle, renderingName }: BuildTrueContourParameters = parameters
+        const contour: Contour = rendering(blocks)
+
+        zdaubyaosContoursByBarTargetBlockStyleThenRendering[ barTarget ] =
+            zdaubyaosContoursByBarTargetBlockStyleThenRendering[ barTarget ] || {}
+        zdaubyaosContoursByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ] =
+            zdaubyaosContoursByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ] || {}
+        zdaubyaosContoursByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ][ renderingName ] =
+            contour
+    }
+
+const buildTrueContours: () => TrueContours =
+    (): TrueContours => {
+        const renderings: Renderings = buildRenderings()
+
+        Object.entries(buildTrueBlocks()).forEach(
             // @ts-ignore
-            ([ blockStyle, blocks ]: [BlockStyle, Block[]]): void => {
-                Object.entries(renderings).forEach(
+            ([ barTarget, blocksBy ]: [ BarTarget, ByBlockStyle ]): void => {
+                Object.entries(blocksBy).forEach(
                     // @ts-ignore
-                    ([ renderingName, rendering ]: [Rendering, RenderingFunction]): void => {
-                        const contour: Contour = rendering(blocks)
-
-                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget] =
-                            zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget] || {}
-                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle] =
-                            zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle] || {}
-                        zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle][renderingName] =
-                            contour
+                    ([ blockStyle, blocks ]: [ BlockStyle, Block[] ]): void => {
+                        Object.entries(renderings).forEach(
+                            // @ts-ignore
+                            ([ renderingName, rendering ]: [ Rendering, RenderingFunction ]): void => {
+                                buildTrueContour({ rendering, blocks, barTarget, blockStyle, renderingName })
+                            })
                     })
             })
-    })
 
-const zdaubGlisVariantContour: Contour = renderings[Rendering.GLIS](trueGlisVariantBlocks)
+        return zdaubyaosContoursByBarTargetBlockStyleThenRendering
+    }
 
-const inaiiiVarietyContour: Contour = sequence(
-    trueBlocksByBarTargetThenBlockStyle[BarTarget.TWENTYFOUR][BlockStyle.INAI].map(
-        (block: Block, index: number): Contour =>
-            [
-                renderings[Rendering.SPRING],
-                renderings[Rendering.SUMMER],
-                renderings[Rendering.SPRING],
-                renderings[Rendering.SUMMER],
-                renderings[Rendering.SPRING],
-                renderings[Rendering.SUMMER],
-                renderings[Rendering.FALL],
-                renderings[Rendering.FALL],
-            ][index]([ block ])),
-)
-
-const getZdaubyaosContours: GetZdaubyaosContours =
+const getTrueContours: GetTrueContours =
     (blockStyle: BlockStyle, barTarget: BarTarget, rendering: Rendering): Contour => {
+        buildTrueContours()
+
         countUsage(barTarget, blockStyle, rendering)
 
-        return zdaubyaosContoursByBarTargetBlockStyleThenRendering[barTarget][blockStyle][rendering]
+        return zdaubyaosContoursByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ][ rendering ]
     }
 
 export {
-    zdaubyaosContoursByBarTargetBlockStyleThenRendering,
-    zdaubGlisVariantContour,
-    inaiiiVarietyContour,
-    getZdaubyaosContours,
+    buildTrueContours,
+    getTrueContours,
 }

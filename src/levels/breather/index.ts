@@ -1,3 +1,1 @@
-export {
-    buildBreatherSegments,
-} from './segments'
+export { buildBreatherSegments } from './segments'

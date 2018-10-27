@@ -1,17 +1,19 @@
 import { DictionaryOf, Scalar, to } from '../../../../../src'
 import { buildSegment } from '../../notes'
 import { Segment } from '../../types'
-import {
-    almostTrueExtendedEndingZdaubBonyPart,
-    almostTrueExtendedEndingZdaubGlisPart,
-    almostTrueExtendedEndingZdaubTremPart,
-    almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
-    almostTrueYetOfBackbonePart,
-    almostTrueZdaubBonyWithSuperinscapePart,
-} from './parts'
+import { buildAlmostTrueParts } from './parts'
 
-const buildAlmostZdaubyaosSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
+const buildAlmostTrueSegments: (songDurationScalar: Scalar) => DictionaryOf<Segment> =
     (songDurationScalar: Scalar): DictionaryOf<Segment> => {
+        const {
+            almostTrueExtendedEndingZdaubBonyPart,
+            almostTrueExtendedEndingZdaubGlisPart,
+            almostTrueExtendedEndingZdaubTremPart,
+            almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentPart,
+            almostTrueYetOfBackbonePart,
+            almostTrueZdaubBonyWithSuperinscapePart,
+        } = buildAlmostTrueParts()
+
         const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment =
             buildSegment(
                 [
@@ -63,5 +65,5 @@ const buildAlmostZdaubyaosSegments: (songDurationScalar: Scalar) => DictionaryOf
     }
 
 export {
-    buildAlmostZdaubyaosSegments,
+    buildAlmostTrueSegments,
 }

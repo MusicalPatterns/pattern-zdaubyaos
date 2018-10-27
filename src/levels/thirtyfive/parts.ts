@@ -1,30 +1,39 @@
-import { repeat, sequence, to } from '../../../../../src'
+import { DictionaryOf, repeat, sequence, to } from '../../../../../src'
 import { rest } from '../../rest'
 import { Part } from '../../types'
 import { calculateContourDuration } from '../../utilities'
-import {
-    thirtyfiveYaosAccidentInspiredContour,
-    thirtyfiveYaosBassContour,
-    thirtyfiveZdaubContour,
-    thirtyfiveZdaubOnlyWiggleContour,
-} from './contours'
+import { buildThirtyfiveContours } from './contours'
 
-const thirtyfiveYaosBassPart: Part = sequence([
-    repeat(thirtyfiveYaosBassContour, to.Count(30)),
-])
+const buildThirtyfiveParts: () => DictionaryOf<Part> =
+    (): DictionaryOf<Part> => {
+        const {
+            thirtyfiveYaosBassContour,
+            thirtyfiveYaosAccidentInspiredContour,
+            thirtyfiveZdaubContour,
+            thirtyfiveZdaubOnlyWiggleContour,
+        } = buildThirtyfiveContours()
 
-const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
-    repeat(thirtyfiveYaosAccidentInspiredContour, to.Count(30)),
-])
+        const thirtyfiveYaosBassPart: Part = sequence([
+            repeat(thirtyfiveYaosBassContour, to.Count(30)),
+        ])
 
-const thirtyfiveZdaubPart: Part = sequence([
-    rest(calculateContourDuration(thirtyfiveZdaubContour)),
-    repeat(thirtyfiveZdaubContour, to.Count(2)),
-    repeat(thirtyfiveZdaubOnlyWiggleContour, to.Count(12)),
-])
+        const thirtyfiveYaosAccidentInspiredPart: Part = sequence([
+            repeat(thirtyfiveYaosAccidentInspiredContour, to.Count(30)),
+        ])
+
+        const thirtyfiveZdaubPart: Part = sequence([
+            rest(calculateContourDuration(thirtyfiveZdaubContour)),
+            repeat(thirtyfiveZdaubContour, to.Count(2)),
+            repeat(thirtyfiveZdaubOnlyWiggleContour, to.Count(12)),
+        ])
+
+        return {
+            thirtyfiveYaosAccidentInspiredPart,
+            thirtyfiveYaosBassPart,
+            thirtyfiveZdaubPart,
+        }
+    }
 
 export {
-    thirtyfiveYaosBassPart,
-    thirtyfiveYaosAccidentInspiredPart,
-    thirtyfiveZdaubPart,
+    buildThirtyfiveParts,
 }

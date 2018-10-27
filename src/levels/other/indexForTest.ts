@@ -1,10 +1,3 @@
 // tslint:disable:no-reaching-imports
 
-export {
-    backboneFifteenContour,
-    backboneTwentyfourContour,
-    shiftyContour,
-    shiftyFifteenContour,
-    shiftyTwentyfourContour,
-    shiftyTwentyfourVariantContour,
-} from './contours'
+export { buildOtherContours } from './contours'

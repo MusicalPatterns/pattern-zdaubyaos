@@ -1,15 +1,9 @@
-import {
-    backboneFifteenContour,
-    backboneTwentyfourContour,
-    shiftyContour,
-    shiftyFifteenContour,
-    shiftyTwentyfourContour,
-    shiftyTwentyfourVariantContour,
-    to,
-} from '../../../src/indexForTest'
+import { buildOtherContours, to } from '../../../src/indexForTest'
 
 describe('other contours', () => {
     it('handles backbone fifteen', () => {
+        const { backboneFifteenContour } = buildOtherContours()
+
         expect(backboneFifteenContour).toEqual(to.Contour([
             [ 1, 1 ], [ 2, 2 ],
             [ 1, 1 ], [ 2, 2 ],
@@ -20,6 +14,8 @@ describe('other contours', () => {
     })
 
     it('handles backbone twentyfour', () => {
+        const { backboneTwentyfourContour } = buildOtherContours()
+
         expect(backboneTwentyfourContour).toEqual(to.Contour([
             [ 1, 1 ], [ 3, 3 ],
             [ 1, 1 ], [ 3, 3 ],
@@ -31,6 +27,8 @@ describe('other contours', () => {
     })
 
     it('handles shifty fifteen', () => {
+        const { shiftyFifteenContour } = buildOtherContours()
+
         expect(shiftyFifteenContour).toEqual(to.Contour([
             [ 2, 2 ], [ 1, 1 ],
             [ 5, 5 ], [ 1, 1 ],
@@ -39,6 +37,8 @@ describe('other contours', () => {
     })
 
     it('handles shifty twentyfour', () => {
+        const { shiftyTwentyfourContour } = buildOtherContours()
+
         expect(shiftyTwentyfourContour).toEqual(to.Contour([
             [ 3, 3 ], [ 1, 1 ],
             [ 3, 3 ], [ 1, 1 ],
@@ -48,6 +48,8 @@ describe('other contours', () => {
     })
 
     it('handles shifty twentyfour variant', () => {
+        const { shiftyTwentyfourVariantContour } = buildOtherContours()
+
         expect(shiftyTwentyfourVariantContour).toEqual(to.Contour([
             [ 4, 4 ], [ 7, 7 ], [ 4, 4 ],
             [ 1, 1 ], [ 3, 3 ], [ 1, 1 ], [ 3, 3 ], [ 1, 1 ],
@@ -55,6 +57,8 @@ describe('other contours', () => {
     })
 
     it('handles shifty', () => {
+        const { shiftyContour } = buildOtherContours()
+
         expect(shiftyContour).toEqual(to.Contour([
             [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ],
             [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 3, 3 ], [ 4, 4 ],
