@@ -1,4 +1,5 @@
-import { applyOffset, DictionaryOf, from, Index, Offset, Scalar } from '../../../src'
+import { applyOffset, DictionaryOf, from, INCLUSIVE, INITIAL, Scalar } from '../../../src'
+import { ZDAUBYAOS_SEGMENT_COUNT } from './constants'
 import {
     buildAlmostTrueSegments,
     buildBreatherSegments,
@@ -7,13 +8,6 @@ import {
     buildTrueSegments,
 } from './levels'
 import { Segment, Segments } from './types'
-
-// tslint:disable-next-line:no-any no-magic-numbers
-const START: Index = 0 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const END: Index = 17 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const INCLUSIVE: Offset = 1 as any
 
 const buildSegments: (songDurationScalar: Scalar) => Segments =
     (songDurationScalar: Scalar): Segments => {
@@ -78,7 +72,7 @@ const buildSegments: (songDurationScalar: Scalar) => Segments =
 
             // 17
             thirtyfiveSegment,
-        ].slice(from.Index(START), from.Index(applyOffset(END, INCLUSIVE)))
+        ].slice(from.Index(INITIAL), from.Count(applyOffset(ZDAUBYAOS_SEGMENT_COUNT, INCLUSIVE)))
     }
 
 export {

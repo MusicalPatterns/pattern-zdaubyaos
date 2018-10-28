@@ -1,5 +1,3 @@
-// tslint:disable:no-magic-numbers
-
 import { DictionaryOf, Scalar, to } from '../../../../src/indexForTest'
 import { buildZdaubyaosScalars } from '../../src/indexForTest'
 

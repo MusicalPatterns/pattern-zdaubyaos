@@ -1,8 +1,7 @@
 import { Index, NotePropertySpec, NoteSpec, to } from '../../../../../src/indexForTest'
 import { buildNoteSpec } from '../../../src/indexForTest'
 
-// tslint:disable-next-line:no-any no-magic-numbers
-const DURATIONS_AND_GAIN_SCALE_INDEX: Index = 6 as any
+const DURATIONS_AND_GAIN_SCALE_INDEX: Index = to.Index(6)
 
 describe('build note spec', () => {
     describe('when the pitch index is zero', () => {

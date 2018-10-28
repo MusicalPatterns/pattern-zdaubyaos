@@ -1,32 +1,27 @@
 import {
+    DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
     FULL_GAIN,
-    Index,
     NoteSpec,
-    SEPARATION_FOR_NEIGHBORING_NOTES,
-    shiftFromOneIndexedToZeroIndexed,
+    offsetFromOneIndexedToZeroIndexed,
     to,
 } from '../../../../src'
+import { DURATIONS_AND_GAIN_SCALE_INDEX, PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildNoteSpec, ContourElement } from '../types'
-
-// tslint:disable-next-line:no-any no-magic-numbers
-const REST: Index = 0 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const DURATIONS_AND_GAIN_SCALE_INDEX: Index = 6 as any
 
 const buildNoteSpec: BuildNoteSpec =
     ([ pitchIndex, duration ]: ContourElement): NoteSpec => {
-        if (pitchIndex === REST) {
+        if (pitchIndex === PITCH_INDEX_INDICATING_REST) {
             return {
                 durationSpec: {
-                    index: shiftFromOneIndexedToZeroIndexed(duration),
+                    index: offsetFromOneIndexedToZeroIndexed(duration),
                     scaleIndex: DURATIONS_AND_GAIN_SCALE_INDEX,
                 },
                 gainSpec: {
                     scalar: to.Scalar(0),
                 },
                 sustainSpec: {
-                    index: shiftFromOneIndexedToZeroIndexed(duration),
-                    offset: SEPARATION_FOR_NEIGHBORING_NOTES,
+                    index: offsetFromOneIndexedToZeroIndexed(duration),
+                    offset: DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
                     scaleIndex: DURATIONS_AND_GAIN_SCALE_INDEX,
                 },
             }
@@ -34,7 +29,7 @@ const buildNoteSpec: BuildNoteSpec =
 
         return {
             durationSpec: {
-                index: shiftFromOneIndexedToZeroIndexed(duration),
+                index: offsetFromOneIndexedToZeroIndexed(duration),
                 scaleIndex: DURATIONS_AND_GAIN_SCALE_INDEX,
             },
             gainSpec: {
@@ -42,11 +37,11 @@ const buildNoteSpec: BuildNoteSpec =
                 scaleIndex: DURATIONS_AND_GAIN_SCALE_INDEX,
             },
             pitchSpec: {
-                index: shiftFromOneIndexedToZeroIndexed(pitchIndex),
+                index: offsetFromOneIndexedToZeroIndexed(pitchIndex),
             },
             sustainSpec: {
-                index: shiftFromOneIndexedToZeroIndexed(duration),
-                offset: SEPARATION_FOR_NEIGHBORING_NOTES,
+                index: offsetFromOneIndexedToZeroIndexed(duration),
+                offset: DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
                 scaleIndex: DURATIONS_AND_GAIN_SCALE_INDEX,
             },
         }

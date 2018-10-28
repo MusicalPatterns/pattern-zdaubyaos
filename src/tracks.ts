@@ -1,37 +1,26 @@
-import { applyOffset, from, Index, Offset, Scalar } from '../../../src'
+import { applyOffset, from, INCLUSIVE, Index, INITIAL, Scalar, to } from '../../../src'
+import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from './constants'
 import { buildSegments } from './segments'
 import { Segment, Segments, Track, TrackDictionary } from './types'
-
-// tslint:disable-next-line:no-any no-magic-numbers
-const START: Index = 0 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const INCLUSIVE: Offset = 1 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const A: Index = 0 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const B: Index = 1 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const C: Index = 2 as any
 
 const buildZdaubyaosTracks: (songDurationScalar: Scalar) => TrackDictionary =
     (songDurationScalar: Scalar): TrackDictionary => {
         const segments: Segments = buildSegments(songDurationScalar)
 
-        // tslint:disable-next-line:no-any no-magic-numbers
-        const END: Index = segments.length as any
+        const end: Index = to.Index(segments.length)
 
         let zdaubyaosSubparticularOrDubparticularTrack: Track = []
         let zdaubyaosSuperparticularOrDuperparticularTrack: Track = []
         let zdaubyaosHarmonicOrSubharmonicTrack: Track = []
 
-        segments.slice(from.Index(START), from.Index(applyOffset(END, INCLUSIVE)))
+        segments.slice(from.Index(INITIAL), from.Index(applyOffset(end, INCLUSIVE)))
             .forEach((segment: Segment): void => {
                 zdaubyaosSubparticularOrDubparticularTrack = zdaubyaosSubparticularOrDubparticularTrack
-                    .concat(segment[ from.Index(A) ])
+                    .concat(segment[ from.Index(SEGMENT_A) ])
                 zdaubyaosSuperparticularOrDuperparticularTrack = zdaubyaosSuperparticularOrDuperparticularTrack
-                    .concat(segment[ from.Index(B) ])
+                    .concat(segment[ from.Index(SEGMENT_B) ])
                 zdaubyaosHarmonicOrSubharmonicTrack = zdaubyaosHarmonicOrSubharmonicTrack
-                    .concat(segment[ from.Index(C) ])
+                    .concat(segment[ from.Index(SEGMENT_C) ])
             })
 
         return {

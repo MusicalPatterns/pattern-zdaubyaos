@@ -1,10 +1,8 @@
-import { BaseSongSpec, DEFAULT_DURATION_SCALAR, Scalar } from '../../../src'
-
-// tslint:disable-next-line:no-any no-magic-numbers
-const ZDAUBYAOS_PITCH_SCALAR: Scalar = 440 as any
+import { BaseSongSpec, DEFAULT_ATOMIC_TIME_TYPE_DURATION_SCALAR } from '../../../src'
+import { ZDAUBYAOS_PITCH_SCALAR } from './constants'
 
 const zdaubyaosSongSpec: BaseSongSpec = {
-    songDurationScalar: DEFAULT_DURATION_SCALAR,
+    songDurationScalar: DEFAULT_ATOMIC_TIME_TYPE_DURATION_SCALAR,
     songPitchScalar: ZDAUBYAOS_PITCH_SCALAR,
 }
 

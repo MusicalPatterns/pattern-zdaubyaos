@@ -1,4 +1,4 @@
-import { DictionaryOf, repeat, repeatCall, sequence, to } from '../../../../../src'
+import { DictionaryOf, from, INITIAL, repeat, repeatCall, sequence, to } from '../../../../../src'
 import { BarTarget, BlockStyle, Part, Rendering } from '../../types'
 import { getTrueContours } from '../true'
 import { buildOtherContours } from './contours'
@@ -17,7 +17,7 @@ const buildOtherParts: () => DictionaryOf<Part> =
 
         const totallyOutTherePart: Part = repeat(
             getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, Rendering.SPRINGY_SUMMER)
-                .slice(0, 8),
+                .slice(from.Index(INITIAL), 8),
             to.Count(3),
         )
 

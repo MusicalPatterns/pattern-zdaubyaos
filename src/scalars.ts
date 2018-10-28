@@ -1,9 +1,5 @@
-import { applyOffset, DictionaryOf, numbers, Offset, Scalar, to } from '../../../src'
-
-// tslint:disable-next-line:no-any no-magic-numbers
-const SUPER: Offset = 1 as any
-// tslint:disable-next-line:no-any no-magic-numbers
-const DUPER: Offset = 2 as any
+import { applyOffset, DictionaryOf, numbers, Scalar, to } from '../../../src'
+import { DUPER, SUPER } from './constants'
 
 const buildZdaubyaosScalars: () => DictionaryOf<Scalar[]> =
     (): DictionaryOf<Scalar[]> => {

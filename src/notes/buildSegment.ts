@@ -4,7 +4,7 @@ import { applyDurationScalar } from './applyDurationScalar'
 import { applyGainScalar } from './applyGainScalar'
 import { applyPitchIndexOffset } from './applyPitchIndexOffset'
 import { applyScaleIndex } from './applyScaleIndex'
-import { buildNoteSpec } from './buildNoteSpec'
+import { buildNoteSpec } from './note'
 import { NoteStyle } from './types'
 
 const buildSegment: (parts: Part[], noteStyles: NoteStyle[], songDurationScalar: Scalar) => Segment =
