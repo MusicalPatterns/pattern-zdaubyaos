@@ -1,4 +1,5 @@
-import { Entity, OscillatorName, SongSpec, TimeType, VoiceType } from '../../../src'
+import { Entity, OscillatorName, TimeType, VoiceType } from '../../../src'
+import { SongSpec } from '../../types'
 import { buildZdaubyaosTracks } from './tracks'
 
 const buildZdaubyaosEntities: (songSpec: SongSpec) => Entity[] =

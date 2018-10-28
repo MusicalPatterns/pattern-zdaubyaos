@@ -1,4 +1,4 @@
-import { SongMetadata } from '../../../src'
+import { SongMetadata } from '../../types'
 
 const zdaubyaosSongMetadata: SongMetadata = {
     description: 'fun with the superparticular series & variants, plus stepwise motion within recurring bounds',

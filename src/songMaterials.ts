@@ -1,4 +1,4 @@
-import { SongMaterial } from '../../../src'
+import { SongMaterial } from '../../types'
 import { buildZdaubyaosEntities } from './entities'
 import { buildZdaubyaosScales } from './scales'
 

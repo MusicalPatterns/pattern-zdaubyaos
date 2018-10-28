@@ -1,4 +1,5 @@
-import { BuildScalesFunction, buildStandardScales, Scalar, Scale, SongSpec } from '../../../src'
+import { BuildScalesFunction, buildStandardScales, Scalar, Scale } from '../../../src'
+import { SongSpec } from '../../types'
 import { buildZdaubyaosScalars } from './scalars'
 
 const applySongPitchScalar: (scalars: Scalar[], songPitchScalar: Scalar) => Scale =
