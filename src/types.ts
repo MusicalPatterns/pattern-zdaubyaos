@@ -1,36 +1,18 @@
-import { DictionaryOf, Index, NoteSpec } from '../../../src'
-import { Block } from './nominal'
+import { Index, NoteSpec } from '../../../src'
 
-type RenderingFunction = (blocks: Block[]) => Contour
+type ContourElement = [ Index, Index ]
 
-type ContourElement = [Index, Index]
+enum _ContourPieceBrand {}
+type ContourPiece = _ContourPieceBrand & ContourElement[]
 
-type Contour = ContourElement[]
+enum _ContourWholeBrand {}
+type ContourWhole = _ContourWholeBrand & ContourElement[]
 
-type Part = Contour
-
-type BuildNoteSpec = (contourElement: ContourElement) => NoteSpec
-
-type Segment = NoteSpec[][]
-
-type Segments = Segment[]
-
-type Track = NoteSpec[]
+type BuildZdaubyaosNoteSpec = (contourElement: ContourElement) => NoteSpec
 
 enum BarTarget {
     FIFTEEN = 'fifteen',
     TWENTYFOUR = 'twentyfour',
-}
-
-enum Rendering {
-    SPRING = 'spring',
-    SUMMER = 'summer',
-    FALL = 'fall',
-    SUMMERY_SPRING = 'summerySpring',
-    SPRINGY_SUMMER = 'springySummer',
-    GLIS = 'glis',
-    BONY = 'bony',
-    TREM = 'trem',
 }
 
 enum BlockStyle {
@@ -45,19 +27,11 @@ enum BlockStyle {
     SCEND = 'scend',
 }
 
-type TrackDictionary = DictionaryOf<Track>
-
 export {
-    Part,
-    Track,
-    RenderingFunction,
-    BuildNoteSpec,
-    Segment,
+    ContourWhole,
+    BuildZdaubyaosNoteSpec,
     ContourElement,
-    Contour,
+    ContourPiece,
     BarTarget,
-    Rendering,
     BlockStyle,
-    TrackDictionary,
-    Segments,
 }

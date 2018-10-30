@@ -1,5 +1,7 @@
 # zdaubyaos glossary
 
+fun with the superparticular series & variants, plus stepwise motion within recurring bounds
+
 ## styles
 
 **zdaub**: melodic; inherited from stepwise
@@ -10,17 +12,17 @@ Each of these styles has its own Blocks and Renderings which create Contours mos
 
 ## compositional levels
 
-**Blocks**: just raw patterns of numbers; each number is a Block
+**Block**: just sets of numbers, a very abstract form of the song
 
-**Rendering**: convert from Blocks to Contour
+**Rendering**: converts Block to ContourPiece
 
-**Contours**: what you get after you map a Rendering onto some Blocks; each ContourElement represents a pitch (index) plus a duration;
-    contours are the smallest compositional object of the song, too small to write the song in directly
+**ContourPiece**: what you get after you map a Rendering onto a Block; each ContourElement represents a pitch (index) plus a duration;
+    ContourPiece is the smallest compositional object of the song, too small to write the song in directly
     
-**Part**: a concatenation of several contours together; a large enough compositional object to write the song in directly;
-    parts are still intended for just one Entity to play
+**ContourWhole**: a concatenation of several ContourPiece together; a large enough compositional object to write the song in directly;
+    a ContourWhole is still intended to be compiled to something for just one Entity to play
     
-**Segment**: take a set of Parts, and each Part has all of its ContourElements mapped to a Note, 
-    and each Part's Notes total the same duration, so they can be played simultaneously by different Entity[], but still sequenced together with other Segments
+**Segment**: take a set of ContourWhole, and each ContourWhole has all of its ContourElements mapped to a NoteSpec, 
+    and each ContourWhole's NoteSpec total the same duration, so they can be played simultaneously by different Entities, but still sequenced together with other Segments
     
-**Note**: what you get when you hydrate a ContourElement w/ NoteStyle information, readying it to be played
+**NoteSpec**: what you get when you hydrate a ContourElement w/ NoteStyle information, readying it to be compiled to be played

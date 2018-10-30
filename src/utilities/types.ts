@@ -1,9 +1,10 @@
 import { Count } from '../../../../src'
-import { BarTarget, BlockStyle, Rendering } from '../types'
+import { RenderingName } from '../custom'
+import { BarTarget, BlockStyle } from '../types'
 
 type UsageCount = Count
 
-type UsageCountByRendering = { [z in Rendering]?: UsageCount }
+type UsageCountByRendering = { [z in RenderingName]?: UsageCount }
 
 type UsageGrouping = { [x in BarTarget]: { [y in BlockStyle]?: UsageCountByRendering } }
 

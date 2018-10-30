@@ -1,5 +1,6 @@
 import { applyOffset, Maybe, to } from '../../../../src'
-import { BarTarget, BlockStyle, Rendering } from '../types'
+import { RenderingName } from '../custom'
+import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
 
 const zdaubyaosContourUsages: UsageGrouping = {
@@ -7,8 +8,8 @@ const zdaubyaosContourUsages: UsageGrouping = {
     [BarTarget.TWENTYFOUR]: {},
 }
 
-const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, rendering: Rendering) => void =
-    (barTarget: BarTarget, blockStyle: BlockStyle, rendering: Rendering): void => {
+const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: RenderingName) => void =
+    (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: RenderingName): void => {
 
         zdaubyaosContourUsages[barTarget][blockStyle] =
             zdaubyaosContourUsages[barTarget][blockStyle] || {}
@@ -17,13 +18,13 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, rendering: Rend
             zdaubyaosContourUsages[barTarget][blockStyle]
 
         if (byBlockStyle !== undefined) {
-            let byRendering: Maybe<UsageCount> = byBlockStyle[rendering]
-            if (byRendering !== undefined) {
-                byRendering = applyOffset(byRendering, to.Offset(1))
-                byBlockStyle[rendering] = byRendering
+            let byRenderingName: Maybe<UsageCount> = byBlockStyle[renderingName]
+            if (byRenderingName !== undefined) {
+                byRenderingName = applyOffset(byRenderingName, to.Offset(1))
+                byBlockStyle[renderingName] = byRenderingName
             }
             else {
-                byBlockStyle[rendering] = to.Count(1)
+                byBlockStyle[renderingName] = to.Count(1)
             }
         }
     }

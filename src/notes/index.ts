@@ -1,1 +1,0 @@
-export { buildSegment } from './buildSegment'

@@ -1,6 +1,6 @@
 // tslint:disable:no-reaching-imports
 
-import * as to from '../nominal/to'
+import * as to from './to'
 
 export {
     to,

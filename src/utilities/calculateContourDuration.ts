@@ -1,11 +1,11 @@
 import { from, Index, to } from '../../../../src'
-import { Contour, ContourElement } from '../types'
+import { ContourElement, ContourPiece } from '../types'
 
-const calculateContourDuration: (notes: Contour) => Index =
-    (notes: Contour): Index =>
+const calculateContourDuration: (notes: ContourPiece) => Index =
+    (notes: ContourPiece): Index =>
         notes.reduce(
-            (m: Index, [ _, duration ]: ContourElement) =>
-                to.Index(from.Index(m) + from.Index(duration)),
+            (accumulator: Index, [ _, duration ]: ContourElement) =>
+                to.Index(from.Index(accumulator) + from.Index(duration)),
             to.Index(0),
         )
 
