@@ -39,7 +39,7 @@ const bonyRendering: Rendering =
             ),
         )
 
-        const output: ContourPiece = zdaubyaosTo.ContourPiece([])
+        const contourPiece: ContourPiece = zdaubyaosTo.ContourPiece([])
         let blocksIndexForPitchIndex: Index = to.Index(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: Index): void => {
@@ -54,10 +54,10 @@ const bonyRendering: Rendering =
                 blocksIndexForPitchIndex = applyOffset(blocksIndexForPitchIndex, to.Offset(1))
             }
 
-            output.push([ pitchIndex, to.Index(from.Index(rhythmicBlockElement)) ])
+            contourPiece.push([ pitchIndex, to.Index(from.Index(rhythmicBlockElement)) ])
         })
 
-        return output
+        return contourPiece
     }
 
 export {
