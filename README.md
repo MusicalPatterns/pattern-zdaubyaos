@@ -12,14 +12,14 @@ Each of these styles has its own Blocks and Renderings which create Contours mos
 
 ## compositional levels
 
-**Block**: just sets of numbers, a very abstract form of the song
+**Block**: just sets of numbers, a very abstract form of the pattern
 
 **Rendering**: converts Block to ContourPiece
 
 **ContourPiece**: what you get after you map a Rendering onto a Block; each ContourElement represents a pitch (index) plus a duration;
-    ContourPiece is the smallest compositional object of the song, too small to write the song in directly
+    ContourPiece is the smallest compositional object of the pattern, too small to write the pattern in directly
     
-**ContourWhole**: a concatenation of several ContourPiece together; a large enough compositional object to write the song in directly;
+**ContourWhole**: a concatenation of several ContourPiece together; a large enough compositional object to write the pattern in directly;
     a ContourWhole is still intended to be compiled to something for just one Entity to play
     
 **Segment**: take a set of ContourWhole, and each ContourWhole has all of its ContourElements mapped to a NoteSpec, 

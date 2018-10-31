@@ -1,10 +1,10 @@
 import { BuildScalesFunction, buildStandardScales, Scalar, Scale, scaleFromScalarsAndScalar } from '../../../../src'
-import { SongSpec } from '../../../types'
+import { PatternSpec } from '../../../types'
 import { buildZdaubyaosScalars } from './scalars'
 
-const buildZdaubyaosScales: BuildScalesFunction = (songSpec: SongSpec): Scale[] => {
-    const songPitchScalar: Scalar = songSpec.songPitchScalar
-    const songDurationScalar: Scalar = songSpec.songDurationScalar
+const buildZdaubyaosScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {
+    const patternPitchScalar: Scalar = patternSpec.patternPitchScalar
+    const patternDurationScalar: Scalar = patternSpec.patternDurationScalar
 
     const {
         subparticularSeriesScalars,
@@ -21,13 +21,13 @@ const buildZdaubyaosScales: BuildScalesFunction = (songSpec: SongSpec): Scale[] 
 
     return [
         flatDurationsScale,
-        scaleFromScalarsAndScalar(flatDurationsScale.scalars, songDurationScalar),
-        scaleFromScalarsAndScalar(subparticularSeriesScalars, songPitchScalar),
-        scaleFromScalarsAndScalar(dubparticularSeriesScalars, songPitchScalar),
-        scaleFromScalarsAndScalar(harmonicSeriesScale.scalars, songPitchScalar),
-        scaleFromScalarsAndScalar(superparticularSeriesScalars, songPitchScalar),
-        scaleFromScalarsAndScalar(duperparticularSeriesScalars, songPitchScalar),
-        scaleFromScalarsAndScalar(subharmonicSeriesScale.scalars, songPitchScalar),
+        scaleFromScalarsAndScalar(flatDurationsScale.scalars, patternDurationScalar),
+        scaleFromScalarsAndScalar(subparticularSeriesScalars, patternPitchScalar),
+        scaleFromScalarsAndScalar(dubparticularSeriesScalars, patternPitchScalar),
+        scaleFromScalarsAndScalar(harmonicSeriesScale.scalars, patternPitchScalar),
+        scaleFromScalarsAndScalar(superparticularSeriesScalars, patternPitchScalar),
+        scaleFromScalarsAndScalar(duperparticularSeriesScalars, patternPitchScalar),
+        scaleFromScalarsAndScalar(subharmonicSeriesScale.scalars, patternPitchScalar),
     ]
 }
 

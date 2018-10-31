@@ -1,1 +1,1 @@
-export { zdaubyaosSong } from './songs'
+export { zdaubyaosPattern } from './patterns'

@@ -10,12 +10,12 @@ describe('zdaubyaos parts', () => {
             zdaubyaosSuperparticularOrDuperparticularPart,
         } = buildZdaubyaosParts()
 
-        const expectedTotalSongDuration: SumOfIndices = to.SumOfIndices(3360)
+        const expectedTotalPatternDuration: SumOfIndices = to.SumOfIndices(3360)
         expect(calculateTotalZdaubyaosDuration(zdaubyaosSubparticularOrDubparticularPart))
-            .toEqual(expectedTotalSongDuration)
+            .toEqual(expectedTotalPatternDuration)
         expect(calculateTotalZdaubyaosDuration(zdaubyaosSuperparticularOrDuperparticularPart))
-            .toEqual(expectedTotalSongDuration)
+            .toEqual(expectedTotalPatternDuration)
         expect(calculateTotalZdaubyaosDuration(zdaubyaosHarmonicOrSubharmonicPart))
-            .toEqual(expectedTotalSongDuration)
+            .toEqual(expectedTotalPatternDuration)
     })
 })
