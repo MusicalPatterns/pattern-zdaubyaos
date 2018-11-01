@@ -1,7 +1,7 @@
-import { Entity, OscillatorName, TimeType, VoiceType } from '../../../../src'
+import { BuildEntitiesFunction, Entity, OscillatorName, TimeType, VoiceType } from '../../../../src'
 import { buildZdaubyaosParts } from './parts'
 
-const buildZdaubyaosEntities: () => Entity[] =
+const buildZdaubyaosEntities: BuildEntitiesFunction =
     (): Entity[] => {
         const {
             zdaubyaosSubparticularOrDubparticularPart,
