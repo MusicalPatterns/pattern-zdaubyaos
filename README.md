@@ -1,4 +1,4 @@
-# zdaubyaos glossary
+# Zdaubyaos
 
 fun with the superparticular series & variants, plus stepwise motion within recurring bounds
 
