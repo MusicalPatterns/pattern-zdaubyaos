@@ -1,5 +1,5 @@
 import { SumOfIndices, to } from '../../../../../src/indexForTest'
-import { buildZdaubyaosParts } from '../../../src/indexForTest'
+import { buildParts } from '../../../src/indexForTest'
 import { calculateTotalZdaubyaosDuration } from '../../support'
 
 describe('zdaubyaos parts', () => {
@@ -8,7 +8,7 @@ describe('zdaubyaos parts', () => {
             zdaubyaosSubparticularOrDubparticularPart,
             zdaubyaosHarmonicOrSubharmonicPart,
             zdaubyaosSuperparticularOrDuperparticularPart,
-        } = buildZdaubyaosParts()
+        } = buildParts()
 
         const expectedTotalPatternDuration: SumOfIndices = to.SumOfIndices(3360)
         expect(calculateTotalZdaubyaosDuration(zdaubyaosSubparticularOrDubparticularPart))

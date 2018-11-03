@@ -1,7 +1,7 @@
 // tslint:disable:max-file-line-count
 
 import { DictionaryOf, Segment, to } from '../../../../../../src'
-import { buildZdaubyaosSegment } from '../../../materials'
+import { buildSegment } from '../../../materials'
 import { buildTrueContourWholes } from './wholes'
 
 const buildTrueSegments: () => DictionaryOf<Segment> =
@@ -16,7 +16,7 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             trueZdaubTremContourWhole,
         } = buildTrueContourWholes()
 
-        const trueSpringAllYaosUmowchuwowiestSegment: Segment = buildZdaubyaosSegment(
+        const trueSpringAllYaosUmowchuwowiestSegment: Segment = buildSegment(
             [
                 trueYaosUmowchuwowiestSpringToSummerContourWhole,
                 trueYaosUmowchuwowiestSpringToSummerContourWhole,
@@ -29,7 +29,7 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const trueAllYaosAllRhythmsAtOnceSegment: Segment = buildZdaubyaosSegment(
+        const trueAllYaosAllRhythmsAtOnceSegment: Segment = buildSegment(
             [
                 trueYaosUmowchuwowiestSpringToSummerContourWhole,
                 trueYaosUmowchuwowiestSummerToSpringContourWhole,
@@ -42,7 +42,7 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = buildZdaubyaosSegment(
+        const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = buildSegment(
             [
                 trueYaosUmowchuwowiestSummerToSpringContourWhole,
                 trueYaosUmowchuwowiestSummerToSpringContourWhole,
@@ -55,7 +55,7 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const trueSpringWithZdaubSegment: Segment = buildZdaubyaosSegment(
+        const trueSpringWithZdaubSegment: Segment = buildSegment(
             [
                 trueZdaubGlisContourWhole,
                 trueYaosUmowchuwowiestSpringToSummerContourWhole,
@@ -69,7 +69,7 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
         )
 
         const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment: Segment =
-            buildZdaubyaosSegment(
+            buildSegment(
                 [
                     trueYaosUmowchuwowiestSummerToSpringContourWhole,
                     trueZdaubGlisContourWhole,
@@ -82,7 +82,7 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 ],
             )
 
-        const trueSpringySummerTotallyOutThereSegment: Segment = buildZdaubyaosSegment(
+        const trueSpringySummerTotallyOutThereSegment: Segment = buildSegment(
             [
                 trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole,
                 trueZdaubGlisContourWhole,

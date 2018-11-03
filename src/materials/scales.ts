@@ -1,6 +1,6 @@
 import { BuildScalesFunction, buildStandardScales, Scalar, Scale, scaleFromScalarsAndScalar } from '../../../../src'
 import { PatternSpec } from '../../../types'
-import { buildZdaubyaosScalars } from './scalars'
+import { buildScalars } from './scalars'
 
 const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {
     const patternPitchScalar: Scalar = patternSpec.patternPitchScalar
@@ -11,7 +11,7 @@ const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => 
         dubparticularSeriesScalars,
         superparticularSeriesScalars,
         duperparticularSeriesScalars,
-    } = buildZdaubyaosScalars()
+    } = buildScalars()
 
     const {
         flatDurationsScale,

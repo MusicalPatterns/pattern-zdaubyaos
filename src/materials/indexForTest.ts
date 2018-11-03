@@ -1,7 +1,7 @@
 // tslint:disable:no-reaching-imports
 
-export { buildZdaubyaosParts } from './parts'
+export { buildParts } from './parts'
 export { buildEntities } from './entities'
-export { buildZdaubyaosScalars } from './scalars'
-export { buildZdaubyaosNoteSpec } from './notes'
+export { buildScalars } from './scalars'
+export { buildNoteSpec } from './notes'
 export { buildScales } from './scales'

@@ -1,5 +1,5 @@
 import { Index, NotePropertySpec, NoteSpec, to } from '../../../../../src/indexForTest'
-import { buildZdaubyaosNoteSpec } from '../../../src/indexForTest'
+import { buildNoteSpec } from '../../../src/indexForTest'
 
 const DURATIONS_SCALE_INDEX: Index = to.Index(1)
 
@@ -7,7 +7,7 @@ describe('zdaubyaos note specs', () => {
     describe('when the pitch index is zero', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {
-            noteSpec = buildZdaubyaosNoteSpec([ to.Index(0), to.Index(6) ])
+            noteSpec = buildNoteSpec([ to.Index(0), to.Index(6) ])
         })
 
         describe('duration', () => {
@@ -65,7 +65,7 @@ describe('zdaubyaos note specs', () => {
     describe('when the pitch index is not zero', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {
-            noteSpec = buildZdaubyaosNoteSpec([ to.Index(3), to.Index(6) ])
+            noteSpec = buildNoteSpec([ to.Index(3), to.Index(6) ])
         })
 
         describe('duration', () => {

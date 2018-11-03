@@ -1,5 +1,5 @@
 import { DictionaryOf, Segment, to } from '../../../../../../src'
-import { buildZdaubyaosSegment } from '../../../materials'
+import { buildSegment } from '../../../materials'
 import { buildBreatherContourWholes } from './wholes'
 
 const buildBreatherSegments: () => DictionaryOf<Segment> =
@@ -14,7 +14,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             doubleBreatherRestContourWhole,
         } = buildBreatherContourWholes()
 
-        const breatherSpringSegment: Segment = buildZdaubyaosSegment(
+        const breatherSpringSegment: Segment = buildSegment(
             [
                 breatherSpringContourWhole,
                 breatherRestContourWhole,
@@ -27,7 +27,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const breatherSummerSegment: Segment = buildZdaubyaosSegment(
+        const breatherSummerSegment: Segment = buildSegment(
             [
                 breatherRestContourWhole,
                 breatherSummerContourWhole,
@@ -40,7 +40,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = buildZdaubyaosSegment(
+        const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = buildSegment(
             [
                 doubleBreatherRestContourWhole,
                 doubleBreatherRestContourWhole,
@@ -53,7 +53,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = buildZdaubyaosSegment(
+        const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = buildSegment(
             [
                 breatherRestContourWhole,
                 breatherSpringAltContourWhole,
@@ -66,7 +66,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const breatherVarietyQuiteTheReveilleSegment: Segment = buildZdaubyaosSegment(
+        const breatherVarietyQuiteTheReveilleSegment: Segment = buildSegment(
             [
                 breatherVarietyContourWhole,
                 breatherVarietyContourWhole,

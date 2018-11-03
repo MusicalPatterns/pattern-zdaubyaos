@@ -1,10 +1,10 @@
 import { DictionaryOf, Scalar, to } from '../../../../../src/indexForTest'
-import { buildZdaubyaosScalars } from '../../../src/indexForTest'
+import { buildScalars } from '../../../src/indexForTest'
 
 describe('zdaubyaos scales', () => {
     describe('subparticular series scale', () => {
         it('has all the pitches whose numerator is one less than the denominator', () => {
-            const { subparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildZdaubyaosScalars()
+            const { subparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
             const expectedScalars: Scalar[] = [
                 1 / 2,
@@ -22,7 +22,7 @@ describe('zdaubyaos scales', () => {
 
     describe('dubparticular series scale', () => {
         it('has all the pitches whose numerator is two less than the denominator', () => {
-            const { dubparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildZdaubyaosScalars()
+            const { dubparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
             const expectedScalars: Scalar[] = [
                 1 / 3,
@@ -40,7 +40,7 @@ describe('zdaubyaos scales', () => {
 
     describe('superparticular series scale', () => {
         it('has all the pitches whose numerator is one more than the denominator', () => {
-            const { superparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildZdaubyaosScalars()
+            const { superparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
             const expectedScalars: Scalar[] = [
                 2 / 1,
@@ -58,7 +58,7 @@ describe('zdaubyaos scales', () => {
 
     describe('duperparticular series scale', () => {
         it('has all the pitches whose numerator is two more than the denominator', () => {
-            const { duperparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildZdaubyaosScalars()
+            const { duperparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
             const expectedScalars: Scalar[] = [
                 3 / 1,

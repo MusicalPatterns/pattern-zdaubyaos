@@ -1,7 +1,7 @@
 import { DictionaryOf } from '../../../../../../src'
 import { ContourPiece } from '../../../types'
 import {
-    buildZdaubyaosRenderings,
+    buildRenderings,
     Rendering,
     RenderingName,
     Renderings,
@@ -20,7 +20,7 @@ const buildOtherContourPieces: () => DictionaryOf<ContourPiece> =
             shiftyTwentyfourVariantBlock,
         } = buildOtherBlocks()
 
-        const renderings: Renderings = buildZdaubyaosRenderings()
+        const renderings: Renderings = buildRenderings()
 
         const glis: Rendering = renderings[ RenderingName.GLIS ]
         const flatline: Rendering = renderings[ RenderingName.FLATLINE ]

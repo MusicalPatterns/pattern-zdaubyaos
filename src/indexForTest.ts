@@ -1,10 +1,10 @@
 // tslint:disable:no-reaching-imports
 
 export {
-    buildZdaubyaosParts,
+    buildParts,
     buildEntities,
-    buildZdaubyaosScalars,
-    buildZdaubyaosNoteSpec,
+    buildScalars,
+    buildNoteSpec,
     buildScales,
 } from './materials/indexForTest'
 export {
@@ -16,7 +16,7 @@ export {
     getTrueContours,
     buildTrueContourPieces,
     buildAlmostTrueContourPieces,
-    buildZdaubyaosRenderings,
+    buildRenderings,
     Renderings,
     applyGainScalar,
     applyPitchIndexOffset,

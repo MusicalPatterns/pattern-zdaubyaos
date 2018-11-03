@@ -1,5 +1,5 @@
 import { DictionaryOf, Segment, to } from '../../../../../../src'
-import { buildZdaubyaosSegment } from '../../../materials'
+import { buildSegment } from '../../../materials'
 import { buildThirtyfiveContourWholes } from './wholes'
 
 const buildThirtyfiveSegments: () => DictionaryOf<Segment> =
@@ -10,7 +10,7 @@ const buildThirtyfiveSegments: () => DictionaryOf<Segment> =
             thirtyfiveZdaubContourWhole,
         } = buildThirtyfiveContourWholes()
 
-        const thirtyfiveSegment: Segment = buildZdaubyaosSegment(
+        const thirtyfiveSegment: Segment = buildSegment(
             [
                 thirtyfiveZdaubContourWhole,
                 thirtyfiveYaosAccidentInspiredContourWhole,

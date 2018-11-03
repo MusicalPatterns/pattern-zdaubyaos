@@ -1,10 +1,10 @@
 import { to } from '../../../../../../src/indexForTest'
-import { buildZdaubyaosRenderings, Rendering, RenderingName, Renderings, to as zdaubyaosTo } from '../../../../src/indexForTest'
+import { buildRenderings, Rendering, RenderingName, Renderings, to as zdaubyaosTo } from '../../../../src/indexForTest'
 
 describe('zdaubyaos rendering functions', () => {
     let renderings: Renderings
     beforeEach(() => {
-        renderings = buildZdaubyaosRenderings()
+        renderings = buildRenderings()
     })
 
     describe('spring', () => {

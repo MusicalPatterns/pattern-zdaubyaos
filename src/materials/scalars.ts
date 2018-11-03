@@ -1,7 +1,7 @@
 import { applyOffset, DictionaryOf, numbers, Scalar, to } from '../../../../src'
 import { DUPER, SUPER } from '../constants'
 
-const buildZdaubyaosScalars: () => DictionaryOf<Scalar[]> =
+const buildScalars: () => DictionaryOf<Scalar[]> =
     (): DictionaryOf<Scalar[]> => {
         const subparticularSeriesScalars: Scalar[] = numbers.map((n: number): Scalar =>
             to.Scalar(n / applyOffset(n, SUPER)))
@@ -24,5 +24,5 @@ const buildZdaubyaosScalars: () => DictionaryOf<Scalar[]> =
     }
 
 export {
-    buildZdaubyaosScalars,
+    buildScalars,
 }

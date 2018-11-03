@@ -2,4 +2,4 @@
 
 export { applyGainScalar } from './applyGainScalar'
 export { applyPitchIndexOffset } from './applyPitchIndexOffset'
-export { buildZdaubyaosNoteSpec } from '../notes'
+export { buildNoteSpec } from '../notes'

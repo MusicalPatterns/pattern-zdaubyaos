@@ -8,7 +8,7 @@ import {
     buildTrueSegments,
 } from '../../custom'
 
-const buildZdaubyaosSegments: () => Segment[] =
+const buildSegments: () => Segment[] =
     (): Segment[] => {
         const {
             almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
@@ -75,5 +75,5 @@ const buildZdaubyaosSegments: () => Segment[] =
     }
 
 export {
-    buildZdaubyaosSegments,
+    buildSegments,
 }

@@ -1,5 +1,5 @@
 import { DictionaryOf, Segment, to } from '../../../../../../src'
-import { buildZdaubyaosSegment } from '../../../materials'
+import { buildSegment } from '../../../materials'
 import { buildAlmostTrueContourWholes } from './wholes'
 
 const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
@@ -14,7 +14,7 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
         } = buildAlmostTrueContourWholes()
 
         const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment =
-            buildZdaubyaosSegment(
+            buildSegment(
                 [
                     almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
                     almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
@@ -28,7 +28,7 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
             )
 
         const almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment: Segment =
-            buildZdaubyaosSegment(
+            buildSegment(
                 [
                     almostTrueExtendedEndingZdaubTremContourWhole,
                     almostTrueExtendedEndingZdaubBonyContourWhole,
@@ -41,7 +41,7 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
                 ],
             )
 
-        const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = buildZdaubyaosSegment(
+        const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = buildSegment(
             [
                 almostTrueYetOfBackboneContourWhole,
                 almostTrueYetOfBackboneContourWhole,

@@ -9,7 +9,7 @@ export {
     TrueContourPieces,
 } from './levels/indexForTest'
 export {
-    buildZdaubyaosRenderings,
+    buildRenderings,
     Renderings,
     Rendering,
     RenderingName,

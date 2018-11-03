@@ -1,10 +1,10 @@
 import { applyOffset, DictionaryOf, from, INCLUSIVE, Index, INITIAL, Part, Segment, to } from '../../../../src'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
-import { buildZdaubyaosSegments } from './segments'
+import { buildSegments } from './segments'
 
-const buildZdaubyaosParts: () => DictionaryOf<Part> =
+const buildParts: () => DictionaryOf<Part> =
     (): DictionaryOf<Part> => {
-        const segments: Segment[] = buildZdaubyaosSegments()
+        const segments: Segment[] = buildSegments()
 
         const end: Index = to.Index(segments.length)
 
@@ -30,5 +30,5 @@ const buildZdaubyaosParts: () => DictionaryOf<Part> =
     }
 
 export {
-    buildZdaubyaosParts,
+    buildParts,
 }

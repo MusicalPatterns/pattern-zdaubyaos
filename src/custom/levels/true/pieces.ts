@@ -1,7 +1,7 @@
 import { Block } from '../../../../../../src'
 import { BarTarget, BlockStyle, ContourPiece } from '../../../types'
 import { countUsage } from '../../../utilities'
-import { buildZdaubyaosRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
+import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
 import { buildTrueBlocks } from './blocks'
 import {
     BuildTrueContourPieceParameters,
@@ -35,7 +35,7 @@ const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => vo
 
 const buildTrueContourPieces: () => TrueContourPieces =
     (): TrueContourPieces => {
-        const renderings: Renderings = buildZdaubyaosRenderings()
+        const renderings: Renderings = buildRenderings()
 
         const trueBlocks: TrueBlocks = buildTrueBlocks()
         Object.entries(trueBlocks)

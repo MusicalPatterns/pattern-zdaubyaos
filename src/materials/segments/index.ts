@@ -1,5 +1,5 @@
-export { buildZdaubyaosSegment } from './segment'
-export { buildZdaubyaosSegments } from './segments'
+export { buildSegment } from './segment'
+export { buildSegments } from './segments'
 
 export {
     NoteStyle,

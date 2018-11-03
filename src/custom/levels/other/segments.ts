@@ -1,5 +1,5 @@
 import { DictionaryOf, Segment, to } from '../../../../../../src'
-import { buildZdaubyaosSegment } from '../../../materials'
+import { buildSegment } from '../../../materials'
 import { buildOtherContourWholes } from './wholes'
 
 const buildOtherSegments: () => DictionaryOf<Segment> =
@@ -11,7 +11,7 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
             totallyOutThereContourWhole,
         } = buildOtherContourWholes()
 
-        const secretLongChordSegment: Segment = buildZdaubyaosSegment(
+        const secretLongChordSegment: Segment = buildSegment(
             [
                 secretLongChordContourWhole,
                 secretLongChordContourWhole,
@@ -24,7 +24,7 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const totallyOutThereIntroSegment: Segment = buildZdaubyaosSegment(
+        const totallyOutThereIntroSegment: Segment = buildSegment(
             [
                 totallyOutThereContourWhole,
                 totallyOutThereContourWhole,
@@ -37,7 +37,7 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const shiftySegment: Segment = buildZdaubyaosSegment(
+        const shiftySegment: Segment = buildSegment(
             [
                 shiftyAContourWhole,
                 shiftyBContourWhole,

@@ -16,7 +16,7 @@ const renderByBlockElement: (renderingByBlockElement: RenderingByBlockElement) =
     (renderingByBlockElement: RenderingByBlockElement): Rendering =>
         (block: Block): ContourPiece => to.ContourPiece(sequence(block.map(renderingByBlockElement)))
 
-const buildZdaubyaosRenderings: () => Renderings =
+const buildRenderings: () => Renderings =
     (): Renderings => ({
         [ RenderingName.GLIS ]: (block: Block): ContourPiece =>
             renderByBlockElement(glisRendering)(block),
@@ -38,5 +38,5 @@ const buildZdaubyaosRenderings: () => Renderings =
     })
 
 export {
-    buildZdaubyaosRenderings,
+    buildRenderings,
 }

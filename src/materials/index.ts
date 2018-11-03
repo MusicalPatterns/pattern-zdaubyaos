@@ -1,5 +1,5 @@
-export { buildZdaubyaosParts } from './parts'
+export { buildParts } from './parts'
 export { buildEntities } from './entities'
 export { buildScales } from './scales'
-export { buildZdaubyaosNoteSpec } from './notes'
-export { buildZdaubyaosSegment } from './segments'
+export { buildNoteSpec } from './notes'
+export { buildSegment } from './segments'

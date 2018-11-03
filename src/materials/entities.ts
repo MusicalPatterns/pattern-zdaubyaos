@@ -1,5 +1,5 @@
 import { BuildEntitiesFunction, Entity, OscillatorName, TimeType, VoiceType } from '../../../../src'
-import { buildZdaubyaosParts } from './parts'
+import { buildParts } from './parts'
 
 const buildEntities: BuildEntitiesFunction =
     (): Entity[] => {
@@ -7,7 +7,7 @@ const buildEntities: BuildEntitiesFunction =
             zdaubyaosSubparticularOrDubparticularPart,
             zdaubyaosHarmonicOrSubharmonicPart,
             zdaubyaosSuperparticularOrDuperparticularPart,
-        } = buildZdaubyaosParts()
+        } = buildParts()
 
         const zdaubyaosSubparticularOrDubparticularSquareEntity: Entity = {
             part: zdaubyaosSubparticularOrDubparticularPart,

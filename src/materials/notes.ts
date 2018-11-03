@@ -9,7 +9,7 @@ import {
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildZdaubyaosNoteSpec, ContourElement } from '../types'
 
-const buildZdaubyaosNoteSpec: BuildZdaubyaosNoteSpec =
+const buildNoteSpec: BuildZdaubyaosNoteSpec =
     ([ pitchIndex, duration ]: ContourElement): NoteSpec => {
         if (pitchIndex === PITCH_INDEX_INDICATING_REST) {
             return {
@@ -48,5 +48,5 @@ const buildZdaubyaosNoteSpec: BuildZdaubyaosNoteSpec =
     }
 
 export {
-    buildZdaubyaosNoteSpec,
+    buildNoteSpec,
 }

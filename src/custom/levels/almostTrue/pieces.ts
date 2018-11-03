@@ -1,7 +1,7 @@
 import { Block, DictionaryOf, Index, sequence, to } from '../../../../../../src'
 import { to as zdaubyaosTo } from '../../../nominal'
 import { BarTarget, BlockStyle, ContourPiece } from '../../../types'
-import { buildZdaubyaosRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
+import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
 import { buildTrueBlocks, TrueBlocks } from '../true'
 import { buildAlmostTrueBlocks } from './blocks'
 
@@ -9,7 +9,7 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece> =
     (): DictionaryOf<ContourPiece> => {
         const { trueGlisVariantBlock } = buildAlmostTrueBlocks()
 
-        const renderings: Renderings = buildZdaubyaosRenderings()
+        const renderings: Renderings = buildRenderings()
         const glis: Rendering = renderings[ RenderingName.GLIS ]
 
         const zdaubGlisVariantContourPiece: ContourPiece = glis(trueGlisVariantBlock)
