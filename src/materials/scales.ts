@@ -2,7 +2,7 @@ import { BuildScalesFunction, buildStandardScales, Scalar, Scale, scaleFromScala
 import { PatternSpec } from '../../../types'
 import { buildZdaubyaosScalars } from './scalars'
 
-const buildZdaubyaosScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {
+const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {
     const patternPitchScalar: Scalar = patternSpec.patternPitchScalar
     const patternDurationScalar: Scalar = patternSpec.patternDurationScalar
 
@@ -32,5 +32,5 @@ const buildZdaubyaosScales: BuildScalesFunction = (patternSpec: PatternSpec): Sc
 }
 
 export {
-    buildZdaubyaosScales,
+    buildScales,
 }

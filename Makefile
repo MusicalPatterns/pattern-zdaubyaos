@@ -6,6 +6,3 @@ test:
 
 lint:
 	pushd ../..; make lint; popd
-
-snapshot:
-	./bin/snapshot.sh

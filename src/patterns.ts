@@ -1,15 +1,12 @@
-// tslint:disable:no-console comment-format no-unused-variable
-
 import { DEFAULT_ATOMIC_TIME_TYPE_DURATION_SCALAR } from '../../../src'
 import { PatternId } from '../../patternId'
 import { Pattern, PatternMaterial, PatternMetadata, PatternSpec } from '../../types'
 import { ZDAUBYAOS_PITCH_SCALAR } from './constants'
-import { buildZdaubyaosEntities, buildZdaubyaosScales } from './materials'
-import { zdaubyaosContourUsages } from './utilities'
+import { buildEntities, buildScales } from './materials'
 
 const zdaubyaosPatternMaterial: PatternMaterial = {
-    buildEntitiesFunction: buildZdaubyaosEntities,
-    buildScalesFunction: buildZdaubyaosScales,
+    buildEntitiesFunction: buildEntities,
+    buildScalesFunction: buildScales,
 }
 
 const zdaubyaosPatternMetadata: PatternMetadata = {
@@ -17,22 +14,19 @@ const zdaubyaosPatternMetadata: PatternMetadata = {
     formattedName: 'Zdaubyaos',
 }
 
-const zdaubyaosPatternSpec: PatternSpec = {
+const patternSpec: PatternSpec = {
     patternDurationScalar: DEFAULT_ATOMIC_TIME_TYPE_DURATION_SCALAR,
     patternPitchScalar: ZDAUBYAOS_PITCH_SCALAR,
 }
 
-const zdaubyaosPattern: Pattern = {
+const pattern: Pattern = {
     material: zdaubyaosPatternMaterial,
     metadata: zdaubyaosPatternMetadata,
     patternId: PatternId.ZDAUBYAOS,
-    spec: zdaubyaosPatternSpec,
+    spec: patternSpec,
 }
 
-// console.log(zdaubyaosContourUsages)
-// console.log(buildZdaubyaosEntities())
-
 export {
-    zdaubyaosPattern,
-    zdaubyaosPatternSpec,
+    pattern,
+    patternSpec,
 }

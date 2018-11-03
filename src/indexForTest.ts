@@ -2,10 +2,10 @@
 
 export {
     buildZdaubyaosParts,
-    buildZdaubyaosEntities,
+    buildEntities,
     buildZdaubyaosScalars,
     buildZdaubyaosNoteSpec,
-    buildZdaubyaosScales,
+    buildScales,
 } from './materials/indexForTest'
 export {
     calculateContourDuration,
@@ -24,7 +24,7 @@ export {
     Rendering,
     RenderingName,
 } from './custom/indexForTest'
-export { zdaubyaosPattern, zdaubyaosPatternSpec } from './patterns'
+export { pattern, patternSpec } from './patterns'
 
 export { to } from './nominal/indexForTest'
 export {

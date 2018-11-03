@@ -1,1 +1,1 @@
-export { zdaubyaosPattern } from './patterns'
+export { pattern } from './patterns'
