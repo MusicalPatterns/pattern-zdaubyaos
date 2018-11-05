@@ -1,4 +1,4 @@
-import { applyOffset, applyScale, Block, Count, from, Index, repeat, Time, to } from '../../../../../src'
+import { applyCount, applyOffset, Block, Count, from, Index, repeat, Time, to } from '../../../../../src'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import { to as zdaubyaosTo } from '../../nominal'
 import { ContourPiece } from '../../types'
@@ -23,20 +23,8 @@ const bonyRendering: Rendering =
         const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
 
         const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
-            repeat(
-                FIFTEEN_BONY_BLOCKS,
-                applyScale(
-                    barCount,
-                    to.Scalar(from.Count(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)),
-                ),
-            ) :
-            repeat(
-                TWENTYFOUR_BONY_BLOCKS,
-                applyScale(
-                    barCount,
-                    to.Scalar(from.Count(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
-                ),
-            ),
+            repeat(FIFTEEN_BONY_BLOCKS, applyCount(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :
+            repeat(TWENTYFOUR_BONY_BLOCKS, applyCount(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
         )
 
         const contourPiece: ContourPiece = zdaubyaosTo.ContourPiece([])
