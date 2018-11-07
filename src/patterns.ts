@@ -12,6 +12,7 @@ const zdaubyaosPatternMaterial: PatternMaterial = {
 const zdaubyaosPatternMetadata: PatternMetadata = {
     description: 'fun with the superparticular series & variants, plus stepwise motion within recurring bounds',
     formattedName: 'Zdaubyaos',
+    musicalIdeaIllustrated: 'superparticular series',
 }
 
 const patternSpec: PatternSpec = {
