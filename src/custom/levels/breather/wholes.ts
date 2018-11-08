@@ -1,8 +1,8 @@
 // tslint:disable:align
 
 import { DictionaryOf, repeat, to } from '../../../../../../src'
-import { to as zdaubyaosTo } from '../../../nominal'
-import { BarTarget, BlockStyle, ContourWhole } from '../../../types'
+import { ContourWhole, to as zdaubyaosTo } from '../../../nominal'
+import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { rest } from '../../rest'
 import { buildAlmostTrueContourPieces } from '../almostTrue'

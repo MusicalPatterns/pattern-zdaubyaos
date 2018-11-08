@@ -1,6 +1,6 @@
 import { Block, DictionaryOf, Index, sequence, to } from '../../../../../../src'
-import { to as zdaubyaosTo } from '../../../nominal'
-import { BarTarget, BlockStyle, ContourPiece } from '../../../types'
+import { ContourPiece, to as zdaubyaosTo } from '../../../nominal'
+import { BarTarget, BlockStyle } from '../../../types'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
 import { buildTrueBlocks, TrueBlocks } from '../true'
 import { buildAlmostTrueBlocks } from './blocks'

@@ -1,6 +1,5 @@
 import { Index, to } from '../../../../../src'
-import { to as zdaubyaosTo } from '../../nominal'
-import { ContourPiece } from '../../types'
+import { ContourPiece, to as zdaubyaosTo } from '../../nominal'
 import { RenderingByBlockElement } from './types'
 
 const flatlineRendering: RenderingByBlockElement =

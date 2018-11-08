@@ -1,6 +1,6 @@
 import { DictionaryOf, repeatCall, sequence, to } from '../../../../../../src'
-import { to as zdaubyaosTo } from '../../../nominal'
-import { BarTarget, BlockStyle, ContourWhole } from '../../../types'
+import { ContourWhole, to as zdaubyaosTo } from '../../../nominal'
+import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { buildOtherContourPieces } from '../other'
 import { getTrueContours } from '../true'

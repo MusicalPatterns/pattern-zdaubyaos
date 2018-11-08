@@ -1,7 +1,7 @@
 import { from, Index, INITIAL, numbers, to } from '../../../../../src'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
-import { to as zdaubyaosTo } from '../../nominal'
-import { ContourElement, ContourPiece } from '../../types'
+import { ContourPiece, to as zdaubyaosTo } from '../../nominal'
+import { ContourElement } from '../../types'
 import { SINGLE_DURATION } from './constants'
 import { RenderingByBlockElement } from './types'
 

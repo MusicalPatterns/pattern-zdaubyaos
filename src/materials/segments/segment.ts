@@ -1,5 +1,5 @@
 import { Part, Segment } from '../../../../../src'
-import { ContourWhole } from '../../types'
+import { ContourWhole } from '../../nominal'
 import { applyNoteStyle } from './applyNoteStyle'
 import { NoteStyle } from './types'
 

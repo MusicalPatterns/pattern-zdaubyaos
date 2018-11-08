@@ -1,6 +1,6 @@
 import { applyOffset, Part } from '../../../../../src'
 import { OFFSET_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
-import { ContourWhole } from '../../types'
+import { ContourWhole } from '../../nominal'
 import { buildNoteSpec } from '../notes'
 import { applyGainScalar } from './applyGainScalar'
 import { applyPitchIndexOffset } from './applyPitchIndexOffset'

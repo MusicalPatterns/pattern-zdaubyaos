@@ -1,6 +1,5 @@
 import { from, Index } from '../../../../../src'
-import { to } from '../../nominal'
-import { ContourPiece } from '../../types'
+import { ContourPiece, to } from '../../nominal'
 import { RenderingByBlockElement } from './types'
 
 const fallRendering: RenderingByBlockElement =

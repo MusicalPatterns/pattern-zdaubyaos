@@ -1,5 +1,6 @@
 import { from, Index, to } from '../../../../src'
-import { ContourElement, ContourPiece } from '../types'
+import { ContourPiece } from '../nominal'
+import { ContourElement } from '../types'
 
 const calculateContourDuration: (notes: ContourPiece) => Index =
     (notes: ContourPiece): Index =>

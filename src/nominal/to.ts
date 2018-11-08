@@ -1,6 +1,7 @@
 // tslint:disable:variable-name no-any
 
-import { ContourElement, ContourPiece, ContourWhole } from '../types'
+import { ContourElement } from '../types'
+import { ContourPiece, ContourWhole } from './types'
 
 const ContourPiece: (contour: Array<number[] | ContourElement>) => ContourPiece =
     (contour: Array<number[] | ContourElement>): ContourPiece =>

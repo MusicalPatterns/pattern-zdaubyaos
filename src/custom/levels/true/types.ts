@@ -1,5 +1,6 @@
 import { Block } from '../../../../../../src'
-import { BarTarget, BlockStyle, ContourPiece, ContourWhole } from '../../../types'
+import { ContourPiece, ContourWhole } from '../../../nominal'
+import { BarTarget, BlockStyle } from '../../../types'
 import { Rendering, RenderingName } from '../../renderings'
 
 type ByRenderingName = { [z in RenderingName]: ContourPiece }

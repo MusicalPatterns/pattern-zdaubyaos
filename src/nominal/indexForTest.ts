@@ -5,3 +5,7 @@ import * as to from './to'
 export {
     to,
 }
+
+export {
+    ContourPiece,
+} from './types'

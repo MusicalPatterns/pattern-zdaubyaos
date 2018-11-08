@@ -1,6 +1,5 @@
 import { DictionaryOf, repeat, sequence, to } from '../../../../../../src'
-import { to as zdaubyaosTo } from '../../../nominal'
-import { ContourWhole } from '../../../types'
+import { ContourWhole, to as zdaubyaosTo } from '../../../nominal'
 import { calculateContourDuration } from '../../../utilities'
 import { rest } from '../../rest'
 import { buildThirtyfiveContourPieces } from './pieces'

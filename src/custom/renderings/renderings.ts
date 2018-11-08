@@ -1,6 +1,5 @@
 import { Block, sequence } from '../../../../../src'
-import { to } from '../../nominal'
-import { ContourPiece } from '../../types'
+import { ContourPiece, to } from '../../nominal'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'
 import { flatlineRendering } from './flatline'

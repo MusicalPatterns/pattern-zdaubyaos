@@ -2,12 +2,6 @@ import { Index, NoteSpec } from '../../../src'
 
 type ContourElement = [ Index, Index ]
 
-enum _ContourPieceBrand {}
-type ContourPiece = _ContourPieceBrand & ContourElement[]
-
-enum _ContourWholeBrand {}
-type ContourWhole = _ContourWholeBrand & ContourElement[]
-
 type BuildZdaubyaosNoteSpec = (contourElement: ContourElement) => NoteSpec
 
 enum BarTarget {
@@ -28,10 +22,8 @@ enum BlockStyle {
 }
 
 export {
-    ContourWhole,
     BuildZdaubyaosNoteSpec,
     ContourElement,
-    ContourPiece,
     BarTarget,
     BlockStyle,
 }

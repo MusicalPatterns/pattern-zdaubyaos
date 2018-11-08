@@ -1,6 +1,5 @@
 import { Index, to } from '../../../../src'
-import { to as zdaubyaosTo } from '../nominal'
-import { ContourPiece } from '../types'
+import { ContourPiece, to as zdaubyaosTo } from '../nominal'
 
 const rest: (duration: Index) => ContourPiece =
     (duration: Index): ContourPiece =>

@@ -1,6 +1,6 @@
 import { EVEN, from, Index, INITIAL, numbers, to } from '../../../../../src'
-import { to as zdaubyaosTo } from '../../nominal'
-import { ContourElement, ContourPiece } from '../../types'
+import { ContourPiece, to as zdaubyaosTo } from '../../nominal'
+import { ContourElement } from '../../types'
 import { RenderingByBlockElement } from './types'
 
 const summerRendering: RenderingByBlockElement =

@@ -1,7 +1,6 @@
 import { applyCount, applyOffset, Block, Count, from, Index, repeat, Time, to } from '../../../../../src'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
-import { to as zdaubyaosTo } from '../../nominal'
-import { ContourPiece } from '../../types'
+import { ContourPiece, to as zdaubyaosTo } from '../../nominal'
 import {
     FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
     FIFTEEN_BONY_BLOCKS,
