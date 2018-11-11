@@ -1,5 +1,4 @@
-import { Block, sequence } from '../../../../../src'
-import { ContourPiece, to } from '../../nominal'
+import { Block, ContourPiece, sequence, to } from '../../../../../src'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'
 import { flatlineRendering } from './flatline'

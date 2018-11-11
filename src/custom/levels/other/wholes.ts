@@ -1,5 +1,4 @@
-import { DictionaryOf, from, INITIAL, repeat, repeatCall, sequence, to } from '../../../../../../src'
-import { ContourWhole, to as zdaubyaosTo } from '../../../nominal'
+import { ContourWhole, DictionaryOf, from, INITIAL, repeat, repeatCall, sequence, to } from '../../../../../../src'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { getTrueContours } from '../true'
@@ -15,21 +14,21 @@ const buildOtherContourWholes: () => DictionaryOf<ContourWhole> =
             shiftyTwentyfourVariantContourPiece,
         } = buildOtherContourPieces()
 
-        const secretLongChordContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(secretLongChordContourPiece)
+        const secretLongChordContourWhole: ContourWhole = to.ContourWhole(secretLongChordContourPiece)
 
-        const totallyOutThereContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(repeat(
+        const totallyOutThereContourWhole: ContourWhole = to.ContourWhole(repeat(
             getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER)
                 .slice(from.Index(INITIAL), 8),
             to.Count(3),
         ))
 
-        const shiftyAContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(sequence([
+        const shiftyAContourWhole: ContourWhole = to.ContourWhole(sequence([
             repeatCall(() => shiftyFifteenContourPiece, to.Count(3)),
             repeatCall(() => shiftyTwentyfourContourPiece, to.Count(4)),
             repeatCall(() => shiftyTwentyfourVariantContourPiece, to.Count(3)),
         ]))
 
-        const shiftyBContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(shiftyContourPiece)
+        const shiftyBContourWhole: ContourWhole = to.ContourWhole(shiftyContourPiece)
 
         return {
             secretLongChordContourWhole,

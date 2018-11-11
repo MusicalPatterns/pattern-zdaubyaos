@@ -1,6 +1,5 @@
-import { applyCount, applyOffset, Block, Count, from, Index, repeat, Time, to } from '../../../../../src'
+import { applyCount, applyOffset, Block, ContourPiece, Count, from, Index, repeat, Time, to } from '../../../../../src'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
-import { ContourPiece, to as zdaubyaosTo } from '../../nominal'
 import {
     FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
     FIFTEEN_BONY_BLOCKS,
@@ -26,7 +25,7 @@ const bonyRendering: Rendering =
             repeat(TWENTYFOUR_BONY_BLOCKS, applyCount(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
         )
 
-        const contourPiece: ContourPiece = zdaubyaosTo.ContourPiece([])
+        const contourPiece: ContourPiece = to.ContourPiece([])
         let blocksIndexForPitchIndex: Index = to.Index(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: Index): void => {

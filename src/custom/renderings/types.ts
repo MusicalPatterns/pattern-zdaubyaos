@@ -1,5 +1,4 @@
-import { Block, Index } from '../../../../../src'
-import { ContourPiece } from '../../nominal'
+import { Block, ContourPiece, Index } from '../../../../../src'
 
 type Rendering = (block: Block) => ContourPiece
 

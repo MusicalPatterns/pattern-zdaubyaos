@@ -1,10 +1,8 @@
 // tslint:disable:align
 
-import { DictionaryOf, repeat, to } from '../../../../../../src'
-import { ContourWhole, to as zdaubyaosTo } from '../../../nominal'
+import { ContourWhole, DictionaryOf, repeat, rest, to } from '../../../../../../src'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
-import { rest } from '../../rest'
 import { buildAlmostTrueContourPieces } from '../almostTrue'
 import { buildOtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
@@ -14,27 +12,27 @@ const buildBreatherContourWholes: () => DictionaryOf<ContourWhole> =
         const { inaiiiVarietyContourPiece } = buildAlmostTrueContourPieces()
         const { backboneTwentyfourContourPiece } = buildOtherContourPieces()
 
-        const breatherRestContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(rest(to.Index(24)))
-        const breatherSpringContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(getTrueContours(
+        const breatherRestContourWhole: ContourWhole = to.ContourWhole(rest(to.Index(24)))
+        const breatherSpringContourWhole: ContourWhole = to.ContourWhole(getTrueContours(
             BlockStyle.INAI,
             BarTarget.TWENTYFOUR,
             RenderingName.SPRING,
         ))
-        const breatherSummerContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(getTrueContours(
+        const breatherSummerContourWhole: ContourWhole = to.ContourWhole(getTrueContours(
             BlockStyle.INAI,
             BarTarget.TWENTYFOUR,
             RenderingName.SUMMER,
         ))
-        const doubleBreatherFallContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(
+        const doubleBreatherFallContourWhole: ContourWhole = to.ContourWhole(
             repeat(backboneTwentyfourContourPiece, to.Count(2)),
         )
-        const breatherVarietyContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(inaiiiVarietyContourPiece)
-        const breatherSpringAltContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(getTrueContours(
+        const breatherVarietyContourWhole: ContourWhole = to.ContourWhole(inaiiiVarietyContourPiece)
+        const breatherSpringAltContourWhole: ContourWhole = to.ContourWhole(getTrueContours(
             BlockStyle.OUZD,
             BarTarget.TWENTYFOUR,
             RenderingName.SPRING,
         ))
-        const doubleBreatherRestContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(rest(to.Index(48)))
+        const doubleBreatherRestContourWhole: ContourWhole = to.ContourWhole(rest(to.Index(48)))
 
         return {
             breatherRestContourWhole,

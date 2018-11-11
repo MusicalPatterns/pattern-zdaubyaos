@@ -1,14 +1,11 @@
-import { from } from '../../../../../../../src/indexForTest'
+import { calculateTotalContourDuration, ContourPiece, from, to } from '../../../../../../../src/indexForTest'
 import {
     BarTarget,
     BlockStyle,
     buildAlmostTrueContourPieces,
     buildTrueContourPieces,
-    calculateContourDuration,
-    ContourPiece,
     getTrueContours,
     RenderingName,
-    to,
     TrueContourPieces,
 } from '../../../../../src/indexForTest'
 
@@ -207,7 +204,7 @@ describe('true contours', () => {
                                         case RenderingName.FALL:
                                         case RenderingName.SUMMERY_SPRING:
                                         case RenderingName.SPRINGY_SUMMER:
-                                            expect(from.Index(calculateContourDuration(contours)) % 15)
+                                            expect(from.Index(calculateTotalContourDuration(contours)) % 15)
                                                 .toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                             break
                                         default:
@@ -481,7 +478,7 @@ describe('true contours', () => {
                                     switch (rendering) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:
-                                            expect(from.Index(calculateContourDuration(contours)) % 24)
+                                            expect(from.Index(calculateTotalContourDuration(contours)) % 24)
                                                 .toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                             break
                                         case RenderingName.BONY:
@@ -492,7 +489,7 @@ describe('true contours', () => {
                                                 case BlockStyle.INAI:
                                                     break
                                                 default:
-                                                    expect(from.Index(calculateContourDuration(contours)) % 24)
+                                                    expect(from.Index(calculateTotalContourDuration(contours)) % 24)
                                                         .toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                             }
                                             break

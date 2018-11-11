@@ -1,5 +1,4 @@
-import { Block } from '../../../../../../src'
-import { ContourPiece } from '../../../nominal'
+import { Block, ContourPiece } from '../../../../../../src'
 import { BarTarget, BlockStyle } from '../../../types'
 import { countUsage } from '../../../utilities'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'

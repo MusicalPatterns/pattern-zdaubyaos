@@ -1,5 +1,4 @@
-import { DictionaryOf } from '../../../../../../src'
-import { ContourPiece } from '../../../nominal'
+import { ContourPiece, DictionaryOf } from '../../../../../../src'
 import {
     buildRenderings,
     Rendering,

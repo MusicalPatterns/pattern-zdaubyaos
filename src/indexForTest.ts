@@ -8,12 +8,6 @@ export {
     buildScales,
 } from './materials/indexForTest'
 export {
-    ContourPiece,
-} from './nominal/indexForTest'
-export {
-    calculateContourDuration,
-} from './utilities/indexForTest'
-export {
     buildOtherContourPieces,
     buildThirtyfiveContourPieces,
     getTrueContours,
@@ -29,7 +23,6 @@ export {
 } from './custom/indexForTest'
 export { pattern, patternSpec } from './patterns'
 
-export { to } from './nominal/indexForTest'
 export {
     BarTarget,
     BlockStyle,

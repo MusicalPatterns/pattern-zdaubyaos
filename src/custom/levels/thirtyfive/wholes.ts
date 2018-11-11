@@ -1,7 +1,12 @@
-import { DictionaryOf, repeat, sequence, to } from '../../../../../../src'
-import { ContourWhole, to as zdaubyaosTo } from '../../../nominal'
-import { calculateContourDuration } from '../../../utilities'
-import { rest } from '../../rest'
+import {
+    calculateTotalContourDuration,
+    ContourWhole,
+    DictionaryOf,
+    repeat,
+    rest,
+    sequence,
+    to,
+} from '../../../../../../src'
 import { buildThirtyfiveContourPieces } from './pieces'
 
 const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole> =
@@ -13,16 +18,16 @@ const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole> =
             thirtyfiveZdaubOnlyWiggleContourPiece,
         } = buildThirtyfiveContourPieces()
 
-        const thirtyfiveYaosBassContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(sequence([
+        const thirtyfiveYaosBassContourWhole: ContourWhole = to.ContourWhole(sequence([
             repeat(thirtyfiveYaosBassContourPiece, to.Count(30)),
         ]))
 
-        const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(sequence([
+        const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole = to.ContourWhole(sequence([
             repeat(thirtyfiveYaosAccidentInspiredContourPiece, to.Count(30)),
         ]))
 
-        const thirtyfiveZdaubContourWhole: ContourWhole = zdaubyaosTo.ContourWhole(sequence([
-            rest(calculateContourDuration(thirtyfiveZdaubContourPiece)),
+        const thirtyfiveZdaubContourWhole: ContourWhole = to.ContourWhole(sequence([
+            rest(calculateTotalContourDuration(thirtyfiveZdaubContourPiece)),
             repeat(thirtyfiveZdaubContourPiece, to.Count(2)),
             repeat(thirtyfiveZdaubOnlyWiggleContourPiece, to.Count(12)),
         ]))

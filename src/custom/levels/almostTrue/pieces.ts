@@ -1,5 +1,4 @@
-import { Block, DictionaryOf, Index, sequence, to } from '../../../../../../src'
-import { ContourPiece, to as zdaubyaosTo } from '../../../nominal'
+import { Block, ContourPiece, DictionaryOf, Index, sequence, to } from '../../../../../../src'
 import { BarTarget, BlockStyle } from '../../../types'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
 import { buildTrueBlocks, TrueBlocks } from '../true'
@@ -16,7 +15,7 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece> =
 
         const trueBlocks: TrueBlocks = buildTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
-        const inaiiiVarietyContourPiece: ContourPiece = zdaubyaosTo.ContourPiece(sequence(
+        const inaiiiVarietyContourPiece: ContourPiece = to.ContourPiece(sequence(
             inai.map((blockElement: Index, index: number): ContourPiece => {
                 const renderingsSequence: Rendering[] = [
                     renderings[ RenderingName.SPRING ],

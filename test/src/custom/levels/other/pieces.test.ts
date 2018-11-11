@@ -1,4 +1,5 @@
-import { buildOtherContourPieces, to } from '../../../../../src/indexForTest'
+import { to } from '../../../../../../../src/indexForTest'
+import { buildOtherContourPieces } from '../../../../../src/indexForTest'
 
 describe('other contour pieces', () => {
     it('handles backbone fifteen', () => {
