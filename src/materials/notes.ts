@@ -5,13 +5,16 @@ import {
     NoteSpec,
     offsetFromOneIndexedToZeroIndexed,
     to,
+    unpackContourElement,
 } from '../../../../src'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildZdaubyaosNoteSpec, ContourElement } from '../types'
 
 const buildNoteSpec: BuildZdaubyaosNoteSpec =
-    ([ pitchIndex, duration ]: ContourElement): NoteSpec => {
-        if (pitchIndex === PITCH_INDEX_INDICATING_REST) {
+    (contourElement: ContourElement): NoteSpec => {
+        const { pitch, duration } = unpackContourElement(contourElement)
+
+        if (pitch === PITCH_INDEX_INDICATING_REST) {
             return {
                 durationSpec: {
                     index: offsetFromOneIndexedToZeroIndexed(duration),
@@ -37,7 +40,7 @@ const buildNoteSpec: BuildZdaubyaosNoteSpec =
                 scalar: FULL_GAIN,
             },
             pitchSpec: {
-                index: offsetFromOneIndexedToZeroIndexed(pitchIndex),
+                index: offsetFromOneIndexedToZeroIndexed(pitch),
             },
             sustainSpec: {
                 index: offsetFromOneIndexedToZeroIndexed(duration),

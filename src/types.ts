@@ -1,6 +1,4 @@
-import { Index, NoteSpec } from '../../../src'
-
-type ContourElement = [ Index, Index ]
+import { ContourElement, NoteSpec } from '../../../src'
 
 type BuildZdaubyaosNoteSpec = (contourElement: ContourElement) => NoteSpec
 
