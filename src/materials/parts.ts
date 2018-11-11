@@ -1,4 +1,15 @@
-import { applyOffset, DictionaryOf, from, INCLUSIVE, Index, INITIAL, Part, Segment, to } from '../../../../src'
+import {
+    applyOffset,
+    dereference,
+    DictionaryOf,
+    from,
+    INCLUSIVE,
+    Index,
+    INITIAL,
+    Part,
+    Segment,
+    to,
+} from '../../../../src'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { buildSegments } from './segments'
 
@@ -15,11 +26,11 @@ const buildParts: () => DictionaryOf<Part> =
         segments.slice(from.Index(INITIAL), from.Index(applyOffset(end, INCLUSIVE)))
             .forEach((segment: Segment): void => {
                 zdaubyaosSubparticularOrDubparticularPart = zdaubyaosSubparticularOrDubparticularPart
-                    .concat(segment[ from.Index(SEGMENT_A) ])
+                    .concat(dereference(segment, SEGMENT_A))
                 zdaubyaosSuperparticularOrDuperparticularPart = zdaubyaosSuperparticularOrDuperparticularPart
-                    .concat(segment[ from.Index(SEGMENT_B) ])
+                    .concat(dereference(segment, SEGMENT_B))
                 zdaubyaosHarmonicOrSubharmonicPart = zdaubyaosHarmonicOrSubharmonicPart
-                    .concat(segment[ from.Index(SEGMENT_C) ])
+                    .concat(dereference(segment, SEGMENT_C))
             })
 
         return {

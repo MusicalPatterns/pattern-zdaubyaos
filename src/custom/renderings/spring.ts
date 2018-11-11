@@ -1,4 +1,4 @@
-import { ContourPiece, from, Index, INITIAL, numbers, to } from '../../../../../src'
+import { ContourPiece, dereference, from, Index, INITIAL, numbers, to } from '../../../../../src'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ContourElement } from '../../types'
 import { SINGLE_DURATION } from './constants'
@@ -10,7 +10,7 @@ const springRendering: RenderingByBlockElement =
         const contour: ContourPiece = to.ContourPiece(
             numbersWeNeed.map((n: number): ContourElement => [ to.Index(n), SINGLE_DURATION ]),
         )
-        const contourElement: ContourElement = contour[ from.Index(INITIAL) ]
+        const contourElement: ContourElement = dereference(contour, INITIAL)
         contourElement[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = to.Index(0)
 
         return contour

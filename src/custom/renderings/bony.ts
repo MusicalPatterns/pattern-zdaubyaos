@@ -1,4 +1,16 @@
-import { applyCount, applyOffset, Block, ContourPiece, Count, from, Index, repeat, Time, to } from '../../../../../src'
+import {
+    applyCount,
+    applyOffset,
+    Block,
+    ContourPiece,
+    Count,
+    dereference,
+    from,
+    Index,
+    repeat,
+    Time,
+    to,
+} from '../../../../../src'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
     FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
@@ -29,7 +41,7 @@ const bonyRendering: Rendering =
         let blocksIndexForPitchIndex: Index = to.Index(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: Index): void => {
-            const pitchIndex: Index = block[ from.Index(blocksIndexForPitchIndex) ]
+            const pitchIndex: Index = dereference(block, blocksIndexForPitchIndex)
 
             blockClone[ 0 ] = applyOffset(blockClone[ 0 ], to.Offset(-from.Index(rhythmicBlockElement)))
             if (blockClone[ 0 ] < to.Index(0)) {

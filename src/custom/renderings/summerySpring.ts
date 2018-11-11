@@ -1,4 +1,14 @@
-import { applyOffset, applyScale, ContourPiece, from, Index, INITIAL, numbers, to } from '../../../../../src'
+import {
+    applyOffset,
+    applyScale,
+    ContourPiece,
+    dereference,
+    from,
+    Index,
+    INITIAL,
+    numbers,
+    to,
+} from '../../../../../src'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ContourElement } from '../../types'
 import { SUMMERY_SPRING_OFFSET, SUMMERY_SPRING_SCALAR } from './constants'
@@ -13,7 +23,7 @@ const summerySpringRendering: RenderingByBlockElement =
                 to.Index(1),
             ])),
         )
-        contour[ from.Index(INITIAL) ][ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = to.Index(0)
+        dereference(contour, INITIAL)[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = to.Index(0)
 
         return contour
     }
