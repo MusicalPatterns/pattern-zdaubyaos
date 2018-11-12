@@ -1,6 +1,7 @@
 import {
     DEFAULT_DURATIONS_SCALE_INDEX,
     DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
+    from,
     FULL_GAIN,
     NoteSpec,
     offsetFromOneIndexedToZeroIndexed,
@@ -14,17 +15,17 @@ const buildNoteSpec: BuildZdaubyaosNoteSpec =
     (contourElement: ContourElement): NoteSpec => {
         const { pitch, duration } = unpackContourElement(contourElement)
 
-        if (pitch === PITCH_INDEX_INDICATING_REST) {
+        if (pitch === from.Index(PITCH_INDEX_INDICATING_REST)) {
             return {
                 durationSpec: {
-                    index: offsetFromOneIndexedToZeroIndexed(duration),
+                    index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
                     scaleIndex: DEFAULT_DURATIONS_SCALE_INDEX,
                 },
                 gainSpec: {
                     scalar: to.Scalar(0),
                 },
                 sustainSpec: {
-                    index: offsetFromOneIndexedToZeroIndexed(duration),
+                    index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
                     offset: DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
                     scaleIndex: DEFAULT_DURATIONS_SCALE_INDEX,
                 },
@@ -33,17 +34,17 @@ const buildNoteSpec: BuildZdaubyaosNoteSpec =
 
         return {
             durationSpec: {
-                index: offsetFromOneIndexedToZeroIndexed(duration),
+                index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
                 scaleIndex: DEFAULT_DURATIONS_SCALE_INDEX,
             },
             gainSpec: {
                 scalar: FULL_GAIN,
             },
             pitchSpec: {
-                index: offsetFromOneIndexedToZeroIndexed(pitch),
+                index: offsetFromOneIndexedToZeroIndexed(to.Index(pitch)),
             },
             sustainSpec: {
-                index: offsetFromOneIndexedToZeroIndexed(duration),
+                index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
                 offset: DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
                 scaleIndex: DEFAULT_DURATIONS_SCALE_INDEX,
             },

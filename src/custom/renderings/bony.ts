@@ -52,7 +52,7 @@ const bonyRendering: Rendering =
                 blocksIndexForPitchIndex = applyOffset(blocksIndexForPitchIndex, to.Offset(1))
             }
 
-            contourPiece.push([ pitchIndex, to.Index(from.Index(rhythmicBlockElement)) ])
+            contourPiece.push([ from.Index(pitchIndex), from.Index(rhythmicBlockElement) ])
         })
 
         return contourPiece

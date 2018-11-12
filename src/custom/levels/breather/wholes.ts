@@ -12,7 +12,7 @@ const buildBreatherContourWholes: () => DictionaryOf<ContourWhole> =
         const { inaiiiVarietyContourPiece } = buildAlmostTrueContourPieces()
         const { backboneTwentyfourContourPiece } = buildOtherContourPieces()
 
-        const breatherRestContourWhole: ContourWhole = to.ContourWhole(rest(to.Index(24)))
+        const breatherRestContourWhole: ContourWhole = to.ContourWhole(rest(24))
         const breatherSpringContourWhole: ContourWhole = to.ContourWhole(getTrueContours(
             BlockStyle.INAI,
             BarTarget.TWENTYFOUR,
@@ -32,7 +32,7 @@ const buildBreatherContourWholes: () => DictionaryOf<ContourWhole> =
             BarTarget.TWENTYFOUR,
             RenderingName.SPRING,
         ))
-        const doubleBreatherRestContourWhole: ContourWhole = to.ContourWhole(rest(to.Index(48)))
+        const doubleBreatherRestContourWhole: ContourWhole = to.ContourWhole(rest(48))
 
         return {
             breatherRestContourWhole,

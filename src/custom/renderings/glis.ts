@@ -1,11 +1,11 @@
-import { ContourPiece, Index, to } from '../../../../../src'
+import { ContourPiece, from, Index, to } from '../../../../../src'
 import { RenderingByBlockElement } from './types'
 
 const glisRendering: RenderingByBlockElement =
     (blockElement: Index): ContourPiece => to.ContourPiece([
         [
-            blockElement,
-            blockElement,
+            from.Index(blockElement),
+            from.Index(blockElement),
         ],
     ])
 

@@ -19,11 +19,11 @@ const summerySpringRendering: RenderingByBlockElement =
         const contour: ContourPiece = to.ContourPiece(numbers
             .slice(from.Index(INITIAL), from.Index(blockElement))
             .map((n: number): ContourElement => ([
-                to.Index(applyScale(applyOffset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR)),
-                to.Index(1),
+                applyScale(applyOffset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR),
+                1,
             ])),
         )
-        dereference(contour, INITIAL)[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = to.Index(0)
+        dereference(contour, INITIAL)[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
 
         return contour
     }

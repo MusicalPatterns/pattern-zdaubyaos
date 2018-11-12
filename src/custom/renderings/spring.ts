@@ -8,10 +8,10 @@ const springRendering: RenderingByBlockElement =
     (blockElement: Index): ContourPiece => {
         const numbersWeNeed: number[] = numbers.slice(from.Index(INITIAL), from.Index(blockElement))
         const contour: ContourPiece = to.ContourPiece(
-            numbersWeNeed.map((n: number): ContourElement => [ to.Index(n), SINGLE_DURATION ]),
+            numbersWeNeed.map((n: number): ContourElement => [ n, SINGLE_DURATION ]),
         )
         const contourElement: ContourElement = dereference(contour, INITIAL)
-        contourElement[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = to.Index(0)
+        contourElement[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
 
         return contour
     }

@@ -8,12 +8,12 @@ const springySummerRendering: RenderingByBlockElement =
         to.ContourPiece(numbers.slice(from.Index(INITIAL), from.Index(blockElement))
             .map((n: number): ContourElement => {
                 if (n % EVEN === 0) {
-                    return [ to.Index(0), to.Index(1) ]
+                    return [ 0, 1 ]
                 }
 
                 return [
-                    to.Index(applyScale(applyOffset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR)),
-                    to.Index(1),
+                    applyScale(applyOffset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR),
+                    1,
                 ]
             }),
         )
