@@ -1,5 +1,5 @@
-import { BuildScalesFunction, buildStandardScales, Scalar, Scale, scaleFromScalarsAndScalar } from '../../../../src'
-import { PatternSpec } from '../../../types'
+import { buildStandardScales, Scalar, Scale, scaleFromScalarsAndScalar } from '../../../../src'
+import { BuildScalesFunction, PatternSpec } from '../../../types'
 import { buildScalars } from './scalars'
 
 const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {

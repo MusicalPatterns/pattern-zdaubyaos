@@ -1,4 +1,5 @@
-import { BuildEntitiesFunction, Entity, OscillatorName, TimeType, VoiceType } from '../../../../src'
+import { Entity, OscillatorName, TimeType, VoiceType } from '../../../../src'
+import { BuildEntitiesFunction } from '../../../types'
 import { buildParts } from './parts'
 
 const buildEntities: BuildEntitiesFunction =
