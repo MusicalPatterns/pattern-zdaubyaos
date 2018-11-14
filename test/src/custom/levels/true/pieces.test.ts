@@ -204,7 +204,7 @@ describe('true contours', () => {
                                         case RenderingName.FALL:
                                         case RenderingName.SUMMERY_SPRING:
                                         case RenderingName.SPRINGY_SUMMER:
-                                            expect(from.Index(calculateTotalContourDuration(contours)) % 15)
+                                            expect(calculateTotalContourDuration(contours) % 15)
                                                 .toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                             break
                                         default:
@@ -478,7 +478,7 @@ describe('true contours', () => {
                                     switch (rendering) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:
-                                            expect(from.Index(calculateTotalContourDuration(contours)) % 24)
+                                            expect(calculateTotalContourDuration(contours) % 24)
                                                 .toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                             break
                                         case RenderingName.BONY:
@@ -489,7 +489,7 @@ describe('true contours', () => {
                                                 case BlockStyle.INAI:
                                                     break
                                                 default:
-                                                    expect(from.Index(calculateTotalContourDuration(contours)) % 24)
+                                                    expect(calculateTotalContourDuration(contours) % 24)
                                                         .toBe(0, `rendering ${blockStyle} as ${rendering}`)
                                             }
                                             break

@@ -7,7 +7,7 @@ describe('zdaubyaos note specs', () => {
     describe('when the pitch index is zero', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {
-            noteSpec = buildNoteSpec([ to.Index(0), to.Index(6) ])
+            noteSpec = buildNoteSpec([ 0, 6 ])
         })
 
         describe('duration', () => {
@@ -65,7 +65,7 @@ describe('zdaubyaos note specs', () => {
     describe('when the pitch index is not zero', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {
-            noteSpec = buildNoteSpec([ to.Index(3), to.Index(6) ])
+            noteSpec = buildNoteSpec([ 3, 6 ])
         })
 
         describe('duration', () => {

@@ -1,4 +1,4 @@
-import { calculateTotalContourDuration, from, to } from '../../../../../../../src/indexForTest'
+import { calculateTotalContourDuration, to } from '../../../../../../../src/indexForTest'
 import { buildThirtyfiveContourPieces } from '../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {
@@ -67,11 +67,11 @@ describe('thirtyfive contour pieces', () => {
             thirtyfiveZdaubContourPiece,
         } = buildThirtyfiveContourPieces()
 
-        expect(from.Index(calculateTotalContourDuration(thirtyfiveYaosBassContourPiece)) % 35)
+        expect(calculateTotalContourDuration(thirtyfiveYaosBassContourPiece) % 35)
             .toBe(0)
-        expect(from.Index(calculateTotalContourDuration(thirtyfiveYaosAccidentInspiredContourPiece)) % 35)
+        expect(calculateTotalContourDuration(thirtyfiveYaosAccidentInspiredContourPiece) % 35)
             .toBe(0)
-        expect(from.Index(calculateTotalContourDuration(thirtyfiveZdaubContourPiece)) % 35)
+        expect(calculateTotalContourDuration(thirtyfiveZdaubContourPiece) % 35)
             .toBe(0)
     })
 })
