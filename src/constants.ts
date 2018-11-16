@@ -10,6 +10,7 @@ const DUPER: Offset = to.Offset(2)
 
 const ZDAUBYAOS_SEGMENT_COUNT: Count = to.Count(17)
 
+const ZDAUBYAOS_DURATION_SCALAR: Scalar = to.Scalar(20)
 const ZDAUBYAOS_PITCH_SCALAR: Scalar = to.Scalar(440)
 
 const SEGMENT_A: Index = to.Index(0)
@@ -29,6 +30,7 @@ export {
     SUPER,
     DUPER,
     ZDAUBYAOS_SEGMENT_COUNT,
+    ZDAUBYAOS_DURATION_SCALAR,
     ZDAUBYAOS_PITCH_SCALAR,
     SEGMENT_A,
     SEGMENT_B,

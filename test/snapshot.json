@@ -34313,7 +34313,6 @@
           }
         }
       ],
-      "timeType": "atomic",
       "voiceSpec": {
         "timbre": "sawtooth",
         "voiceType": "oscillator"
@@ -68577,7 +68576,6 @@
           }
         }
       ],
-      "timeType": "atomic",
       "voiceSpec": {
         "timbre": "sine",
         "voiceType": "oscillator"
@@ -104354,7 +104352,6 @@
           }
         }
       ],
-      "timeType": "atomic",
       "voiceSpec": {
         "timbre": "square",
         "voiceType": "oscillator"
@@ -104623,7 +104620,7 @@
       ]
     },
     {
-      "scalar": 1,
+      "scalar": 20,
       "scalars": [
         1,
         2,

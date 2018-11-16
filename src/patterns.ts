@@ -1,7 +1,6 @@
-import { DEFAULT_ATOMIC_TIME_TYPE_DURATION_SCALAR } from '../../../src'
 import { PatternId } from '../../patternId'
 import { Pattern, PatternMaterial, PatternMetadata, PatternSpec } from '../../types'
-import { ZDAUBYAOS_PITCH_SCALAR } from './constants'
+import { ZDAUBYAOS_DURATION_SCALAR, ZDAUBYAOS_PITCH_SCALAR } from './constants'
 import { buildEntities, buildScales } from './materials'
 
 const zdaubyaosPatternMaterial: PatternMaterial = {
@@ -16,7 +15,7 @@ const zdaubyaosPatternMetadata: PatternMetadata = {
 }
 
 const patternSpec: PatternSpec = {
-    patternDurationScalar: DEFAULT_ATOMIC_TIME_TYPE_DURATION_SCALAR,
+    patternDurationScalar: ZDAUBYAOS_DURATION_SCALAR,
     patternPitchScalar: ZDAUBYAOS_PITCH_SCALAR,
 }
 
