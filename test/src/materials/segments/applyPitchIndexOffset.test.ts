@@ -1,4 +1,4 @@
-import { Index, NoteSpec, Part, to } from '../../../../../../src/indexForTest'
+import { Index, NoteSpec, PartSpec, to } from '../../../../../../src/indexForTest'
 import { applyPitchIndexOffset } from '../../../../src/indexForTest'
 
 const testNoteSpec: (pitch: Index) => NoteSpec =
@@ -6,13 +6,13 @@ const testNoteSpec: (pitch: Index) => NoteSpec =
 
 describe('apply pitch index offset', () => {
     it('offsets the pitch index of every note', () => {
-        const part: Part = [
+        const part: PartSpec = [
             testNoteSpec(to.Index(1)),
             testNoteSpec(to.Index(2)),
             testNoteSpec(to.Index(4)),
         ]
 
-        const expectedPart: Part = [
+        const expectedPart: PartSpec = [
             testNoteSpec(to.Index(2)),
             testNoteSpec(to.Index(3)),
             testNoteSpec(to.Index(5)),

@@ -12,17 +12,17 @@ const buildEntities: BuildEntitiesFunction =
         } = buildParts()
 
         const zdaubyaosSubparticularOrDubparticularSquareEntity: Entity = {
-            part: zdaubyaosSubparticularOrDubparticularPart,
+            partSpec: zdaubyaosSubparticularOrDubparticularPart,
             voiceSpec: { timbre: OscillatorName.SQUARE, voiceType: VoiceType.OSCILLATOR },
         }
 
         const zdaubyaosSuperparticularOrDuperparticularSawEntity: Entity = {
-            part: zdaubyaosSuperparticularOrDuperparticularPart,
+            partSpec: zdaubyaosSuperparticularOrDuperparticularPart,
             voiceSpec: { timbre: OscillatorName.SAWTOOTH, voiceType: VoiceType.OSCILLATOR },
         }
 
         const zdaubyaosHarmonicOrSubharmonicSineEntity: Entity = {
-            part: zdaubyaosHarmonicOrSubharmonicPart,
+            partSpec: zdaubyaosHarmonicOrSubharmonicPart,
             voiceSpec: { timbre: OscillatorName.SINE, voiceType: VoiceType.OSCILLATOR },
         }
 

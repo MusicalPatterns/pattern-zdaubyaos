@@ -6,22 +6,22 @@ import {
     INCLUSIVE,
     Index,
     INITIAL,
-    Part,
+    PartSpec,
     Segment,
     to,
 } from '../../../../src'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { buildSegments } from './segments'
 
-const buildParts: () => DictionaryOf<Part> =
-    (): DictionaryOf<Part> => {
+const buildParts: () => DictionaryOf<PartSpec> =
+    (): DictionaryOf<PartSpec> => {
         const segments: Segment[] = buildSegments()
 
         const end: Index = to.Index(segments.length)
 
-        let zdaubyaosSubparticularOrDubparticularPart: Part = []
-        let zdaubyaosSuperparticularOrDuperparticularPart: Part = []
-        let zdaubyaosHarmonicOrSubharmonicPart: Part = []
+        let zdaubyaosSubparticularOrDubparticularPart: PartSpec = []
+        let zdaubyaosSuperparticularOrDuperparticularPart: PartSpec = []
+        let zdaubyaosHarmonicOrSubharmonicPart: PartSpec = []
 
         segments.slice(from.Index(INITIAL), from.Index(applyOffset(end, INCLUSIVE)))
             .forEach((segment: Segment): void => {

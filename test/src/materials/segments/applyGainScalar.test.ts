@@ -1,4 +1,4 @@
-import { NoteSpec, Part, Scalar, to } from '../../../../../../src/indexForTest'
+import { NoteSpec, PartSpec, Scalar, to } from '../../../../../../src/indexForTest'
 import { applyGainScalar } from '../../../../src/indexForTest'
 
 const testNoteSpec: (gain: Scalar) => NoteSpec =
@@ -6,13 +6,13 @@ const testNoteSpec: (gain: Scalar) => NoteSpec =
 
 describe('apply gain scalar', () => {
     it('scales the gain of every note', () => {
-        const part: Part = [
+        const part: PartSpec = [
             testNoteSpec(to.Scalar(1)),
             testNoteSpec(to.Scalar(0.666)),
             testNoteSpec(to.Scalar(0.5)),
         ]
 
-        const expectedPart: Part = [
+        const expectedPart: PartSpec = [
             testNoteSpec(to.Scalar(0.5)),
             testNoteSpec(to.Scalar(0.333)),
             testNoteSpec(to.Scalar(0.25)),

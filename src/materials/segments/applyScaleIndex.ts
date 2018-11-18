@@ -1,8 +1,8 @@
-import { Index, NoteSpec, Part } from '../../../../../src'
+import { Index, NoteSpec, PartSpec } from '../../../../../src'
 
-const applyScaleIndex: (part: Part, scaleIndex: Index) => Part =
-    (part: Part, scaleIndex: Index): Part =>
-        part.map((noteSpec: NoteSpec): NoteSpec => ({
+const applyScaleIndex: (partSpec: PartSpec, scaleIndex: Index) => PartSpec =
+    (partSpec: PartSpec, scaleIndex: Index): PartSpec =>
+        partSpec.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             pitchSpec: { ...noteSpec.pitchSpec, scaleIndex },
         }))

@@ -1,8 +1,8 @@
-import { applyScale, NoteSpec, Part, Scalar } from '../../../../../src'
+import { applyScale, NoteSpec, PartSpec, Scalar } from '../../../../../src'
 
-const applyGainScalar: (part: Part, gainScalar: Scalar) => Part =
-    (part: Part, gainScalar: Scalar): Part =>
-        part.map((noteSpec: NoteSpec): NoteSpec => ({
+const applyGainScalar: (partSpec: PartSpec, gainScalar: Scalar) => PartSpec =
+    (partSpec: PartSpec, gainScalar: Scalar): PartSpec =>
+        partSpec.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             gainSpec: noteSpec.gainSpec && {
                 ...noteSpec.gainSpec,

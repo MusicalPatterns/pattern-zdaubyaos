@@ -1,7 +1,7 @@
-import { from, Index, NoteSpec, Part, SumOfIndices, to } from '../../../../src/indexForTest'
+import { from, Index, NoteSpec, PartSpec, SumOfIndices, to } from '../../../../src/indexForTest'
 
-const calculateTotalZdaubyaosDuration: (part: Part) => SumOfIndices =
-    (part: Part): SumOfIndices =>
+const calculateTotalZdaubyaosDuration: (part: PartSpec) => SumOfIndices =
+    (part: PartSpec): SumOfIndices =>
         part.reduce(
             (accumulator: SumOfIndices, { durationSpec }: NoteSpec) => {
                 const durationIndex: Index = durationSpec && durationSpec.index || to.Index(0)

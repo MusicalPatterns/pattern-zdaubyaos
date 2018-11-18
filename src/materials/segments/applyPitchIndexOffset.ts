@@ -1,8 +1,8 @@
-import { applyOffset, NoteSpec, Offset, Part } from '../../../../../src'
+import { applyOffset, NoteSpec, Offset, PartSpec } from '../../../../../src'
 
-const applyPitchIndexOffset: (part: Part, pitchIndexOffset: Offset) => Part =
-    (part: Part, pitchIndexOffset: Offset): Part =>
-        part.map((noteSpec: NoteSpec): NoteSpec => ({
+const applyPitchIndexOffset: (partSpec: PartSpec, pitchIndexOffset: Offset) => PartSpec =
+    (partSpec: PartSpec, pitchIndexOffset: Offset): PartSpec =>
+        partSpec.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             pitchSpec: noteSpec.pitchSpec && {
                 ...noteSpec.pitchSpec,

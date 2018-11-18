@@ -21,7 +21,7 @@ export {
     Rendering,
     RenderingName,
 } from './custom/indexForTest'
-export { pattern, patternSpec } from './patterns'
+export { pattern } from './patterns'
 
 export {
     BarTarget,
