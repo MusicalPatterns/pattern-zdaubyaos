@@ -1,10 +1,9 @@
+import { from, Index } from '@musical-patterns/utilities'
 import {
     applyOffset,
     applyScale,
     ContourPiece,
     dereference,
-    from,
-    Index,
     INITIAL,
     numbers,
     to,

@@ -1,4 +1,5 @@
-import { Index, NoteSpec, PartSpec, to } from '../../../../../../src/indexForTest'
+import { Index, to } from '@musical-patterns/utilities'
+import { NoteSpec, PartSpec } from '../../../../../../src/indexForTest'
 import { applyPitchIndexOffset } from '../../../../src/indexForTest'
 
 const testNoteSpec: (pitch: Index) => NoteSpec =

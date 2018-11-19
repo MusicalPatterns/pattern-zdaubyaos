@@ -1,4 +1,5 @@
-import { ContourWhole, DictionaryOf, repeatCall, sequence, to } from '../../../../../../src'
+import { to } from '@musical-patterns/utilities'
+import { ContourWhole, DictionaryOf, repeatCall, sequence, to as labTo } from '../../../../../../src'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { buildOtherContourPieces } from '../other'
@@ -6,7 +7,7 @@ import { getTrueContours } from '../true'
 
 const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole =
     (renderingName: RenderingName): ContourWhole =>
-        to.ContourWhole(sequence([
+        labTo.ContourWhole(sequence([
             repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName), to.Count(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, renderingName),
@@ -31,13 +32,13 @@ const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.GLIS)
 
         const almostTrueYetOfBackboneContourWhole: ContourWhole =
-            to.ContourWhole(sequence([
+            labTo.ContourWhole(sequence([
                 repeatCall(() => backboneFifteenContourPiece, to.Count(8)),
                 repeatCall(() => backboneTwentyfourContourPiece, to.Count(3)),
             ]))
 
         const almostTrueZdaubBonyWithSuperinscapeContourWhole: ContourWhole =
-            to.ContourWhole(sequence([
+            labTo.ContourWhole(sequence([
                 repeatCall(
                     () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), to.Count(3),
                 ),
@@ -49,7 +50,7 @@ const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole> =
             ]))
 
         const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole: ContourWhole =
-            to.ContourWhole(sequence([
+            labTo.ContourWhole(sequence([
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.FALL),

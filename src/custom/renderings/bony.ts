@@ -1,15 +1,12 @@
+import { Count, from, Index, Time, to } from '@musical-patterns/utilities'
 import {
     applyCount,
     applyOffset,
     Block,
     ContourPiece,
-    Count,
     dereference,
-    from,
-    Index,
     repeat,
-    Time,
-    to,
+    to as labTo,
 } from '../../../../../src'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
@@ -22,7 +19,7 @@ import { Rendering } from './types'
 
 const bonyRendering: Rendering =
     (block: Block): ContourPiece => {
-        const blockClone: Block = to.Block(block.slice())
+        const blockClone: Block = labTo.Block(block.slice())
         const blocksTotal: Time = blockClone.reduce(
             (accumulator: Time, blockElement: Index): Time =>
                 to.Time(from.Time(accumulator) + from.Index(blockElement)),
@@ -32,12 +29,12 @@ const bonyRendering: Rendering =
         const barDivisor: Time = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
         const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
 
-        const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
+        const rhythmicBlocks: Block = labTo.Block(isBarTargetFifteen ?
             repeat(FIFTEEN_BONY_BLOCKS, applyCount(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :
             repeat(TWENTYFOUR_BONY_BLOCKS, applyCount(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
         )
 
-        const contourPiece: ContourPiece = to.ContourPiece([])
+        const contourPiece: ContourPiece = labTo.ContourPiece([])
         let blocksIndexForPitchIndex: Index = to.Index(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: Index): void => {

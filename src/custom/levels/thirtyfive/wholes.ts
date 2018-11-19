@@ -1,3 +1,4 @@
+import { to } from '@musical-patterns/utilities'
 import {
     calculateTotalContourDuration,
     ContourWhole,
@@ -5,7 +6,7 @@ import {
     repeat,
     rest,
     sequence,
-    to,
+    to as labTo,
 } from '../../../../../../src'
 import { buildThirtyfiveContourPieces } from './pieces'
 
@@ -18,15 +19,15 @@ const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole> =
             thirtyfiveZdaubOnlyWiggleContourPiece,
         } = buildThirtyfiveContourPieces()
 
-        const thirtyfiveYaosBassContourWhole: ContourWhole = to.ContourWhole(sequence([
+        const thirtyfiveYaosBassContourWhole: ContourWhole = labTo.ContourWhole(sequence([
             repeat(thirtyfiveYaosBassContourPiece, to.Count(30)),
         ]))
 
-        const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole = to.ContourWhole(sequence([
+        const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole = labTo.ContourWhole(sequence([
             repeat(thirtyfiveYaosAccidentInspiredContourPiece, to.Count(30)),
         ]))
 
-        const thirtyfiveZdaubContourWhole: ContourWhole = to.ContourWhole(sequence([
+        const thirtyfiveZdaubContourWhole: ContourWhole = labTo.ContourWhole(sequence([
             rest(calculateTotalContourDuration(thirtyfiveZdaubContourPiece)),
             repeat(thirtyfiveZdaubContourPiece, to.Count(2)),
             repeat(thirtyfiveZdaubOnlyWiggleContourPiece, to.Count(12)),

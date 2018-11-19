@@ -1,4 +1,5 @@
-import { applyOffset, NoteSpec, Offset, PartSpec } from '../../../../../src'
+import { Offset } from '@musical-patterns/utilities'
+import { applyOffset, NoteSpec, PartSpec } from '../../../../../src'
 
 const applyPitchIndexOffset: (partSpec: PartSpec, pitchIndexOffset: Offset) => PartSpec =
     (partSpec: PartSpec, pitchIndexOffset: Offset): PartSpec =>

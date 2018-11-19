@@ -1,4 +1,5 @@
-import { applyOffset, DictionaryOf, numbers, Scalar, to } from '../../../../src'
+import { Scalar, to } from '@musical-patterns/utilities'
+import { applyOffset, DictionaryOf, numbers } from '../../../../src'
 import { DUPER, SUPER } from '../constants'
 
 const buildScalars: () => DictionaryOf<Scalar[]> =

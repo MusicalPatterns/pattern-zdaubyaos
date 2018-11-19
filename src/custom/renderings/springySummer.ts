@@ -1,4 +1,5 @@
-import { applyOffset, applyScale, ContourPiece, EVEN, from, Index, INITIAL, numbers, to } from '../../../../../src'
+import { from, Index } from '@musical-patterns/utilities'
+import { applyOffset, applyScale, ContourPiece, EVEN, INITIAL, numbers, to } from '../../../../../src'
 import { ContourElement } from '../../types'
 import { SPRINGY_SUMMER_OFFSET, SPRINGY_SUMMER_SCALAR } from './constants'
 import { RenderingByBlockElement } from './types'

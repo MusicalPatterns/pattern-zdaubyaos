@@ -1,4 +1,5 @@
-import { applyOffset, Maybe, to } from '../../../../src'
+import { to } from '@musical-patterns/utilities'
+import { applyOffset, Maybe } from '../../../../src'
 import { RenderingName } from '../custom'
 import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'

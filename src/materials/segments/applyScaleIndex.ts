@@ -1,4 +1,5 @@
-import { Index, NoteSpec, PartSpec } from '../../../../../src'
+import { Index } from '@musical-patterns/utilities'
+import { NoteSpec, PartSpec } from '../../../../../src'
 
 const applyScaleIndex: (partSpec: PartSpec, scaleIndex: Index) => PartSpec =
     (partSpec: PartSpec, scaleIndex: Index): PartSpec =>

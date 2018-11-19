@@ -1,4 +1,5 @@
-import { ContourPiece, from, Index, to } from '../../../../../src'
+import { from, Index } from '@musical-patterns/utilities'
+import { ContourPiece, to } from '../../../../../src'
 import { RenderingByBlockElement } from './types'
 
 const glisRendering: RenderingByBlockElement =

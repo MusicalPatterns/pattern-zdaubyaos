@@ -1,4 +1,4 @@
-import { SumOfIndices, to } from '../../../../../src/indexForTest'
+import { SumOfIndices, to } from '@musical-patterns/utilities'
 import { buildParts } from '../../../src/indexForTest'
 import { calculateTotalZdaubyaosDuration } from '../../support'
 
