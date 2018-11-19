@@ -1,5 +1,5 @@
-import { to } from '@musical-patterns/utilities'
-import { applyOffset, Maybe } from '../../../../src'
+import { apply, to } from '@musical-patterns/utilities'
+import { Maybe } from '../../../../src'
 import { RenderingName } from '../custom'
 import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
@@ -21,7 +21,7 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: 
         if (byBlockStyle !== undefined) {
             let byRenderingName: Maybe<UsageCount> = byBlockStyle[renderingName]
             if (byRenderingName !== undefined) {
-                byRenderingName = applyOffset(byRenderingName, to.Offset(1))
+                byRenderingName = apply.Offset(byRenderingName, to.Offset(1))
                 byBlockStyle[renderingName] = byRenderingName
             }
             else {

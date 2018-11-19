@@ -1,13 +1,5 @@
-import { Count, from, Index, Time, to } from '@musical-patterns/utilities'
-import {
-    applyCount,
-    applyOffset,
-    Block,
-    ContourPiece,
-    dereference,
-    repeat,
-    to as labTo,
-} from '../../../../../src'
+import { apply, Count, from, Index, Time, to } from '@musical-patterns/utilities'
+import { Block, ContourPiece, repeat, to as labTo } from '../../../../../src'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
     FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
@@ -30,23 +22,23 @@ const bonyRendering: Rendering =
         const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
 
         const rhythmicBlocks: Block = labTo.Block(isBarTargetFifteen ?
-            repeat(FIFTEEN_BONY_BLOCKS, applyCount(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :
-            repeat(TWENTYFOUR_BONY_BLOCKS, applyCount(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
+            repeat(FIFTEEN_BONY_BLOCKS, apply.Count(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :
+            repeat(TWENTYFOUR_BONY_BLOCKS, apply.Count(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
         )
 
         const contourPiece: ContourPiece = labTo.ContourPiece([])
         let blocksIndexForPitchIndex: Index = to.Index(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: Index): void => {
-            const pitchIndex: Index = dereference(block, blocksIndexForPitchIndex)
+            const pitchIndex: Index = apply.Index(block, blocksIndexForPitchIndex)
 
-            blockClone[ 0 ] = applyOffset(blockClone[ 0 ], to.Offset(-from.Index(rhythmicBlockElement)))
+            blockClone[ 0 ] = apply.Offset(blockClone[ 0 ], to.Offset(-from.Index(rhythmicBlockElement)))
             if (blockClone[ 0 ] < to.Index(0)) {
                 return
             }
             if (blockClone[ 0 ] === to.Index(0)) {
                 blockClone.shift()
-                blocksIndexForPitchIndex = applyOffset(blocksIndexForPitchIndex, to.Offset(1))
+                blocksIndexForPitchIndex = apply.Offset(blocksIndexForPitchIndex, to.Offset(1))
             }
 
             contourPiece.push([ from.Index(pitchIndex), from.Index(rhythmicBlockElement) ])

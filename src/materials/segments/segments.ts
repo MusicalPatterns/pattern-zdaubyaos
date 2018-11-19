@@ -1,5 +1,5 @@
-import { from } from '@musical-patterns/utilities'
-import { applyOffset, DictionaryOf, INCLUSIVE, INITIAL, Segment } from '../../../../../src'
+import { apply, from } from '@musical-patterns/utilities'
+import { DictionaryOf, INCLUSIVE, INITIAL, Segment } from '../../../../../src'
 import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {
     buildAlmostTrueSegments,
@@ -72,7 +72,7 @@ const buildSegments: () => Segment[] =
 
             // 17
             thirtyfiveSegment,
-        ].slice(from.Index(INITIAL), from.Count(applyOffset(ZDAUBYAOS_SEGMENT_COUNT, INCLUSIVE)))
+        ].slice(from.Index(INITIAL), from.Count(apply.Offset(ZDAUBYAOS_SEGMENT_COUNT, INCLUSIVE)))
     }
 
 export {

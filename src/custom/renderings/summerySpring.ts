@@ -1,13 +1,5 @@
-import { from, Index } from '@musical-patterns/utilities'
-import {
-    applyOffset,
-    applyScale,
-    ContourPiece,
-    dereference,
-    INITIAL,
-    numbers,
-    to,
-} from '../../../../../src'
+import { apply, from, Index } from '@musical-patterns/utilities'
+import { ContourPiece, INITIAL, numbers, to } from '../../../../../src'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ContourElement } from '../../types'
 import { SUMMERY_SPRING_OFFSET, SUMMERY_SPRING_SCALAR } from './constants'
@@ -18,11 +10,11 @@ const summerySpringRendering: RenderingByBlockElement =
         const contour: ContourPiece = to.ContourPiece(numbers
             .slice(from.Index(INITIAL), from.Index(blockElement))
             .map((n: number): ContourElement => ([
-                applyScale(applyOffset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR),
+                apply.Scalar(apply.Offset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR),
                 1,
             ])),
         )
-        dereference(contour, INITIAL)[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
+        apply.Index(contour, INITIAL)[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
 
         return contour
     }

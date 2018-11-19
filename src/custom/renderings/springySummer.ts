@@ -1,5 +1,5 @@
-import { from, Index } from '@musical-patterns/utilities'
-import { applyOffset, applyScale, ContourPiece, EVEN, INITIAL, numbers, to } from '../../../../../src'
+import { apply, from, Index } from '@musical-patterns/utilities'
+import { ContourPiece, EVEN, INITIAL, numbers, to } from '../../../../../src'
 import { ContourElement } from '../../types'
 import { SPRINGY_SUMMER_OFFSET, SPRINGY_SUMMER_SCALAR } from './constants'
 import { RenderingByBlockElement } from './types'
@@ -13,7 +13,7 @@ const springySummerRendering: RenderingByBlockElement =
                 }
 
                 return [
-                    applyScale(applyOffset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR),
+                    apply.Scalar(apply.Offset(n, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR),
                     1,
                 ]
             }),

@@ -1,5 +1,5 @@
-import { Scalar } from '@musical-patterns/utilities'
-import { applyScale, NoteSpec, PartSpec } from '../../../../../src'
+import { apply, Scalar } from '@musical-patterns/utilities'
+import { NoteSpec, PartSpec } from '../../../../../src'
 
 const applyGainScalar: (partSpec: PartSpec, gainScalar: Scalar) => PartSpec =
     (partSpec: PartSpec, gainScalar: Scalar): PartSpec =>
@@ -7,7 +7,7 @@ const applyGainScalar: (partSpec: PartSpec, gainScalar: Scalar) => PartSpec =
             ...noteSpec,
             gainSpec: noteSpec.gainSpec && {
                 ...noteSpec.gainSpec,
-                scalar: applyScale(noteSpec.gainSpec.scalar, gainScalar),
+                scalar: apply.Scalar(noteSpec.gainSpec.scalar, gainScalar),
             },
         }))
 
