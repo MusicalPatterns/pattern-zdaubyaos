@@ -8,15 +8,15 @@ type RenderingByBlockElement = (blockElement: Index) => ContourPiece
 type Renderings = { [x in RenderingName]: Rendering }
 
 enum RenderingName {
-    SPRING = 'spring',
-    SUMMER = 'summer',
-    FALL = 'fall',
-    SUMMERY_SPRING = 'summerySpring',
-    SPRINGY_SUMMER = 'springySummer',
-    GLIS = 'glis',
-    BONY = 'bony',
-    TREM = 'trem',
-    FLATLINE = 'flatline',
+    SPRING = 'SPRING',
+    SUMMER = 'SUMMER',
+    FALL = 'FALL',
+    SUMMERY_SPRING = 'SUMMERY_SPRING',
+    SPRINGY_SUMMER = 'SPRINGY_SUMMER',
+    GLIS = 'GLIS',
+    BONY = 'BONY',
+    TREM = 'TREM',
+    FLATLINE = 'FLATLINE',
 }
 
 export {

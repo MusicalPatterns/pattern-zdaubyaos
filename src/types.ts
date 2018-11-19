@@ -3,20 +3,20 @@ import { ContourElement, NoteSpec } from '../../../src'
 type BuildZdaubyaosNoteSpec = (contourElement: ContourElement) => NoteSpec
 
 enum BarTarget {
-    FIFTEEN = 'fifteen',
-    TWENTYFOUR = 'twentyfour',
+    FIFTEEN = 'FIFTEEN',
+    TWENTYFOUR = 'TWENTYFOUR',
 }
 
 enum BlockStyle {
-    OUZD = 'ouzd',
-    INAI = 'inai',
-    DJIYAI = 'djiyai',
-    IEST = 'iest',
-    UMOW = 'umow',
-    CHUWOW = 'chuwow',
-    NODLE = 'nodle',
-    LIMIN = 'limin',
-    SCEND = 'scend',
+    OUZD = 'OUZD',
+    INAI = 'INAI',
+    DJIYAI = 'DJIYAI',
+    IEST = 'IEST',
+    UMOW = 'UMOW',
+    CHUWOW = 'CHUWOW',
+    NODLE = 'NODLE',
+    LIMIN = 'LIMIN',
+    SCEND = 'SCEND',
 }
 
 export {
