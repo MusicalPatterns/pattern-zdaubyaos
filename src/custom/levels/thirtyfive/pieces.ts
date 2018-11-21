@@ -1,10 +1,5 @@
 import { ContourPiece, DictionaryOf } from '../../../../../../src'
-import {
-    buildRenderings,
-    Rendering,
-    RenderingName,
-    Renderings,
-} from '../../renderings'
+import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
 import { buildThirtyfiveBlocks } from './blocks'
 
 const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece> =

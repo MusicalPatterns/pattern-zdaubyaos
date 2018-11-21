@@ -43,15 +43,15 @@ const buildTrueContourWholes: () => DictionaryOf<ContourWhole> =
             labTo.ContourWhole(sequence([
                 repeatCall(() =>
                         getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                           to.Count(4),
+                    to.Count(4),
                 ),
                 repeatCall(() =>
                         getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                           to.Count(1),
+                    to.Count(1),
                 ),
                 repeatCall(() =>
                         getTrueContours(BlockStyle.UMOW, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                           to.Count(1),
+                    to.Count(1),
                 ),
                 repeatCall(
                     () => getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
