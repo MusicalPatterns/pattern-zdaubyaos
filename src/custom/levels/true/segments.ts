@@ -1,7 +1,7 @@
 // tslint:disable:max-file-line-count
 
-import { to } from '@musical-patterns/utilities'
-import { DictionaryOf, Segment } from '../../../../../../src'
+import { DictionaryOf, to } from '@musical-patterns/utilities'
+import { Segment } from '../../../../../../src'
 import { buildSegment } from '../../../materials'
 import { buildTrueContourWholes } from './wholes'
 

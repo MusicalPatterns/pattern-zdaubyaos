@@ -1,5 +1,5 @@
-import { Index } from '@musical-patterns/utilities'
-import { Block, ContourPiece, DictionaryOf, sequence, to } from '../../../../../../src'
+import { DictionaryOf, Index } from '@musical-patterns/utilities'
+import { Block, ContourPiece, sequence, to } from '../../../../../../src'
 import { BarTarget, BlockStyle } from '../../../types'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
 import { buildTrueBlocks, TrueBlocks } from '../true'
