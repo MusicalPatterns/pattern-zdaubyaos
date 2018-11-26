@@ -1,4 +1,4 @@
-import { DictionaryOf, to } from '@musical-patterns/utilities'
+import { DictionaryOf, to } from '@musical-patterns/shared'
 import { Segment } from '../../../../../../patternMaterial'
 import { buildSegment } from '../../../materials'
 import { buildThirtyfiveContourWholes } from './wholes'

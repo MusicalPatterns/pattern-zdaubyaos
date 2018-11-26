@@ -1,4 +1,4 @@
-import { repeat, to } from '@musical-patterns/utilities'
+import { repeat, to } from '@musical-patterns/shared'
 import { to as labTo } from '../../../../../../nominal'
 import { BarTarget, BlockStyle } from '../../../types'
 import { TrueBlocks } from './types'

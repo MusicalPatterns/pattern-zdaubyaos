@@ -1,4 +1,4 @@
-import { from, Index } from '@musical-patterns/utilities'
+import { from, Index } from '@musical-patterns/shared'
 import { ContourPiece, to } from '../../../../../nominal'
 import { RenderingByBlockElement } from './types'
 

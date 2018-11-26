@@ -1,4 +1,4 @@
-import { Count } from '@musical-patterns/utilities'
+import { Count } from '@musical-patterns/shared'
 import { RenderingName } from '../custom'
 import { BarTarget, BlockStyle } from '../types'
 

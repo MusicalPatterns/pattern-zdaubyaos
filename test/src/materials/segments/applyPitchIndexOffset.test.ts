@@ -1,4 +1,4 @@
-import { Index, to } from '@musical-patterns/utilities'
+import { Index, to } from '@musical-patterns/shared'
 import { NoteSpec, PartSpec } from '../../../../../../indexForTest'
 import { applyPitchIndexOffset } from '../../../../src/indexForTest'
 

@@ -1,4 +1,4 @@
-import { sequence } from '@musical-patterns/utilities'
+import { sequence } from '@musical-patterns/shared'
 import { Block, ContourPiece, to } from '../../../../../nominal'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'

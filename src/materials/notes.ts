@@ -1,4 +1,4 @@
-import { from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
+import { from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/shared'
 import { NoteSpec } from '../../../../compile'
 import {
     DEFAULT_DURATIONS_SCALE_INDEX,

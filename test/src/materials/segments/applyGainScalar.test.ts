@@ -1,4 +1,4 @@
-import { Scalar, to } from '@musical-patterns/utilities'
+import { Scalar, to } from '@musical-patterns/shared'
 import { NoteSpec, PartSpec } from '../../../../../../indexForTest'
 import { applyGainScalar } from '../../../../src/indexForTest'
 

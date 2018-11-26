@@ -1,4 +1,4 @@
-import { apply, DictionaryOf, from, Index, to } from '@musical-patterns/utilities'
+import { apply, DictionaryOf, from, Index, to } from '@musical-patterns/shared'
 import { PartSpec } from '../../../../compile'
 import { INCLUSIVE, INITIAL } from '../../../../constants'
 import { Segment } from '../../../../patternMaterial'

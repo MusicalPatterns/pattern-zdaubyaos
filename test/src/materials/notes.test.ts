@@ -1,4 +1,4 @@
-import { Index, to } from '@musical-patterns/utilities'
+import { Index, to } from '@musical-patterns/shared'
 import { NotePropertySpec, NoteSpec } from '../../../../../indexForTest'
 import { buildNoteSpec } from '../../../src/indexForTest'
 

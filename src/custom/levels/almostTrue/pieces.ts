@@ -1,4 +1,4 @@
-import { DictionaryOf, Index, sequence } from '@musical-patterns/utilities'
+import { DictionaryOf, Index, sequence } from '@musical-patterns/shared'
 import { Block, ContourPiece, to } from '../../../../../../nominal'
 import { BarTarget, BlockStyle } from '../../../types'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
