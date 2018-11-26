@@ -1,5 +1,5 @@
-import { apply, from, Index } from '@musical-patterns/utilities'
-import { ContourPiece, INITIAL, numbers, to } from '../../../../../src'
+import { apply, from, Index, numbers } from '@musical-patterns/utilities'
+import { ContourPiece, INITIAL, to } from '../../../../../src'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ContourElement } from '../../types'
 import { SUMMERY_SPRING_OFFSET, SUMMERY_SPRING_SCALAR } from './constants'

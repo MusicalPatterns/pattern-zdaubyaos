@@ -1,5 +1,5 @@
-import { apply, Count, from, Index, Time, to } from '@musical-patterns/utilities'
-import { Block, ContourPiece, repeat, to as labTo } from '../../../../../src'
+import { apply, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
+import { Block, ContourPiece, to as labTo } from '../../../../../src'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
     FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,

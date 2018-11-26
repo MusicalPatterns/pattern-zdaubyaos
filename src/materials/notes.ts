@@ -1,10 +1,9 @@
-import { from, to } from '@musical-patterns/utilities'
+import { from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
 import {
     DEFAULT_DURATIONS_SCALE_INDEX,
     DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
     FULL_GAIN,
     NoteSpec,
-    offsetFromOneIndexedToZeroIndexed,
     unpackContourElement,
 } from '../../../../src'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'

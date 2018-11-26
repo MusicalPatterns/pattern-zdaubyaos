@@ -1,5 +1,5 @@
-import { DictionaryOf, to } from '@musical-patterns/utilities'
-import { Block, repeat, to as labTo } from '../../../../../../src'
+import { DictionaryOf, repeat, to } from '@musical-patterns/utilities'
+import { Block, to as labTo } from '../../../../../../src'
 
 const buildOtherBlocks: () => DictionaryOf<Block> =
     (): DictionaryOf<Block> => {

@@ -1,5 +1,5 @@
-import { DictionaryOf, to } from '@musical-patterns/utilities'
-import { ContourWhole, repeatCall, sequence, to as labTo } from '../../../../../../src'
+import { DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
+import { ContourWhole, to as labTo } from '../../../../../../src'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { buildOtherContourPieces } from '../other'
