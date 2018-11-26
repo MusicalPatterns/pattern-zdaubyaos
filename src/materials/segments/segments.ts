@@ -1,5 +1,6 @@
 import { apply, DictionaryOf, from } from '@musical-patterns/utilities'
-import { INCLUSIVE, INITIAL, Segment } from '../../../../../src'
+import { INCLUSIVE, INITIAL } from '../../../../../constants'
+import { Segment } from '../../../../../patternMaterial'
 import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {
     buildAlmostTrueSegments,

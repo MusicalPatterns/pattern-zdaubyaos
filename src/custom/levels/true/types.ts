@@ -1,4 +1,4 @@
-import { Block, ContourPiece, ContourWhole } from '../../../../../../src'
+import { Block, ContourPiece, ContourWhole } from '../../../../../../nominal'
 import { BarTarget, BlockStyle } from '../../../types'
 import { Rendering, RenderingName } from '../../renderings'
 

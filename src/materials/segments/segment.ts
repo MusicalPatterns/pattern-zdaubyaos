@@ -1,4 +1,6 @@
-import { ContourWhole, PartSpec, Segment } from '../../../../../src'
+import { PartSpec } from '../../../../../compile'
+import { ContourWhole } from '../../../../../nominal'
+import { Segment } from '../../../../../patternMaterial'
 import { applyNoteStyle } from './applyNoteStyle'
 import { NoteStyle } from './types'
 

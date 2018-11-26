@@ -1,4 +1,4 @@
-import { to } from '../../../../../../src/indexForTest'
+import { to } from '../../../../../../indexForTest'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../../../src/indexForTest'
 
 describe('zdaubyaos rendering functions', () => {

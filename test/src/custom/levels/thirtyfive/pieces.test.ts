@@ -1,4 +1,4 @@
-import { calculateTotalContourDuration, to } from '../../../../../../../src/indexForTest'
+import { calculateTotalContourDuration, to } from '../../../../../../../indexForTest'
 import { buildThirtyfiveContourPieces } from '../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {

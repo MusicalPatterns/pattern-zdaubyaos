@@ -1,5 +1,5 @@
 import { OscillatorName, VoiceType } from '@musical-patterns/performer'
-import { Entity } from '../../../../src'
+import { Entity } from '../../../../compile'
 import { BuildEntitiesFunction } from '../../../types'
 import { buildParts } from './parts'
 

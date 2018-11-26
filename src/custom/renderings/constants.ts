@@ -1,7 +1,7 @@
 // tslint:disable:no-magic-numbers
 
 import { Count, Offset, Scalar, to } from '@musical-patterns/utilities'
-import { Block, to as labTo } from '../../../../../src'
+import { Block, to as labTo } from '../../../../../nominal'
 
 const SUMMERY_SPRING_OFFSET: Offset = to.Offset(-1.5)
 const SUMMERY_SPRING_SCALAR: Scalar = to.Scalar(2)

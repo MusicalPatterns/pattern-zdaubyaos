@@ -1,5 +1,5 @@
 import { from, Index, SumOfIndices, to } from '@musical-patterns/utilities'
-import { NoteSpec, PartSpec } from '../../../../src/indexForTest'
+import { NoteSpec, PartSpec } from '../../../../indexForTest'
 
 const calculateTotalZdaubyaosDuration: (part: PartSpec) => SumOfIndices =
     (part: PartSpec): SumOfIndices =>

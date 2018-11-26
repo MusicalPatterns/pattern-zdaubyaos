@@ -1,5 +1,5 @@
 import { DictionaryOf } from '@musical-patterns/utilities'
-import { Block, to } from '../../../../../../src'
+import { Block, to } from '../../../../../../nominal'
 
 const buildAlmostTrueBlocks: () => DictionaryOf<Block> =
     (): DictionaryOf<Block> => {

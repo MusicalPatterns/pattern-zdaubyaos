@@ -1,4 +1,5 @@
-import { ContourElement, NoteSpec } from '../../../src'
+import { NoteSpec } from '../../../compile'
+import { ContourElement } from '../../../nominal'
 
 type BuildZdaubyaosNoteSpec = (contourElement: ContourElement) => NoteSpec
 

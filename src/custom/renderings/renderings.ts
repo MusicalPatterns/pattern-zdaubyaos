@@ -1,5 +1,5 @@
 import { sequence } from '@musical-patterns/utilities'
-import { Block, ContourPiece, to } from '../../../../../src'
+import { Block, ContourPiece, to } from '../../../../../nominal'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'
 import { flatlineRendering } from './flatline'

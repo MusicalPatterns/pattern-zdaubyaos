@@ -1,4 +1,4 @@
-import { calculateTotalContourDuration, ContourPiece, to } from '../../../../../../../src/indexForTest'
+import { calculateTotalContourDuration, ContourPiece, to } from '../../../../../../../indexForTest'
 import {
     BarTarget,
     BlockStyle,

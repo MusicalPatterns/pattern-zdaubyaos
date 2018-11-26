@@ -1,5 +1,7 @@
 import { apply, DictionaryOf, from, Index, to } from '@musical-patterns/utilities'
-import { INCLUSIVE, INITIAL, PartSpec, Segment } from '../../../../src'
+import { PartSpec } from '../../../../compile'
+import { INCLUSIVE, INITIAL } from '../../../../constants'
+import { Segment } from '../../../../patternMaterial'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { buildSegments } from './segments'
 

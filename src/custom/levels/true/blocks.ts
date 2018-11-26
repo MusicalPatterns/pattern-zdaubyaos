@@ -1,5 +1,5 @@
 import { repeat, to } from '@musical-patterns/utilities'
-import { to as labTo } from '../../../../../../src'
+import { to as labTo } from '../../../../../../nominal'
 import { BarTarget, BlockStyle } from '../../../types'
 import { TrueBlocks } from './types'
 

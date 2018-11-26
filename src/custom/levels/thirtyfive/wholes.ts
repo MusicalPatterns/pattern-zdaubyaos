@@ -1,5 +1,6 @@
 import { DictionaryOf, repeat, sequence, to } from '@musical-patterns/utilities'
-import { calculateTotalContourDuration, ContourWhole, rest, to as labTo } from '../../../../../../src'
+import { ContourWhole, to as labTo } from '../../../../../../nominal'
+import { calculateTotalContourDuration, rest } from '../../../../../../patternMaterial'
 import { buildThirtyfiveContourPieces } from './pieces'
 
 const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole> =
