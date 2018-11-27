@@ -1,5 +1,4 @@
-import { DictionaryOf, from, repeat, repeatCall, sequence, to } from '@musical-patterns/shared'
-import { INITIAL } from '../../../../../../constants'
+import { DictionaryOf, from, INITIAL, repeat, repeatCall, sequence, to } from '@musical-patterns/shared'
 import { ContourWhole, to as labTo } from '../../../../../../nominal'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'

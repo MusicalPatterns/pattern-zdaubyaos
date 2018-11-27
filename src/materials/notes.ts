@@ -4,8 +4,8 @@ import {
     DEFAULT_DURATIONS_SCALE_INDEX,
     DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
     FULL_GAIN,
-} from '../../../../constants'
-import { unpackContourElement } from '../../../../patternMaterial'
+    unpackContourElement,
+} from '../../../../patternMaterial'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildZdaubyaosNoteSpec, ContourElement } from '../types'
 

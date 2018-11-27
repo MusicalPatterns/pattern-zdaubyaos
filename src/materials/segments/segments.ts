@@ -1,5 +1,4 @@
-import { apply, DictionaryOf, from } from '@musical-patterns/shared'
-import { INCLUSIVE, INITIAL } from '../../../../../constants'
+import { apply, DictionaryOf, from, INCLUSIVE, INITIAL } from '@musical-patterns/shared'
 import { Segment } from '../../../../../patternMaterial'
 import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {
