@@ -1,5 +1,4 @@
-import { Index, to } from '@musical-patterns/shared'
-import { NotePropertySpec, NoteSpec } from '../../../../../indexForTest'
+import { Index, NotePropertySpec, NoteSpec, to } from '@musical-patterns/shared'
 import { buildNoteSpec } from '../../../src/indexForTest'
 
 const DURATIONS_SCALE_INDEX: Index = to.Index(1)

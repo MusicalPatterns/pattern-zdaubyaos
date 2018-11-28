@@ -1,4 +1,4 @@
-import { PartSpec } from '../../../../../compile'
+import { PartSpec } from '@musical-patterns/shared'
 import { ContourWhole } from '../../../../../nominal'
 import { Segment } from '../../../../../patternMaterial'
 import { applyNoteStyle } from './applyNoteStyle'

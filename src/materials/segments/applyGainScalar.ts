@@ -1,5 +1,4 @@
-import { apply, Scalar } from '@musical-patterns/shared'
-import { NoteSpec, PartSpec } from '../../../../../compile'
+import { apply, NoteSpec, PartSpec, Scalar } from '@musical-patterns/shared'
 
 const applyGainScalar: (partSpec: PartSpec, gainScalar: Scalar) => PartSpec =
     (partSpec: PartSpec, gainScalar: Scalar): PartSpec =>
