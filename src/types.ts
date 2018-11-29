@@ -1,4 +1,4 @@
-import { NoteSpec } from '@musical-patterns/shared'
+import { NoteSpec } from '@musical-patterns/utilities'
 import { ContourElement } from '../../../nominal'
 
 type BuildZdaubyaosNoteSpec = (contourElement: ContourElement) => NoteSpec

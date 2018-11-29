@@ -1,4 +1,4 @@
-import { apply, EVEN, from, Index, INITIAL, numbers } from '@musical-patterns/shared'
+import { apply, EVEN, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
 import { ContourPiece, to } from '../../../../../nominal'
 import { ContourElement } from '../../types'
 import { SPRINGY_SUMMER_OFFSET, SPRINGY_SUMMER_SCALAR } from './constants'

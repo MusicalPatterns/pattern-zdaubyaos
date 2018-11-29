@@ -1,4 +1,4 @@
-import { DictionaryOf, repeat, sequence, to } from '@musical-patterns/shared'
+import { DictionaryOf, repeat, sequence, to } from '@musical-patterns/utilities'
 import { ContourWhole, to as labTo } from '../../../../../../nominal'
 import { calculateTotalContourDuration, rest } from '../../../../../../patternMaterial'
 import { buildThirtyfiveContourPieces } from './pieces'

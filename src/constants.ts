@@ -1,6 +1,6 @@
 // tslint:disable:no-magic-numbers
 
-import { Count, Index, Offset, Scalar, Time, to } from '@musical-patterns/shared'
+import { Count, Index, Offset, Scalar, Time, to } from '@musical-patterns/utilities'
 
 const FIFTEEN: Time = to.Time(15)
 const TWENTYFOUR: Time = to.Time(24)

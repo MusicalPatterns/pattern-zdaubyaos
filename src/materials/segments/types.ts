@@ -1,4 +1,4 @@
-import { Index, Offset, Scalar } from '@musical-patterns/shared'
+import { Index, Offset, Scalar } from '@musical-patterns/utilities'
 
 interface NoteStyle {
     gainScalar?: Scalar,

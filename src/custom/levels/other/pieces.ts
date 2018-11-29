@@ -1,4 +1,4 @@
-import { DictionaryOf } from '@musical-patterns/shared'
+import { DictionaryOf } from '@musical-patterns/utilities'
 import { ContourPiece } from '../../../../../../nominal'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
 import { buildOtherBlocks } from './blocks'

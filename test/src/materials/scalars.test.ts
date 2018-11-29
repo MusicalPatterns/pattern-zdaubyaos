@@ -1,4 +1,4 @@
-import { DictionaryOf, Scalar, to } from '@musical-patterns/shared'
+import { DictionaryOf, Scalar, to } from '@musical-patterns/utilities'
 import { buildScalars } from '../../../src/indexForTest'
 
 describe('zdaubyaos scales', () => {

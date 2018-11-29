@@ -1,4 +1,4 @@
-import { apply, Count, from, Index, repeat, Time, to } from '@musical-patterns/shared'
+import { apply, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
 import { Block, ContourPiece, to as labTo } from '../../../../../nominal'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {

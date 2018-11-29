@@ -1,4 +1,4 @@
-import { DictionaryOf, repeat, to } from '@musical-patterns/shared'
+import { DictionaryOf, repeat, to } from '@musical-patterns/utilities'
 import { ContourWhole, to as labTo } from '../../../../../../nominal'
 import { rest } from '../../../../../../patternMaterial'
 import { BarTarget, BlockStyle } from '../../../types'

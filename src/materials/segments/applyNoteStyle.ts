@@ -1,4 +1,4 @@
-import { apply, PartSpec } from '@musical-patterns/shared'
+import { apply, PartSpec } from '@musical-patterns/utilities'
 import { ContourWhole } from '../../../../../nominal'
 import { OFFSET_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
 import { buildNoteSpec } from '../notes'

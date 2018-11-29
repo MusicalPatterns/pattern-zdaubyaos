@@ -1,4 +1,4 @@
-import { apply, from, Index, INITIAL, numbers } from '@musical-patterns/shared'
+import { apply, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
 import { ContourPiece, to } from '../../../../../nominal'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ContourElement } from '../../types'
