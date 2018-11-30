@@ -1,6 +1,5 @@
+import { ContourWhole, rest, to as patternTo } from '@musical-patterns/pattern'
 import { DictionaryOf, repeat, to } from '@musical-patterns/utilities'
-import { ContourWhole, to as labTo } from '../../../../../../nominal'
-import { rest } from '../../../../../../patternMaterial'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { buildAlmostTrueContourPieces } from '../almostTrue'
@@ -12,27 +11,27 @@ const buildBreatherContourWholes: () => DictionaryOf<ContourWhole> =
         const { inaiiiVarietyContourPiece } = buildAlmostTrueContourPieces()
         const { backboneTwentyfourContourPiece } = buildOtherContourPieces()
 
-        const breatherRestContourWhole: ContourWhole = labTo.ContourWhole(rest(24))
-        const breatherSpringContourWhole: ContourWhole = labTo.ContourWhole(getTrueContours(
+        const breatherRestContourWhole: ContourWhole = patternTo.ContourWhole(rest(24))
+        const breatherSpringContourWhole: ContourWhole = patternTo.ContourWhole(getTrueContours(
             BlockStyle.INAI,
             BarTarget.TWENTYFOUR,
             RenderingName.SPRING,
         ))
-        const breatherSummerContourWhole: ContourWhole = labTo.ContourWhole(getTrueContours(
+        const breatherSummerContourWhole: ContourWhole = patternTo.ContourWhole(getTrueContours(
             BlockStyle.INAI,
             BarTarget.TWENTYFOUR,
             RenderingName.SUMMER,
         ))
-        const doubleBreatherFallContourWhole: ContourWhole = labTo.ContourWhole(
+        const doubleBreatherFallContourWhole: ContourWhole = patternTo.ContourWhole(
             repeat(backboneTwentyfourContourPiece, to.Count(2)),
         )
-        const breatherVarietyContourWhole: ContourWhole = labTo.ContourWhole(inaiiiVarietyContourPiece)
-        const breatherSpringAltContourWhole: ContourWhole = labTo.ContourWhole(getTrueContours(
+        const breatherVarietyContourWhole: ContourWhole = patternTo.ContourWhole(inaiiiVarietyContourPiece)
+        const breatherSpringAltContourWhole: ContourWhole = patternTo.ContourWhole(getTrueContours(
             BlockStyle.OUZD,
             BarTarget.TWENTYFOUR,
             RenderingName.SPRING,
         ))
-        const doubleBreatherRestContourWhole: ContourWhole = labTo.ContourWhole(rest(48))
+        const doubleBreatherRestContourWhole: ContourWhole = patternTo.ContourWhole(rest(48))
 
         return {
             breatherRestContourWhole,

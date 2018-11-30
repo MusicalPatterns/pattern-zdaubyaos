@@ -1,5 +1,5 @@
+import { ContourPiece, to } from '@musical-patterns/pattern'
 import { from, Index } from '@musical-patterns/utilities'
-import { ContourPiece, to } from '../../../../../nominal'
 import { RenderingByBlockElement } from './types'
 
 const flatlineRendering: RenderingByBlockElement =

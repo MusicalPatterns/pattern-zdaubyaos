@@ -1,5 +1,5 @@
+import { Segment } from '@musical-patterns/pattern'
 import { DictionaryOf, to } from '@musical-patterns/utilities'
-import { Segment } from '../../../../../../patternMaterial'
 import { buildSegment } from '../../../materials'
 import { buildOtherContourWholes } from './wholes'
 

@@ -1,5 +1,5 @@
+import { ContourWhole, to as patternTo } from '@musical-patterns/pattern'
 import { DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
-import { ContourWhole, to as labTo } from '../../../../../../nominal'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { buildOtherContourPieces } from '../other'
@@ -7,7 +7,7 @@ import { getTrueContours } from '../true'
 
 const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole =
     (renderingName: RenderingName): ContourWhole =>
-        labTo.ContourWhole(sequence([
+        patternTo.ContourWhole(sequence([
             repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName), to.Count(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, renderingName),
@@ -32,13 +32,13 @@ const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.GLIS)
 
         const almostTrueYetOfBackboneContourWhole: ContourWhole =
-            labTo.ContourWhole(sequence([
+            patternTo.ContourWhole(sequence([
                 repeatCall(() => backboneFifteenContourPiece, to.Count(8)),
                 repeatCall(() => backboneTwentyfourContourPiece, to.Count(3)),
             ]))
 
         const almostTrueZdaubBonyWithSuperinscapeContourWhole: ContourWhole =
-            labTo.ContourWhole(sequence([
+            patternTo.ContourWhole(sequence([
                 repeatCall(
                     () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), to.Count(3),
                 ),
@@ -50,7 +50,7 @@ const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole> =
             ]))
 
         const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole: ContourWhole =
-            labTo.ContourWhole(sequence([
+            patternTo.ContourWhole(sequence([
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.FALL),

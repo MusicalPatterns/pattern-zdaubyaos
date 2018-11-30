@@ -1,5 +1,5 @@
+import { Block, ContourPiece } from '@musical-patterns/pattern'
 import { Index } from '@musical-patterns/utilities'
-import { Block, ContourPiece } from '../../../../../nominal'
 
 type Rendering = (block: Block) => ContourPiece
 

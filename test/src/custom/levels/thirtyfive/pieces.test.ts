@@ -1,4 +1,4 @@
-import { calculateTotalContourDuration, to } from '../../../../../../../indexForTest'
+import { calculateTotalContourDuration, to } from '@musical-patterns/pattern'
 import { buildThirtyfiveContourPieces } from '../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {

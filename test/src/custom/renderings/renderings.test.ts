@@ -1,4 +1,4 @@
-import { to } from '../../../../../../indexForTest'
+import { to } from '@musical-patterns/pattern'
 import { buildRenderings, Rendering, RenderingName, Renderings } from '../../../../src/indexForTest'
 
 describe('zdaubyaos rendering functions', () => {

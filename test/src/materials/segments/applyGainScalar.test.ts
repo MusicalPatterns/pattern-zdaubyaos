@@ -1,4 +1,5 @@
-import { NoteSpec, PartSpec, Scalar, to } from '@musical-patterns/utilities'
+import { NoteSpec, PartSpec } from '@musical-patterns/compiler'
+import { Scalar, to } from '@musical-patterns/utilities'
 import { applyGainScalar } from '../../../../src/indexForTest'
 
 const testNoteSpec: (gain: Scalar) => NoteSpec =

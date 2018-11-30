@@ -1,6 +1,5 @@
-import { PartSpec } from '@musical-patterns/utilities'
-import { ContourWhole } from '../../../../../nominal'
-import { Segment } from '../../../../../patternMaterial'
+import { PartSpec } from '@musical-patterns/compiler'
+import { ContourWhole, Segment } from '@musical-patterns/pattern'
 import { applyNoteStyle } from './applyNoteStyle'
 import { NoteStyle } from './types'
 

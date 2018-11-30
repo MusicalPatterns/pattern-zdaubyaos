@@ -1,10 +1,11 @@
-import { from, NoteSpec, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
+import { NoteSpec } from '@musical-patterns/compiler'
 import {
     DEFAULT_DURATIONS_SCALE_INDEX,
     DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
     FULL_GAIN,
     unpackContourElement,
-} from '../../../../patternMaterial'
+} from '@musical-patterns/pattern'
+import { from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildZdaubyaosNoteSpec, ContourElement } from '../types'
 

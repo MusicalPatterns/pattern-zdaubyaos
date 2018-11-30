@@ -1,4 +1,4 @@
-import { calculateTotalContourDuration, ContourPiece, to } from '../../../../../../../indexForTest'
+import { calculateTotalContourDuration, ContourPiece, to } from '@musical-patterns/pattern'
 import {
     BarTarget,
     BlockStyle,

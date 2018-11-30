@@ -1,4 +1,4 @@
-import { Block, ContourPiece, ContourWhole } from '../../../../../../nominal'
+import { Block, ContourPiece, ContourWhole } from '@musical-patterns/pattern'
 import { BarTarget, BlockStyle } from '../../../types'
 import { Rendering, RenderingName } from '../../renderings'
 

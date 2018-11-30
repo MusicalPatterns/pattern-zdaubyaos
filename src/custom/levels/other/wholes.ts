@@ -1,5 +1,5 @@
+import { ContourWhole, to as patternTo } from '@musical-patterns/pattern'
 import { DictionaryOf, from, INITIAL, repeat, repeatCall, sequence, to } from '@musical-patterns/utilities'
-import { ContourWhole, to as labTo } from '../../../../../../nominal'
 import { BarTarget, BlockStyle } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { getTrueContours } from '../true'
@@ -15,21 +15,21 @@ const buildOtherContourWholes: () => DictionaryOf<ContourWhole> =
             shiftyTwentyfourVariantContourPiece,
         } = buildOtherContourPieces()
 
-        const secretLongChordContourWhole: ContourWhole = labTo.ContourWhole(secretLongChordContourPiece)
+        const secretLongChordContourWhole: ContourWhole = patternTo.ContourWhole(secretLongChordContourPiece)
 
-        const totallyOutThereContourWhole: ContourWhole = labTo.ContourWhole(repeat(
+        const totallyOutThereContourWhole: ContourWhole = patternTo.ContourWhole(repeat(
             getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER)
                 .slice(from.Index(INITIAL), 8),
             to.Count(3),
         ))
 
-        const shiftyAContourWhole: ContourWhole = labTo.ContourWhole(sequence([
+        const shiftyAContourWhole: ContourWhole = patternTo.ContourWhole(sequence([
             repeatCall(() => shiftyFifteenContourPiece, to.Count(3)),
             repeatCall(() => shiftyTwentyfourContourPiece, to.Count(4)),
             repeatCall(() => shiftyTwentyfourVariantContourPiece, to.Count(3)),
         ]))
 
-        const shiftyBContourWhole: ContourWhole = labTo.ContourWhole(shiftyContourPiece)
+        const shiftyBContourWhole: ContourWhole = patternTo.ContourWhole(shiftyContourPiece)
 
         return {
             secretLongChordContourWhole,

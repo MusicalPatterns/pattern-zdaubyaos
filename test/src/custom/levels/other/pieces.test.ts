@@ -1,4 +1,4 @@
-import { to } from '../../../../../../../indexForTest'
+import { to } from '@musical-patterns/pattern'
 import { buildOtherContourPieces } from '../../../../../src/indexForTest'
 
 describe('other contour pieces', () => {
