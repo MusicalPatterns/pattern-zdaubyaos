@@ -1,5 +1,4 @@
-import { BuildEntitiesFunction, Entity } from '@musical-patterns/compiler'
-import { OscillatorName, VoiceType } from '@musical-patterns/performer'
+import { BuildEntitiesFunction, Entity, TimbreName } from '@musical-patterns/compiler'
 import { buildParts } from './parts'
 
 const buildEntities: BuildEntitiesFunction =
@@ -12,17 +11,17 @@ const buildEntities: BuildEntitiesFunction =
 
         const zdaubyaosSubparticularOrDubparticularSquareEntity: Entity = {
             partSpec: zdaubyaosSubparticularOrDubparticularPart,
-            voiceSpec: { timbre: OscillatorName.SQUARE, voiceType: VoiceType.OSCILLATOR },
+            timbreName: TimbreName.SQUARE,
         }
 
         const zdaubyaosSuperparticularOrDuperparticularSawEntity: Entity = {
             partSpec: zdaubyaosSuperparticularOrDuperparticularPart,
-            voiceSpec: { timbre: OscillatorName.SAWTOOTH, voiceType: VoiceType.OSCILLATOR },
+            timbreName: TimbreName.SAWTOOTH,
         }
 
         const zdaubyaosHarmonicOrSubharmonicSineEntity: Entity = {
             partSpec: zdaubyaosHarmonicOrSubharmonicPart,
-            voiceSpec: { timbre: OscillatorName.SINE, voiceType: VoiceType.OSCILLATOR },
+            timbreName: TimbreName.SINE,
         }
 
         return [
