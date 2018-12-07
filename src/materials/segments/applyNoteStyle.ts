@@ -1,4 +1,4 @@
-import { PartSpec } from '@musical-patterns/compiler'
+import { NoteSpec } from '@musical-patterns/compiler'
 import { ContourWhole } from '@musical-patterns/pattern'
 import { apply } from '@musical-patterns/utilities'
 import { OFFSET_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
@@ -8,9 +8,9 @@ import { applyPitchIndexOffset } from './applyPitchIndexOffset'
 import { applyScaleIndex } from './applyScaleIndex'
 import { NoteStyle } from './types'
 
-const applyNoteStyle: (contourWhole: ContourWhole, noteStyle: NoteStyle) => PartSpec =
-    (contourWhole: ContourWhole, noteStyle: NoteStyle): PartSpec => {
-        let part: PartSpec = contourWhole.map(buildNoteSpec)
+const applyNoteStyle: (contourWhole: ContourWhole, noteStyle: NoteStyle) => NoteSpec[] =
+    (contourWhole: ContourWhole, noteStyle: NoteStyle): NoteSpec[] => {
+        let part: NoteSpec[] = contourWhole.map(buildNoteSpec)
 
         const { gainScalar, pitchIndexOffset, scaleIndex } = noteStyle
 

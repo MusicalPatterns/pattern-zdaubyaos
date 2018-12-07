@@ -1,4 +1,4 @@
-import { NoteSpec, PartSpec } from '@musical-patterns/compiler'
+import { NoteSpec } from '@musical-patterns/compiler'
 import { Index, to } from '@musical-patterns/utilities'
 import { applyPitchIndexOffset } from '../../../../src/indexForTest'
 
@@ -7,13 +7,13 @@ const testNoteSpec: (pitch: Index) => NoteSpec =
 
 describe('apply pitch index offset', () => {
     it('offsets the pitch index of every note', () => {
-        const part: PartSpec = [
+        const part: NoteSpec[] = [
             testNoteSpec(to.Index(1)),
             testNoteSpec(to.Index(2)),
             testNoteSpec(to.Index(4)),
         ]
 
-        const expectedPart: PartSpec = [
+        const expectedPart: NoteSpec[] = [
             testNoteSpec(to.Index(2)),
             testNoteSpec(to.Index(3)),
             testNoteSpec(to.Index(5)),

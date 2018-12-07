@@ -1,18 +1,18 @@
-import { PartSpec } from '@musical-patterns/compiler'
+import { NoteSpec } from '@musical-patterns/compiler'
 import { Segment } from '@musical-patterns/pattern'
 import { apply, DictionaryOf, from, INCLUSIVE, Index, INITIAL, to } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { buildSegments } from './segments'
 
-const buildParts: () => DictionaryOf<PartSpec> =
-    (): DictionaryOf<PartSpec> => {
+const buildParts: () => DictionaryOf<NoteSpec[]> =
+    (): DictionaryOf<NoteSpec[]> => {
         const segments: Segment[] = buildSegments()
 
         const end: Index = to.Index(segments.length)
 
-        let zdaubyaosSubparticularOrDubparticularPart: PartSpec = []
-        let zdaubyaosSuperparticularOrDuperparticularPart: PartSpec = []
-        let zdaubyaosHarmonicOrSubharmonicPart: PartSpec = []
+        let zdaubyaosSubparticularOrDubparticularPart: NoteSpec[] = []
+        let zdaubyaosSuperparticularOrDuperparticularPart: NoteSpec[] = []
+        let zdaubyaosHarmonicOrSubharmonicPart: NoteSpec[] = []
 
         segments.slice(from.Index(INITIAL), from.Index(apply.Offset(end, INCLUSIVE)))
             .forEach((segment: Segment): void => {

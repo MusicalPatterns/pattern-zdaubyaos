@@ -10,17 +10,17 @@ const buildEntities: BuildEntitiesFunction =
         } = buildParts()
 
         const zdaubyaosSubparticularOrDubparticularSquareEntity: Entity = {
-            partSpec: zdaubyaosSubparticularOrDubparticularPart,
+            noteSpecs: zdaubyaosSubparticularOrDubparticularPart,
             timbreName: TimbreName.SQUARE,
         }
 
         const zdaubyaosSuperparticularOrDuperparticularSawEntity: Entity = {
-            partSpec: zdaubyaosSuperparticularOrDuperparticularPart,
+            noteSpecs: zdaubyaosSuperparticularOrDuperparticularPart,
             timbreName: TimbreName.SAWTOOTH,
         }
 
         const zdaubyaosHarmonicOrSubharmonicSineEntity: Entity = {
-            partSpec: zdaubyaosHarmonicOrSubharmonicPart,
+            noteSpecs: zdaubyaosHarmonicOrSubharmonicPart,
             timbreName: TimbreName.SINE,
         }
 

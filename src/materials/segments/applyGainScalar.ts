@@ -1,9 +1,9 @@
-import { NoteSpec, PartSpec } from '@musical-patterns/compiler'
+import { NoteSpec } from '@musical-patterns/compiler'
 import { apply, Scalar } from '@musical-patterns/utilities'
 
-const applyGainScalar: (partSpec: PartSpec, gainScalar: Scalar) => PartSpec =
-    (partSpec: PartSpec, gainScalar: Scalar): PartSpec =>
-        partSpec.map((noteSpec: NoteSpec): NoteSpec => ({
+const applyGainScalar: (part: NoteSpec[], gainScalar: Scalar) => NoteSpec[] =
+    (part: NoteSpec[], gainScalar: Scalar): NoteSpec[] =>
+        part.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             gainSpec: noteSpec.gainSpec && {
                 ...noteSpec.gainSpec,
