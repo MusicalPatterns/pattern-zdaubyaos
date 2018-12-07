@@ -6,7 +6,7 @@ fun with the superparticular series & variants, plus stepwise motion within recu
 
 **zdaub**: melodic; inherited from stepwise
 
-**yaos**: rhythmic; inherited from oumaotcou'aoiest
+**yaos**: rhythmic; inherited from oumaotcou'ao'iest
 
 Each of these styles has its own Blocks and Renderings which create Contours mostly of length either 15 or 24. 
 
