@@ -1,11 +1,13 @@
 import { BuildScalesFunction, Scale } from '@musical-patterns/compiler'
-import { buildStandardScales, PatternSpec, scaleFromScalarsAndScalar } from '@musical-patterns/pattern'
-import { Scalar } from '@musical-patterns/utilities'
+import { buildStandardScales, PatternSpec } from '@musical-patterns/pattern'
+import { Offset, Scalar, to } from '@musical-patterns/utilities'
 import { buildScalars } from './scalars'
 
 const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {
-    const patternPitchScalar: Scalar = patternSpec.patternPitchScalar
-    const patternDurationScalar: Scalar = patternSpec.patternDurationScalar
+    const patternPitchScalar: Scalar = patternSpec.patternPitchScalar || to.Scalar(1)
+    const patternPitchOffset: Offset = patternSpec.patternPitchOffset || to.Offset(0)
+    const patternDurationScalar: Scalar = patternSpec.patternDurationScalar || to.Scalar(1)
+    const patternDurationOffset: Offset = patternSpec.patternDurationOffset || to.Offset(0)
 
     const {
         subparticularSeriesScalars,
@@ -22,13 +24,13 @@ const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => 
 
     return [
         flatDurationsScale,
-        scaleFromScalarsAndScalar(flatDurationsScale.scalars, patternDurationScalar),
-        scaleFromScalarsAndScalar(subparticularSeriesScalars, patternPitchScalar),
-        scaleFromScalarsAndScalar(dubparticularSeriesScalars, patternPitchScalar),
-        scaleFromScalarsAndScalar(harmonicSeriesScale.scalars, patternPitchScalar),
-        scaleFromScalarsAndScalar(superparticularSeriesScalars, patternPitchScalar),
-        scaleFromScalarsAndScalar(duperparticularSeriesScalars, patternPitchScalar),
-        scaleFromScalarsAndScalar(subharmonicSeriesScale.scalars, patternPitchScalar),
+        { scalars: flatDurationsScale.scalars, scalar: patternDurationScalar, offset: patternDurationOffset },
+        { scalars: subparticularSeriesScalars, scalar: patternPitchScalar, offset: patternPitchOffset },
+        { scalars: dubparticularSeriesScalars, scalar: patternPitchScalar, offset: patternPitchOffset },
+        { scalars: harmonicSeriesScale.scalars, scalar: patternPitchScalar, offset: patternPitchOffset },
+        { scalars: superparticularSeriesScalars, scalar: patternPitchScalar, offset: patternPitchOffset },
+        { scalars: duperparticularSeriesScalars, scalar: patternPitchScalar, offset: patternPitchOffset },
+        { scalars: subharmonicSeriesScale.scalars, scalar: patternPitchScalar, offset: patternPitchOffset },
     ]
 }
 
