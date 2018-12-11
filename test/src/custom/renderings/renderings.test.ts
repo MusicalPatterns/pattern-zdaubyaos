@@ -1,5 +1,5 @@
-import { to } from '@musical-patterns/pattern'
-import { buildRenderings, Rendering, RenderingName, Renderings } from '../../../../src/indexForTest'
+import { Rendering, to } from '@musical-patterns/pattern'
+import { buildRenderings, RenderingName, Renderings } from '../../../../src/indexForTest'
 
 describe('zdaubyaos rendering functions', () => {
     let renderings: Renderings

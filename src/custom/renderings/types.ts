@@ -1,9 +1,4 @@
-import { Block, ContourPiece } from '@musical-patterns/pattern'
-import { Index } from '@musical-patterns/utilities'
-
-type Rendering = (block: Block) => ContourPiece
-
-type RenderingByBlockElement = (blockElement: Index) => ContourPiece
+import { Rendering } from '@musical-patterns/pattern'
 
 type Renderings = { [x in RenderingName]: Rendering }
 
@@ -21,7 +16,5 @@ enum RenderingName {
 
 export {
     Renderings,
-    Rendering,
     RenderingName,
-    RenderingByBlockElement,
 }

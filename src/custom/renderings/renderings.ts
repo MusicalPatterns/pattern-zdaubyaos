@@ -1,4 +1,4 @@
-import { Block, ContourPiece, to } from '@musical-patterns/pattern'
+import { Block, ContourPiece, Rendering, RenderingByBlockElement, to } from '@musical-patterns/pattern'
 import { sequence } from '@musical-patterns/utilities'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'
@@ -9,7 +9,7 @@ import { springySummerRendering } from './springySummer'
 import { summerRendering } from './summer'
 import { summerySpringRendering } from './summerySpring'
 import { tremRendering } from './trem'
-import { Rendering, RenderingByBlockElement, RenderingName, Renderings } from './types'
+import { RenderingName, Renderings } from './types'
 
 const renderByBlockElement: (renderingByBlockElement: RenderingByBlockElement) => Rendering =
     (renderingByBlockElement: RenderingByBlockElement): Rendering =>

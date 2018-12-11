@@ -1,6 +1,6 @@
-import { ContourPiece } from '@musical-patterns/pattern'
+import { ContourPiece, Rendering } from '@musical-patterns/pattern'
 import { DictionaryOf } from '@musical-patterns/utilities'
-import { buildRenderings, Rendering, RenderingName, Renderings } from '../../renderings'
+import { buildRenderings, RenderingName, Renderings } from '../../renderings'
 import { buildThirtyfiveBlocks } from './blocks'
 
 const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece> =

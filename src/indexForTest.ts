@@ -18,7 +18,6 @@ export {
     applyGainScalar,
     applyPitchIndexOffset,
     TrueContourPieces,
-    Rendering,
     RenderingName,
 } from './custom/indexForTest'
 export { pattern } from './patterns'

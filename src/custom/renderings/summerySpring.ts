@@ -1,9 +1,8 @@
-import { ContourPiece, to } from '@musical-patterns/pattern'
+import { ContourPiece, RenderingByBlockElement, to } from '@musical-patterns/pattern'
 import { apply, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ContourElement } from '../../types'
 import { SUMMERY_SPRING_OFFSET, SUMMERY_SPRING_SCALAR } from './constants'
-import { RenderingByBlockElement } from './types'
 
 const summerySpringRendering: RenderingByBlockElement =
     (blockElement: Index): ContourPiece => {

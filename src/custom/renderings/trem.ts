@@ -1,6 +1,5 @@
-import { ContourPiece, to as patternTo } from '@musical-patterns/pattern'
+import { ContourPiece, RenderingByBlockElement, to as patternTo } from '@musical-patterns/pattern'
 import { from, Index, repeat, to } from '@musical-patterns/utilities'
-import { RenderingByBlockElement } from './types'
 
 const tremRendering: RenderingByBlockElement =
     (blockElement: Index): ContourPiece =>

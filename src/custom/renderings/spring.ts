@@ -1,9 +1,8 @@
-import { ContourPiece, to } from '@musical-patterns/pattern'
+import { ContourPiece, RenderingByBlockElement, to } from '@musical-patterns/pattern'
 import { apply, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ContourElement } from '../../types'
 import { SINGLE_DURATION } from './constants'
-import { RenderingByBlockElement } from './types'
 
 const springRendering: RenderingByBlockElement =
     (blockElement: Index): ContourPiece => {

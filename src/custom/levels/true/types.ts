@@ -1,6 +1,6 @@
-import { Block, ContourPiece, ContourWhole } from '@musical-patterns/pattern'
+import { Block, ContourPiece, ContourWhole, Rendering } from '@musical-patterns/pattern'
 import { BarTarget, BlockStyle } from '../../../types'
-import { Rendering, RenderingName } from '../../renderings'
+import { RenderingName } from '../../renderings'
 
 type ByRenderingName = { [z in RenderingName]: ContourPiece }
 type ByBlockStyle = { [y in BlockStyle]: ByRenderingName }

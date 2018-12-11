@@ -1,4 +1,4 @@
-import { Block, ContourPiece, to as patternTo } from '@musical-patterns/pattern'
+import { Block, ContourPiece, Rendering, to as patternTo } from '@musical-patterns/pattern'
 import { apply, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
@@ -7,7 +7,6 @@ import {
     TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR,
     TWENTYFOUR_BONY_BLOCKS,
 } from './constants'
-import { Rendering } from './types'
 
 const bonyRendering: Rendering =
     (block: Block): ContourPiece => {

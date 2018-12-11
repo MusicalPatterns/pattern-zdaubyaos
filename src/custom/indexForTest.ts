@@ -11,7 +11,6 @@ export {
 export {
     buildRenderings,
     Renderings,
-    Rendering,
     RenderingName,
 } from './renderings/indexForTest'
 export {

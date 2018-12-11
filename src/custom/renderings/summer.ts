@@ -1,7 +1,6 @@
-import { ContourPiece, to } from '@musical-patterns/pattern'
+import { ContourPiece, RenderingByBlockElement, to } from '@musical-patterns/pattern'
 import { EVEN, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
 import { ContourElement } from '../../types'
-import { RenderingByBlockElement } from './types'
 
 const summerRendering: RenderingByBlockElement =
     (blockElement: Index): ContourPiece =>

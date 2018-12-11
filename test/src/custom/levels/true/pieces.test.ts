@@ -1,4 +1,4 @@
-import { calculateTotalContourDuration, ContourPiece, to } from '@musical-patterns/pattern'
+import { calculateTotalContourDuration, ContourPiece, Rendering, to } from '@musical-patterns/pattern'
 import {
     BarTarget,
     BlockStyle,
@@ -197,15 +197,15 @@ describe('true contours', () => {
                         ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ rendering, contours ]: [ Rendering, ContourPiece ]) => {
-                                    switch (rendering) {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece ]) => {
+                                    switch (renderingName) {
                                         case RenderingName.SPRING:
                                         case RenderingName.SUMMER:
                                         case RenderingName.FALL:
                                         case RenderingName.SUMMERY_SPRING:
                                         case RenderingName.SPRINGY_SUMMER:
                                             expect(calculateTotalContourDuration(contours) % 15)
-                                                .toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                                                .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         default:
                                     }
@@ -474,12 +474,12 @@ describe('true contours', () => {
                         ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ rendering, contours ]: [ Rendering, ContourPiece ]): void => {
-                                    switch (rendering) {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece ]): void => {
+                                    switch (renderingName) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:
                                             expect(calculateTotalContourDuration(contours) % 24)
-                                                .toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                                                .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         case RenderingName.BONY:
                                             switch (blockStyle) {
@@ -490,7 +490,7 @@ describe('true contours', () => {
                                                     break
                                                 default:
                                                     expect(calculateTotalContourDuration(contours) % 24)
-                                                        .toBe(0, `rendering ${blockStyle} as ${rendering}`)
+                                                        .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             }
                                             break
                                         default:
