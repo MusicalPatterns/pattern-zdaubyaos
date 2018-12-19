@@ -4,3 +4,7 @@ pull:
 .PHONY: test
 test:
 	pushd ../..; JASMINE_CONFIG_PATH="src/zdaubyaos/test/jasmine.js" PATTERN_NAME="ZDAUBYAOS" make test; popd
+
+.PHONY: lint
+lint:
+	pushd ../..; DIR="src/zdaubyaos" make lint; popd
