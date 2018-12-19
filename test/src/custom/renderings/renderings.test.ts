@@ -1,7 +1,7 @@
 import { Rendering, to } from '@musical-patterns/pattern'
 import { buildRenderings, RenderingName, Renderings } from '../../../../src/indexForTest'
 
-describe('zdaubyaos rendering functions', () => {
+describe('rendering functions', () => {
     let renderings: Renderings
     beforeEach(() => {
         renderings = buildRenderings()

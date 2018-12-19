@@ -3,7 +3,7 @@ import { RenderingName } from '../custom'
 import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
 
-const zdaubyaosContourUsages: UsageGrouping = {
+const contourUsages: UsageGrouping = {
     [ BarTarget.FIFTEEN ]: {},
     [ BarTarget.TWENTYFOUR ]: {},
 }
@@ -11,11 +11,11 @@ const zdaubyaosContourUsages: UsageGrouping = {
 const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: RenderingName) => void =
     (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: RenderingName): void => {
 
-        zdaubyaosContourUsages[ barTarget ][ blockStyle ] =
-            zdaubyaosContourUsages[ barTarget ][ blockStyle ] || {}
+        contourUsages[ barTarget ][ blockStyle ] =
+            contourUsages[ barTarget ][ blockStyle ] || {}
 
         const byBlockStyle: Maybe<UsageCountByRendering> =
-            zdaubyaosContourUsages[ barTarget ][ blockStyle ]
+            contourUsages[ barTarget ][ blockStyle ]
 
         if (byBlockStyle !== undefined) {
             let byRenderingName: Maybe<UsageCount> = byBlockStyle[ renderingName ]
@@ -31,5 +31,5 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: 
 
 export {
     countUsage,
-    zdaubyaosContourUsages,
+    contourUsages,
 }

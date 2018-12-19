@@ -2,20 +2,20 @@ import { SumOfIndices, to } from '@musical-patterns/utilities'
 import { buildParts } from '../../../src/indexForTest'
 import { calculateTotalZdaubyaosDuration } from '../../support'
 
-describe('zdaubyaos parts', () => {
+describe('parts', () => {
     it('is the case that they all have the same duration', () => {
         const {
-            zdaubyaosSubparticularOrDubparticularPart,
-            zdaubyaosHarmonicOrSubharmonicPart,
-            zdaubyaosSuperparticularOrDuperparticularPart,
+            subparticularOrDubparticularPart,
+            harmonicOrSubharmonicPart,
+            superparticularOrDuperparticularPart,
         } = buildParts()
 
         const expectedTotalPatternDuration: SumOfIndices = to.SumOfIndices(3360)
-        expect(calculateTotalZdaubyaosDuration(zdaubyaosSubparticularOrDubparticularPart))
+        expect(calculateTotalZdaubyaosDuration(subparticularOrDubparticularPart))
             .toEqual(expectedTotalPatternDuration)
-        expect(calculateTotalZdaubyaosDuration(zdaubyaosSuperparticularOrDuperparticularPart))
+        expect(calculateTotalZdaubyaosDuration(superparticularOrDuperparticularPart))
             .toEqual(expectedTotalPatternDuration)
-        expect(calculateTotalZdaubyaosDuration(zdaubyaosHarmonicOrSubharmonicPart))
+        expect(calculateTotalZdaubyaosDuration(harmonicOrSubharmonicPart))
             .toEqual(expectedTotalPatternDuration)
     })
 })

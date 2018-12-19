@@ -4,18 +4,18 @@ import { to } from '@musical-patterns/utilities'
 import { ZDAUBYAOS_DURATION_SCALAR, ZDAUBYAOS_PITCH_SCALAR } from './constants'
 import { buildEntities, buildScales } from './materials'
 
-const zdaubyaosPatternMaterial: PatternMaterial = {
+const material: PatternMaterial = {
     buildEntitiesFunction: buildEntities,
     buildScalesFunction: buildScales,
 }
 
-const zdaubyaosPatternMetadata: PatternMetadata = {
+const metadata: PatternMetadata = {
     description: 'fun with the superparticular series & variants, plus stepwise motion within recurring bounds',
     formattedName: 'Zdaubyaos',
     musicalIdeaIllustrated: 'superparticular series',
 }
 
-const patternSpec: PatternSpec = {
+const spec: PatternSpec = {
     patternDurationOffset: to.Offset(0),
     patternDurationScalar: ZDAUBYAOS_DURATION_SCALAR,
     patternPitchOffset: to.Offset(0),
@@ -23,10 +23,10 @@ const patternSpec: PatternSpec = {
 }
 
 const pattern: Pattern = {
-    material: zdaubyaosPatternMaterial,
-    metadata: zdaubyaosPatternMetadata,
+    material,
+    metadata,
     patternId: PatternId.ZDAUBYAOS,
-    spec: patternSpec,
+    spec,
 }
 
 export {

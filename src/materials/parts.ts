@@ -10,24 +10,24 @@ const buildParts: () => DictionaryOf<NoteSpec[]> =
 
         const end: Index = to.Index(segments.length)
 
-        let zdaubyaosSubparticularOrDubparticularPart: NoteSpec[] = []
-        let zdaubyaosSuperparticularOrDuperparticularPart: NoteSpec[] = []
-        let zdaubyaosHarmonicOrSubharmonicPart: NoteSpec[] = []
+        let subparticularOrDubparticularPart: NoteSpec[] = []
+        let superparticularOrDuperparticularPart: NoteSpec[] = []
+        let harmonicOrSubharmonicPart: NoteSpec[] = []
 
         segments.slice(from.Index(INITIAL), from.Index(apply.Offset(end, INCLUSIVE)))
             .forEach((segment: Segment): void => {
-                zdaubyaosSubparticularOrDubparticularPart = zdaubyaosSubparticularOrDubparticularPart
+                subparticularOrDubparticularPart = subparticularOrDubparticularPart
                     .concat(apply.Index(segment, SEGMENT_A))
-                zdaubyaosSuperparticularOrDuperparticularPart = zdaubyaosSuperparticularOrDuperparticularPart
+                superparticularOrDuperparticularPart = superparticularOrDuperparticularPart
                     .concat(apply.Index(segment, SEGMENT_B))
-                zdaubyaosHarmonicOrSubharmonicPart = zdaubyaosHarmonicOrSubharmonicPart
+                harmonicOrSubharmonicPart = harmonicOrSubharmonicPart
                     .concat(apply.Index(segment, SEGMENT_C))
             })
 
         return {
-            zdaubyaosHarmonicOrSubharmonicPart,
-            zdaubyaosSubparticularOrDubparticularPart,
-            zdaubyaosSuperparticularOrDuperparticularPart,
+            harmonicOrSubharmonicPart,
+            subparticularOrDubparticularPart,
+            superparticularOrDuperparticularPart,
         }
     }
 

@@ -4,30 +4,30 @@ import { buildParts } from './parts'
 const buildEntities: BuildEntitiesFunction =
     (): Entity[] => {
         const {
-            zdaubyaosSubparticularOrDubparticularPart,
-            zdaubyaosHarmonicOrSubharmonicPart,
-            zdaubyaosSuperparticularOrDuperparticularPart,
+            subparticularOrDubparticularPart,
+            harmonicOrSubharmonicPart,
+            superparticularOrDuperparticularPart,
         } = buildParts()
 
-        const zdaubyaosSubparticularOrDubparticularSquareEntity: Entity = {
-            noteSpecs: zdaubyaosSubparticularOrDubparticularPart,
+        const subparticularOrDubparticularSquareEntity: Entity = {
+            noteSpecs: subparticularOrDubparticularPart,
             timbreName: TimbreNameEnum.SQUARE,
         }
 
-        const zdaubyaosSuperparticularOrDuperparticularSawEntity: Entity = {
-            noteSpecs: zdaubyaosSuperparticularOrDuperparticularPart,
+        const superparticularOrDuperparticularSawEntity: Entity = {
+            noteSpecs: superparticularOrDuperparticularPart,
             timbreName: TimbreNameEnum.SAWTOOTH,
         }
 
-        const zdaubyaosHarmonicOrSubharmonicSineEntity: Entity = {
-            noteSpecs: zdaubyaosHarmonicOrSubharmonicPart,
+        const harmonicOrSubharmonicSineEntity: Entity = {
+            noteSpecs: harmonicOrSubharmonicPart,
             timbreName: TimbreNameEnum.SINE,
         }
 
         return [
-            zdaubyaosSuperparticularOrDuperparticularSawEntity,
-            zdaubyaosHarmonicOrSubharmonicSineEntity,
-            zdaubyaosSubparticularOrDubparticularSquareEntity,
+            superparticularOrDuperparticularSawEntity,
+            harmonicOrSubharmonicSineEntity,
+            subparticularOrDubparticularSquareEntity,
         ]
     }
 

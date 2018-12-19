@@ -12,7 +12,7 @@ import {
 } from './types'
 
 // @ts-ignore
-const zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering: TrueContourPieces = {}
+const contourPiecesByBarTargetBlockStyleThenRendering: TrueContourPieces = {}
 
 const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => void =
     (parameters: BuildTrueContourPieceParameters): void => {
@@ -25,11 +25,11 @@ const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => vo
         }: BuildTrueContourPieceParameters = parameters
         const contourPiece: ContourPiece = rendering(block)
 
-        zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] =
-            zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] || {}
-        zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ] =
-            zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ] || {}
-        zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ][ renderingName ] =
+        contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] =
+            contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] || {}
+        contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ] =
+            contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ] || {}
+        contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ][ renderingName ] =
             contourPiece
     }
 
@@ -61,7 +61,7 @@ const buildTrueContourPieces: () => TrueContourPieces =
                             })
                 })
 
-        return zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering
+        return contourPiecesByBarTargetBlockStyleThenRendering
     }
 
 const getTrueContours: GetTrueContourPieces =
@@ -70,7 +70,7 @@ const getTrueContours: GetTrueContourPieces =
 
         countUsage(barTarget, blockStyle, renderingName)
 
-        return zdaubyaosContourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ][ renderingName ]
+        return contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ][ blockStyle ][ renderingName ]
     }
 
 export {

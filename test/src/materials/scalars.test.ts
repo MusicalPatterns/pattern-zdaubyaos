@@ -1,7 +1,7 @@
 import { DictionaryOf, Scalar, to } from '@musical-patterns/utilities'
 import { buildScalars } from '../../../src/indexForTest'
 
-describe('zdaubyaos scales', () => {
+describe('scales', () => {
     describe('subparticular series scale', () => {
         it('has all the pitches whose numerator is one less than the denominator', () => {
             const { subparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()

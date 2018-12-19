@@ -1,7 +1,7 @@
 import { NoteSpec } from '@musical-patterns/compiler'
 import { ContourElement } from '@musical-patterns/pattern'
 
-type BuildZdaubyaosNoteSpec = (contourElement: ContourElement) => NoteSpec
+type BuildNoteSpec = (contourElement: ContourElement) => NoteSpec
 
 enum BarTarget {
     FIFTEEN = 'FIFTEEN',
@@ -21,7 +21,7 @@ enum BlockStyle {
 }
 
 export {
-    BuildZdaubyaosNoteSpec,
+    BuildNoteSpec,
     ContourElement,
     BarTarget,
     BlockStyle,

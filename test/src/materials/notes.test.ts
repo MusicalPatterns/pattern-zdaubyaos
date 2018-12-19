@@ -4,7 +4,7 @@ import { buildNoteSpec } from '../../../src/indexForTest'
 
 const DURATIONS_SCALE_INDEX: Index = to.Index(1)
 
-describe('zdaubyaos note specs', () => {
+describe('note specs', () => {
     describe('when the pitch index is zero', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {

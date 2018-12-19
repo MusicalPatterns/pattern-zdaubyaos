@@ -1,1 +1,1 @@
-export { countUsage, zdaubyaosContourUsages } from './zdaubyaosContourUsage'
+export { countUsage, contourUsages } from './contourUsage'
