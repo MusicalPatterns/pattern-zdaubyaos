@@ -1,4 +1,7 @@
-export { pattern as zdaubyaosPattern } from './dist'
+const { pattern: zdaubyaosPattern } = require('./dist')
+const zdaubyaosSnapshot = require('./snapshot')
 
-import snapshot from './snapshot'
-export default snapshot
+module.exports = {
+    zdaubyaosPattern,
+    zdaubyaosSnapshot,
+}
