@@ -1,8 +1,9 @@
-import { Block, ContourPiece, ContourWhole, Rendering } from '@musical-patterns/pattern'
-import { BarTarget, BlockStyle } from '../../../types'
+import { Rendering } from '@musical-patterns/pattern'
+import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
 import { RenderingName } from '../../renderings'
 
-type ByRenderingName = { [z in RenderingName]: ContourPiece }
+type ByRenderingName = { [z in RenderingName]: ContourPiece<2> }
 type ByBlockStyle = { [y in BlockStyle]: ByRenderingName }
 type TrueContourPieces = { [x in BarTarget]: ByBlockStyle }
 
@@ -10,12 +11,12 @@ type GetTrueContourPieces = (
     blockStyle: BlockStyle,
     barTarget: BarTarget,
     renderingName: RenderingName,
-) => ContourPiece
+) => ContourPiece<2>
 
 type FormulaicTrueYaosContourWhole = (
     fifteenRenderingName: RenderingName,
     twentyfourRenderingName: RenderingName,
-) => ContourWhole
+) => ContourWhole<2>
 
 type TrueBlocks = { [x in BarTarget]: { [y in BlockStyle]: Block } }
 
@@ -23,7 +24,7 @@ interface BuildTrueContourPieceParameters {
     barTarget: BarTarget,
     block: Block,
     blockStyle: BlockStyle,
-    rendering: Rendering,
+    rendering: Rendering<ZdaubyaosContour>,
     renderingName: RenderingName,
 }
 

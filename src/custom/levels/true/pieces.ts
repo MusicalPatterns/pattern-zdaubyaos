@@ -1,5 +1,6 @@
-import { Block, ContourPiece, Rendering } from '@musical-patterns/pattern'
-import { BarTarget, BlockStyle } from '../../../types'
+import { Rendering } from '@musical-patterns/pattern'
+import { Block, ContourPiece } from '@musical-patterns/utilities'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
 import { countUsage } from '../../../utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../renderings'
 import { buildTrueBlocks } from './blocks'
@@ -23,7 +24,7 @@ const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => vo
             blockStyle,
             renderingName,
         }: BuildTrueContourPieceParameters = parameters
-        const contourPiece: ContourPiece = rendering(block)
+        const contourPiece: ContourPiece<2> = rendering(block)
 
         contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] =
             contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] || {}
@@ -49,7 +50,10 @@ const buildTrueContourPieces: () => TrueContourPieces =
                                 Object.entries(renderings)
                                     .forEach(
                                         // @ts-ignore
-                                        ([ renderingName, rendering ]: [ RenderingName, Rendering ]): void => {
+                                        (
+                                            [ renderingName, rendering ]:
+                                                [ RenderingName, Rendering<ZdaubyaosContour> ],
+                                        ): void => {
                                             buildTrueContourPiece({
                                                 barTarget,
                                                 block,
@@ -65,7 +69,7 @@ const buildTrueContourPieces: () => TrueContourPieces =
     }
 
 const getTrueContours: GetTrueContourPieces =
-    (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece => {
+    (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece<2> => {
         buildTrueContourPieces()
 
         countUsage(barTarget, blockStyle, renderingName)

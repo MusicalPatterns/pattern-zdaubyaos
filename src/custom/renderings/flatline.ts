@@ -1,11 +1,12 @@
-import { ContourPiece, RenderingByBlockElement, to } from '@musical-patterns/pattern'
-import { from, Index } from '@musical-patterns/utilities'
+import { RenderingByBlockElement } from '@musical-patterns/pattern'
+import { ContourPiece, to } from '@musical-patterns/utilities'
+import { ZdaubyaosContour } from '../../types'
 
-const flatlineRendering: RenderingByBlockElement =
-    (blockElement: Index): ContourPiece => to.ContourPiece([
+const flatlineRendering: RenderingByBlockElement<ZdaubyaosContour> =
+    (blockElement: number): ContourPiece<ZdaubyaosContour> => to.ContourPiece<ZdaubyaosContour>([
         [
             1,
-            from.Index(blockElement),
+            blockElement,
         ],
     ])
 

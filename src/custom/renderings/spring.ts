@@ -1,16 +1,16 @@
-import { ContourPiece, RenderingByBlockElement, to } from '@musical-patterns/pattern'
-import { apply, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
+import { RenderingByBlockElement } from '@musical-patterns/pattern'
+import { apply, ContourElement, ContourPiece, from, INITIAL, numbers, to } from '@musical-patterns/utilities'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
-import { ContourElement } from '../../types'
+import { ZdaubyaosContour } from '../../types'
 import { SINGLE_DURATION } from './constants'
 
-const springRendering: RenderingByBlockElement =
-    (blockElement: Index): ContourPiece => {
-        const numbersWeNeed: number[] = numbers.slice(from.Index(INITIAL), from.Index(blockElement))
-        const contour: ContourPiece = to.ContourPiece(
-            numbersWeNeed.map((n: number): ContourElement => [ n, SINGLE_DURATION ]),
+const springRendering: RenderingByBlockElement<ZdaubyaosContour> =
+    (blockElement: number): ContourPiece<ZdaubyaosContour> => {
+        const numbersWeNeed: number[] = numbers.slice(from.Index(INITIAL), blockElement)
+        const contour: ContourPiece<ZdaubyaosContour> = to.ContourPiece(
+            numbersWeNeed.map((n: number): ContourElement<ZdaubyaosContour> => [ n, SINGLE_DURATION ]),
         )
-        const contourElement: ContourElement = apply.Index(contour, INITIAL)
+        const contourElement: ContourElement<ZdaubyaosContour> = apply.Index(contour, INITIAL)
         contourElement[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
 
         return contour

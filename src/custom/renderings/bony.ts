@@ -1,6 +1,7 @@
-import { Block, ContourPiece, Rendering, to as patternTo } from '@musical-patterns/pattern'
-import { apply, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
+import { Rendering } from '@musical-patterns/pattern'
+import { apply, Block, ContourPiece, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
+import { ZdaubyaosContour } from '../../types'
 import {
     FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
     FIFTEEN_BONY_BLOCKS,
@@ -8,39 +9,39 @@ import {
     TWENTYFOUR_BONY_BLOCKS,
 } from './constants'
 
-const bonyRendering: Rendering =
-    (block: Block): ContourPiece => {
-        const blockClone: Block = patternTo.Block(block.slice())
+const bonyRendering: Rendering<ZdaubyaosContour> =
+    (block: Block): ContourPiece<ZdaubyaosContour> => {
+        const blockClone: Block = to.Block(block.slice())
         const blocksTotal: Time = blockClone.reduce(
-            (accumulator: Time, blockElement: Index): Time =>
-                to.Time(from.Time(accumulator) + from.Index(blockElement)),
+            (accumulator: Time, blockElement: number): Time =>
+                to.Time(from.Time(accumulator) + blockElement),
             to.Time(0),
         )
         const isBarTargetFifteen: boolean = from.Time(blocksTotal) % from.Time(FIFTEEN) === 0
         const barDivisor: Time = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
         const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
 
-        const rhythmicBlocks: Block = patternTo.Block(isBarTargetFifteen ?
+        const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
             repeat(FIFTEEN_BONY_BLOCKS, apply.Count(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :
             repeat(TWENTYFOUR_BONY_BLOCKS, apply.Count(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
         )
 
-        const contourPiece: ContourPiece = patternTo.ContourPiece([])
+        const contourPiece: ContourPiece<ZdaubyaosContour> = to.ContourPiece([])
         let blocksIndexForPitchIndex: Index = to.Index(0)
 
-        rhythmicBlocks.forEach((rhythmicBlockElement: Index): void => {
-            const pitchIndex: Index = apply.Index(block, blocksIndexForPitchIndex)
+        rhythmicBlocks.forEach((rhythmicBlockElement: number): void => {
+            const pitchIndex: number = apply.Index(block, blocksIndexForPitchIndex)
 
-            blockClone[ 0 ] = apply.Offset(blockClone[ 0 ], to.Offset(-from.Index(rhythmicBlockElement)))
-            if (blockClone[ 0 ] < to.Index(0)) {
+            blockClone[ 0 ] = apply.Offset(blockClone[ 0 ], to.Offset(-rhythmicBlockElement))
+            if (blockClone[ 0 ] < 0) {
                 return
             }
-            if (blockClone[ 0 ] === to.Index(0)) {
+            if (blockClone[ 0 ] === 0) {
                 blockClone.shift()
                 blocksIndexForPitchIndex = apply.Offset(blocksIndexForPitchIndex, to.Offset(1))
             }
 
-            contourPiece.push([ from.Index(pitchIndex), from.Index(rhythmicBlockElement) ])
+            contourPiece.push([ pitchIndex, rhythmicBlockElement ])
         })
 
         return contourPiece

@@ -1,31 +1,30 @@
-import { Block, to as patternTo } from '@musical-patterns/pattern'
-import { DictionaryOf, repeat, to } from '@musical-patterns/utilities'
+import { Block, DictionaryOf, repeat, to } from '@musical-patterns/utilities'
 
 const buildOtherBlocks: () => DictionaryOf<Block> =
     (): DictionaryOf<Block> => {
-        const backboneFifteenBlock: Block = patternTo.Block(repeat([ 1, 2 ], to.Count(5)))
+        const backboneFifteenBlock: Block = to.Block(repeat([ 1, 2 ], to.Count(5)))
 
-        const backboneTwentyfourBlock: Block = patternTo.Block(repeat([ 1, 3 ], to.Count(6)))
+        const backboneTwentyfourBlock: Block = to.Block(repeat([ 1, 3 ], to.Count(6)))
 
-        const shiftyFifteenBlock: Block = patternTo.Block([
+        const shiftyFifteenBlock: Block = to.Block([
             2, 1,
             5, 1,
             2, 4,
         ])
 
-        const shiftyTwentyfourBlock: Block = patternTo.Block([
+        const shiftyTwentyfourBlock: Block = to.Block([
             3, 1,
             3, 1,
             3, 4,
             5, 4,
         ])
 
-        const shiftyTwentyfourVariantBlock: Block = patternTo.Block([
+        const shiftyTwentyfourVariantBlock: Block = to.Block([
             4, 7, 4,
             1, 3, 1, 3, 1,
         ])
 
-        const shiftyBlock: Block = patternTo.Block([
+        const shiftyBlock: Block = to.Block([
             2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
             2, 1, 2, 1, 2, 3, 4,
             3, 2, 1, 2, 1, 2, 1, 2, 1,
@@ -38,7 +37,7 @@ const buildOtherBlocks: () => DictionaryOf<Block> =
             // (this spreads across 2 bars)
         ])
 
-        const secretLongChordBlock: Block = patternTo.Block([ 24 ])
+        const secretLongChordBlock: Block = to.Block([ 24 ])
 
         return {
             backboneFifteenBlock,

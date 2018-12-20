@@ -1,13 +1,12 @@
-import { ContourWhole, to as patternTo } from '@musical-patterns/pattern'
-import { DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle } from '../../../types'
+import { ContourWhole, DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { buildOtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
 
-const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole =
-    (renderingName: RenderingName): ContourWhole =>
-        patternTo.ContourWhole(sequence([
+const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole<ZdaubyaosContour> =
+    (renderingName: RenderingName): ContourWhole<ZdaubyaosContour> =>
+        to.ContourWhole(sequence([
             repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName), to.Count(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, renderingName),
@@ -17,28 +16,28 @@ const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) 
             ),
         ]))
 
-const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole> =
-    (): DictionaryOf<ContourWhole> => {
+const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole<ZdaubyaosContour>> =
+    (): DictionaryOf<ContourWhole<ZdaubyaosContour>> => {
         const {
             backboneFifteenContourPiece,
             backboneTwentyfourContourPiece,
         } = buildOtherContourPieces()
 
-        const almostTrueExtendedEndingZdaubTremContourWhole: ContourWhole =
+        const almostTrueExtendedEndingZdaubTremContourWhole: ContourWhole<ZdaubyaosContour> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.TREM)
-        const almostTrueExtendedEndingZdaubBonyContourWhole: ContourWhole =
+        const almostTrueExtendedEndingZdaubBonyContourWhole: ContourWhole<ZdaubyaosContour> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.BONY)
-        const almostTrueExtendedEndingZdaubGlisContourWhole: ContourWhole =
+        const almostTrueExtendedEndingZdaubGlisContourWhole: ContourWhole<ZdaubyaosContour> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.GLIS)
 
-        const almostTrueYetOfBackboneContourWhole: ContourWhole =
-            patternTo.ContourWhole(sequence([
+        const almostTrueYetOfBackboneContourWhole: ContourWhole<ZdaubyaosContour> =
+            to.ContourWhole(sequence([
                 repeatCall(() => backboneFifteenContourPiece, to.Count(8)),
                 repeatCall(() => backboneTwentyfourContourPiece, to.Count(3)),
             ]))
 
-        const almostTrueZdaubBonyWithSuperinscapeContourWhole: ContourWhole =
-            patternTo.ContourWhole(sequence([
+        const almostTrueZdaubBonyWithSuperinscapeContourWhole: ContourWhole<ZdaubyaosContour> =
+            to.ContourWhole(sequence([
                 repeatCall(
                     () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), to.Count(3),
                 ),
@@ -49,8 +48,9 @@ const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole> =
                 getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.BONY),
             ]))
 
-        const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole: ContourWhole =
-            patternTo.ContourWhole(sequence([
+        const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole:
+            ContourWhole<ZdaubyaosContour> =
+            to.ContourWhole(sequence([
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.FALL),

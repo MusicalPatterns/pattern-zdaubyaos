@@ -3,15 +3,15 @@ import {
     DEFAULT_DURATIONS_SCALE_INDEX,
     DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
     FULL_GAIN,
-    unpackContourElement,
+    unpackStandardContourElement,
 } from '@musical-patterns/pattern'
-import { from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
+import { ContourElement, from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
-import { BuildNoteSpec, ContourElement } from '../types'
+import { BuildNoteSpec, ZdaubyaosContour } from '../types'
 
 const buildNoteSpec: BuildNoteSpec =
-    (contourElement: ContourElement): NoteSpec => {
-        const { pitch, duration } = unpackContourElement(contourElement)
+    (contourElement: ContourElement<ZdaubyaosContour>): NoteSpec => {
+        const { pitch, duration } = unpackStandardContourElement(contourElement)
 
         if (pitch === from.Index(PITCH_INDEX_INDICATING_REST)) {
             return {

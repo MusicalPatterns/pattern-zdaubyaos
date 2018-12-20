@@ -1,6 +1,7 @@
 import { Rendering } from '@musical-patterns/pattern'
+import { ZdaubyaosContour } from '../../types'
 
-type Renderings = { [x in RenderingName]: Rendering }
+type Renderings = { [x in RenderingName]: Rendering<ZdaubyaosContour> }
 
 enum RenderingName {
     SPRING = 'SPRING',

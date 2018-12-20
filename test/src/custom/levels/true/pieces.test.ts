@@ -1,4 +1,5 @@
-import { calculateTotalContourDuration, ContourPiece, Rendering, to } from '@musical-patterns/pattern'
+import { calculateTotalStandardContourDuration, Rendering } from '@musical-patterns/pattern'
+import { ContourPiece, to } from '@musical-patterns/utilities'
 import {
     BarTarget,
     BlockStyle,
@@ -204,7 +205,7 @@ describe('true contours', () => {
                                         case RenderingName.FALL:
                                         case RenderingName.SUMMERY_SPRING:
                                         case RenderingName.SPRINGY_SUMMER:
-                                            expect(calculateTotalContourDuration(contours) % 15)
+                                            expect(calculateTotalStandardContourDuration(contours) % 15)
                                                 .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         default:
@@ -478,7 +479,7 @@ describe('true contours', () => {
                                     switch (renderingName) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:
-                                            expect(calculateTotalContourDuration(contours) % 24)
+                                            expect(calculateTotalStandardContourDuration(contours) % 24)
                                                 .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         case RenderingName.BONY:
@@ -489,7 +490,7 @@ describe('true contours', () => {
                                                 case BlockStyle.INAI:
                                                     break
                                                 default:
-                                                    expect(calculateTotalContourDuration(contours) % 24)
+                                                    expect(calculateTotalStandardContourDuration(contours) % 24)
                                                         .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             }
                                             break

@@ -1,10 +1,11 @@
-import { ContourPiece, Rendering } from '@musical-patterns/pattern'
-import { DictionaryOf } from '@musical-patterns/utilities'
+import { Rendering } from '@musical-patterns/pattern'
+import { ContourPiece, DictionaryOf } from '@musical-patterns/utilities'
+import { ZdaubyaosContour } from '../../../types'
 import { buildRenderings, RenderingName, Renderings } from '../../renderings'
 import { buildThirtyfiveBlocks } from './blocks'
 
-const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece> =
-    (): DictionaryOf<ContourPiece> => {
+const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece<ZdaubyaosContour>> =
+    (): DictionaryOf<ContourPiece<ZdaubyaosContour>> => {
         const {
             thirtyfiveYaosAccidentInspiredBlock,
             thirtyfiveYaosBassBlock,
@@ -14,12 +15,14 @@ const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece> =
 
         const renderings: Renderings = buildRenderings()
 
-        const glis: Rendering = renderings[ RenderingName.GLIS ]
+        const glis: Rendering<ZdaubyaosContour> = renderings[ RenderingName.GLIS ]
 
-        const thirtyfiveYaosBassContourPiece: ContourPiece = glis(thirtyfiveYaosBassBlock)
-        const thirtyfiveYaosAccidentInspiredContourPiece: ContourPiece = glis(thirtyfiveYaosAccidentInspiredBlock)
-        const thirtyfiveZdaubContourPiece: ContourPiece = glis(thirtyfiveZdaubBlock)
-        const thirtyfiveZdaubOnlyWiggleContourPiece: ContourPiece = glis(thirtyfiveZdaubOnlyWiggleBlock)
+        const thirtyfiveYaosBassContourPiece: ContourPiece<ZdaubyaosContour> = glis(thirtyfiveYaosBassBlock)
+        const thirtyfiveYaosAccidentInspiredContourPiece: ContourPiece<ZdaubyaosContour> =
+            glis(thirtyfiveYaosAccidentInspiredBlock)
+        const thirtyfiveZdaubContourPiece: ContourPiece<ZdaubyaosContour> = glis(thirtyfiveZdaubBlock)
+        const thirtyfiveZdaubOnlyWiggleContourPiece: ContourPiece<ZdaubyaosContour> =
+            glis(thirtyfiveZdaubOnlyWiggleBlock)
 
         return {
             thirtyfiveYaosAccidentInspiredContourPiece,

@@ -25,4 +25,5 @@ export { pattern } from './patterns'
 export {
     BarTarget,
     BlockStyle,
+    ZdaubyaosContour,
 } from './types'

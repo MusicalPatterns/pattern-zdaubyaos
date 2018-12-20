@@ -1,7 +1,7 @@
 import { NoteSpec } from '@musical-patterns/compiler'
-import { ContourElement } from '@musical-patterns/pattern'
+import { ContourElement } from '@musical-patterns/utilities'
 
-type BuildNoteSpec = (contourElement: ContourElement) => NoteSpec
+type BuildNoteSpec = (contourElement: ContourElement<ZdaubyaosContour>) => NoteSpec
 
 enum BarTarget {
     FIFTEEN = 'FIFTEEN',
@@ -20,9 +20,12 @@ enum BlockStyle {
     SCEND = 'SCEND',
 }
 
+// tslint:disable-next-line:no-magic-numbers
+type ZdaubyaosContour = 2
+
 export {
     BuildNoteSpec,
-    ContourElement,
     BarTarget,
     BlockStyle,
+    ZdaubyaosContour,
 }

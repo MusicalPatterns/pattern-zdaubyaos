@@ -1,12 +1,12 @@
-import { ContourPiece, RenderingByBlockElement, to } from '@musical-patterns/pattern'
-import { apply, EVEN, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
-import { ContourElement } from '../../types'
+import { RenderingByBlockElement } from '@musical-patterns/pattern'
+import { apply, ContourElement, ContourPiece, EVEN, from, INITIAL, numbers, to } from '@musical-patterns/utilities'
+import { ZdaubyaosContour } from '../../types'
 import { SPRINGY_SUMMER_OFFSET, SPRINGY_SUMMER_SCALAR } from './constants'
 
-const springySummerRendering: RenderingByBlockElement =
-    (blockElement: Index): ContourPiece =>
-        to.ContourPiece(numbers.slice(from.Index(INITIAL), from.Index(blockElement))
-            .map((n: number): ContourElement => {
+const springySummerRendering: RenderingByBlockElement<ZdaubyaosContour> =
+    (blockElement: number): ContourPiece<ZdaubyaosContour> =>
+        to.ContourPiece<ZdaubyaosContour>(numbers.slice(from.Index(INITIAL), blockElement)
+            .map((n: number): ContourElement<ZdaubyaosContour> => {
                 if (n % EVEN === 0) {
                     return [ 0, 1 ]
                 }

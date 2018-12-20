@@ -1,12 +1,20 @@
-import { ContourWhole, to as patternTo } from '@musical-patterns/pattern'
-import { DictionaryOf, from, INITIAL, repeat, repeatCall, sequence, to } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle } from '../../../types'
+import {
+    ContourWhole,
+    DictionaryOf,
+    from,
+    INITIAL,
+    repeat,
+    repeatCall,
+    sequence,
+    to,
+} from '@musical-patterns/utilities'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
 import { RenderingName } from '../../renderings'
 import { getTrueContours } from '../true'
 import { buildOtherContourPieces } from './pieces'
 
-const buildOtherContourWholes: () => DictionaryOf<ContourWhole> =
-    (): DictionaryOf<ContourWhole> => {
+const buildOtherContourWholes: () => DictionaryOf<ContourWhole<ZdaubyaosContour>> =
+    (): DictionaryOf<ContourWhole<ZdaubyaosContour>> => {
         const {
             secretLongChordContourPiece,
             shiftyContourPiece,
@@ -15,21 +23,23 @@ const buildOtherContourWholes: () => DictionaryOf<ContourWhole> =
             shiftyTwentyfourVariantContourPiece,
         } = buildOtherContourPieces()
 
-        const secretLongChordContourWhole: ContourWhole = patternTo.ContourWhole(secretLongChordContourPiece)
+        const secretLongChordContourWhole: ContourWhole<ZdaubyaosContour> =
+            to.ContourWhole<ZdaubyaosContour>(secretLongChordContourPiece)
 
-        const totallyOutThereContourWhole: ContourWhole = patternTo.ContourWhole(repeat(
+        const totallyOutThereContourWhole: ContourWhole<ZdaubyaosContour> = to.ContourWhole<ZdaubyaosContour>(repeat(
             getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER)
                 .slice(from.Index(INITIAL), 8),
             to.Count(3),
         ))
 
-        const shiftyAContourWhole: ContourWhole = patternTo.ContourWhole(sequence([
+        const shiftyAContourWhole: ContourWhole<ZdaubyaosContour> = to.ContourWhole<ZdaubyaosContour>(sequence([
             repeatCall(() => shiftyFifteenContourPiece, to.Count(3)),
             repeatCall(() => shiftyTwentyfourContourPiece, to.Count(4)),
             repeatCall(() => shiftyTwentyfourVariantContourPiece, to.Count(3)),
         ]))
 
-        const shiftyBContourWhole: ContourWhole = patternTo.ContourWhole(shiftyContourPiece)
+        const shiftyBContourWhole: ContourWhole<ZdaubyaosContour> =
+            to.ContourWhole<ZdaubyaosContour>(shiftyContourPiece)
 
         return {
             secretLongChordContourWhole,

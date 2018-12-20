@@ -1,4 +1,5 @@
-import { calculateTotalContourDuration, to } from '@musical-patterns/pattern'
+import { calculateTotalStandardContourDuration } from '@musical-patterns/pattern'
+import { to } from '@musical-patterns/utilities'
 import { buildThirtyfiveContourPieces } from '../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {
@@ -67,11 +68,11 @@ describe('thirtyfive contour pieces', () => {
             thirtyfiveZdaubContourPiece,
         } = buildThirtyfiveContourPieces()
 
-        expect(calculateTotalContourDuration(thirtyfiveYaosBassContourPiece) % 35)
+        expect(calculateTotalStandardContourDuration(thirtyfiveYaosBassContourPiece) % 35)
             .toBe(0)
-        expect(calculateTotalContourDuration(thirtyfiveYaosAccidentInspiredContourPiece) % 35)
+        expect(calculateTotalStandardContourDuration(thirtyfiveYaosAccidentInspiredContourPiece) % 35)
             .toBe(0)
-        expect(calculateTotalContourDuration(thirtyfiveZdaubContourPiece) % 35)
+        expect(calculateTotalStandardContourDuration(thirtyfiveZdaubContourPiece) % 35)
             .toBe(0)
     })
 })

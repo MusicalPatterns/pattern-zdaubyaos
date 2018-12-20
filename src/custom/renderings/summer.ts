@@ -1,11 +1,11 @@
-import { ContourPiece, RenderingByBlockElement, to } from '@musical-patterns/pattern'
-import { EVEN, from, Index, INITIAL, numbers } from '@musical-patterns/utilities'
-import { ContourElement } from '../../types'
+import { RenderingByBlockElement } from '@musical-patterns/pattern'
+import { ContourElement, ContourPiece, EVEN, from, INITIAL, numbers, to } from '@musical-patterns/utilities'
+import { ZdaubyaosContour } from '../../types'
 
-const summerRendering: RenderingByBlockElement =
-    (blockElement: Index): ContourPiece =>
-        to.ContourPiece(numbers.slice(from.Index(INITIAL), from.Index(blockElement))
-            .map((n: number): ContourElement =>
+const summerRendering: RenderingByBlockElement<ZdaubyaosContour> =
+    (blockElement: number): ContourPiece<ZdaubyaosContour> =>
+        to.ContourPiece<ZdaubyaosContour>(numbers.slice(from.Index(INITIAL), blockElement)
+            .map((n: number): ContourElement<ZdaubyaosContour> =>
                 n % EVEN === 0 ? [ 0, 1 ] : [ n, 1 ]))
 
 export {
