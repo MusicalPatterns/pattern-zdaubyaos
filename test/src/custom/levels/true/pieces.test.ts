@@ -7,7 +7,7 @@ import {
     buildTrueContourPieces,
     getTrueContours,
     RenderingName,
-    TrueContourPieces,
+    TrueContourPieces, ZdaubyaosContour,
 } from '../../../../../src/indexForTest'
 
 describe('true contours', () => {
@@ -195,10 +195,10 @@ describe('true contours', () => {
                 Object.entries(contourPiecesByBarTargetBlockStyleThenRendering[ BarTarget.FIFTEEN ])
                     .forEach(
                         // @ts-ignore
-                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece } ]): void => {
+                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<ZdaubyaosContour> } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece ]) => {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<ZdaubyaosContour> ]) => {
                                     switch (renderingName) {
                                         case RenderingName.SPRING:
                                         case RenderingName.SUMMER:
@@ -472,10 +472,10 @@ describe('true contours', () => {
                 Object.entries(contourPiecesByBarTargetBlockStyleThenRendering[ BarTarget.TWENTYFOUR ])
                     .forEach(
                         // @ts-ignore
-                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece } ]): void => {
+                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<ZdaubyaosContour> } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece ]): void => {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<ZdaubyaosContour> ]): void => {
                                     switch (renderingName) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:

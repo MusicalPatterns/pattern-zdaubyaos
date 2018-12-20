@@ -1,19 +1,22 @@
 commit:
-	../../node_modules/@musical-patterns/cli/bin/commit.sh
+	set -e; ../../node_modules/@musical-patterns/cli/bin/commit.sh
 
 .PHONY: lint
 lint:
-	pushd ../..; make lint DIR="src/zdaubyaos"; popd
+	set -e; pushd ../..; make lint DIR="src/zdaubyaos"; popd
 
 pull:
-	../../node_modules/@musical-patterns/cli/bin/pull.sh
+	set -e; ../../node_modules/@musical-patterns/cli/bin/pull.sh
 
 push:
-	../../node_modules/@musical-patterns/cli/bin/push.sh
+	set -e; ../../node_modules/@musical-patterns/cli/bin/push.sh
+
+ship:
+	set -e; pushd ../..; make ship PATTERN="zdaubyaos"; popd
 
 .PHONY: test
 test:
-	pushd ../..; make test JASMINE_CONFIG_PATH="src/zdaubyaos/test/jasmine.js" PATTERN_NAME="ZDAUBYAOS"; popd
+	set -e; pushd ../..; make test JASMINE_CONFIG_PATH="src/zdaubyaos/test/jasmine.js" PATTERN_NAME="ZDAUBYAOS"; popd
 
 update:
-	pushd ../..; make update PATTERN="ZDAUBYAOS"; popd
+	set -e; pushd ../..; make update PATTERN="zdaubyaos"; popd
