@@ -1,7 +1,7 @@
-const { pattern: zdaubyaosPattern } = require('./dist')
-const zdaubyaosSnapshot = require('./snapshot')
+const { pattern } = require('./dist')
+const snapshot = require('./snapshot')
 
 module.exports = {
-    zdaubyaosPattern,
-    zdaubyaosSnapshot,
+    pattern,
+    snapshot,
 }
