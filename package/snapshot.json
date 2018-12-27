@@ -21156,7 +21156,7 @@
       }
     ],
     "voiceSpec": {
-      "timbreName": "SAW",
+      "timbreName": "BRIT_BLUES_DRIVEN",
       "voiceType": "OSCILLATOR"
     }
   },
@@ -42284,7 +42284,7 @@
       }
     ],
     "voiceSpec": {
-      "timbreName": "SINE",
+      "timbreName": "CELESTE",
       "voiceType": "OSCILLATOR"
     }
   },
@@ -64380,7 +64380,7 @@
       }
     ],
     "voiceSpec": {
-      "timbreName": "SQUARE",
+      "timbreName": "PHONEME_BAH",
       "voiceType": "OSCILLATOR"
     }
   }

@@ -11,17 +11,17 @@ const buildEntities: BuildEntitiesFunction =
 
         const subparticularOrDubparticularSquareEntity: Entity = {
             noteSpecs: subparticularOrDubparticularPart,
-            timbreName: TimbreNameEnum.SQUARE,
+            timbreName: TimbreNameEnum.PHONEME_BAH,
         }
 
         const superparticularOrDuperparticularSawEntity: Entity = {
             noteSpecs: superparticularOrDuperparticularPart,
-            timbreName: TimbreNameEnum.SAW,
+            timbreName: TimbreNameEnum.BRIT_BLUES_DRIVEN,
         }
 
         const harmonicOrSubharmonicSineEntity: Entity = {
             noteSpecs: harmonicOrSubharmonicPart,
-            timbreName: TimbreNameEnum.SINE,
+            timbreName: TimbreNameEnum.CELESTE,
         }
 
         return [
