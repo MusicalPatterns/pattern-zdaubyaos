@@ -1,10 +1,5 @@
 import { NoteSpec } from '@musical-patterns/compiler'
-import {
-    DEFAULT_DURATIONS_SCALE_INDEX,
-    DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
-    FULL_GAIN,
-    unpackStandardContourElement,
-} from '@musical-patterns/pattern'
+import { DEFAULT_DURATIONS_SCALE_INDEX, FULL_GAIN, unpackStandardContourElement } from '@musical-patterns/pattern'
 import { ContourElement, from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildNoteSpec, ZdaubyaosContour } from '../types'
@@ -22,11 +17,6 @@ const buildNoteSpec: BuildNoteSpec =
                 gainSpec: {
                     scalar: to.Scalar(0),
                 },
-                sustainSpec: {
-                    index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
-                    offset: DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
-                    scaleIndex: DEFAULT_DURATIONS_SCALE_INDEX,
-                },
             }
         }
 
@@ -40,11 +30,6 @@ const buildNoteSpec: BuildNoteSpec =
             },
             pitchSpec: {
                 index: offsetFromOneIndexedToZeroIndexed(to.Index(pitch)),
-            },
-            sustainSpec: {
-                index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
-                offset: DEFAULT_OFFSET_FOR_ALMOST_FULL_SUSTAIN,
-                scaleIndex: DEFAULT_DURATIONS_SCALE_INDEX,
             },
         }
     }

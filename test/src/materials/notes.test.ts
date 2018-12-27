@@ -39,28 +39,6 @@ describe('note specs', () => {
                     .toBe(to.Scalar(0))
             })
         })
-
-        describe('sustain', () => {
-            let sustainSpec: NotePropertySpec
-            beforeEach(() => {
-                sustainSpec = noteSpec.sustainSpec || {}
-            })
-
-            it('uses the durations scale', () => {
-                expect(sustainSpec.scaleIndex)
-                    .toBe(DURATIONS_SCALE_INDEX)
-            })
-
-            it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(sustainSpec.index)
-                    .toBe(to.Index(5))
-            })
-
-            it('offsets slightly (from total duration)', () => {
-                expect(sustainSpec.offset)
-                    .toBe(to.Offset(-0.1))
-            })
-        })
     })
 
     describe('when the pitch index is not zero', () => {
@@ -107,28 +85,6 @@ describe('note specs', () => {
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
                 expect(pitchSpec.index)
                     .toBe(to.Index(2))
-            })
-        })
-
-        describe('sustain', () => {
-            let sustainSpec: NotePropertySpec
-            beforeEach(() => {
-                sustainSpec = noteSpec.sustainSpec || {}
-            })
-
-            it('uses the durations scale', () => {
-                expect(sustainSpec.scaleIndex)
-                    .toBe(DURATIONS_SCALE_INDEX)
-            })
-
-            it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(sustainSpec.index)
-                    .toBe(to.Index(5))
-            })
-
-            it('offsets slightly (from total duration)', () => {
-                expect(sustainSpec.offset)
-                    .toBe(to.Offset(-0.1))
             })
         })
     })
