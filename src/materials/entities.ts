@@ -16,7 +16,7 @@ const buildEntities: BuildEntitiesFunction =
 
         const superparticularOrDuperparticularSawEntity: Entity = {
             noteSpecs: superparticularOrDuperparticularPart,
-            timbreName: TimbreNameEnum.SAWTOOTH,
+            timbreName: TimbreNameEnum.SAW,
         }
 
         const harmonicOrSubharmonicSineEntity: Entity = {
