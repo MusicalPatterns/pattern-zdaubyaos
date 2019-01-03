@@ -1,5 +1,5 @@
-import { Rendering } from '@musical-patterns/pattern'
 import { apply, Block, ContourPiece, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
+import { Rendering } from '@musical-patterns/utilities-pattern'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import { ZdaubyaosContour } from '../../types'
 import {

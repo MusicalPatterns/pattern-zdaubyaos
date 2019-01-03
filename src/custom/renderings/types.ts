@@ -1,4 +1,4 @@
-import { Rendering } from '@musical-patterns/pattern'
+import { Rendering } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../types'
 
 type Renderings = { [x in RenderingName]: Rendering<ZdaubyaosContour> }

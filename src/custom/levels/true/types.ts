@@ -1,5 +1,5 @@
-import { Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
+import { Rendering } from '@musical-patterns/utilities-pattern'
 import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
 import { RenderingName } from '../../renderings'
 

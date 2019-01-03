@@ -1,5 +1,5 @@
-import { RenderingByBlockElement } from '@musical-patterns/pattern'
 import { apply, ContourElement, ContourPiece, EVEN, from, INITIAL, numbers, to } from '@musical-patterns/utilities'
+import { RenderingByBlockElement } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../types'
 import { SPRINGY_SUMMER_OFFSET, SPRINGY_SUMMER_SCALAR } from './constants'
 

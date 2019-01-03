@@ -1,6 +1,7 @@
 import { BuildScalesFunction, Scale } from '@musical-patterns/compiler'
-import { buildStandardScales, PatternSpec } from '@musical-patterns/pattern'
+import { PatternSpec } from '@musical-patterns/pattern'
 import { Offset, Scalar, to } from '@musical-patterns/utilities'
+import { buildStandardScales } from '@musical-patterns/utilities-pattern'
 import { buildScalars } from './scalars'
 
 const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {
