@@ -1,5 +1,5 @@
+import { RenderingByBlockElement } from '@musical-patterns/pattern'
 import { ContourPiece, repeat, to } from '@musical-patterns/utilities'
-import { RenderingByBlockElement } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../types'
 
 const tremRendering: RenderingByBlockElement<ZdaubyaosContour> =

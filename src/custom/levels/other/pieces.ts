@@ -1,5 +1,5 @@
+import { Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, DictionaryOf } from '@musical-patterns/utilities'
-import { Rendering } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../../types'
 import { buildRenderings, RenderingName, Renderings } from '../../renderings'
 import { buildOtherBlocks } from './blocks'

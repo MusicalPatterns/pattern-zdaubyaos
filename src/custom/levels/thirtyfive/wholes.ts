@@ -1,5 +1,5 @@
+import { calculateTotalStandardContourDuration, standardRest } from '@musical-patterns/pattern'
 import { ContourWhole, DictionaryOf, repeat, sequence, to } from '@musical-patterns/utilities'
-import { calculateTotalStandardContourDuration, standardRest } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../../types'
 import { buildThirtyfiveContourPieces } from './pieces'
 

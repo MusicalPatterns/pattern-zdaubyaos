@@ -1,5 +1,5 @@
+import { RenderingByBlockElement } from '@musical-patterns/pattern'
 import { apply, ContourElement, ContourPiece, from, INITIAL, numbers, to } from '@musical-patterns/utilities'
-import { RenderingByBlockElement } from '@musical-patterns/utilities-pattern'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { ZdaubyaosContour } from '../../types'
 import { SINGLE_DURATION } from './constants'

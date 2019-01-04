@@ -1,10 +1,10 @@
 import { NoteSpec } from '@musical-patterns/compiler'
-import { ContourElement, from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
 import {
     DEFAULT_DURATIONS_SCALE_INDEX,
     FULL_GAIN,
     unpackStandardContourElement,
-} from '@musical-patterns/utilities-pattern'
+} from '@musical-patterns/pattern'
+import { ContourElement, from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildNoteSpec, ZdaubyaosContour } from '../types'
 

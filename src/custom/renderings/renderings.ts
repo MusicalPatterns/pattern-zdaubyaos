@@ -1,5 +1,5 @@
+import { Rendering, RenderingByBlockElement } from '@musical-patterns/pattern'
 import { Block, ContourPiece, sequence, to } from '@musical-patterns/utilities'
-import { Rendering, RenderingByBlockElement } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../types'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'

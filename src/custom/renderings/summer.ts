@@ -1,5 +1,5 @@
+import { RenderingByBlockElement } from '@musical-patterns/pattern'
 import { ContourElement, ContourPiece, EVEN, from, INITIAL, numbers, to } from '@musical-patterns/utilities'
-import { RenderingByBlockElement } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../types'
 
 const summerRendering: RenderingByBlockElement<ZdaubyaosContour> =

@@ -1,5 +1,5 @@
+import { calculateTotalStandardContourDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, to } from '@musical-patterns/utilities'
-import { calculateTotalStandardContourDuration, Rendering } from '@musical-patterns/utilities-pattern'
 import {
     BarTarget,
     BlockStyle,

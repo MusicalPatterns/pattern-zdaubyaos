@@ -1,5 +1,5 @@
+import { Rendering } from '@musical-patterns/pattern'
 import { to } from '@musical-patterns/utilities'
-import { Rendering } from '@musical-patterns/utilities-pattern'
 import { buildRenderings, RenderingName, Renderings, ZdaubyaosContour } from '../../../../src/indexForTest'
 
 describe('rendering functions', () => {

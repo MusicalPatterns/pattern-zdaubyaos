@@ -1,6 +1,6 @@
 import { NoteSpec } from '@musical-patterns/compiler'
+import { Segment } from '@musical-patterns/pattern'
 import { ContourWhole } from '@musical-patterns/utilities'
-import { Segment } from '@musical-patterns/utilities-pattern'
 import { ZdaubyaosContour } from '../../types'
 import { applyNoteStyle } from './applyNoteStyle'
 import { NoteStyle } from './types'
