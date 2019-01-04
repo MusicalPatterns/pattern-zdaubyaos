@@ -1,7 +1,7 @@
 import { Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
-import { RenderingName } from '../../renderings'
+import { RenderingName } from '../../materials'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
 
 type ByRenderingName = { [z in RenderingName]: ContourPiece<2> }
 type ByBlockStyle = { [y in BlockStyle]: ByRenderingName }

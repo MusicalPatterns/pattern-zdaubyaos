@@ -1,7 +1,7 @@
 import { Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece, DictionaryOf, sequence, to } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
-import { buildRenderings, RenderingName, Renderings } from '../../renderings'
+import { buildRenderings, RenderingName, Renderings } from '../../materials'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
 import { buildTrueBlocks, TrueBlocks } from '../true'
 import { buildAlmostTrueBlocks } from './blocks'
 

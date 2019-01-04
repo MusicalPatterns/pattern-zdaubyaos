@@ -8,8 +8,8 @@ import {
     sequence,
     to,
 } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
-import { RenderingName } from '../../renderings'
+import { RenderingName } from '../../materials'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
 import { getTrueContours } from '../true'
 import { buildOtherContourPieces } from './pieces'
 

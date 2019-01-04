@@ -1,5 +1,5 @@
 import { repeat, to } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle } from '../../../types'
+import { BarTarget, BlockStyle } from '../../types'
 import { TrueBlocks } from './types'
 
 const buildTrueBlocks: () => TrueBlocks =

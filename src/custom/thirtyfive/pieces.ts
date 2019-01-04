@@ -1,7 +1,7 @@
 import { Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, DictionaryOf } from '@musical-patterns/utilities'
-import { ZdaubyaosContour } from '../../../types'
-import { buildRenderings, RenderingName, Renderings } from '../../renderings'
+import { buildRenderings, RenderingName, Renderings } from '../../materials'
+import { ZdaubyaosContour } from '../../types'
 import { buildThirtyfiveBlocks } from './blocks'
 
 const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece<ZdaubyaosContour>> =

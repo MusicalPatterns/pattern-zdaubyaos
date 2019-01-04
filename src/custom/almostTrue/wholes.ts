@@ -1,6 +1,6 @@
 import { ContourWhole, DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../../types'
-import { RenderingName } from '../../renderings'
+import { RenderingName } from '../../materials'
+import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
 import { buildOtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
 

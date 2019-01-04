@@ -1,5 +1,5 @@
 import { Count } from '@musical-patterns/utilities'
-import { RenderingName } from '../custom'
+import { RenderingName } from '../materials'
 import { BarTarget, BlockStyle } from '../types'
 
 type UsageCount = Count

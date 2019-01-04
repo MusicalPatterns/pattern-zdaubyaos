@@ -6,6 +6,9 @@ export {
     buildScalars,
     buildNoteSpec,
     buildScales,
+    buildRenderings,
+    Renderings,
+    RenderingName,
 } from './materials/indexForTest'
 export {
     buildOtherContourPieces,
@@ -13,12 +16,9 @@ export {
     getTrueContours,
     buildTrueContourPieces,
     buildAlmostTrueContourPieces,
-    buildRenderings,
-    Renderings,
     applyGainScalar,
     applyPitchIndexOffset,
     TrueContourPieces,
-    RenderingName,
 } from './custom/indexForTest'
 export { pattern } from './patterns'
 

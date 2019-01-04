@@ -1,6 +1,6 @@
 import { calculateTotalStandardContourDuration, standardRest } from '@musical-patterns/pattern'
 import { ContourWhole, DictionaryOf, repeat, sequence, to } from '@musical-patterns/utilities'
-import { ZdaubyaosContour } from '../../../types'
+import { ZdaubyaosContour } from '../../types'
 import { buildThirtyfiveContourPieces } from './pieces'
 
 const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole<ZdaubyaosContour>> =

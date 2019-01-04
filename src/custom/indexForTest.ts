@@ -1,18 +1,9 @@
 // tslint:disable:no-reaching-imports
 
-export {
-    buildOtherContourPieces,
-    buildThirtyfiveContourPieces,
-    getTrueContours,
-    buildTrueContourPieces,
-    buildAlmostTrueContourPieces,
-    TrueContourPieces,
-} from './levels/indexForTest'
-export {
-    buildRenderings,
-    Renderings,
-    RenderingName,
-} from './renderings/indexForTest'
+export { buildOtherContourPieces } from './other/indexForTest'
+export { buildThirtyfiveContourPieces } from './thirtyfive/indexForTest'
+export { getTrueContours, buildTrueContourPieces, TrueContourPieces } from './true/indexForTest'
+export { buildAlmostTrueContourPieces } from './almostTrue/indexForTest'
 export {
     applyGainScalar,
     applyPitchIndexOffset,
