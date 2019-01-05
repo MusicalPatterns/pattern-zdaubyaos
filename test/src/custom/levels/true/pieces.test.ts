@@ -7,7 +7,8 @@ import {
     buildTrueContourPieces,
     getTrueContours,
     RenderingName,
-    TrueContourPieces, ZdaubyaosContour,
+    TrueContourPieces,
+    ZdaubyaosContour,
 } from '../../../../../src/indexForTest'
 
 describe('true contours', () => {
