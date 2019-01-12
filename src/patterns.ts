@@ -11,12 +11,10 @@ const material: PatternMaterial = {
     buildScalesFunction: buildScales,
 }
 
-const mostRecentPublish: string = new Date().toLocaleString('en-us', { month: 'long', year: 'numeric', day: 'numeric' })
-
 const metadata: PatternMetadata = {
     description: post,
     formattedName: 'Zdaubyaos',
-    mostRecentPublish,
+    mostRecentPublish: process.env.PUBLISH_DATE,
     musicalIdeaIllustrated: 'superparticular series',
     originalPublish: 'August 4, 2018',
 }

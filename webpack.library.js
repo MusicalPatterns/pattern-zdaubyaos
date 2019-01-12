@@ -1,5 +1,6 @@
 const common = require('./webpack.common')
 const merge = require('webpack-merge')
+const { DefinePlugin } = require('webpack')
 
 module.exports = merge(common, {
     entry: './src/index.ts',
@@ -13,5 +14,16 @@ module.exports = merge(common, {
         '@musical-patterns/pattern',
         '@musical-patterns/registry',
         '@musical-patterns/utilities',
+    ],
+    plugins: [
+        new DefinePlugin({
+            'process.env.PUBLISH_DATE': JSON.stringify(
+                new Date().toLocaleString('en-us', {
+                    month: 'long',
+                    year: 'numeric',
+                    day: 'numeric',
+                }),
+            ),
+        }),
     ],
 })
