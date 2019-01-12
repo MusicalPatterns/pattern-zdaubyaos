@@ -14,9 +14,9 @@ const material: PatternMaterial = {
 const metadata: PatternMetadata = {
     description: post,
     formattedName: 'Zdaubyaos',
-    mostRecentPublish: process.env.PUBLISH_DATE,
+    mostRecentPublish: process.env.PUBLISH_DATE || '2018-08-04T07:00:00.000Z',
     musicalIdeaIllustrated: 'superparticular series',
-    originalPublish: 'August 4, 2018',
+    originalPublish: '2018-08-04T07:00:00.000Z',
 }
 
 const spec: PatternSpec = {
