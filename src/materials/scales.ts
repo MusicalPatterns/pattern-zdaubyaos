@@ -1,13 +1,17 @@
 import { BuildScalesFunction, Scale } from '@musical-patterns/compiler'
-import { buildStandardScales, PatternSpec } from '@musical-patterns/pattern'
+import { buildStandardScales, PatternSpec, StandardPatternSpecProperties } from '@musical-patterns/pattern'
 import { Offset, Scalar, to } from '@musical-patterns/utilities'
 import { buildScalars } from './scalars'
 
 const buildScales: BuildScalesFunction = (patternSpec: PatternSpec): Scale[] => {
-    const patternPitchScalar: Scalar = patternSpec.patternPitchScalar || to.Scalar(1)
-    const patternPitchOffset: Offset = patternSpec.patternPitchOffset || to.Offset(0)
-    const patternDurationScalar: Scalar = patternSpec.patternDurationScalar || to.Scalar(1)
-    const patternDurationOffset: Offset = patternSpec.patternDurationOffset || to.Offset(0)
+    const patternPitchScalar: Scalar =
+        patternSpec[ StandardPatternSpecProperties.PATTERN_PITCH_SCALAR ] || to.Scalar(1)
+    const patternPitchOffset: Offset =
+        patternSpec[ StandardPatternSpecProperties.PATTERN_PITCH_OFFSET ] || to.Offset(0)
+    const patternDurationScalar: Scalar =
+        patternSpec[ StandardPatternSpecProperties.PATTERN_DURATION_SCALAR ] || to.Scalar(1)
+    const patternDurationOffset: Offset =
+        patternSpec[ StandardPatternSpecProperties.PATTERN_DURATION_OFFSET ] || to.Offset(0)
 
     const {
         subparticularSeriesScalars,
