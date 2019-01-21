@@ -5,12 +5,12 @@ import {
     StandardSpecData,
     StandardSpecProperties,
 } from '@musical-patterns/pattern'
-import { ZDAUBYAOS_DURATION_SCALAR, ZDAUBYAOS_PITCH_SCALAR } from './constants'
+import { ZDAUBYAOS_BASE_DURATION, ZDAUBYAOS_BASE_FREQUENCY } from './constants'
 
 const initial: StandardSpec = {
     ...standardInitialSpec,
-    [ StandardSpecProperties.PATTERN_DURATION_SCALAR ]: ZDAUBYAOS_DURATION_SCALAR,
-    [ StandardSpecProperties.PATTERN_PITCH_SCALAR ]: ZDAUBYAOS_PITCH_SCALAR,
+    [ StandardSpecProperties.BASE_DURATION ]: ZDAUBYAOS_BASE_DURATION,
+    [ StandardSpecProperties.BASE_FREQUENCY ]: ZDAUBYAOS_BASE_FREQUENCY,
 }
 
 const specData: StandardSpecData = {
