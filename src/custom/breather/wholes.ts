@@ -1,6 +1,6 @@
 import { standardRest } from '@musical-patterns/pattern'
 import { ContourWhole, DictionaryOf, repeat, to } from '@musical-patterns/utilities'
-import { RenderingName } from '../../materials'
+import { RenderingName } from '../../material'
 import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
 import { buildAlmostTrueContourPieces } from '../almostTrue'
 import { buildOtherContourPieces } from '../other'

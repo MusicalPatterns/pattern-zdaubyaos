@@ -1,8 +1,8 @@
 import { Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece } from '@musical-patterns/utilities'
-import { buildRenderings, RenderingName, Renderings } from '../../materials'
+import { buildRenderings, RenderingName, Renderings } from '../../material'
 import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
-import { countUsage } from '../../utilities'
+import { countUsage } from '../contourUsage'
 import { buildTrueBlocks } from './blocks'
 import {
     BuildTrueContourPieceParameters,

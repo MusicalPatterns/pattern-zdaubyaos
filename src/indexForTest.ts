@@ -9,7 +9,7 @@ export {
     buildRenderings,
     Renderings,
     RenderingName,
-} from './materials/indexForTest'
+} from './material/indexForTest'
 export {
     buildOtherContourPieces,
     buildThirtyfiveContourPieces,

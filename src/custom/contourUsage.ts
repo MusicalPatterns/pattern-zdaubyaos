@@ -1,5 +1,5 @@
 import { apply, Maybe, to } from '@musical-patterns/utilities'
-import { RenderingName } from '../materials'
+import { RenderingName } from '../material'
 import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
 
