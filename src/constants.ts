@@ -10,8 +10,8 @@ const DUPER: Offset = to.Offset(2)
 
 const ZDAUBYAOS_SEGMENT_COUNT: Count = to.Count(17)
 
-const ZDAUBYAOS_BASE_DURATION: Millisecond = to.Millisecond(140)
-const ZDAUBYAOS_BASE_FREQUENCY: Frequency = to.Frequency(440)
+const ZDAUBYAOS_INITIAL_BASE_DURATION: Millisecond = to.Millisecond(140)
+const ZDAUBYAOS_INITIAL_BASE_FREQUENCY: Frequency = to.Frequency(440)
 
 const SEGMENT_A: Index = to.Index(0)
 const SEGMENT_B: Index = to.Index(1)
@@ -30,8 +30,8 @@ export {
     SUPER,
     DUPER,
     ZDAUBYAOS_SEGMENT_COUNT,
-    ZDAUBYAOS_BASE_DURATION,
-    ZDAUBYAOS_BASE_FREQUENCY,
+    ZDAUBYAOS_INITIAL_BASE_DURATION,
+    ZDAUBYAOS_INITIAL_BASE_FREQUENCY,
     SEGMENT_A,
     SEGMENT_B,
     SEGMENT_C,
