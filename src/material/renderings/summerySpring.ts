@@ -13,7 +13,8 @@ const summerySpringRendering: RenderingByBlockElement<ZdaubyaosContour> =
                 1,
             ])),
         )
-        apply.Index(contour, INITIAL)[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
+        const index: ContourElement = apply.Index(contour, INITIAL)
+        index[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
 
         return contour
     }
