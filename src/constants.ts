@@ -1,6 +1,6 @@
 // tslint:disable:no-magic-numbers
 
-import { Count, Frequency, Index, Millisecond, Offset, Scalar, Time, to } from '@musical-patterns/utilities'
+import { Count, Frequency, Index, Milliseconds, Offset, Scalar, Time, to } from '@musical-patterns/utilities'
 
 const FIFTEEN: Time = to.Time(15)
 const TWENTYFOUR: Time = to.Time(24)
@@ -10,7 +10,7 @@ const DUPER: Offset = to.Offset(2)
 
 const ZDAUBYAOS_SEGMENT_COUNT: Count = to.Count(17)
 
-const ZDAUBYAOS_INITIAL_BASE_DURATION: Millisecond = to.Millisecond(140)
+const ZDAUBYAOS_INITIAL_BASE_DURATION: Milliseconds = to.Milliseconds(140)
 const ZDAUBYAOS_INITIAL_BASE_FREQUENCY: Frequency = to.Frequency(440)
 
 const SEGMENT_A: Index = to.Index(0)

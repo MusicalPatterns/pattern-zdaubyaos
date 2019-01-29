@@ -10,7 +10,7 @@ const buildScales: BuildScalesFunction =
         const patternPitchOffset: Offset =
             spec[ StandardSpecProperties.FREQUENCY_OFFSET ] || to.Offset(0)
         const patternDurationScalar: Scalar =
-            to.Scalar(from.Millisecond(spec[ StandardSpecProperties.BASE_DURATION ] || to.Millisecond(1)))
+            to.Scalar(from.Milliseconds(spec[ StandardSpecProperties.BASE_DURATION ] || to.Milliseconds(1)))
         const patternDurationOffset: Offset =
             spec[ StandardSpecProperties.DURATION_OFFSET ] || to.Offset(0)
 
