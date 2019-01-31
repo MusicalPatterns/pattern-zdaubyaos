@@ -1,9 +1,8 @@
-import { RenderingByBlockElement } from '@musical-patterns/pattern'
+import { RenderingByBlockElement, StandardContour } from '@musical-patterns/pattern'
 import { ContourPiece, to } from '@musical-patterns/utilities'
-import { ZdaubyaosContour } from '../../types'
 
-const flatlineRendering: RenderingByBlockElement<ZdaubyaosContour> =
-    (blockElement: number): ContourPiece<ZdaubyaosContour> => to.ContourPiece<ZdaubyaosContour>([
+const flatlineRendering: RenderingByBlockElement<StandardContour> =
+    (blockElement: number): ContourPiece<StandardContour> => to.ContourPiece<StandardContour>([
         [
             1,
             blockElement,

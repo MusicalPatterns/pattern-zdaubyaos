@@ -1,15 +1,15 @@
 import { NoteSpec } from '@musical-patterns/compiler'
+import { StandardContour } from '@musical-patterns/pattern'
 import { apply, ContourWhole } from '@musical-patterns/utilities'
 import { OFFSET_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
-import { ZdaubyaosContour } from '../../types'
 import { buildNoteSpec } from '../notes'
 import { applyGainScalar } from './applyGainScalar'
 import { applyPitchIndexOffset } from './applyPitchIndexOffset'
 import { applyScaleIndex } from './applyScaleIndex'
 import { NoteStyle } from './types'
 
-const applyNoteStyle: (contourWhole: ContourWhole<ZdaubyaosContour>, noteStyle: NoteStyle) => NoteSpec[] =
-    (contourWhole: ContourWhole<ZdaubyaosContour>, noteStyle: NoteStyle): NoteSpec[] => {
+const applyNoteStyle: (contourWhole: ContourWhole<StandardContour>, noteStyle: NoteStyle) => NoteSpec[] =
+    (contourWhole: ContourWhole<StandardContour>, noteStyle: NoteStyle): NoteSpec[] => {
         let part: NoteSpec[] = contourWhole.map(buildNoteSpec)
 
         const { gainScalar, pitchIndexOffset, scaleIndex } = noteStyle

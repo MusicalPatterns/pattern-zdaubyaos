@@ -25,7 +25,6 @@ export { pattern } from './patterns'
 export {
     BarTarget,
     BlockStyle,
-    ZdaubyaosContour,
 } from './types'
 
 // tslint:disable-next-line:no-default-import

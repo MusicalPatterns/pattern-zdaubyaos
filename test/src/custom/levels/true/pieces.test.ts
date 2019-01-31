@@ -10,7 +10,6 @@ import {
     getTrueContours,
     RenderingName,
     TrueContourPieces,
-    ZdaubyaosContour,
 } from '../../../../../src/indexForTest'
 
 describe('true contours', () => {
@@ -198,10 +197,10 @@ describe('true contours', () => {
                 Object.entries(contourPiecesByBarTargetBlockStyleThenRendering[ BarTarget.FIFTEEN ])
                     .forEach(
                         // @ts-ignore
-                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<ZdaubyaosContour> } ]): void => {
+                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<StandardContour> } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<ZdaubyaosContour> ]) => {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<StandardContour> ]) => {
                                     switch (renderingName) {
                                         case RenderingName.SPRING:
                                         case RenderingName.SUMMER:
@@ -475,10 +474,10 @@ describe('true contours', () => {
                 Object.entries(contourPiecesByBarTargetBlockStyleThenRendering[ BarTarget.TWENTYFOUR ])
                     .forEach(
                         // @ts-ignore
-                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<ZdaubyaosContour> } ]): void => {
+                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<StandardContour> } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<ZdaubyaosContour> ]): void => {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<StandardContour> ]): void => {
                                     switch (renderingName) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:

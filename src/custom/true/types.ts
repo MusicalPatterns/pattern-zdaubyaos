@@ -1,7 +1,7 @@
-import { Rendering } from '@musical-patterns/pattern'
+import { Rendering, StandardContour } from '@musical-patterns/pattern'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 import { RenderingName } from '../../material'
-import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
+import { BarTarget, BlockStyle } from '../../types'
 
 type ByRenderingName = { [z in RenderingName]: ContourPiece<2> }
 type ByBlockStyle = { [y in BlockStyle]: ByRenderingName }
@@ -24,7 +24,7 @@ interface BuildTrueContourPieceParameters {
     barTarget: BarTarget,
     block: Block,
     blockStyle: BlockStyle,
-    rendering: Rendering<ZdaubyaosContour>,
+    rendering: Rendering<StandardContour>,
     renderingName: RenderingName,
 }
 

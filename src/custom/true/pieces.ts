@@ -1,7 +1,7 @@
-import { Rendering } from '@musical-patterns/pattern'
+import { Rendering, StandardContour } from '@musical-patterns/pattern'
 import { Block, ContourPiece } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../material'
-import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
+import { BarTarget, BlockStyle } from '../../types'
 import { countUsage } from '../contourUsage'
 import { buildTrueBlocks } from './blocks'
 import {
@@ -52,7 +52,7 @@ const buildTrueContourPieces: () => TrueContourPieces =
                                         // @ts-ignore
                                         (
                                             [ renderingName, rendering ]:
-                                                [ RenderingName, Rendering<ZdaubyaosContour> ],
+                                                [ RenderingName, Rendering<StandardContour> ],
                                         ): void => {
                                             buildTrueContourPiece({
                                                 barTarget,

@@ -1,43 +1,43 @@
-import { standardRest } from '@musical-patterns/pattern'
+import { StandardContour, standardRest } from '@musical-patterns/pattern'
 import { ContourWhole, DictionaryOf, repeat, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../material'
-import { BarTarget, BlockStyle, ZdaubyaosContour } from '../../types'
+import { BarTarget, BlockStyle } from '../../types'
 import { buildAlmostTrueContourPieces } from '../almostTrue'
 import { buildOtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
 
-const buildBreatherContourWholes: () => DictionaryOf<ContourWhole<ZdaubyaosContour>> =
-    (): DictionaryOf<ContourWhole<ZdaubyaosContour>> => {
+const buildBreatherContourWholes: () => DictionaryOf<ContourWhole<StandardContour>> =
+    (): DictionaryOf<ContourWhole<StandardContour>> => {
         const { inaiiiVarietyContourPiece } = buildAlmostTrueContourPieces()
         const { backboneTwentyfourContourPiece } = buildOtherContourPieces()
 
-        const breatherRestContourWhole: ContourWhole<ZdaubyaosContour> =
-            to.ContourWhole<ZdaubyaosContour>(standardRest(24))
-        const breatherSpringContourWhole: ContourWhole<ZdaubyaosContour> =
-            to.ContourWhole<ZdaubyaosContour>(getTrueContours(
+        const breatherRestContourWhole: ContourWhole<StandardContour> =
+            to.ContourWhole<StandardContour>(standardRest(24))
+        const breatherSpringContourWhole: ContourWhole<StandardContour> =
+            to.ContourWhole<StandardContour>(getTrueContours(
                 BlockStyle.INAI,
                 BarTarget.TWENTYFOUR,
                 RenderingName.SPRING,
             ))
-        const breatherSummerContourWhole: ContourWhole<ZdaubyaosContour> =
-            to.ContourWhole<ZdaubyaosContour>(getTrueContours(
+        const breatherSummerContourWhole: ContourWhole<StandardContour> =
+            to.ContourWhole<StandardContour>(getTrueContours(
                 BlockStyle.INAI,
                 BarTarget.TWENTYFOUR,
                 RenderingName.SUMMER,
             ))
-        const doubleBreatherFallContourWhole: ContourWhole<ZdaubyaosContour> = to.ContourWhole<ZdaubyaosContour>(
+        const doubleBreatherFallContourWhole: ContourWhole<StandardContour> = to.ContourWhole<StandardContour>(
             repeat(backboneTwentyfourContourPiece, to.Count(2)),
         )
-        const breatherVarietyContourWhole: ContourWhole<ZdaubyaosContour> =
-            to.ContourWhole<ZdaubyaosContour>(inaiiiVarietyContourPiece)
-        const breatherSpringAltContourWhole: ContourWhole<ZdaubyaosContour> =
-            to.ContourWhole<ZdaubyaosContour>(getTrueContours(
+        const breatherVarietyContourWhole: ContourWhole<StandardContour> =
+            to.ContourWhole<StandardContour>(inaiiiVarietyContourPiece)
+        const breatherSpringAltContourWhole: ContourWhole<StandardContour> =
+            to.ContourWhole<StandardContour>(getTrueContours(
                 BlockStyle.OUZD,
                 BarTarget.TWENTYFOUR,
                 RenderingName.SPRING,
             ))
-        const doubleBreatherRestContourWhole: ContourWhole<ZdaubyaosContour> =
-            to.ContourWhole<ZdaubyaosContour>(standardRest(48))
+        const doubleBreatherRestContourWhole: ContourWhole<StandardContour> =
+            to.ContourWhole<StandardContour>(standardRest(48))
 
         return {
             breatherRestContourWhole,
