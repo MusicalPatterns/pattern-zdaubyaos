@@ -1,4 +1,4 @@
-// tslint:disable:max-file-line-count
+// tslint:disable max-file-line-count
 
 import { StandardContour } from '@musical-patterns/pattern'
 import { ContourPiece, ContourWhole, DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'

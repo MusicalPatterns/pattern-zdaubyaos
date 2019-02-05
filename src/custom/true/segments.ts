@@ -1,4 +1,4 @@
-// tslint:disable:max-file-line-count
+// tslint:disable max-file-line-count
 
 import { Segment } from '@musical-patterns/pattern'
 import { DictionaryOf, to } from '@musical-patterns/utilities'

@@ -1,4 +1,4 @@
-// tslint:disable:no-duplicate-string
+// tslint:disable no-duplicate-string
 
 import { calculateTotalStandardContourDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, to } from '@musical-patterns/utilities'
@@ -485,7 +485,7 @@ describe('true contours', () => {
                                                 .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         case RenderingName.BONY:
-                                            // tslint:disable-next-line:no-nested-switch
+                                            // tslint:disable-next-line no-nested-switch
                                             switch (blockStyle) {
                                                 case BlockStyle.CHUWOW:
                                                 case BlockStyle.DJIYAI:
