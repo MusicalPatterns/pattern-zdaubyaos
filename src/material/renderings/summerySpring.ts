@@ -7,8 +7,8 @@ const summerySpringRendering: RenderingByBlockElement<StandardContour> =
     (blockElement: number): ContourPiece<StandardContour> => {
         const contour: ContourPiece<StandardContour> = to.ContourPiece(positiveIntegers
             .slice(from.Index(INITIAL), blockElement)
-            .map((n: number): ContourElement<StandardContour> => ([
-                apply.Scalar(apply.Offset(n, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR),
+            .map((integer: number): ContourElement<StandardContour> => ([
+                apply.Scalar(apply.Offset(integer, SUMMERY_SPRING_OFFSET), SUMMERY_SPRING_SCALAR),
                 1,
             ])),
         )

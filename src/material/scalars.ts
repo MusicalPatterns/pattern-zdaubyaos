@@ -3,17 +3,17 @@ import { DUPER, SUPER } from '../constants'
 
 const buildScalars: () => DictionaryOf<Scalar[]> =
     (): DictionaryOf<Scalar[]> => {
-        const subparticularSeriesScalars: Scalar[] = positiveIntegers.map((n: number): Scalar =>
-            to.Scalar(n / apply.Offset(n, SUPER)))
+        const subparticularSeriesScalars: Scalar[] = positiveIntegers.map((integer: number): Scalar =>
+            to.Scalar(integer / apply.Offset(integer, SUPER)))
 
-        const dubparticularSeriesScalars: Scalar[] = positiveIntegers.map((n: number): Scalar =>
-            to.Scalar(n / apply.Offset(n, DUPER)))
+        const dubparticularSeriesScalars: Scalar[] = positiveIntegers.map((integer: number): Scalar =>
+            to.Scalar(integer / apply.Offset(integer, DUPER)))
 
-        const superparticularSeriesScalars: Scalar[] = positiveIntegers.map((n: number): Scalar =>
-            to.Scalar(apply.Offset(n, SUPER) / (n)))
+        const superparticularSeriesScalars: Scalar[] = positiveIntegers.map((integer: number): Scalar =>
+            to.Scalar(apply.Offset(integer, SUPER) / (integer)))
 
-        const duperparticularSeriesScalars: Scalar[] = positiveIntegers.map((n: number): Scalar =>
-            to.Scalar(apply.Offset(n, DUPER) / (n)))
+        const duperparticularSeriesScalars: Scalar[] = positiveIntegers.map((integer: number): Scalar =>
+            to.Scalar(apply.Offset(integer, DUPER) / (integer)))
 
         return {
             dubparticularSeriesScalars,
