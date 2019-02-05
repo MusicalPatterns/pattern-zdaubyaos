@@ -1,19 +1,19 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
-import { Block, ContourPiece } from '@musical-patterns/utilities'
+import { Block, ContourPiece, entries } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../material'
 import { BarTarget, BlockStyle } from '../../types'
 import { countUsage } from '../contourUsage'
 import { buildTrueBlocks } from './blocks'
 import {
     BuildTrueContourPieceParameters,
-    ByBlockStyle,
     GetTrueContourPieces,
-    TrueBlocks,
-    TrueContourPieces,
+    TrueBlocksByBarTargetThenBlockStyle,
+    TrueBlocksByBlockStyle,
+    TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
 } from './types'
 
 // @ts-ignore
-const contourPiecesByBarTargetBlockStyleThenRendering: TrueContourPieces = {}
+const contourPiecesByBarTargetBlockStyleThenRendering: TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName = {}
 
 const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => void =
     (parameters: BuildTrueContourPieceParameters): void => {
@@ -34,22 +34,19 @@ const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => vo
             contourPiece
     }
 
-const buildTrueContourPieces: () => TrueContourPieces =
-    (): TrueContourPieces => {
+const buildTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName =
+    (): TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName => {
         const renderings: Renderings = buildRenderings()
 
-        const trueBlocks: TrueBlocks = buildTrueBlocks()
-        Object.entries(trueBlocks)
+        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = buildTrueBlocks()
+        entries(trueBlocks)
             .forEach(
-                // @ts-ignore
-                ([ barTarget, blocksBy ]: [ BarTarget, ByBlockStyle ]): void => {
-                    Object.entries(blocksBy)
+                ([ barTarget, blocksBy ]: [ BarTarget, TrueBlocksByBlockStyle ]): void => {
+                    entries(blocksBy)
                         .forEach(
-                            // @ts-ignore
                             ([ blockStyle, block ]: [ BlockStyle, Block ]): void => {
-                                Object.entries(renderings)
+                                entries(renderings)
                                     .forEach(
-                                        // @ts-ignore
                                         (
                                             [ renderingName, rendering ]:
                                                 [ RenderingName, Rendering<PitchDuration> ],

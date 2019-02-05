@@ -2,5 +2,6 @@
 
 export { getTrueContours, buildTrueContourPieces } from './pieces'
 export {
-    TrueContourPieces,
+    TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
+    TrueContourPiecesByRenderingName,
 } from './types'

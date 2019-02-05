@@ -18,7 +18,8 @@ export {
     buildAlmostTrueContourPieces,
     applyGainScalar,
     applyPitchIndexOffset,
-    TrueContourPieces,
+    TrueContourPiecesByRenderingName,
+    TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
 } from './custom/indexForTest'
 export { pattern } from './patterns'
 

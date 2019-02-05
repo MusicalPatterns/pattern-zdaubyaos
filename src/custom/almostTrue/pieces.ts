@@ -2,7 +2,7 @@ import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece, DictionaryOf, sequence, to } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../material'
 import { BarTarget, BlockStyle } from '../../types'
-import { buildTrueBlocks, TrueBlocks } from '../true'
+import { buildTrueBlocks, TrueBlocksByBarTargetThenBlockStyle } from '../true'
 import { buildAlmostTrueBlocks } from './blocks'
 
 const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuration>> =
@@ -14,7 +14,7 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuratio
 
         const zdaubGlisVariantContourPiece: ContourPiece<PitchDuration> = glis(trueGlisVariantBlock)
 
-        const trueBlocks: TrueBlocks = buildTrueBlocks()
+        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = buildTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
         const inaiiiVarietyContourPiece: ContourPiece<PitchDuration> = to.ContourPiece(sequence(
             inai.map((blockElement: number, index: number): ContourPiece<PitchDuration> => {

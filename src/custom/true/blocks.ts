@@ -1,9 +1,9 @@
 import { repeat, to } from '@musical-patterns/utilities'
 import { BarTarget, BlockStyle } from '../../types'
-import { TrueBlocks } from './types'
+import { TrueBlocksByBarTargetThenBlockStyle } from './types'
 
-const buildTrueBlocks: () => TrueBlocks =
-    (): TrueBlocks =>
+const buildTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
+    (): TrueBlocksByBarTargetThenBlockStyle =>
         ({
             [ BarTarget.FIFTEEN ]: {
                 [ BlockStyle.CHUWOW ]: to.Block([ 3, 4, 3, 5 ]),
