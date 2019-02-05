@@ -1,5 +1,16 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
-import { apply, Block, ContourPiece, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
+import {
+    apply,
+    Block,
+    ContourPiece,
+    Count,
+    from,
+    Index,
+    reciprocal,
+    repeat,
+    Time,
+    to,
+} from '@musical-patterns/utilities'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
     FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
@@ -18,7 +29,10 @@ const bonyRendering: Rendering<PitchDuration> =
         )
         const isBarTargetFifteen: boolean = from.Time(blocksTotal) % from.Time(FIFTEEN) === 0
         const barDivisor: Time = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
-        const barCount: Count = to.Count(from.Time(blocksTotal) / from.Time(barDivisor))
+        const barCount: Count = to.Count(apply.Scalar(
+            from.Time(blocksTotal),
+            to.Scalar(reciprocal(from.Time(barDivisor))),
+        ))
 
         const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
             repeat(FIFTEEN_BONY_BLOCKS, apply.Count(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :

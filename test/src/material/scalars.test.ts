@@ -1,8 +1,8 @@
-import { DictionaryOf, Scalar, to } from '@musical-patterns/utilities'
+import { DictionaryOf, Scalar, testArraysAreClose, to } from '@musical-patterns/utilities'
 import { buildScalars } from '../../../src/indexForTest'
 
-describe('scales', () => {
-    describe('subparticular series scale', () => {
+describe('scalars', () => {
+    describe('subparticular series scalars', () => {
         it('has all the pitches whose numerator is one less than the denominator', () => {
             const { subparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
@@ -13,14 +13,11 @@ describe('scales', () => {
                 4 / 5,
             ].map(to.Scalar)
 
-            expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(subparticularSeriesScalars[ index ])
-                    .toEqual(expectedPitch)
-            })
+            testArraysAreClose(subparticularSeriesScalars, expectedScalars)
         })
     })
 
-    describe('dubparticular series scale', () => {
+    describe('dubparticular series scalars', () => {
         it('has all the pitches whose numerator is two less than the denominator', () => {
             const { dubparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
@@ -31,14 +28,11 @@ describe('scales', () => {
                 4 / 6,
             ].map(to.Scalar)
 
-            expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(dubparticularSeriesScalars[ index ])
-                    .toEqual(expectedPitch)
-            })
+            testArraysAreClose(dubparticularSeriesScalars, expectedScalars)
         })
     })
 
-    describe('superparticular series scale', () => {
+    describe('superparticular series scalars', () => {
         it('has all the pitches whose numerator is one more than the denominator', () => {
             const { superparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
@@ -49,14 +43,11 @@ describe('scales', () => {
                 5 / 4,
             ].map(to.Scalar)
 
-            expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(superparticularSeriesScalars[ index ])
-                    .toEqual(expectedPitch)
-            })
+            testArraysAreClose(superparticularSeriesScalars, expectedScalars)
         })
     })
 
-    describe('duperparticular series scale', () => {
+    describe('duperparticular series scalars', () => {
         it('has all the pitches whose numerator is two more than the denominator', () => {
             const { duperparticularSeriesScalars }: DictionaryOf<Scalar[]> = buildScalars()
 
@@ -67,10 +58,7 @@ describe('scales', () => {
                 6 / 4,
             ].map(to.Scalar)
 
-            expectedScalars.forEach((expectedPitch: Scalar, index: number): void => {
-                expect(duperparticularSeriesScalars[ index ])
-                    .toEqual(expectedPitch)
-            })
+            testArraysAreClose(duperparticularSeriesScalars, expectedScalars)
         })
     })
 })
