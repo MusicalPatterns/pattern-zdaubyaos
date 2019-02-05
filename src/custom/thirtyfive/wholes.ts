@@ -1,9 +1,9 @@
-import { calculateTotalStandardContourDuration, StandardContour, standardRest } from '@musical-patterns/pattern'
+import { calculateTotalPitchDurationContourDuration, PitchDuration, pitchDurationRest } from '@musical-patterns/pattern'
 import { ContourWhole, DictionaryOf, repeat, sequence, to } from '@musical-patterns/utilities'
 import { buildThirtyfiveContourPieces } from './pieces'
 
-const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole<StandardContour>> =
-    (): DictionaryOf<ContourWhole<StandardContour>> => {
+const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
+    (): DictionaryOf<ContourWhole<PitchDuration>> => {
         const {
             thirtyfiveYaosBassContourPiece,
             thirtyfiveYaosAccidentInspiredContourPiece,
@@ -11,16 +11,16 @@ const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole<StandardCont
             thirtyfiveZdaubOnlyWiggleContourPiece,
         } = buildThirtyfiveContourPieces()
 
-        const thirtyfiveYaosBassContourWhole: ContourWhole<StandardContour> = to.ContourWhole(sequence([
+        const thirtyfiveYaosBassContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
             repeat(thirtyfiveYaosBassContourPiece, to.Count(30)),
         ]))
 
-        const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole<StandardContour> = to.ContourWhole(sequence([
+        const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
             repeat(thirtyfiveYaosAccidentInspiredContourPiece, to.Count(30)),
         ]))
 
-        const thirtyfiveZdaubContourWhole: ContourWhole<StandardContour> = to.ContourWhole(sequence([
-            standardRest(calculateTotalStandardContourDuration(thirtyfiveZdaubContourPiece)),
+        const thirtyfiveZdaubContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+            pitchDurationRest(calculateTotalPitchDurationContourDuration(thirtyfiveZdaubContourPiece)),
             repeat(thirtyfiveZdaubContourPiece, to.Count(2)),
             repeat(thirtyfiveZdaubOnlyWiggleContourPiece, to.Count(12)),
         ]))

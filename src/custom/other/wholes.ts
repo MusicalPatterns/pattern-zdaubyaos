@@ -1,4 +1,4 @@
-import { StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration } from '@musical-patterns/pattern'
 import {
     ContourWhole,
     DictionaryOf,
@@ -14,8 +14,8 @@ import { BarTarget, BlockStyle } from '../../types'
 import { getTrueContours } from '../true'
 import { buildOtherContourPieces } from './pieces'
 
-const buildOtherContourWholes: () => DictionaryOf<ContourWhole<StandardContour>> =
-    (): DictionaryOf<ContourWhole<StandardContour>> => {
+const buildOtherContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
+    (): DictionaryOf<ContourWhole<PitchDuration>> => {
         const {
             secretLongChordContourPiece,
             shiftyContourPiece,
@@ -24,23 +24,23 @@ const buildOtherContourWholes: () => DictionaryOf<ContourWhole<StandardContour>>
             shiftyTwentyfourVariantContourPiece,
         } = buildOtherContourPieces()
 
-        const secretLongChordContourWhole: ContourWhole<StandardContour> =
-            to.ContourWhole<StandardContour>(secretLongChordContourPiece)
+        const secretLongChordContourWhole: ContourWhole<PitchDuration> =
+            to.ContourWhole<PitchDuration>(secretLongChordContourPiece)
 
-        const totallyOutThereContourWhole: ContourWhole<StandardContour> = to.ContourWhole<StandardContour>(repeat(
+        const totallyOutThereContourWhole: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(repeat(
             getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER)
                 .slice(from.Index(INITIAL), 8),
             to.Count(3),
         ))
 
-        const shiftyAContourWhole: ContourWhole<StandardContour> = to.ContourWhole<StandardContour>(sequence([
+        const shiftyAContourWhole: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(sequence([
             repeatCall(() => shiftyFifteenContourPiece, to.Count(3)),
             repeatCall(() => shiftyTwentyfourContourPiece, to.Count(4)),
             repeatCall(() => shiftyTwentyfourVariantContourPiece, to.Count(3)),
         ]))
 
-        const shiftyBContourWhole: ContourWhole<StandardContour> =
-            to.ContourWhole<StandardContour>(shiftyContourPiece)
+        const shiftyBContourWhole: ContourWhole<PitchDuration> =
+            to.ContourWhole<PitchDuration>(shiftyContourPiece)
 
         return {
             secretLongChordContourWhole,

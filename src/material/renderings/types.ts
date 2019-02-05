@@ -1,6 +1,6 @@
-import { Rendering, StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 
-type Renderings = { [x in RenderingName]: Rendering<StandardContour> }
+type Renderings = { [x in RenderingName]: Rendering<PitchDuration> }
 
 enum RenderingName {
     SPRING = 'SPRING',

@@ -1,6 +1,6 @@
 // tslint:disable no-duplicate-string
 
-import { calculateTotalStandardContourDuration, Rendering } from '@musical-patterns/pattern'
+import { calculateTotalPitchDurationContourDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, to } from '@musical-patterns/utilities'
 import {
     BarTarget,
@@ -197,17 +197,17 @@ describe('true contours', () => {
                 Object.entries(contourPiecesByBarTargetBlockStyleThenRendering[ BarTarget.FIFTEEN ])
                     .forEach(
                         // @ts-ignore
-                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<StandardContour> } ]): void => {
+                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<PitchDuration> } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<StandardContour> ]) => {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<PitchDuration> ]) => {
                                     switch (renderingName) {
                                         case RenderingName.SPRING:
                                         case RenderingName.SUMMER:
                                         case RenderingName.FALL:
                                         case RenderingName.SUMMERY_SPRING:
                                         case RenderingName.SPRINGY_SUMMER:
-                                            expect(calculateTotalStandardContourDuration(contours) % 15)
+                                            expect(calculateTotalPitchDurationContourDuration(contours) % 15)
                                                 .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         default:
@@ -474,14 +474,14 @@ describe('true contours', () => {
                 Object.entries(contourPiecesByBarTargetBlockStyleThenRendering[ BarTarget.TWENTYFOUR ])
                     .forEach(
                         // @ts-ignore
-                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<StandardContour> } ]): void => {
+                        ([ blockStyle, contoursByRendering ]: [ BlockStyle, { [x in Rendering]: ContourPiece<PitchDuration> } ]): void => {
                             Object.entries(contoursByRendering)
                             // @ts-ignore
-                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<StandardContour> ]): void => {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<PitchDuration> ]): void => {
                                     switch (renderingName) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:
-                                            expect(calculateTotalStandardContourDuration(contours) % 24)
+                                            expect(calculateTotalPitchDurationContourDuration(contours) % 24)
                                                 .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         case RenderingName.BONY:
@@ -493,7 +493,7 @@ describe('true contours', () => {
                                                 case BlockStyle.INAI:
                                                     break
                                                 default:
-                                                    expect(calculateTotalStandardContourDuration(contours) % 24)
+                                                    expect(calculateTotalPitchDurationContourDuration(contours) % 24)
                                                         .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
                                             }
                                             break

@@ -1,10 +1,10 @@
-import { Rendering, StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, DictionaryOf } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../material'
 import { buildOtherBlocks } from './blocks'
 
-const buildOtherContourPieces: () => DictionaryOf<ContourPiece<StandardContour>> =
-    (): DictionaryOf<ContourPiece<StandardContour>> => {
+const buildOtherContourPieces: () => DictionaryOf<ContourPiece<PitchDuration>> =
+    (): DictionaryOf<ContourPiece<PitchDuration>> => {
         const {
             backboneFifteenBlock,
             backboneTwentyfourBlock,
@@ -17,17 +17,17 @@ const buildOtherContourPieces: () => DictionaryOf<ContourPiece<StandardContour>>
 
         const renderings: Renderings = buildRenderings()
 
-        const glis: Rendering<StandardContour> = renderings[ RenderingName.GLIS ]
-        const flatline: Rendering<StandardContour> = renderings[ RenderingName.FLATLINE ]
+        const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
+        const flatline: Rendering<PitchDuration> = renderings[ RenderingName.FLATLINE ]
 
-        const backboneFifteenContourPiece: ContourPiece<StandardContour> = glis(backboneFifteenBlock)
-        const backboneTwentyfourContourPiece: ContourPiece<StandardContour> = glis(backboneTwentyfourBlock)
-        const shiftyFifteenContourPiece: ContourPiece<StandardContour> = glis(shiftyFifteenBlock)
-        const shiftyTwentyfourContourPiece: ContourPiece<StandardContour> = glis(shiftyTwentyfourBlock)
-        const shiftyTwentyfourVariantContourPiece: ContourPiece<StandardContour> = glis(shiftyTwentyfourVariantBlock)
-        const shiftyContourPiece: ContourPiece<StandardContour> = glis(shiftyBlock)
+        const backboneFifteenContourPiece: ContourPiece<PitchDuration> = glis(backboneFifteenBlock)
+        const backboneTwentyfourContourPiece: ContourPiece<PitchDuration> = glis(backboneTwentyfourBlock)
+        const shiftyFifteenContourPiece: ContourPiece<PitchDuration> = glis(shiftyFifteenBlock)
+        const shiftyTwentyfourContourPiece: ContourPiece<PitchDuration> = glis(shiftyTwentyfourBlock)
+        const shiftyTwentyfourVariantContourPiece: ContourPiece<PitchDuration> = glis(shiftyTwentyfourVariantBlock)
+        const shiftyContourPiece: ContourPiece<PitchDuration> = glis(shiftyBlock)
 
-        const secretLongChordContourPiece: ContourPiece<StandardContour> = flatline(secretLongChordBlock)
+        const secretLongChordContourPiece: ContourPiece<PitchDuration> = flatline(secretLongChordBlock)
 
         return {
             backboneFifteenContourPiece,

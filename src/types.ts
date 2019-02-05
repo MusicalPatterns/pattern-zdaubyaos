@@ -1,8 +1,8 @@
 import { NoteSpec } from '@musical-patterns/compiler'
-import { StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration } from '@musical-patterns/pattern'
 import { ContourElement } from '@musical-patterns/utilities'
 
-type BuildNoteSpec = (contourElement: ContourElement<StandardContour>) => NoteSpec
+type BuildNoteSpec = (contourElement: ContourElement<PitchDuration>) => NoteSpec
 
 enum BarTarget {
     FIFTEEN = 'FIFTEEN',

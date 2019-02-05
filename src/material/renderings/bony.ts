@@ -1,4 +1,4 @@
-import { Rendering, StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { apply, Block, ContourPiece, Count, from, Index, repeat, Time, to } from '@musical-patterns/utilities'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
@@ -8,8 +8,8 @@ import {
     TWENTYFOUR_BONY_BLOCKS,
 } from './constants'
 
-const bonyRendering: Rendering<StandardContour> =
-    (block: Block): ContourPiece<StandardContour> => {
+const bonyRendering: Rendering<PitchDuration> =
+    (block: Block): ContourPiece<PitchDuration> => {
         const blockClone: Block = to.Block(block.slice())
         const blocksTotal: Time = blockClone.reduce(
             (accumulator: Time, blockElement: number): Time =>
@@ -25,7 +25,7 @@ const bonyRendering: Rendering<StandardContour> =
             repeat(TWENTYFOUR_BONY_BLOCKS, apply.Count(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
         )
 
-        const contourPiece: ContourPiece<StandardContour> = to.ContourPiece([])
+        const contourPiece: ContourPiece<PitchDuration> = to.ContourPiece([])
         let blocksIndexForPitchIndex: Index = to.Index(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: number): void => {

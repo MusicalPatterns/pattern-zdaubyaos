@@ -1,4 +1,4 @@
-import { Rendering, StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 import { RenderingName } from '../../material'
 import { BarTarget, BlockStyle } from '../../types'
@@ -24,7 +24,7 @@ interface BuildTrueContourPieceParameters {
     barTarget: BarTarget,
     block: Block,
     blockStyle: BlockStyle,
-    rendering: Rendering<StandardContour>,
+    rendering: Rendering<PitchDuration>,
     renderingName: RenderingName,
 }
 

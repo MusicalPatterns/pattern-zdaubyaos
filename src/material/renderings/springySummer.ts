@@ -1,4 +1,4 @@
-import { RenderingByBlockElement, StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/pattern'
 import {
     apply,
     ContourElement,
@@ -11,10 +11,10 @@ import {
 } from '@musical-patterns/utilities'
 import { SPRINGY_SUMMER_OFFSET, SPRINGY_SUMMER_SCALAR } from './constants'
 
-const springySummerRendering: RenderingByBlockElement<StandardContour> =
-    (blockElement: number): ContourPiece<StandardContour> =>
-        to.ContourPiece<StandardContour>(positiveIntegers.slice(from.Index(INITIAL), blockElement)
-            .map((integer: number): ContourElement<StandardContour> => {
+const springySummerRendering: RenderingByBlockElement<PitchDuration> =
+    (blockElement: number): ContourPiece<PitchDuration> =>
+        to.ContourPiece<PitchDuration>(positiveIntegers.slice(from.Index(INITIAL), blockElement)
+            .map((integer: number): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
                     return [ 0, 1 ]
                 }

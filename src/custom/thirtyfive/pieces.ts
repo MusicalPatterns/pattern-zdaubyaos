@@ -1,10 +1,10 @@
-import { Rendering, StandardContour } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, DictionaryOf } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../material'
 import { buildThirtyfiveBlocks } from './blocks'
 
-const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece<StandardContour>> =
-    (): DictionaryOf<ContourPiece<StandardContour>> => {
+const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece<PitchDuration>> =
+    (): DictionaryOf<ContourPiece<PitchDuration>> => {
         const {
             thirtyfiveYaosAccidentInspiredBlock,
             thirtyfiveYaosBassBlock,
@@ -14,13 +14,13 @@ const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece<StandardCont
 
         const renderings: Renderings = buildRenderings()
 
-        const glis: Rendering<StandardContour> = renderings[ RenderingName.GLIS ]
+        const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
 
-        const thirtyfiveYaosBassContourPiece: ContourPiece<StandardContour> = glis(thirtyfiveYaosBassBlock)
-        const thirtyfiveYaosAccidentInspiredContourPiece: ContourPiece<StandardContour> =
+        const thirtyfiveYaosBassContourPiece: ContourPiece<PitchDuration> = glis(thirtyfiveYaosBassBlock)
+        const thirtyfiveYaosAccidentInspiredContourPiece: ContourPiece<PitchDuration> =
             glis(thirtyfiveYaosAccidentInspiredBlock)
-        const thirtyfiveZdaubContourPiece: ContourPiece<StandardContour> = glis(thirtyfiveZdaubBlock)
-        const thirtyfiveZdaubOnlyWiggleContourPiece: ContourPiece<StandardContour> =
+        const thirtyfiveZdaubContourPiece: ContourPiece<PitchDuration> = glis(thirtyfiveZdaubBlock)
+        const thirtyfiveZdaubOnlyWiggleContourPiece: ContourPiece<PitchDuration> =
             glis(thirtyfiveZdaubOnlyWiggleBlock)
 
         return {
