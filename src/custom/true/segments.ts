@@ -77,7 +77,7 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                     trueZdaubGlisVariantContourWhole,
                 ],
                 [
-                    { scaleIndex: to.Ordinal(3), pitchIndexOffset: to.Translation(2) },
+                    { scaleIndex: to.Ordinal(3), pitchIndexTranslation: to.Translation(2) },
                     { scaleIndex: to.Ordinal(1) },
                     { scaleIndex: to.Ordinal(2) },
                 ],
@@ -90,9 +90,9 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole,
             ],
             [
-                { scaleIndex: to.Ordinal(0), pitchIndexOffset: to.Translation(2) },
-                { scaleIndex: to.Ordinal(1), pitchIndexOffset: to.Translation(-2) },
-                { scaleIndex: to.Ordinal(2), pitchIndexOffset: to.Translation(-3) },
+                { scaleIndex: to.Ordinal(0), pitchIndexTranslation: to.Translation(2) },
+                { scaleIndex: to.Ordinal(1), pitchIndexTranslation: to.Translation(-2) },
+                { scaleIndex: to.Ordinal(2), pitchIndexTranslation: to.Translation(-3) },
             ],
         )
 

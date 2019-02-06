@@ -1,12 +1,12 @@
 import { NoteSpec } from '@musical-patterns/compiler'
 import { Ordinal, to } from '@musical-patterns/utilities'
-import { applyPitchIndexOffset } from '../../../../src/indexForTest'
+import { applyPitchIndexTranslation } from '../../../../src/indexForTest'
 
 const testNoteSpec: (pitch: Ordinal) => NoteSpec =
     (pitch: Ordinal): NoteSpec => ({ pitchSpec: { index: pitch } })
 
 describe('apply pitch index translation', () => {
-    it('offsets the pitch index of every note', () => {
+    it('translates the pitch index of every note', () => {
         const part: NoteSpec[] = [
             testNoteSpec(to.Ordinal(1)),
             testNoteSpec(to.Ordinal(2)),
@@ -19,7 +19,7 @@ describe('apply pitch index translation', () => {
             testNoteSpec(to.Ordinal(5)),
         ]
 
-        expect(applyPitchIndexOffset(part, to.Translation(1)))
+        expect(applyPitchIndexTranslation(part, to.Translation(1)))
             .toEqual(expectedPart)
     })
 })

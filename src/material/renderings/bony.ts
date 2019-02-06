@@ -29,10 +29,10 @@ const bonyRendering: Rendering<PitchDuration> =
         )
         const isBarTargetFifteen: boolean = from.Time(blocksTotal) % from.Time(FIFTEEN) === 0
         const barDivisor: Time = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
-        const barCount: Cardinal = to.Cardinal(apply.Scalar(
-            from.Time(blocksTotal),
-            to.Scalar(reciprocal(from.Time(barDivisor))),
-        ))
+        const barCount: Cardinal = to.Cardinal(from.Time(apply.Scalar(
+            blocksTotal,
+            to.Scalar(from.Time(reciprocal(barDivisor))),
+        )))
 
         const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
             repeat(FIFTEEN_BONY_BLOCKS, apply.Cardinal(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :

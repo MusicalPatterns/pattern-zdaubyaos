@@ -1,5 +1,5 @@
 // tslint:disable no-reaching-imports
 
 export { applyGainScalar } from './applyGainScalar'
-export { applyPitchIndexOffset } from './applyPitchIndexOffset'
+export { applyPitchIndexTranslation } from './applyPitchIndexTranslation'
 export { buildNoteSpec } from '../notes'

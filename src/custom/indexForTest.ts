@@ -17,5 +17,5 @@ export {
 } from './almostTrue/indexForTest'
 export {
     applyGainScalar,
-    applyPitchIndexOffset,
+    applyPitchIndexTranslation,
 } from '../material/segments/indexForTest'

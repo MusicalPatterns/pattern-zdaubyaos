@@ -50,7 +50,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             [
                 { scaleIndex: to.Ordinal(0) },
                 { scaleIndex: to.Ordinal(1) },
-                { gainScalar: to.Scalar(0.5), pitchIndexOffset: to.Translation(-1), scaleIndex: to.Ordinal(2) },
+                { gainScalar: to.Scalar(0.5), pitchIndexTranslation: to.Translation(-1), scaleIndex: to.Ordinal(2) },
             ],
         )
 
