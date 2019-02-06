@@ -5,12 +5,12 @@ import { SINGLE_DURATION } from './constants'
 
 const springRendering: RenderingByBlockElement<PitchDuration> =
     (blockElement: number): ContourPiece<PitchDuration> => {
-        const integers: number[] = positiveIntegers.slice(from.Index(INITIAL), blockElement)
+        const integers: number[] = positiveIntegers.slice(from.Ordinal(INITIAL), blockElement)
         const contour: ContourPiece<PitchDuration> = to.ContourPiece(
             integers.map((integer: number): ContourElement<PitchDuration> => [ integer, SINGLE_DURATION ]),
         )
-        const contourElement: ContourElement<PitchDuration> = apply.Index(contour, INITIAL)
-        contourElement[ from.Index(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
+        const contourElement: ContourElement<PitchDuration> = apply.Ordinal(contour, INITIAL)
+        contourElement[ from.Ordinal(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
 
         return contour
     }

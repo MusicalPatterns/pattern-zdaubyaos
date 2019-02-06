@@ -1,8 +1,8 @@
 import { NotePropertySpec, NoteSpec } from '@musical-patterns/compiler'
-import { Index, to } from '@musical-patterns/utilities'
+import { Ordinal, to } from '@musical-patterns/utilities'
 import { buildNoteSpec } from '../../../src/indexForTest'
 
-const DURATIONS_SCALE_INDEX: Index = to.Index(1)
+const DURATIONS_SCALE_INDEX: Ordinal = to.Ordinal(1)
 
 describe('note specs', () => {
     describe('when the pitch index is zero', () => {
@@ -24,7 +24,7 @@ describe('note specs', () => {
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(durationSpec.index)
-                    .toBe(to.Index(5))
+                    .toBe(to.Ordinal(5))
             })
         })
 
@@ -60,7 +60,7 @@ describe('note specs', () => {
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(durationSpec.index)
-                    .toBe(to.Index(5))
+                    .toBe(to.Ordinal(5))
             })
         })
 
@@ -84,7 +84,7 @@ describe('note specs', () => {
 
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
                 expect(pitchSpec.index)
-                    .toBe(to.Index(2))
+                    .toBe(to.Ordinal(2))
             })
         })
     })

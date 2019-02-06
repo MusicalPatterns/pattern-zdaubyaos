@@ -8,12 +8,12 @@ import { getTrueContours } from '../true'
 const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole<PitchDuration> =
     (renderingName: RenderingName): ContourWhole<PitchDuration> =>
         to.ContourWhole(sequence([
-            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName), to.Count(3)),
+            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName), to.Cardinal(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, renderingName),
             repeatCall(
-                () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, renderingName), to.Count(5),
+                () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, renderingName), to.Cardinal(5),
             ),
         ]))
 
@@ -33,14 +33,14 @@ const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuratio
 
         const almostTrueYetOfBackboneContourWhole: ContourWhole<PitchDuration> =
             to.ContourWhole(sequence([
-                repeatCall(() => backboneFifteenContourPiece, to.Count(8)),
-                repeatCall(() => backboneTwentyfourContourPiece, to.Count(3)),
+                repeatCall(() => backboneFifteenContourPiece, to.Cardinal(8)),
+                repeatCall(() => backboneTwentyfourContourPiece, to.Cardinal(3)),
             ]))
 
         const almostTrueZdaubBonyWithSuperinscapeContourWhole: ContourWhole<PitchDuration> =
             to.ContourWhole(sequence([
                 repeatCall(
-                    () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), to.Count(3),
+                    () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), to.Cardinal(3),
                 ),
                 getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.BONY),
                 getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.BONY),

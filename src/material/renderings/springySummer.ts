@@ -9,18 +9,18 @@ import {
     positiveIntegers,
     to,
 } from '@musical-patterns/utilities'
-import { SPRINGY_SUMMER_OFFSET, SPRINGY_SUMMER_SCALAR } from './constants'
+import { SPRINGY_SUMMER_SCALAR, SPRINGY_SUMMER_TRANSLATION } from './constants'
 
 const springySummerRendering: RenderingByBlockElement<PitchDuration> =
     (blockElement: number): ContourPiece<PitchDuration> =>
-        to.ContourPiece<PitchDuration>(positiveIntegers.slice(from.Index(INITIAL), blockElement)
+        to.ContourPiece<PitchDuration>(positiveIntegers.slice(from.Ordinal(INITIAL), blockElement)
             .map((integer: number): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
                     return [ 0, 1 ]
                 }
 
                 return [
-                    apply.Scalar(apply.Offset(integer, SPRINGY_SUMMER_OFFSET), SPRINGY_SUMMER_SCALAR),
+                    apply.Scalar(apply.Translation(integer, SPRINGY_SUMMER_TRANSLATION), SPRINGY_SUMMER_SCALAR),
                     1,
                 ]
             }),

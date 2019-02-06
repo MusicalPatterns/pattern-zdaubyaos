@@ -26,7 +26,7 @@ const buildBreatherContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>
                 RenderingName.SUMMER,
             ))
         const doubleBreatherFallContourWhole: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(
-            repeat(backboneTwentyfourContourPiece, to.Count(2)),
+            repeat(backboneTwentyfourContourPiece, to.Cardinal(2)),
         )
         const breatherVarietyContourWhole: ContourWhole<PitchDuration> =
             to.ContourWhole<PitchDuration>(inaiiiVarietyContourPiece)

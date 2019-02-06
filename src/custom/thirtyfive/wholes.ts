@@ -12,17 +12,17 @@ const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole<PitchDuratio
         } = buildThirtyfiveContourPieces()
 
         const thirtyfiveYaosBassContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            repeat(thirtyfiveYaosBassContourPiece, to.Count(30)),
+            repeat(thirtyfiveYaosBassContourPiece, to.Cardinal(30)),
         ]))
 
         const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            repeat(thirtyfiveYaosAccidentInspiredContourPiece, to.Count(30)),
+            repeat(thirtyfiveYaosAccidentInspiredContourPiece, to.Cardinal(30)),
         ]))
 
         const thirtyfiveZdaubContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
             pitchDurationRest(calculateTotalPitchDurationContourDuration(thirtyfiveZdaubContourPiece)),
-            repeat(thirtyfiveZdaubContourPiece, to.Count(2)),
-            repeat(thirtyfiveZdaubOnlyWiggleContourPiece, to.Count(12)),
+            repeat(thirtyfiveZdaubContourPiece, to.Cardinal(2)),
+            repeat(thirtyfiveZdaubOnlyWiggleContourPiece, to.Cardinal(12)),
         ]))
 
         return {

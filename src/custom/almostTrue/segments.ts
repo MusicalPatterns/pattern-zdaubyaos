@@ -22,9 +22,9 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
                     almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
                 ],
                 [
-                    { scaleIndex: to.Index(3) },
-                    { scaleIndex: to.Index(4) },
-                    { scaleIndex: to.Index(5) },
+                    { scaleIndex: to.Ordinal(3) },
+                    { scaleIndex: to.Ordinal(4) },
+                    { scaleIndex: to.Ordinal(5) },
                 ],
             )
 
@@ -36,9 +36,9 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
                     almostTrueExtendedEndingZdaubGlisContourWhole,
                 ],
                 [
-                    { scaleIndex: to.Index(3) },
-                    { scaleIndex: to.Index(4) },
-                    { scaleIndex: to.Index(5) },
+                    { scaleIndex: to.Ordinal(3) },
+                    { scaleIndex: to.Ordinal(4) },
+                    { scaleIndex: to.Ordinal(5) },
                 ],
             )
 
@@ -49,9 +49,9 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
                 almostTrueZdaubBonyWithSuperinscapeContourWhole,
             ],
             [
-                { gainScalar: to.Scalar(0.33), scaleIndex: to.Index(3) },
-                { gainScalar: to.Scalar(0.33), scaleIndex: to.Index(4) },
-                { gainScalar: to.Scalar(0.33), scaleIndex: to.Index(2) },
+                { gainScalar: to.Scalar(0.33), scaleIndex: to.Ordinal(3) },
+                { gainScalar: to.Scalar(0.33), scaleIndex: to.Ordinal(4) },
+                { gainScalar: to.Scalar(0.33), scaleIndex: to.Ordinal(2) },
             ],
         )
 

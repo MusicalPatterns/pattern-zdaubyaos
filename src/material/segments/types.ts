@@ -1,9 +1,9 @@
-import { Index, Offset, Scalar } from '@musical-patterns/utilities'
+import { Ordinal, Scalar, Translation } from '@musical-patterns/utilities'
 
 interface NoteStyle {
     gainScalar?: Scalar,
-    pitchIndexOffset?: Offset,
-    scaleIndex: Index,
+    pitchIndexOffset?: Translation,
+    scaleIndex: Ordinal,
 }
 
 export {

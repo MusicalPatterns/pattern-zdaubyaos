@@ -5,7 +5,7 @@ import {
     STANDARD_DURATIONS_SCALE_INDEX,
     unpackPitchDurationContourElement,
 } from '@musical-patterns/pattern'
-import { ContourElement, from, offsetFromOneIndexedToZeroIndexed, to } from '@musical-patterns/utilities'
+import { ContourElement, from, to, translateFromOneIndexedToZeroIndexed } from '@musical-patterns/utilities'
 import { PITCH_INDEX_INDICATING_REST } from '../constants'
 import { BuildNoteSpec } from '../types'
 
@@ -13,10 +13,10 @@ const buildNoteSpec: BuildNoteSpec =
     (contourElement: ContourElement<PitchDuration>): NoteSpec => {
         const { pitch, duration } = unpackPitchDurationContourElement(contourElement)
 
-        if (pitch === from.Index(PITCH_INDEX_INDICATING_REST)) {
+        if (pitch === from.Ordinal(PITCH_INDEX_INDICATING_REST)) {
             return {
                 durationSpec: {
-                    index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
+                    index: translateFromOneIndexedToZeroIndexed(to.Ordinal(duration)),
                     scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
                 },
                 gainSpec: {
@@ -27,14 +27,14 @@ const buildNoteSpec: BuildNoteSpec =
 
         return {
             durationSpec: {
-                index: offsetFromOneIndexedToZeroIndexed(to.Index(duration)),
+                index: translateFromOneIndexedToZeroIndexed(to.Ordinal(duration)),
                 scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
             },
             gainSpec: {
                 scalar: FULL_GAIN,
             },
             pitchSpec: {
-                index: offsetFromOneIndexedToZeroIndexed(to.Index(pitch)),
+                index: translateFromOneIndexedToZeroIndexed(to.Ordinal(pitch)),
             },
         }
     }

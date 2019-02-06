@@ -1,8 +1,8 @@
-import { Count } from '@musical-patterns/utilities'
+import { Cardinal } from '@musical-patterns/utilities'
 import { RenderingName } from '../material'
 import { BarTarget, BlockStyle } from '../types'
 
-type UsageCount = Count
+type UsageCount = Cardinal
 
 type UsageCountByRendering = { [z in RenderingName]?: UsageCount }
 

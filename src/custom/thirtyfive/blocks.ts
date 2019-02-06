@@ -20,7 +20,7 @@ const buildThirtyfiveBlocks: () => DictionaryOf<Block> =
             1, 2,
         ])
 
-        const thirtyfiveZdaubOnlyWiggleBlock: Block = to.Block(repeat([ 4, 1 ], to.Count(7)))
+        const thirtyfiveZdaubOnlyWiggleBlock: Block = to.Block(repeat([ 4, 1 ], to.Cardinal(7)))
 
         const thirtyfiveZdaubBlock: Block = to.Block(sequence([
             thirtyfiveZdaubOnlyWiggleBlock,

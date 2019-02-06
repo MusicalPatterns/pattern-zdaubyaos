@@ -20,11 +20,11 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: 
         if (byBlockStyle !== undefined) {
             let byRenderingName: Maybe<UsageCount> = byBlockStyle[ renderingName ]
             if (byRenderingName !== undefined) {
-                byRenderingName = apply.Offset(byRenderingName, to.Offset(1))
+                byRenderingName = apply.Translation(byRenderingName, to.Translation(1))
                 byBlockStyle[ renderingName ] = byRenderingName
             }
             else {
-                byBlockStyle[ renderingName ] = to.Count(1)
+                byBlockStyle[ renderingName ] = to.Cardinal(1)
             }
         }
     }

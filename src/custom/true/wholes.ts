@@ -12,22 +12,22 @@ const trueFormulaicUmowchuwowiestToInaidjiyaiouzdContourWhole: FormulaicTrueYaos
     fifteenRenderingName: RenderingName, twentyfourRenderingName: RenderingName,
 ): ContourWhole<PitchDuration> => to.ContourWhole(sequence([
     repeatCall(
-        () => getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(4),
+        () => getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(4),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.IEST, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.IEST, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.UMOW, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.UMOW, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.IEST, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.IEST, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.UMOW, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.UMOW, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, twentyfourRenderingName), to.Count(4),
+        () => getTrueContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, twentyfourRenderingName), to.Cardinal(4),
     ),
 ]))
 
@@ -35,22 +35,22 @@ const trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosContourWhole: FormulaicTrue
     fifteenRenderingName: RenderingName, twentyfourRenderingName: RenderingName,
 ): ContourWhole<PitchDuration> => to.ContourWhole(sequence([
     repeatCall(
-        () => getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(4),
+        () => getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(4),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.INAI, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.INAI, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.INAI, BarTarget.FIFTEEN, fifteenRenderingName), to.Count(1),
+        () => getTrueContours(BlockStyle.INAI, BarTarget.FIFTEEN, fifteenRenderingName), to.Cardinal(1),
     ),
     repeatCall(
-        () => getTrueContours(BlockStyle.CHUWOW, BarTarget.TWENTYFOUR, twentyfourRenderingName), to.Count(4),
+        () => getTrueContours(BlockStyle.CHUWOW, BarTarget.TWENTYFOUR, twentyfourRenderingName), to.Cardinal(4),
     ),
 ]))
 
@@ -69,49 +69,53 @@ const buildTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
                 repeatCall(
                     () =>
                         getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                    to.Count(4),
+                    to.Cardinal(4),
                 ),
                 repeatCall(
                     () =>
                         getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                    to.Count(1),
+                    to.Cardinal(1),
                 ),
                 repeatCall(
                     () =>
                         getTrueContours(BlockStyle.UMOW, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                    to.Count(1),
+                    to.Cardinal(1),
                 ),
                 repeatCall(
                     () => getTrueContours(BlockStyle.OUZD, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                    to.Count(1),
+                    to.Cardinal(1),
                 ),
                 repeatCall(
                     () => getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                    to.Count(1),
+                    to.Cardinal(1),
                 ),
                 repeatCall(
                     () => getTrueContours(BlockStyle.CHUWOW, BarTarget.TWENTYFOUR, RenderingName.SUMMERY_SPRING),
-                    to.Count(4),
+                    to.Cardinal(4),
                 ),
             ]))
         const trueZdaubGlisContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS), to.Count(3)),
+            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS), to.Cardinal(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.GLIS),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.GLIS),
             getTrueContours(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, RenderingName.GLIS),
-            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.GLIS), to.Count(3)),
+            repeatCall(
+                () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.GLIS), to.Cardinal(3),
+            ),
         ]))
         const trueZdaubGlisVariantContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS), to.Count(4)),
+            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS), to.Cardinal(4)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.GLIS),
             zdaubGlisVariantContourPiece,
         ]))
         const trueZdaubTremContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.TREM), to.Count(3)),
+            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.TREM), to.Cardinal(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.TREM),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.TREM),
             getTrueContours(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, RenderingName.TREM),
-            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.TREM), to.Count(3)),
+            repeatCall(
+                () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.TREM), to.Cardinal(3),
+            ),
         ]))
 
         return {

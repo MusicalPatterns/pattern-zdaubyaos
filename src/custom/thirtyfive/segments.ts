@@ -18,9 +18,9 @@ const buildThirtyfiveSegments: () => DictionaryOf<Segment> =
                 thirtyfiveYaosBassContourWhole,
             ],
             [
-                { scaleIndex: to.Index(0), gainScalar: to.Scalar(0.66) },
-                { scaleIndex: to.Index(1) },
-                { scaleIndex: to.Index(5), gainScalar: to.Scalar(1.25) },
+                { scaleIndex: to.Ordinal(0), gainScalar: to.Scalar(0.66) },
+                { scaleIndex: to.Ordinal(1) },
+                { scaleIndex: to.Ordinal(5), gainScalar: to.Scalar(1.25) },
             ],
         )
 

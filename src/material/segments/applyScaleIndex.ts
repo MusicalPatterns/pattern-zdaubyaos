@@ -1,8 +1,8 @@
 import { NoteSpec } from '@musical-patterns/compiler'
-import { Index } from '@musical-patterns/utilities'
+import { Ordinal } from '@musical-patterns/utilities'
 
-const applyScaleIndex: (part: NoteSpec[], scaleIndex: Index) => NoteSpec[] =
-    (part: NoteSpec[], scaleIndex: Index): NoteSpec[] =>
+const applyScaleIndex: (part: NoteSpec[], scaleIndex: Ordinal) => NoteSpec[] =
+    (part: NoteSpec[], scaleIndex: Ordinal): NoteSpec[] =>
         part.map((noteSpec: NoteSpec): NoteSpec => ({
             ...noteSpec,
             pitchSpec: { ...noteSpec.pitchSpec, scaleIndex },

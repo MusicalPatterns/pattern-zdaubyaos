@@ -72,7 +72,7 @@ const buildSegments: () => Segment[] =
 
             // 17
             thirtyfiveSegment,
-        ].slice(from.Index(INITIAL), from.Count(apply.Offset(ZDAUBYAOS_SEGMENT_COUNT, INCLUSIVE)))
+        ].slice(from.Ordinal(INITIAL), from.Cardinal(apply.Translation(ZDAUBYAOS_SEGMENT_COUNT, INCLUSIVE)))
     }
 
 export {

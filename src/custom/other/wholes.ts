@@ -29,14 +29,14 @@ const buildOtherContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
 
         const totallyOutThereContourWhole: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(repeat(
             getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER)
-                .slice(from.Index(INITIAL), 8),
-            to.Count(3),
+                .slice(from.Ordinal(INITIAL), 8),
+            to.Cardinal(3),
         ))
 
         const shiftyAContourWhole: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(sequence([
-            repeatCall(() => shiftyFifteenContourPiece, to.Count(3)),
-            repeatCall(() => shiftyTwentyfourContourPiece, to.Count(4)),
-            repeatCall(() => shiftyTwentyfourVariantContourPiece, to.Count(3)),
+            repeatCall(() => shiftyFifteenContourPiece, to.Cardinal(3)),
+            repeatCall(() => shiftyTwentyfourContourPiece, to.Cardinal(4)),
+            repeatCall(() => shiftyTwentyfourVariantContourPiece, to.Cardinal(3)),
         ]))
 
         const shiftyBContourWhole: ContourWhole<PitchDuration> =

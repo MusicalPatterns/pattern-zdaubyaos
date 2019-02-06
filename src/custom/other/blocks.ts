@@ -2,9 +2,9 @@ import { Block, DictionaryOf, repeat, to } from '@musical-patterns/utilities'
 
 const buildOtherBlocks: () => DictionaryOf<Block> =
     (): DictionaryOf<Block> => {
-        const backboneFifteenBlock: Block = to.Block(repeat([ 1, 2 ], to.Count(5)))
+        const backboneFifteenBlock: Block = to.Block(repeat([ 1, 2 ], to.Cardinal(5)))
 
-        const backboneTwentyfourBlock: Block = to.Block(repeat([ 1, 3 ], to.Count(6)))
+        const backboneTwentyfourBlock: Block = to.Block(repeat([ 1, 3 ], to.Cardinal(6)))
 
         const shiftyFifteenBlock: Block = to.Block([
             2, 1,

@@ -24,9 +24,9 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 trueYaosUmowchuwowiestSpringToSummerContourWhole,
             ],
             [
-                { scaleIndex: to.Index(0) },
-                { scaleIndex: to.Index(1) },
-                { scaleIndex: to.Index(2) },
+                { scaleIndex: to.Ordinal(0) },
+                { scaleIndex: to.Ordinal(1) },
+                { scaleIndex: to.Ordinal(2) },
             ],
         )
 
@@ -37,9 +37,9 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 trueYaosInaidjiyaiouzdSummerToSpringContourWhole,
             ],
             [
-                { scaleIndex: to.Index(3) },
-                { scaleIndex: to.Index(4) },
-                { scaleIndex: to.Index(2) },
+                { scaleIndex: to.Ordinal(3) },
+                { scaleIndex: to.Ordinal(4) },
+                { scaleIndex: to.Ordinal(2) },
             ],
         )
 
@@ -50,9 +50,9 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 trueYaosUmowchuwowiestSummerToSpringContourWhole,
             ],
             [
-                { scaleIndex: to.Index(3) },
-                { scaleIndex: to.Index(1) },
-                { scaleIndex: to.Index(2) },
+                { scaleIndex: to.Ordinal(3) },
+                { scaleIndex: to.Ordinal(1) },
+                { scaleIndex: to.Ordinal(2) },
             ],
         )
 
@@ -63,9 +63,9 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 trueZdaubTremContourWhole,
             ],
             [
-                { scaleIndex: to.Index(0) },
-                { scaleIndex: to.Index(1) },
-                { scaleIndex: to.Index(2) },
+                { scaleIndex: to.Ordinal(0) },
+                { scaleIndex: to.Ordinal(1) },
+                { scaleIndex: to.Ordinal(2) },
             ],
         )
 
@@ -77,9 +77,9 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                     trueZdaubGlisVariantContourWhole,
                 ],
                 [
-                    { scaleIndex: to.Index(3), pitchIndexOffset: to.Offset(2) },
-                    { scaleIndex: to.Index(1) },
-                    { scaleIndex: to.Index(2) },
+                    { scaleIndex: to.Ordinal(3), pitchIndexOffset: to.Translation(2) },
+                    { scaleIndex: to.Ordinal(1) },
+                    { scaleIndex: to.Ordinal(2) },
                 ],
             )
 
@@ -90,9 +90,9 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole,
             ],
             [
-                { scaleIndex: to.Index(0), pitchIndexOffset: to.Offset(2) },
-                { scaleIndex: to.Index(1), pitchIndexOffset: to.Offset(-2) },
-                { scaleIndex: to.Index(2), pitchIndexOffset: to.Offset(-3) },
+                { scaleIndex: to.Ordinal(0), pitchIndexOffset: to.Translation(2) },
+                { scaleIndex: to.Ordinal(1), pitchIndexOffset: to.Translation(-2) },
+                { scaleIndex: to.Ordinal(2), pitchIndexOffset: to.Translation(-3) },
             ],
         )
 

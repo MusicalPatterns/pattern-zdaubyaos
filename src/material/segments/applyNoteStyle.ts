@@ -1,7 +1,7 @@
 import { NoteSpec } from '@musical-patterns/compiler'
 import { PitchDuration } from '@musical-patterns/pattern'
 import { apply, ContourWhole } from '@musical-patterns/utilities'
-import { OFFSET_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
+import { TRANSLATION_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
 import { buildNoteSpec } from '../notes'
 import { applyGainScalar } from './applyGainScalar'
 import { applyPitchIndexOffset } from './applyPitchIndexOffset'
@@ -22,7 +22,7 @@ const applyNoteStyle: (contourWhole: ContourWhole<PitchDuration>, noteStyle: Not
             part = applyGainScalar(part, gainScalar)
         }
 
-        part = applyScaleIndex(part, apply.Offset(scaleIndex, OFFSET_FOR_GAIN_AND_DURATIONS_SCALES))
+        part = applyScaleIndex(part, apply.Translation(scaleIndex, TRANSLATION_FOR_GAIN_AND_DURATIONS_SCALES))
 
         return part
     }
