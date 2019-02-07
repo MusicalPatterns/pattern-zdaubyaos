@@ -14,12 +14,12 @@ describe('apply pitch index translation', () => {
         ]
 
         const expectedPart: NoteSpec[] = [
-            testNoteSpec(to.Ordinal(2)),
-            testNoteSpec(to.Ordinal(3)),
-            testNoteSpec(to.Ordinal(5)),
+            testNoteSpec(to.Ordinal(7)),
+            testNoteSpec(to.Ordinal(8)),
+            testNoteSpec(to.Ordinal(10)),
         ]
 
-        expect(applyPitchIndexTranslation(part, to.Translation(1)))
+        expect(applyPitchIndexTranslation(part, to.Translation(6)))
             .toEqual(expectedPart)
     })
 })

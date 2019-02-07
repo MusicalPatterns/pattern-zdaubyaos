@@ -3,7 +3,7 @@ import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 import { RenderingName } from '../../material'
 import { BarTarget, BlockStyle } from '../../types'
 
-type TrueContourPiecesByRenderingName = { [z in RenderingName]: ContourPiece<2> }
+type TrueContourPiecesByRenderingName = { [z in RenderingName]: ContourPiece<PitchDuration> }
 type TrueContourPeicesByBlockStyleThenRenderingName = { [y in BlockStyle]: TrueContourPiecesByRenderingName }
 type TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName =
     { [x in BarTarget]: TrueContourPeicesByBlockStyleThenRenderingName }
@@ -12,12 +12,12 @@ type GetTrueContourPieces = (
     blockStyle: BlockStyle,
     barTarget: BarTarget,
     renderingName: RenderingName,
-) => ContourPiece<2>
+) => ContourPiece<PitchDuration>
 
 type FormulaicTrueYaosContourWhole = (
     fifteenRenderingName: RenderingName,
     twentyfourRenderingName: RenderingName,
-) => ContourWhole<2>
+) => ContourWhole<PitchDuration>
 
 type TrueBlocksByBlockStyle = { [y in BlockStyle]: Block }
 type TrueBlocksByBarTargetThenBlockStyle = { [x in BarTarget]: TrueBlocksByBlockStyle }

@@ -58,7 +58,7 @@ const bonyRendering: Rendering<PitchDuration> =
                 blocksIndexForPitchIndex = apply.Translation(blocksIndexForPitchIndex, to.Translation(1))
             }
 
-            contourPiece.push([ pitchIndex, rhythmicBlockElement ])
+            contourPiece.push(to.ContourElement<PitchDuration>([ pitchIndex, rhythmicBlockElement ]))
         })
 
         return contourPiece

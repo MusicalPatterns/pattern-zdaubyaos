@@ -5,7 +5,7 @@ const summerRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> =>
         to.ContourPiece<PitchDuration>(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
             .map((integer: number): ContourElement<PitchDuration> =>
-                isEven(integer) ? [ 0, 1 ] : [ integer, 1 ]))
+                to.ContourElement<PitchDuration>(isEven(integer) ? [ 0, 1 ] : [ integer, 1 ])))
 
 export {
     summerRendering,

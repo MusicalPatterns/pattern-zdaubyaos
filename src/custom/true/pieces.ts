@@ -24,7 +24,7 @@ const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => vo
             blockStyle,
             renderingName,
         }: BuildTrueContourPieceParameters = parameters
-        const contourPiece: ContourPiece<2> = rendering(block)
+        const contourPiece: ContourPiece<PitchDuration> = rendering(block)
 
         contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] =
             contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] || {}
@@ -66,7 +66,7 @@ const buildTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyleTh
     }
 
 const getTrueContours: GetTrueContourPieces =
-    (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece<2> => {
+    (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece<PitchDuration> => {
         buildTrueContourPieces()
 
         countUsage(barTarget, blockStyle, renderingName)

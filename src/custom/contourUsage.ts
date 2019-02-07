@@ -1,4 +1,4 @@
-import { apply, Maybe, to } from '@musical-patterns/utilities'
+import { apply, INCREMENT, Maybe, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../material'
 import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
@@ -20,7 +20,7 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: 
         if (byBlockStyle !== undefined) {
             let byRenderingName: Maybe<UsageCount> = byBlockStyle[ renderingName ]
             if (byRenderingName !== undefined) {
-                byRenderingName = apply.Translation(byRenderingName, to.Translation(1))
+                byRenderingName = apply.Translation(byRenderingName, INCREMENT)
                 byBlockStyle[ renderingName ] = byRenderingName
             }
             else {

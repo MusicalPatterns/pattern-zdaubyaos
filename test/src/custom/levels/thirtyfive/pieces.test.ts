@@ -1,4 +1,4 @@
-import { calculateTotalPitchDurationContourDuration } from '@musical-patterns/pattern'
+import { calculateTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
 import { dividesEvenly, to } from '@musical-patterns/utilities'
 import { buildThirtyfiveContourPieces } from '../../../../../src/indexForTest'
 
@@ -7,7 +7,7 @@ describe('thirtyfive contour pieces', () => {
         const { thirtyfiveYaosBassContourPiece } = buildThirtyfiveContourPieces()
 
         expect(thirtyfiveYaosBassContourPiece)
-            .toEqual(to.ContourPiece([
+            .toEqual(to.ContourPiece<PitchDuration>([
                 [ 1, 1 ], [ 5, 5 ],
                 [ 1, 1 ], [ 5, 5 ],
                 [ 1, 1 ], [ 3, 3 ],
@@ -22,7 +22,7 @@ describe('thirtyfive contour pieces', () => {
         const { thirtyfiveYaosAccidentInspiredContourPiece } = buildThirtyfiveContourPieces()
 
         expect(thirtyfiveYaosAccidentInspiredContourPiece)
-            .toEqual(to.ContourPiece([
+            .toEqual(to.ContourPiece<PitchDuration>([
                 [ 1, 1 ], [ 2, 2 ], [ 3, 3 ],
                 [ 1, 1 ], [ 2, 2 ], [ 3, 3 ], [ 4, 4 ],
                 [ 1, 1 ], [ 2, 2 ], [ 3, 3 ],
@@ -36,7 +36,7 @@ describe('thirtyfive contour pieces', () => {
         const { thirtyfiveZdaubContourPiece } = buildThirtyfiveContourPieces()
 
         expect(thirtyfiveZdaubContourPiece)
-            .toEqual(to.ContourPiece([
+            .toEqual(to.ContourPiece<PitchDuration>([
                 [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ],
                 [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ],
                 [ 13, 13 ], [ 10, 10 ], [ 7, 7 ], [ 4, 4 ], [ 1, 1 ],
@@ -50,7 +50,7 @@ describe('thirtyfive contour pieces', () => {
         const { thirtyfiveZdaubOnlyWiggleContourPiece } = buildThirtyfiveContourPieces()
 
         expect(thirtyfiveZdaubOnlyWiggleContourPiece)
-            .toEqual(to.ContourPiece([
+            .toEqual(to.ContourPiece<PitchDuration>([
                 [ 4, 4 ], [ 1, 1 ],
                 [ 4, 4 ], [ 1, 1 ],
                 [ 4, 4 ], [ 1, 1 ],

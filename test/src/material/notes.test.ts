@@ -1,4 +1,5 @@
 import { NotePropertySpec, NoteSpec } from '@musical-patterns/compiler'
+import { PitchDuration } from '@musical-patterns/pattern'
 import { Ordinal, to } from '@musical-patterns/utilities'
 import { buildNoteSpec } from '../../../src/indexForTest'
 
@@ -8,7 +9,7 @@ describe('note specs', () => {
     describe('when the pitch index is zero', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {
-            noteSpec = buildNoteSpec([ 0, 6 ])
+            noteSpec = buildNoteSpec(to.ContourElement<PitchDuration>([ 0, 6 ]))
         })
 
         describe('duration', () => {
@@ -44,7 +45,7 @@ describe('note specs', () => {
     describe('when the pitch index is not zero', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {
-            noteSpec = buildNoteSpec([ 3, 6 ])
+            noteSpec = buildNoteSpec(to.ContourElement<PitchDuration>([ 3, 6 ]))
         })
 
         describe('duration', () => {

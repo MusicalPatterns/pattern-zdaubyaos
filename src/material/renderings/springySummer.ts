@@ -17,13 +17,13 @@ const springySummerRendering: RenderingByBlockElement<PitchDuration> =
         to.ContourPiece<PitchDuration>(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
             .map((integer: number): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
-                    return [ 0, 1 ]
+                    return to.ContourElement<PitchDuration>([ 0, 1 ])
                 }
 
-                return [
+                return to.ContourElement<PitchDuration>([
                     apply.Scalar(apply.Translation(integer, SPRINGY_SUMMER_TRANSLATION), SPRINGY_SUMMER_SCALAR),
                     1,
-                ]
+                ])
             }),
         )
 
