@@ -1,5 +1,5 @@
 import { calculateTotalPitchDurationContourDuration } from '@musical-patterns/pattern'
-import { to } from '@musical-patterns/utilities'
+import { dividesEvenly, to } from '@musical-patterns/utilities'
 import { buildThirtyfiveContourPieces } from '../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {
@@ -68,11 +68,11 @@ describe('thirtyfive contour pieces', () => {
             thirtyfiveZdaubContourPiece,
         } = buildThirtyfiveContourPieces()
 
-        expect(calculateTotalPitchDurationContourDuration(thirtyfiveYaosBassContourPiece) % 35)
-            .toBe(0)
-        expect(calculateTotalPitchDurationContourDuration(thirtyfiveYaosAccidentInspiredContourPiece) % 35)
-            .toBe(0)
-        expect(calculateTotalPitchDurationContourDuration(thirtyfiveZdaubContourPiece) % 35)
-            .toBe(0)
+        expect(dividesEvenly(calculateTotalPitchDurationContourDuration(thirtyfiveYaosBassContourPiece), 35))
+            .toBeTruthy()
+        expect(dividesEvenly(calculateTotalPitchDurationContourDuration(thirtyfiveYaosAccidentInspiredContourPiece), 35))
+            .toBeTruthy()
+        expect(dividesEvenly(calculateTotalPitchDurationContourDuration(thirtyfiveZdaubContourPiece), 35))
+            .toBeTruthy()
     })
 })

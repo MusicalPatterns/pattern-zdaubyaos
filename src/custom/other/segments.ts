@@ -1,5 +1,5 @@
 import { Segment } from '@musical-patterns/pattern'
-import { DictionaryOf, to } from '@musical-patterns/utilities'
+import { DictionaryOf, negative, to } from '@musical-patterns/utilities'
 import { buildSegment } from '../../material'
 import { buildOtherContourWholes } from './wholes'
 
@@ -33,8 +33,8 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
             ],
             [
                 { pitchIndexTranslation: to.Translation(2), scaleIndex: to.Ordinal(0) },
-                { pitchIndexTranslation: to.Translation(-2), scaleIndex: to.Ordinal(1) },
-                { pitchIndexTranslation: to.Translation(-3), scaleIndex: to.Ordinal(2) },
+                { pitchIndexTranslation: to.Translation(negative(2)), scaleIndex: to.Ordinal(1) },
+                { pitchIndexTranslation: to.Translation(negative(3)), scaleIndex: to.Ordinal(2) },
             ],
         )
 

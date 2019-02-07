@@ -17,7 +17,7 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuratio
         const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = buildTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
         const inaiiiVarietyContourPiece: ContourPiece<PitchDuration> = to.ContourPiece(sequence(
-            inai.map((blockElement: number, index: number): ContourPiece<PitchDuration> => {
+            inai.map((cell: number, index: number): ContourPiece<PitchDuration> => {
                 const renderingsSequence: Array<Rendering<PitchDuration>> = [
                     renderings[ RenderingName.SPRING ],
                     renderings[ RenderingName.SUMMER ],
@@ -31,7 +31,7 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuratio
 
                 const rendering: Rendering<PitchDuration> = renderingsSequence[ index ]
 
-                return rendering(to.Block([ blockElement ]))
+                return rendering(to.Block([ cell ]))
             }),
         ))
 

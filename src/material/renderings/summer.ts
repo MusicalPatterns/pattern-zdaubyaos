@@ -1,9 +1,9 @@
 import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/pattern'
-import { ContourElement, ContourPiece, from, INITIAL, isEven, positiveIntegers, to } from '@musical-patterns/utilities'
+import { ContourElement, ContourPiece, INITIAL, isEven, positiveIntegers, slice, to } from '@musical-patterns/utilities'
 
 const summerRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> =>
-        to.ContourPiece<PitchDuration>(positiveIntegers.slice(from.Ordinal(INITIAL), blockElement)
+    (cell: number): ContourPiece<PitchDuration> =>
+        to.ContourPiece<PitchDuration>(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
             .map((integer: number): ContourElement<PitchDuration> =>
                 isEven(integer) ? [ 0, 1 ] : [ integer, 1 ]))
 

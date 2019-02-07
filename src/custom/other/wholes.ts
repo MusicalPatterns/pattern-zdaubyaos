@@ -2,11 +2,11 @@ import { PitchDuration } from '@musical-patterns/pattern'
 import {
     ContourWhole,
     DictionaryOf,
-    from,
     INITIAL,
     repeat,
     repeatCall,
     sequence,
+    slice,
     to,
 } from '@musical-patterns/utilities'
 import { RenderingName } from '../../material'
@@ -28,8 +28,11 @@ const buildOtherContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
             to.ContourWhole<PitchDuration>(secretLongChordContourPiece)
 
         const totallyOutThereContourWhole: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(repeat(
-            getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER)
-                .slice(from.Ordinal(INITIAL), 8),
+            slice(
+                getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
+                INITIAL,
+                to.Ordinal(8),
+            ),
             to.Cardinal(3),
         ))
 

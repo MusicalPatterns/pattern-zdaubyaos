@@ -7,13 +7,14 @@ import {
     INITIAL,
     isEven,
     positiveIntegers,
+    slice,
     to,
 } from '@musical-patterns/utilities'
 import { SPRINGY_SUMMER_SCALAR, SPRINGY_SUMMER_TRANSLATION } from './constants'
 
 const springySummerRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> =>
-        to.ContourPiece<PitchDuration>(positiveIntegers.slice(from.Ordinal(INITIAL), blockElement)
+    (cell: number): ContourPiece<PitchDuration> =>
+        to.ContourPiece<PitchDuration>(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
             .map((integer: number): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
                     return [ 0, 1 ]

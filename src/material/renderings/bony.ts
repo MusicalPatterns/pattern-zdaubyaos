@@ -4,10 +4,14 @@ import {
     Block,
     Cardinal,
     ContourPiece,
+    deepClone,
+    dividesEvenly,
     from,
+    negative,
     Ordinal,
     reciprocal,
     repeat,
+    sum,
     Time,
     to,
 } from '@musical-patterns/utilities'
@@ -21,13 +25,13 @@ import {
 
 const bonyRendering: Rendering<PitchDuration> =
     (block: Block): ContourPiece<PitchDuration> => {
-        const blockClone: Block = to.Block(block.slice())
+        const blockClone: Block = to.Block(deepClone(block))
         const blocksTotal: Time = blockClone.reduce(
-            (accumulator: Time, blockElement: number): Time =>
-                to.Time(from.Time(accumulator) + blockElement),
+            (accumulator: Time, cell: number): Time =>
+                sum(accumulator, to.Time(cell)),
             to.Time(0),
         )
-        const isBarTargetFifteen: boolean = from.Time(blocksTotal) % from.Time(FIFTEEN) === 0
+        const isBarTargetFifteen: boolean = dividesEvenly(blocksTotal, FIFTEEN)
         const barDivisor: Time = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
         const barCount: Cardinal = to.Cardinal(from.Time(apply.Scalar(
             blocksTotal,
@@ -45,7 +49,7 @@ const bonyRendering: Rendering<PitchDuration> =
         rhythmicBlocks.forEach((rhythmicBlockElement: number): void => {
             const pitchIndex: number = apply.Ordinal(block, blocksIndexForPitchIndex)
 
-            blockClone[ 0 ] = apply.Translation(blockClone[ 0 ], to.Translation(-rhythmicBlockElement))
+            blockClone[ 0 ] = apply.Translation(blockClone[ 0 ], to.Translation(negative(rhythmicBlockElement)))
             if (blockClone[ 0 ] < 0) {
                 return
             }

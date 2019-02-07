@@ -1,6 +1,6 @@
 import { NoteSpec } from '@musical-patterns/compiler'
 import { Segment } from '@musical-patterns/pattern'
-import { apply, DictionaryOf, from, INCLUSIVE, INITIAL, Ordinal, to } from '@musical-patterns/utilities'
+import { apply, DictionaryOf, INCLUSIVE, INITIAL, Ordinal, slice, to } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { buildSegments } from './segments'
 
@@ -14,7 +14,7 @@ const buildParts: () => DictionaryOf<NoteSpec[]> =
         let superparticularOrDuperparticularPart: NoteSpec[] = []
         let harmonicOrSubharmonicPart: NoteSpec[] = []
 
-        segments.slice(from.Ordinal(INITIAL), from.Ordinal(apply.Translation(end, INCLUSIVE)))
+        slice(segments, INITIAL, apply.Translation(end, INCLUSIVE))
             .forEach((segment: Segment): void => {
                 subparticularOrDubparticularPart = subparticularOrDubparticularPart
                     .concat(apply.Ordinal(segment, SEGMENT_A))

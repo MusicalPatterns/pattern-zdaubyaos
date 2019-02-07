@@ -1,7 +1,7 @@
 // tslint:disable no-duplicate-string
 
 import { calculateTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
-import { ContourPiece, entries, to } from '@musical-patterns/utilities'
+import { ContourPiece, dividesEvenly, entries, to } from '@musical-patterns/utilities'
 import {
     BarTarget,
     BlockStyle,
@@ -206,8 +206,8 @@ describe('true contours', () => {
                                         case RenderingName.FALL:
                                         case RenderingName.SUMMERY_SPRING:
                                         case RenderingName.SPRINGY_SUMMER:
-                                            expect(calculateTotalPitchDurationContourDuration(contours) % 15)
-                                                .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
+                                            expect(dividesEvenly(calculateTotalPitchDurationContourDuration(contours), 15))
+                                                .toBeTruthy(`rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         default:
                                     }
@@ -478,8 +478,8 @@ describe('true contours', () => {
                                     switch (renderingName) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:
-                                            expect(calculateTotalPitchDurationContourDuration(contours) % 24)
-                                                .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
+                                            expect(dividesEvenly(calculateTotalPitchDurationContourDuration(contours), 24))
+                                                .toBeTruthy(`rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         case RenderingName.BONY:
                                             // tslint:disable-next-line no-nested-switch
@@ -490,8 +490,8 @@ describe('true contours', () => {
                                                 case BlockStyle.INAI:
                                                     break
                                                 default:
-                                                    expect(calculateTotalPitchDurationContourDuration(contours) % 24)
-                                                        .toBe(0, `rendering ${blockStyle} as ${renderingName}`)
+                                                    expect(dividesEvenly(calculateTotalPitchDurationContourDuration(contours), 24))
+                                                        .toBeTruthy(`rendering ${blockStyle} as ${renderingName}`)
                                             }
                                             break
                                         default:

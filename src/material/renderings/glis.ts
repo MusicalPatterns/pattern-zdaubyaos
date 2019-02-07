@@ -2,10 +2,10 @@ import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/patter
 import { ContourPiece, to } from '@musical-patterns/utilities'
 
 const glisRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> => to.ContourPiece<PitchDuration>([
+    (cell: number): ContourPiece<PitchDuration> => to.ContourPiece<PitchDuration>([
         [
-            blockElement,
-            blockElement,
+            cell,
+            cell,
         ],
     ])
 

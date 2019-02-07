@@ -1,8 +1,8 @@
 // tslint:disable no-magic-numbers
 
-import { Block, Cardinal, Scalar, to, Translation } from '@musical-patterns/utilities'
+import { Block, Cardinal, negative, Scalar, to, Translation } from '@musical-patterns/utilities'
 
-const SUMMERY_SPRING_TRANSLATION: Translation = to.Translation(-1.5)
+const SUMMERY_SPRING_TRANSLATION: Translation = to.Translation(negative(1.5))
 const SUMMERY_SPRING_SCALAR: Scalar = to.Scalar(2)
 const SPRINGY_SUMMER_TRANSLATION: Translation = to.Translation(3)
 const SPRINGY_SUMMER_SCALAR: Scalar = to.Scalar(0.5)

@@ -1,11 +1,20 @@
 import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/pattern'
-import { apply, ContourElement, ContourPiece, from, INITIAL, positiveIntegers, to } from '@musical-patterns/utilities'
+import {
+    apply,
+    ContourElement,
+    ContourPiece,
+    from,
+    INITIAL,
+    positiveIntegers,
+    slice,
+    to,
+} from '@musical-patterns/utilities'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { SINGLE_DURATION } from './constants'
 
 const springRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> => {
-        const integers: number[] = positiveIntegers.slice(from.Ordinal(INITIAL), blockElement)
+    (cell: number): ContourPiece<PitchDuration> => {
+        const integers: number[] = slice(positiveIntegers, INITIAL, to.Ordinal(cell))
         const contour: ContourPiece<PitchDuration> = to.ContourPiece(
             integers.map((integer: number): ContourElement<PitchDuration> => [ integer, SINGLE_DURATION ]),
         )

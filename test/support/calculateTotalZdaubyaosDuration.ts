@@ -1,5 +1,5 @@
 import { NoteSpec } from '@musical-patterns/compiler'
-import { from, Ordinal, SumOfIndices, to } from '@musical-patterns/utilities'
+import { apply, from, Ordinal, sum, SumOfIndices, to } from '@musical-patterns/utilities'
 
 const calculateTotalZdaubyaosDuration: (noteSpecs: NoteSpec[]) => SumOfIndices =
     (noteSpecs: NoteSpec[]): SumOfIndices =>
@@ -7,7 +7,7 @@ const calculateTotalZdaubyaosDuration: (noteSpecs: NoteSpec[]) => SumOfIndices =
             (accumulator: SumOfIndices, { durationSpec }: NoteSpec) => {
                 const durationIndex: Ordinal = durationSpec && durationSpec.index || to.Ordinal(0)
 
-                return to.SumOfIndices(from.SumOfIndices(accumulator) + from.Ordinal(durationIndex) + 1)
+                return apply.Translation(accumulator, to.Translation(sum(from.Ordinal(durationIndex), 1)))
             },
             to.SumOfIndices(0),
         )
