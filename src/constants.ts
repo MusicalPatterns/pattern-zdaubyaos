@@ -2,27 +2,26 @@
 
 import {
     Cardinal,
-    Frequency,
-    Milliseconds,
+    Hz,
+    Ms,
     Ordinal,
     SCIENTIFIC_PITCHES,
     ScientificPitchNoteName,
     ScientificPitchOctaveNumber,
-    Time,
     to,
     Translation,
 } from '@musical-patterns/utilities'
 
-const FIFTEEN: Time = to.Time(15)
-const TWENTYFOUR: Time = to.Time(24)
+const FIFTEEN: Ms = to.Ms(15)
+const TWENTYFOUR: Ms = to.Ms(24)
 
 const SUPER: Translation = to.Translation(1)
 const DUPER: Translation = to.Translation(2)
 
 const ZDAUBYAOS_SEGMENT_COUNT: Cardinal = to.Cardinal(17)
 
-const ZDAUBYAOS_INITIAL_BASE_DURATION: Milliseconds = to.Milliseconds(140)
-const ZDAUBYAOS_INITIAL_BASE_FREQUENCY: Frequency =
+const ZDAUBYAOS_INITIAL_BASE_DURATION: Ms = to.Ms(140)
+const ZDAUBYAOS_INITIAL_BASE_FREQUENCY: Hz =
     SCIENTIFIC_PITCHES[ ScientificPitchNoteName.A ][ ScientificPitchOctaveNumber._4 ]
 
 const SEGMENT_A: Ordinal = to.Ordinal(0)
