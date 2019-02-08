@@ -1,5 +1,5 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
-import { Block, ContourPiece, DictionaryOf, sequence, to } from '@musical-patterns/utilities'
+import { apply, Block, ContourPiece, DictionaryOf, map, Ordinal, sequence, to } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../material'
 import { BarTarget, BlockStyle } from '../../types'
 import { buildTrueBlocks, TrueBlocksByBarTargetThenBlockStyle } from '../true'
@@ -17,7 +17,7 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuratio
         const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = buildTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
         const inaiiiVarietyContourPiece: ContourPiece<PitchDuration> = to.ContourPiece(sequence(
-            inai.map((cell: number, index: number): ContourPiece<PitchDuration> => {
+            map(inai, (cell: number, index: Ordinal): ContourPiece<PitchDuration> => {
                 const renderingsSequence: Array<Rendering<PitchDuration>> = [
                     renderings[ RenderingName.SPRING ],
                     renderings[ RenderingName.SUMMER ],
@@ -29,7 +29,7 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuratio
                     renderings[ RenderingName.FALL ],
                 ]
 
-                const rendering: Rendering<PitchDuration> = renderingsSequence[ index ]
+                const rendering: Rendering<PitchDuration> = apply.Ordinal(renderingsSequence, index)
 
                 return rendering(to.Block([ cell ]))
             }),
