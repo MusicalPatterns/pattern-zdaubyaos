@@ -5,6 +5,7 @@ import {
     ContourPiece,
     from,
     INITIAL,
+    Integer,
     positiveIntegers,
     slice,
     to,
@@ -15,7 +16,7 @@ import { SUMMERY_SPRING_SCALAR, SUMMERY_SPRING_TRANSLATION } from './constants'
 const summerySpringRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> => {
         const contour: ContourPiece<PitchDuration> = to.ContourPiece(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
-            .map((integer: number): ContourElement<PitchDuration> => to.ContourElement<PitchDuration>([
+            .map((integer: Integer): ContourElement<PitchDuration> => to.ContourElement<PitchDuration>([
                 apply.Scalar(apply.Translation(integer, SUMMERY_SPRING_TRANSLATION), SUMMERY_SPRING_SCALAR),
                 1,
             ])),

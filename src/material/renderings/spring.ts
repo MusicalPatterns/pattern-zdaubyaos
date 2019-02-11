@@ -5,6 +5,7 @@ import {
     ContourPiece,
     from,
     INITIAL,
+    Integer,
     positiveIntegers,
     slice,
     to,
@@ -14,10 +15,10 @@ import { SINGLE_DURATION } from './constants'
 
 const springRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> => {
-        const integers: number[] = slice(positiveIntegers, INITIAL, to.Ordinal(cell))
+        const integers: Integer[] = slice(positiveIntegers, INITIAL, to.Ordinal(cell))
         const contour: ContourPiece<PitchDuration> = to.ContourPiece(
-            integers.map((integer: number): ContourElement<PitchDuration> =>
-                to.ContourElement<PitchDuration>([ integer, SINGLE_DURATION ]),
+            integers.map((integer: Integer): ContourElement<PitchDuration> =>
+                to.ContourElement<PitchDuration>([ from.Integer(integer), SINGLE_DURATION ]),
             ),
         )
         const contourElement: ContourElement<PitchDuration> = apply.Ordinal(contour, INITIAL)

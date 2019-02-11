@@ -3,8 +3,8 @@ import {
     apply,
     ContourElement,
     ContourPiece,
-    from,
     INITIAL,
+    Integer,
     isEven,
     positiveIntegers,
     slice,
@@ -15,7 +15,7 @@ import { SPRINGY_SUMMER_SCALAR, SPRINGY_SUMMER_TRANSLATION } from './constants'
 const springySummerRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> =>
         to.ContourPiece<PitchDuration>(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
-            .map((integer: number): ContourElement<PitchDuration> => {
+            .map((integer: Integer): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
                     return to.ContourElement<PitchDuration>([ 0, 1 ])
                 }
