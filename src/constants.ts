@@ -5,6 +5,7 @@ import {
     Hz,
     Ms,
     Ordinal,
+    Scalar,
     SCIENTIFIC_PITCHES,
     ScientificPitchNoteName,
     ScientificPitchOctaveNumber,
@@ -12,17 +13,17 @@ import {
     Translation,
 } from '@musical-patterns/utilities'
 
-const FIFTEEN: Ms = to.Ms(15)
-const TWENTYFOUR: Ms = to.Ms(24)
+const FIFTEEN: Cardinal = to.Cardinal(15)
+const TWENTYFOUR: Cardinal = to.Cardinal(24)
 
 const SUPER: Translation = to.Translation(1)
 const DUPER: Translation = to.Translation(2)
 
 const ZDAUBYAOS_SEGMENT_COUNT: Cardinal = to.Cardinal(17)
 
-const ZDAUBYAOS_INITIAL_BASE_DURATION: Ms = to.Ms(140)
-const ZDAUBYAOS_INITIAL_BASE_FREQUENCY: Hz =
-    SCIENTIFIC_PITCHES[ ScientificPitchNoteName.A ][ ScientificPitchOctaveNumber._4 ]
+const ZDAUBYAOS_INITIAL_BASE_DURATION: Scalar<Ms> = to.Scalar(to.Ms(140))
+const ZDAUBYAOS_INITIAL_BASE_FREQUENCY: Scalar<Hz> =
+    to.Scalar(SCIENTIFIC_PITCHES[ ScientificPitchNoteName.A ][ ScientificPitchOctaveNumber._4 ])
 
 const SEGMENT_A: Ordinal = to.Ordinal(0)
 const SEGMENT_B: Ordinal = to.Ordinal(1)

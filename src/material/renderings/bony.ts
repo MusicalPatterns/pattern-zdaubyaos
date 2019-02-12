@@ -7,7 +7,6 @@ import {
     deepClone,
     dividesEvenly,
     from,
-    Ms,
     negative,
     Ordinal,
     reciprocal,
@@ -26,21 +25,28 @@ import {
 const bonyRendering: Rendering<PitchDuration> =
     (block: Block): ContourPiece<PitchDuration> => {
         const blockClone: Block = to.Block(deepClone(block))
-        const blocksTotal: Ms = blockClone.reduce(
-            (accumulator: Ms, cell: number): Ms =>
-                sum(accumulator, to.Ms(cell)),
-            to.Ms(0),
+        const blocksTotal: Cardinal = blockClone.reduce(
+            // tslint:disable-next-line no-unnecessary-callback-wrapper
+            (accumulator: Cardinal, cell: number): Cardinal =>
+                sum(accumulator, to.Cardinal(cell)),
+            to.Cardinal(0),
         )
         const isBarTargetFifteen: boolean = dividesEvenly(blocksTotal, FIFTEEN)
-        const barDivisor: Ms = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
-        const barCount: Cardinal = to.Cardinal(from.Ms(apply.Scalar(
+        const barDivisor: Cardinal = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
+        const barCount: Cardinal = apply.Scalar(
             blocksTotal,
-            to.Scalar(from.Ms(reciprocal(barDivisor))),
-        )))
+            to.Scalar(from.Cardinal(reciprocal(barDivisor))),
+        )
 
         const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
-            repeat(FIFTEEN_BONY_BLOCKS, apply.Cardinal(barCount, FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)) :
-            repeat(TWENTYFOUR_BONY_BLOCKS, apply.Cardinal(barCount, TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
+            repeat(
+                FIFTEEN_BONY_BLOCKS,
+                apply.Scalar(barCount, to.Scalar(from.Cardinal(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR))),
+            ) :
+            repeat(
+                TWENTYFOUR_BONY_BLOCKS,
+                apply.Scalar(barCount, to.Scalar(from.Cardinal(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR))),
+            ),
         )
 
         const contourPiece: ContourPiece<PitchDuration> = to.ContourPiece([])

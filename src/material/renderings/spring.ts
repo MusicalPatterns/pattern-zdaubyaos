@@ -18,7 +18,7 @@ const springRendering: RenderingByBlockElement<PitchDuration> =
         const integers: Integer[] = slice(positiveIntegers, INITIAL, to.Ordinal(cell))
         const contour: ContourPiece<PitchDuration> = to.ContourPiece(
             integers.map((integer: Integer): ContourElement<PitchDuration> =>
-                to.ContourElement<PitchDuration>([ from.Integer(integer), SINGLE_DURATION ]),
+                to.ContourElement<PitchDuration>([ integer, SINGLE_DURATION ]),
             ),
         )
         const contourElement: ContourElement<PitchDuration> = apply.Ordinal(contour, INITIAL)

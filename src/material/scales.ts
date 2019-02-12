@@ -6,13 +6,13 @@ import { buildScalars } from './scalars'
 const buildScales: BuildScalesFunction =
     (spec: StandardSpec): Scale[] => {
         const patternPitchScalar: Scalar =
-            to.Scalar(from.Hz(spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Hz(1)))
+            from.Hz(spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Scalar(to.Hz(1)))
         const patternPitchTranslation: Translation =
-            spec[ StandardSpecProperties.FREQUENCY_TRANSLATION ] || NO_TRANSLATION
+            from.Hz(spec[ StandardSpecProperties.FREQUENCY_TRANSLATION ] || to.Hz(NO_TRANSLATION))
         const patternDurationScalar: Scalar =
-            to.Scalar(from.Ms(spec[ StandardSpecProperties.BASE_DURATION ] || to.Ms(1)))
+            from.Ms(spec[ StandardSpecProperties.BASE_DURATION ] || to.Scalar(to.Ms(1)))
         const patternDurationTranslation: Translation =
-            spec[ StandardSpecProperties.DURATION_TRANSLATION ] || NO_TRANSLATION
+            from.Ms(spec[ StandardSpecProperties.DURATION_TRANSLATION ] || to.Ms(NO_TRANSLATION))
 
         const {
             subparticularSeriesScalars,
