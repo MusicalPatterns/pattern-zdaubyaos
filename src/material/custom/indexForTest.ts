@@ -15,7 +15,3 @@ export {
 export {
     buildAlmostTrueContourPieces,
 } from './almostTrue/indexForTest'
-export {
-    applyGainScalar,
-    applyPitchIndexTranslation,
-} from '../material/segments/indexForTest'

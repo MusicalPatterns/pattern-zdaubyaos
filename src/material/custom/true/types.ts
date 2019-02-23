@@ -1,7 +1,7 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
-import { RenderingName } from '../../material'
-import { BarTarget, BlockStyle } from '../../types'
+import { BarTarget, BlockStyle } from '../../../types'
+import { RenderingName } from '../../renderings'
 
 type TrueContourPiecesByRenderingName = { [z in RenderingName]: ContourPiece<PitchDuration> }
 type TrueContourPeicesByBlockStyleThenRenderingName = { [y in BlockStyle]: TrueContourPiecesByRenderingName }

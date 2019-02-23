@@ -9,8 +9,8 @@ import {
     slice,
     to,
 } from '@musical-patterns/utilities'
-import { RenderingName } from '../../material'
-import { BarTarget, BlockStyle } from '../../types'
+import { BarTarget, BlockStyle } from '../../../types'
+import { RenderingName } from '../../renderings'
 import { getTrueContours } from '../true'
 import { buildOtherContourPieces } from './pieces'
 

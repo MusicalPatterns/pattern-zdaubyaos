@@ -1,6 +1,6 @@
 import { Segment } from '@musical-patterns/pattern'
 import { DictionaryOf, to } from '@musical-patterns/utilities'
-import { buildSegment } from '../../material'
+import { buildSegment } from '../../segments'
 import { buildThirtyfiveContourWholes } from './wholes'
 
 const buildThirtyfiveSegments: () => DictionaryOf<Segment> =

@@ -7,7 +7,7 @@ import {
     buildOtherSegments,
     buildThirtyfiveSegments,
     buildTrueSegments,
-} from '../../custom'
+} from '../custom'
 
 const buildSegments: () => Segment[] =
     (): Segment[] => {

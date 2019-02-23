@@ -1,6 +1,6 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece, DictionaryOf } from '@musical-patterns/utilities'
-import { buildRenderings, RenderingName, Renderings } from '../../material'
+import { buildRenderings, RenderingName, Renderings } from '../../renderings'
 import { buildOtherBlocks } from './blocks'
 
 const buildOtherContourPieces: () => DictionaryOf<ContourPiece<PitchDuration>> =

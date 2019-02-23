@@ -2,8 +2,8 @@
 
 import { PitchDuration } from '@musical-patterns/pattern'
 import { ContourPiece, ContourWhole, DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
-import { RenderingName } from '../../material'
-import { BarTarget, BlockStyle } from '../../types'
+import { BarTarget, BlockStyle } from '../../../types'
+import { RenderingName } from '../../renderings'
 import { buildAlmostTrueContourPieces } from '../almostTrue'
 import { getTrueContours } from './pieces'
 import { FormulaicTrueYaosContourWhole } from './types'

@@ -9,8 +9,6 @@ export {
     buildRenderings,
     Renderings,
     RenderingName,
-} from './material/indexForTest'
-export {
     buildOtherContourPieces,
     buildThirtyfiveContourPieces,
     getTrueContours,
@@ -20,7 +18,7 @@ export {
     applyPitchIndexTranslation,
     TrueContourPiecesByRenderingName,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
-} from './custom/indexForTest'
+} from './material/indexForTest'
 export { pattern } from './patterns'
 
 export {
