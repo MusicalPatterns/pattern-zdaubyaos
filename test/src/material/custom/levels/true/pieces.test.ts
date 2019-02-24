@@ -11,7 +11,7 @@ import {
     RenderingName,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
     TrueContourPiecesByRenderingName,
-} from '../../../../../src/indexForTest'
+} from '../../../../../../src/indexForTest'
 
 describe('true contours', () => {
     let contourPiecesByBarTargetThenBlockStyleThenRendering: TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName

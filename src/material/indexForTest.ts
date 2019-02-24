@@ -23,3 +23,8 @@ export {
     applyGainScalar,
     applyPitchIndexTranslation,
 } from './segments/indexForTest'
+
+export {
+    BarTarget,
+    BlockStyle,
+} from './types'

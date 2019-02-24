@@ -1,6 +1,6 @@
 import { apply, INCREMENT, Maybe, to } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle } from '../../types'
 import { RenderingName } from '../renderings'
+import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
 
 const contourUsages: UsageGrouping = {

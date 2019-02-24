@@ -1,6 +1,6 @@
 import { calculateTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
 import { dividesEvenly, to } from '@musical-patterns/utilities'
-import { buildThirtyfiveContourPieces } from '../../../../../src/indexForTest'
+import { buildThirtyfiveContourPieces } from '../../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {
     it('handles yaos bass', () => {

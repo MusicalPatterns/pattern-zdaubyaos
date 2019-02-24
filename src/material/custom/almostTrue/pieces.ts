@@ -1,7 +1,7 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { apply, Block, ContourPiece, DictionaryOf, map, Ordinal, sequence, to } from '@musical-patterns/utilities'
-import { BarTarget, BlockStyle } from '../../../types'
 import { buildRenderings, RenderingName, Renderings } from '../../renderings'
+import { BarTarget, BlockStyle } from '../../types'
 import { buildTrueBlocks, TrueBlocksByBarTargetThenBlockStyle } from '../true'
 import { buildAlmostTrueBlocks } from './blocks'
 
