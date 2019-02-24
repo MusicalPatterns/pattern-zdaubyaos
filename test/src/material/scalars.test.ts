@@ -1,4 +1,4 @@
-import { DictionaryOf, Scalar, testArraysAreClose, to } from '@musical-patterns/utilities'
+import { DictionaryOf, Scalar, testArraysAreCloseSoFar, to } from '@musical-patterns/utilities'
 import { buildScalars } from '../../../src/indexForTest'
 
 describe('scalars', () => {
@@ -13,7 +13,7 @@ describe('scalars', () => {
                 4 / 5,
             ].map(to.Scalar)
 
-            testArraysAreClose(subparticularSeriesScalars, expectedScalars)
+            testArraysAreCloseSoFar(subparticularSeriesScalars, expectedScalars)
         })
     })
 
@@ -28,7 +28,7 @@ describe('scalars', () => {
                 4 / 6,
             ].map(to.Scalar)
 
-            testArraysAreClose(dubparticularSeriesScalars, expectedScalars)
+            testArraysAreCloseSoFar(dubparticularSeriesScalars, expectedScalars)
         })
     })
 
@@ -43,7 +43,7 @@ describe('scalars', () => {
                 5 / 4,
             ].map(to.Scalar)
 
-            testArraysAreClose(superparticularSeriesScalars, expectedScalars)
+            testArraysAreCloseSoFar(superparticularSeriesScalars, expectedScalars)
         })
     })
 
@@ -58,7 +58,7 @@ describe('scalars', () => {
                 6 / 4,
             ].map(to.Scalar)
 
-            testArraysAreClose(duperparticularSeriesScalars, expectedScalars)
+            testArraysAreCloseSoFar(duperparticularSeriesScalars, expectedScalars)
         })
     })
 })
