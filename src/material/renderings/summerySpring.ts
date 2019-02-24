@@ -1,4 +1,4 @@
-import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/pattern'
+import { PitchDuration, RenderingByBlockElement, STANDARD_PITCH_INDEX_INDICATING_REST } from '@musical-patterns/pattern'
 import {
     apply,
     ContourElement,
@@ -22,7 +22,7 @@ const summerySpringRendering: RenderingByBlockElement<PitchDuration> =
             ])),
         )
         const index: ContourElement<PitchDuration> = apply.Ordinal(contour, INITIAL)
-        index[ from.Ordinal(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
+        index[ from.Ordinal(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = STANDARD_PITCH_INDEX_INDICATING_REST
 
         return contour
     }

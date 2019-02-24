@@ -6,10 +6,10 @@ import { buildNoteSpec } from '../../../src/indexForTest'
 const DURATIONS_SCALE_INDEX: Ordinal = to.Ordinal(1)
 
 describe('note specs', () => {
-    describe('when the pitch index is zero', () => {
+    describe('when the pitch index is negative 1', () => {
         let noteSpec: NoteSpec
         beforeEach(() => {
-            noteSpec = buildNoteSpec(to.ContourElement<PitchDuration>([ 0, 6 ]))
+            noteSpec = buildNoteSpec(to.ContourElement<PitchDuration>([ -1, 6 ]))
         })
 
         describe('duration', () => {

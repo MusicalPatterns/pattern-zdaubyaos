@@ -220,30 +220,30 @@ describe('true contours', () => {
                     it('handles umow spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.UMOW ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles chuwow spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.CHUWOW ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
                             ]))
                     })
 
                     it('handles iest spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.IEST ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
                             ]))
                     })
                 })
@@ -252,27 +252,27 @@ describe('true contours', () => {
                     it('handles inai spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.INAI ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles djiyai spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.DJIYAI ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
                             ]))
                     })
 
                     it('handles ouzd spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.OUZD ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
                             ]))
                     })
                 })
@@ -283,30 +283,30 @@ describe('true contours', () => {
                     it('handles umow summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.UMOW ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles chuwow summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.CHUWOW ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
                             ]))
                     })
 
                     it('handles iest summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.IEST ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
                             ]))
                     })
                 })
@@ -315,27 +315,27 @@ describe('true contours', () => {
                     it('handles inai summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.INAI ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles djiyai summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.DJIYAI ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ],
                             ]))
                     })
 
                     it('handles ouzd summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.OUZD ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ],
                             ]))
                     })
                 })
@@ -409,30 +409,30 @@ describe('true contours', () => {
                     it('handles umow summery spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.UMOW ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles chuwow summery spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.CHUWOW ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
                             ]))
                     })
 
                     it('handles iest summery spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.IEST ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
                             ]))
                     })
                 })
@@ -441,27 +441,27 @@ describe('true contours', () => {
                     it('handles inai summery spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.INAI ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles djiyai summery spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.DJIYAI ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ],
                             ]))
                     })
 
                     it('handles ouzd summery spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.OUZD ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ], [ 13, 1 ],
-                                [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ], [ 13, 1 ],
+                                [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ],
                             ]))
                     })
                 })
@@ -505,34 +505,34 @@ describe('true contours', () => {
                     it('handles umow spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.UMOW ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
                             ]))
                     })
 
                     it('handles chuwow spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.CHUWOW ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
                             ]))
                     })
 
                     it('handles iest spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.IEST ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
                             ]))
                     })
                 })
@@ -541,35 +541,35 @@ describe('true contours', () => {
                     it('handles inai spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles djiyai spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.DJIYAI ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
                             ]))
                     })
 
                     it('handles ouzd spring', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.OUZD ][ RenderingName.SPRING ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
-                                [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
+                                [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
                             ]))
                     })
                 })
@@ -580,34 +580,34 @@ describe('true contours', () => {
                     it('handles umow summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.UMOW ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
                             ]))
                     })
 
                     it('handles chuwow summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.CHUWOW ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
                             ]))
                     })
 
                     it('handles iest summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.IEST ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ],
                             ]))
                     })
                 })
@@ -616,35 +616,35 @@ describe('true contours', () => {
                     it('handles inai summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
                             ]))
                     })
 
                     it('handles djiyai summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.DJIYAI ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ],
                             ]))
                     })
 
                     it('handles ouzd summer', () => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.OUZD ][ RenderingName.SUMMER ])
                             .toEqual(to.ContourPiece<PitchDuration>([
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ], [ 0, 1 ],
-                                [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ], [ 0, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ], [ -1, 1 ],
+                                [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ], [ -1, 1 ],
                             ]))
                     })
                 })
@@ -731,12 +731,12 @@ describe('true contours', () => {
 
                     expect(inaiiiVarietyContourPiece)
                         .toEqual(to.ContourPiece<PitchDuration>([
-                            [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                            [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                            [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                            [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
-                            [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
-                            [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
+                            [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                            [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                            [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                            [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
+                            [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
+                            [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
                             [ 1, 1 ], [ 2, 2 ],
                             [ 1, 1 ], [ 2, 2 ],
                         ]))

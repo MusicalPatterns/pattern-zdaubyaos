@@ -13,27 +13,27 @@ describe('rendering functions', () => {
             const spring: Rendering<PitchDuration> = renderings[ RenderingName.SPRING ]
             expect(spring(to.Block([ 2 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 2, 1 ],
+                    [ -1, 1 ], [ 2, 1 ],
                 ]))
             expect(spring(to.Block([ 3 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 2, 1 ], [ 3, 1 ],
+                    [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
                 ]))
             expect(spring(to.Block([ 4 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
+                    [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
                 ]))
             expect(spring(to.Block([ 5 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
+                    [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
                 ]))
             expect(spring(to.Block([ 6 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
+                    [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
                 ]))
             expect(spring(to.Block([ 7 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
+                    [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ],
                 ]))
         })
     })
@@ -43,27 +43,27 @@ describe('rendering functions', () => {
             const summer: Rendering<PitchDuration> = renderings[ RenderingName.SUMMER ]
             expect(summer(to.Block([ 2 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 1, 1 ], [ 0, 1 ],
+                    [ 1, 1 ], [ -1, 1 ],
                 ]))
             expect(summer(to.Block([ 3 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 1, 1 ], [ 0, 1 ], [ 3, 1 ],
+                    [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
                 ]))
             expect(summer(to.Block([ 4 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
+                    [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
                 ]))
             expect(summer(to.Block([ 5 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ],
+                    [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
                 ]))
             expect(summer(to.Block([ 6 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ],
+                    [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ],
                 ]))
             expect(summer(to.Block([ 7 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 1, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 5, 1 ], [ 0, 1 ], [ 7, 1 ],
+                    [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ],
                 ]))
         })
     })
@@ -103,27 +103,27 @@ describe('rendering functions', () => {
             const summerySpring: Rendering<PitchDuration> = renderings[ RenderingName.SUMMERY_SPRING ]
             expect(summerySpring(to.Block([ 2 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 1, 1 ],
+                    [ -1, 1 ], [ 1, 1 ],
                 ]))
             expect(summerySpring(to.Block([ 3 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 1, 1 ], [ 3, 1 ],
+                    [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
                 ]))
             expect(summerySpring(to.Block([ 4 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
+                    [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
                 ]))
             expect(summerySpring(to.Block([ 5 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
+                    [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
                 ]))
             expect(summerySpring(to.Block([ 6 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ],
+                    [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ],
                 ]))
             expect(summerySpring(to.Block([ 7 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 0, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ],
+                    [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ],
                 ]))
         })
     })
@@ -133,27 +133,27 @@ describe('rendering functions', () => {
             const springySummer: Rendering<PitchDuration> = renderings[ RenderingName.SPRINGY_SUMMER ]
             expect(springySummer(to.Block([ 2 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 2, 1 ], [ 0, 1 ],
+                    [ 2, 1 ], [ -1, 1 ],
                 ]))
             expect(springySummer(to.Block([ 3 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 2, 1 ], [ 0, 1 ], [ 3, 1 ],
+                    [ 2, 1 ], [ -1, 1 ], [ 3, 1 ],
                 ]))
             expect(springySummer(to.Block([ 4 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 2, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ],
+                    [ 2, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
                 ]))
             expect(springySummer(to.Block([ 5 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 2, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 4, 1 ],
+                    [ 2, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 4, 1 ],
                 ]))
             expect(springySummer(to.Block([ 6 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 2, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 4, 1 ], [ 0, 1 ],
+                    [ 2, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 4, 1 ], [ -1, 1 ],
                 ]))
             expect(springySummer(to.Block([ 7 ])))
                 .toEqual(to.ContourPiece<PitchDuration>([
-                    [ 2, 1 ], [ 0, 1 ], [ 3, 1 ], [ 0, 1 ], [ 4, 1 ], [ 0, 1 ], [ 5, 1 ],
+                    [ 2, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 4, 1 ], [ -1, 1 ], [ 5, 1 ],
                 ]))
         })
     })

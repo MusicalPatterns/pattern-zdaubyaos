@@ -1,4 +1,4 @@
-import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/pattern'
+import { PitchDuration, RenderingByBlockElement, STANDARD_PITCH_INDEX_INDICATING_REST } from '@musical-patterns/pattern'
 import {
     apply,
     ContourElement,
@@ -22,7 +22,8 @@ const springRendering: RenderingByBlockElement<PitchDuration> =
             ),
         )
         const contourElement: ContourElement<PitchDuration> = apply.Ordinal(contour, INITIAL)
-        contourElement[ from.Ordinal(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] = 0
+        contourElement[ from.Ordinal(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] =
+            STANDARD_PITCH_INDEX_INDICATING_REST
 
         return contour
     }
