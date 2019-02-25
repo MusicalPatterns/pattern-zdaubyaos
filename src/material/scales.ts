@@ -1,19 +1,16 @@
 import { BuildScalesFunction, Scale } from '@musical-patterns/compiler'
-import { buildStandardScales, StandardSpec, StandardSpecProperties } from '@musical-patterns/pattern'
-import { from, NO_TRANSLATION, Scalar, to, Translation } from '@musical-patterns/utilities'
+import {
+    buildFlatDurationsScale,
+    buildHarmonicSeriesScale,
+    buildStandardScales,
+    buildSubharmonicSeriesScale,
+    STANDARD_PITCH_SCALE_INDEX,
+    StandardSpec,
+} from '@musical-patterns/pattern'
 import { buildScalars } from './scalars'
 
 const buildScales: BuildScalesFunction =
     (spec: StandardSpec): Scale[] => {
-        const patternPitchScalar: Scalar =
-            from.Hz(spec[ StandardSpecProperties.BASE_FREQUENCY ] || to.Scalar(to.Hz(1)))
-        const patternPitchTranslation: Translation =
-            from.Hz(spec[ StandardSpecProperties.FREQUENCY_TRANSLATION ] || to.Hz(NO_TRANSLATION))
-        const patternDurationScalar: Scalar =
-            from.Ms(spec[ StandardSpecProperties.BASE_DURATION ] || to.Scalar(to.Ms(1)))
-        const patternDurationTranslation: Translation =
-            from.Ms(spec[ StandardSpecProperties.DURATION_TRANSLATION ] || to.Ms(NO_TRANSLATION))
-
         const {
             subparticularSeriesScalars,
             dubparticularSeriesScalars,
@@ -21,50 +18,38 @@ const buildScales: BuildScalesFunction =
             duperparticularSeriesScalars,
         } = buildScalars()
 
-        const {
-            flatDurationsScale,
-            harmonicSeriesScale,
-            subharmonicSeriesScale,
-        } = buildStandardScales()
+        const standardScales: Scale[] = buildStandardScales(
+            spec,
+            { durationScalars: buildFlatDurationsScale().scalars, pitchScalars: subparticularSeriesScalars },
+        )
 
-        return [
-            flatDurationsScale,
+        return standardScales.concat([
             {
-                scalar: patternDurationScalar,
-                scalars: flatDurationsScale.scalars,
-                translation: patternDurationTranslation,
-            },
-            {
-                scalar: patternPitchScalar,
-                scalars: subparticularSeriesScalars,
-                translation: patternPitchTranslation,
-            },
-            {
-                scalar: patternPitchScalar,
+                scalar: standardScales[ STANDARD_PITCH_SCALE_INDEX ].scalar,
                 scalars: dubparticularSeriesScalars,
-                translation: patternPitchTranslation,
+                translation: standardScales[ STANDARD_PITCH_SCALE_INDEX ].translation,
             },
             {
-                scalar: patternPitchScalar,
-                scalars: harmonicSeriesScale.scalars,
-                translation: patternPitchTranslation,
+                scalar: standardScales[ STANDARD_PITCH_SCALE_INDEX ].scalar,
+                scalars: buildHarmonicSeriesScale().scalars,
+                translation: standardScales[ STANDARD_PITCH_SCALE_INDEX ].translation,
             },
             {
-                scalar: patternPitchScalar,
+                scalar: standardScales[ STANDARD_PITCH_SCALE_INDEX ].scalar,
                 scalars: superparticularSeriesScalars,
-                translation: patternPitchTranslation,
+                translation: standardScales[ STANDARD_PITCH_SCALE_INDEX ].translation,
             },
             {
-                scalar: patternPitchScalar,
+                scalar: standardScales[ STANDARD_PITCH_SCALE_INDEX ].scalar,
                 scalars: duperparticularSeriesScalars,
-                translation: patternPitchTranslation,
+                translation: standardScales[ STANDARD_PITCH_SCALE_INDEX ].translation,
             },
             {
-                scalar: patternPitchScalar,
-                scalars: subharmonicSeriesScale.scalars,
-                translation: patternPitchTranslation,
+                scalar: standardScales[ STANDARD_PITCH_SCALE_INDEX ].scalar,
+                scalars: buildSubharmonicSeriesScale().scalars,
+                translation: standardScales[ STANDARD_PITCH_SCALE_INDEX ].translation,
             },
-        ]
+        ])
     }
 
 export {
