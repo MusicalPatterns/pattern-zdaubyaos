@@ -1,5 +1,5 @@
 import { NotePropertySpec, NoteSpec } from '@musical-patterns/compiler'
-import { PitchDuration } from '@musical-patterns/pattern'
+import { PitchDuration, SILENT } from '@musical-patterns/pattern'
 import { Ordinal, to } from '@musical-patterns/utilities'
 import { buildNoteSpec } from '../../../src/indexForTest'
 
@@ -37,7 +37,7 @@ describe('note specs', () => {
 
             it('scales the gain to zero', () => {
                 expect(gainSpec.scalar)
-                    .toBe(to.Scalar(0))
+                    .toBe(SILENT)
             })
         })
     })
