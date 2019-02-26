@@ -1,7 +1,7 @@
-import { Ordinal, Scalar, Translation } from '@musical-patterns/utilities'
+import { Amplitude, Ordinal, Scalar, Translation } from '@musical-patterns/utilities'
 
 interface NoteStyle {
-    gainScalar?: Scalar,
+    gainScalar?: Scalar<Amplitude>,
     pitchIndexTranslation?: Translation,
     scaleIndex: Ordinal,
 }

@@ -37,7 +37,7 @@ describe('note specs', () => {
 
             it('scales the gain to zero', () => {
                 expect(gainSpec.scalar)
-                    .toBe(SILENT)
+                    .toBe(to.Scalar(0))
             })
         })
     })

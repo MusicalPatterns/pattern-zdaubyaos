@@ -19,9 +19,21 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
                 secretLongChordContourWhole,
             ],
             [
-                { pitchIndexTranslation: to.Translation(4), scaleIndex: to.Ordinal(3), gainScalar: to.Scalar(0.8) },
-                { pitchIndexTranslation: to.Translation(6), scaleIndex: to.Ordinal(4), gainScalar: to.Scalar(0.8) },
-                { pitchIndexTranslation: to.Translation(3), scaleIndex: to.Ordinal(5), gainScalar: to.Scalar(0.8) },
+                {
+                    gainScalar: to.Scalar(to.Amplitude(0.8)),
+                    pitchIndexTranslation: to.Translation(4),
+                    scaleIndex: to.Ordinal(3),
+                },
+                {
+                    gainScalar: to.Scalar(to.Amplitude(0.8)),
+                    pitchIndexTranslation: to.Translation(6),
+                    scaleIndex: to.Ordinal(4),
+                },
+                {
+                    gainScalar: to.Scalar(to.Amplitude(0.8)),
+                    pitchIndexTranslation: to.Translation(3),
+                    scaleIndex: to.Ordinal(5),
+                },
             ],
         )
 

@@ -22,7 +22,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
                 breatherRestContourWhole,
             ],
             [
-                { gainScalar: to.Scalar(0.5), scaleIndex: to.Ordinal(0) },
+                { gainScalar: to.Scalar(to.Amplitude(0.5)), scaleIndex: to.Ordinal(0) },
                 { scaleIndex: to.Ordinal(1) },
                 { scaleIndex: to.Ordinal(2) },
             ],
@@ -36,7 +36,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
             [
                 { scaleIndex: to.Ordinal(0) },
-                { gainScalar: to.Scalar(0.5), scaleIndex: to.Ordinal(4) },
+                { gainScalar: to.Scalar(to.Amplitude(0.5)), scaleIndex: to.Ordinal(4) },
                 { scaleIndex: to.Ordinal(2) },
             ],
         )
@@ -51,7 +51,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
                 { scaleIndex: to.Ordinal(0) },
                 { scaleIndex: to.Ordinal(1) },
                 {
-                    gainScalar: to.Scalar(0.5),
+                    gainScalar: to.Scalar(to.Amplitude(0.5)),
                     pitchIndexTranslation: to.Translation(negative(1)),
                     scaleIndex: to.Ordinal(2),
                 },
@@ -66,7 +66,7 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
             [
                 { scaleIndex: to.Ordinal(0) },
-                { gainScalar: to.Scalar(0.5), scaleIndex: to.Ordinal(1) },
+                { gainScalar: to.Scalar(to.Amplitude(0.5)), scaleIndex: to.Ordinal(1) },
                 { scaleIndex: to.Ordinal(2) },
             ],
         )

@@ -49,9 +49,9 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
                 almostTrueZdaubBonyWithSuperinscapeContourWhole,
             ],
             [
-                { gainScalar: to.Scalar(0.33), scaleIndex: to.Ordinal(3) },
-                { gainScalar: to.Scalar(0.33), scaleIndex: to.Ordinal(4) },
-                { gainScalar: to.Scalar(0.33), scaleIndex: to.Ordinal(2) },
+                { gainScalar: to.Scalar(to.Amplitude(0.33)), scaleIndex: to.Ordinal(3) },
+                { gainScalar: to.Scalar(to.Amplitude(0.33)), scaleIndex: to.Ordinal(4) },
+                { gainScalar: to.Scalar(to.Amplitude(0.33)), scaleIndex: to.Ordinal(2) },
             ],
         )
 
