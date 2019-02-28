@@ -6,11 +6,12 @@ import {
     INITIAL,
     Integer,
     isEven,
+    ONE_HALF,
     positiveIntegers,
     slice,
     to,
 } from '@musical-patterns/utilities'
-import { SPRINGY_SUMMER_SCALAR, SPRINGY_SUMMER_TRANSLATION } from './constants'
+import { SPRINGY_SUMMER_TRANSLATION } from './constants'
 
 const springySummerRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> =>
@@ -21,7 +22,7 @@ const springySummerRendering: RenderingByBlockElement<PitchDuration> =
                 }
 
                 return to.ContourElement<PitchDuration>([
-                    apply.Scalar(apply.Translation(integer, SPRINGY_SUMMER_TRANSLATION), SPRINGY_SUMMER_SCALAR),
+                    apply.Scalar(apply.Translation(integer, SPRINGY_SUMMER_TRANSLATION), ONE_HALF),
                     1,
                 ])
             }),

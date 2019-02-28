@@ -7,16 +7,28 @@ import {
     STANDARD_PITCH_SCALE_INDEX,
     StandardSpec,
 } from '@musical-patterns/pattern'
-import { buildScalars } from './scalars'
+import {
+    buildDubparticularSeriesScalars,
+    buildDuperparticularSeriesScalars,
+    buildSubparticularSeriesScalars,
+    buildSuperparticularSeriesScalars,
+} from '@musical-patterns/pattern-xenharmonic-series'
+import { from, Scalar } from '@musical-patterns/utilities'
 
 const buildScales: BuildScalesFunction =
     (spec: StandardSpec): Scale[] => {
-        const {
-            subparticularSeriesScalars,
-            dubparticularSeriesScalars,
-            superparticularSeriesScalars,
-            duperparticularSeriesScalars,
-        } = buildScalars()
+        // @ts-ignore
+        const superparticularSeriesScalars: Scalar[] = buildSuperparticularSeriesScalars()
+            .map(from.Frequency)
+        // @ts-ignore
+        const duperparticularSeriesScalars: Scalar[] = buildDuperparticularSeriesScalars()
+            .map(from.Frequency)
+        // @ts-ignore
+        const subparticularSeriesScalars: Scalar[] = buildSubparticularSeriesScalars()
+            .map(from.Frequency)
+        // @ts-ignore
+        const dubparticularSeriesScalars: Scalar[] = buildDubparticularSeriesScalars()
+            .map(from.Frequency)
 
         const standardScales: Scale[] = buildStandardScales(
             spec,

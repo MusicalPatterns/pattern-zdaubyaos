@@ -3,7 +3,6 @@
 export {
     buildParts,
     buildEntities,
-    buildScalars,
     buildNoteSpec,
     buildScales,
     buildRenderings,
