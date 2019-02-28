@@ -1,52 +1,47 @@
 import { PitchDuration, pitchDurationRest } from '@musical-patterns/pattern'
-import { ContourWhole, DictionaryOf, repeat, to } from '@musical-patterns/utilities'
+import { ContourWhole, repeat, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
-import { buildAlmostTrueContourPieces } from '../almostTrue'
-import { buildOtherContourPieces } from '../other'
+import { AlmostTrueContourPieces, buildAlmostTrueContourPieces } from '../almostTrue'
+import { buildOtherContourPieces, OtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
+import { BreatherContourWholes } from './types'
 
-const buildBreatherContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
-    (): DictionaryOf<ContourWhole<PitchDuration>> => {
-        const { inaiiiVarietyContourPiece } = buildAlmostTrueContourPieces()
-        const { backboneTwentyfourContourPiece } = buildOtherContourPieces()
+const buildBreatherContourWholes: () => BreatherContourWholes =
+    (): BreatherContourWholes => {
+        const almostTruePieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
+        const otherPieces: OtherContourPieces = buildOtherContourPieces()
 
-        const breatherRestContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole<PitchDuration>(pitchDurationRest(24))
-        const breatherSpringContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole<PitchDuration>(getTrueContours(
-                BlockStyle.INAI,
-                BarTarget.TWENTYFOUR,
-                RenderingName.SPRING,
-            ))
-        const breatherSummerContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole<PitchDuration>(getTrueContours(
-                BlockStyle.INAI,
-                BarTarget.TWENTYFOUR,
-                RenderingName.SUMMER,
-            ))
-        const doubleBreatherFallContourWhole: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(
-            repeat(backboneTwentyfourContourPiece, to.Cardinal(2)),
+        const rest: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(pitchDurationRest(24))
+        const spring: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(getTrueContours(
+            BlockStyle.INAI,
+            BarTarget.TWENTYFOUR,
+            RenderingName.SPRING,
+        ))
+        const summer: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(getTrueContours(
+            BlockStyle.INAI,
+            BarTarget.TWENTYFOUR,
+            RenderingName.SUMMER,
+        ))
+        const doubleFall: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(
+            repeat(otherPieces.backboneTwentyfour, to.Cardinal(2)),
         )
-        const breatherVarietyContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole<PitchDuration>(inaiiiVarietyContourPiece)
-        const breatherSpringAltContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole<PitchDuration>(getTrueContours(
-                BlockStyle.OUZD,
-                BarTarget.TWENTYFOUR,
-                RenderingName.SPRING,
-            ))
-        const doubleBreatherRestContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole<PitchDuration>(pitchDurationRest(48))
+        const variety: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(almostTruePieces.inaiiiVariety)
+        const springAlt: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(getTrueContours(
+            BlockStyle.OUZD,
+            BarTarget.TWENTYFOUR,
+            RenderingName.SPRING,
+        ))
+        const doubleRest: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(pitchDurationRest(48))
 
         return {
-            breatherRestContourWhole,
-            breatherSpringAltContourWhole,
-            breatherSpringContourWhole,
-            breatherSummerContourWhole,
-            breatherVarietyContourWhole,
-            doubleBreatherFallContourWhole,
-            doubleBreatherRestContourWhole,
+            doubleFall,
+            doubleRest,
+            rest,
+            spring,
+            springAlt,
+            summer,
+            variety,
         }
     }
 

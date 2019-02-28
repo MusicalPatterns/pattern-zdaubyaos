@@ -1,6 +1,6 @@
 {
   "name": "@musical-patterns/pattern-zdaubyaos",
-  "version": "1.0.98",
+  "version": "1.0.99",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "MIT",
@@ -9,14 +9,14 @@
     "url": "https://github.com/MusicalPatterns/pattern-zdaubyaos.git"
   },
   "dependencies": {
-    "@musical-patterns/compiler": "^1.0.100",
-    "@musical-patterns/pattern": "^1.0.169",
-    "@musical-patterns/pattern-xenharmonic-series": "^1.0.101",
-    "@musical-patterns/utilities": "^1.0.275"
+    "@musical-patterns/compiler": "^1.0.101",
+    "@musical-patterns/pattern": "^1.0.172",
+    "@musical-patterns/pattern-xenharmonic-series": "^1.0.102",
+    "@musical-patterns/utilities": "^1.0.277"
   },
   "devDependencies": {
-    "@musical-patterns/cli": "^1.0.452",
-    "@musical-patterns/playroom": "^1.0.238",
+    "@musical-patterns/cli": "^1.0.453",
+    "@musical-patterns/playroom": "^1.0.239",
     "@musical-patterns/snapshot": "^1.0.49"
   }
 }

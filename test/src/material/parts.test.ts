@@ -4,17 +4,17 @@ import { calculateTotalZdaubyaosDuration } from '../../support'
 describe('parts', () => {
     it('is the case that they all have the same duration', () => {
         const {
-            subparticularOrDubparticularPart,
-            harmonicOrSubharmonicPart,
-            superparticularOrDuperparticularPart,
+            subDub,
+            harmSubharm,
+            superDuper,
         } = buildParts()
 
         const expectedTotalPatternDuration: number = 3360
-        expect(calculateTotalZdaubyaosDuration(subparticularOrDubparticularPart))
+        expect(calculateTotalZdaubyaosDuration(subDub))
             .toEqual(expectedTotalPatternDuration)
-        expect(calculateTotalZdaubyaosDuration(superparticularOrDuperparticularPart))
+        expect(calculateTotalZdaubyaosDuration(superDuper))
             .toEqual(expectedTotalPatternDuration)
-        expect(calculateTotalZdaubyaosDuration(harmonicOrSubharmonicPart))
+        expect(calculateTotalZdaubyaosDuration(harmSubharm))
             .toEqual(expectedTotalPatternDuration)
     })
 })

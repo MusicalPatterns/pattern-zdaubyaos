@@ -1,78 +1,56 @@
 import { Segment } from '@musical-patterns/pattern'
-import { apply, DictionaryOf, from, INCLUSIVE, INITIAL, slice, to } from '@musical-patterns/utilities'
+import { apply, from, INCLUSIVE, INITIAL, slice, to } from '@musical-patterns/utilities'
 import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {
+    AlmostTrueSegments,
+    BreatherSegments,
     buildAlmostTrueSegments,
     buildBreatherSegments,
     buildOtherSegments,
     buildThirtyfiveSegments,
     buildTrueSegments,
+    OtherSegments,
+    ThirtyfiveSegments,
+    TrueSegments,
 } from '../custom'
 
 const buildSegments: () => Segment[] =
     (): Segment[] => {
-        const {
-            almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-            almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
-            almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
-        }: DictionaryOf<Segment> = buildAlmostTrueSegments()
-
-        const {
-            breatherSpringAltNiceAsABreatherToABreatherSegment,
-            breatherSpringSegment,
-            breatherSummerSegment,
-            breatherVarietyQuiteTheReveilleSegment,
-            doubleBreatherFallWhichIsGoodIntroForJigSegment,
-        }: DictionaryOf<Segment> = buildBreatherSegments()
-
-        const {
-            secretLongChordSegment,
-            shiftySegment,
-            totallyOutThereIntroSegment,
-        }: DictionaryOf<Segment> = buildOtherSegments()
-
-        const {
-            thirtyfiveSegment,
-        }: DictionaryOf<Segment> = buildThirtyfiveSegments()
-
-        const {
-            trueAllYaosAllRhythmsAtOnceSegment,
-            trueSpringAllYaosUmowchuwowiestSegment,
-            trueSpringWithZdaubSegment,
-            trueSpringySummerTotallyOutThereSegment,
-            trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
-            trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
-        }: DictionaryOf<Segment> = buildTrueSegments()
+        const almostTrueSegments: AlmostTrueSegments = buildAlmostTrueSegments()
+        const breatherSegments: BreatherSegments = buildBreatherSegments()
+        const otherSegments: OtherSegments = buildOtherSegments()
+        const thirtyfiveSegments: ThirtyfiveSegments = buildThirtyfiveSegments()
+        const trueSegments: TrueSegments = buildTrueSegments()
 
         return slice(
             [
                 // 0
-                breatherSpringSegment,
-                trueSpringAllYaosUmowchuwowiestSegment,
-                trueSpringWithZdaubSegment,
+                breatherSegments.spring,
+                trueSegments.springAllYaosUmowchuwowiest,
+                trueSegments.springWithZdaub,
 
                 // 3
-                breatherSummerSegment,
-                trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
-                trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
-                secretLongChordSegment,
-                shiftySegment,
+                breatherSegments.summer,
+                trueSegments.summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped,
+                trueSegments.summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically,
+                otherSegments.secretLongChord,
+                otherSegments.shifty,
 
                 // 8
-                doubleBreatherFallWhichIsGoodIntroForJigSegment,
-                almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
-                almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-                totallyOutThereIntroSegment,
-                trueSpringySummerTotallyOutThereSegment,
+                breatherSegments.doubleFallWhichIsGoodIntroForJig,
+                almostTrueSegments.fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling,
+                almostTrueSegments.bonyJigAndNowItGetsKindaHighAndMagicSparkly,
+                otherSegments.totallyOutThereIntro,
+                trueSegments.springySummerTotallyOutThere,
 
                 // 13
-                breatherSpringAltNiceAsABreatherToABreatherSegment,
-                breatherVarietyQuiteTheReveilleSegment,
-                trueAllYaosAllRhythmsAtOnceSegment,
-                almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
+                breatherSegments.springAltNiceAsABreatherToABreather,
+                breatherSegments.varietyQuiteTheReveille,
+                trueSegments.allYaosAllRhythmsAtOnce,
+                almostTrueSegments.extendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonically,
 
                 // 17
-                thirtyfiveSegment,
+                thirtyfiveSegments.thirtyfiveSegment,
             ],
             INITIAL,
             to.Ordinal(from.Cardinal(apply.Translation(ZDAUBYAOS_SEGMENT_COUNT, INCLUSIVE))),

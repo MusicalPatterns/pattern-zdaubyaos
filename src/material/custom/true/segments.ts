@@ -1,27 +1,20 @@
 // tslint:disable max-file-line-count
 
 import { Segment } from '@musical-patterns/pattern'
-import { DictionaryOf, negative, to } from '@musical-patterns/utilities'
+import { negative, to } from '@musical-patterns/utilities'
 import { buildSegment } from '../../segments'
+import { TrueContourWholes, TrueSegments } from './types'
 import { buildTrueContourWholes } from './wholes'
 
-const buildTrueSegments: () => DictionaryOf<Segment> =
-    (): DictionaryOf<Segment> => {
-        const {
-            trueYaosInaidjiyaiouzdSummerToSpringContourWhole,
-            trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole,
-            trueYaosUmowchuwowiestSpringToSummerContourWhole,
-            trueYaosUmowchuwowiestSummerToSpringContourWhole,
-            trueZdaubGlisContourWhole,
-            trueZdaubGlisVariantContourWhole,
-            trueZdaubTremContourWhole,
-        } = buildTrueContourWholes()
+const buildTrueSegments: () => TrueSegments =
+    (): TrueSegments => {
+        const trueContourWholes: TrueContourWholes = buildTrueContourWholes()
 
-        const trueSpringAllYaosUmowchuwowiestSegment: Segment = buildSegment(
+        const springAllYaosUmowchuwowiest: Segment = buildSegment(
             [
-                trueYaosUmowchuwowiestSpringToSummerContourWhole,
-                trueYaosUmowchuwowiestSpringToSummerContourWhole,
-                trueYaosUmowchuwowiestSpringToSummerContourWhole,
+                trueContourWholes.yaosUmowchuwowiestSpringToSummer,
+                trueContourWholes.yaosUmowchuwowiestSpringToSummer,
+                trueContourWholes.yaosUmowchuwowiestSpringToSummer,
             ],
             [
                 { scaleIndex: to.Ordinal(0) },
@@ -30,11 +23,11 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const trueAllYaosAllRhythmsAtOnceSegment: Segment = buildSegment(
+        const allYaosAllRhythmsAtOnce: Segment = buildSegment(
             [
-                trueYaosUmowchuwowiestSpringToSummerContourWhole,
-                trueYaosUmowchuwowiestSummerToSpringContourWhole,
-                trueYaosInaidjiyaiouzdSummerToSpringContourWhole,
+                trueContourWholes.yaosUmowchuwowiestSpringToSummer,
+                trueContourWholes.yaosUmowchuwowiestSummerToSpring,
+                trueContourWholes.yaosInaidjiyaiouzdSummerToSpring,
             ],
             [
                 { scaleIndex: to.Ordinal(3) },
@@ -43,11 +36,11 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment: Segment = buildSegment(
+        const summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped: Segment = buildSegment(
             [
-                trueYaosUmowchuwowiestSummerToSpringContourWhole,
-                trueYaosUmowchuwowiestSummerToSpringContourWhole,
-                trueYaosUmowchuwowiestSummerToSpringContourWhole,
+                trueContourWholes.yaosUmowchuwowiestSummerToSpring,
+                trueContourWholes.yaosUmowchuwowiestSummerToSpring,
+                trueContourWholes.yaosUmowchuwowiestSummerToSpring,
             ],
             [
                 { scaleIndex: to.Ordinal(3) },
@@ -56,11 +49,11 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const trueSpringWithZdaubSegment: Segment = buildSegment(
+        const springWithZdaub: Segment = buildSegment(
             [
-                trueZdaubGlisContourWhole,
-                trueYaosUmowchuwowiestSpringToSummerContourWhole,
-                trueZdaubTremContourWhole,
+                trueContourWholes.zdaubGlis,
+                trueContourWholes.yaosUmowchuwowiestSpringToSummer,
+                trueContourWholes.zdaubTrem,
             ],
             [
                 { scaleIndex: to.Ordinal(0) },
@@ -69,12 +62,12 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment: Segment =
+        const summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically: Segment =
             buildSegment(
                 [
-                    trueYaosUmowchuwowiestSummerToSpringContourWhole,
-                    trueZdaubGlisContourWhole,
-                    trueZdaubGlisVariantContourWhole,
+                    trueContourWholes.yaosUmowchuwowiestSummerToSpring,
+                    trueContourWholes.zdaubGlis,
+                    trueContourWholes.zdaubGlisVariant,
                 ],
                 [
                     { scaleIndex: to.Ordinal(3), pitchIndexTranslation: to.Translation(2) },
@@ -83,11 +76,11 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
                 ],
             )
 
-        const trueSpringySummerTotallyOutThereSegment: Segment = buildSegment(
+        const springySummerTotallyOutThere: Segment = buildSegment(
             [
-                trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole,
-                trueZdaubGlisContourWhole,
-                trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole,
+                trueContourWholes.yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd,
+                trueContourWholes.zdaubGlis,
+                trueContourWholes.yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd,
             ],
             [
                 { scaleIndex: to.Ordinal(0), pitchIndexTranslation: to.Translation(2) },
@@ -97,12 +90,12 @@ const buildTrueSegments: () => DictionaryOf<Segment> =
         )
 
         return {
-            trueAllYaosAllRhythmsAtOnceSegment,
-            trueSpringAllYaosUmowchuwowiestSegment,
-            trueSpringWithZdaubSegment,
-            trueSpringySummerTotallyOutThereSegment,
-            trueSummerAllYaosUmowchuwowiestWithSomeHarmonicallyFlippedSegment,
-            trueSummerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonicallySegment,
+            allYaosAllRhythmsAtOnce,
+            springAllYaosUmowchuwowiest,
+            springWithZdaub,
+            springySummerTotallyOutThere,
+            summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped,
+            summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically,
         }
     }
 

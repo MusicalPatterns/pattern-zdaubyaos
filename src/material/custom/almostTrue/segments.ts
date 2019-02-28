@@ -1,52 +1,44 @@
 import { Segment } from '@musical-patterns/pattern'
-import { DictionaryOf, to } from '@musical-patterns/utilities'
+import { to } from '@musical-patterns/utilities'
 import { buildSegment } from '../../segments'
+import { AlmostTrueContourWholes, AlmostTrueSegments } from './types'
 import { buildAlmostTrueContourWholes } from './wholes'
 
-const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
-    (): DictionaryOf<Segment> => {
-        const {
-            almostTrueExtendedEndingZdaubBonyContourWhole,
-            almostTrueExtendedEndingZdaubGlisContourWhole,
-            almostTrueExtendedEndingZdaubTremContourWhole,
-            almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
-            almostTrueYetOfBackboneContourWhole,
-            almostTrueZdaubBonyWithSuperinscapeContourWhole,
-        } = buildAlmostTrueContourWholes()
+const buildAlmostTrueSegments: () => AlmostTrueSegments =
+    (): AlmostTrueSegments => {
+        const wholes: AlmostTrueContourWholes = buildAlmostTrueContourWholes()
 
-        const almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment: Segment =
-            buildSegment(
-                [
-                    almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
-                    almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
-                    almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
-                ],
-                [
-                    { scaleIndex: to.Ordinal(3) },
-                    { scaleIndex: to.Ordinal(4) },
-                    { scaleIndex: to.Ordinal(5) },
-                ],
-            )
-
-        const almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment: Segment =
-            buildSegment(
-                [
-                    almostTrueExtendedEndingZdaubTremContourWhole,
-                    almostTrueExtendedEndingZdaubBonyContourWhole,
-                    almostTrueExtendedEndingZdaubGlisContourWhole,
-                ],
-                [
-                    { scaleIndex: to.Ordinal(3) },
-                    { scaleIndex: to.Ordinal(4) },
-                    { scaleIndex: to.Ordinal(5) },
-                ],
-            )
-
-        const almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment: Segment = buildSegment(
+        const fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling: Segment = buildSegment(
             [
-                almostTrueYetOfBackboneContourWhole,
-                almostTrueYetOfBackboneContourWhole,
-                almostTrueZdaubBonyWithSuperinscapeContourWhole,
+                wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
+                wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
+                wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
+            ],
+            [
+                { scaleIndex: to.Ordinal(3) },
+                { scaleIndex: to.Ordinal(4) },
+                { scaleIndex: to.Ordinal(5) },
+            ],
+        )
+
+        const extendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonically: Segment = buildSegment(
+            [
+                wholes.extendedEndingZdaubTrem,
+                wholes.extendedEndingZdaubBony,
+                wholes.extendedEndingZdaubGlis,
+            ],
+            [
+                { scaleIndex: to.Ordinal(3) },
+                { scaleIndex: to.Ordinal(4) },
+                { scaleIndex: to.Ordinal(5) },
+            ],
+        )
+
+        const bonyJigAndNowItGetsKindaHighAndMagicSparkly: Segment = buildSegment(
+            [
+                wholes.yetOfBackbone,
+                wholes.yetOfBackbone,
+                wholes.zdaubBonyWithSuperinscape,
             ],
             [
                 { gainScalar: to.Scalar(to.Amplitude(0.33)), scaleIndex: to.Ordinal(3) },
@@ -56,9 +48,9 @@ const buildAlmostTrueSegments: () => DictionaryOf<Segment> =
         )
 
         return {
-            almostTrueBonyJigAndNowItGetsKindaHighAndMagicSparklySegment,
-            almostTrueExtendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonicallySegment,
-            almostTrueFallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeelingSegment,
+            bonyJigAndNowItGetsKindaHighAndMagicSparkly,
+            extendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonically,
+            fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling,
         }
     }
 

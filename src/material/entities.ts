@@ -1,33 +1,30 @@
 import { BuildEntitiesFunction, Entity, TimbreNameEnum } from '@musical-patterns/compiler'
 import { buildParts } from './parts'
+import { ZdaubyaosParts } from './types'
 
 const buildEntities: BuildEntitiesFunction =
     (): Entity[] => {
-        const {
-            subparticularOrDubparticularPart,
-            harmonicOrSubharmonicPart,
-            superparticularOrDuperparticularPart,
-        } = buildParts()
+        const parts: ZdaubyaosParts = buildParts()
 
-        const subparticularOrDubparticularSquareEntity: Entity = {
-            noteSpecs: subparticularOrDubparticularPart,
+        const subDub: Entity = {
+            noteSpecs: parts.subDub,
             timbreName: TimbreNameEnum.PHONEME_BAH,
         }
 
-        const superparticularOrDuperparticularSawEntity: Entity = {
-            noteSpecs: superparticularOrDuperparticularPart,
+        const superDuper: Entity = {
+            noteSpecs: parts.superDuper,
             timbreName: TimbreNameEnum.BRIT_BLUES_DRIVEN,
         }
 
-        const harmonicOrSubharmonicSineEntity: Entity = {
-            noteSpecs: harmonicOrSubharmonicPart,
+        const harmSubharm: Entity = {
+            noteSpecs: parts.harmSubharm,
             timbreName: TimbreNameEnum.CELESTE,
         }
 
         return [
-            superparticularOrDuperparticularSawEntity,
-            harmonicOrSubharmonicSineEntity,
-            subparticularOrDubparticularSquareEntity,
+            superDuper,
+            harmSubharm,
+            subDub,
         ]
     }
 

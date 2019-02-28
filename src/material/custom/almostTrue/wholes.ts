@@ -1,9 +1,10 @@
 import { PitchDuration } from '@musical-patterns/pattern'
-import { ContourWhole, DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
+import { ContourWhole, repeatCall, sequence, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
-import { buildOtherContourPieces } from '../other'
+import { buildOtherContourPieces, OtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
+import { AlmostTrueContourWholes } from './types'
 
 const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole<PitchDuration> =
     (renderingName: RenderingName): ContourWhole<PitchDuration> =>
@@ -17,40 +18,34 @@ const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) 
             ),
         ]))
 
-const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
-    (): DictionaryOf<ContourWhole<PitchDuration>> => {
-        const {
-            backboneFifteenContourPiece,
-            backboneTwentyfourContourPiece,
-        } = buildOtherContourPieces()
+const buildAlmostTrueContourWholes: () => AlmostTrueContourWholes =
+    (): AlmostTrueContourWholes => {
+        const otherContourPieces: OtherContourPieces = buildOtherContourPieces()
 
-        const almostTrueExtendedEndingZdaubTremContourWhole: ContourWhole<PitchDuration> =
+        const extendedEndingZdaubTrem: ContourWhole<PitchDuration> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.TREM)
-        const almostTrueExtendedEndingZdaubBonyContourWhole: ContourWhole<PitchDuration> =
+        const extendedEndingZdaubBony: ContourWhole<PitchDuration> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.BONY)
-        const almostTrueExtendedEndingZdaubGlisContourWhole: ContourWhole<PitchDuration> =
+        const extendedEndingZdaubGlis: ContourWhole<PitchDuration> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.GLIS)
 
-        const almostTrueYetOfBackboneContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole(sequence([
-                repeatCall(() => backboneFifteenContourPiece, to.Cardinal(8)),
-                repeatCall(() => backboneTwentyfourContourPiece, to.Cardinal(3)),
-            ]))
+        const yetOfBackbone: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+            repeatCall(() => otherContourPieces.backboneFifteen, to.Cardinal(8)),
+            repeatCall(() => otherContourPieces.backboneTwentyfour, to.Cardinal(3)),
+        ]))
 
-        const almostTrueZdaubBonyWithSuperinscapeContourWhole: ContourWhole<PitchDuration> =
-            to.ContourWhole(sequence([
-                repeatCall(
-                    () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), to.Cardinal(3),
-                ),
-                getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.BONY),
-                getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.BONY),
-                getTrueContours(BlockStyle.SCEND, BarTarget.TWENTYFOUR, RenderingName.BONY),
-                getTrueContours(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, RenderingName.BONY),
-                getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.BONY),
-            ]))
+        const zdaubBonyWithSuperinscape: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+            repeatCall(
+                () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), to.Cardinal(3),
+            ),
+            getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.BONY),
+            getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.BONY),
+            getTrueContours(BlockStyle.SCEND, BarTarget.TWENTYFOUR, RenderingName.BONY),
+            getTrueContours(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, RenderingName.BONY),
+            getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.BONY),
+        ]))
 
-        const almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole:
-            ContourWhole<PitchDuration> =
+        const yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment: ContourWhole<PitchDuration> =
             to.ContourWhole(sequence([
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
@@ -64,12 +59,12 @@ const buildAlmostTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuratio
             ]))
 
         return {
-            almostTrueExtendedEndingZdaubBonyContourWhole,
-            almostTrueExtendedEndingZdaubGlisContourWhole,
-            almostTrueExtendedEndingZdaubTremContourWhole,
-            almostTrueYaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustmentContourWhole,
-            almostTrueYetOfBackboneContourWhole,
-            almostTrueZdaubBonyWithSuperinscapeContourWhole,
+            extendedEndingZdaubBony,
+            extendedEndingZdaubGlis,
+            extendedEndingZdaubTrem,
+            yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
+            yetOfBackbone,
+            zdaubBonyWithSuperinscape,
         }
     }
 

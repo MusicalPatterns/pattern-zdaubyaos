@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering, Segment } from '@musical-patterns/pattern'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
@@ -30,6 +30,25 @@ interface BuildTrueContourPieceParameters {
     renderingName: RenderingName,
 }
 
+interface TrueSegments {
+    allYaosAllRhythmsAtOnce: Segment,
+    springAllYaosUmowchuwowiest: Segment,
+    springWithZdaub: Segment,
+    springySummerTotallyOutThere: Segment,
+    summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped: Segment,
+    summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically: Segment,
+}
+
+interface TrueContourWholes {
+    yaosInaidjiyaiouzdSummerToSpring: ContourWhole<PitchDuration>,
+    yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd: ContourWhole<PitchDuration>,
+    yaosUmowchuwowiestSpringToSummer: ContourWhole<PitchDuration>,
+    yaosUmowchuwowiestSummerToSpring: ContourWhole<PitchDuration>,
+    zdaubGlis: ContourWhole<PitchDuration>,
+    zdaubGlisVariant: ContourWhole<PitchDuration>,
+    zdaubTrem: ContourWhole<PitchDuration>,
+}
+
 export {
     TrueContourPeicesByBlockStyleThenRenderingName,
     TrueContourPiecesByRenderingName,
@@ -39,4 +58,6 @@ export {
     TrueBlocksByBlockStyle,
     TrueBlocksByBarTargetThenBlockStyle,
     BuildTrueContourPieceParameters,
+    TrueSegments,
+    TrueContourWholes,
 }

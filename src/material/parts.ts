@@ -1,33 +1,31 @@
 import { NoteSpec } from '@musical-patterns/compiler'
 import { Segment } from '@musical-patterns/pattern'
-import { apply, DictionaryOf, INCLUSIVE, INITIAL, Ordinal, slice, to } from '@musical-patterns/utilities'
+import { apply } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { buildSegments } from './segments'
+import { ZdaubyaosParts } from './types'
 
-const buildParts: () => DictionaryOf<NoteSpec[]> =
-    (): DictionaryOf<NoteSpec[]> => {
+const buildParts: () => ZdaubyaosParts =
+    (): ZdaubyaosParts => {
         const segments: Segment[] = buildSegments()
 
-        const end: Ordinal = to.Ordinal(segments.length)
+        let subDub: NoteSpec[] = []
+        let superDuper: NoteSpec[] = []
+        let harmSubharm: NoteSpec[] = []
 
-        let subparticularOrDubparticularPart: NoteSpec[] = []
-        let superparticularOrDuperparticularPart: NoteSpec[] = []
-        let harmonicOrSubharmonicPart: NoteSpec[] = []
-
-        slice(segments, INITIAL, apply.Translation(end, INCLUSIVE))
-            .forEach((segment: Segment): void => {
-                subparticularOrDubparticularPart = subparticularOrDubparticularPart
-                    .concat(apply.Ordinal(segment, SEGMENT_A))
-                superparticularOrDuperparticularPart = superparticularOrDuperparticularPart
-                    .concat(apply.Ordinal(segment, SEGMENT_B))
-                harmonicOrSubharmonicPart = harmonicOrSubharmonicPart
-                    .concat(apply.Ordinal(segment, SEGMENT_C))
-            })
+        segments.forEach((segment: Segment): void => {
+            subDub = subDub
+                .concat(apply.Ordinal(segment, SEGMENT_A))
+            superDuper = superDuper
+                .concat(apply.Ordinal(segment, SEGMENT_B))
+            harmSubharm = harmSubharm
+                .concat(apply.Ordinal(segment, SEGMENT_C))
+        })
 
         return {
-            harmonicOrSubharmonicPart,
-            subparticularOrDubparticularPart,
-            superparticularOrDuperparticularPart,
+            harmSubharm,
+            subDub,
+            superDuper,
         }
     }
 

@@ -3,6 +3,7 @@
 import { calculateTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
 import { ContourPiece, dividesEvenly, entries, to } from '@musical-patterns/utilities'
 import {
+    AlmostTrueContourPieces,
     BarTarget,
     BlockStyle,
     buildAlmostTrueContourPieces,
@@ -176,9 +177,9 @@ describe('true contours', () => {
 
         describe('other durations', () => {
             it('handles glis variant', () => {
-                const { zdaubGlisVariantContourPiece } = buildAlmostTrueContourPieces()
+                const pieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
 
-                expect(zdaubGlisVariantContourPiece)
+                expect(pieces.zdaubGlisVariant)
                     .toEqual(to.ContourPiece<PitchDuration>([
                         [ 4, 4 ], [ 5, 5 ], [ 6, 6 ],
                         [ 7, 7 ], [ 8, 8 ],
@@ -727,9 +728,9 @@ describe('true contours', () => {
 
             describe('other renderings', () => {
                 it('handles inaiii variety', () => {
-                    const { inaiiiVarietyContourPiece } = buildAlmostTrueContourPieces()
+                    const pieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
 
-                    expect(inaiiiVarietyContourPiece)
+                    expect(pieces.inaiiiVariety)
                         .toEqual(to.ContourPiece<PitchDuration>([
                             [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
                             [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],

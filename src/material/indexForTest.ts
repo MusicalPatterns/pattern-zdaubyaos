@@ -17,6 +17,9 @@ export {
     buildAlmostTrueContourPieces,
     TrueContourPiecesByRenderingName,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
+    AlmostTrueContourPieces,
+    OtherContourPieces,
+    ThirtyfiveContourPieces,
 } from './custom/indexForTest'
 export {
     applyGainScalar,

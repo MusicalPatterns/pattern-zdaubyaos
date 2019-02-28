@@ -1,21 +1,18 @@
 import { Segment } from '@musical-patterns/pattern'
-import { DictionaryOf, to } from '@musical-patterns/utilities'
+import { to } from '@musical-patterns/utilities'
 import { buildSegment } from '../../segments'
+import { ThirtyfiveContourWholes, ThirtyfiveSegments } from './types'
 import { buildThirtyfiveContourWholes } from './wholes'
 
-const buildThirtyfiveSegments: () => DictionaryOf<Segment> =
-    (): DictionaryOf<Segment> => {
-        const {
-            thirtyfiveYaosAccidentInspiredContourWhole,
-            thirtyfiveYaosBassContourWhole,
-            thirtyfiveZdaubContourWhole,
-        } = buildThirtyfiveContourWholes()
+const buildThirtyfiveSegments: () => ThirtyfiveSegments =
+    (): ThirtyfiveSegments => {
+        const contourWholes: ThirtyfiveContourWholes = buildThirtyfiveContourWholes()
 
         const thirtyfiveSegment: Segment = buildSegment(
             [
-                thirtyfiveZdaubContourWhole,
-                thirtyfiveYaosAccidentInspiredContourWhole,
-                thirtyfiveYaosBassContourWhole,
+                contourWholes.thirtyfiveZdaub,
+                contourWholes.thirtyfiveYaosAccidentInspired,
+                contourWholes.thirtyfiveYaosBass,
             ],
             [
                 { scaleIndex: to.Ordinal(0), gainScalar: to.Scalar(to.Amplitude(0.66)) },

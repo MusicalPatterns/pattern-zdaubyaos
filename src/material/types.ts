@@ -21,8 +21,15 @@ enum BlockStyle {
     SCEND = 'SCEND',
 }
 
+interface ZdaubyaosParts {
+    harmSubharm: NoteSpec[],
+    subDub: NoteSpec[],
+    superDuper: NoteSpec[],
+}
+
 export {
     BuildNoteSpec,
     BarTarget,
     BlockStyle,
+    ZdaubyaosParts,
 }

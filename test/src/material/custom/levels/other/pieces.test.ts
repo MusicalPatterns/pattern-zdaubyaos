@@ -1,12 +1,15 @@
 import { PitchDuration } from '@musical-patterns/pattern'
 import { to } from '@musical-patterns/utilities'
-import { buildOtherContourPieces } from '../../../../../../src/indexForTest'
+import { buildOtherContourPieces, OtherContourPieces } from '../../../../../../src/indexForTest'
 
 describe('other contour pieces', () => {
-    it('handles backbone fifteen', () => {
-        const { backboneFifteenContourPiece } = buildOtherContourPieces()
+    let otherContourPieces: OtherContourPieces
+    beforeEach(() => {
+        otherContourPieces = buildOtherContourPieces()
+    })
 
-        expect(backboneFifteenContourPiece)
+    it('handles backbone fifteen', () => {
+        expect(otherContourPieces.backboneFifteen)
             .toEqual(to.ContourPiece<PitchDuration>([
                 [ 1, 1 ], [ 2, 2 ],
                 [ 1, 1 ], [ 2, 2 ],
@@ -17,9 +20,7 @@ describe('other contour pieces', () => {
     })
 
     it('handles backbone twentyfour', () => {
-        const { backboneTwentyfourContourPiece } = buildOtherContourPieces()
-
-        expect(backboneTwentyfourContourPiece)
+        expect(otherContourPieces.backboneTwentyfour)
             .toEqual(to.ContourPiece<PitchDuration>([
                 [ 1, 1 ], [ 3, 3 ],
                 [ 1, 1 ], [ 3, 3 ],
@@ -31,9 +32,7 @@ describe('other contour pieces', () => {
     })
 
     it('handles shifty fifteen', () => {
-        const { shiftyFifteenContourPiece } = buildOtherContourPieces()
-
-        expect(shiftyFifteenContourPiece)
+        expect(otherContourPieces.shiftyFifteen)
             .toEqual(to.ContourPiece<PitchDuration>([
                 [ 2, 2 ], [ 1, 1 ],
                 [ 5, 5 ], [ 1, 1 ],
@@ -42,9 +41,7 @@ describe('other contour pieces', () => {
     })
 
     it('handles shifty twentyfour', () => {
-        const { shiftyTwentyfourContourPiece } = buildOtherContourPieces()
-
-        expect(shiftyTwentyfourContourPiece)
+        expect(otherContourPieces.shiftyTwentyfour)
             .toEqual(to.ContourPiece<PitchDuration>([
                 [ 3, 3 ], [ 1, 1 ],
                 [ 3, 3 ], [ 1, 1 ],
@@ -54,9 +51,7 @@ describe('other contour pieces', () => {
     })
 
     it('handles shifty twentyfour variant', () => {
-        const { shiftyTwentyfourVariantContourPiece } = buildOtherContourPieces()
-
-        expect(shiftyTwentyfourVariantContourPiece)
+        expect(otherContourPieces.shiftyTwentyfourVariant)
             .toEqual(to.ContourPiece<PitchDuration>([
                 [ 4, 4 ], [ 7, 7 ], [ 4, 4 ],
                 [ 1, 1 ], [ 3, 3 ], [ 1, 1 ], [ 3, 3 ], [ 1, 1 ],
@@ -64,9 +59,7 @@ describe('other contour pieces', () => {
     })
 
     it('handles shifty', () => {
-        const { shiftyContourPiece } = buildOtherContourPieces()
-
-        expect(shiftyContourPiece)
+        expect(otherContourPieces.shifty)
             .toEqual(to.ContourPiece<PitchDuration>([
                 [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ],
                 [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 3, 3 ], [ 4, 4 ],

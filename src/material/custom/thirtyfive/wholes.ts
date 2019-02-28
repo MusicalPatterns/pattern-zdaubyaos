@@ -1,34 +1,30 @@
 import { calculateTotalPitchDurationContourDuration, PitchDuration, pitchDurationRest } from '@musical-patterns/pattern'
-import { ContourWhole, DictionaryOf, repeat, sequence, to } from '@musical-patterns/utilities'
+import { ContourWhole, repeat, sequence, to } from '@musical-patterns/utilities'
 import { buildThirtyfiveContourPieces } from './pieces'
+import { ThirtyfiveContourPieces, ThirtyfiveContourWholes } from './types'
 
-const buildThirtyfiveContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
-    (): DictionaryOf<ContourWhole<PitchDuration>> => {
-        const {
-            thirtyfiveYaosBassContourPiece,
-            thirtyfiveYaosAccidentInspiredContourPiece,
-            thirtyfiveZdaubContourPiece,
-            thirtyfiveZdaubOnlyWiggleContourPiece,
-        } = buildThirtyfiveContourPieces()
+const buildThirtyfiveContourWholes: () => ThirtyfiveContourWholes =
+    (): ThirtyfiveContourWholes => {
+        const thirtyfiveContourPieces: ThirtyfiveContourPieces = buildThirtyfiveContourPieces()
 
-        const thirtyfiveYaosBassContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            repeat(thirtyfiveYaosBassContourPiece, to.Cardinal(30)),
+        const thirtyfiveYaosBass: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+            repeat(thirtyfiveContourPieces.yaosBass, to.Cardinal(30)),
         ]))
 
-        const thirtyfiveYaosAccidentInspiredContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            repeat(thirtyfiveYaosAccidentInspiredContourPiece, to.Cardinal(30)),
+        const thirtyfiveYaosAccidentInspired: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+            repeat(thirtyfiveContourPieces.yaosAccidentInspired, to.Cardinal(30)),
         ]))
 
-        const thirtyfiveZdaubContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            pitchDurationRest(calculateTotalPitchDurationContourDuration(thirtyfiveZdaubContourPiece)),
-            repeat(thirtyfiveZdaubContourPiece, to.Cardinal(2)),
-            repeat(thirtyfiveZdaubOnlyWiggleContourPiece, to.Cardinal(12)),
+        const thirtyfiveZdaub: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+            pitchDurationRest(calculateTotalPitchDurationContourDuration(thirtyfiveContourPieces.zdaub)),
+            repeat(thirtyfiveContourPieces.zdaub, to.Cardinal(2)),
+            repeat(thirtyfiveContourPieces.zdaubOnlyWiggle, to.Cardinal(12)),
         ]))
 
         return {
-            thirtyfiveYaosAccidentInspiredContourWhole,
-            thirtyfiveYaosBassContourWhole,
-            thirtyfiveZdaubContourWhole,
+            thirtyfiveYaosAccidentInspired,
+            thirtyfiveYaosBass,
+            thirtyfiveZdaub,
         }
     }
 

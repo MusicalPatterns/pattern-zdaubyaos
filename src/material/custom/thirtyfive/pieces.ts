@@ -1,33 +1,26 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
-import { ContourPiece, DictionaryOf } from '@musical-patterns/utilities'
+import { ContourPiece } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../renderings'
 import { buildThirtyfiveBlocks } from './blocks'
+import { ThirtyfiveBlocks, ThirtyfiveContourPieces } from './types'
 
-const buildThirtyfiveContourPieces: () => DictionaryOf<ContourPiece<PitchDuration>> =
-    (): DictionaryOf<ContourPiece<PitchDuration>> => {
-        const {
-            thirtyfiveYaosAccidentInspiredBlock,
-            thirtyfiveYaosBassBlock,
-            thirtyfiveZdaubBlock,
-            thirtyfiveZdaubOnlyWiggleBlock,
-        } = buildThirtyfiveBlocks()
+const buildThirtyfiveContourPieces: () => ThirtyfiveContourPieces =
+    (): ThirtyfiveContourPieces => {
+        const blocks: ThirtyfiveBlocks = buildThirtyfiveBlocks()
 
         const renderings: Renderings = buildRenderings()
-
         const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
 
-        const thirtyfiveYaosBassContourPiece: ContourPiece<PitchDuration> = glis(thirtyfiveYaosBassBlock)
-        const thirtyfiveYaosAccidentInspiredContourPiece: ContourPiece<PitchDuration> =
-            glis(thirtyfiveYaosAccidentInspiredBlock)
-        const thirtyfiveZdaubContourPiece: ContourPiece<PitchDuration> = glis(thirtyfiveZdaubBlock)
-        const thirtyfiveZdaubOnlyWiggleContourPiece: ContourPiece<PitchDuration> =
-            glis(thirtyfiveZdaubOnlyWiggleBlock)
+        const yaosBass: ContourPiece<PitchDuration> = glis(blocks.yaosBass)
+        const yaosAccidentInspired: ContourPiece<PitchDuration> = glis(blocks.yaosAccidentInspired)
+        const zdaub: ContourPiece<PitchDuration> = glis(blocks.zdaub)
+        const zdaubOnlyWiggle: ContourPiece<PitchDuration> = glis(blocks.zdaubOnlyWiggle)
 
         return {
-            thirtyfiveYaosAccidentInspiredContourPiece,
-            thirtyfiveYaosBassContourPiece,
-            thirtyfiveZdaubContourPiece,
-            thirtyfiveZdaubOnlyWiggleContourPiece,
+            yaosAccidentInspired,
+            yaosBass,
+            zdaub,
+            zdaubOnlyWiggle,
         }
     }
 

@@ -1,8 +1,9 @@
-import { Block, DictionaryOf, to } from '@musical-patterns/utilities'
+import { Block, to } from '@musical-patterns/utilities'
+import { AlmostTrueBlocks } from './types'
 
-const buildAlmostTrueBlocks: () => DictionaryOf<Block> =
-    (): DictionaryOf<Block> => {
-        const trueGlisVariantBlock: Block = to.Block([
+const buildAlmostTrueBlocks: () => AlmostTrueBlocks =
+    (): AlmostTrueBlocks => {
+        const trueGlisVariant: Block = to.Block([
             4, 5, 6,
             7, 8,
             9, 8,
@@ -13,7 +14,7 @@ const buildAlmostTrueBlocks: () => DictionaryOf<Block> =
         ])
 
         return {
-            trueGlisVariantBlock,
+            trueGlisVariant,
         }
     }
 

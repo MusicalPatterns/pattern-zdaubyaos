@@ -1,25 +1,18 @@
 import { Segment } from '@musical-patterns/pattern'
-import { DictionaryOf, negative, to } from '@musical-patterns/utilities'
+import { negative, to } from '@musical-patterns/utilities'
 import { buildSegment } from '../../segments'
+import { BreatherContourWholes, BreatherSegments } from './types'
 import { buildBreatherContourWholes } from './wholes'
 
-const buildBreatherSegments: () => DictionaryOf<Segment> =
-    (): DictionaryOf<Segment> => {
-        const {
-            breatherRestContourWhole,
-            breatherSpringAltContourWhole,
-            breatherSpringContourWhole,
-            breatherSummerContourWhole,
-            breatherVarietyContourWhole,
-            doubleBreatherFallContourWhole,
-            doubleBreatherRestContourWhole,
-        } = buildBreatherContourWholes()
+const buildBreatherSegments: () => BreatherSegments =
+    (): BreatherSegments => {
+        const breatherContourWholes: BreatherContourWholes = buildBreatherContourWholes()
 
-        const breatherSpringSegment: Segment = buildSegment(
+        const spring: Segment = buildSegment(
             [
-                breatherSpringContourWhole,
-                breatherRestContourWhole,
-                breatherRestContourWhole,
+                breatherContourWholes.spring,
+                breatherContourWholes.rest,
+                breatherContourWholes.rest,
             ],
             [
                 { gainScalar: to.Scalar(to.Amplitude(0.5)), scaleIndex: to.Ordinal(0) },
@@ -28,11 +21,11 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const breatherSummerSegment: Segment = buildSegment(
+        const summer: Segment = buildSegment(
             [
-                breatherRestContourWhole,
-                breatherSummerContourWhole,
-                breatherRestContourWhole,
+                breatherContourWholes.rest,
+                breatherContourWholes.summer,
+                breatherContourWholes.rest,
             ],
             [
                 { scaleIndex: to.Ordinal(0) },
@@ -41,11 +34,11 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const doubleBreatherFallWhichIsGoodIntroForJigSegment: Segment = buildSegment(
+        const doubleFallWhichIsGoodIntroForJig: Segment = buildSegment(
             [
-                doubleBreatherRestContourWhole,
-                doubleBreatherRestContourWhole,
-                doubleBreatherFallContourWhole,
+                breatherContourWholes.doubleRest,
+                breatherContourWholes.doubleRest,
+                breatherContourWholes.doubleFall,
             ],
             [
                 { scaleIndex: to.Ordinal(0) },
@@ -58,11 +51,11 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const breatherSpringAltNiceAsABreatherToABreatherSegment: Segment = buildSegment(
+        const springAltNiceAsABreatherToABreather: Segment = buildSegment(
             [
-                breatherRestContourWhole,
-                breatherSpringAltContourWhole,
-                breatherRestContourWhole,
+                breatherContourWholes.rest,
+                breatherContourWholes.springAlt,
+                breatherContourWholes.rest,
             ],
             [
                 { scaleIndex: to.Ordinal(0) },
@@ -71,11 +64,11 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const breatherVarietyQuiteTheReveilleSegment: Segment = buildSegment(
+        const varietyQuiteTheReveille: Segment = buildSegment(
             [
-                breatherVarietyContourWhole,
-                breatherVarietyContourWhole,
-                breatherVarietyContourWhole,
+                breatherContourWholes.variety,
+                breatherContourWholes.variety,
+                breatherContourWholes.variety,
             ],
             [
                 { scaleIndex: to.Ordinal(3) },
@@ -85,11 +78,11 @@ const buildBreatherSegments: () => DictionaryOf<Segment> =
         )
 
         return {
-            breatherSpringAltNiceAsABreatherToABreatherSegment,
-            breatherSpringSegment,
-            breatherSummerSegment,
-            breatherVarietyQuiteTheReveilleSegment,
-            doubleBreatherFallWhichIsGoodIntroForJigSegment,
+            doubleFallWhichIsGoodIntroForJig,
+            spring,
+            springAltNiceAsABreatherToABreather,
+            summer,
+            varietyQuiteTheReveille,
         }
     }
 

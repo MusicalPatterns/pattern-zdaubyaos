@@ -1,22 +1,23 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
-import { apply, Block, ContourPiece, DictionaryOf, map, Ordinal, sequence, to } from '@musical-patterns/utilities'
+import { apply, Block, ContourPiece, map, Ordinal, sequence, to } from '@musical-patterns/utilities'
 import { buildRenderings, RenderingName, Renderings } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
 import { buildTrueBlocks, TrueBlocksByBarTargetThenBlockStyle } from '../true'
 import { buildAlmostTrueBlocks } from './blocks'
+import { AlmostTrueBlocks, AlmostTrueContourPieces } from './types'
 
-const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuration>> =
-    (): DictionaryOf<ContourPiece<PitchDuration>> => {
-        const { trueGlisVariantBlock } = buildAlmostTrueBlocks()
+const buildAlmostTrueContourPieces: () => AlmostTrueContourPieces =
+    (): AlmostTrueContourPieces => {
+        const blocks: AlmostTrueBlocks = buildAlmostTrueBlocks()
 
         const renderings: Renderings = buildRenderings()
         const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
 
-        const zdaubGlisVariantContourPiece: ContourPiece<PitchDuration> = glis(trueGlisVariantBlock)
+        const zdaubGlisVariant: ContourPiece<PitchDuration> = glis(blocks.trueGlisVariant)
 
         const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = buildTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
-        const inaiiiVarietyContourPiece: ContourPiece<PitchDuration> = to.ContourPiece(sequence(
+        const inaiiiVariety: ContourPiece<PitchDuration> = to.ContourPiece(sequence(
             map(inai, (cell: number, index: Ordinal): ContourPiece<PitchDuration> => {
                 const renderingsSequence: Array<Rendering<PitchDuration>> = [
                     renderings[ RenderingName.SPRING ],
@@ -36,8 +37,8 @@ const buildAlmostTrueContourPieces: () => DictionaryOf<ContourPiece<PitchDuratio
         ))
 
         return {
-            inaiiiVarietyContourPiece,
-            zdaubGlisVariantContourPiece,
+            inaiiiVariety,
+            zdaubGlisVariant,
         }
     }
 

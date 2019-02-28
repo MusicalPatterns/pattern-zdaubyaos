@@ -1,12 +1,12 @@
 // tslint:disable max-file-line-count
 
 import { PitchDuration } from '@musical-patterns/pattern'
-import { ContourPiece, ContourWhole, DictionaryOf, repeatCall, sequence, to } from '@musical-patterns/utilities'
+import { ContourWhole, repeatCall, sequence, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
-import { buildAlmostTrueContourPieces } from '../almostTrue'
+import { AlmostTrueContourPieces, buildAlmostTrueContourPieces } from '../almostTrue'
 import { getTrueContours } from './pieces'
-import { FormulaicTrueYaosContourWhole } from './types'
+import { FormulaicTrueYaosContourWhole, TrueContourWholes } from './types'
 
 const trueFormulaicUmowchuwowiestToInaidjiyaiouzdContourWhole: FormulaicTrueYaosContourWhole = (
     fifteenRenderingName: RenderingName, twentyfourRenderingName: RenderingName,
@@ -54,17 +54,16 @@ const trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosContourWhole: FormulaicTrue
     ),
 ]))
 
-const buildTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
-    (): DictionaryOf<ContourWhole<PitchDuration>> => {
-        const { zdaubGlisVariantContourPiece }: DictionaryOf<ContourPiece<PitchDuration>> =
-            buildAlmostTrueContourPieces()
-        const trueYaosUmowchuwowiestSpringToSummerContourWhole: ContourWhole<PitchDuration> =
+const buildTrueContourWholes: () => TrueContourWholes =
+    (): TrueContourWholes => {
+        const almostTruePieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
+        const yaosUmowchuwowiestSpringToSummer: ContourWhole<PitchDuration> =
             trueFormulaicUmowchuwowiestToInaidjiyaiouzdContourWhole(RenderingName.SPRING, RenderingName.SUMMER)
-        const trueYaosUmowchuwowiestSummerToSpringContourWhole: ContourWhole<PitchDuration> =
+        const yaosUmowchuwowiestSummerToSpring: ContourWhole<PitchDuration> =
             trueFormulaicUmowchuwowiestToInaidjiyaiouzdContourWhole(RenderingName.SUMMER, RenderingName.SPRING)
-        const trueYaosInaidjiyaiouzdSummerToSpringContourWhole: ContourWhole<PitchDuration> =
+        const yaosInaidjiyaiouzdSummerToSpring: ContourWhole<PitchDuration> =
             trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosContourWhole(RenderingName.SUMMER, RenderingName.SPRING)
-        const trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole: ContourWhole<PitchDuration> =
+        const yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd: ContourWhole<PitchDuration> =
             to.ContourWhole(sequence([
                 repeatCall(
                     () =>
@@ -94,7 +93,7 @@ const buildTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
                     to.Cardinal(4),
                 ),
             ]))
-        const trueZdaubGlisContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+        const zdaubGlis: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
             repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS), to.Cardinal(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.GLIS),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.GLIS),
@@ -103,12 +102,12 @@ const buildTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
                 () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, RenderingName.GLIS), to.Cardinal(3),
             ),
         ]))
-        const trueZdaubGlisVariantContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+        const zdaubGlisVariant: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
             repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS), to.Cardinal(4)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.GLIS),
-            zdaubGlisVariantContourPiece,
+            almostTruePieces.zdaubGlisVariant,
         ]))
-        const trueZdaubTremContourWhole: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
+        const zdaubTrem: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
             repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.TREM), to.Cardinal(3)),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.TREM),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.TREM),
@@ -119,13 +118,13 @@ const buildTrueContourWholes: () => DictionaryOf<ContourWhole<PitchDuration>> =
         ]))
 
         return {
-            trueYaosInaidjiyaiouzdSummerToSpringContourWhole,
-            trueYaosSpringySummerStraightIntoZdaubInaidjiyaiouzdContourWhole,
-            trueYaosUmowchuwowiestSpringToSummerContourWhole,
-            trueYaosUmowchuwowiestSummerToSpringContourWhole,
-            trueZdaubGlisContourWhole,
-            trueZdaubGlisVariantContourWhole,
-            trueZdaubTremContourWhole,
+            yaosInaidjiyaiouzdSummerToSpring,
+            yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd,
+            yaosUmowchuwowiestSpringToSummer,
+            yaosUmowchuwowiestSummerToSpring,
+            zdaubGlis,
+            zdaubGlisVariant,
+            zdaubTrem,
         }
     }
 export { buildTrueContourWholes }

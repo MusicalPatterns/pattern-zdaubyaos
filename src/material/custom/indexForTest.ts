@@ -2,9 +2,11 @@
 
 export {
     buildOtherContourPieces,
+    OtherContourPieces,
 } from './other/indexForTest'
 export {
     buildThirtyfiveContourPieces,
+    ThirtyfiveContourPieces,
 } from './thirtyfive/indexForTest'
 export {
     getTrueContours,
@@ -14,4 +16,5 @@ export {
 } from './true/indexForTest'
 export {
     buildAlmostTrueContourPieces,
+    AlmostTrueContourPieces,
 } from './almostTrue/indexForTest'

@@ -1,22 +1,18 @@
 import { Segment } from '@musical-patterns/pattern'
-import { DictionaryOf, negative, to } from '@musical-patterns/utilities'
+import { negative, to } from '@musical-patterns/utilities'
 import { buildSegment } from '../../segments'
+import { OtherContourWholes, OtherSegments } from './types'
 import { buildOtherContourWholes } from './wholes'
 
-const buildOtherSegments: () => DictionaryOf<Segment> =
-    (): DictionaryOf<Segment> => {
-        const {
-            secretLongChordContourWhole,
-            shiftyAContourWhole,
-            shiftyBContourWhole,
-            totallyOutThereContourWhole,
-        } = buildOtherContourWholes()
+const buildOtherSegments: () => OtherSegments =
+    (): OtherSegments => {
+        const otherContourWholes: OtherContourWholes = buildOtherContourWholes()
 
-        const secretLongChordSegment: Segment = buildSegment(
+        const secretLongChord: Segment = buildSegment(
             [
-                secretLongChordContourWhole,
-                secretLongChordContourWhole,
-                secretLongChordContourWhole,
+                otherContourWholes.secretLongChord,
+                otherContourWholes.secretLongChord,
+                otherContourWholes.secretLongChord,
             ],
             [
                 {
@@ -37,11 +33,11 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const totallyOutThereIntroSegment: Segment = buildSegment(
+        const totallyOutThereIntro: Segment = buildSegment(
             [
-                totallyOutThereContourWhole,
-                totallyOutThereContourWhole,
-                totallyOutThereContourWhole,
+                otherContourWholes.totallyOutThere,
+                otherContourWholes.totallyOutThere,
+                otherContourWholes.totallyOutThere,
             ],
             [
                 { pitchIndexTranslation: to.Translation(2), scaleIndex: to.Ordinal(0) },
@@ -50,11 +46,11 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
             ],
         )
 
-        const shiftySegment: Segment = buildSegment(
+        const shifty: Segment = buildSegment(
             [
-                shiftyAContourWhole,
-                shiftyBContourWhole,
-                shiftyBContourWhole,
+                otherContourWholes.shiftyA,
+                otherContourWholes.shiftyB,
+                otherContourWholes.shiftyB,
             ],
             [
                 { scaleIndex: to.Ordinal(3) },
@@ -64,9 +60,9 @@ const buildOtherSegments: () => DictionaryOf<Segment> =
         )
 
         return {
-            secretLongChordSegment,
-            shiftySegment,
-            totallyOutThereIntroSegment,
+            secretLongChord,
+            shifty,
+            totallyOutThereIntro,
         }
     }
 

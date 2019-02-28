@@ -1,30 +1,31 @@
-import { Block, DictionaryOf, repeat, to } from '@musical-patterns/utilities'
+import { Block, repeat, to } from '@musical-patterns/utilities'
+import { OtherBlocks } from './types'
 
-const buildOtherBlocks: () => DictionaryOf<Block> =
-    (): DictionaryOf<Block> => {
-        const backboneFifteenBlock: Block = to.Block(repeat([ 1, 2 ], to.Cardinal(5)))
+const buildOtherBlocks: () => OtherBlocks =
+    (): OtherBlocks => {
+        const backboneFifteen: Block = to.Block(repeat([ 1, 2 ], to.Cardinal(5)))
 
-        const backboneTwentyfourBlock: Block = to.Block(repeat([ 1, 3 ], to.Cardinal(6)))
+        const backboneTwentyfour: Block = to.Block(repeat([ 1, 3 ], to.Cardinal(6)))
 
-        const shiftyFifteenBlock: Block = to.Block([
+        const shiftyFifteen: Block = to.Block([
             2, 1,
             5, 1,
             2, 4,
         ])
 
-        const shiftyTwentyfourBlock: Block = to.Block([
+        const shiftyTwentyfour: Block = to.Block([
             3, 1,
             3, 1,
             3, 4,
             5, 4,
         ])
 
-        const shiftyTwentyfourVariantBlock: Block = to.Block([
+        const shiftyTwentyfourVariant: Block = to.Block([
             4, 7, 4,
             1, 3, 1, 3, 1,
         ])
 
-        const shiftyBlock: Block = to.Block([
+        const shifty: Block = to.Block([
             2, 1, 2, 1, 2, 1, 2, 1, 2, 1,
             2, 1, 2, 1, 2, 3, 4,
             3, 2, 1, 2, 1, 2, 1, 2, 1,
@@ -37,16 +38,16 @@ const buildOtherBlocks: () => DictionaryOf<Block> =
             // (this spreads across 2 bars)
         ])
 
-        const secretLongChordBlock: Block = to.Block([ 24 ])
+        const secretLongChord: Block = to.Block([ 24 ])
 
         return {
-            backboneFifteenBlock,
-            backboneTwentyfourBlock,
-            secretLongChordBlock,
-            shiftyBlock,
-            shiftyFifteenBlock,
-            shiftyTwentyfourBlock,
-            shiftyTwentyfourVariantBlock,
+            backboneFifteen,
+            backboneTwentyfour,
+            secretLongChord,
+            shifty,
+            shiftyFifteen,
+            shiftyTwentyfour,
+            shiftyTwentyfourVariant,
         }
     }
 

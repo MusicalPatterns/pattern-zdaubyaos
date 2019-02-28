@@ -19,6 +19,9 @@ export {
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
     BarTarget,
     BlockStyle,
+    AlmostTrueContourPieces,
+    OtherContourPieces,
+    ThirtyfiveContourPieces,
 } from './material/indexForTest'
 export { pattern } from './patterns'
 
