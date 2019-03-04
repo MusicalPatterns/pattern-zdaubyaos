@@ -71,7 +71,7 @@ describe('note specs', () => {
                 gainSpec = noteSpec.gainSpec || {}
             })
 
-            it('scales the gain to full power (possibly to be adjusted later)', () => {
+            it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
                 expect(gainSpec.scalar)
                     .toBe(to.Scalar(1))
             })

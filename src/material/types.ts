@@ -1,8 +1,4 @@
 import { NoteSpec } from '@musical-patterns/compiler'
-import { PitchDuration } from '@musical-patterns/pattern'
-import { ContourElement } from '@musical-patterns/utilities'
-
-type BuildNoteSpec = (contourElement: ContourElement<PitchDuration>) => NoteSpec
 
 enum BarTarget {
     FIFTEEN = 'FIFTEEN',
@@ -28,7 +24,6 @@ interface ZdaubyaosParts {
 }
 
 export {
-    BuildNoteSpec,
     BarTarget,
     BlockStyle,
     ZdaubyaosParts,
