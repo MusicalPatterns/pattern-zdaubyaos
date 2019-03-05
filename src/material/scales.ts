@@ -17,18 +17,14 @@ import { from, Scalar } from '@musical-patterns/utilities'
 
 const buildScales: BuildScalesFunction =
     (spec: StandardSpec): Scale[] => {
-        // @ts-ignore
         const superparticularSeriesScalars: Scalar[] = buildSuperparticularSeriesScalars()
-            .map(from.Frequency)
-        // @ts-ignore
+            .map<Scalar>(from.Frequency)
         const duperparticularSeriesScalars: Scalar[] = buildDuperparticularSeriesScalars()
-            .map(from.Frequency)
-        // @ts-ignore
+            .map<Scalar>(from.Frequency)
         const subparticularSeriesScalars: Scalar[] = buildSubparticularSeriesScalars()
-            .map(from.Frequency)
-        // @ts-ignore
+            .map<Scalar>(from.Frequency)
         const dubparticularSeriesScalars: Scalar[] = buildDubparticularSeriesScalars()
-            .map(from.Frequency)
+            .map<Scalar>(from.Frequency)
 
         const standardScales: Scale[] = buildStandardScales(
             spec,

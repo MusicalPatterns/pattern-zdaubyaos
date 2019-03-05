@@ -12,8 +12,9 @@ import {
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
 } from './types'
 
-// @ts-ignore
-const contourPiecesByBarTargetBlockStyleThenRendering: TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName = {}
+const contourPiecesByBarTargetBlockStyleThenRendering: TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName =
+    // tslint:disable-next-line no-object-literal-type-assertion
+    {} as TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName
 
 const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => void =
     (parameters: BuildTrueContourPieceParameters): void => {
