@@ -6,7 +6,14 @@ import {
     STANDARD_DURATIONS_SCALE_INDEX,
     STANDARD_PITCH_INDEX_INDICATING_REST,
 } from '@musical-patterns/pattern'
-import { ContourElement, from, Scalar, to, translateFromOneIndexedToZeroIndexed } from '@musical-patterns/utilities'
+import {
+    Amplitude,
+    ContourElement,
+    from,
+    Scalar,
+    to,
+    translateFromOneIndexedToZeroIndexed,
+} from '@musical-patterns/utilities'
 
 const buildNoteSpec: (contourElement: ContourElement<PitchDuration>) => NoteSpec =
     ([ pitch, duration ]: ContourElement<PitchDuration>): NoteSpec => {
@@ -17,7 +24,7 @@ const buildNoteSpec: (contourElement: ContourElement<PitchDuration>) => NoteSpec
                     scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
                 },
                 gainSpec: {
-                    scalar: from.Amplitude(SILENT) as Scalar,
+                    scalar: from.Amplitude<Scalar, Scalar<Amplitude>>(SILENT),
                 },
             }
         }
@@ -28,7 +35,7 @@ const buildNoteSpec: (contourElement: ContourElement<PitchDuration>) => NoteSpec
                 scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
             },
             gainSpec: {
-                scalar: from.Amplitude(FULL_GAIN) as Scalar,
+                scalar: from.Amplitude<Scalar, Scalar<Amplitude>>(FULL_GAIN),
             },
             pitchSpec: {
                 index: translateFromOneIndexedToZeroIndexed(to.Ordinal(pitch)),
