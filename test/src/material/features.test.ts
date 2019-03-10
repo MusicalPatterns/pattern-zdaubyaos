@@ -15,7 +15,7 @@ describe('features', () => {
         describe('duration', () => {
             let duration: NoteFeature
             beforeEach(() => {
-                duration = note.duration || {}
+                duration = note.duration!
             })
 
             it('uses the durations scale', () => {
@@ -32,7 +32,7 @@ describe('features', () => {
         describe('gain', () => {
             let gain: NoteFeature
             beforeEach(() => {
-                gain = note.gain || {}
+                gain = note.gain!
             })
 
             it('scales the gain to zero', () => {
@@ -51,7 +51,7 @@ describe('features', () => {
         describe('duration', () => {
             let duration: NoteFeature
             beforeEach(() => {
-                duration = note.duration || {}
+                duration = note.duration!
             })
 
             it('uses the durations scale', () => {
@@ -68,7 +68,7 @@ describe('features', () => {
         describe('gain', () => {
             let gain: NoteFeature
             beforeEach(() => {
-                gain = note.gain || {}
+                gain = note.gain!
             })
 
             it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
@@ -80,7 +80,7 @@ describe('features', () => {
         describe('pitch', () => {
             let pitch: NoteFeature
             beforeEach(() => {
-                pitch = note.pitch || {}
+                pitch = note.pitch!
             })
 
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
