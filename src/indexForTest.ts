@@ -1,10 +1,10 @@
 // tslint:disable no-reaching-imports
 
 export {
-    buildParts,
-    buildEntities,
-    buildNoteSpec,
-    buildScales,
+    buildNotes,
+    materializeEntities,
+    buildNote,
+    materializeScales,
     buildRenderings,
     Renderings,
     RenderingName,

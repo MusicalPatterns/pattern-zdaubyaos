@@ -1,25 +1,25 @@
-import { NoteSpec } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/compiler'
 import { Scalar, to } from '@musical-patterns/utilities'
 import { applyGainScalar } from '../../../../src/indexForTest'
 
-const testNoteSpec: (gain: Scalar) => NoteSpec =
-    (gain: Scalar): NoteSpec => ({ gainSpec: { scalar: gain } })
+const testNote: (gain: Scalar) => Note =
+    (gain: Scalar): Note => ({ gain: { scalar: gain } })
 
 describe('apply gain scalar', () => {
     it('scales the gain of every note', () => {
-        const noteSpecs: NoteSpec[] = [
-            testNoteSpec(to.Scalar(1)),
-            testNoteSpec(to.Scalar(0.666)),
-            testNoteSpec(to.Scalar(0.5)),
+        const notes: Note[] = [
+            testNote(to.Scalar(1)),
+            testNote(to.Scalar(0.666)),
+            testNote(to.Scalar(0.5)),
         ]
 
-        const expectedNoteSpecs: NoteSpec[] = [
-            testNoteSpec(to.Scalar(0.5)),
-            testNoteSpec(to.Scalar(0.333)),
-            testNoteSpec(to.Scalar(0.25)),
+        const expectedNotes: Note[] = [
+            testNote(to.Scalar(0.5)),
+            testNote(to.Scalar(0.333)),
+            testNote(to.Scalar(0.25)),
         ]
 
-        expect(applyGainScalar(noteSpecs, to.Scalar(to.Amplitude(0.5))))
-            .toEqual(expectedNoteSpecs)
+        expect(applyGainScalar(notes, to.Scalar(to.Amplitude(0.5))))
+            .toEqual(expectedNotes)
     })
 })

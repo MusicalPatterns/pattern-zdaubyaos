@@ -1,92 +1,20 @@
-import { NoteAspectSpec, NoteSpec } from '@musical-patterns/compiler'
-import { PitchDuration, SILENT } from '@musical-patterns/pattern'
-import { Ordinal, to } from '@musical-patterns/utilities'
-import { buildNoteSpec } from '../../../src/indexForTest'
+import { buildNotes } from '../../../src/indexForTest'
+import { calculateTotalZdaubyaosDuration } from '../../support'
 
-const DURATIONS_SCALE_INDEX: Ordinal = to.Ordinal(1)
+describe('notes', () => {
+    it('is the case that they all have the same duration', () => {
+        const {
+            subDub,
+            harmSubharm,
+            superDuper,
+        } = buildNotes()
 
-describe('note specs', () => {
-    describe('when the pitch index is negative 1', () => {
-        let noteSpec: NoteSpec
-        beforeEach(() => {
-            noteSpec = buildNoteSpec(to.ContourElement<PitchDuration>([ -1, 6 ]))
-        })
-
-        describe('duration', () => {
-            let durationSpec: NoteAspectSpec
-            beforeEach(() => {
-                durationSpec = noteSpec.durationSpec || {}
-            })
-
-            it('uses the durations scale', () => {
-                expect(durationSpec.scaleIndex)
-                    .toBe(DURATIONS_SCALE_INDEX)
-            })
-
-            it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(durationSpec.index)
-                    .toBe(to.Ordinal(5))
-            })
-        })
-
-        describe('gain', () => {
-            let gainSpec: NoteAspectSpec
-            beforeEach(() => {
-                gainSpec = noteSpec.gainSpec || {}
-            })
-
-            it('scales the gain to zero', () => {
-                expect(gainSpec.scalar)
-                    .toBe(to.Scalar(0))
-            })
-        })
-    })
-
-    describe('when the pitch index is not zero', () => {
-        let noteSpec: NoteSpec
-        beforeEach(() => {
-            noteSpec = buildNoteSpec(to.ContourElement<PitchDuration>([ 3, 6 ]))
-        })
-
-        describe('duration', () => {
-            let durationSpec: NoteAspectSpec
-            beforeEach(() => {
-                durationSpec = noteSpec.durationSpec || {}
-            })
-
-            it('uses the durations scale', () => {
-                expect(durationSpec.scaleIndex)
-                    .toBe(DURATIONS_SCALE_INDEX)
-            })
-
-            it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(durationSpec.index)
-                    .toBe(to.Ordinal(5))
-            })
-        })
-
-        describe('gain', () => {
-            let gainSpec: NoteAspectSpec
-            beforeEach(() => {
-                gainSpec = noteSpec.gainSpec || {}
-            })
-
-            it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
-                expect(gainSpec.scalar)
-                    .toBe(to.Scalar(1))
-            })
-        })
-
-        describe('pitch', () => {
-            let pitchSpec: NoteAspectSpec
-            beforeEach(() => {
-                pitchSpec = noteSpec.pitchSpec || {}
-            })
-
-            it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
-                expect(pitchSpec.index)
-                    .toBe(to.Ordinal(2))
-            })
-        })
+        const expectedTotalPatternDuration: number = 3360
+        expect(calculateTotalZdaubyaosDuration(subDub))
+            .toEqual(expectedTotalPatternDuration)
+        expect(calculateTotalZdaubyaosDuration(superDuper))
+            .toEqual(expectedTotalPatternDuration)
+        expect(calculateTotalZdaubyaosDuration(harmSubharm))
+            .toEqual(expectedTotalPatternDuration)
     })
 })

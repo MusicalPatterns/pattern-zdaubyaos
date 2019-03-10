@@ -2,4 +2,4 @@
 
 export { applyGainScalar } from './applyGainScalar'
 export { applyPitchIndexTranslation } from './applyPitchIndexTranslation'
-export { buildNoteSpec } from '../notes'
+export { buildNote } from '../features'

@@ -1,23 +1,23 @@
-import { BuildEntitiesFunction, Entity, TimbreNameEnum } from '@musical-patterns/compiler'
-import { buildParts } from './parts'
-import { ZdaubyaosParts } from './types'
+import { Entity, MaterializeEntities, TimbreNameEnum } from '@musical-patterns/compiler'
+import { buildNotes } from './notes'
+import { ZdaubyaosNotes } from './types'
 
-const buildEntities: BuildEntitiesFunction =
+const materializeEntities: MaterializeEntities =
     (): Entity[] => {
-        const parts: ZdaubyaosParts = buildParts()
+        const notes: ZdaubyaosNotes = buildNotes()
 
         const subDub: Entity = {
-            noteSpecs: parts.subDub,
+            notes: notes.subDub,
             timbreName: TimbreNameEnum.PHONEME_BAH,
         }
 
         const superDuper: Entity = {
-            noteSpecs: parts.superDuper,
+            notes: notes.superDuper,
             timbreName: TimbreNameEnum.BRIT_BLUES_DRIVEN,
         }
 
         const harmSubharm: Entity = {
-            noteSpecs: parts.harmSubharm,
+            notes: notes.harmSubharm,
             timbreName: TimbreNameEnum.CELESTE,
         }
 
@@ -29,5 +29,5 @@ const buildEntities: BuildEntitiesFunction =
     }
 
 export {
-    buildEntities,
+    materializeEntities,
 }

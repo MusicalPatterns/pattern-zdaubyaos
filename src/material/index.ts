@@ -1,7 +1,7 @@
-export { buildParts } from './parts'
-export { buildEntities } from './entities'
-export { buildScales } from './scales'
-export { buildNoteSpec } from './notes'
+export { buildNotes } from './notes'
+export { materializeEntities } from './entities'
+export { materializeScales } from './scales'
+export { buildNote } from './features'
 export { buildSegment } from './segments'
 export {
     buildRenderings,

@@ -24,7 +24,7 @@ Each of these styles has its own Blocks and Renderings which create Contours mos
 **ContourWhole**: a concatenation of several ContourPiece together; a large enough compositional object to write the pattern in directly;
     a ContourWhole is still intended to be compiled to something for just one Entity to play
     
-**Segment**: take a set of ContourWhole, and each ContourWhole has all of its ContourElements mapped to a NoteSpec, 
-    and each ContourWhole's NoteSpec total the same duration, so they can be played simultaneously by different Entities, but still sequenced together with other Segments
+**Segment**: take a set of ContourWhole, and each ContourWhole has all of its ContourElements mapped to a Note, 
+    and each ContourWhole's Note total the same duration, so they can be played simultaneously by different Entities, but still sequenced together with other Segments
     
-**NoteSpec**: what you get when you hydrate a ContourElement w/ NoteStyle information, readying it to be compiled to be played
+**Note**: what you get when you hydrate a ContourElement w/ NoteStyle information, readying it to be compiled to be played

@@ -1,4 +1,4 @@
-import { NoteSpec } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/compiler'
 
 enum BarTarget {
     FIFTEEN = 'FIFTEEN',
@@ -17,14 +17,14 @@ enum BlockStyle {
     SCEND = 'SCEND',
 }
 
-interface ZdaubyaosParts {
-    harmSubharm: NoteSpec[],
-    subDub: NoteSpec[],
-    superDuper: NoteSpec[],
+interface ZdaubyaosNotes {
+    harmSubharm: Note[],
+    subDub: Note[],
+    superDuper: Note[],
 }
 
 export {
     BarTarget,
     BlockStyle,
-    ZdaubyaosParts,
+    ZdaubyaosNotes,
 }

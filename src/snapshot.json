@@ -1,6 +1,6 @@
 [
   {
-    "notes": [
+    "sounds": [
       {
         "duration": 3360,
         "gain": 0,
@@ -21155,13 +21155,13 @@
         "sustain": 279.9
       }
     ],
-    "voiceSpec": {
+    "sourceRequest": {
       "timbreName": "BRIT_BLUES_DRIVEN",
-      "voiceType": "OSCILLATOR"
+      "sourceType": "OSCILLATOR"
     }
   },
   {
-    "notes": [
+    "sounds": [
       {
         "duration": 3360,
         "gain": 0,
@@ -42283,13 +42283,13 @@
         "sustain": 279.9
       }
     ],
-    "voiceSpec": {
+    "sourceRequest": {
       "timbreName": "CELESTE",
-      "voiceType": "OSCILLATOR"
+      "sourceType": "OSCILLATOR"
     }
   },
   {
-    "notes": [
+    "sounds": [
       {
         "duration": 140,
         "gain": 0,
@@ -64379,9 +64379,9 @@
         "sustain": 139.9
       }
     ],
-    "voiceSpec": {
+    "sourceRequest": {
       "timbreName": "PHONEME_BAH",
-      "voiceType": "OSCILLATOR"
+      "sourceType": "OSCILLATOR"
     }
   }
 ]

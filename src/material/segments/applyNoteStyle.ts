@@ -1,30 +1,30 @@
-import { NoteSpec } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/compiler'
 import { PitchDuration } from '@musical-patterns/pattern'
 import { apply, ContourWhole } from '@musical-patterns/utilities'
 import { TRANSLATION_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
-import { buildNoteSpec } from '../notes'
+import { buildNote } from '../features'
 import { applyGainScalar } from './applyGainScalar'
 import { applyPitchIndexTranslation } from './applyPitchIndexTranslation'
 import { applyScaleIndex } from './applyScaleIndex'
 import { NoteStyle } from './types'
 
-const applyNoteStyle: (contourWhole: ContourWhole<PitchDuration>, noteStyle: NoteStyle) => NoteSpec[] =
-    (contourWhole: ContourWhole<PitchDuration>, noteStyle: NoteStyle): NoteSpec[] => {
-        let part: NoteSpec[] = contourWhole.map(buildNoteSpec)
+const applyNoteStyle: (contourWhole: ContourWhole<PitchDuration>, noteStyle: NoteStyle) => Note[] =
+    (contourWhole: ContourWhole<PitchDuration>, noteStyle: NoteStyle): Note[] => {
+        let notes: Note[] = contourWhole.map(buildNote)
 
         const { gainScalar, pitchIndexTranslation, scaleIndex } = noteStyle
 
         if (pitchIndexTranslation) {
-            part = applyPitchIndexTranslation(part, pitchIndexTranslation)
+            notes = applyPitchIndexTranslation(notes, pitchIndexTranslation)
         }
 
         if (gainScalar) {
-            part = applyGainScalar(part, gainScalar)
+            notes = applyGainScalar(notes, gainScalar)
         }
 
-        part = applyScaleIndex(part, apply.Translation(scaleIndex, TRANSLATION_FOR_GAIN_AND_DURATIONS_SCALES))
+        notes = applyScaleIndex(notes, apply.Translation(scaleIndex, TRANSLATION_FOR_GAIN_AND_DURATIONS_SCALES))
 
-        return part
+        return notes
     }
 
 export {

@@ -1,48 +1,34 @@
-import { NoteSpec } from '@musical-patterns/compiler'
-import {
-    FULL_GAIN,
-    PitchDuration,
-    SILENT,
-    STANDARD_DURATIONS_SCALE_INDEX,
-    STANDARD_PITCH_INDEX_INDICATING_REST,
-} from '@musical-patterns/pattern'
-import {
-    Amplitude,
-    ContourElement,
-    from,
-    Scalar,
-    to,
-    translateFromOneIndexedToZeroIndexed,
-} from '@musical-patterns/utilities'
+import { Note } from '@musical-patterns/compiler'
+import { Segment } from '@musical-patterns/pattern'
+import { apply } from '@musical-patterns/utilities'
+import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
+import { buildSegments } from './segments'
+import { ZdaubyaosNotes } from './types'
 
-const buildNoteSpec: (contourElement: ContourElement<PitchDuration>) => NoteSpec =
-    ([ pitch, duration ]: ContourElement<PitchDuration>): NoteSpec => {
-        if (pitch === from.Ordinal(STANDARD_PITCH_INDEX_INDICATING_REST)) {
-            return {
-                durationSpec: {
-                    index: translateFromOneIndexedToZeroIndexed(to.Ordinal(duration)),
-                    scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
-                },
-                gainSpec: {
-                    scalar: from.Amplitude<Scalar, Scalar<Amplitude>>(SILENT),
-                },
-            }
-        }
+const buildNotes: () => ZdaubyaosNotes =
+    (): ZdaubyaosNotes => {
+        const segments: Segment[] = buildSegments()
+
+        let subDub: Note[] = []
+        let superDuper: Note[] = []
+        let harmSubharm: Note[] = []
+
+        segments.forEach((segment: Segment): void => {
+            subDub = subDub
+                .concat(apply.Ordinal(segment, SEGMENT_A))
+            superDuper = superDuper
+                .concat(apply.Ordinal(segment, SEGMENT_B))
+            harmSubharm = harmSubharm
+                .concat(apply.Ordinal(segment, SEGMENT_C))
+        })
 
         return {
-            durationSpec: {
-                index: translateFromOneIndexedToZeroIndexed(to.Ordinal(duration)),
-                scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
-            },
-            gainSpec: {
-                scalar: from.Amplitude<Scalar, Scalar<Amplitude>>(FULL_GAIN),
-            },
-            pitchSpec: {
-                index: translateFromOneIndexedToZeroIndexed(to.Ordinal(pitch)),
-            },
+            harmSubharm,
+            subDub,
+            superDuper,
         }
     }
 
 export {
-    buildNoteSpec,
+    buildNotes,
 }

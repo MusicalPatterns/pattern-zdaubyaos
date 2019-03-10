@@ -1,13 +1,13 @@
-import { NoteSpec } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/compiler'
 import { apply, Translation } from '@musical-patterns/utilities'
 
-const applyPitchIndexTranslation: (part: NoteSpec[], pitchIndexTranslation: Translation) => NoteSpec[] =
-    (part: NoteSpec[], pitchIndexTranslation: Translation): NoteSpec[] =>
-        part.map((noteSpec: NoteSpec): NoteSpec => ({
-            ...noteSpec,
-            pitchSpec: noteSpec.pitchSpec && {
-                ...noteSpec.pitchSpec,
-                index: apply.Translation(noteSpec.pitchSpec.index, pitchIndexTranslation),
+const applyPitchIndexTranslation: (notes: Note[], pitchIndexTranslation: Translation) => Note[] =
+    (notes: Note[], pitchIndexTranslation: Translation): Note[] =>
+        notes.map((note: Note): Note => ({
+            ...note,
+            pitch: note.pitch && {
+                ...note.pitch,
+                index: apply.Translation(note.pitch.index, pitchIndexTranslation),
             },
         }))
 

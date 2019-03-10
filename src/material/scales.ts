@@ -1,9 +1,9 @@
-import { BuildScalesFunction, Scale } from '@musical-patterns/compiler'
+import { MaterializeScales, Scale } from '@musical-patterns/compiler'
 import {
     buildFlatDurationsScale,
     buildHarmonicSeriesScale,
-    buildStandardScales,
     buildSubharmonicSeriesScale,
+    materializeStandardScales,
     STANDARD_PITCH_SCALE_INDEX,
     StandardSpec,
 } from '@musical-patterns/pattern'
@@ -15,7 +15,7 @@ import {
 } from '@musical-patterns/pattern-xenharmonic-series'
 import { from, Scalar } from '@musical-patterns/utilities'
 
-const buildScales: BuildScalesFunction =
+const materializeScales: MaterializeScales =
     (spec: StandardSpec): Scale[] => {
         const superparticularSeriesScalars: Scalar[] = buildSuperparticularSeriesScalars()
             .map<Scalar>(from.Frequency)
@@ -26,7 +26,7 @@ const buildScales: BuildScalesFunction =
         const dubparticularSeriesScalars: Scalar[] = buildDubparticularSeriesScalars()
             .map<Scalar>(from.Frequency)
 
-        const standardScales: Scale[] = buildStandardScales(
+        const standardScales: Scale[] = materializeStandardScales(
             spec,
             { durationScalars: buildFlatDurationsScale().scalars, pitchScalars: subparticularSeriesScalars },
         )
@@ -61,5 +61,5 @@ const buildScales: BuildScalesFunction =
     }
 
 export {
-    buildScales,
+    materializeScales,
 }
