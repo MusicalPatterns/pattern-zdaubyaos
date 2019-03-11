@@ -1,13 +1,13 @@
 // tslint:disable no-duplicate-string
 
-import { calculateTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
+import { computeTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
 import { ContourPiece, dividesEvenly, entries, to } from '@musical-patterns/utilities'
 import {
     AlmostTrueContourPieces,
     BarTarget,
     BlockStyle,
-    buildAlmostTrueContourPieces,
-    buildTrueContourPieces,
+    computeAlmostTrueContourPieces,
+    computeTrueContourPieces,
     getTrueContours,
     RenderingName,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
@@ -18,7 +18,7 @@ describe('true contours', () => {
     let contourPiecesByBarTargetThenBlockStyleThenRendering: TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName
 
     beforeEach(() => {
-        contourPiecesByBarTargetThenBlockStyleThenRendering = buildTrueContourPieces()
+        contourPiecesByBarTargetThenBlockStyleThenRendering = computeTrueContourPieces()
     })
 
     describe('zdaub contours', () => {
@@ -177,7 +177,7 @@ describe('true contours', () => {
 
         describe('other durations', () => {
             it('handles glis variant', () => {
-                const pieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
+                const pieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
 
                 expect(pieces.zdaubGlisVariant)
                     .toEqual(to.ContourPiece<PitchDuration>([
@@ -207,7 +207,7 @@ describe('true contours', () => {
                                         case RenderingName.FALL:
                                         case RenderingName.SUMMERY_SPRING:
                                         case RenderingName.SPRINGY_SUMMER:
-                                            expect(dividesEvenly(calculateTotalPitchDurationContourDuration(contours), 15))
+                                            expect(dividesEvenly(computeTotalPitchDurationContourDuration(contours), 15))
                                                 .toBeTruthy(`rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         default:
@@ -479,7 +479,7 @@ describe('true contours', () => {
                                     switch (renderingName) {
                                         case RenderingName.GLIS:
                                         case RenderingName.TREM:
-                                            expect(dividesEvenly(calculateTotalPitchDurationContourDuration(contours), 24))
+                                            expect(dividesEvenly(computeTotalPitchDurationContourDuration(contours), 24))
                                                 .toBeTruthy(`rendering ${blockStyle} as ${renderingName}`)
                                             break
                                         case RenderingName.BONY:
@@ -491,7 +491,7 @@ describe('true contours', () => {
                                                 case BlockStyle.INAI:
                                                     break
                                                 default:
-                                                    expect(dividesEvenly(calculateTotalPitchDurationContourDuration(contours), 24))
+                                                    expect(dividesEvenly(computeTotalPitchDurationContourDuration(contours), 24))
                                                         .toBeTruthy(`rendering ${blockStyle} as ${renderingName}`)
                                             }
                                             break
@@ -728,7 +728,7 @@ describe('true contours', () => {
 
             describe('other renderings', () => {
                 it('handles inaiii variety', () => {
-                    const pieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
+                    const pieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
 
                     expect(pieces.inaiiiVariety)
                         .toEqual(to.ContourPiece<PitchDuration>([

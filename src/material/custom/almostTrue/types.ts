@@ -11,7 +11,7 @@ interface AlmostTrueContourPieces {
 }
 
 interface AlmostTrueSegments {
-    bonyJigAndNowItGetsKindaHighAndMagicSparkly: Segment,
+    bonyJigAndNowItBecomesKindaHighAndMagicSparkly: Segment,
     extendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonically: Segment,
     fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling: Segment,
 }

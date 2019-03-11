@@ -1,5 +1,5 @@
-export { buildOtherContourPieces } from './pieces'
-export { buildOtherSegments } from './segments'
+export { computeOtherContourPieces } from './pieces'
+export { computeOtherSegments } from './segments'
 
 export {
     OtherContourPieces,

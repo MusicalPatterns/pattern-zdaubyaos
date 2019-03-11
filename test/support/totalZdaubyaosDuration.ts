@@ -1,7 +1,7 @@
 import { Note } from '@musical-patterns/compiler'
 import { apply, from, Ordinal, sum, to } from '@musical-patterns/utilities'
 
-const calculateTotalZdaubyaosDuration: (notes: Note[]) => number =
+const computeTotalZdaubyaosDuration: (notes: Note[]) => number =
     (notes: Note[]): number =>
         notes.reduce(
             (accumulator: number, { duration }: Note): number => {
@@ -13,5 +13,5 @@ const calculateTotalZdaubyaosDuration: (notes: Note[]) => number =
         )
 
 export {
-    calculateTotalZdaubyaosDuration,
+    computeTotalZdaubyaosDuration,
 }

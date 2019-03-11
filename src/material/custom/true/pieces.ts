@@ -1,11 +1,11 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { Block, ContourPiece, entries } from '@musical-patterns/utilities'
-import { buildRenderings, RenderingName, Renderings } from '../../renderings'
+import { computeRenderings, RenderingName, Renderings } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
 import { countUsage } from '../contourUsage'
-import { buildTrueBlocks } from './blocks'
+import { computeTrueBlocks } from './blocks'
 import {
-    BuildTrueContourPieceParameters,
+    ComputeTrueContourPieceParameters,
     GetTrueContourPieces,
     TrueBlocksByBarTargetThenBlockStyle,
     TrueBlocksByBlockStyle,
@@ -16,15 +16,15 @@ const contourPiecesByBarTargetBlockStyleThenRendering: TrueContourPiecesByBarTar
     // tslint:disable-next-line no-object-literal-type-assertion
     {} as TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName
 
-const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => void =
-    (parameters: BuildTrueContourPieceParameters): void => {
+const computeTrueContourPiece: (parameters: ComputeTrueContourPieceParameters) => void =
+    (parameters: ComputeTrueContourPieceParameters): void => {
         const {
             rendering,
             block,
             barTarget,
             blockStyle,
             renderingName,
-        }: BuildTrueContourPieceParameters = parameters
+        }: ComputeTrueContourPieceParameters = parameters
         const contourPiece: ContourPiece<PitchDuration> = rendering(block)
 
         contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] =
@@ -35,11 +35,11 @@ const buildTrueContourPiece: (parameters: BuildTrueContourPieceParameters) => vo
             contourPiece
     }
 
-const buildTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName =
+const computeTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName =
     (): TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName => {
-        const renderings: Renderings = buildRenderings()
+        const renderings: Renderings = computeRenderings()
 
-        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = buildTrueBlocks()
+        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = computeTrueBlocks()
         entries(trueBlocks)
             .forEach(
                 ([ barTarget, blocksBy ]: [ BarTarget, TrueBlocksByBlockStyle ]): void => {
@@ -52,7 +52,7 @@ const buildTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyleTh
                                             [ renderingName, rendering ]:
                                                 [ RenderingName, Rendering<PitchDuration> ],
                                         ): void => {
-                                            buildTrueContourPiece({
+                                            computeTrueContourPiece({
                                                 barTarget,
                                                 block,
                                                 blockStyle,
@@ -68,7 +68,7 @@ const buildTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyleTh
 
 const getTrueContours: GetTrueContourPieces =
     (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece<PitchDuration> => {
-        buildTrueContourPieces()
+        computeTrueContourPieces()
 
         countUsage(barTarget, blockStyle, renderingName)
 
@@ -76,6 +76,6 @@ const getTrueContours: GetTrueContourPieces =
     }
 
 export {
-    buildTrueContourPieces,
+    computeTrueContourPieces,
     getTrueContours,
 }

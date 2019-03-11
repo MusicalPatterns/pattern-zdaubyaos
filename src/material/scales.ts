@@ -1,34 +1,34 @@
 import { MaterializeScales, Scale } from '@musical-patterns/compiler'
 import {
-    buildFlatDurationsScale,
-    buildHarmonicSeriesScale,
-    buildSubharmonicSeriesScale,
+    computeFlatDurationsScale,
+    computeHarmonicSeriesScale,
+    computeSubharmonicSeriesScale,
     materializeStandardScales,
     STANDARD_PITCH_SCALE_INDEX,
     StandardSpec,
 } from '@musical-patterns/pattern'
 import {
-    buildDubparticularSeriesScalars,
-    buildDuperparticularSeriesScalars,
-    buildSubparticularSeriesScalars,
-    buildSuperparticularSeriesScalars,
+    computeDubparticularSeriesScalars,
+    computeDuperparticularSeriesScalars,
+    computeSubparticularSeriesScalars,
+    computeSuperparticularSeriesScalars,
 } from '@musical-patterns/pattern-xenharmonic-series'
 import { from, Scalar } from '@musical-patterns/utilities'
 
 const materializeScales: MaterializeScales =
     (spec: StandardSpec): Scale[] => {
-        const superparticularSeriesScalars: Scalar[] = buildSuperparticularSeriesScalars()
+        const superparticularSeriesScalars: Scalar[] = computeSuperparticularSeriesScalars()
             .map<Scalar>(from.Frequency)
-        const duperparticularSeriesScalars: Scalar[] = buildDuperparticularSeriesScalars()
+        const duperparticularSeriesScalars: Scalar[] = computeDuperparticularSeriesScalars()
             .map<Scalar>(from.Frequency)
-        const subparticularSeriesScalars: Scalar[] = buildSubparticularSeriesScalars()
+        const subparticularSeriesScalars: Scalar[] = computeSubparticularSeriesScalars()
             .map<Scalar>(from.Frequency)
-        const dubparticularSeriesScalars: Scalar[] = buildDubparticularSeriesScalars()
+        const dubparticularSeriesScalars: Scalar[] = computeDubparticularSeriesScalars()
             .map<Scalar>(from.Frequency)
 
         const standardScales: Scale[] = materializeStandardScales(
             spec,
-            { durationScalars: buildFlatDurationsScale().scalars, pitchScalars: subparticularSeriesScalars },
+            { durationScalars: computeFlatDurationsScale().scalars, pitchScalars: subparticularSeriesScalars },
         )
 
         return standardScales.concat([
@@ -39,7 +39,7 @@ const materializeScales: MaterializeScales =
             },
             {
                 scalar: standardScales[ STANDARD_PITCH_SCALE_INDEX ].scalar,
-                scalars: buildHarmonicSeriesScale().scalars,
+                scalars: computeHarmonicSeriesScale().scalars,
                 translation: standardScales[ STANDARD_PITCH_SCALE_INDEX ].translation,
             },
             {
@@ -54,7 +54,7 @@ const materializeScales: MaterializeScales =
             },
             {
                 scalar: standardScales[ STANDARD_PITCH_SCALE_INDEX ].scalar,
-                scalars: buildSubharmonicSeriesScale().scalars,
+                scalars: computeSubharmonicSeriesScale().scalars,
                 translation: standardScales[ STANDARD_PITCH_SCALE_INDEX ].translation,
             },
         ])

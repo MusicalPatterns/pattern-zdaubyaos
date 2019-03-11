@@ -1,6 +1,6 @@
 // tslint:disable no-reaching-imports
 
-export { buildOtherContourPieces } from './pieces'
+export { computeOtherContourPieces } from './pieces'
 
 export {
     OtherContourPieces,

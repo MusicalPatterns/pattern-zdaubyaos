@@ -1,11 +1,11 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { to } from '@musical-patterns/utilities'
-import { buildRenderings, RenderingName, Renderings } from '../../../../../src/indexForTest'
+import { computeRenderings, RenderingName, Renderings } from '../../../../../src/indexForTest'
 
 describe('rendering functions', () => {
     let renderings: Renderings
     beforeEach(() => {
-        renderings = buildRenderings()
+        renderings = computeRenderings()
     })
 
     describe('spring', () => {

@@ -22,7 +22,7 @@ type FormulaicTrueYaosContourWhole = (
 type TrueBlocksByBlockStyle = { [Index in BlockStyle]: Block }
 type TrueBlocksByBarTargetThenBlockStyle = { [Index in BarTarget]: TrueBlocksByBlockStyle }
 
-interface BuildTrueContourPieceParameters {
+interface ComputeTrueContourPieceParameters {
     barTarget: BarTarget,
     block: Block,
     blockStyle: BlockStyle,
@@ -36,7 +36,7 @@ interface TrueSegments {
     springWithZdaub: Segment,
     springySummerTotallyOutThere: Segment,
     summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped: Segment,
-    summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically: Segment,
+    summerWithZdaubAndSeparationVariantBecomesPleasantlyGnarlyHarmonically: Segment,
 }
 
 interface TrueContourWholes {
@@ -57,7 +57,7 @@ export {
     FormulaicTrueYaosContourWhole,
     TrueBlocksByBlockStyle,
     TrueBlocksByBarTargetThenBlockStyle,
-    BuildTrueContourPieceParameters,
+    ComputeTrueContourPieceParameters,
     TrueSegments,
     TrueContourWholes,
 }

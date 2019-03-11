@@ -1,11 +1,11 @@
-import { calculateTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
+import { computeTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
 import { dividesEvenly, to } from '@musical-patterns/utilities'
-import { buildThirtyfiveContourPieces, ThirtyfiveContourPieces } from '../../../../../../src/indexForTest'
+import { computeThirtyfiveContourPieces, ThirtyfiveContourPieces } from '../../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {
     let thirtyfiveContourPieces: ThirtyfiveContourPieces
     beforeEach(() => {
-        thirtyfiveContourPieces = buildThirtyfiveContourPieces()
+        thirtyfiveContourPieces = computeThirtyfiveContourPieces()
     })
 
     it('handles yaos bass', () => {
@@ -59,11 +59,11 @@ describe('thirtyfive contour pieces', () => {
     })
 
     it('is the case that they are all actually length multiples of 35', () => {
-        expect(dividesEvenly(calculateTotalPitchDurationContourDuration(thirtyfiveContourPieces.yaosBass), 35))
+        expect(dividesEvenly(computeTotalPitchDurationContourDuration(thirtyfiveContourPieces.yaosBass), 35))
             .toBeTruthy()
-        expect(dividesEvenly(calculateTotalPitchDurationContourDuration(thirtyfiveContourPieces.yaosAccidentInspired), 35))
+        expect(dividesEvenly(computeTotalPitchDurationContourDuration(thirtyfiveContourPieces.yaosAccidentInspired), 35))
             .toBeTruthy()
-        expect(dividesEvenly(calculateTotalPitchDurationContourDuration(thirtyfiveContourPieces.zdaub), 35))
+        expect(dividesEvenly(computeTotalPitchDurationContourDuration(thirtyfiveContourPieces.zdaub), 35))
             .toBeTruthy()
     })
 })

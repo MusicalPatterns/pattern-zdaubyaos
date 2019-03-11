@@ -4,23 +4,23 @@ import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {
     AlmostTrueSegments,
     BreatherSegments,
-    buildAlmostTrueSegments,
-    buildBreatherSegments,
-    buildOtherSegments,
-    buildThirtyfiveSegments,
-    buildTrueSegments,
+    computeAlmostTrueSegments,
+    computeBreatherSegments,
+    computeOtherSegments,
+    computeThirtyfiveSegments,
+    computeTrueSegments,
     OtherSegments,
     ThirtyfiveSegments,
     TrueSegments,
 } from '../custom'
 
-const buildSegments: () => Segment[] =
+const computeSegments: () => Segment[] =
     (): Segment[] => {
-        const almostTrueSegments: AlmostTrueSegments = buildAlmostTrueSegments()
-        const breatherSegments: BreatherSegments = buildBreatherSegments()
-        const otherSegments: OtherSegments = buildOtherSegments()
-        const thirtyfiveSegments: ThirtyfiveSegments = buildThirtyfiveSegments()
-        const trueSegments: TrueSegments = buildTrueSegments()
+        const almostTrueSegments: AlmostTrueSegments = computeAlmostTrueSegments()
+        const breatherSegments: BreatherSegments = computeBreatherSegments()
+        const otherSegments: OtherSegments = computeOtherSegments()
+        const thirtyfiveSegments: ThirtyfiveSegments = computeThirtyfiveSegments()
+        const trueSegments: TrueSegments = computeTrueSegments()
 
         return slice(
             [
@@ -32,14 +32,14 @@ const buildSegments: () => Segment[] =
                 // 3
                 breatherSegments.summer,
                 trueSegments.summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped,
-                trueSegments.summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically,
+                trueSegments.summerWithZdaubAndSeparationVariantBecomesPleasantlyGnarlyHarmonically,
                 otherSegments.secretLongChord,
                 otherSegments.shifty,
 
                 // 8
                 breatherSegments.doubleFallWhichIsGoodIntroForJig,
                 almostTrueSegments.fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling,
-                almostTrueSegments.bonyJigAndNowItGetsKindaHighAndMagicSparkly,
+                almostTrueSegments.bonyJigAndNowItBecomesKindaHighAndMagicSparkly,
                 otherSegments.totallyOutThereIntro,
                 trueSegments.springySummerTotallyOutThere,
 
@@ -58,5 +58,5 @@ const buildSegments: () => Segment[] =
     }
 
 export {
-    buildSegments,
+    computeSegments,
 }

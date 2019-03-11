@@ -1,7 +1,7 @@
 import { Note, NoteFeature } from '@musical-patterns/compiler'
 import { PitchDuration } from '@musical-patterns/pattern'
 import { Ordinal, to } from '@musical-patterns/utilities'
-import { buildNote } from '../../../src/indexForTest'
+import { computeNote } from '../../../src/indexForTest'
 
 const DURATIONS_SCALE_INDEX: Ordinal = to.Ordinal(1)
 
@@ -9,7 +9,7 @@ describe('features', () => {
     describe('when the pitch index is negative 1', () => {
         let note: Note
         beforeEach(() => {
-            note = buildNote(to.ContourElement<PitchDuration>([ -1, 6 ]))
+            note = computeNote(to.ContourElement<PitchDuration>([ -1, 6 ]))
         })
 
         describe('duration', () => {
@@ -45,7 +45,7 @@ describe('features', () => {
     describe('when the pitch index is not zero', () => {
         let note: Note
         beforeEach(() => {
-            note = buildNote(to.ContourElement<PitchDuration>([ 3, 6 ]))
+            note = computeNote(to.ContourElement<PitchDuration>([ 3, 6 ]))
         })
 
         describe('duration', () => {

@@ -1,14 +1,14 @@
 import { Segment } from '@musical-patterns/pattern'
 import { negative, to } from '@musical-patterns/utilities'
-import { buildSegment } from '../../segments'
+import { computeSegment } from '../../segments'
 import { OtherContourWholes, OtherSegments } from './types'
-import { buildOtherContourWholes } from './wholes'
+import { computeOtherContourWholes } from './wholes'
 
-const buildOtherSegments: () => OtherSegments =
+const computeOtherSegments: () => OtherSegments =
     (): OtherSegments => {
-        const otherContourWholes: OtherContourWholes = buildOtherContourWholes()
+        const otherContourWholes: OtherContourWholes = computeOtherContourWholes()
 
-        const secretLongChord: Segment = buildSegment(
+        const secretLongChord: Segment = computeSegment(
             [
                 otherContourWholes.secretLongChord,
                 otherContourWholes.secretLongChord,
@@ -33,7 +33,7 @@ const buildOtherSegments: () => OtherSegments =
             ],
         )
 
-        const totallyOutThereIntro: Segment = buildSegment(
+        const totallyOutThereIntro: Segment = computeSegment(
             [
                 otherContourWholes.totallyOutThere,
                 otherContourWholes.totallyOutThere,
@@ -46,7 +46,7 @@ const buildOtherSegments: () => OtherSegments =
             ],
         )
 
-        const shifty: Segment = buildSegment(
+        const shifty: Segment = computeSegment(
             [
                 otherContourWholes.shiftyA,
                 otherContourWholes.shiftyB,
@@ -67,5 +67,5 @@ const buildOtherSegments: () => OtherSegments =
     }
 
 export {
-    buildOtherSegments,
+    computeOtherSegments,
 }

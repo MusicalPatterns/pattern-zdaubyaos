@@ -1,7 +1,7 @@
 import { Block, repeat, to } from '@musical-patterns/utilities'
 import { OtherBlocks } from './types'
 
-const buildOtherBlocks: () => OtherBlocks =
+const computeOtherBlocks: () => OtherBlocks =
     (): OtherBlocks => {
         const backboneFifteen: Block = to.Block(repeat([ 1, 2 ], to.Cardinal(5)))
 
@@ -52,5 +52,5 @@ const buildOtherBlocks: () => OtherBlocks =
     }
 
 export {
-    buildOtherBlocks,
+    computeOtherBlocks,
 }

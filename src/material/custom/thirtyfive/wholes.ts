@@ -1,11 +1,11 @@
-import { calculateTotalPitchDurationContourDuration, PitchDuration, pitchDurationRest } from '@musical-patterns/pattern'
+import { computeTotalPitchDurationContourDuration, PitchDuration, pitchDurationRest } from '@musical-patterns/pattern'
 import { ContourWhole, repeat, sequence, to } from '@musical-patterns/utilities'
-import { buildThirtyfiveContourPieces } from './pieces'
+import { computeThirtyfiveContourPieces } from './pieces'
 import { ThirtyfiveContourPieces, ThirtyfiveContourWholes } from './types'
 
-const buildThirtyfiveContourWholes: () => ThirtyfiveContourWholes =
+const computeThirtyfiveContourWholes: () => ThirtyfiveContourWholes =
     (): ThirtyfiveContourWholes => {
-        const thirtyfiveContourPieces: ThirtyfiveContourPieces = buildThirtyfiveContourPieces()
+        const thirtyfiveContourPieces: ThirtyfiveContourPieces = computeThirtyfiveContourPieces()
 
         const thirtyfiveYaosBass: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
             repeat(thirtyfiveContourPieces.yaosBass, to.Cardinal(30)),
@@ -16,7 +16,7 @@ const buildThirtyfiveContourWholes: () => ThirtyfiveContourWholes =
         ]))
 
         const thirtyfiveZdaub: ContourWhole<PitchDuration> = to.ContourWhole(sequence([
-            pitchDurationRest(calculateTotalPitchDurationContourDuration(thirtyfiveContourPieces.zdaub)),
+            pitchDurationRest(computeTotalPitchDurationContourDuration(thirtyfiveContourPieces.zdaub)),
             repeat(thirtyfiveContourPieces.zdaub, to.Cardinal(2)),
             repeat(thirtyfiveContourPieces.zdaubOnlyWiggle, to.Cardinal(12)),
         ]))
@@ -29,5 +29,5 @@ const buildThirtyfiveContourWholes: () => ThirtyfiveContourWholes =
     }
 
 export {
-    buildThirtyfiveContourWholes,
+    computeThirtyfiveContourWholes,
 }

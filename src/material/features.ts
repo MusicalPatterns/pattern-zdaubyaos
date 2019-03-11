@@ -15,7 +15,7 @@ import {
     translateFromOneIndexedToZeroIndexed,
 } from '@musical-patterns/utilities'
 
-const buildNote: (contourElement: ContourElement<PitchDuration>) => Note =
+const computeNote: (contourElement: ContourElement<PitchDuration>) => Note =
     ([ pitch, duration ]: ContourElement<PitchDuration>): Note => {
         if (pitch === from.Ordinal(STANDARD_PITCH_INDEX_INDICATING_REST)) {
             return {
@@ -44,5 +44,5 @@ const buildNote: (contourElement: ContourElement<PitchDuration>) => Note =
     }
 
 export {
-    buildNote,
+    computeNote,
 }

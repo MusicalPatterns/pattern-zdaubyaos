@@ -1,14 +1,14 @@
 import { Segment } from '@musical-patterns/pattern'
 import { negative, to } from '@musical-patterns/utilities'
-import { buildSegment } from '../../segments'
+import { computeSegment } from '../../segments'
 import { BreatherContourWholes, BreatherSegments } from './types'
-import { buildBreatherContourWholes } from './wholes'
+import { computeBreatherContourWholes } from './wholes'
 
-const buildBreatherSegments: () => BreatherSegments =
+const computeBreatherSegments: () => BreatherSegments =
     (): BreatherSegments => {
-        const breatherContourWholes: BreatherContourWholes = buildBreatherContourWholes()
+        const breatherContourWholes: BreatherContourWholes = computeBreatherContourWholes()
 
-        const spring: Segment = buildSegment(
+        const spring: Segment = computeSegment(
             [
                 breatherContourWholes.spring,
                 breatherContourWholes.rest,
@@ -21,7 +21,7 @@ const buildBreatherSegments: () => BreatherSegments =
             ],
         )
 
-        const summer: Segment = buildSegment(
+        const summer: Segment = computeSegment(
             [
                 breatherContourWholes.rest,
                 breatherContourWholes.summer,
@@ -34,7 +34,7 @@ const buildBreatherSegments: () => BreatherSegments =
             ],
         )
 
-        const doubleFallWhichIsGoodIntroForJig: Segment = buildSegment(
+        const doubleFallWhichIsGoodIntroForJig: Segment = computeSegment(
             [
                 breatherContourWholes.doubleRest,
                 breatherContourWholes.doubleRest,
@@ -51,7 +51,7 @@ const buildBreatherSegments: () => BreatherSegments =
             ],
         )
 
-        const springAltNiceAsABreatherToABreather: Segment = buildSegment(
+        const springAltNiceAsABreatherToABreather: Segment = computeSegment(
             [
                 breatherContourWholes.rest,
                 breatherContourWholes.springAlt,
@@ -64,7 +64,7 @@ const buildBreatherSegments: () => BreatherSegments =
             ],
         )
 
-        const varietyQuiteTheReveille: Segment = buildSegment(
+        const varietyQuiteTheReveille: Segment = computeSegment(
             [
                 breatherContourWholes.variety,
                 breatherContourWholes.variety,
@@ -87,5 +87,5 @@ const buildBreatherSegments: () => BreatherSegments =
     }
 
 export {
-    buildBreatherSegments,
+    computeBreatherSegments,
 }

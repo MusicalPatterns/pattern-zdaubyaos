@@ -2,15 +2,15 @@
 
 import { Segment } from '@musical-patterns/pattern'
 import { negative, to } from '@musical-patterns/utilities'
-import { buildSegment } from '../../segments'
+import { computeSegment } from '../../segments'
 import { TrueContourWholes, TrueSegments } from './types'
-import { buildTrueContourWholes } from './wholes'
+import { computeTrueContourWholes } from './wholes'
 
-const buildTrueSegments: () => TrueSegments =
+const computeTrueSegments: () => TrueSegments =
     (): TrueSegments => {
-        const trueContourWholes: TrueContourWholes = buildTrueContourWholes()
+        const trueContourWholes: TrueContourWholes = computeTrueContourWholes()
 
-        const springAllYaosUmowchuwowiest: Segment = buildSegment(
+        const springAllYaosUmowchuwowiest: Segment = computeSegment(
             [
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
@@ -23,7 +23,7 @@ const buildTrueSegments: () => TrueSegments =
             ],
         )
 
-        const allYaosAllRhythmsAtOnce: Segment = buildSegment(
+        const allYaosAllRhythmsAtOnce: Segment = computeSegment(
             [
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
@@ -36,7 +36,7 @@ const buildTrueSegments: () => TrueSegments =
             ],
         )
 
-        const summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped: Segment = buildSegment(
+        const summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped: Segment = computeSegment(
             [
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
@@ -49,7 +49,7 @@ const buildTrueSegments: () => TrueSegments =
             ],
         )
 
-        const springWithZdaub: Segment = buildSegment(
+        const springWithZdaub: Segment = computeSegment(
             [
                 trueContourWholes.zdaubGlis,
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
@@ -62,8 +62,8 @@ const buildTrueSegments: () => TrueSegments =
             ],
         )
 
-        const summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically: Segment =
-            buildSegment(
+        const summerWithZdaubAndSeparationVariantBecomesPleasantlyGnarlyHarmonically: Segment =
+            computeSegment(
                 [
                     trueContourWholes.yaosUmowchuwowiestSummerToSpring,
                     trueContourWholes.zdaubGlis,
@@ -76,7 +76,7 @@ const buildTrueSegments: () => TrueSegments =
                 ],
             )
 
-        const springySummerTotallyOutThere: Segment = buildSegment(
+        const springySummerTotallyOutThere: Segment = computeSegment(
             [
                 trueContourWholes.yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd,
                 trueContourWholes.zdaubGlis,
@@ -95,10 +95,10 @@ const buildTrueSegments: () => TrueSegments =
             springWithZdaub,
             springySummerTotallyOutThere,
             summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped,
-            summerWithZdaubAndSeparationVariantGetsPleasantlyGnarlyHarmonically,
+            summerWithZdaubAndSeparationVariantBecomesPleasantlyGnarlyHarmonically,
         }
     }
 
 export {
-    buildTrueSegments,
+    computeTrueSegments,
 }

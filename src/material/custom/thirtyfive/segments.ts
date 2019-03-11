@@ -1,14 +1,14 @@
 import { Segment } from '@musical-patterns/pattern'
 import { to } from '@musical-patterns/utilities'
-import { buildSegment } from '../../segments'
+import { computeSegment } from '../../segments'
 import { ThirtyfiveContourWholes, ThirtyfiveSegments } from './types'
-import { buildThirtyfiveContourWholes } from './wholes'
+import { computeThirtyfiveContourWholes } from './wholes'
 
-const buildThirtyfiveSegments: () => ThirtyfiveSegments =
+const computeThirtyfiveSegments: () => ThirtyfiveSegments =
     (): ThirtyfiveSegments => {
-        const contourWholes: ThirtyfiveContourWholes = buildThirtyfiveContourWholes()
+        const contourWholes: ThirtyfiveContourWholes = computeThirtyfiveContourWholes()
 
-        const thirtyfiveSegment: Segment = buildSegment(
+        const thirtyfiveSegment: Segment = computeSegment(
             [
                 contourWholes.thirtyfiveZdaub,
                 contourWholes.thirtyfiveYaosAccidentInspired,
@@ -27,5 +27,5 @@ const buildThirtyfiveSegments: () => ThirtyfiveSegments =
     }
 
 export {
-    buildThirtyfiveSegments,
+    computeThirtyfiveSegments,
 }

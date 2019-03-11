@@ -2,12 +2,12 @@ import { Note } from '@musical-patterns/compiler'
 import { Segment } from '@musical-patterns/pattern'
 import { apply } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
-import { buildSegments } from './segments'
+import { computeSegments } from './segments'
 import { ZdaubyaosNotes } from './types'
 
-const buildNotes: () => ZdaubyaosNotes =
+const computeNotes: () => ZdaubyaosNotes =
     (): ZdaubyaosNotes => {
-        const segments: Segment[] = buildSegments()
+        const segments: Segment[] = computeSegments()
 
         let subDub: Note[] = []
         let superDuper: Note[] = []
@@ -30,5 +30,5 @@ const buildNotes: () => ZdaubyaosNotes =
     }
 
 export {
-    buildNotes,
+    computeNotes,
 }

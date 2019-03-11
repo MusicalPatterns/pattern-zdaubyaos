@@ -1,20 +1,20 @@
 // tslint:disable no-reaching-imports
 
 export {
-    buildOtherContourPieces,
+    computeOtherContourPieces,
     OtherContourPieces,
 } from './other/indexForTest'
 export {
-    buildThirtyfiveContourPieces,
+    computeThirtyfiveContourPieces,
     ThirtyfiveContourPieces,
 } from './thirtyfive/indexForTest'
 export {
     getTrueContours,
-    buildTrueContourPieces,
+    computeTrueContourPieces,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
     TrueContourPiecesByRenderingName,
 } from './true/indexForTest'
 export {
-    buildAlmostTrueContourPieces,
+    computeAlmostTrueContourPieces,
     AlmostTrueContourPieces,
 } from './almostTrue/indexForTest'

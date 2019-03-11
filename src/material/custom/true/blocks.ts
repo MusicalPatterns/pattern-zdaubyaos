@@ -2,7 +2,7 @@ import { repeat, to } from '@musical-patterns/utilities'
 import { BarTarget, BlockStyle } from '../../types'
 import { TrueBlocksByBarTargetThenBlockStyle } from './types'
 
-const buildTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
+const computeTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
     (): TrueBlocksByBarTargetThenBlockStyle =>
         ({
             [ BarTarget.FIFTEEN ]: {
@@ -46,5 +46,5 @@ const buildTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
         })
 
 export {
-    buildTrueBlocks,
+    computeTrueBlocks,
 }

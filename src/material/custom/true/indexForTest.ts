@@ -1,6 +1,6 @@
 // tslint:disable no-reaching-imports
 
-export { getTrueContours, buildTrueContourPieces } from './pieces'
+export { getTrueContours, computeTrueContourPieces } from './pieces'
 export {
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
     TrueContourPiecesByRenderingName,

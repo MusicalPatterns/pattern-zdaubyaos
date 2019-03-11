@@ -1,4 +1,4 @@
-export { buildThirtyfiveSegments } from './segments'
+export { computeThirtyfiveSegments } from './segments'
 
 export {
     ThirtyfiveSegments,

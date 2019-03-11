@@ -1,14 +1,14 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece } from '@musical-patterns/utilities'
-import { buildRenderings, RenderingName, Renderings } from '../../renderings'
-import { buildOtherBlocks } from './blocks'
+import { computeRenderings, RenderingName, Renderings } from '../../renderings'
+import { computeOtherBlocks } from './blocks'
 import { OtherBlocks, OtherContourPieces } from './types'
 
-const buildOtherContourPieces: () => OtherContourPieces =
+const computeOtherContourPieces: () => OtherContourPieces =
     (): OtherContourPieces => {
-        const blocks: OtherBlocks = buildOtherBlocks()
+        const blocks: OtherBlocks = computeOtherBlocks()
 
-        const renderings: Renderings = buildRenderings()
+        const renderings: Renderings = computeRenderings()
 
         const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
         const flatline: Rendering<PitchDuration> = renderings[ RenderingName.FLATLINE ]
@@ -34,5 +34,5 @@ const buildOtherContourPieces: () => OtherContourPieces =
     }
 
 export {
-    buildOtherContourPieces,
+    computeOtherContourPieces,
 }

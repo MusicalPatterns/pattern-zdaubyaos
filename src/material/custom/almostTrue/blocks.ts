@@ -1,7 +1,7 @@
 import { Block, to } from '@musical-patterns/utilities'
 import { AlmostTrueBlocks } from './types'
 
-const buildAlmostTrueBlocks: () => AlmostTrueBlocks =
+const computeAlmostTrueBlocks: () => AlmostTrueBlocks =
     (): AlmostTrueBlocks => {
         const trueGlisVariant: Block = to.Block([
             4, 5, 6,
@@ -19,5 +19,5 @@ const buildAlmostTrueBlocks: () => AlmostTrueBlocks =
     }
 
 export {
-    buildAlmostTrueBlocks,
+    computeAlmostTrueBlocks,
 }

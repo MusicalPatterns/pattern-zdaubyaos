@@ -2,7 +2,7 @@ import { PitchDuration } from '@musical-patterns/pattern'
 import { ContourWhole, repeatCall, sequence, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
-import { buildOtherContourPieces, OtherContourPieces } from '../other'
+import { computeOtherContourPieces, OtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
 import { AlmostTrueContourWholes } from './types'
 
@@ -18,9 +18,9 @@ const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) 
             ),
         ]))
 
-const buildAlmostTrueContourWholes: () => AlmostTrueContourWholes =
+const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
     (): AlmostTrueContourWholes => {
-        const otherContourPieces: OtherContourPieces = buildOtherContourPieces()
+        const otherContourPieces: OtherContourPieces = computeOtherContourPieces()
 
         const extendedEndingZdaubTrem: ContourWhole<PitchDuration> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.TREM)
@@ -69,5 +69,5 @@ const buildAlmostTrueContourWholes: () => AlmostTrueContourWholes =
     }
 
 export {
-    buildAlmostTrueContourWholes,
+    computeAlmostTrueContourWholes,
 }

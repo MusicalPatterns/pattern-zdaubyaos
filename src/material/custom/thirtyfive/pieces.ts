@@ -1,14 +1,14 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece } from '@musical-patterns/utilities'
-import { buildRenderings, RenderingName, Renderings } from '../../renderings'
-import { buildThirtyfiveBlocks } from './blocks'
+import { computeRenderings, RenderingName, Renderings } from '../../renderings'
+import { computeThirtyfiveBlocks } from './blocks'
 import { ThirtyfiveBlocks, ThirtyfiveContourPieces } from './types'
 
-const buildThirtyfiveContourPieces: () => ThirtyfiveContourPieces =
+const computeThirtyfiveContourPieces: () => ThirtyfiveContourPieces =
     (): ThirtyfiveContourPieces => {
-        const blocks: ThirtyfiveBlocks = buildThirtyfiveBlocks()
+        const blocks: ThirtyfiveBlocks = computeThirtyfiveBlocks()
 
-        const renderings: Renderings = buildRenderings()
+        const renderings: Renderings = computeRenderings()
         const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
 
         const yaosBass: ContourPiece<PitchDuration> = glis(blocks.yaosBass)
@@ -25,5 +25,5 @@ const buildThirtyfiveContourPieces: () => ThirtyfiveContourPieces =
     }
 
 export {
-    buildThirtyfiveContourPieces,
+    computeThirtyfiveContourPieces,
 }

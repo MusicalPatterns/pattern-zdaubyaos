@@ -4,7 +4,7 @@ import { PitchDuration } from '@musical-patterns/pattern'
 import { ContourWhole, repeatCall, sequence, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
-import { AlmostTrueContourPieces, buildAlmostTrueContourPieces } from '../almostTrue'
+import { AlmostTrueContourPieces, computeAlmostTrueContourPieces } from '../almostTrue'
 import { getTrueContours } from './pieces'
 import { FormulaicTrueYaosContourWhole, TrueContourWholes } from './types'
 
@@ -54,9 +54,9 @@ const trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosContourWhole: FormulaicTrue
     ),
 ]))
 
-const buildTrueContourWholes: () => TrueContourWholes =
+const computeTrueContourWholes: () => TrueContourWholes =
     (): TrueContourWholes => {
-        const almostTruePieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
+        const almostTruePieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
         const yaosUmowchuwowiestSpringToSummer: ContourWhole<PitchDuration> =
             trueFormulaicUmowchuwowiestToInaidjiyaiouzdContourWhole(RenderingName.SPRING, RenderingName.SUMMER)
         const yaosUmowchuwowiestSummerToSpring: ContourWhole<PitchDuration> =
@@ -127,4 +127,4 @@ const buildTrueContourWholes: () => TrueContourWholes =
             zdaubTrem,
         }
     }
-export { buildTrueContourWholes }
+export { computeTrueContourWholes }

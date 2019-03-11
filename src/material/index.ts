@@ -1,10 +1,10 @@
-export { buildNotes } from './notes'
+export { computeNotes } from './notes'
 export { materializeEntities } from './entities'
 export { materializeScales } from './scales'
-export { buildNote } from './features'
-export { buildSegment } from './segments'
+export { computeNote } from './features'
+export { computeSegment } from './segments'
 export {
-    buildRenderings,
+    computeRenderings,
     RenderingName,
     Renderings,
 } from './renderings'

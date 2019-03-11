@@ -2,15 +2,15 @@ import { PitchDuration, pitchDurationRest } from '@musical-patterns/pattern'
 import { ContourWhole, repeat, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
-import { AlmostTrueContourPieces, buildAlmostTrueContourPieces } from '../almostTrue'
-import { buildOtherContourPieces, OtherContourPieces } from '../other'
+import { AlmostTrueContourPieces, computeAlmostTrueContourPieces } from '../almostTrue'
+import { computeOtherContourPieces, OtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
 import { BreatherContourWholes } from './types'
 
-const buildBreatherContourWholes: () => BreatherContourWholes =
+const computeBreatherContourWholes: () => BreatherContourWholes =
     (): BreatherContourWholes => {
-        const almostTruePieces: AlmostTrueContourPieces = buildAlmostTrueContourPieces()
-        const otherPieces: OtherContourPieces = buildOtherContourPieces()
+        const almostTruePieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
+        const otherPieces: OtherContourPieces = computeOtherContourPieces()
 
         const rest: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(pitchDurationRest(24))
         const spring: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(getTrueContours(
@@ -46,5 +46,5 @@ const buildBreatherContourWholes: () => BreatherContourWholes =
     }
 
 export {
-    buildBreatherContourWholes,
+    computeBreatherContourWholes,
 }

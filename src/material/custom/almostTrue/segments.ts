@@ -1,14 +1,14 @@
 import { Segment } from '@musical-patterns/pattern'
 import { to } from '@musical-patterns/utilities'
-import { buildSegment } from '../../segments'
+import { computeSegment } from '../../segments'
 import { AlmostTrueContourWholes, AlmostTrueSegments } from './types'
-import { buildAlmostTrueContourWholes } from './wholes'
+import { computeAlmostTrueContourWholes } from './wholes'
 
-const buildAlmostTrueSegments: () => AlmostTrueSegments =
+const computeAlmostTrueSegments: () => AlmostTrueSegments =
     (): AlmostTrueSegments => {
-        const wholes: AlmostTrueContourWholes = buildAlmostTrueContourWholes()
+        const wholes: AlmostTrueContourWholes = computeAlmostTrueContourWholes()
 
-        const fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling: Segment = buildSegment(
+        const fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling: Segment = computeSegment(
             [
                 wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
                 wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
@@ -21,7 +21,7 @@ const buildAlmostTrueSegments: () => AlmostTrueSegments =
             ],
         )
 
-        const extendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonically: Segment = buildSegment(
+        const extendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonically: Segment = computeSegment(
             [
                 wholes.extendedEndingZdaubTrem,
                 wholes.extendedEndingZdaubBony,
@@ -34,7 +34,7 @@ const buildAlmostTrueSegments: () => AlmostTrueSegments =
             ],
         )
 
-        const bonyJigAndNowItGetsKindaHighAndMagicSparkly: Segment = buildSegment(
+        const bonyJigAndNowItBecomesKindaHighAndMagicSparkly: Segment = computeSegment(
             [
                 wholes.yetOfBackbone,
                 wholes.yetOfBackbone,
@@ -48,12 +48,12 @@ const buildAlmostTrueSegments: () => AlmostTrueSegments =
         )
 
         return {
-            bonyJigAndNowItGetsKindaHighAndMagicSparkly,
+            bonyJigAndNowItBecomesKindaHighAndMagicSparkly,
             extendedEndingAllZdaubTriumphantAllNoteTypesFlippedHarmonically,
             fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling,
         }
     }
 
 export {
-    buildAlmostTrueSegments,
+    computeAlmostTrueSegments,
 }

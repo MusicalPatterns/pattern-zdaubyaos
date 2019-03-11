@@ -1,11 +1,11 @@
 import { PitchDuration } from '@musical-patterns/pattern'
 import { to } from '@musical-patterns/utilities'
-import { buildOtherContourPieces, OtherContourPieces } from '../../../../../../src/indexForTest'
+import { computeOtherContourPieces, OtherContourPieces } from '../../../../../../src/indexForTest'
 
 describe('other contour pieces', () => {
     let otherContourPieces: OtherContourPieces
     beforeEach(() => {
-        otherContourPieces = buildOtherContourPieces()
+        otherContourPieces = computeOtherContourPieces()
     })
 
     it('handles backbone fifteen', () => {

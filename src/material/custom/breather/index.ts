@@ -1,4 +1,4 @@
-export { buildBreatherSegments } from './segments'
+export { computeBreatherSegments } from './segments'
 
 export {
     BreatherSegments,

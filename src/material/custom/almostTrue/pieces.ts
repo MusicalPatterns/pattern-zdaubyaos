@@ -1,21 +1,21 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { apply, Block, ContourPiece, map, Ordinal, sequence, to } from '@musical-patterns/utilities'
-import { buildRenderings, RenderingName, Renderings } from '../../renderings'
+import { computeRenderings, RenderingName, Renderings } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
-import { buildTrueBlocks, TrueBlocksByBarTargetThenBlockStyle } from '../true'
-import { buildAlmostTrueBlocks } from './blocks'
+import { computeTrueBlocks, TrueBlocksByBarTargetThenBlockStyle } from '../true'
+import { computeAlmostTrueBlocks } from './blocks'
 import { AlmostTrueBlocks, AlmostTrueContourPieces } from './types'
 
-const buildAlmostTrueContourPieces: () => AlmostTrueContourPieces =
+const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
     (): AlmostTrueContourPieces => {
-        const blocks: AlmostTrueBlocks = buildAlmostTrueBlocks()
+        const blocks: AlmostTrueBlocks = computeAlmostTrueBlocks()
 
-        const renderings: Renderings = buildRenderings()
+        const renderings: Renderings = computeRenderings()
         const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
 
         const zdaubGlisVariant: ContourPiece<PitchDuration> = glis(blocks.trueGlisVariant)
 
-        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = buildTrueBlocks()
+        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = computeTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
         const inaiiiVariety: ContourPiece<PitchDuration> = to.ContourPiece(sequence(
             map(inai, (cell: number, index: Ordinal): ContourPiece<PitchDuration> => {
@@ -43,5 +43,5 @@ const buildAlmostTrueContourPieces: () => AlmostTrueContourPieces =
     }
 
 export {
-    buildAlmostTrueContourPieces,
+    computeAlmostTrueContourPieces,
 }

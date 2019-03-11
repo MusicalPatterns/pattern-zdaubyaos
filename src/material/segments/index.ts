@@ -1,5 +1,5 @@
-export { buildSegment } from './segment'
-export { buildSegments } from './segments'
+export { computeSegment } from './segment'
+export { computeSegments } from './segments'
 
 export {
     NoteStyle,

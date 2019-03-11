@@ -3,12 +3,12 @@ import { ContourWhole, INITIAL, repeat, repeatCall, sequence, slice, to } from '
 import { RenderingName } from '../../renderings'
 import { BarTarget, BlockStyle } from '../../types'
 import { getTrueContours } from '../true'
-import { buildOtherContourPieces } from './pieces'
+import { computeOtherContourPieces } from './pieces'
 import { OtherContourPieces, OtherContourWholes } from './types'
 
-const buildOtherContourWholes: () => OtherContourWholes =
+const computeOtherContourWholes: () => OtherContourWholes =
     (): OtherContourWholes => {
-        const contourPieces: OtherContourPieces = buildOtherContourPieces()
+        const contourPieces: OtherContourPieces = computeOtherContourPieces()
 
         const secretLongChord: ContourWhole<PitchDuration> =
             to.ContourWhole<PitchDuration>(contourPieces.secretLongChord)
@@ -39,5 +39,5 @@ const buildOtherContourWholes: () => OtherContourWholes =
     }
 
 export {
-    buildOtherContourWholes,
+    computeOtherContourWholes,
 }

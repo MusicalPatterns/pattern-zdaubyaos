@@ -16,7 +16,7 @@ const renderByBlockElement:
     (renderingByBlockElement: RenderingByBlockElement<PitchDuration>): Rendering<PitchDuration> =>
         (block: Block): ContourPiece<PitchDuration> => to.ContourPiece(sequence(block.map(renderingByBlockElement)))
 
-const buildRenderings: () => Renderings =
+const computeRenderings: () => Renderings =
     (): Renderings => ({
         [ RenderingName.GLIS ]: (block: Block): ContourPiece<PitchDuration> =>
             renderByBlockElement(glisRendering)(block),
@@ -38,5 +38,5 @@ const buildRenderings: () => Renderings =
     })
 
 export {
-    buildRenderings,
+    computeRenderings,
 }
