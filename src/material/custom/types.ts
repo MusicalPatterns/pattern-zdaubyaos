@@ -4,9 +4,11 @@ import { BarTarget, BlockStyle } from '../types'
 
 type UsageCount = Cardinal
 
-type UsageCountByRendering = { [z in RenderingName]?: UsageCount }
+type UsageCountByRendering = { [Index in RenderingName]?: UsageCount }
 
-type UsageGrouping = { [x in BarTarget]: { [y in BlockStyle]?: UsageCountByRendering } }
+type UsageCountByBlockStyle = { [Index in BlockStyle]?: UsageCountByRendering }
+
+type UsageGrouping = { [Index in BarTarget]: UsageCountByBlockStyle }
 
 export {
     UsageCount,
