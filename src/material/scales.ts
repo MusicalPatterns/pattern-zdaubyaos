@@ -5,7 +5,7 @@ import {
     computeSubharmonicSeriesScale,
     materializeStandardScales,
     STANDARD_PITCH_SCALE_INDEX,
-    StandardSpec,
+    StandardSpecs,
 } from '@musical-patterns/pattern'
 import {
     computeDubparticularSeriesScalars,
@@ -16,7 +16,7 @@ import {
 import { from, Scalar } from '@musical-patterns/utilities'
 
 const materializeScales: MaterializeScales =
-    (spec: StandardSpec): Scale[] => {
+    (specs: StandardSpecs): Scale[] => {
         const superparticularSeriesScalars: Scalar[] = computeSuperparticularSeriesScalars()
             .map<Scalar>(from.Frequency)
         const duperparticularSeriesScalars: Scalar[] = computeDuperparticularSeriesScalars()
@@ -27,7 +27,7 @@ const materializeScales: MaterializeScales =
             .map<Scalar>(from.Frequency)
 
         const standardScales: Scale[] = materializeStandardScales(
-            spec,
+            specs,
             { durationScalars: computeFlatDurationsScale().scalars, pitchScalars: subparticularSeriesScalars },
         )
 
