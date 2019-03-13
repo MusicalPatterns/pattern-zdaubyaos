@@ -1,6 +1,6 @@
 import { Segment } from '@musical-patterns/pattern'
 import { to } from '@musical-patterns/utilities'
-import { computeSegment } from '../../segments'
+import { computeSegment } from '../../segment'
 import { AlmostTrueContourWholes, AlmostTrueSegments } from './types'
 import { computeAlmostTrueContourWholes } from './wholes'
 

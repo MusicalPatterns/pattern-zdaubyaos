@@ -1,5 +1,5 @@
 import { apply, INCREMENT, isUndefined, Maybe, to } from '@musical-patterns/utilities'
-import { RenderingName } from '../renderings'
+import { RenderingName } from '../rendering'
 import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
 

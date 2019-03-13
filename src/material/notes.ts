@@ -2,7 +2,7 @@ import { Note } from '@musical-patterns/compiler'
 import { Segment } from '@musical-patterns/pattern'
 import { apply } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
-import { computeSegments } from './segments'
+import { computeSegments } from './segment'
 import { ZdaubyaosNotes } from './types'
 
 const computeNotes: () => ZdaubyaosNotes =

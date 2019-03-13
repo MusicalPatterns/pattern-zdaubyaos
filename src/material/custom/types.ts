@@ -1,5 +1,5 @@
 import { Cardinal } from '@musical-patterns/utilities'
-import { RenderingName } from '../renderings'
+import { RenderingName } from '../rendering'
 import { BarTarget, BlockStyle } from '../types'
 
 type UsageCount = Cardinal

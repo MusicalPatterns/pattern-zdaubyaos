@@ -8,7 +8,7 @@ export {
     computeRenderings,
     RenderingName,
     Renderings,
-} from './renderings/indexForTest'
+} from './rendering/indexForTest'
 export {
     computeOtherContourPieces,
     computeThirtyfiveContourPieces,
@@ -24,7 +24,7 @@ export {
 export {
     applyGainScalar,
     applyPitchIndexTranslation,
-} from './segments/indexForTest'
+} from './segment/indexForTest'
 
 export {
     BarTarget,

@@ -1,6 +1,6 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import { ContourPiece } from '@musical-patterns/utilities'
-import { computeRenderings, RenderingName, Renderings } from '../../renderings'
+import { computeRenderings, RenderingName, Renderings } from '../../rendering'
 import { computeThirtyfiveBlocks } from './blocks'
 import { ThirtyfiveBlocks, ThirtyfiveContourPieces } from './types'
 

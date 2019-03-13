@@ -1,6 +1,6 @@
 import { Segment } from '@musical-patterns/pattern'
 import { negative, to } from '@musical-patterns/utilities'
-import { computeSegment } from '../../segments'
+import { computeSegment } from '../../segment'
 import { OtherContourWholes, OtherSegments } from './types'
 import { computeOtherContourWholes } from './wholes'
 

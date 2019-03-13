@@ -2,7 +2,7 @@
 
 import { PitchDuration } from '@musical-patterns/pattern'
 import { ContourWhole, repeatCall, sequence, to } from '@musical-patterns/utilities'
-import { RenderingName } from '../../renderings'
+import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { AlmostTrueContourPieces, computeAlmostTrueContourPieces } from '../almostTrue'
 import { getTrueContours } from './pieces'

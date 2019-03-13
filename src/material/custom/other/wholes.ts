@@ -1,6 +1,6 @@
 import { PitchDuration } from '@musical-patterns/pattern'
 import { ContourWhole, INITIAL, repeat, repeatCall, sequence, slice, to } from '@musical-patterns/utilities'
-import { RenderingName } from '../../renderings'
+import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { getTrueContours } from '../true'
 import { computeOtherContourPieces } from './pieces'

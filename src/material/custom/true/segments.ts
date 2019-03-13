@@ -2,7 +2,7 @@
 
 import { Segment } from '@musical-patterns/pattern'
 import { negative, to } from '@musical-patterns/utilities'
-import { computeSegment } from '../../segments'
+import { computeSegment } from '../../segment'
 import { TrueContourWholes, TrueSegments } from './types'
 import { computeTrueContourWholes } from './wholes'
 
