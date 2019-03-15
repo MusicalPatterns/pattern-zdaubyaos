@@ -1,16 +1,21 @@
 import { Note } from '@musical-patterns/compiler'
-import { apply, from, Ordinal, sum, to } from '@musical-patterns/utilities'
+import { computeNotesTotalDurationByIndex } from '@musical-patterns/pattern'
+import { to, translateFromZeroIndexedToOneIndexed } from '@musical-patterns/utilities'
 
 const computeTotalZdaubyaosDuration: (notes: Note[]) => number =
-    (notes: Note[]): number =>
-        notes.reduce(
-            (accumulator: number, { duration }: Note): number => {
-                const durationIndex: Ordinal = duration && duration.index || to.Ordinal(0)
-
-                return apply.Translation(accumulator, to.Translation(sum(from.Ordinal(durationIndex), 1)))
+    (notes: Note[]): number => {
+        const notesWithDurationIndicesAdjustedToBeOneIndexed: Note[] = notes.map((note: Note) => ({
+            ...note,
+            duration: {
+                ...note.duration,
+                index: note.duration && note.duration.index ?
+                    translateFromZeroIndexedToOneIndexed(note.duration.index) :
+                    to.Ordinal(1),
             },
-            0,
-        )
+        }))
+
+        return computeNotesTotalDurationByIndex(notesWithDurationIndicesAdjustedToBeOneIndexed)
+    }
 
 export {
     computeTotalZdaubyaosDuration,
