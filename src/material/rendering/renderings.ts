@@ -14,7 +14,7 @@ import { RenderingName, Renderings } from './types'
 const renderByBlockElement:
     (renderingByBlockElement: RenderingByBlockElement<PitchDuration>) => Rendering<PitchDuration> =
     (renderingByBlockElement: RenderingByBlockElement<PitchDuration>): Rendering<PitchDuration> =>
-        (block: Block): ContourPiece<PitchDuration> => to.ContourPiece(sequence(block.map(renderingByBlockElement)))
+        (block: Block): ContourPiece<PitchDuration> => to.ContourPiece(sequence(...block.map(renderingByBlockElement)))
 
 const computeRenderings: () => Renderings =
     (): Renderings => ({

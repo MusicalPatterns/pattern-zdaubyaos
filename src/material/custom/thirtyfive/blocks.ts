@@ -23,14 +23,14 @@ const computeThirtyfiveBlocks: () => ThirtyfiveBlocks =
 
         const zdaubOnlyWiggle: Block = to.Block(repeat([ 4, 1 ], to.Cardinal(7)))
 
-        const zdaub: Block = to.Block(sequence([
+        const zdaub: Block = to.Block(sequence(
             zdaubOnlyWiggle,
             zdaubOnlyWiggle,
             to.Block([ 13, 10, 7, 4, 1 ]),
             zdaubOnlyWiggle,
             to.Block([ 19, 16 ]),
             to.Block([ 13, 10, 7, 4, 1 ]),
-        ]))
+        ))
 
         return {
             yaosAccidentInspired,

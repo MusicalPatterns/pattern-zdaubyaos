@@ -22,11 +22,11 @@ const computeOtherContourWholes: () => OtherContourWholes =
             to.Cardinal(3),
         ))
 
-        const shiftyA: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(sequence([
+        const shiftyA: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(sequence(
             repeatCall(() => contourPieces.shiftyFifteen, to.Cardinal(3)),
             repeatCall(() => contourPieces.shiftyTwentyfour, to.Cardinal(4)),
             repeatCall(() => contourPieces.shiftyTwentyfourVariant, to.Cardinal(3)),
-        ]))
+        ))
 
         const shiftyB: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(contourPieces.shifty)
 
