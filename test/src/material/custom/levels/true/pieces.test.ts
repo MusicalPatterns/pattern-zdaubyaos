@@ -44,7 +44,7 @@ describe('true contours', () => {
                             [ 4, 4 ], [ 5, 5 ], [ 6, 6 ],
                             [ 7, 7 ], [ 8, 8 ],
                             [ 9, 9 ], [ 10, 10 ], [ 11, 11 ],
-                            // Lasts 2 bars
+                            // Takes 2 bars
                         ]))
                 })
             })
@@ -122,7 +122,7 @@ describe('true contours', () => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.SCEND ][ RenderingName.GLIS ])
                         .toEqual(to.ContourPiece<PitchDuration>([
                             [ 13, 13 ], [ 11, 11 ],
-                            // Lasts 2 bars
+                            // Takes 2 bars
                         ]))
                 })
             })
@@ -146,7 +146,7 @@ describe('true contours', () => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.SCEND ][ RenderingName.TREM ])
                         .toEqual(to.ContourPiece<PitchDuration>([
                             [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ],
-                            // Lasts 2 bars
+                            // Takes 2 bars
                         ]))
                 })
             })

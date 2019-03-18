@@ -22,7 +22,7 @@ const computeTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
                     4, 5, 6,
                     7, 8,
                     9, 10, 11,
-                    // Lasts 2 bars
+                    // Takes 2 bars
                 ]),
             },
             [ BarTarget.TWENTYFOUR ]: {
@@ -40,7 +40,7 @@ const computeTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
                 ]),
                 [ BlockStyle.SCEND ]: to.Block([
                     13, 11,
-                    // Lasts 2 bars
+                    // Takes 2 bars
                 ]),
             },
         })
