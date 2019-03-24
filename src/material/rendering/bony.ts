@@ -1,6 +1,7 @@
 import { PitchDuration, Rendering } from '@musical-patterns/pattern'
 import {
     apply,
+    arraySet,
     Block,
     Cardinal,
     ContourPiece,
@@ -13,6 +14,7 @@ import {
     repeat,
     sum,
     to,
+    ZEROTH,
 } from '@musical-patterns/utilities'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
@@ -55,7 +57,11 @@ const bonyRendering: Rendering<PitchDuration> =
         rhythmicBlocks.forEach((rhythmicBlockElement: number): void => {
             const pitchIndex: number = apply.Ordinal(block, blocksIndexForPitchIndex)
 
-            blockClone[ 0 ] = apply.Translation(blockClone[ 0 ], to.Translation(negative(rhythmicBlockElement)))
+            arraySet(
+                blockClone,
+                ZEROTH,
+                apply.Translation(blockClone[ 0 ], to.Translation(negative(rhythmicBlockElement))),
+            )
             if (blockClone[ 0 ] < 0) {
                 return
             }

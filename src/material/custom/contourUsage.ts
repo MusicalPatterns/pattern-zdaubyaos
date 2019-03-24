@@ -1,4 +1,4 @@
-import { apply, INCREMENT, isUndefined, Maybe, to } from '@musical-patterns/utilities'
+import { apply, INCREMENT, isUndefined, Maybe, objectSet, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../rendering'
 import { BarTarget, BlockStyle } from '../types'
 import { UsageCount, UsageCountByRendering, UsageGrouping } from './types'
@@ -21,10 +21,10 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: 
             let byRenderingName: Maybe<UsageCount> = byBlockStyle[ renderingName ]
             if (!isUndefined(byRenderingName)) {
                 byRenderingName = apply.Translation(byRenderingName, INCREMENT)
-                byBlockStyle[ renderingName ] = byRenderingName
+                objectSet(byBlockStyle, renderingName, byRenderingName)
             }
             else {
-                byBlockStyle[ renderingName ] = to.Cardinal(1)
+                objectSet(byBlockStyle, renderingName, to.Cardinal(1))
             }
         }
     }
