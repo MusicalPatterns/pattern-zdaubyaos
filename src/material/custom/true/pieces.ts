@@ -16,7 +16,13 @@ const contourPiecesByBarTargetBlockStyleThenRendering: TrueContourPiecesByBarTar
     // tslint:disable-next-line no-object-literal-type-assertion
     {} as TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName
 
-const computeTrueContourPiece: (parameters: ComputeTrueContourPieceParameters) => void =
+const computeTrueContourPiece: (parameters: {
+    barTarget: BarTarget,
+    block: Block,
+    blockStyle: BlockStyle,
+    rendering: Rendering<PitchDuration>,
+    renderingName: RenderingName,
+}) => void =
     (parameters: ComputeTrueContourPieceParameters): void => {
         const {
             rendering,
