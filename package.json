@@ -1,6 +1,6 @@
 {
   "name": "@musical-patterns/pattern-zdaubyaos",
-  "version": "1.0.125",
+  "version": "1.0.126",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "MIT",
@@ -15,9 +15,9 @@
     "@musical-patterns/utilities": "^1.0.393"
   },
   "devDependencies": {
-    "@musical-patterns/cli": "^1.0.505",
+    "@musical-patterns/cli": "^1.0.506",
     "@musical-patterns/performer": "^1.0.222",
     "@musical-patterns/playroom": "^1.0.352",
-    "@musical-patterns/snapshot": "^1.0.60"
+    "@musical-patterns/snapshot": "^1.0.64"
   }
 }
