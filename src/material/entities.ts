@@ -7,17 +7,17 @@ const materializeEntities: MaterializeEntities =
         const notes: ZdaubyaosNotes = computeNotes()
 
         const subDub: Entity = {
-            notes: notes.subDub,
+            sections: [ { notes: notes.subDub } ],
             timbreName: TimbreNameEnum.PHONEME_BAH,
         }
 
         const superDuper: Entity = {
-            notes: notes.superDuper,
+            sections: [ { notes: notes.superDuper } ],
             timbreName: TimbreNameEnum.BRIT_BLUES_DRIVEN,
         }
 
         const harmSubharm: Entity = {
-            notes: notes.harmSubharm,
+            sections: [ { notes: notes.harmSubharm } ],
             timbreName: TimbreNameEnum.CELESTE,
         }
 
