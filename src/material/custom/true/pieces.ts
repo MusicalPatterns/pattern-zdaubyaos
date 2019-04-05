@@ -23,14 +23,15 @@ const computeTrueContourPiece: (parameters: {
     rendering: Rendering<PitchDuration>,
     renderingName: RenderingName,
 }) => void =
-    (parameters: ComputeTrueContourPieceParameters): void => {
-        const {
+    (
+        {
             rendering,
             block,
             barTarget,
             blockStyle,
             renderingName,
-        }: ComputeTrueContourPieceParameters = parameters
+        }: ComputeTrueContourPieceParameters,
+    ): void => {
         const contourPiece: ContourPiece<PitchDuration> = rendering(block)
 
         contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] =
