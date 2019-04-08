@@ -1,4 +1,4 @@
-import { Note } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/material'
 import { PitchDuration } from '@musical-patterns/pattern'
 import { apply, ContourWhole } from '@musical-patterns/utilities'
 import { TRANSLATION_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'

@@ -1,4 +1,4 @@
-import { Note } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/material'
 import { PitchDuration, Segment } from '@musical-patterns/pattern'
 import { apply, ContourWhole, map, Ordinal } from '@musical-patterns/utilities'
 import { applyNoteStyle } from './applyNoteStyle'

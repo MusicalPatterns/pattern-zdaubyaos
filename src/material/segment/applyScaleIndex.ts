@@ -1,4 +1,4 @@
-import { Note } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/material'
 import { Ordinal } from '@musical-patterns/utilities'
 
 const applyScaleIndex: (notes: Note[], scaleIndex: Ordinal) => Note[] =

@@ -1,4 +1,4 @@
-import { Note } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/material'
 import { apply, Translation } from '@musical-patterns/utilities'
 
 const applyPitchIndexTranslation: (notes: Note[], pitchIndexTranslation: Translation) => Note[] =

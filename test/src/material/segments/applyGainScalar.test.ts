@@ -1,4 +1,4 @@
-import { Note } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/material'
 import { Scalar, to } from '@musical-patterns/utilities'
 import { applyGainScalar } from '../../../../src/indexForTest'
 

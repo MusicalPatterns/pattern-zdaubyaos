@@ -1,4 +1,4 @@
-import { Note } from '@musical-patterns/compiler'
+import { Note } from '@musical-patterns/material'
 import { Amplitude, apply, Scalar } from '@musical-patterns/utilities'
 
 const applyGainScalar: (notes: Note[], gainScalar: Scalar<Amplitude>) => Note[] =
