@@ -1,4 +1,4 @@
-import { computeTotalPitchDurationContourDuration, PitchDuration, pitchDurationRest } from '@musical-patterns/pattern'
+import { computeTotalPitchDurationContourDuration, PitchDuration, pitchDurationRest } from '@musical-patterns/material'
 import { ContourWhole, repeat, sequence, to } from '@musical-patterns/utilities'
 import { computeThirtyfiveContourPieces } from './pieces'
 import { ThirtyfiveContourPieces, ThirtyfiveContourWholes } from './types'

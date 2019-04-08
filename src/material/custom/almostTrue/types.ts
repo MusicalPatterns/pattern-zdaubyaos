@@ -1,4 +1,4 @@
-import { PitchDuration, Segment } from '@musical-patterns/pattern'
+import { PitchDuration, Segment } from '@musical-patterns/material'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 
 interface AlmostTrueBlocks {

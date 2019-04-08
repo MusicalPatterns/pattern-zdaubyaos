@@ -1,11 +1,11 @@
-import { Note } from '@musical-patterns/material'
 import {
     FULL_GAIN,
+    Note,
     PitchDuration,
     SILENT,
     STANDARD_DURATIONS_SCALE_INDEX,
     STANDARD_PITCH_INDEX_INDICATING_REST,
-} from '@musical-patterns/pattern'
+} from '@musical-patterns/material'
 import {
     Amplitude,
     ContourElement,

@@ -1,4 +1,4 @@
-import { computeTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
+import { computeTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/material'
 import { dividesEvenly, to } from '@musical-patterns/utilities'
 import { computeThirtyfiveContourPieces, ThirtyfiveContourPieces } from '../../../../../../src/indexForTest'
 

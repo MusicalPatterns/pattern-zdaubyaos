@@ -1,18 +1,19 @@
-import { MaterializeScales, Scale } from '@musical-patterns/material'
 import {
     computeFlatDurationsScale,
     computeHarmonicSeriesScale,
     computeSubharmonicSeriesScale,
+    MaterializeScales,
     materializeStandardScales,
+    Scale,
     STANDARD_PITCH_SCALE_INDEX,
-    StandardSpecs,
-} from '@musical-patterns/pattern'
+} from '@musical-patterns/material'
 import {
     computeDubparticularSeriesScalars,
     computeDuperparticularSeriesScalars,
     computeSubparticularSeriesScalars,
     computeSuperparticularSeriesScalars,
 } from '@musical-patterns/pattern-xenharmonic-series'
+import { StandardSpecs } from '@musical-patterns/spec'
 import { from, Scalar } from '@musical-patterns/utilities'
 
 const materializeScales: MaterializeScales =

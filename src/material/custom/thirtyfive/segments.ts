@@ -1,4 +1,4 @@
-import { Segment } from '@musical-patterns/pattern'
+import { Segment } from '@musical-patterns/material'
 import { to } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { ThirtyfiveContourWholes, ThirtyfiveSegments } from './types'

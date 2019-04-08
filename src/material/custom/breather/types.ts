@@ -1,4 +1,4 @@
-import { PitchDuration, Segment } from '@musical-patterns/pattern'
+import { PitchDuration, Segment } from '@musical-patterns/material'
 import { ContourWhole } from '@musical-patterns/utilities'
 
 interface BreatherSegments {

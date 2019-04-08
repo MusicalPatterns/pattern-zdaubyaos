@@ -1,4 +1,4 @@
-import { Segment } from '@musical-patterns/pattern'
+import { Segment } from '@musical-patterns/material'
 import { from, INITIAL, slice, to } from '@musical-patterns/utilities'
 import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {

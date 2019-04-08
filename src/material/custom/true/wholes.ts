@@ -1,6 +1,6 @@
 // tslint:disable max-file-line-count
 
-import { PitchDuration } from '@musical-patterns/pattern'
+import { PitchDuration } from '@musical-patterns/material'
 import { ContourWhole, repeatCall, sequence, to } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'

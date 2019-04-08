@@ -1,5 +1,4 @@
-import { Note } from '@musical-patterns/material'
-import { computeNotesTotalDurationByIndex } from '@musical-patterns/pattern'
+import { computeNotesTotalDurationByIndex, Note } from '@musical-patterns/material'
 import { to, translateFromZeroIndexedToOneIndexed } from '@musical-patterns/utilities'
 
 const computeTotalZdaubyaosDuration: (notes: Note[]) => number =

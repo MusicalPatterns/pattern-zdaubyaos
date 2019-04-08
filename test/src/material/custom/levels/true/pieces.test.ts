@@ -1,6 +1,6 @@
 // tslint:disable no-duplicate-string
 
-import { computeTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/pattern'
+import { computeTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/material'
 import { ContourPiece, dividesEvenly, entries, to } from '@musical-patterns/utilities'
 import {
     AlmostTrueContourPieces,

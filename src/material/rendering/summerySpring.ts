@@ -1,4 +1,8 @@
-import { PitchDuration, RenderingByBlockElement, STANDARD_PITCH_INDEX_INDICATING_REST } from '@musical-patterns/pattern'
+import {
+    PitchDuration,
+    RenderingByBlockElement,
+    STANDARD_PITCH_INDEX_INDICATING_REST,
+} from '@musical-patterns/material'
 import {
     apply,
     arraySet,

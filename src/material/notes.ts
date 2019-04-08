@@ -1,5 +1,4 @@
-import { Note } from '@musical-patterns/material'
-import { Segment } from '@musical-patterns/pattern'
+import { Note, Segment } from '@musical-patterns/material'
 import { apply } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { computeSegments } from './segment'

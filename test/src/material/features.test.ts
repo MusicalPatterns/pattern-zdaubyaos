@@ -1,5 +1,4 @@
-import { Note, NoteFeature } from '@musical-patterns/material'
-import { PitchDuration } from '@musical-patterns/pattern'
+import { Note, NoteFeature, PitchDuration } from '@musical-patterns/material'
 import { Ordinal, to } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 

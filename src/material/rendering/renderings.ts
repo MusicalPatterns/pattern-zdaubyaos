@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering, RenderingByBlockElement } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering, RenderingByBlockElement } from '@musical-patterns/material'
 import { Block, ContourPiece, sequence, to } from '@musical-patterns/utilities'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'

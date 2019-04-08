@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering } from '@musical-patterns/pattern'
+import { PitchDuration, Rendering } from '@musical-patterns/material'
 import { Block, ContourPiece, entries } from '@musical-patterns/utilities'
 import { computeRenderings, RenderingName, Renderings } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'

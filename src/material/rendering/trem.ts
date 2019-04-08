@@ -1,4 +1,4 @@
-import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/pattern'
+import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/material'
 import { ContourPiece, repeat, to } from '@musical-patterns/utilities'
 
 const tremRendering: RenderingByBlockElement<PitchDuration> =
