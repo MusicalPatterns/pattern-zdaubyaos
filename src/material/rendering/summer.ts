@@ -9,14 +9,14 @@ import {
     INITIAL,
     Integer,
     isEven,
-    positiveIntegers,
+    POSITIVE_INTEGERS,
     slice,
     to,
 } from '@musical-patterns/utilities'
 
 const summerRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> =>
-        to.ContourPiece<PitchDuration>(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
+        to.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, to.Ordinal(cell))
             .map((integer: Integer): ContourElement<PitchDuration> =>
                 to.ContourElement<PitchDuration>(isEven(integer) ?
                     [ STANDARD_PITCH_INDEX_INDICATING_REST, 1 ] :

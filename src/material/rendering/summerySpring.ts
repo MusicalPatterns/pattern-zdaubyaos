@@ -11,7 +11,7 @@ import {
     DOUBLE,
     INITIAL,
     Integer,
-    positiveIntegers,
+    POSITIVE_INTEGERS,
     slice,
     to,
 } from '@musical-patterns/utilities'
@@ -20,7 +20,7 @@ import { SUMMERY_SPRING_TRANSLATION } from './constants'
 
 const summerySpringRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> => {
-        const contour: ContourPiece<PitchDuration> = to.ContourPiece(slice(positiveIntegers, INITIAL, to.Ordinal(cell))
+        const contour: ContourPiece<PitchDuration> = to.ContourPiece(slice(POSITIVE_INTEGERS, INITIAL, to.Ordinal(cell))
             .map((integer: Integer): ContourElement<PitchDuration> => to.ContourElement<PitchDuration>([
                 apply.Scalar(apply.Translation(integer, SUMMERY_SPRING_TRANSLATION), DOUBLE),
                 1,

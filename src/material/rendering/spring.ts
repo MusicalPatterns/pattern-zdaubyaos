@@ -10,7 +10,7 @@ import {
     from,
     INITIAL,
     Integer,
-    positiveIntegers,
+    POSITIVE_INTEGERS,
     slice,
     to,
 } from '@musical-patterns/utilities'
@@ -19,7 +19,7 @@ import { SINGLE_DURATION } from './constants'
 
 const springRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> => {
-        const integers: Integer[] = slice(positiveIntegers, INITIAL, to.Ordinal(cell))
+        const integers: Integer[] = slice(POSITIVE_INTEGERS, INITIAL, to.Ordinal(cell))
         const contour: ContourPiece<PitchDuration> = to.ContourPiece(
             integers.map((integer: Integer): ContourElement<PitchDuration> =>
                 to.ContourElement<PitchDuration>([ integer, SINGLE_DURATION ]),
