@@ -1,5 +1,5 @@
-import { Segment } from '@musical-patterns/material'
-import { negative, to } from '@musical-patterns/utilities'
+import { Scale, Segment } from '@musical-patterns/material'
+import { Amplitude, negative, Ordinal, Scalar, to } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { OtherContourWholes, OtherSegments } from './types'
 import { computeOtherContourWholes } from './wholes'
@@ -16,19 +16,19 @@ const computeOtherSegments: () => OtherSegments =
             ],
             [
                 {
-                    gainScalar: to.Scalar(to.Amplitude(0.8)),
-                    pitchIndexTranslation: to.Translation(4),
-                    scaleIndex: to.Ordinal(3),
+                    gainScalar: to.Scalar<Amplitude>(0.8),
+                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(4),
+                    scaleIndex: to.Ordinal<Scale>(3),
                 },
                 {
-                    gainScalar: to.Scalar(to.Amplitude(0.8)),
-                    pitchIndexTranslation: to.Translation(6),
-                    scaleIndex: to.Ordinal(4),
+                    gainScalar: to.Scalar<Amplitude>(0.8),
+                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(6),
+                    scaleIndex: to.Ordinal<Scale>(4),
                 },
                 {
-                    gainScalar: to.Scalar(to.Amplitude(0.8)),
-                    pitchIndexTranslation: to.Translation(3),
-                    scaleIndex: to.Ordinal(5),
+                    gainScalar: to.Scalar<Amplitude>(0.8),
+                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(3),
+                    scaleIndex: to.Ordinal<Scale>(5),
                 },
             ],
         )
@@ -40,9 +40,18 @@ const computeOtherSegments: () => OtherSegments =
                 otherContourWholes.totallyOutThere,
             ],
             [
-                { pitchIndexTranslation: to.Translation(2), scaleIndex: to.Ordinal(0) },
-                { pitchIndexTranslation: to.Translation(negative(2)), scaleIndex: to.Ordinal(1) },
-                { pitchIndexTranslation: to.Translation(negative(3)), scaleIndex: to.Ordinal(2) },
+                {
+                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(2),
+                    scaleIndex: to.Ordinal<Scale>(0),
+                },
+                {
+                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(negative(2)),
+                    scaleIndex: to.Ordinal<Scale>(1),
+                },
+                {
+                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(negative(3)),
+                    scaleIndex: to.Ordinal<Scale>(2),
+                },
             ],
         )
 
@@ -53,9 +62,9 @@ const computeOtherSegments: () => OtherSegments =
                 otherContourWholes.shiftyB,
             ],
             [
-                { scaleIndex: to.Ordinal(3) },
-                { scaleIndex: to.Ordinal(4) },
-                { scaleIndex: to.Ordinal(5) },
+                { scaleIndex: to.Ordinal<Scale>(3) },
+                { scaleIndex: to.Ordinal<Scale>(4) },
+                { scaleIndex: to.Ordinal<Scale>(5) },
             ],
         )
 

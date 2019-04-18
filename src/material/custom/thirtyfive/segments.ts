@@ -1,5 +1,5 @@
-import { Segment } from '@musical-patterns/material'
-import { to } from '@musical-patterns/utilities'
+import { Scale, Segment } from '@musical-patterns/material'
+import { Amplitude, to } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { ThirtyfiveContourWholes, ThirtyfiveSegments } from './types'
 import { computeThirtyfiveContourWholes } from './wholes'
@@ -15,9 +15,9 @@ const computeThirtyfiveSegments: () => ThirtyfiveSegments =
                 contourWholes.thirtyfiveYaosBass,
             ],
             [
-                { scaleIndex: to.Ordinal(0), gainScalar: to.Scalar(to.Amplitude(0.66)) },
-                { scaleIndex: to.Ordinal(1) },
-                { scaleIndex: to.Ordinal(5), gainScalar: to.Scalar(to.Amplitude(1.25)) },
+                { scaleIndex: to.Ordinal<Scale>(0), gainScalar: to.Scalar<Amplitude>(0.66) },
+                { scaleIndex: to.Ordinal<Scale>(1) },
+                { scaleIndex: to.Ordinal<Scale>(5), gainScalar: to.Scalar<Amplitude>(1.25) },
             ],
         )
 

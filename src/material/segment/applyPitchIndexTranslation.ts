@@ -1,8 +1,8 @@
 import { Note } from '@musical-patterns/material'
-import { apply, Translation } from '@musical-patterns/utilities'
+import { apply, Ordinal, Scalar, Translation } from '@musical-patterns/utilities'
 
-const applyPitchIndexTranslation: (notes: Note[], pitchIndexTranslation: Translation) => Note[] =
-    (notes: Note[], pitchIndexTranslation: Translation): Note[] =>
+const applyPitchIndexTranslation: (notes: Note[], pitchIndexTranslation: Translation<Ordinal<Scalar>>) => Note[] =
+    (notes: Note[], pitchIndexTranslation: Translation<Ordinal<Scalar>>): Note[] =>
         notes.map((note: Note): Note => ({
             ...note,
             pitch: note.pitch && {

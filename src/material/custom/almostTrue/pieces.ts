@@ -1,5 +1,5 @@
 import { PitchDuration, Rendering } from '@musical-patterns/material'
-import { apply, Block, ContourPiece, map, Ordinal, sequence, to } from '@musical-patterns/utilities'
+import { apply, Block, ContourPiece, insteadOf, map, Ordinal, sequence, to } from '@musical-patterns/utilities'
 import { computeRenderings, RenderingName, Renderings } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { computeTrueBlocks, TrueBlocksByBarTargetThenBlockStyle } from '../true'
@@ -30,7 +30,10 @@ const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
                     renderings[ RenderingName.FALL ],
                 ]
 
-                const rendering: Rendering<PitchDuration> = apply.Ordinal(renderingsSequence, index)
+                const rendering: Rendering<PitchDuration> = apply.Ordinal(
+                    renderingsSequence,
+                    insteadOf<Ordinal, Rendering<PitchDuration>>(index),
+                )
 
                 return rendering(to.Block([ cell ]))
             }),

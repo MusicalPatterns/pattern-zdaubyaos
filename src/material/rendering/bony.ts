@@ -7,8 +7,9 @@ import {
     ContourPiece,
     deepClone,
     dividesEvenly,
-    from,
     negative,
+    NEXT,
+    ofFrom,
     Ordinal,
     reciprocal,
     repeat,
@@ -37,17 +38,17 @@ const bonyRendering: Rendering<PitchDuration> =
         const barDivisor: Cardinal = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
         const barCount: Cardinal = apply.Scalar(
             blocksTotal,
-            to.Scalar(from.Cardinal(reciprocal(barDivisor))),
+            to.Scalar(ofFrom(reciprocal(barDivisor))),
         )
 
         const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
             repeat(
                 FIFTEEN_BONY_BLOCKS,
-                apply.Scalar(barCount, to.Scalar(from.Cardinal(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR))),
+                apply.Scalar(barCount, to.Scalar(ofFrom(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR))),
             ) :
             repeat(
                 TWENTYFOUR_BONY_BLOCKS,
-                apply.Scalar(barCount, to.Scalar(from.Cardinal(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR))),
+                apply.Scalar(barCount, to.Scalar(ofFrom(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR))),
             ),
         )
 
@@ -67,7 +68,7 @@ const bonyRendering: Rendering<PitchDuration> =
             }
             if (blockClone[ 0 ] === 0) {
                 blockClone.shift()
-                blocksIndexForPitchIndex = apply.Translation(blocksIndexForPitchIndex, to.Translation(1))
+                blocksIndexForPitchIndex = apply.Translation(blocksIndexForPitchIndex, NEXT)
             }
 
             contourPiece.push(to.ContourElement<PitchDuration>([ pitchIndex, rhythmicBlockElement ]))
