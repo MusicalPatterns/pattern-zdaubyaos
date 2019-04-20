@@ -4,24 +4,24 @@ import {
     STANDARD_PITCH_INDEX_INDICATING_REST,
 } from '@musical-patterns/material'
 import {
+    as,
     ContourElement,
     ContourPiece,
-    from,
     INITIAL,
     Integer,
     isEven,
+    notAs,
     POSITIVE_INTEGERS,
     Scalar,
     slice,
-    to,
 } from '@musical-patterns/utilities'
 
 const summerRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> =>
-        to.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, to.Ordinal(cell))
+        as.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal(cell))
             .map((integer: Integer): ContourElement<PitchDuration> =>
-                to.ContourElement<PitchDuration>(isEven(integer) ?
-                    [ from.Ordinal<Scalar>(STANDARD_PITCH_INDEX_INDICATING_REST), 1 ] :
+                as.ContourElement<PitchDuration>(isEven(integer) ?
+                    [ notAs.Ordinal<Scalar>(STANDARD_PITCH_INDEX_INDICATING_REST), 1 ] :
                     [ integer, 1 ],
                 ),
             ),

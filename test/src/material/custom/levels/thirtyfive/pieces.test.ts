@@ -1,5 +1,5 @@
 import { computeTotalPitchDurationContourDuration, PitchDuration } from '@musical-patterns/material'
-import { dividesEvenly, to } from '@musical-patterns/utilities'
+import { as, dividesEvenly } from '@musical-patterns/utilities'
 import { computeThirtyfiveContourPieces, ThirtyfiveContourPieces } from '../../../../../../src/indexForTest'
 
 describe('thirtyfive contour pieces', () => {
@@ -10,7 +10,7 @@ describe('thirtyfive contour pieces', () => {
 
     it('handles yaos bass', () => {
         expect(thirtyfiveContourPieces.yaosBass)
-            .toEqual(to.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchDuration>([
                 [ 1, 1 ], [ 5, 5 ],
                 [ 1, 1 ], [ 5, 5 ],
                 [ 1, 1 ], [ 3, 3 ],
@@ -23,7 +23,7 @@ describe('thirtyfive contour pieces', () => {
 
     it('handles yaos accident inspired', () => {
         expect(thirtyfiveContourPieces.yaosAccidentInspired)
-            .toEqual(to.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchDuration>([
                 [ 1, 1 ], [ 2, 2 ], [ 3, 3 ],
                 [ 1, 1 ], [ 2, 2 ], [ 3, 3 ], [ 4, 4 ],
                 [ 1, 1 ], [ 2, 2 ], [ 3, 3 ],
@@ -35,7 +35,7 @@ describe('thirtyfive contour pieces', () => {
 
     it('handles zdaub', () => {
         expect(thirtyfiveContourPieces.zdaub)
-            .toEqual(to.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchDuration>([
                 [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ],
                 [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ],
                 [ 13, 13 ], [ 10, 10 ], [ 7, 7 ], [ 4, 4 ], [ 1, 1 ],
@@ -47,7 +47,7 @@ describe('thirtyfive contour pieces', () => {
 
     it('handles only wiggle', () => {
         expect(thirtyfiveContourPieces.zdaubOnlyWiggle)
-            .toEqual(to.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchDuration>([
                 [ 4, 4 ], [ 1, 1 ],
                 [ 4, 4 ], [ 1, 1 ],
                 [ 4, 4 ], [ 1, 1 ],

@@ -1,5 +1,5 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { Amplitude, to } from '@musical-patterns/utilities'
+import { Amplitude, as } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { AlmostTrueContourWholes, AlmostTrueSegments } from './types'
 import { computeAlmostTrueContourWholes } from './wholes'
@@ -15,9 +15,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(3) },
-                { scaleIndex: to.Ordinal<Scale>(4) },
-                { scaleIndex: to.Ordinal<Scale>(5) },
+                { scaleIndex: as.Ordinal<Scale>(3) },
+                { scaleIndex: as.Ordinal<Scale>(4) },
+                { scaleIndex: as.Ordinal<Scale>(5) },
             ],
         )
 
@@ -28,9 +28,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.extendedEndingZdaubGlis,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(3) },
-                { scaleIndex: to.Ordinal<Scale>(4) },
-                { scaleIndex: to.Ordinal<Scale>(5) },
+                { scaleIndex: as.Ordinal<Scale>(3) },
+                { scaleIndex: as.Ordinal<Scale>(4) },
+                { scaleIndex: as.Ordinal<Scale>(5) },
             ],
         )
 
@@ -41,9 +41,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.zdaubBonyWithSuperinscape,
             ],
             [
-                { gainScalar: to.NormalScalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(3) },
-                { gainScalar: to.NormalScalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(4) },
-                { gainScalar: to.NormalScalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(2) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale>(3) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale>(4) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 

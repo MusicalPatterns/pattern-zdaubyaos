@@ -1,5 +1,5 @@
 import { PitchDuration } from '@musical-patterns/material'
-import { ContourWhole, INITIAL, repeat, repeatCall, sequence, slice, to } from '@musical-patterns/utilities'
+import { as, ContourWhole, INITIAL, repeat, repeatCall, sequence, slice } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { getTrueContours } from '../true'
@@ -11,24 +11,24 @@ const computeOtherContourWholes: () => OtherContourWholes =
         const contourPieces: OtherContourPieces = computeOtherContourPieces()
 
         const secretLongChord: ContourWhole<PitchDuration> =
-            to.ContourWhole<PitchDuration>(contourPieces.secretLongChord)
+            as.ContourWhole<PitchDuration>(contourPieces.secretLongChord)
 
-        const totallyOutThere: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(repeat(
+        const totallyOutThere: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(repeat(
             slice(
                 getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
                 INITIAL,
-                to.Ordinal(8),
+                as.Ordinal(8),
             ),
-            to.Cardinal(3),
+            as.Cardinal(3),
         ))
 
-        const shiftyA: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(sequence(
-            repeatCall(() => contourPieces.shiftyFifteen, to.Cardinal(3)),
-            repeatCall(() => contourPieces.shiftyTwentyfour, to.Cardinal(4)),
-            repeatCall(() => contourPieces.shiftyTwentyfourVariant, to.Cardinal(3)),
+        const shiftyA: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(sequence(
+            repeatCall(() => contourPieces.shiftyFifteen, as.Cardinal(3)),
+            repeatCall(() => contourPieces.shiftyTwentyfour, as.Cardinal(4)),
+            repeatCall(() => contourPieces.shiftyTwentyfourVariant, as.Cardinal(3)),
         ))
 
-        const shiftyB: ContourWhole<PitchDuration> = to.ContourWhole<PitchDuration>(contourPieces.shifty)
+        const shiftyB: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(contourPieces.shifty)
 
         return {
             secretLongChord,

@@ -1,5 +1,5 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { Amplitude, negative, Ordinal, Scalar, to } from '@musical-patterns/utilities'
+import { Amplitude, as, negative, Ordinal, Scalar } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { BreatherContourWholes, BreatherSegments } from './types'
 import { computeBreatherContourWholes } from './wholes'
@@ -15,9 +15,9 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.rest,
             ],
             [
-                { gainScalar: to.NormalScalar<Amplitude>(0.5), scaleIndex: to.Ordinal<Scale>(0) },
-                { scaleIndex: to.Ordinal<Scale>(1) },
-                { scaleIndex: to.Ordinal<Scale>(2) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.5), scaleIndex: as.Ordinal<Scale>(0) },
+                { scaleIndex: as.Ordinal<Scale>(1) },
+                { scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 
@@ -28,9 +28,9 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.rest,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(0) },
-                { gainScalar: to.NormalScalar<Amplitude>(0.5), scaleIndex: to.Ordinal<Scale>(4) },
-                { scaleIndex: to.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale>(0) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.5), scaleIndex: as.Ordinal<Scale>(4) },
+                { scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 
@@ -41,12 +41,12 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.doubleFall,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(0) },
-                { scaleIndex: to.Ordinal<Scale>(1) },
+                { scaleIndex: as.Ordinal<Scale>(0) },
+                { scaleIndex: as.Ordinal<Scale>(1) },
                 {
-                    gainScalar: to.NormalScalar<Amplitude>(0.5),
-                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(negative(1)),
-                    scaleIndex: to.Ordinal<Scale>(2),
+                    gainScalar: as.NormalScalar<Amplitude>(0.5),
+                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(negative(1)),
+                    scaleIndex: as.Ordinal<Scale>(2),
                 },
             ],
         )
@@ -58,9 +58,9 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.rest,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(0) },
-                { gainScalar: to.NormalScalar<Amplitude>(0.5), scaleIndex: to.Ordinal<Scale>(1) },
-                { scaleIndex: to.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale>(0) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.5), scaleIndex: as.Ordinal<Scale>(1) },
+                { scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 
@@ -71,9 +71,9 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.variety,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(3) },
-                { scaleIndex: to.Ordinal<Scale>(4) },
-                { scaleIndex: to.Ordinal<Scale>(5) },
+                { scaleIndex: as.Ordinal<Scale>(3) },
+                { scaleIndex: as.Ordinal<Scale>(4) },
+                { scaleIndex: as.Ordinal<Scale>(5) },
             ],
         )
 

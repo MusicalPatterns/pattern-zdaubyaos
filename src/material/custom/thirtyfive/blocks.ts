@@ -1,9 +1,9 @@
-import { Block, repeat, sequence, to } from '@musical-patterns/utilities'
+import { as, Block, repeat, sequence } from '@musical-patterns/utilities'
 import { ThirtyfiveBlocks } from './types'
 
 const computeThirtyfiveBlocks: () => ThirtyfiveBlocks =
     (): ThirtyfiveBlocks => {
-        const yaosBass: Block = to.Block([
+        const yaosBass: Block = as.Block([
             1, 5,
             1, 5,
             1, 3,
@@ -13,7 +13,7 @@ const computeThirtyfiveBlocks: () => ThirtyfiveBlocks =
             1, 2,
         ])
 
-        const yaosAccidentInspired: Block = to.Block([
+        const yaosAccidentInspired: Block = as.Block([
             1, 2, 3,
             1, 2, 3, 4,
             1, 2, 3,
@@ -21,15 +21,15 @@ const computeThirtyfiveBlocks: () => ThirtyfiveBlocks =
             1, 2,
         ])
 
-        const zdaubOnlyWiggle: Block = to.Block(repeat([ 4, 1 ], to.Cardinal(7)))
+        const zdaubOnlyWiggle: Block = as.Block(repeat([ 4, 1 ], as.Cardinal(7)))
 
-        const zdaub: Block = to.Block(sequence(
+        const zdaub: Block = as.Block(sequence(
             zdaubOnlyWiggle,
             zdaubOnlyWiggle,
-            to.Block([ 13, 10, 7, 4, 1 ]),
+            as.Block([ 13, 10, 7, 4, 1 ]),
             zdaubOnlyWiggle,
-            to.Block([ 19, 16 ]),
-            to.Block([ 13, 10, 7, 4, 1 ]),
+            as.Block([ 19, 16 ]),
+            as.Block([ 13, 10, 7, 4, 1 ]),
         ))
 
         return {

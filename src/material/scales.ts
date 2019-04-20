@@ -14,7 +14,7 @@ import {
     computeSuperparticularSeriesScalars,
 } from '@musical-patterns/pattern-xenharmonic-series'
 import { StandardSpecs } from '@musical-patterns/spec'
-import { apply, Hz, Scalar } from '@musical-patterns/utilities'
+import { Hz, Scalar, use } from '@musical-patterns/utilities'
 
 const materializeScales: MaterializeScales =
     // tslint:disable-next-line no-any
@@ -32,29 +32,29 @@ const materializeScales: MaterializeScales =
 
         return standardScales.concat([
             {
-                scalar: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
+                scalar: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
                 scalars: dubparticularSeriesScalars,
-                translation: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
+                translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
             },
             {
-                scalar: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
+                scalar: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
                 scalars: computeHarmonicSeriesScale().scalars,
-                translation: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
+                translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
             },
             {
-                scalar: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
+                scalar: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
                 scalars: superparticularSeriesScalars,
-                translation: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
+                translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
             },
             {
-                scalar: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
+                scalar: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
                 scalars: duperparticularSeriesScalars,
-                translation: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
+                translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
             },
             {
-                scalar: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
+                scalar: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).scalar,
                 scalars: computeSubharmonicSeriesScale().scalars,
-                translation: apply.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
+                translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
             },
         ])
     }

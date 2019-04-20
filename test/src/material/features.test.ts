@@ -1,14 +1,14 @@
 import { Note, NoteFeature, PitchDuration, Scale } from '@musical-patterns/material'
-import { Ordinal, Scalar, to } from '@musical-patterns/utilities'
+import { as, Ordinal, Scalar } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 
-const DURATIONS_SCALE_INDEX: Ordinal<Scale> = to.Ordinal<Scale>(1)
+const DURATIONS_SCALE_INDEX: Ordinal<Scale> = as.Ordinal<Scale>(1)
 
 describe('features', () => {
     describe('when the pitch index is negative 1', () => {
         let note: Note
         beforeEach(() => {
-            note = computeNote(to.ContourElement<PitchDuration>([ -1, 6 ]))
+            note = computeNote(as.ContourElement<PitchDuration>([ -1, 6 ]))
         })
 
         describe('duration', () => {
@@ -24,7 +24,7 @@ describe('features', () => {
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(to.Ordinal<Scalar>(5))
+                    .toBe(as.Ordinal<Scalar>(5))
             })
         })
 
@@ -36,7 +36,7 @@ describe('features', () => {
 
             it('scales the gain to zero', () => {
                 expect(gain.scalar)
-                    .toBe(to.Scalar<Scalar>(0))
+                    .toBe(as.Scalar<Scalar>(0))
             })
         })
     })
@@ -44,7 +44,7 @@ describe('features', () => {
     describe('when the pitch index is not zero', () => {
         let note: Note
         beforeEach(() => {
-            note = computeNote(to.ContourElement<PitchDuration>([ 3, 6 ]))
+            note = computeNote(as.ContourElement<PitchDuration>([ 3, 6 ]))
         })
 
         describe('duration', () => {
@@ -60,7 +60,7 @@ describe('features', () => {
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(to.Ordinal<Scalar>(5))
+                    .toBe(as.Ordinal<Scalar>(5))
             })
         })
 
@@ -72,7 +72,7 @@ describe('features', () => {
 
             it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
                 expect(gain.scalar)
-                    .toBe(to.Scalar<Scalar>(1))
+                    .toBe(as.Scalar<Scalar>(1))
             })
         })
 
@@ -84,7 +84,7 @@ describe('features', () => {
 
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
                 expect(pitch.index)
-                    .toBe(to.Ordinal<Scalar>(2))
+                    .toBe(as.Ordinal<Scalar>(2))
             })
         })
     })

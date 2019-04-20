@@ -8,38 +8,38 @@ import {
 } from '@musical-patterns/material'
 import {
     Amplitude,
+    as,
     ContourElement,
-    from,
     insteadOf,
+    notAs,
     Scalar,
-    to,
     translateFromOneIndexedToZeroIndexed,
 } from '@musical-patterns/utilities'
 
 const computeNote: (contourElement: ContourElement<PitchDuration>) => Note =
     ([ pitch, duration ]: ContourElement<PitchDuration>): Note => {
-        if (pitch === from.Ordinal<Scalar>(STANDARD_PITCH_INDEX_INDICATING_REST)) {
+        if (pitch === notAs.Ordinal<Scalar>(STANDARD_PITCH_INDEX_INDICATING_REST)) {
             return {
                 duration: {
-                    index: translateFromOneIndexedToZeroIndexed(to.Ordinal<Scalar>(duration)),
+                    index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar>(duration)),
                     scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
                 },
                 gain: {
-                    scalar: to.Scalar<Scalar>(from.NormalScalar<Amplitude>(SILENT)),
+                    scalar: as.Scalar<Scalar>(notAs.NormalScalar<Amplitude>(SILENT)),
                 },
             }
         }
 
         return {
             duration: {
-                index: translateFromOneIndexedToZeroIndexed(to.Ordinal<Scalar>(duration)),
+                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar>(duration)),
                 scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
             },
             gain: {
                 scalar: insteadOf<Scalar, Scalar>(FULL_GAIN),
             },
             pitch: {
-                index: translateFromOneIndexedToZeroIndexed(to.Ordinal<Scalar>(pitch)),
+                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar>(pitch)),
             },
         }
     }

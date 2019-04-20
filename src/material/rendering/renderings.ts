@@ -1,5 +1,5 @@
 import { PitchDuration, Rendering, RenderingByBlockElement } from '@musical-patterns/material'
-import { Block, ContourPiece, sequence, to } from '@musical-patterns/utilities'
+import { as, Block, ContourPiece, sequence } from '@musical-patterns/utilities'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'
 import { flatlineRendering } from './flatline'
@@ -14,7 +14,7 @@ import { RenderingName, Renderings } from './types'
 const renderByBlockElement:
     (renderingByBlockElement: RenderingByBlockElement<PitchDuration>) => Rendering<PitchDuration> =
     (renderingByBlockElement: RenderingByBlockElement<PitchDuration>): Rendering<PitchDuration> =>
-        (block: Block): ContourPiece<PitchDuration> => to.ContourPiece(sequence(...block.map(renderingByBlockElement)))
+        (block: Block): ContourPiece<PitchDuration> => as.ContourPiece(sequence(...block.map(renderingByBlockElement)))
 
 const computeRenderings: () => Renderings =
     (): Renderings => ({

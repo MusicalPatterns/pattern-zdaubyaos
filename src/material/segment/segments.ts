@@ -1,5 +1,5 @@
 import { Segment } from '@musical-patterns/material'
-import { from, INITIAL, slice, to } from '@musical-patterns/utilities'
+import { as, INITIAL, notAs, slice } from '@musical-patterns/utilities'
 import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {
     AlmostTrueSegments,
@@ -53,7 +53,7 @@ const computeSegments: () => Segment[] =
                 thirtyfiveSegments.thirtyfiveSegment,
             ],
             INITIAL,
-            to.Ordinal(from.Cardinal(ZDAUBYAOS_SEGMENT_COUNT)),
+            as.Ordinal(notAs.Cardinal(ZDAUBYAOS_SEGMENT_COUNT)),
         )
     }
 

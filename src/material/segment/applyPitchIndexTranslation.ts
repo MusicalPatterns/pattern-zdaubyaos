@@ -1,5 +1,5 @@
 import { Note } from '@musical-patterns/material'
-import { apply, Ordinal, Scalar, Translation } from '@musical-patterns/utilities'
+import { Ordinal, Scalar, Translation, use } from '@musical-patterns/utilities'
 
 const applyPitchIndexTranslation: (notes: Note[], pitchIndexTranslation: Translation<Ordinal<Scalar>>) => Note[] =
     (notes: Note[], pitchIndexTranslation: Translation<Ordinal<Scalar>>): Note[] =>
@@ -7,7 +7,7 @@ const applyPitchIndexTranslation: (notes: Note[], pitchIndexTranslation: Transla
             ...note,
             pitch: note.pitch && {
                 ...note.pitch,
-                index: apply.Translation(note.pitch.index, pitchIndexTranslation),
+                index: use.Translation(note.pitch.index, pitchIndexTranslation),
             },
         }))
 

@@ -1,16 +1,16 @@
 import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/material'
-import { apply, ContourPiece, negative, to } from '@musical-patterns/utilities'
+import { as, ContourPiece, negative, use } from '@musical-patterns/utilities'
 
 const fallRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> =>
-        to.ContourPiece<PitchDuration>([
+        as.ContourPiece<PitchDuration>([
             [
                 1,
                 1,
             ],
             [
-                apply.Translation(cell, to.Translation(negative(1))),
-                apply.Translation(cell, to.Translation(negative(1))),
+                use.Translation(cell, as.Translation(negative(1))),
+                use.Translation(cell, as.Translation(negative(1))),
             ],
         ])
 

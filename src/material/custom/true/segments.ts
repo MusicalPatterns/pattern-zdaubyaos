@@ -1,7 +1,7 @@
 // tslint:disable max-file-line-count
 
 import { Scale, Segment } from '@musical-patterns/material'
-import { negative, Ordinal, Scalar, to } from '@musical-patterns/utilities'
+import { as, negative, Ordinal, Scalar } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { TrueContourWholes, TrueSegments } from './types'
 import { computeTrueContourWholes } from './wholes'
@@ -17,9 +17,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(0) },
-                { scaleIndex: to.Ordinal<Scale>(1) },
-                { scaleIndex: to.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale>(0) },
+                { scaleIndex: as.Ordinal<Scale>(1) },
+                { scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 
@@ -30,9 +30,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosInaidjiyaiouzdSummerToSpring,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(3) },
-                { scaleIndex: to.Ordinal<Scale>(4) },
-                { scaleIndex: to.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale>(3) },
+                { scaleIndex: as.Ordinal<Scale>(4) },
+                { scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 
@@ -43,9 +43,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(3) },
-                { scaleIndex: to.Ordinal<Scale>(1) },
-                { scaleIndex: to.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale>(3) },
+                { scaleIndex: as.Ordinal<Scale>(1) },
+                { scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 
@@ -56,9 +56,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.zdaubTrem,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(0) },
-                { scaleIndex: to.Ordinal<Scale>(1) },
-                { scaleIndex: to.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale>(0) },
+                { scaleIndex: as.Ordinal<Scale>(1) },
+                { scaleIndex: as.Ordinal<Scale>(2) },
             ],
         )
 
@@ -70,9 +70,9 @@ const computeTrueSegments: () => TrueSegments =
                     trueContourWholes.zdaubGlisVariant,
                 ],
                 [
-                    { scaleIndex: to.Ordinal<Scale>(3), pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(2) },
-                    { scaleIndex: to.Ordinal<Scale>(1) },
-                    { scaleIndex: to.Ordinal<Scale>(2) },
+                    { scaleIndex: as.Ordinal<Scale>(3), pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(2) },
+                    { scaleIndex: as.Ordinal<Scale>(1) },
+                    { scaleIndex: as.Ordinal<Scale>(2) },
                 ],
             )
 
@@ -84,16 +84,16 @@ const computeTrueSegments: () => TrueSegments =
             ],
             [
                 {
-                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(2),
-                    scaleIndex: to.Ordinal<Scale>(0),
+                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(2),
+                    scaleIndex: as.Ordinal<Scale>(0),
                 },
                 {
-                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(negative(2)),
-                    scaleIndex: to.Ordinal<Scale>(1),
+                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(negative(2)),
+                    scaleIndex: as.Ordinal<Scale>(1),
                 },
                 {
-                    pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(negative(3)),
-                    scaleIndex: to.Ordinal<Scale>(2),
+                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(negative(3)),
+                    scaleIndex: as.Ordinal<Scale>(2),
                 },
             ],
         )

@@ -1,5 +1,5 @@
 import { Note, Segment } from '@musical-patterns/material'
-import { apply } from '@musical-patterns/utilities'
+import { use } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
 import { computeSegments } from './segment'
 import { ZdaubyaosNotes } from './types'
@@ -14,11 +14,11 @@ const computeNotes: () => ZdaubyaosNotes =
 
         segments.forEach((segment: Segment): void => {
             subDub = subDub
-                .concat(apply.Ordinal(segment, SEGMENT_A))
+                .concat(use.Ordinal(segment, SEGMENT_A))
             superDuper = superDuper
-                .concat(apply.Ordinal(segment, SEGMENT_B))
+                .concat(use.Ordinal(segment, SEGMENT_B))
             harmSubharm = harmSubharm
-                .concat(apply.Ordinal(segment, SEGMENT_C))
+                .concat(use.Ordinal(segment, SEGMENT_C))
         })
 
         return {
