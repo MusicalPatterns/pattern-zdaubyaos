@@ -7,6 +7,7 @@ import {
     ContourPiece,
     deepClone,
     dividesEvenly,
+    from,
     negative,
     NEXT,
     ofFrom,
@@ -25,6 +26,14 @@ import {
     TWENTYFOUR_BONY_BLOCKS,
 } from './constants'
 
+const getBarCountIsTrickyBecauseWeKnowItDividesEvenlyButTypesDoNot:
+    (blocksTotal: Cardinal, barDivisor: Cardinal) => Cardinal =
+    (blocksTotal: Cardinal, barDivisor: Cardinal): Cardinal =>
+        to.Cardinal(apply.Scalar(
+            from.Cardinal(blocksTotal),
+            to.Scalar(reciprocal(barDivisor)),
+        ))
+
 const bonyRendering: Rendering<PitchDuration> =
     (block: Block): ContourPiece<PitchDuration> => {
         const blockClone: Block = to.Block(deepClone(block))
@@ -36,19 +45,16 @@ const bonyRendering: Rendering<PitchDuration> =
         )
         const isBarTargetFifteen: boolean = dividesEvenly(blocksTotal, FIFTEEN)
         const barDivisor: Cardinal = isBarTargetFifteen ? FIFTEEN : TWENTYFOUR
-        const barCount: Cardinal = apply.Scalar(
-            blocksTotal,
-            to.Scalar(ofFrom(reciprocal(barDivisor))),
-        )
+        const barCount: Cardinal = getBarCountIsTrickyBecauseWeKnowItDividesEvenlyButTypesDoNot(blocksTotal, barDivisor)
 
         const rhythmicBlocks: Block = to.Block(isBarTargetFifteen ?
             repeat(
                 FIFTEEN_BONY_BLOCKS,
-                apply.Scalar(barCount, to.Scalar(ofFrom(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR))),
+                apply.Multiple(barCount, to.Multiple(ofFrom(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR))),
             ) :
             repeat(
                 TWENTYFOUR_BONY_BLOCKS,
-                apply.Scalar(barCount, to.Scalar(ofFrom(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR))),
+                apply.Multiple(barCount, to.Multiple(ofFrom(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR))),
             ),
         )
 

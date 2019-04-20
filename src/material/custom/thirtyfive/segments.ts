@@ -15,9 +15,9 @@ const computeThirtyfiveSegments: () => ThirtyfiveSegments =
                 contourWholes.thirtyfiveYaosBass,
             ],
             [
-                { scaleIndex: to.Ordinal<Scale>(0), gainScalar: to.Scalar<Amplitude>(0.66) },
+                { scaleIndex: to.Ordinal<Scale>(0), gainScalar: to.NormalScalar<Amplitude>(0.66) },
                 { scaleIndex: to.Ordinal<Scale>(1) },
-                { scaleIndex: to.Ordinal<Scale>(5), gainScalar: to.Scalar<Amplitude>(1.25) },
+                { scaleIndex: to.Ordinal<Scale>(5), gainScalar: to.NormalScalar<Amplitude>(1) },
             ],
         )
 

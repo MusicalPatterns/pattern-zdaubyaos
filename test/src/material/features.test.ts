@@ -1,8 +1,8 @@
-import { Note, NoteFeature, PitchDuration } from '@musical-patterns/material'
-import { Ordinal, to } from '@musical-patterns/utilities'
+import { Note, NoteFeature, PitchDuration, Scale } from '@musical-patterns/material'
+import { Ordinal, Scalar, to } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 
-const DURATIONS_SCALE_INDEX: Ordinal = to.Ordinal(1)
+const DURATIONS_SCALE_INDEX: Ordinal<Scale> = to.Ordinal<Scale>(1)
 
 describe('features', () => {
     describe('when the pitch index is negative 1', () => {
@@ -24,7 +24,7 @@ describe('features', () => {
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(to.Ordinal(5))
+                    .toBe(to.Ordinal<Scalar>(5))
             })
         })
 
@@ -36,7 +36,7 @@ describe('features', () => {
 
             it('scales the gain to zero', () => {
                 expect(gain.scalar)
-                    .toBe(to.Scalar(0))
+                    .toBe(to.Scalar<Scalar>(0))
             })
         })
     })
@@ -60,7 +60,7 @@ describe('features', () => {
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(to.Ordinal(5))
+                    .toBe(to.Ordinal<Scalar>(5))
             })
         })
 
@@ -72,7 +72,7 @@ describe('features', () => {
 
             it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
                 expect(gain.scalar)
-                    .toBe(to.Scalar(1))
+                    .toBe(to.Scalar<Scalar>(1))
             })
         })
 
@@ -84,7 +84,7 @@ describe('features', () => {
 
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
                 expect(pitch.index)
-                    .toBe(to.Ordinal(2))
+                    .toBe(to.Ordinal<Scalar>(2))
             })
         })
     })

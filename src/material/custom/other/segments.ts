@@ -16,17 +16,17 @@ const computeOtherSegments: () => OtherSegments =
             ],
             [
                 {
-                    gainScalar: to.Scalar<Amplitude>(0.8),
+                    gainScalar: to.NormalScalar<Amplitude>(0.8),
                     pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(4),
                     scaleIndex: to.Ordinal<Scale>(3),
                 },
                 {
-                    gainScalar: to.Scalar<Amplitude>(0.8),
+                    gainScalar: to.NormalScalar<Amplitude>(0.8),
                     pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(6),
                     scaleIndex: to.Ordinal<Scale>(4),
                 },
                 {
-                    gainScalar: to.Scalar<Amplitude>(0.8),
+                    gainScalar: to.NormalScalar<Amplitude>(0.8),
                     pitchIndexTranslation: to.Translation<Ordinal<Scalar>>(3),
                     scaleIndex: to.Ordinal<Scale>(5),
                 },

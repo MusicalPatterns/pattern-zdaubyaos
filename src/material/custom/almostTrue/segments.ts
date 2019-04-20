@@ -41,9 +41,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.zdaubBonyWithSuperinscape,
             ],
             [
-                { gainScalar: to.Scalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(3) },
-                { gainScalar: to.Scalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(4) },
-                { gainScalar: to.Scalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(2) },
+                { gainScalar: to.NormalScalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(3) },
+                { gainScalar: to.NormalScalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(4) },
+                { gainScalar: to.NormalScalar<Amplitude>(0.33), scaleIndex: to.Ordinal<Scale>(2) },
             ],
         )
 

@@ -1,8 +1,8 @@
 import { Note } from '@musical-patterns/material'
-import { Amplitude, apply, insteadOf, Scalar, to } from '@musical-patterns/utilities'
+import { Amplitude, apply, insteadOf, NormalScalar, Scalar, to } from '@musical-patterns/utilities'
 
-const applyGainScalar: (notes: Note[], gainScalar: Scalar<Amplitude>) => Note[] =
-    (notes: Note[], gainScalar: Scalar<Amplitude>): Note[] =>
+const applyGainScalar: (notes: Note[], gainScalar: NormalScalar<Amplitude>) => Note[] =
+    (notes: Note[], gainScalar: NormalScalar<Amplitude>): Note[] =>
         notes.map((note: Note): Note => ({
             ...note,
             gain: note.gain && {
