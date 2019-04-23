@@ -9,7 +9,7 @@ const computeTotalZdaubyaosDuration: (notes: Note[]) => number =
                 ...note.duration,
                 index: note.duration && note.duration.index ?
                     translateFromZeroIndexedToOneIndexed(note.duration.index) :
-                    as.Ordinal<Scalar>(1),
+                    as.Ordinal<Scalar[]>(1),
             },
         }))
 

@@ -31,7 +31,7 @@ const getBarCountIsTrickyBecauseWeKnowItDividesEvenlyButTypesDoNot:
     (blocksTotal: Cardinal, barDivisor: Cardinal): Cardinal =>
         as.Cardinal(use.Scalar(
             notAs.Cardinal(blocksTotal),
-            as.Scalar(reciprocal(barDivisor)),
+            as.Scalar(notAs.Translation(reciprocal(barDivisor))),
         ))
 
 const bonyRendering: Rendering<PitchDuration> =
@@ -50,11 +50,17 @@ const bonyRendering: Rendering<PitchDuration> =
         const rhythmicBlocks: Block = as.Block(isBarTargetFifteen ?
             repeat(
                 FIFTEEN_BONY_BLOCKS,
-                use.Multiple(barCount, as.Multiple(ofNotAs(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR))),
+                as.Cardinal<Block>(notAs.Cardinal(use.Multiple(
+                    barCount,
+                    as.Multiple(ofNotAs(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)),
+                ))),
             ) :
             repeat(
                 TWENTYFOUR_BONY_BLOCKS,
-                use.Multiple(barCount, as.Multiple(ofNotAs(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR))),
+                as.Cardinal<Block>(notAs.Cardinal(use.Multiple(
+                    barCount,
+                    as.Multiple(ofNotAs(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
+                ))),
             ),
         )
 
@@ -74,7 +80,7 @@ const bonyRendering: Rendering<PitchDuration> =
             }
             if (blockClone[ 0 ] === 0) {
                 blockClone.shift()
-                blocksIndexForPitchIndex = use.Translation(blocksIndexForPitchIndex, NEXT)
+                blocksIndexForPitchIndex = use.Cardinal(blocksIndexForPitchIndex, NEXT)
             }
 
             contourPiece.push(as.ContourElement<PitchDuration>([ pitchIndex, rhythmicBlockElement ]))

@@ -21,7 +21,7 @@ const computeThirtyfiveBlocks: () => ThirtyfiveBlocks =
             1, 2,
         ])
 
-        const zdaubOnlyWiggle: Block = as.Block(repeat([ 4, 1 ], as.Cardinal(7)))
+        const zdaubOnlyWiggle: Block = as.Block(repeat([ 4, 1 ], as.Cardinal<number[]>(7)))
 
         const zdaub: Block = as.Block(sequence(
             zdaubOnlyWiggle,

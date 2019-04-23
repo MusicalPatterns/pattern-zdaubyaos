@@ -8,10 +8,10 @@ const computeTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
             [ BarTarget.FIFTEEN ]: {
                 [ BlockStyle.CHUWOW ]: as.Block([ 3, 4, 3, 5 ]),
                 [ BlockStyle.DJIYAI ]: as.Block([ 3, 5, 7 ]),
-                [ BlockStyle.IEST ]: as.Block(repeat([ 5 ], as.Cardinal(3))),
+                [ BlockStyle.IEST ]: as.Block(repeat([ 5 ], as.Cardinal<number[]>(3))),
                 [ BlockStyle.INAI ]: as.Block([ 4, 4, 4, 3 ]),
                 [ BlockStyle.OUZD ]: as.Block([ 8, 7 ]),
-                [ BlockStyle.UMOW ]: as.Block(repeat([ 3 ], as.Cardinal(5))),
+                [ BlockStyle.UMOW ]: as.Block(repeat([ 3 ], as.Cardinal<number[]>(5))),
                 [ BlockStyle.NODLE ]: as.Block([
                     3, 4, 3, 2, 1, 2,
                 ]),
@@ -28,10 +28,10 @@ const computeTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
             [ BarTarget.TWENTYFOUR ]: {
                 [ BlockStyle.CHUWOW ]: as.Block([ 3, 4, 5, 3, 5, 4 ]),
                 [ BlockStyle.DJIYAI ]: as.Block([ 3, 3, 5, 3, 3, 7 ]),
-                [ BlockStyle.IEST ]: as.Block(repeat([ 6 ], as.Cardinal(4))),
-                [ BlockStyle.INAI ]: as.Block(repeat([ 3 ], as.Cardinal(8))),
-                [ BlockStyle.OUZD ]: as.Block(repeat([ 8 ], as.Cardinal(3))),
-                [ BlockStyle.UMOW ]: as.Block(repeat([ 4 ], as.Cardinal(6))),
+                [ BlockStyle.IEST ]: as.Block(repeat([ 6 ], as.Cardinal<number[]>(4))),
+                [ BlockStyle.INAI ]: as.Block(repeat([ 3 ], as.Cardinal<number[]>(8))),
+                [ BlockStyle.OUZD ]: as.Block(repeat([ 8 ], as.Cardinal<number[]>(3))),
+                [ BlockStyle.UMOW ]: as.Block(repeat([ 4 ], as.Cardinal<number[]>(6))),
                 [ BlockStyle.NODLE ]: as.Block([
                     1, 3, 5, 7, 5, 3,
                 ]),

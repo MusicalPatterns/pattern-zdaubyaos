@@ -53,7 +53,7 @@ const computeSegments: () => Segment[] =
                 thirtyfiveSegments.thirtyfiveSegment,
             ],
             INITIAL,
-            as.Ordinal(notAs.Cardinal(ZDAUBYAOS_SEGMENT_COUNT)),
+            as.Ordinal<Segment[]>(notAs.Cardinal(ZDAUBYAOS_SEGMENT_COUNT)),
         )
     }
 

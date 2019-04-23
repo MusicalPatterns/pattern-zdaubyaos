@@ -1,5 +1,5 @@
 import { PitchDuration, pitchDurationRest } from '@musical-patterns/material'
-import { as, ContourWhole, repeat } from '@musical-patterns/utilities'
+import { as, ContourPiece, ContourWhole, repeat } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { AlmostTrueContourPieces, computeAlmostTrueContourPieces } from '../almostTrue'
@@ -24,7 +24,7 @@ const computeBreatherContourWholes: () => BreatherContourWholes =
             RenderingName.SUMMER,
         ))
         const doubleFall: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(
-            repeat(otherPieces.backboneTwentyfour, as.Cardinal(2)),
+            repeat(otherPieces.backboneTwentyfour, as.Cardinal<ContourPiece<PitchDuration>>(2)),
         )
         const variety: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(almostTruePieces.inaiiiVariety)
         const springAlt: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(getTrueContours(

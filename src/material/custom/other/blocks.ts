@@ -3,9 +3,9 @@ import { OtherBlocks } from './types'
 
 const computeOtherBlocks: () => OtherBlocks =
     (): OtherBlocks => {
-        const backboneFifteen: Block = as.Block(repeat([ 1, 2 ], as.Cardinal(5)))
+        const backboneFifteen: Block = as.Block(repeat([ 1, 2 ], as.Cardinal<number[]>(5)))
 
-        const backboneTwentyfour: Block = as.Block(repeat([ 1, 3 ], as.Cardinal(6)))
+        const backboneTwentyfour: Block = as.Block(repeat([ 1, 3 ], as.Cardinal<number[]>(6)))
 
         const shiftyFifteen: Block = as.Block([
             2, 1,

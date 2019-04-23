@@ -7,8 +7,8 @@ const computeSegment: (contourWholes: Array<ContourWhole<PitchDuration>>, noteSt
     (contourWholes: Array<ContourWhole<PitchDuration>>, noteStyles: NoteStyle[]): Segment =>
         map(
             contourWholes,
-            (contourWhole: ContourWhole<PitchDuration>, index: Ordinal<ContourWhole<PitchDuration>>): Note[] => {
-                const noteStyle: NoteStyle = use.Ordinal(noteStyles, insteadOf<Ordinal, NoteStyle>(index))
+            (contourWhole: ContourWhole<PitchDuration>, index: Ordinal<Array<ContourWhole<PitchDuration>>>): Note[] => {
+                const noteStyle: NoteStyle = use.Ordinal(noteStyles, insteadOf<Ordinal, NoteStyle[]>(index))
 
                 return applyNoteStyle(contourWhole, noteStyle)
             },

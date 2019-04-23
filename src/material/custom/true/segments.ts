@@ -17,9 +17,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale>(0) },
-                { scaleIndex: as.Ordinal<Scale>(1) },
-                { scaleIndex: as.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale[]>(0) },
+                { scaleIndex: as.Ordinal<Scale[]>(1) },
+                { scaleIndex: as.Ordinal<Scale[]>(2) },
             ],
         )
 
@@ -30,9 +30,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosInaidjiyaiouzdSummerToSpring,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale>(3) },
-                { scaleIndex: as.Ordinal<Scale>(4) },
-                { scaleIndex: as.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale[]>(3) },
+                { scaleIndex: as.Ordinal<Scale[]>(4) },
+                { scaleIndex: as.Ordinal<Scale[]>(2) },
             ],
         )
 
@@ -43,9 +43,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale>(3) },
-                { scaleIndex: as.Ordinal<Scale>(1) },
-                { scaleIndex: as.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale[]>(3) },
+                { scaleIndex: as.Ordinal<Scale[]>(1) },
+                { scaleIndex: as.Ordinal<Scale[]>(2) },
             ],
         )
 
@@ -56,9 +56,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.zdaubTrem,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale>(0) },
-                { scaleIndex: as.Ordinal<Scale>(1) },
-                { scaleIndex: as.Ordinal<Scale>(2) },
+                { scaleIndex: as.Ordinal<Scale[]>(0) },
+                { scaleIndex: as.Ordinal<Scale[]>(1) },
+                { scaleIndex: as.Ordinal<Scale[]>(2) },
             ],
         )
 
@@ -70,9 +70,9 @@ const computeTrueSegments: () => TrueSegments =
                     trueContourWholes.zdaubGlisVariant,
                 ],
                 [
-                    { scaleIndex: as.Ordinal<Scale>(3), pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(2) },
-                    { scaleIndex: as.Ordinal<Scale>(1) },
-                    { scaleIndex: as.Ordinal<Scale>(2) },
+                    { scaleIndex: as.Ordinal<Scale[]>(3), pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(2) },
+                    { scaleIndex: as.Ordinal<Scale[]>(1) },
+                    { scaleIndex: as.Ordinal<Scale[]>(2) },
                 ],
             )
 
@@ -84,16 +84,16 @@ const computeTrueSegments: () => TrueSegments =
             ],
             [
                 {
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(2),
-                    scaleIndex: as.Ordinal<Scale>(0),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(2),
+                    scaleIndex: as.Ordinal<Scale[]>(0),
                 },
                 {
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(negative(2)),
-                    scaleIndex: as.Ordinal<Scale>(1),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(negative(2)),
+                    scaleIndex: as.Ordinal<Scale[]>(1),
                 },
                 {
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(negative(3)),
-                    scaleIndex: as.Ordinal<Scale>(2),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(negative(3)),
+                    scaleIndex: as.Ordinal<Scale[]>(2),
                 },
             ],
         )

@@ -9,8 +9,8 @@ const fallRendering: RenderingByBlockElement<PitchDuration> =
                 1,
             ],
             [
-                use.Translation(cell, as.Translation(negative(1))),
-                use.Translation(cell, as.Translation(negative(1))),
+                use.Cardinal(cell, as.Cardinal(negative(1))),
+                use.Cardinal(cell, as.Cardinal(negative(1))),
             ],
         ])
 

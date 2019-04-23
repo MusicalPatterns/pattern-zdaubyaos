@@ -1,8 +1,6 @@
-import { Note, NoteFeature, PitchDuration, Scale } from '@musical-patterns/material'
-import { as, Ordinal, Scalar } from '@musical-patterns/utilities'
+import { Note, NoteFeature, PitchDuration, STANDARD_DURATIONS_SCALE_INDEX } from '@musical-patterns/material'
+import { as, Scalar } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
-
-const DURATIONS_SCALE_INDEX: Ordinal<Scale> = as.Ordinal<Scale>(1)
 
 describe('features', () => {
     describe('when the pitch index is negative 1', () => {
@@ -19,12 +17,12 @@ describe('features', () => {
 
             it('uses the durations scale', () => {
                 expect(duration.scaleIndex)
-                    .toBe(DURATIONS_SCALE_INDEX)
+                    .toBe(STANDARD_DURATIONS_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(as.Ordinal<Scalar>(5))
+                    .toBe(as.Ordinal<Scalar[]>(5))
             })
         })
 
@@ -55,12 +53,12 @@ describe('features', () => {
 
             it('uses the durations scale', () => {
                 expect(duration.scaleIndex)
-                    .toBe(DURATIONS_SCALE_INDEX)
+                    .toBe(STANDARD_DURATIONS_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(as.Ordinal<Scalar>(5))
+                    .toBe(as.Ordinal<Scalar[]>(5))
             })
         })
 
@@ -84,7 +82,7 @@ describe('features', () => {
 
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
                 expect(pitch.index)
-                    .toBe(as.Ordinal<Scalar>(2))
+                    .toBe(as.Ordinal<Scalar[]>(2))
             })
         })
     })

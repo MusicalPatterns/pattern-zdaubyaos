@@ -20,7 +20,7 @@ const countUsage: (barTarget: BarTarget, blockStyle: BlockStyle, renderingName: 
         if (!isUndefined(byBlockStyle)) {
             let byRenderingName: Maybe<UsageCount> = byBlockStyle[ renderingName ]
             if (!isUndefined(byRenderingName)) {
-                byRenderingName = use.Translation(byRenderingName, as.Translation<UsageCount>(1))
+                byRenderingName = use.Cardinal(byRenderingName, as.Cardinal<UsageCount>(1))
                 objectSet(byBlockStyle, renderingName, byRenderingName)
             }
             else {

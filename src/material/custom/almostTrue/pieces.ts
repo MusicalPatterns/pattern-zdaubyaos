@@ -32,7 +32,7 @@ const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
 
                 const rendering: Rendering<PitchDuration> = use.Ordinal(
                     renderingsSequence,
-                    insteadOf<Ordinal, Rendering<PitchDuration>>(index),
+                    insteadOf<Ordinal, Array<Rendering<PitchDuration>>>(index),
                 )
 
                 return rendering(as.Block([ cell ]))

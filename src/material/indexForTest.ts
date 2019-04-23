@@ -23,7 +23,7 @@ export {
 } from './custom/indexForTest'
 export {
     applyGainScalar,
-    applyPitchIndexTranslation,
+    applyPitchIndexShift,
 } from './segment/indexForTest'
 
 export {

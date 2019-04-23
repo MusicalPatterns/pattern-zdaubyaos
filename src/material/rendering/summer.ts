@@ -18,10 +18,10 @@ import {
 
 const summerRendering: RenderingByBlockElement<PitchDuration> =
     (cell: number): ContourPiece<PitchDuration> =>
-        as.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal(cell))
+        as.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal<Integer[]>(cell))
             .map((integer: Integer): ContourElement<PitchDuration> =>
                 as.ContourElement<PitchDuration>(isEven(integer) ?
-                    [ notAs.Ordinal<Scalar>(STANDARD_PITCH_INDEX_INDICATING_REST), 1 ] :
+                    [ notAs.Ordinal<Scalar[]>(STANDARD_PITCH_INDEX_INDICATING_REST), 1 ] :
                     [ integer, 1 ],
                 ),
             ),

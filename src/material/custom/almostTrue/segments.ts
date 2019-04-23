@@ -15,9 +15,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale>(3) },
-                { scaleIndex: as.Ordinal<Scale>(4) },
-                { scaleIndex: as.Ordinal<Scale>(5) },
+                { scaleIndex: as.Ordinal<Scale[]>(3) },
+                { scaleIndex: as.Ordinal<Scale[]>(4) },
+                { scaleIndex: as.Ordinal<Scale[]>(5) },
             ],
         )
 
@@ -28,9 +28,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.extendedEndingZdaubGlis,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale>(3) },
-                { scaleIndex: as.Ordinal<Scale>(4) },
-                { scaleIndex: as.Ordinal<Scale>(5) },
+                { scaleIndex: as.Ordinal<Scale[]>(3) },
+                { scaleIndex: as.Ordinal<Scale[]>(4) },
+                { scaleIndex: as.Ordinal<Scale[]>(5) },
             ],
         )
 
@@ -41,9 +41,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.zdaubBonyWithSuperinscape,
             ],
             [
-                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale>(3) },
-                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale>(4) },
-                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale>(2) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale[]>(3) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale[]>(4) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale[]>(2) },
             ],
         )
 

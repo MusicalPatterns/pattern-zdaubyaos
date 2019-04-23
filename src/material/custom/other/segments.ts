@@ -17,18 +17,18 @@ const computeOtherSegments: () => OtherSegments =
             [
                 {
                     gainScalar: as.NormalScalar<Amplitude>(0.8),
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(4),
-                    scaleIndex: as.Ordinal<Scale>(3),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(4),
+                    scaleIndex: as.Ordinal<Scale[]>(3),
                 },
                 {
                     gainScalar: as.NormalScalar<Amplitude>(0.8),
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(6),
-                    scaleIndex: as.Ordinal<Scale>(4),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(6),
+                    scaleIndex: as.Ordinal<Scale[]>(4),
                 },
                 {
                     gainScalar: as.NormalScalar<Amplitude>(0.8),
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(3),
-                    scaleIndex: as.Ordinal<Scale>(5),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(3),
+                    scaleIndex: as.Ordinal<Scale[]>(5),
                 },
             ],
         )
@@ -41,16 +41,16 @@ const computeOtherSegments: () => OtherSegments =
             ],
             [
                 {
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(2),
-                    scaleIndex: as.Ordinal<Scale>(0),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(2),
+                    scaleIndex: as.Ordinal<Scale[]>(0),
                 },
                 {
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(negative(2)),
-                    scaleIndex: as.Ordinal<Scale>(1),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(negative(2)),
+                    scaleIndex: as.Ordinal<Scale[]>(1),
                 },
                 {
-                    pitchIndexTranslation: as.Translation<Ordinal<Scalar>>(negative(3)),
-                    scaleIndex: as.Ordinal<Scale>(2),
+                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(negative(3)),
+                    scaleIndex: as.Ordinal<Scale[]>(2),
                 },
             ],
         )
@@ -62,9 +62,9 @@ const computeOtherSegments: () => OtherSegments =
                 otherContourWholes.shiftyB,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale>(3) },
-                { scaleIndex: as.Ordinal<Scale>(4) },
-                { scaleIndex: as.Ordinal<Scale>(5) },
+                { scaleIndex: as.Ordinal<Scale[]>(3) },
+                { scaleIndex: as.Ordinal<Scale[]>(4) },
+                { scaleIndex: as.Ordinal<Scale[]>(5) },
             ],
         )
 

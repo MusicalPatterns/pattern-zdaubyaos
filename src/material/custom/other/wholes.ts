@@ -1,5 +1,16 @@
 import { PitchDuration } from '@musical-patterns/material'
-import { as, ContourWhole, INITIAL, repeat, repeatCall, sequence, slice } from '@musical-patterns/utilities'
+import {
+    as,
+    ContourPiece,
+    ContourWhole,
+    INITIAL,
+    insteadOf,
+    Ordinal,
+    repeat,
+    repeatCall,
+    sequence,
+    slice,
+} from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { getTrueContours } from '../true'
@@ -16,16 +27,19 @@ const computeOtherContourWholes: () => OtherContourWholes =
         const totallyOutThere: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(repeat(
             slice(
                 getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
-                INITIAL,
-                as.Ordinal(8),
+                insteadOf<Ordinal, ContourPiece<PitchDuration>>(INITIAL),
+                as.Ordinal<ContourPiece<PitchDuration>>(8),
             ),
-            as.Cardinal(3),
+            as.Cardinal<ContourPiece<PitchDuration>>(3),
         ))
 
         const shiftyA: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(sequence(
-            repeatCall(() => contourPieces.shiftyFifteen, as.Cardinal(3)),
-            repeatCall(() => contourPieces.shiftyTwentyfour, as.Cardinal(4)),
-            repeatCall(() => contourPieces.shiftyTwentyfourVariant, as.Cardinal(3)),
+            repeatCall(() => contourPieces.shiftyFifteen, as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(3)),
+            repeatCall(() => contourPieces.shiftyTwentyfour, as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(4)),
+            repeatCall(
+                () => contourPieces.shiftyTwentyfourVariant,
+                as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(3),
+            ),
         ))
 
         const shiftyB: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(contourPieces.shifty)

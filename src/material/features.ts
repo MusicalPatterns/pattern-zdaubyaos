@@ -18,10 +18,10 @@ import {
 
 const computeNote: (contourElement: ContourElement<PitchDuration>) => Note =
     ([ pitch, duration ]: ContourElement<PitchDuration>): Note => {
-        if (pitch === notAs.Ordinal<Scalar>(STANDARD_PITCH_INDEX_INDICATING_REST)) {
+        if (pitch === notAs.Ordinal<Scalar[]>(STANDARD_PITCH_INDEX_INDICATING_REST)) {
             return {
                 duration: {
-                    index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar>(duration)),
+                    index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar[]>(duration)),
                     scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
                 },
                 gain: {
@@ -32,14 +32,14 @@ const computeNote: (contourElement: ContourElement<PitchDuration>) => Note =
 
         return {
             duration: {
-                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar>(duration)),
+                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar[]>(duration)),
                 scaleIndex: STANDARD_DURATIONS_SCALE_INDEX,
             },
             gain: {
                 scalar: insteadOf<Scalar, Scalar>(FULL_GAIN),
             },
             pitch: {
-                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar>(pitch)),
+                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Scalar[]>(pitch)),
             },
         }
     }

@@ -1,5 +1,5 @@
 import { PitchDuration } from '@musical-patterns/material'
-import { as, ContourWhole, repeatCall, sequence } from '@musical-patterns/utilities'
+import { as, ContourPiece, ContourWhole, repeatCall, sequence } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { computeOtherContourPieces, OtherContourPieces } from '../other'
@@ -9,12 +9,16 @@ import { AlmostTrueContourWholes } from './types'
 const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole<PitchDuration> =
     (renderingName: RenderingName): ContourWhole<PitchDuration> =>
         as.ContourWhole(sequence(
-            repeatCall(() => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName), as.Cardinal(3)),
+            repeatCall(
+                () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName),
+                as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(3),
+            ),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, renderingName),
             repeatCall(
-                () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, renderingName), as.Cardinal(5),
+                () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, renderingName),
+                as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(5),
             ),
         ))
 
@@ -30,13 +34,20 @@ const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.GLIS)
 
         const yetOfBackbone: ContourWhole<PitchDuration> = as.ContourWhole(sequence(
-            repeatCall(() => otherContourPieces.backboneFifteen, as.Cardinal(8)),
-            repeatCall(() => otherContourPieces.backboneTwentyfour, as.Cardinal(3)),
+            repeatCall(
+                () => otherContourPieces.backboneFifteen,
+                as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(8),
+            ),
+            repeatCall(
+                () => otherContourPieces.backboneTwentyfour,
+                as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(3),
+            ),
         ))
 
         const zdaubBonyWithSuperinscape: ContourWhole<PitchDuration> = as.ContourWhole(sequence(
             repeatCall(
-                () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY), as.Cardinal(3),
+                () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY),
+                as.Cardinal<Array<() => ContourPiece<PitchDuration>>>(3),
             ),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.BONY),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, RenderingName.BONY),
