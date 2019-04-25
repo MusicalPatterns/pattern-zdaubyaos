@@ -1,6 +1,6 @@
 {
   "name": "@musical-patterns/pattern-zdaubyaos",
-  "version": "1.0.149",
+  "version": "1.0.150",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "@musical-patterns/pattern": "^1.0.261",
     "@musical-patterns/pattern-xenharmonic-series": "^1.0.156",
     "@musical-patterns/spec": "^1.0.27",
-    "@musical-patterns/utilities": "^1.0.526"
+    "@musical-patterns/utilities": "^1.0.527"
   },
   "devDependencies": {
     "@musical-patterns/cli": "^1.0.553",
