@@ -1,5 +1,5 @@
 import { Note, NoteFeature, PitchDuration, STANDARD_DURATION_SCALE_INDEX } from '@musical-patterns/material'
-import { Amplitude, as, Duration, Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, Duration, Gain, Pitch, Scalar } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 
 describe('features', () => {
@@ -27,14 +27,14 @@ describe('features', () => {
         })
 
         describe('gain', () => {
-            let gain: NoteFeature<Amplitude>
+            let gain: NoteFeature<Gain>
             beforeEach(() => {
                 gain = note.gain!
             })
 
             it('scales the gain to zero', () => {
                 expect(gain.scalar)
-                    .toBe(as.Scalar<Amplitude>(0))
+                    .toBe(as.Scalar<Gain>(0))
             })
         })
     })
@@ -63,14 +63,14 @@ describe('features', () => {
         })
 
         describe('gain', () => {
-            let gain: NoteFeature<Amplitude>
+            let gain: NoteFeature<Gain>
             beforeEach(() => {
                 gain = note.gain!
             })
 
             it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
                 expect(gain.scalar)
-                    .toBe(as.Scalar<Amplitude>(1))
+                    .toBe(as.Scalar<Gain>(1))
             })
         })
 

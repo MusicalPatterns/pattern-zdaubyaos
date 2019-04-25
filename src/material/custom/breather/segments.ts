@@ -1,5 +1,5 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { Amplitude, as, negative, Ordinal, Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, Gain, negative, Ordinal, Pitch, Scalar } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { BreatherContourWholes, BreatherSegments } from './types'
 import { computeBreatherContourWholes } from './wholes'
@@ -15,7 +15,7 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.rest,
             ],
             [
-                { gainScalar: as.UnitScalar<Amplitude>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
+                { gainScalar: as.UnitScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
@@ -29,7 +29,7 @@ const computeBreatherSegments: () => BreatherSegments =
             ],
             [
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
-                { gainScalar: as.UnitScalar<Amplitude>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
+                { gainScalar: as.UnitScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
@@ -44,7 +44,7 @@ const computeBreatherSegments: () => BreatherSegments =
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 {
-                    gainScalar: as.UnitScalar<Amplitude>(0.5),
+                    gainScalar: as.UnitScalar<Gain>(0.5),
                     pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(1)),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2),
                 },
@@ -59,7 +59,7 @@ const computeBreatherSegments: () => BreatherSegments =
             ],
             [
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
-                { gainScalar: as.UnitScalar<Amplitude>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
+                { gainScalar: as.UnitScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )

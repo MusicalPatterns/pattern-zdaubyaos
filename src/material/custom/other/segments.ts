@@ -1,5 +1,5 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { Amplitude, as, negative, Ordinal, Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, Gain, negative, Ordinal, Pitch, Scalar } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { OtherContourWholes, OtherSegments } from './types'
 import { computeOtherContourWholes } from './wholes'
@@ -16,17 +16,17 @@ const computeOtherSegments: () => OtherSegments =
             ],
             [
                 {
-                    gainScalar: as.UnitScalar<Amplitude>(0.8),
+                    gainScalar: as.UnitScalar<Gain>(0.8),
                     pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(4),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3),
                 },
                 {
-                    gainScalar: as.UnitScalar<Amplitude>(0.8),
+                    gainScalar: as.UnitScalar<Gain>(0.8),
                     pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(6),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4),
                 },
                 {
-                    gainScalar: as.UnitScalar<Amplitude>(0.8),
+                    gainScalar: as.UnitScalar<Gain>(0.8),
                     pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(3),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(5),
                 },

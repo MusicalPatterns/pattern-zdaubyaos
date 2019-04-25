@@ -1,8 +1,8 @@
 import { Scale } from '@musical-patterns/material'
-import { Amplitude, Cardinal, Ordinal, Pitch, Scalar, UnitScalar } from '@musical-patterns/utilities'
+import { Cardinal, Gain, Ordinal, Pitch, Scalar, UnitScalar } from '@musical-patterns/utilities'
 
 interface NoteStyle {
-    gainScalar?: UnitScalar<Amplitude>,
+    gainScalar?: UnitScalar<Gain>,
     pitchIndexShift?: Cardinal<Ordinal<Array<Scalar<Pitch>>>>,
     scaleIndex: Ordinal<Array<Scale<Pitch>>>,
 }
