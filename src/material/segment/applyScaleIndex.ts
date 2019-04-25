@@ -1,8 +1,8 @@
 import { Note, Scale } from '@musical-patterns/material'
-import { Ordinal } from '@musical-patterns/utilities'
+import { Ordinal, Pitch } from '@musical-patterns/utilities'
 
-const applyScaleIndex: (notes: Note[], scaleIndex: Ordinal<Scale[]>) => Note[] =
-    (notes: Note[], scaleIndex: Ordinal<Scale[]>): Note[] =>
+const applyScaleIndex: (notes: Note[], scaleIndex: Ordinal<Array<Scale<Pitch>>>) => Note[] =
+    (notes: Note[], scaleIndex: Ordinal<Array<Scale<Pitch>>>): Note[] =>
         notes.map((note: Note): Note => ({
             ...note,
             pitch: { ...note.pitch, scaleIndex },

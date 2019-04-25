@@ -1,5 +1,5 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { Amplitude, as } from '@musical-patterns/utilities'
+import { Amplitude, as, Pitch } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { AlmostTrueContourWholes, AlmostTrueSegments } from './types'
 import { computeAlmostTrueContourWholes } from './wholes'
@@ -15,9 +15,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale[]>(3) },
-                { scaleIndex: as.Ordinal<Scale[]>(4) },
-                { scaleIndex: as.Ordinal<Scale[]>(5) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(5) },
             ],
         )
 
@@ -28,9 +28,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.extendedEndingZdaubGlis,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale[]>(3) },
-                { scaleIndex: as.Ordinal<Scale[]>(4) },
-                { scaleIndex: as.Ordinal<Scale[]>(5) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(5) },
             ],
         )
 
@@ -41,9 +41,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.zdaubBonyWithSuperinscape,
             ],
             [
-                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale[]>(3) },
-                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale[]>(4) },
-                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Scale[]>(2) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
+                { gainScalar: as.NormalScalar<Amplitude>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
 

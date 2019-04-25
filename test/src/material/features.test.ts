@@ -1,5 +1,5 @@
-import { Note, NoteFeature, PitchDuration, STANDARD_DURATIONS_SCALE_INDEX } from '@musical-patterns/material'
-import { as, Scalar } from '@musical-patterns/utilities'
+import { Note, NoteFeature, PitchDuration, STANDARD_DURATION_SCALE_INDEX } from '@musical-patterns/material'
+import { Amplitude, as, Duration, Pitch, Scalar } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 
 describe('features', () => {
@@ -10,31 +10,31 @@ describe('features', () => {
         })
 
         describe('duration', () => {
-            let duration: NoteFeature
+            let duration: NoteFeature<Duration>
             beforeEach(() => {
                 duration = note.duration!
             })
 
             it('uses the durations scale', () => {
                 expect(duration.scaleIndex)
-                    .toBe(STANDARD_DURATIONS_SCALE_INDEX)
+                    .toBe(STANDARD_DURATION_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(as.Ordinal<Scalar[]>(5))
+                    .toBe(as.Ordinal<Array<Scalar<Duration>>>(5))
             })
         })
 
         describe('gain', () => {
-            let gain: NoteFeature
+            let gain: NoteFeature<Amplitude>
             beforeEach(() => {
                 gain = note.gain!
             })
 
             it('scales the gain to zero', () => {
                 expect(gain.scalar)
-                    .toBe(as.Scalar<Scalar>(0))
+                    .toBe(as.Scalar<Amplitude>(0))
             })
         })
     })
@@ -46,43 +46,43 @@ describe('features', () => {
         })
 
         describe('duration', () => {
-            let duration: NoteFeature
+            let duration: NoteFeature<Duration>
             beforeEach(() => {
                 duration = note.duration!
             })
 
             it('uses the durations scale', () => {
                 expect(duration.scaleIndex)
-                    .toBe(STANDARD_DURATIONS_SCALE_INDEX)
+                    .toBe(STANDARD_DURATION_SCALE_INDEX)
             })
 
             it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
                 expect(duration.index)
-                    .toBe(as.Ordinal<Scalar[]>(5))
+                    .toBe(as.Ordinal<Array<Scalar<Duration>>>(5))
             })
         })
 
         describe('gain', () => {
-            let gain: NoteFeature
+            let gain: NoteFeature<Amplitude>
             beforeEach(() => {
                 gain = note.gain!
             })
 
             it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
                 expect(gain.scalar)
-                    .toBe(as.Scalar<Scalar>(1))
+                    .toBe(as.Scalar<Amplitude>(1))
             })
         })
 
         describe('pitch', () => {
-            let pitch: NoteFeature
+            let pitch: NoteFeature<Pitch>
             beforeEach(() => {
                 pitch = note.pitch!
             })
 
             it('uses the pitch index, shifted by one to be zero-indexed, for the index', () => {
                 expect(pitch.index)
-                    .toBe(as.Ordinal<Scalar[]>(2))
+                    .toBe(as.Ordinal<Array<Scalar<Pitch>>>(2))
             })
         })
     })

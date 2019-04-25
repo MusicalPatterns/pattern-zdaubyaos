@@ -7,9 +7,9 @@ const applyGainScalar: (notes: Note[], gainScalar: NormalScalar<Amplitude>) => N
             ...note,
             gain: note.gain && {
                 ...note.gain,
-                scalar: use.Scalar(
-                    note.gain.scalar || as.Scalar<Scalar>(0),
-                    insteadOf<Scalar, Scalar<Scalar>>(gainScalar),
+                scalar: use.NormalScalar(
+                    note.gain.scalar || as.Scalar<Amplitude>(0),
+                    insteadOf<NormalScalar, Scalar<Amplitude>>(gainScalar),
                 ),
             },
         }))

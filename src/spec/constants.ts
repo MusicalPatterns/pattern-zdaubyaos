@@ -2,20 +2,20 @@
 
 import {
     as,
-    Hz,
+    Duration,
     Ms,
-    ofNotAs,
-    Scalar,
+    Pitch,
+    Point,
     SCIENTIFIC_PITCHES,
     ScientificPitchNoteName,
     ScientificPitchOctaveNumber,
 } from '@musical-patterns/utilities'
 
-const ZDAUBYAOS_INITIAL_BASE_DURATION: Scalar<Ms> = as.Scalar<Ms>(140)
-const ZDAUBYAOS_INITIAL_BASE_FREQUENCY: Scalar<Hz> =
-    as.Scalar(ofNotAs(SCIENTIFIC_PITCHES[ ScientificPitchNoteName.A ][ ScientificPitchOctaveNumber._4 ]))
+const ZDAUBYAOS_INITIAL_BASIS_DURATION: Duration = as.Translation<Point<Ms>>(140)
+const ZDAUBYAOS_INITIAL_BASIS_FREQUENCY: Pitch =
+    SCIENTIFIC_PITCHES[ ScientificPitchNoteName.A ][ ScientificPitchOctaveNumber._4 ]
 
 export {
-    ZDAUBYAOS_INITIAL_BASE_DURATION,
-    ZDAUBYAOS_INITIAL_BASE_FREQUENCY,
+    ZDAUBYAOS_INITIAL_BASIS_DURATION,
+    ZDAUBYAOS_INITIAL_BASIS_FREQUENCY,
 }

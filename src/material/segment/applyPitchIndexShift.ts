@@ -1,8 +1,8 @@
 import { Note } from '@musical-patterns/material'
-import { Cardinal, Ordinal, Scalar, use } from '@musical-patterns/utilities'
+import { Cardinal, Ordinal, Pitch, Scalar, use } from '@musical-patterns/utilities'
 
-const applyPitchIndexShift: (notes: Note[], pitchIndexShift: Cardinal<Ordinal<Scalar[]>>) => Note[] =
-    (notes: Note[], pitchIndexShift: Cardinal<Ordinal<Scalar[]>>): Note[] =>
+const applyPitchIndexShift: (notes: Note[], pitchIndexShift: Cardinal<Ordinal<Array<Scalar<Pitch>>>>) => Note[] =
+    (notes: Note[], pitchIndexShift: Cardinal<Ordinal<Array<Scalar<Pitch>>>>): Note[] =>
         notes.map((note: Note): Note => ({
             ...note,
             pitch: note.pitch && {

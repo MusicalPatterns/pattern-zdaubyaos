@@ -1,6 +1,6 @@
 import { Note, PitchDuration } from '@musical-patterns/material'
 import { ContourWhole, use } from '@musical-patterns/utilities'
-import { SHIFT_FOR_GAIN_AND_DURATIONS_SCALES } from '../../constants'
+import { SHIFT_PAST_GAIN_AND_DURATION_SCALES_TO_PITCH_SCALE } from '../../constants'
 import { computeNote } from '../features'
 import { applyGainScalar } from './applyGainScalar'
 import { applyPitchIndexShift } from './applyPitchIndexShift'
@@ -21,7 +21,7 @@ const applyNoteStyle: (contourWhole: ContourWhole<PitchDuration>, noteStyle: Not
             notes = applyGainScalar(notes, gainScalar)
         }
 
-        notes = applyScaleIndex(notes, use.Cardinal(scaleIndex, SHIFT_FOR_GAIN_AND_DURATIONS_SCALES))
+        notes = applyScaleIndex(notes, use.Cardinal(scaleIndex, SHIFT_PAST_GAIN_AND_DURATION_SCALES_TO_PITCH_SCALE))
 
         return notes
     }

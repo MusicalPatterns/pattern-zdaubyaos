@@ -1,7 +1,7 @@
 // tslint:disable max-file-line-count
 
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, negative, Ordinal, Scalar } from '@musical-patterns/utilities'
+import { as, negative, Ordinal, Pitch, Scalar } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { TrueContourWholes, TrueSegments } from './types'
 import { computeTrueContourWholes } from './wholes'
@@ -17,9 +17,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale[]>(0) },
-                { scaleIndex: as.Ordinal<Scale[]>(1) },
-                { scaleIndex: as.Ordinal<Scale[]>(2) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
 
@@ -30,9 +30,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosInaidjiyaiouzdSummerToSpring,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale[]>(3) },
-                { scaleIndex: as.Ordinal<Scale[]>(4) },
-                { scaleIndex: as.Ordinal<Scale[]>(2) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
 
@@ -43,9 +43,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale[]>(3) },
-                { scaleIndex: as.Ordinal<Scale[]>(1) },
-                { scaleIndex: as.Ordinal<Scale[]>(2) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
 
@@ -56,9 +56,9 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.zdaubTrem,
             ],
             [
-                { scaleIndex: as.Ordinal<Scale[]>(0) },
-                { scaleIndex: as.Ordinal<Scale[]>(1) },
-                { scaleIndex: as.Ordinal<Scale[]>(2) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
+                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
 
@@ -70,9 +70,12 @@ const computeTrueSegments: () => TrueSegments =
                     trueContourWholes.zdaubGlisVariant,
                 ],
                 [
-                    { scaleIndex: as.Ordinal<Scale[]>(3), pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(2) },
-                    { scaleIndex: as.Ordinal<Scale[]>(1) },
-                    { scaleIndex: as.Ordinal<Scale[]>(2) },
+                    {
+                        pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(2),
+                        scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3),
+                    },
+                    { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
+                    { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
                 ],
             )
 
@@ -84,16 +87,16 @@ const computeTrueSegments: () => TrueSegments =
             ],
             [
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(2),
-                    scaleIndex: as.Ordinal<Scale[]>(0),
+                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(2),
+                    scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0),
                 },
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(negative(2)),
-                    scaleIndex: as.Ordinal<Scale[]>(1),
+                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(2)),
+                    scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1),
                 },
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Scalar[]>>(negative(3)),
-                    scaleIndex: as.Ordinal<Scale[]>(2),
+                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(3)),
+                    scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2),
                 },
             ],
         )
