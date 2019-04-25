@@ -19,7 +19,7 @@ describe('apply pitch index shift', () => {
             testNote(as.Ordinal<Array<Scalar<Pitch>>>(10)),
         ]
 
-        expect(applyPitchIndexShift(notes, as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(6)))
+        expect(applyPitchIndexShift(notes, as.Transition<Array<Scalar<Pitch>>>(6)))
             .toEqual(expectedPart)
     })
 })

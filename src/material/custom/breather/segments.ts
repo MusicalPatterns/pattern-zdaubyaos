@@ -45,7 +45,7 @@ const computeBreatherSegments: () => BreatherSegments =
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 {
                     gainScalar: as.UnitScalar<Gain>(0.5),
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(1)),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(1)),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2),
                 },
             ],

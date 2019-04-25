@@ -71,7 +71,7 @@ const computeTrueSegments: () => TrueSegments =
                 ],
                 [
                     {
-                        pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(2),
+                        pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(2),
                         scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3),
                     },
                     { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
@@ -87,15 +87,15 @@ const computeTrueSegments: () => TrueSegments =
             ],
             [
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(2),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(2),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0),
                 },
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(2)),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(2)),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1),
                 },
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(3)),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(3)),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2),
                 },
             ],

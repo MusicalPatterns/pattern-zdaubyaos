@@ -17,17 +17,17 @@ const computeOtherSegments: () => OtherSegments =
             [
                 {
                     gainScalar: as.UnitScalar<Gain>(0.8),
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(4),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(4),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3),
                 },
                 {
                     gainScalar: as.UnitScalar<Gain>(0.8),
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(6),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(6),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4),
                 },
                 {
                     gainScalar: as.UnitScalar<Gain>(0.8),
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(3),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(3),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(5),
                 },
             ],
@@ -41,15 +41,15 @@ const computeOtherSegments: () => OtherSegments =
             ],
             [
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(2),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(2),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0),
                 },
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(2)),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(2)),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1),
                 },
                 {
-                    pitchIndexShift: as.Cardinal<Ordinal<Array<Scalar<Pitch>>>>(negative(3)),
+                    pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(3)),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2),
                 },
             ],
