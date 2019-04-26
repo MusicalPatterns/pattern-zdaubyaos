@@ -9,7 +9,6 @@ import {
     dividesEvenly,
     negative,
     NEXT,
-    notAs,
     ofNotAs,
     Ordinal,
     reciprocal,
@@ -30,8 +29,8 @@ const getBarCountIsTrickyBecauseWeKnowItDividesEvenlyButTypesDoNot:
     (blocksTotal: Cardinal, barDivisor: Cardinal) => Cardinal =
     (blocksTotal: Cardinal, barDivisor: Cardinal): Cardinal =>
         as.Cardinal(use.Scalar(
-            notAs.Cardinal(blocksTotal),
-            as.Scalar(notAs.Translation(reciprocal(barDivisor))),
+            as.number(blocksTotal),
+            as.Scalar(as.number(reciprocal(barDivisor))),
         ))
 
 const bonyRendering: Rendering<PitchDuration> =
@@ -50,14 +49,14 @@ const bonyRendering: Rendering<PitchDuration> =
         const rhythmicBlocks: Block = as.Block(isBarTargetFifteen ?
             repeat(
                 FIFTEEN_BONY_BLOCKS,
-                as.Cardinal<Block>(notAs.Cardinal(use.Multiple(
+                as.Cardinal<Block>(as.number(use.Multiple(
                     barCount,
                     as.Multiple(ofNotAs(FIFTEEN_BONY_BLOCK_COUNT_PER_BAR)),
                 ))),
             ) :
             repeat(
                 TWENTYFOUR_BONY_BLOCKS,
-                as.Cardinal<Block>(notAs.Cardinal(use.Multiple(
+                as.Cardinal<Block>(as.number(use.Multiple(
                     barCount,
                     as.Multiple(ofNotAs(TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR)),
                 ))),

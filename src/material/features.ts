@@ -10,7 +10,6 @@ import {
     as,
     ContourElement,
     Duration,
-    notAs,
     Pitch,
     Scalar,
     translateFromOneIndexedToZeroIndexed,
@@ -18,7 +17,7 @@ import {
 
 const computeNote: (contourElement: ContourElement<PitchDuration>) => Note =
     ([ pitch, duration ]: ContourElement<PitchDuration>): Note => {
-        if (pitch === notAs.Ordinal<Scalar[]>(STANDARD_PITCH_INDEX_INDICATING_REST)) {
+        if (pitch === as.number(STANDARD_PITCH_INDEX_INDICATING_REST)) {
             return {
                 duration: {
                     index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Duration>>>(duration)),

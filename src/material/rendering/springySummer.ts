@@ -10,10 +10,8 @@ import {
     INITIAL,
     Integer,
     isEven,
-    notAs,
     ONE_HALF,
     POSITIVE_INTEGERS,
-    Scalar,
     slice,
     use,
 } from '@musical-patterns/utilities'
@@ -25,7 +23,7 @@ const springySummerRendering: RenderingByBlockElement<PitchDuration> =
             .map((integer: Integer): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
                     return as.ContourElement<PitchDuration>([
-                        notAs.Ordinal<Scalar[]>(STANDARD_PITCH_INDEX_INDICATING_REST),
+                        as.number(STANDARD_PITCH_INDEX_INDICATING_REST),
                         1,
                     ])
                 }

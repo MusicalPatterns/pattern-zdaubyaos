@@ -9,9 +9,7 @@ import {
     ContourPiece,
     INITIAL,
     Integer,
-    notAs,
     POSITIVE_INTEGERS,
-    Scalar,
     slice,
     use,
 } from '@musical-patterns/utilities'
@@ -27,8 +25,8 @@ const springRendering: RenderingByBlockElement<PitchDuration> =
             ),
         )
         const contourElement: ContourElement<PitchDuration> = use.Ordinal(contour, INITIAL)
-        contourElement[ notAs.Ordinal(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] =
-            notAs.Ordinal<Scalar[]>(STANDARD_PITCH_INDEX_INDICATING_REST)
+        contourElement[ as.number(INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT) ] =
+            as.number(STANDARD_PITCH_INDEX_INDICATING_REST)
 
         return contour
     }

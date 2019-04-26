@@ -11,9 +11,7 @@ import {
     DOUBLE,
     INITIAL,
     Integer,
-    notAs,
     POSITIVE_INTEGERS,
-    Scalar,
     slice,
     use,
 } from '@musical-patterns/utilities'
@@ -33,7 +31,7 @@ const summerySpringRendering: RenderingByBlockElement<PitchDuration> =
         arraySet(
             initialElement,
             INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT,
-            notAs.Ordinal<Scalar[]>(STANDARD_PITCH_INDEX_INDICATING_REST),
+            as.number(STANDARD_PITCH_INDEX_INDICATING_REST),
         )
 
         return contour
