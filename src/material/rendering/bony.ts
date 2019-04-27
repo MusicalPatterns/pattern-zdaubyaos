@@ -38,8 +38,8 @@ const bonyRendering: Rendering<PitchDuration> =
         const blockClone: Block = as.Block(deepClone(block))
         const blocksTotal: Cardinal = blockClone.reduce(
             // tslint:disable-next-line no-unnecessary-callback-wrapper
-            (accumulator: Cardinal, cell: number): Cardinal =>
-                sum(accumulator, as.Cardinal(cell)),
+            (accumulator: Cardinal, blockElement: number): Cardinal =>
+                sum(accumulator, as.Cardinal(blockElement)),
             as.Cardinal(0),
         )
         const isBarTargetFifteen: boolean = dividesEvenly(blocksTotal, FIFTEEN)

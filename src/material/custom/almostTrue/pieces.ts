@@ -18,7 +18,7 @@ const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
         const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = computeTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
         const inaiiiVariety: ContourPiece<PitchDuration> = as.ContourPiece(sequence(
-            ...map(inai, (cell: number, index: Ordinal): ContourPiece<PitchDuration> => {
+            ...map(inai, (blockElement: number, index: Ordinal): ContourPiece<PitchDuration> => {
                 const renderingsSequence: Array<Rendering<PitchDuration>> = [
                     renderings[ RenderingName.SPRING ],
                     renderings[ RenderingName.SUMMER ],
@@ -35,7 +35,7 @@ const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
                     insteadOf<Ordinal, Array<Rendering<PitchDuration>>>(index),
                 )
 
-                return rendering(as.Block([ cell ]))
+                return rendering(as.Block([ blockElement ]))
             }),
         ))
 

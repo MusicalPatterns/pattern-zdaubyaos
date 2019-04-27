@@ -18,8 +18,8 @@ import {
 import { SPRINGY_SUMMER_TRANSLATION } from './constants'
 
 const springySummerRendering: RenderingByBlockElement<PitchDuration> =
-    (cell: number): ContourPiece<PitchDuration> =>
-        as.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal<Integer[]>(cell))
+    (blockElement: number): ContourPiece<PitchDuration> =>
+        as.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal<Integer[]>(blockElement))
             .map((integer: Integer): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
                     return as.ContourElement<PitchDuration>([

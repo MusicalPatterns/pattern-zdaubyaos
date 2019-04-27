@@ -17,8 +17,8 @@ import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { SINGLE_DURATION } from './constants'
 
 const springRendering: RenderingByBlockElement<PitchDuration> =
-    (cell: number): ContourPiece<PitchDuration> => {
-        const integers: Integer[] = slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal<Integer[]>(cell))
+    (blockElement: number): ContourPiece<PitchDuration> => {
+        const integers: Integer[] = slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal<Integer[]>(blockElement))
         const contour: ContourPiece<PitchDuration> = as.ContourPiece(
             integers.map((integer: Integer): ContourElement<PitchDuration> =>
                 as.ContourElement<PitchDuration>([ integer, SINGLE_DURATION ]),

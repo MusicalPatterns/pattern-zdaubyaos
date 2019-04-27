@@ -2,15 +2,15 @@ import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/materi
 import { as, ContourPiece, negative, use } from '@musical-patterns/utilities'
 
 const fallRendering: RenderingByBlockElement<PitchDuration> =
-    (cell: number): ContourPiece<PitchDuration> =>
+    (blockElement: number): ContourPiece<PitchDuration> =>
         as.ContourPiece<PitchDuration>([
             [
                 1,
                 1,
             ],
             [
-                use.Cardinal(cell, as.Cardinal(negative(1))),
-                use.Cardinal(cell, as.Cardinal(negative(1))),
+                use.Cardinal(blockElement, as.Cardinal(negative(1))),
+                use.Cardinal(blockElement, as.Cardinal(negative(1))),
             ],
         ])
 

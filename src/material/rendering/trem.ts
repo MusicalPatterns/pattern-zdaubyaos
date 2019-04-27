@@ -2,10 +2,10 @@ import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/materi
 import { as, ContourPiece, repeat } from '@musical-patterns/utilities'
 
 const tremRendering: RenderingByBlockElement<PitchDuration> =
-    (cell: number): ContourPiece<PitchDuration> =>
+    (blockElement: number): ContourPiece<PitchDuration> =>
         as.ContourPiece<PitchDuration>(repeat(
-            [ as.ContourElement<PitchDuration>([ cell, 1 ]) ],
-            as.Cardinal<ContourPiece<PitchDuration>>(cell),
+            [ as.ContourElement<PitchDuration>([ blockElement, 1 ]) ],
+            as.Cardinal<ContourPiece<PitchDuration>>(blockElement),
         ))
 
 export {
