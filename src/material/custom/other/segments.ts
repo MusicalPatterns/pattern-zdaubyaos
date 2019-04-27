@@ -16,17 +16,17 @@ const computeOtherSegments: () => OtherSegments =
             ],
             [
                 {
-                    gainScalar: as.UnitScalar<Gain>(0.8),
+                    gainScalar: as.NormalScalar<Gain>(0.8),
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(4),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3),
                 },
                 {
-                    gainScalar: as.UnitScalar<Gain>(0.8),
+                    gainScalar: as.NormalScalar<Gain>(0.8),
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(6),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4),
                 },
                 {
-                    gainScalar: as.UnitScalar<Gain>(0.8),
+                    gainScalar: as.NormalScalar<Gain>(0.8),
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(3),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(5),
                 },

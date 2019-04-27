@@ -19,7 +19,7 @@ describe('apply gain scalar', () => {
             testNote(as.Scalar<Gain>(0.25)),
         ]
 
-        expect(applyGainScalar(notes, as.UnitScalar<Gain>(0.5)))
+        expect(applyGainScalar(notes, as.NormalScalar<Gain>(0.5)))
             .toEqual(expectedNotes)
     })
 })

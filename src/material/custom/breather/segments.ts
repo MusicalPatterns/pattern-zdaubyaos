@@ -15,7 +15,7 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.rest,
             ],
             [
-                { gainScalar: as.UnitScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
+                { gainScalar: as.NormalScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
@@ -29,7 +29,7 @@ const computeBreatherSegments: () => BreatherSegments =
             ],
             [
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
-                { gainScalar: as.UnitScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
+                { gainScalar: as.NormalScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
@@ -44,7 +44,7 @@ const computeBreatherSegments: () => BreatherSegments =
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 {
-                    gainScalar: as.UnitScalar<Gain>(0.5),
+                    gainScalar: as.NormalScalar<Gain>(0.5),
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(1)),
                     scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2),
                 },
@@ -59,7 +59,7 @@ const computeBreatherSegments: () => BreatherSegments =
             ],
             [
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
-                { gainScalar: as.UnitScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
+                { gainScalar: as.NormalScalar<Gain>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
