@@ -7,10 +7,11 @@ import {
     as,
     ContourElement,
     ContourPiece,
+    INCREMENT,
     INITIAL,
     Integer,
-    POSITIVE_INTEGERS,
-    slice,
+    ONE,
+    range,
     use,
 } from '@musical-patterns/utilities'
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
@@ -18,7 +19,7 @@ import { SINGLE_DURATION } from './constants'
 
 const springRendering: RenderingByBlockElement<PitchDuration> =
     (blockElement: number): ContourPiece<PitchDuration> => {
-        const integers: Integer[] = slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal<Integer[]>(blockElement))
+        const integers: Integer[] = range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
         const contour: ContourPiece<PitchDuration> = as.ContourPiece(
             integers.map((integer: Integer): ContourElement<PitchDuration> =>
                 as.ContourElement<PitchDuration>([ integer, SINGLE_DURATION ]),

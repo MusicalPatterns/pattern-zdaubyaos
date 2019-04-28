@@ -6,20 +6,19 @@ import {
 import {
     as,
     ContourElement,
-    ContourPiece,
-    INITIAL,
+    ContourPiece, INCREMENT,
     Integer,
     isEven,
+    ONE,
     ONE_HALF,
-    POSITIVE_INTEGERS,
-    slice,
+    range,
     use,
 } from '@musical-patterns/utilities'
 import { SPRINGY_SUMMER_TRANSLATION } from './constants'
 
 const springySummerRendering: RenderingByBlockElement<PitchDuration> =
     (blockElement: number): ContourPiece<PitchDuration> =>
-        as.ContourPiece<PitchDuration>(slice(POSITIVE_INTEGERS, INITIAL, as.Ordinal<Integer[]>(blockElement))
+        as.ContourPiece<PitchDuration>(range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
             .map((integer: Integer): ContourElement<PitchDuration> => {
                 if (isEven(integer)) {
                     return as.ContourElement<PitchDuration>([
