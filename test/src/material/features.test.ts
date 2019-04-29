@@ -1,4 +1,4 @@
-import { Note, NoteFeature, PitchDuration, STANDARD_DURATION_SCALE_INDEX } from '@musical-patterns/material'
+import { Feature, Note, PitchDuration, STANDARD_DURATION_SCALE_INDEX } from '@musical-patterns/material'
 import { as, Duration, Gain, Pitch, Scalar } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 
@@ -10,7 +10,7 @@ describe('features', () => {
         })
 
         describe('duration', () => {
-            let duration: NoteFeature<Duration>
+            let duration: Feature<Duration>
             beforeEach(() => {
                 duration = note.duration!
             })
@@ -27,7 +27,7 @@ describe('features', () => {
         })
 
         describe('gain', () => {
-            let gain: NoteFeature<Gain>
+            let gain: Feature<Gain>
             beforeEach(() => {
                 gain = note.gain!
             })
@@ -46,7 +46,7 @@ describe('features', () => {
         })
 
         describe('duration', () => {
-            let duration: NoteFeature<Duration>
+            let duration: Feature<Duration>
             beforeEach(() => {
                 duration = note.duration!
             })
@@ -63,7 +63,7 @@ describe('features', () => {
         })
 
         describe('gain', () => {
-            let gain: NoteFeature<Gain>
+            let gain: Feature<Gain>
             beforeEach(() => {
                 gain = note.gain!
             })
@@ -75,7 +75,7 @@ describe('features', () => {
         })
 
         describe('pitch', () => {
-            let pitch: NoteFeature<Pitch>
+            let pitch: Feature<Pitch>
             beforeEach(() => {
                 pitch = note.pitch!
             })
