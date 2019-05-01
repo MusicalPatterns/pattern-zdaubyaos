@@ -1,4 +1,4 @@
-import { PitchDuration, Segment } from '@musical-patterns/material'
+import { PitchValue, Segment } from '@musical-patterns/material'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 
 interface OtherBlocks {
@@ -12,13 +12,13 @@ interface OtherBlocks {
 }
 
 interface OtherContourPieces {
-    backboneFifteen: ContourPiece<PitchDuration>,
-    backboneTwentyfour: ContourPiece<PitchDuration>,
-    secretLongChord: ContourPiece<PitchDuration>,
-    shifty: ContourPiece<PitchDuration>,
-    shiftyFifteen: ContourPiece<PitchDuration>,
-    shiftyTwentyfour: ContourPiece<PitchDuration>,
-    shiftyTwentyfourVariant: ContourPiece<PitchDuration>,
+    backboneFifteen: ContourPiece<PitchValue>,
+    backboneTwentyfour: ContourPiece<PitchValue>,
+    secretLongChord: ContourPiece<PitchValue>,
+    shifty: ContourPiece<PitchValue>,
+    shiftyFifteen: ContourPiece<PitchValue>,
+    shiftyTwentyfour: ContourPiece<PitchValue>,
+    shiftyTwentyfourVariant: ContourPiece<PitchValue>,
 }
 
 interface OtherSegments {
@@ -28,10 +28,10 @@ interface OtherSegments {
 }
 
 interface OtherContourWholes {
-    secretLongChord: ContourWhole<PitchDuration>,
-    shiftyA: ContourWhole<PitchDuration>,
-    shiftyB: ContourWhole<PitchDuration>,
-    totallyOutThere: ContourWhole<PitchDuration>,
+    secretLongChord: ContourWhole<PitchValue>,
+    shiftyA: ContourWhole<PitchValue>,
+    shiftyB: ContourWhole<PitchValue>,
+    totallyOutThere: ContourWhole<PitchValue>,
 }
 
 export {

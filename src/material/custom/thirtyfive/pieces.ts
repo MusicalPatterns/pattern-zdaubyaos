@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering } from '@musical-patterns/material'
+import { PitchValue, Rendering } from '@musical-patterns/material'
 import { ContourPiece } from '@musical-patterns/utilities'
 import { computeRenderings, RenderingName, Renderings } from '../../rendering'
 import { computeThirtyfiveBlocks } from './blocks'
@@ -9,12 +9,12 @@ const computeThirtyfiveContourPieces: () => ThirtyfiveContourPieces =
         const blocks: ThirtyfiveBlocks = computeThirtyfiveBlocks()
 
         const renderings: Renderings = computeRenderings()
-        const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
+        const glis: Rendering<PitchValue> = renderings[ RenderingName.GLIS ]
 
-        const yaosBass: ContourPiece<PitchDuration> = glis(blocks.yaosBass)
-        const yaosAccidentInspired: ContourPiece<PitchDuration> = glis(blocks.yaosAccidentInspired)
-        const zdaub: ContourPiece<PitchDuration> = glis(blocks.zdaub)
-        const zdaubOnlyWiggle: ContourPiece<PitchDuration> = glis(blocks.zdaubOnlyWiggle)
+        const yaosBass: ContourPiece<PitchValue> = glis(blocks.yaosBass)
+        const yaosAccidentInspired: ContourPiece<PitchValue> = glis(blocks.yaosAccidentInspired)
+        const zdaub: ContourPiece<PitchValue> = glis(blocks.zdaub)
+        const zdaubOnlyWiggle: ContourPiece<PitchValue> = glis(blocks.zdaubOnlyWiggle)
 
         return {
             yaosAccidentInspired,

@@ -1,44 +1,44 @@
 import {
     FULL_GAIN,
     Note,
-    PitchDuration,
+    PitchValue,
     SILENT,
-    STANDARD_DURATION_SCALE_INDEX,
     STANDARD_PITCH_INDEX_INDICATING_REST,
+    STANDARD_VALUE_SCALE_INDEX,
 } from '@musical-patterns/material'
 import {
     as,
     ContourElement,
-    Duration,
     Pitch,
     Scalar,
     translateFromOneIndexedToZeroIndexed,
+    Value,
 } from '@musical-patterns/utilities'
 
-const computeNote: (contourElement: ContourElement<PitchDuration>) => Note =
-    ([ pitch, duration ]: ContourElement<PitchDuration>): Note => {
+const computeNote: (contourElement: ContourElement<PitchValue>) => Note =
+    ([ pitch, value ]: ContourElement<PitchValue>): Note => {
         if (pitch === as.number(STANDARD_PITCH_INDEX_INDICATING_REST)) {
             return {
-                duration: {
-                    index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Duration>>>(duration)),
-                    scaleIndex: STANDARD_DURATION_SCALE_INDEX,
-                },
-                gain: {
+                intensity: {
                     scalar: SILENT,
+                },
+                value: {
+                    index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Value>>>(value)),
+                    scaleIndex: STANDARD_VALUE_SCALE_INDEX,
                 },
             }
         }
 
         return {
-            duration: {
-                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Duration>>>(duration)),
-                scaleIndex: STANDARD_DURATION_SCALE_INDEX,
-            },
-            gain: {
+            intensity: {
                 scalar: FULL_GAIN,
             },
             pitch: {
                 index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Pitch>>>(pitch)),
+            },
+            value: {
+                index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Value>>>(value)),
+                scaleIndex: STANDARD_VALUE_SCALE_INDEX,
             },
         }
     }

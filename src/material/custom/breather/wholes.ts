@@ -1,4 +1,4 @@
-import { PitchDuration, pitchDurationRest } from '@musical-patterns/material'
+import { PitchValue, pitchValueRest } from '@musical-patterns/material'
 import { as, ContourPiece, ContourWhole, repeat } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
@@ -12,27 +12,27 @@ const computeBreatherContourWholes: () => BreatherContourWholes =
         const almostTruePieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
         const otherPieces: OtherContourPieces = computeOtherContourPieces()
 
-        const rest: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(pitchDurationRest(24))
-        const spring: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(getTrueContours(
+        const rest: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(pitchValueRest(24))
+        const spring: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(getTrueContours(
             BlockStyle.INAI,
             BarTarget.TWENTYFOUR,
             RenderingName.SPRING,
         ))
-        const summer: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(getTrueContours(
+        const summer: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(getTrueContours(
             BlockStyle.INAI,
             BarTarget.TWENTYFOUR,
             RenderingName.SUMMER,
         ))
-        const doubleFall: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(
-            repeat(otherPieces.backboneTwentyfour, as.Cardinal<ContourPiece<PitchDuration>>(2)),
+        const doubleFall: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(
+            repeat(otherPieces.backboneTwentyfour, as.Cardinal<ContourPiece<PitchValue>>(2)),
         )
-        const variety: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(almostTruePieces.inaiiiVariety)
-        const springAlt: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(getTrueContours(
+        const variety: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(almostTruePieces.inaiiiVariety)
+        const springAlt: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(getTrueContours(
             BlockStyle.OUZD,
             BarTarget.TWENTYFOUR,
             RenderingName.SPRING,
         ))
-        const doubleRest: ContourWhole<PitchDuration> = as.ContourWhole<PitchDuration>(pitchDurationRest(48))
+        const doubleRest: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(pitchValueRest(48))
 
         return {
             doubleFall,

@@ -1,8 +1,8 @@
 import { computeNotes } from '../../../src/indexForTest'
-import { computeTotalZdaubyaosDuration } from '../../support'
+import { computeTotalZdaubyaosValue } from '../../support'
 
 describe('notes', () => {
-    it('is the case that they all have the same duration', () => {
+    it('is the case that they all have the same value', () => {
         const {
             subDub,
             harmSubharm,
@@ -10,11 +10,11 @@ describe('notes', () => {
         } = computeNotes()
 
         const expectedTotalPatternDuration: number = 3360
-        expect(computeTotalZdaubyaosDuration(subDub))
+        expect(computeTotalZdaubyaosValue(subDub))
             .toEqual(expectedTotalPatternDuration)
-        expect(computeTotalZdaubyaosDuration(superDuper))
+        expect(computeTotalZdaubyaosValue(superDuper))
             .toEqual(expectedTotalPatternDuration)
-        expect(computeTotalZdaubyaosDuration(harmSubharm))
+        expect(computeTotalZdaubyaosValue(harmSubharm))
             .toEqual(expectedTotalPatternDuration)
     })
 })

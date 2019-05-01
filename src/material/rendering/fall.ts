@@ -1,9 +1,9 @@
-import { PitchDuration, RenderingByBlockElement } from '@musical-patterns/material'
+import { PitchValue, RenderingByBlockElement } from '@musical-patterns/material'
 import { as, ContourPiece, negative, use } from '@musical-patterns/utilities'
 
-const fallRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> =>
-        as.ContourPiece<PitchDuration>([
+const fallRendering: RenderingByBlockElement<PitchValue> =
+    (blockElement: number): ContourPiece<PitchValue> =>
+        as.ContourPiece<PitchValue>([
             [
                 1,
                 1,

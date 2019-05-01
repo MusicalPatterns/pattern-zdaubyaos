@@ -1,5 +1,5 @@
 import { Note } from '@musical-patterns/material'
-import { Ordinal, Pitch, Scalar, Transition, use } from '@musical-patterns/utilities'
+import { Pitch, Scalar, Transition, use } from '@musical-patterns/utilities'
 
 const applyPitchIndexShift: (notes: Note[], pitchIndexShift: Transition<Array<Scalar<Pitch>>>) => Note[] =
     (notes: Note[], pitchIndexShift: Transition<Array<Scalar<Pitch>>>): Note[] =>

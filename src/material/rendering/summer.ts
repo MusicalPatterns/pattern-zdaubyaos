@@ -1,8 +1,4 @@
-import {
-    PitchDuration,
-    RenderingByBlockElement,
-    STANDARD_PITCH_INDEX_INDICATING_REST,
-} from '@musical-patterns/material'
+import { PitchValue, RenderingByBlockElement, STANDARD_PITCH_INDEX_INDICATING_REST } from '@musical-patterns/material'
 import {
     as,
     ContourElement,
@@ -15,11 +11,11 @@ import {
     use,
 } from '@musical-patterns/utilities'
 
-const summerRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> =>
-        as.ContourPiece<PitchDuration>(range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
-            .map((integer: Integer): ContourElement<PitchDuration> =>
-                as.ContourElement<PitchDuration>(isEven(integer) ?
+const summerRendering: RenderingByBlockElement<PitchValue> =
+    (blockElement: number): ContourPiece<PitchValue> =>
+        as.ContourPiece<PitchValue>(range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
+            .map((integer: Integer): ContourElement<PitchValue> =>
+                as.ContourElement<PitchValue>(isEven(integer) ?
                     [ as.number(STANDARD_PITCH_INDEX_INDICATING_REST), 1 ] :
                     [ integer, 1 ],
                 ),

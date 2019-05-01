@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering } from '@musical-patterns/material'
+import { PitchValue, Rendering } from '@musical-patterns/material'
 import {
     arraySet,
     as,
@@ -33,8 +33,8 @@ const getBarCountIsTrickyBecauseWeKnowItDividesEvenlyButTypesDoNot:
             as.Scalar(as.number(reciprocal(barDivisor))),
         ))
 
-const bonyRendering: Rendering<PitchDuration> =
-    (block: Block): ContourPiece<PitchDuration> => {
+const bonyRendering: Rendering<PitchValue> =
+    (block: Block): ContourPiece<PitchValue> => {
         const blockClone: Block = as.Block(deepClone(block))
         const blocksTotal: Cardinal = blockClone.reduce(
             // tslint:disable-next-line no-unnecessary-callback-wrapper
@@ -63,7 +63,7 @@ const bonyRendering: Rendering<PitchDuration> =
             ),
         )
 
-        const contourPiece: ContourPiece<PitchDuration> = as.ContourPiece([])
+        const contourPiece: ContourPiece<PitchValue> = as.ContourPiece([])
         let blocksIndexForPitchIndex: Ordinal = as.Ordinal(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: number): void => {
@@ -82,7 +82,7 @@ const bonyRendering: Rendering<PitchDuration> =
                 blocksIndexForPitchIndex = use.Cardinal(blocksIndexForPitchIndex, NEXT)
             }
 
-            contourPiece.push(as.ContourElement<PitchDuration>([ pitchIndex, rhythmicBlockElement ]))
+            contourPiece.push(as.ContourElement<PitchValue>([ pitchIndex, rhythmicBlockElement ]))
         })
 
         return contourPiece

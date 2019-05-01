@@ -1,4 +1,4 @@
-import { PitchDuration } from '@musical-patterns/material'
+import { PitchValue } from '@musical-patterns/material'
 import { as } from '@musical-patterns/utilities'
 import { computeOtherContourPieces, OtherContourPieces } from '../../../../../../src/indexForTest'
 
@@ -10,7 +10,7 @@ describe('other contour pieces', () => {
 
     it('handles backbone fifteen', () => {
         expect(otherContourPieces.backboneFifteen)
-            .toEqual(as.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchValue>([
                 [ 1, 1 ], [ 2, 2 ],
                 [ 1, 1 ], [ 2, 2 ],
                 [ 1, 1 ], [ 2, 2 ],
@@ -21,7 +21,7 @@ describe('other contour pieces', () => {
 
     it('handles backbone twentyfour', () => {
         expect(otherContourPieces.backboneTwentyfour)
-            .toEqual(as.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchValue>([
                 [ 1, 1 ], [ 3, 3 ],
                 [ 1, 1 ], [ 3, 3 ],
                 [ 1, 1 ], [ 3, 3 ],
@@ -33,7 +33,7 @@ describe('other contour pieces', () => {
 
     it('handles shifty fifteen', () => {
         expect(otherContourPieces.shiftyFifteen)
-            .toEqual(as.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchValue>([
                 [ 2, 2 ], [ 1, 1 ],
                 [ 5, 5 ], [ 1, 1 ],
                 [ 2, 2 ], [ 4, 4 ],
@@ -42,7 +42,7 @@ describe('other contour pieces', () => {
 
     it('handles shifty twentyfour', () => {
         expect(otherContourPieces.shiftyTwentyfour)
-            .toEqual(as.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchValue>([
                 [ 3, 3 ], [ 1, 1 ],
                 [ 3, 3 ], [ 1, 1 ],
                 [ 3, 3 ], [ 4, 4 ],
@@ -52,7 +52,7 @@ describe('other contour pieces', () => {
 
     it('handles shifty twentyfour variant', () => {
         expect(otherContourPieces.shiftyTwentyfourVariant)
-            .toEqual(as.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchValue>([
                 [ 4, 4 ], [ 7, 7 ], [ 4, 4 ],
                 [ 1, 1 ], [ 3, 3 ], [ 1, 1 ], [ 3, 3 ], [ 1, 1 ],
             ]))
@@ -60,7 +60,7 @@ describe('other contour pieces', () => {
 
     it('handles shifty', () => {
         expect(otherContourPieces.shifty)
-            .toEqual(as.ContourPiece<PitchDuration>([
+            .toEqual(as.ContourPiece<PitchValue>([
                 [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ],
                 [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 3, 3 ], [ 4, 4 ],
                 [ 3, 3 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ], [ 1, 1 ],

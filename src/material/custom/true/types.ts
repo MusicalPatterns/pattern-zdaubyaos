@@ -1,9 +1,9 @@
-import { PitchDuration, Rendering, Segment } from '@musical-patterns/material'
+import { PitchValue, Rendering, Segment } from '@musical-patterns/material'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 
-type TrueContourPiecesByRenderingName = { [Index in RenderingName]: ContourPiece<PitchDuration> }
+type TrueContourPiecesByRenderingName = { [Index in RenderingName]: ContourPiece<PitchValue> }
 type TrueContourPeicesByBlockStyleThenRenderingName = { [Index in BlockStyle]: TrueContourPiecesByRenderingName }
 type TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName =
     { [Index in BarTarget]: TrueContourPeicesByBlockStyleThenRenderingName }
@@ -12,12 +12,12 @@ type GetTrueContourPieces = (
     blockStyle: BlockStyle,
     barTarget: BarTarget,
     renderingName: RenderingName,
-) => ContourPiece<PitchDuration>
+) => ContourPiece<PitchValue>
 
 type FormulaicTrueYaosContourWhole = (
     fifteenRenderingName: RenderingName,
     twentyfourRenderingName: RenderingName,
-) => ContourWhole<PitchDuration>
+) => ContourWhole<PitchValue>
 
 type TrueBlocksByBlockStyle = { [Index in BlockStyle]: Block }
 type TrueBlocksByBarTargetThenBlockStyle = { [Index in BarTarget]: TrueBlocksByBlockStyle }
@@ -26,7 +26,7 @@ interface ComputeTrueContourPieceParameters {
     barTarget: BarTarget,
     block: Block,
     blockStyle: BlockStyle,
-    rendering: Rendering<PitchDuration>,
+    rendering: Rendering<PitchValue>,
     renderingName: RenderingName,
 }
 
@@ -40,13 +40,13 @@ interface TrueSegments {
 }
 
 interface TrueContourWholes {
-    yaosInaidjiyaiouzdSummerToSpring: ContourWhole<PitchDuration>,
-    yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd: ContourWhole<PitchDuration>,
-    yaosUmowchuwowiestSpringToSummer: ContourWhole<PitchDuration>,
-    yaosUmowchuwowiestSummerToSpring: ContourWhole<PitchDuration>,
-    zdaubGlis: ContourWhole<PitchDuration>,
-    zdaubGlisVariant: ContourWhole<PitchDuration>,
-    zdaubTrem: ContourWhole<PitchDuration>,
+    yaosInaidjiyaiouzdSummerToSpring: ContourWhole<PitchValue>,
+    yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd: ContourWhole<PitchValue>,
+    yaosUmowchuwowiestSpringToSummer: ContourWhole<PitchValue>,
+    yaosUmowchuwowiestSummerToSpring: ContourWhole<PitchValue>,
+    zdaubGlis: ContourWhole<PitchValue>,
+    zdaubGlisVariant: ContourWhole<PitchValue>,
+    zdaubTrem: ContourWhole<PitchValue>,
 }
 
 export {

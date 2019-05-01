@@ -1,5 +1,5 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, Gain, Pitch } from '@musical-patterns/utilities'
+import { as, Intensity, Pitch } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { AlmostTrueContourWholes, AlmostTrueSegments } from './types'
 import { computeAlmostTrueContourWholes } from './wholes'
@@ -41,9 +41,9 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
                 wholes.zdaubBonyWithSuperinscape,
             ],
             [
-                { gainScalar: as.NormalScalar<Gain>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3) },
-                { gainScalar: as.NormalScalar<Gain>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
-                { gainScalar: as.NormalScalar<Gain>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
+                { intensityScalar: as.NormalScalar<Intensity>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(3) },
+                { intensityScalar: as.NormalScalar<Intensity>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
+                { intensityScalar: as.NormalScalar<Intensity>(0.33), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
         )
 

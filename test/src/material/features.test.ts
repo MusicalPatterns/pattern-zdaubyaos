@@ -1,40 +1,40 @@
-import { Feature, Note, PitchDuration, STANDARD_DURATION_SCALE_INDEX } from '@musical-patterns/material'
-import { as, Duration, Gain, Pitch, Scalar } from '@musical-patterns/utilities'
+import { Feature, Note, PitchValue, STANDARD_VALUE_SCALE_INDEX } from '@musical-patterns/material'
+import { as, Intensity, Pitch, Scalar, Value } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 
 describe('features', () => {
     describe('when the pitch index is negative 1', () => {
         let note: Note
         beforeEach(() => {
-            note = computeNote(as.ContourElement<PitchDuration>([ -1, 6 ]))
+            note = computeNote(as.ContourElement<PitchValue>([ -1, 6 ]))
         })
 
-        describe('duration', () => {
-            let duration: Feature<Duration>
+        describe('value', () => {
+            let value: Feature<Value>
             beforeEach(() => {
-                duration = note.duration!
+                value = note.value!
             })
 
-            it('uses the durations scale', () => {
-                expect(duration.scaleIndex)
-                    .toBe(STANDARD_DURATION_SCALE_INDEX)
+            it('uses the values scale', () => {
+                expect(value.scaleIndex)
+                    .toBe(STANDARD_VALUE_SCALE_INDEX)
             })
 
-            it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(duration.index)
-                    .toBe(as.Ordinal<Array<Scalar<Duration>>>(5))
+            it('uses the value index, shifted by one to be zero-indexed, for the index', () => {
+                expect(value.index)
+                    .toBe(as.Ordinal<Array<Scalar<Value>>>(5))
             })
         })
 
-        describe('gain', () => {
-            let gain: Feature<Gain>
+        describe('intensity', () => {
+            let intensity: Feature<Intensity>
             beforeEach(() => {
-                gain = note.gain!
+                intensity = note.intensity!
             })
 
-            it('scales the gain to zero', () => {
-                expect(gain.scalar)
-                    .toBe(as.Scalar<Gain>(0))
+            it('scales the intensity to zero', () => {
+                expect(intensity.scalar)
+                    .toBe(as.Scalar<Intensity>(0))
             })
         })
     })
@@ -42,35 +42,35 @@ describe('features', () => {
     describe('when the pitch index is not zero', () => {
         let note: Note
         beforeEach(() => {
-            note = computeNote(as.ContourElement<PitchDuration>([ 3, 6 ]))
+            note = computeNote(as.ContourElement<PitchValue>([ 3, 6 ]))
         })
 
-        describe('duration', () => {
-            let duration: Feature<Duration>
+        describe('value', () => {
+            let value: Feature<Value>
             beforeEach(() => {
-                duration = note.duration!
+                value = note.value!
             })
 
-            it('uses the durations scale', () => {
-                expect(duration.scaleIndex)
-                    .toBe(STANDARD_DURATION_SCALE_INDEX)
+            it('uses the values scale', () => {
+                expect(value.scaleIndex)
+                    .toBe(STANDARD_VALUE_SCALE_INDEX)
             })
 
-            it('uses the duration index, shifted by one to be zero-indexed, for the index', () => {
-                expect(duration.index)
-                    .toBe(as.Ordinal<Array<Scalar<Duration>>>(5))
+            it('uses the value index, shifted by one to be zero-indexed, for the index', () => {
+                expect(value.index)
+                    .toBe(as.Ordinal<Array<Scalar<Value>>>(5))
             })
         })
 
-        describe('gain', () => {
-            let gain: Feature<Gain>
+        describe('intensity', () => {
+            let intensity: Feature<Intensity>
             beforeEach(() => {
-                gain = note.gain!
+                intensity = note.intensity!
             })
 
-            it('scales the gain to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
-                expect(gain.scalar)
-                    .toBe(as.Scalar<Gain>(1))
+            it('scales the intensity to full power (so that it can potentially be adjusted later when style is mapped over)', () => {
+                expect(intensity.scalar)
+                    .toBe(as.Scalar<Intensity>(1))
             })
         })
 

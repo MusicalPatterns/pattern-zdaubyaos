@@ -13,7 +13,7 @@ export {
     getTrueContours,
     computeTrueContourPieces,
     computeAlmostTrueContourPieces,
-    applyGainScalar,
+    applyIntensityScalar,
     applyPitchIndexShift,
     TrueContourPiecesByRenderingName,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,

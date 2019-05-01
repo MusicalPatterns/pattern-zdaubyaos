@@ -1,13 +1,13 @@
-import { Note, PitchDuration, Segment } from '@musical-patterns/material'
+import { Note, PitchValue, Segment } from '@musical-patterns/material'
 import { ContourWhole, insteadOf, map, Ordinal, use } from '@musical-patterns/utilities'
 import { applyNoteStyle } from './applyNoteStyle'
 import { NoteStyle } from './types'
 
-const computeSegment: (contourWholes: Array<ContourWhole<PitchDuration>>, noteStyles: NoteStyle[]) => Segment =
-    (contourWholes: Array<ContourWhole<PitchDuration>>, noteStyles: NoteStyle[]): Segment =>
+const computeSegment: (contourWholes: Array<ContourWhole<PitchValue>>, noteStyles: NoteStyle[]) => Segment =
+    (contourWholes: Array<ContourWhole<PitchValue>>, noteStyles: NoteStyle[]): Segment =>
         map(
             contourWholes,
-            (contourWhole: ContourWhole<PitchDuration>, index: Ordinal<Array<ContourWhole<PitchDuration>>>): Note[] => {
+            (contourWhole: ContourWhole<PitchValue>, index: Ordinal<Array<ContourWhole<PitchValue>>>): Note[] => {
                 const noteStyle: NoteStyle = use.Ordinal(noteStyles, insteadOf<Ordinal, NoteStyle[]>(index))
 
                 return applyNoteStyle(contourWhole, noteStyle)

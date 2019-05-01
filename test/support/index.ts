@@ -1,1 +1,1 @@
-export { computeTotalZdaubyaosDuration } from './totalZdaubyaosDuration'
+export { computeTotalZdaubyaosValue } from './totalZdaubyaosValue'

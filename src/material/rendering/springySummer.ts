@@ -1,12 +1,9 @@
-import {
-    PitchDuration,
-    RenderingByBlockElement,
-    STANDARD_PITCH_INDEX_INDICATING_REST,
-} from '@musical-patterns/material'
+import { PitchValue, RenderingByBlockElement, STANDARD_PITCH_INDEX_INDICATING_REST } from '@musical-patterns/material'
 import {
     as,
     ContourElement,
-    ContourPiece, INCREMENT,
+    ContourPiece,
+    INCREMENT,
     Integer,
     isEven,
     ONE,
@@ -16,18 +13,18 @@ import {
 } from '@musical-patterns/utilities'
 import { SPRINGY_SUMMER_TRANSLATION } from './constants'
 
-const springySummerRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> =>
-        as.ContourPiece<PitchDuration>(range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
-            .map((integer: Integer): ContourElement<PitchDuration> => {
+const springySummerRendering: RenderingByBlockElement<PitchValue> =
+    (blockElement: number): ContourPiece<PitchValue> =>
+        as.ContourPiece<PitchValue>(range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
+            .map((integer: Integer): ContourElement<PitchValue> => {
                 if (isEven(integer)) {
-                    return as.ContourElement<PitchDuration>([
+                    return as.ContourElement<PitchValue>([
                         as.number(STANDARD_PITCH_INDEX_INDICATING_REST),
                         1,
                     ])
                 }
 
-                return as.ContourElement<PitchDuration>([
+                return as.ContourElement<PitchValue>([
                     use.Scalar(use.Translation(integer, SPRINGY_SUMMER_TRANSLATION), ONE_HALF),
                     1,
                 ])

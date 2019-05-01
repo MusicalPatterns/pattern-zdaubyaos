@@ -1,6 +1,6 @@
-import { PitchDuration, Rendering } from '@musical-patterns/material'
+import { PitchValue, Rendering } from '@musical-patterns/material'
 
-type Renderings = { [Index in RenderingName]: Rendering<PitchDuration> }
+type Renderings = { [Index in RenderingName]: Rendering<PitchValue> }
 
 enum RenderingName {
     SPRING = 'SPRING',

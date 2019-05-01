@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering } from '@musical-patterns/material'
+import { PitchValue, Rendering } from '@musical-patterns/material'
 import { ContourPiece } from '@musical-patterns/utilities'
 import { computeRenderings, RenderingName, Renderings } from '../../rendering'
 import { computeOtherBlocks } from './blocks'
@@ -10,17 +10,17 @@ const computeOtherContourPieces: () => OtherContourPieces =
 
         const renderings: Renderings = computeRenderings()
 
-        const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
-        const flatline: Rendering<PitchDuration> = renderings[ RenderingName.FLATLINE ]
+        const glis: Rendering<PitchValue> = renderings[ RenderingName.GLIS ]
+        const flatline: Rendering<PitchValue> = renderings[ RenderingName.FLATLINE ]
 
-        const backboneFifteen: ContourPiece<PitchDuration> = glis(blocks.backboneFifteen)
-        const backboneTwentyfour: ContourPiece<PitchDuration> = glis(blocks.backboneTwentyfour)
-        const shiftyFifteen: ContourPiece<PitchDuration> = glis(blocks.shiftyFifteen)
-        const shiftyTwentyfour: ContourPiece<PitchDuration> = glis(blocks.shiftyTwentyfour)
-        const shiftyTwentyfourVariant: ContourPiece<PitchDuration> = glis(blocks.shiftyTwentyfourVariant)
-        const shifty: ContourPiece<PitchDuration> = glis(blocks.shifty)
+        const backboneFifteen: ContourPiece<PitchValue> = glis(blocks.backboneFifteen)
+        const backboneTwentyfour: ContourPiece<PitchValue> = glis(blocks.backboneTwentyfour)
+        const shiftyFifteen: ContourPiece<PitchValue> = glis(blocks.shiftyFifteen)
+        const shiftyTwentyfour: ContourPiece<PitchValue> = glis(blocks.shiftyTwentyfour)
+        const shiftyTwentyfourVariant: ContourPiece<PitchValue> = glis(blocks.shiftyTwentyfourVariant)
+        const shifty: ContourPiece<PitchValue> = glis(blocks.shifty)
 
-        const secretLongChord: ContourPiece<PitchDuration> = flatline(blocks.secretLongChord)
+        const secretLongChord: ContourPiece<PitchValue> = flatline(blocks.secretLongChord)
 
         return {
             backboneFifteen,

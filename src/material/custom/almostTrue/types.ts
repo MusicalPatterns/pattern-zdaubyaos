@@ -1,4 +1,4 @@
-import { PitchDuration, Segment } from '@musical-patterns/material'
+import { PitchValue, Segment } from '@musical-patterns/material'
 import { Block, ContourPiece, ContourWhole } from '@musical-patterns/utilities'
 
 interface AlmostTrueBlocks {
@@ -6,8 +6,8 @@ interface AlmostTrueBlocks {
 }
 
 interface AlmostTrueContourPieces {
-    inaiiiVariety: ContourPiece<PitchDuration>,
-    zdaubGlisVariant: ContourPiece<PitchDuration>,
+    inaiiiVariety: ContourPiece<PitchValue>,
+    zdaubGlisVariant: ContourPiece<PitchValue>,
 }
 
 interface AlmostTrueSegments {
@@ -17,12 +17,12 @@ interface AlmostTrueSegments {
 }
 
 interface AlmostTrueContourWholes {
-    extendedEndingZdaubBony: ContourWhole<PitchDuration>,
-    extendedEndingZdaubGlis: ContourWhole<PitchDuration>,
-    extendedEndingZdaubTrem: ContourWhole<PitchDuration>,
-    yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment: ContourWhole<PitchDuration>,
-    yetOfBackbone: ContourWhole<PitchDuration>,
-    zdaubBonyWithSuperinscape: ContourWhole<PitchDuration>,
+    extendedEndingZdaubBony: ContourWhole<PitchValue>,
+    extendedEndingZdaubGlis: ContourWhole<PitchValue>,
+    extendedEndingZdaubTrem: ContourWhole<PitchValue>,
+    yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment: ContourWhole<PitchValue>,
+    yetOfBackbone: ContourWhole<PitchValue>,
+    zdaubBonyWithSuperinscape: ContourWhole<PitchValue>,
 }
 
 export {

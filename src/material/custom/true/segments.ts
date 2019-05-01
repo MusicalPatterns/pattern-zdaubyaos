@@ -1,7 +1,7 @@
 // tslint:disable max-file-line-count
 
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, negative, Ordinal, Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, negative, Pitch, Scalar } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { TrueContourWholes, TrueSegments } from './types'
 import { computeTrueContourWholes } from './wholes'

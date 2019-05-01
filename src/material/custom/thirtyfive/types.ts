@@ -1,4 +1,4 @@
-import { PitchDuration, Segment } from '@musical-patterns/material'
+import { PitchValue, Segment } from '@musical-patterns/material'
 import { Block, ContourPiece, ContourWhole, KeyMap } from '@musical-patterns/utilities'
 
 interface ThirtyfiveBlocks {
@@ -8,12 +8,12 @@ interface ThirtyfiveBlocks {
     zdaubOnlyWiggle: Block,
 }
 
-type ThirtyfiveContourPieces = KeyMap<ThirtyfiveBlocks, ContourPiece<PitchDuration>>
+type ThirtyfiveContourPieces = KeyMap<ThirtyfiveBlocks, ContourPiece<PitchValue>>
 
 interface ThirtyfiveContourWholes {
-    thirtyfiveYaosAccidentInspired: ContourWhole<PitchDuration>,
-    thirtyfiveYaosBass: ContourWhole<PitchDuration>,
-    thirtyfiveZdaub: ContourWhole<PitchDuration>,
+    thirtyfiveYaosAccidentInspired: ContourWhole<PitchValue>,
+    thirtyfiveYaosBass: ContourWhole<PitchValue>,
+    thirtyfiveZdaub: ContourWhole<PitchValue>,
 }
 
 interface ThirtyfiveSegments {

@@ -1,14 +1,11 @@
-import {
-    PitchDuration,
-    RenderingByBlockElement,
-    STANDARD_PITCH_INDEX_INDICATING_REST,
-} from '@musical-patterns/material'
+import { PitchValue, RenderingByBlockElement, STANDARD_PITCH_INDEX_INDICATING_REST } from '@musical-patterns/material'
 import {
     arraySet,
     as,
     ContourElement,
     ContourPiece,
-    DOUBLE, INCREMENT,
+    DOUBLE,
+    INCREMENT,
     INITIAL,
     Integer,
     ONE,
@@ -18,16 +15,16 @@ import {
 import { INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT } from '../../constants'
 import { SUMMERY_SPRING_TRANSLATION } from './constants'
 
-const summerySpringRendering: RenderingByBlockElement<PitchDuration> =
-    (blockElement: number): ContourPiece<PitchDuration> => {
-        const contour: ContourPiece<PitchDuration> = as.ContourPiece(
+const summerySpringRendering: RenderingByBlockElement<PitchValue> =
+    (blockElement: number): ContourPiece<PitchValue> => {
+        const contour: ContourPiece<PitchValue> = as.ContourPiece(
             range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
-                .map((integer: Integer): ContourElement<PitchDuration> => as.ContourElement<PitchDuration>([
+                .map((integer: Integer): ContourElement<PitchValue> => as.ContourElement<PitchValue>([
                     use.Multiple(use.Translation(integer, SUMMERY_SPRING_TRANSLATION), DOUBLE),
                     1,
                 ])),
         )
-        const initialElement: ContourElement<PitchDuration> = use.Ordinal(contour, INITIAL)
+        const initialElement: ContourElement<PitchValue> = use.Ordinal(contour, INITIAL)
         arraySet(
             initialElement,
             INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT,

@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering } from '@musical-patterns/material'
+import { PitchValue, Rendering } from '@musical-patterns/material'
 import { as, Block, ContourPiece, insteadOf, map, Ordinal, sequence, use } from '@musical-patterns/utilities'
 import { computeRenderings, RenderingName, Renderings } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
@@ -11,15 +11,15 @@ const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
         const blocks: AlmostTrueBlocks = computeAlmostTrueBlocks()
 
         const renderings: Renderings = computeRenderings()
-        const glis: Rendering<PitchDuration> = renderings[ RenderingName.GLIS ]
+        const glis: Rendering<PitchValue> = renderings[ RenderingName.GLIS ]
 
-        const zdaubGlisVariant: ContourPiece<PitchDuration> = glis(blocks.trueGlisVariant)
+        const zdaubGlisVariant: ContourPiece<PitchValue> = glis(blocks.trueGlisVariant)
 
         const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = computeTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
-        const inaiiiVariety: ContourPiece<PitchDuration> = as.ContourPiece(sequence(
-            ...map(inai, (blockElement: number, index: Ordinal): ContourPiece<PitchDuration> => {
-                const renderingsSequence: Array<Rendering<PitchDuration>> = [
+        const inaiiiVariety: ContourPiece<PitchValue> = as.ContourPiece(sequence(
+            ...map(inai, (blockElement: number, index: Ordinal): ContourPiece<PitchValue> => {
+                const renderingsSequence: Array<Rendering<PitchValue>> = [
                     renderings[ RenderingName.SPRING ],
                     renderings[ RenderingName.SUMMER ],
                     renderings[ RenderingName.SPRING ],
@@ -30,9 +30,9 @@ const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
                     renderings[ RenderingName.FALL ],
                 ]
 
-                const rendering: Rendering<PitchDuration> = use.Ordinal(
+                const rendering: Rendering<PitchValue> = use.Ordinal(
                     renderingsSequence,
-                    insteadOf<Ordinal, Array<Rendering<PitchDuration>>>(index),
+                    insteadOf<Ordinal, Array<Rendering<PitchValue>>>(index),
                 )
 
                 return rendering(as.Block([ blockElement ]))

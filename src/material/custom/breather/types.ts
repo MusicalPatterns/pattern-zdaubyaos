@@ -1,4 +1,4 @@
-import { PitchDuration, Segment } from '@musical-patterns/material'
+import { PitchValue, Segment } from '@musical-patterns/material'
 import { ContourWhole } from '@musical-patterns/utilities'
 
 interface BreatherSegments {
@@ -10,13 +10,13 @@ interface BreatherSegments {
 }
 
 interface BreatherContourWholes {
-    doubleFall: ContourWhole<PitchDuration>,
-    doubleRest: ContourWhole<PitchDuration>,
-    rest: ContourWhole<PitchDuration>,
-    spring: ContourWhole<PitchDuration>,
-    springAlt: ContourWhole<PitchDuration>,
-    summer: ContourWhole<PitchDuration>,
-    variety: ContourWhole<PitchDuration>,
+    doubleFall: ContourWhole<PitchValue>,
+    doubleRest: ContourWhole<PitchValue>,
+    rest: ContourWhole<PitchValue>,
+    spring: ContourWhole<PitchValue>,
+    springAlt: ContourWhole<PitchValue>,
+    summer: ContourWhole<PitchValue>,
+    variety: ContourWhole<PitchValue>,
 }
 
 export {

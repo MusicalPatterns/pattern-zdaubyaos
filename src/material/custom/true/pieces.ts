@@ -1,4 +1,4 @@
-import { PitchDuration, Rendering } from '@musical-patterns/material'
+import { PitchValue, Rendering } from '@musical-patterns/material'
 import { Block, ContourPiece, entries } from '@musical-patterns/utilities'
 import { computeRenderings, RenderingName, Renderings } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
@@ -20,7 +20,7 @@ const computeTrueContourPiece: (parameters: {
     barTarget: BarTarget,
     block: Block,
     blockStyle: BlockStyle,
-    rendering: Rendering<PitchDuration>,
+    rendering: Rendering<PitchValue>,
     renderingName: RenderingName,
 }) => void =
     (
@@ -32,7 +32,7 @@ const computeTrueContourPiece: (parameters: {
             renderingName,
         }: ComputeTrueContourPieceParameters,
     ): void => {
-        const contourPiece: ContourPiece<PitchDuration> = rendering(block)
+        const contourPiece: ContourPiece<PitchValue> = rendering(block)
 
         contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] =
             contourPiecesByBarTargetBlockStyleThenRendering[ barTarget ] || {}
@@ -57,7 +57,7 @@ const computeTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyle
                                     .forEach(
                                         (
                                             [ renderingName, rendering ]:
-                                                [ RenderingName, Rendering<PitchDuration> ],
+                                                [ RenderingName, Rendering<PitchValue> ],
                                         ): void => {
                                             computeTrueContourPiece({
                                                 barTarget,
@@ -74,7 +74,7 @@ const computeTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyle
     }
 
 const getTrueContours: GetTrueContourPieces =
-    (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece<PitchDuration> => {
+    (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece<PitchValue> => {
         computeTrueContourPieces()
 
         countUsage(barTarget, blockStyle, renderingName)

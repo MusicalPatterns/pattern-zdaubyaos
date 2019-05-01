@@ -22,7 +22,7 @@ export {
     ThirtyfiveContourPieces,
 } from './custom/indexForTest'
 export {
-    applyGainScalar,
+    applyIntensityScalar,
     applyPitchIndexShift,
 } from './segment/indexForTest'
 
