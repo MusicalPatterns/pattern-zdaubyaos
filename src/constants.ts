@@ -1,7 +1,7 @@
 // tslint:disable no-magic-numbers
 
-import { Scale, Segment } from '@musical-patterns/material'
-import { as, Cardinal, Ordinal, Pitch, Transition } from '@musical-patterns/utilities'
+import { Segment } from '@musical-patterns/material'
+import { as, Cardinal, Ordinal } from '@musical-patterns/utilities'
 
 const FIFTEEN: Cardinal = as.Cardinal(15)
 const TWENTYFOUR: Cardinal = as.Cardinal(24)
@@ -14,9 +14,6 @@ const SEGMENT_C: Ordinal<Segment> = as.Ordinal<Segment>(2)
 
 const INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT: Ordinal = as.Ordinal(0)
 
-const SHIFT_PAST_GAIN_AND_DURATION_SCALES_TO_PITCH_SCALE: Transition<Array<Scale<Pitch>>> =
-    as.Transition<Array<Scale<Pitch>>>(2)
-
 export {
     FIFTEEN,
     TWENTYFOUR,
@@ -25,5 +22,4 @@ export {
     SEGMENT_B,
     SEGMENT_C,
     INDEX_OF_PITCH_INDEX_WITHIN_CONTOUR_ELEMENT,
-    SHIFT_PAST_GAIN_AND_DURATION_SCALES_TO_PITCH_SCALE,
 }

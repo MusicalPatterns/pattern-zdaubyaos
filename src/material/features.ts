@@ -4,7 +4,6 @@ import {
     PitchValue,
     SILENT,
     STANDARD_PITCH_INDEX_INDICATING_REST,
-    STANDARD_VALUE_SCALE_INDEX,
 } from '@musical-patterns/material'
 import {
     as,
@@ -24,7 +23,6 @@ const computeNote: (contourElement: ContourElement<PitchValue>) => Note =
                 },
                 value: {
                     index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Value>>>(value)),
-                    scaleIndex: STANDARD_VALUE_SCALE_INDEX,
                 },
             }
         }
@@ -38,7 +36,6 @@ const computeNote: (contourElement: ContourElement<PitchValue>) => Note =
             },
             value: {
                 index: translateFromOneIndexedToZeroIndexed(as.Ordinal<Array<Scalar<Value>>>(value)),
-                scaleIndex: STANDARD_VALUE_SCALE_INDEX,
             },
         }
     }

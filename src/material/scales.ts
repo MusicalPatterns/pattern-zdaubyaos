@@ -1,11 +1,13 @@
+// tslint:disable no-non-null-assertion
+
 import {
+    AbstractName,
     computeFlatValueScale,
     computeHarmonicSeriesScale,
     computeSubharmonicSeriesScale,
     MaterializeScales,
     materializeStandardScales,
-    Scale,
-    STANDARD_PITCH_SCALE_INDEX,
+    Scales,
 } from '@musical-patterns/material'
 import {
     computeDubparticularSeriesScalars,
@@ -14,50 +16,54 @@ import {
     computeSuperparticularSeriesScalars,
 } from '@musical-patterns/pattern-xenharmonic-series'
 import { StandardSpecs } from '@musical-patterns/spec'
-import { INITIAL, Pitch, Scalar, slice, THIRD, use } from '@musical-patterns/utilities'
+import { Pitch, Scalar } from '@musical-patterns/utilities'
 
 const materializeScales: MaterializeScales =
     // tslint:disable-next-line no-any
-    (specs: StandardSpecs): Array<Scale<any>> => {
+    (specs: StandardSpecs): Scales => {
         const superparticularSeriesScalars: Array<Scalar<Pitch>> = computeSuperparticularSeriesScalars()
         const duperparticularSeriesScalars: Array<Scalar<Pitch>> = computeDuperparticularSeriesScalars()
         const subparticularSeriesScalars: Array<Scalar<Pitch>> = computeSubparticularSeriesScalars()
         const dubparticularSeriesScalars: Array<Scalar<Pitch>> = computeDubparticularSeriesScalars()
 
         // tslint:disable-next-line no-any
-        const standardScales: Array<Scale<any>> = materializeStandardScales(
+        const standardScales: Scales = materializeStandardScales(
             specs,
             { valueScalars: computeFlatValueScale().scalars, pitchScalars: subparticularSeriesScalars },
         )
 
-        return slice(standardScales, INITIAL, THIRD)
-            .concat([
-                {
-                    basis: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).basis,
-                    scalars: dubparticularSeriesScalars,
-                    translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
-                },
-                {
-                    basis: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).basis,
-                    scalars: computeHarmonicSeriesScale().scalars,
-                    translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
-                },
-                {
-                    basis: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).basis,
-                    scalars: superparticularSeriesScalars,
-                    translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
-                },
-                {
-                    basis: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).basis,
-                    scalars: duperparticularSeriesScalars,
-                    translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
-                },
-                {
-                    basis: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).basis,
-                    scalars: computeSubharmonicSeriesScale().scalars,
-                    translation: use.Ordinal(standardScales, STANDARD_PITCH_SCALE_INDEX).translation,
-                },
-            ])
+        standardScales[ AbstractName.PITCH ]!.push(
+            {
+                basis: standardScales[ AbstractName.PITCH ]![ 0 ].basis,
+                scalars: dubparticularSeriesScalars,
+                translation: standardScales[ AbstractName.PITCH ]![ 0 ].translation,
+            })
+        standardScales[ AbstractName.PITCH ]!.push(
+            {
+                basis: standardScales[ AbstractName.PITCH ]![ 0 ].basis,
+                scalars: computeHarmonicSeriesScale().scalars,
+                translation: standardScales[ AbstractName.PITCH ]![ 0 ].translation,
+            })
+        standardScales[ AbstractName.PITCH ]!.push(
+            {
+                basis: standardScales[ AbstractName.PITCH ]![ 0 ].basis,
+                scalars: superparticularSeriesScalars,
+                translation: standardScales[ AbstractName.PITCH ]![ 0 ].translation,
+            })
+        standardScales[ AbstractName.PITCH ]!.push(
+            {
+                basis: standardScales[ AbstractName.PITCH ]![ 0 ].basis,
+                scalars: duperparticularSeriesScalars,
+                translation: standardScales[ AbstractName.PITCH ]![ 0 ].translation,
+            })
+        standardScales[ AbstractName.PITCH ]!.push(
+            {
+                basis: standardScales[ AbstractName.PITCH ]![ 0 ].basis,
+                scalars: computeSubharmonicSeriesScale().scalars,
+                translation: standardScales[ AbstractName.PITCH ]![ 0 ].translation,
+            })
+
+        return standardScales
     }
 
 export {

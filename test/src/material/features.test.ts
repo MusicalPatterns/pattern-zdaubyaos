@@ -1,4 +1,4 @@
-import { Feature, Note, PitchValue, STANDARD_VALUE_SCALE_INDEX } from '@musical-patterns/material'
+import { Feature, Note, PitchValue } from '@musical-patterns/material'
 import { as, Intensity, Pitch, Scalar, Value } from '@musical-patterns/utilities'
 import { computeNote } from '../../../src/indexForTest'
 
@@ -13,11 +13,6 @@ describe('features', () => {
             let value: Feature<Value>
             beforeEach(() => {
                 value = note.value!
-            })
-
-            it('uses the values scale', () => {
-                expect(value.scaleIndex)
-                    .toBe(STANDARD_VALUE_SCALE_INDEX)
             })
 
             it('uses the value index, shifted by one to be zero-indexed, for the index', () => {
@@ -49,11 +44,6 @@ describe('features', () => {
             let value: Feature<Value>
             beforeEach(() => {
                 value = note.value!
-            })
-
-            it('uses the values scale', () => {
-                expect(value.scaleIndex)
-                    .toBe(STANDARD_VALUE_SCALE_INDEX)
             })
 
             it('uses the value index, shifted by one to be zero-indexed, for the index', () => {
