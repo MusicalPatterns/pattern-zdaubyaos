@@ -17,7 +17,7 @@ const computeAlmostTrueContourPieces: () => AlmostTrueContourPieces =
 
         const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = computeTrueBlocks()
         const inai: Block = trueBlocks[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ]
-        const inaiiiVariety: ContourPiece<PitchValue> = as.ContourPiece(sequence(
+        const inaiiiVariety: ContourPiece<PitchValue> = as.ContourPiece<PitchValue>(sequence(
             ...map(inai, (blockElement: number, index: Ordinal): ContourPiece<PitchValue> => {
                 const renderingsSequence: Array<Rendering<PitchValue>> = [
                     renderings[ RenderingName.SPRING ],

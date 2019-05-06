@@ -17,7 +17,7 @@ import { SUMMERY_SPRING_TRANSLATION } from './constants'
 
 const summerySpringRendering: RenderingByBlockElement<PitchValue> =
     (blockElement: number): ContourPiece<PitchValue> => {
-        const contour: ContourPiece<PitchValue> = as.ContourPiece(
+        const contour: ContourPiece<PitchValue> = as.ContourPiece<PitchValue>(
             range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
                 .map((integer: Integer): ContourElement<PitchValue> => as.ContourElement<PitchValue>([
                     use.Multiple(use.Translation(integer, SUMMERY_SPRING_TRANSLATION), DOUBLE),

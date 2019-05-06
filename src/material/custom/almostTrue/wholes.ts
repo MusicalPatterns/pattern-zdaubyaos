@@ -8,7 +8,7 @@ import { AlmostTrueContourWholes } from './types'
 
 const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) => ContourWhole<PitchValue> =
     (renderingName: RenderingName): ContourWhole<PitchValue> =>
-        as.ContourWhole(sequence(
+        as.ContourWhole<PitchValue>(sequence(
             repeatCall(
                 () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
@@ -33,7 +33,7 @@ const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
         const extendedEndingZdaubGlis: ContourWhole<PitchValue> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.GLIS)
 
-        const yetOfBackbone: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const yetOfBackbone: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeatCall(
                 () => otherContourPieces.backboneFifteen,
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(8),
@@ -44,7 +44,7 @@ const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
             ),
         ))
 
-        const zdaubBonyWithSuperinscape: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const zdaubBonyWithSuperinscape: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeatCall(
                 () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
@@ -57,7 +57,7 @@ const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
         ))
 
         const yaosUmowchuwowiestAndInaidjiyaiouzdFallAndPitchAdjustment: ContourWhole<PitchValue> =
-            as.ContourWhole(sequence(
+            as.ContourWhole<PitchValue>(sequence(
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, RenderingName.FALL),
                 getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.FALL),

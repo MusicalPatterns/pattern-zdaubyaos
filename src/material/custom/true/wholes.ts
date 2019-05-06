@@ -10,7 +10,7 @@ import { FormulaicTrueYaosContourWhole, TrueContourWholes } from './types'
 
 const trueFormulaicUmowchuwowiestToInaidjiyaiouzdContourWhole: FormulaicTrueYaosContourWhole = (
     fifteenRenderingName: RenderingName, twentyfourRenderingName: RenderingName,
-): ContourWhole<PitchValue> => as.ContourWhole(sequence(
+): ContourWhole<PitchValue> => as.ContourWhole<PitchValue>(sequence(
     repeatCall(
         () => getTrueContours(BlockStyle.CHUWOW, BarTarget.FIFTEEN, fifteenRenderingName),
         as.Cardinal<Array<() => ContourPiece<PitchValue>>>(4),
@@ -27,7 +27,7 @@ const trueFormulaicUmowchuwowiestToInaidjiyaiouzdContourWhole: FormulaicTrueYaos
 
 const trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosContourWhole: FormulaicTrueYaosContourWhole = (
     fifteenRenderingName: RenderingName, twentyfourRenderingName: RenderingName,
-): ContourWhole<PitchValue> => as.ContourWhole(sequence(
+): ContourWhole<PitchValue> => as.ContourWhole<PitchValue>(sequence(
     repeatCall(
         () => getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, fifteenRenderingName),
         as.Cardinal<Array<() => ContourPiece<PitchValue>>>(4),
@@ -52,7 +52,7 @@ const computeTrueContourWholes: () => TrueContourWholes =
         const yaosInaidjiyaiouzdSummerToSpring: ContourWhole<PitchValue> =
             trueFormulaicInaidjiyaiouzdToUmowchuwowiestYaosContourWhole(RenderingName.SUMMER, RenderingName.SPRING)
         const yaosSpringySummerStraightIntoZdaubInaidjiyaiouzd: ContourWhole<PitchValue> =
-            as.ContourWhole(sequence(
+            as.ContourWhole<PitchValue>(sequence(
                 repeatCall(
                     () =>
                         getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
@@ -67,7 +67,7 @@ const computeTrueContourWholes: () => TrueContourWholes =
                     as.Cardinal<Array<() => ContourPiece<PitchValue>>>(4),
                 ),
             ))
-        const zdaubGlis: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const zdaubGlis: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeatCall(
                 () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
@@ -80,7 +80,7 @@ const computeTrueContourWholes: () => TrueContourWholes =
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
             ),
         ))
-        const zdaubGlisVariant: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const zdaubGlisVariant: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeatCall(
                 () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.GLIS),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(4),
@@ -88,7 +88,7 @@ const computeTrueContourWholes: () => TrueContourWholes =
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.GLIS),
             almostTruePieces.zdaubGlisVariant,
         ))
-        const zdaubTrem: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const zdaubTrem: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeatCall(
                 () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.TREM),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),

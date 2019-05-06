@@ -63,7 +63,7 @@ const bonyRendering: Rendering<PitchValue> =
             ),
         )
 
-        const contourPiece: ContourPiece<PitchValue> = as.ContourPiece([])
+        const contourPiece: ContourPiece<PitchValue> = as.ContourPiece<PitchValue>([])
         let blocksIndexForPitchIndex: Ordinal = as.Ordinal(0)
 
         rhythmicBlocks.forEach((rhythmicBlockElement: number): void => {

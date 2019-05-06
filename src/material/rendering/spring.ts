@@ -16,7 +16,7 @@ import { SINGLE_DURATION } from './constants'
 const springRendering: RenderingByBlockElement<PitchValue> =
     (blockElement: number): ContourPiece<PitchValue> => {
         const integers: Integer[] = range(ONE, use.Cardinal(as.Integer(blockElement), INCREMENT))
-        const contour: ContourPiece<PitchValue> = as.ContourPiece(
+        const contour: ContourPiece<PitchValue> = as.ContourPiece<PitchValue>(
             integers.map((integer: Integer): ContourElement<PitchValue> =>
                 as.ContourElement<PitchValue>([ integer, SINGLE_DURATION ]),
             ),

@@ -7,15 +7,15 @@ const computeThirtyfiveContourWholes: () => ThirtyfiveContourWholes =
     (): ThirtyfiveContourWholes => {
         const thirtyfiveContourPieces: ThirtyfiveContourPieces = computeThirtyfiveContourPieces()
 
-        const thirtyfiveYaosBass: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const thirtyfiveYaosBass: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeat(thirtyfiveContourPieces.yaosBass, as.Cardinal<ContourPiece<PitchValue>>(30)),
         ))
 
-        const thirtyfiveYaosAccidentInspired: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const thirtyfiveYaosAccidentInspired: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeat(thirtyfiveContourPieces.yaosAccidentInspired, as.Cardinal<ContourPiece<PitchValue>>(30)),
         ))
 
-        const thirtyfiveZdaub: ContourWhole<PitchValue> = as.ContourWhole(sequence(
+        const thirtyfiveZdaub: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             pitchValueRest(computeTotalPitchValueContourValue(thirtyfiveContourPieces.zdaub)),
             repeat(thirtyfiveContourPieces.zdaub, as.Cardinal<ContourPiece<PitchValue>>(2)),
             repeat(thirtyfiveContourPieces.zdaubOnlyWiggle, as.Cardinal<ContourPiece<PitchValue>>(12)),
