@@ -4,7 +4,7 @@ import { Intensity, NormalScalar, Ordinal, Pitch, Scalar, Transition } from '@mu
 interface NoteStyle {
     intensityScalar?: NormalScalar<Intensity>,
     pitchIndexShift?: Transition<Array<Scalar<Pitch>>>,
-    scaleIndex: Ordinal<Array<Scale<Pitch>>>,
+    scaleIndex?: Ordinal<Array<Scale<Pitch>>>,
 }
 
 export {

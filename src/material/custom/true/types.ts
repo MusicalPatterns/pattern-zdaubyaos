@@ -35,7 +35,7 @@ interface TrueSegments {
     springAllYaosUmowchuwowiest: Segment,
     springWithZdaub: Segment,
     springySummerTotallyOutThere: Segment,
-    summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped: Segment,
+    summerAllYaosUmowchuwowiestWithOneHarmonicallyFlipped: Segment,
     summerWithZdaubAndSeparationVariantBecomesPleasantlyGnarlyHarmonically: Segment,
 }
 

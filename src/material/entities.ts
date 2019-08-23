@@ -6,12 +6,12 @@ const materializeEntities: MaterializeEntities =
     (): Entity[] => {
         const notes: ZdaubyaosNotes = computeNotes()
 
-        const subDub: Entity = {
+        const dubpartDuperpart: Entity = {
             sections: [ { notes: notes.subDub } ],
             timbreName: TimbreNameEnum.PHONEME_BAH,
         }
 
-        const superDuper: Entity = {
+        const subpartSuperpart: Entity = {
             sections: [ { notes: notes.superDuper } ],
             timbreName: TimbreNameEnum.BRIT_BLUES_DRIVEN,
         }
@@ -22,9 +22,9 @@ const materializeEntities: MaterializeEntities =
         }
 
         return [
-            superDuper,
+            subpartSuperpart,
             harmSubharm,
-            subDub,
+            dubpartDuperpart,
         ]
     }
 

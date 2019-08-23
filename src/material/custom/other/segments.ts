@@ -42,7 +42,6 @@ const computeOtherSegments: () => OtherSegments =
             [
                 {
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(2),
-                    scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0),
                 },
                 {
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(2)),

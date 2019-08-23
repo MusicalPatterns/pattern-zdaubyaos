@@ -17,7 +17,7 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
             ],
             [
-                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
+                { },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
@@ -36,7 +36,7 @@ const computeTrueSegments: () => TrueSegments =
             ],
         )
 
-        const summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped: Segment = computeSegment(
+        const summerAllYaosUmowchuwowiestWithOneHarmonicallyFlipped: Segment = computeSegment(
             [
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
                 trueContourWholes.yaosUmowchuwowiestSummerToSpring,
@@ -56,7 +56,7 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.zdaubTrem,
             ],
             [
-                { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0) },
+                { },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
@@ -88,7 +88,6 @@ const computeTrueSegments: () => TrueSegments =
             [
                 {
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(2),
-                    scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(0),
                 },
                 {
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(2)),
@@ -106,7 +105,7 @@ const computeTrueSegments: () => TrueSegments =
             springAllYaosUmowchuwowiest,
             springWithZdaub,
             springySummerTotallyOutThere,
-            summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped,
+            summerAllYaosUmowchuwowiestWithOneHarmonicallyFlipped,
             summerWithZdaubAndSeparationVariantBecomesPleasantlyGnarlyHarmonically,
         }
     }

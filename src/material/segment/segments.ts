@@ -31,7 +31,7 @@ const computeSegments: () => Segment[] =
 
                 // 3
                 breatherSegments.summer,
-                trueSegments.summerAllYaosUmowchuwowiestWithSomeHarmonicallyFlipped,
+                trueSegments.summerAllYaosUmowchuwowiestWithOneHarmonicallyFlipped,
                 trueSegments.summerWithZdaubAndSeparationVariantBecomesPleasantlyGnarlyHarmonically,
                 otherSegments.secretLongChord,
                 otherSegments.shifty,

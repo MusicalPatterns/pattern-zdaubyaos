@@ -8,7 +8,7 @@
         {
           "duration": 3360,
           "gain": 0,
-          "tone": 146.66667,
+          "tone": 220,
           "location": [
             0,
             0,
@@ -8423,7 +8423,7 @@
         {
           "duration": 6720,
           "gain": 0,
-          "tone": 146.66667,
+          "tone": 220,
           "location": [
             0,
             0,
@@ -21171,7 +21171,7 @@
         {
           "duration": 3360,
           "gain": 0,
-          "tone": 440,
+          "tone": 220,
           "location": [
             0,
             0,
@@ -25934,7 +25934,7 @@
         {
           "duration": 3360,
           "gain": 0,
-          "tone": 440,
+          "tone": 220,
           "location": [
             0,
             0,
@@ -34327,7 +34327,7 @@
         {
           "duration": 3360,
           "gain": 0,
-          "tone": 440,
+          "tone": 220,
           "location": [
             0,
             0,
