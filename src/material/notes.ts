@@ -8,23 +8,23 @@ const computeNotes: () => ZdaubyaosNotes =
     (): ZdaubyaosNotes => {
         const segments: Segment[] = computeSegments()
 
-        let subDub: Note[] = []
-        let superDuper: Note[] = []
+        let subpartSuperpart: Note[] = []
+        let dubpartDuperpart: Note[] = []
         let harmSubharm: Note[] = []
 
         segments.forEach((segment: Segment): void => {
-            subDub = subDub
+            subpartSuperpart = subpartSuperpart
                 .concat(use.Ordinal(segment, SEGMENT_A))
-            superDuper = superDuper
+            dubpartDuperpart = dubpartDuperpart
                 .concat(use.Ordinal(segment, SEGMENT_B))
             harmSubharm = harmSubharm
                 .concat(use.Ordinal(segment, SEGMENT_C))
         })
 
         return {
+            dubpartDuperpart,
             harmSubharm,
-            subDub,
-            superDuper,
+            subpartSuperpart,
         }
     }
 

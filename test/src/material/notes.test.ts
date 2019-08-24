@@ -4,15 +4,15 @@ import { computeTotalZdaubyaosValue } from '../../support'
 describe('notes', () => {
     it('is the case that they all have the same value', () => {
         const {
-            subDub,
+            dubpartDuperpart,
             harmSubharm,
-            superDuper,
+            subpartSuperpart,
         } = computeNotes()
 
         const expectedTotalPatternDuration: number = 3360
-        expect(computeTotalZdaubyaosValue(subDub))
+        expect(computeTotalZdaubyaosValue(subpartSuperpart))
             .toEqual(expectedTotalPatternDuration)
-        expect(computeTotalZdaubyaosValue(superDuper))
+        expect(computeTotalZdaubyaosValue(dubpartDuperpart))
             .toEqual(expectedTotalPatternDuration)
         expect(computeTotalZdaubyaosValue(harmSubharm))
             .toEqual(expectedTotalPatternDuration)

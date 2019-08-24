@@ -18,9 +18,9 @@ enum BlockStyle {
 }
 
 interface ZdaubyaosNotes {
+    dubpartDuperpart: Note[],
     harmSubharm: Note[],
-    subDub: Note[],
-    superDuper: Note[],
+    subpartSuperpart: Note[],
 }
 
 export {
