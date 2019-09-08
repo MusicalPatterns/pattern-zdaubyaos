@@ -31,7 +31,7 @@ interface OtherContourWholes {
     secretLongChord: ContourWhole<PitchValue>,
     shiftyA: ContourWhole<PitchValue>,
     shiftyB: ContourWhole<PitchValue>,
-    totallyOutThere: ContourWhole<PitchValue>,
+    totallyOutThereIntro: ContourWhole<PitchValue>,
 }
 
 export {

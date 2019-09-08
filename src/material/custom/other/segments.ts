@@ -35,9 +35,9 @@ const computeOtherSegments: () => OtherSegments =
 
         const totallyOutThereIntro: Segment = computeSegment(
             [
-                otherContourWholes.totallyOutThere,
-                otherContourWholes.totallyOutThere,
-                otherContourWholes.totallyOutThere,
+                otherContourWholes.totallyOutThereIntro,
+                otherContourWholes.totallyOutThereIntro,
+                otherContourWholes.totallyOutThereIntro,
             ],
             [
                 {

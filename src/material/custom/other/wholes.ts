@@ -24,7 +24,7 @@ const computeOtherContourWholes: () => OtherContourWholes =
         const secretLongChord: ContourWhole<PitchValue> =
             as.ContourWhole<PitchValue>(contourPieces.secretLongChord)
 
-        const totallyOutThere: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(repeat(
+        const totallyOutThereIntro: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(repeat(
             slice(
                 getTrueContours(BlockStyle.DJIYAI, BarTarget.FIFTEEN, RenderingName.SPRINGY_SUMMER),
                 insteadOf<Ordinal, ContourPiece<PitchValue>>(INITIAL),
@@ -48,7 +48,7 @@ const computeOtherContourWholes: () => OtherContourWholes =
             secretLongChord,
             shiftyA,
             shiftyB,
-            totallyOutThere,
+            totallyOutThereIntro,
         }
     }
 
