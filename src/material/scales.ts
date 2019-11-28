@@ -15,12 +15,12 @@ import {
     computeSubparticularSeriesScalars,
     computeSuperparticularSeriesScalars,
 } from '@musical-patterns/pattern-xenharmonic-series'
-import { StandardSpecs } from '@musical-patterns/spec'
+import { Specs } from '@musical-patterns/spec'
 import { Pitch, Scalar } from '@musical-patterns/utilities'
 
 const materializeScales: MaterializeScales =
     // tslint:disable-next-line no-any
-    (specs: StandardSpecs): Scales => {
+    (specs: Specs): Scales => {
         const superparticularSeriesScalars: Array<Scalar<Pitch>> = computeSuperparticularSeriesScalars()
         const duperparticularSeriesScalars: Array<Scalar<Pitch>> = computeDuperparticularSeriesScalars()
         const subparticularSeriesScalars: Array<Scalar<Pitch>> = computeSubparticularSeriesScalars()

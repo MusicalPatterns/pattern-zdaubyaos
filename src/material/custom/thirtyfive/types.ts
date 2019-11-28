@@ -1,7 +1,7 @@
 import { PitchValue, Segment } from '@musical-patterns/material'
-import { Block, ContourPiece, ContourWhole, KeyMap } from '@musical-patterns/utilities'
+import { Block, ContourPiece, ContourWhole, KeyMap, ObjectOf } from '@musical-patterns/utilities'
 
-interface ThirtyfiveBlocks {
+interface ThirtyfiveBlocks extends ObjectOf<Block> {
     yaosAccidentInspired: Block,
     yaosBass: Block,
     zdaub: Block,
