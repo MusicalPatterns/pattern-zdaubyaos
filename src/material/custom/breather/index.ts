@@ -1,4 +1,4 @@
-export { computeBreatherSegments } from './segments'
+export { thunkBreatherSegments } from './segments'
 
 export {
     BreatherSegments,

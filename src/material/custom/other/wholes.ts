@@ -10,16 +10,17 @@ import {
     repeatCall,
     sequence,
     slice,
+    Thunk,
 } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { getTrueContours } from '../true'
-import { computeOtherContourPieces } from './pieces'
+import { thunkOtherContourPieces } from './pieces'
 import { OtherContourPieces, OtherContourWholes } from './types'
 
-const computeOtherContourWholes: () => OtherContourWholes =
+const thunkOtherContourWholes: Thunk<OtherContourWholes> =
     (): OtherContourWholes => {
-        const contourPieces: OtherContourPieces = computeOtherContourPieces()
+        const contourPieces: OtherContourPieces = thunkOtherContourPieces()
 
         const secretLongChord: ContourWhole<PitchValue> =
             as.ContourWhole<PitchValue>(contourPieces.secretLongChord)
@@ -34,11 +35,17 @@ const computeOtherContourWholes: () => OtherContourWholes =
         ))
 
         const shiftyA: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
-            repeatCall(() => contourPieces.shiftyFifteen, as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3)),
-            repeatCall(() => contourPieces.shiftyTwentyfour, as.Cardinal<Array<() => ContourPiece<PitchValue>>>(4)),
             repeatCall(
-                () => contourPieces.shiftyTwentyfourVariant,
-                as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
+                (): ContourPiece<PitchValue> => contourPieces.shiftyFifteen,
+                as.Cardinal<Array<Thunk<ContourPiece<PitchValue>>>>(3),
+            ),
+            repeatCall(
+                (): ContourPiece<PitchValue> => contourPieces.shiftyTwentyfour,
+                as.Cardinal<Array<Thunk<ContourPiece<PitchValue>>>>(4),
+            ),
+            repeatCall(
+                (): ContourPiece<PitchValue> => contourPieces.shiftyTwentyfourVariant,
+                as.Cardinal<Array<Thunk<ContourPiece<PitchValue>>>>(3),
             ),
         ))
 
@@ -53,5 +60,5 @@ const computeOtherContourWholes: () => OtherContourWholes =
     }
 
 export {
-    computeOtherContourWholes,
+    thunkOtherContourWholes,
 }

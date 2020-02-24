@@ -6,39 +6,39 @@ import {
     AlmostTrueContourPieces,
     BarTarget,
     BlockStyle,
-    computeAlmostTrueContourPieces,
-    computeTrueContourPieces,
     getTrueContours,
     RenderingName,
+    thunkAlmostTrueContourPieces,
+    thunkTrueContourPieces,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
     TrueContourPiecesByRenderingName,
 } from '../../../../../../src/indexForTest'
 
-describe('true contours', () => {
+describe('true contours', (): void => {
     let contourPiecesByBarTargetThenBlockStyleThenRendering: TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName
 
-    beforeEach(() => {
-        contourPiecesByBarTargetThenBlockStyleThenRendering = computeTrueContourPieces()
+    beforeEach((): void => {
+        contourPiecesByBarTargetThenBlockStyleThenRendering = thunkTrueContourPieces()
     })
 
-    describe('zdaub contours', () => {
-        describe('of value 15', () => {
-            describe('glis renderings', () => {
-                it('handles nodle', () => {
+    describe('zdaub contours', (): void => {
+        describe('of value 15', (): void => {
+            describe('glis renderings', (): void => {
+                it('handles nodle', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.NODLE ][ RenderingName.GLIS ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 3, 3 ], [ 4, 4 ], [ 3, 3 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ],
                         ]))
                 })
 
-                it('handles limin', () => {
+                it('handles limin', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.LIMIN ][ RenderingName.GLIS ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 3, 3 ], [ 4, 4 ], [ 3, 3 ], [ 2, 2 ], [ 3, 3 ],
                         ]))
                 })
 
-                it('handles scend', () => {
+                it('handles scend', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.SCEND ][ RenderingName.GLIS ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 4, 4 ], [ 5, 5 ], [ 6, 6 ],
@@ -49,22 +49,22 @@ describe('true contours', () => {
                 })
             })
 
-            describe('trem renderings', () => {
-                it('handles nodle', () => {
+            describe('trem renderings', (): void => {
+                it('handles nodle', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.NODLE ][ RenderingName.TREM ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 3, 1 ], [ 3, 1 ], [ 3, 1 ], [ 4, 1 ], [ 4, 1 ], [ 4, 1 ], [ 4, 1 ], [ 3, 1 ], [ 3, 1 ], [ 3, 1 ], [ 2, 1 ], [ 2, 1 ], [ 1, 1 ], [ 2, 1 ], [ 2, 1 ],
                         ]))
                 })
 
-                it('handles limin', () => {
+                it('handles limin', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.LIMIN ][ RenderingName.TREM ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 3, 1 ], [ 3, 1 ], [ 3, 1 ], [ 4, 1 ], [ 4, 1 ], [ 4, 1 ], [ 4, 1 ], [ 3, 1 ], [ 3, 1 ], [ 3, 1 ], [ 2, 1 ], [ 2, 1 ], [ 3, 1 ], [ 3, 1 ], [ 3, 1 ],
                         ]))
                 })
 
-                it('handles scend', () => {
+                it('handles scend', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.SCEND ][ RenderingName.TREM ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 4, 1 ], [ 4, 1 ], [ 4, 1 ], [ 4, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 6, 1 ], [ 6, 1 ], [ 6, 1 ], [ 6, 1 ], [ 6, 1 ], [ 6, 1 ],
@@ -75,22 +75,22 @@ describe('true contours', () => {
                 })
             })
 
-            describe('bony renderings', () => {
-                it('handles nodle', () => {
+            describe('bony renderings', (): void => {
+                it('handles nodle', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.NODLE ][ RenderingName.BONY ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 3, 1 ], [ 3, 2 ], [ 4, 1 ], [ 4, 2 ], [ 4, 1 ], [ 3, 2 ], [ 3, 1 ], [ 2, 2 ], [ 1, 1 ], [ 2, 2 ],
                         ]))
                 })
 
-                it('handles limin', () => {
+                it('handles limin', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.LIMIN ][ RenderingName.BONY ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 3, 1 ], [ 3, 2 ], [ 4, 1 ], [ 4, 2 ], [ 4, 1 ], [ 3, 2 ], [ 3, 1 ], [ 2, 2 ], [ 3, 1 ], [ 3, 2 ],
                         ]))
                 })
 
-                it('handles scend', () => {
+                it('handles scend', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.SCEND ][ RenderingName.BONY ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 4, 1 ], [ 4, 2 ], [ 4, 1 ], [ 5, 2 ], [ 5, 1 ], [ 5, 2 ], [ 6, 1 ], [ 6, 2 ], [ 6, 1 ], [ 6, 2 ],
@@ -102,23 +102,23 @@ describe('true contours', () => {
             })
         })
 
-        describe('of value 24', () => {
-            describe('glis renderings', () => {
-                it('handles nodle', () => {
+        describe('of value 24', (): void => {
+            describe('glis renderings', (): void => {
+                it('handles nodle', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.NODLE ][ RenderingName.GLIS ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 1, 1 ], [ 3, 3 ], [ 5, 5 ], [ 7, 7 ], [ 5, 5 ], [ 3, 3 ],
                         ]))
                 })
 
-                it('handles limin', () => {
+                it('handles limin', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.LIMIN ][ RenderingName.GLIS ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 9, 9 ], [ 7, 7 ], [ 5, 5 ], [ 3, 3 ],
                         ]))
                 })
 
-                it('handles scend', () => {
+                it('handles scend', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.SCEND ][ RenderingName.GLIS ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 13, 13 ], [ 11, 11 ],
@@ -127,22 +127,22 @@ describe('true contours', () => {
                 })
             })
 
-            describe('trem renderings', () => {
-                it('handles nodle', () => {
+            describe('trem renderings', (): void => {
+                it('handles nodle', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.NODLE ][ RenderingName.TREM ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 1, 1 ], [ 3, 1 ], [ 3, 1 ], [ 3, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 3, 1 ], [ 3, 1 ], [ 3, 1 ],
                         ]))
                 })
 
-                it('handles limin', () => {
+                it('handles limin', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.LIMIN ][ RenderingName.TREM ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 9, 1 ], [ 9, 1 ], [ 9, 1 ], [ 9, 1 ], [ 9, 1 ], [ 9, 1 ], [ 9, 1 ], [ 9, 1 ], [ 9, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 7, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 5, 1 ], [ 3, 1 ], [ 3, 1 ], [ 3, 1 ],
                         ]))
                 })
 
-                it('handles scend', () => {
+                it('handles scend', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.SCEND ][ RenderingName.TREM ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 13, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ], [ 11, 1 ],
@@ -151,22 +151,22 @@ describe('true contours', () => {
                 })
             })
 
-            describe('bony renderings', () => {
-                it('handles nodle', () => {
+            describe('bony renderings', (): void => {
+                it('handles nodle', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.NODLE ][ RenderingName.BONY ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 1, 1 ], [ 3, 3 ], [ 5, 1 ], [ 5, 3 ], [ 5, 1 ], [ 7, 3 ], [ 7, 1 ], [ 7, 3 ], [ 5, 1 ], [ 5, 3 ], [ 5, 1 ], [ 3, 3 ],
                         ]))
                 })
 
-                it('handles limin', () => {
+                it('handles limin', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.LIMIN ][ RenderingName.BONY ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 9, 1 ], [ 9, 3 ], [ 9, 1 ], [ 9, 3 ], [ 9, 1 ], [ 7, 3 ], [ 7, 1 ], [ 7, 3 ], [ 5, 1 ], [ 5, 3 ], [ 5, 1 ], [ 3, 3 ],
                         ]))
                 })
 
-                it('handles scend', () => {
+                it('handles scend', (): void => {
                     expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.SCEND ][ RenderingName.BONY ])
                         .toEqual(as.ContourPiece<PitchValue>([
                             [ 13, 1 ], [ 13, 3 ], [ 13, 1 ], [ 13, 3 ], [ 13, 1 ], [ 13, 3 ], [ 13, 1 ], [ 11, 3 ], [ 11, 1 ], [ 11, 3 ], [ 11, 1 ], [ 11, 3 ],
@@ -175,9 +175,9 @@ describe('true contours', () => {
             })
         })
 
-        describe('other values', () => {
-            it('handles glis variant', () => {
-                const pieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
+        describe('other values', (): void => {
+            it('handles glis variant', (): void => {
+                const pieces: AlmostTrueContourPieces = thunkAlmostTrueContourPieces()
 
                 expect(pieces.zdaubGlisVariant)
                     .toEqual(as.ContourPiece<PitchValue>([
@@ -193,14 +193,14 @@ describe('true contours', () => {
         })
     })
 
-    describe('yaos contours', () => {
-        describe('of value 15', () => {
-            it('is true that when rendered with certain renderings their values are multiples of 15', () => {
+    describe('yaos contours', (): void => {
+        describe('of value 15', (): void => {
+            it('is true that when rendered with certain renderings their values are multiples of 15', (): void => {
                 entries(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ])
                     .forEach(
                         ([ blockStyle, contoursByRendering ]: [ BlockStyle, TrueContourPiecesByRenderingName ]): void => {
                             entries(contoursByRendering)
-                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<PitchValue> ]) => {
+                                .forEach(([ renderingName, contours ]: [ RenderingName, ContourPiece<PitchValue> ]): void => {
                                     switch (renderingName) {
                                         case RenderingName.SPRING:
                                         case RenderingName.SUMMER:
@@ -216,9 +216,9 @@ describe('true contours', () => {
                         })
             })
 
-            describe('spring renderings', () => {
-                describe('umowchuowiest blocks', () => {
-                    it('handles umow spring', () => {
+            describe('spring renderings', (): void => {
+                describe('umowchuowiest blocks', (): void => {
+                    it('handles umow spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.UMOW ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
@@ -229,7 +229,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles chuwow spring', () => {
+                    it('handles chuwow spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.CHUWOW ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
@@ -239,7 +239,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles iest spring', () => {
+                    it('handles iest spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.IEST ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ],
@@ -249,8 +249,8 @@ describe('true contours', () => {
                     })
                 })
 
-                describe('inaidjiyaiouzd blocks', () => {
-                    it('handles inai spring', () => {
+                describe('inaidjiyaiouzd blocks', (): void => {
+                    it('handles inai spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.INAI ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
@@ -260,7 +260,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles djiyai spring', () => {
+                    it('handles djiyai spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.DJIYAI ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
@@ -269,7 +269,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles ouzd spring', () => {
+                    it('handles ouzd spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.OUZD ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
@@ -279,9 +279,9 @@ describe('true contours', () => {
                 })
             })
 
-            describe('summer renderings', () => {
-                describe('umowchuowiest blocks', () => {
-                    it('handles umow summer', () => {
+            describe('summer renderings', (): void => {
+                describe('umowchuowiest blocks', (): void => {
+                    it('handles umow summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.UMOW ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
@@ -292,7 +292,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles chuwow summer', () => {
+                    it('handles chuwow summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.CHUWOW ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
@@ -302,7 +302,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles iest summer', () => {
+                    it('handles iest summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.IEST ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ],
@@ -312,8 +312,8 @@ describe('true contours', () => {
                     })
                 })
 
-                describe('inaidjiyaiouzd blocks', () => {
-                    it('handles inai summer', () => {
+                describe('inaidjiyaiouzd blocks', (): void => {
+                    it('handles inai summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.INAI ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
@@ -323,7 +323,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles djiyai summer', () => {
+                    it('handles djiyai summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.DJIYAI ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
@@ -332,7 +332,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles ouzd summer', () => {
+                    it('handles ouzd summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.OUZD ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ], [ -1, 1 ],
@@ -342,9 +342,9 @@ describe('true contours', () => {
                 })
             })
 
-            describe('fall renderings', () => {
-                describe('umowchuowiest blocks', () => {
-                    it('handles umow fall', () => {
+            describe('fall renderings', (): void => {
+                describe('umowchuowiest blocks', (): void => {
+                    it('handles umow fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.UMOW ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 2, 2 ],
@@ -355,7 +355,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles chuwow fall', () => {
+                    it('handles chuwow fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.CHUWOW ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 2, 2 ],
@@ -365,7 +365,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles iest fall', () => {
+                    it('handles iest fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.IEST ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 4, 4 ],
@@ -375,8 +375,8 @@ describe('true contours', () => {
                     })
                 })
 
-                describe('inaidjiyaiouzd blocks', () => {
-                    it('handles inai fall', () => {
+                describe('inaidjiyaiouzd blocks', (): void => {
+                    it('handles inai fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.INAI ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 3, 3 ],
@@ -386,7 +386,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles djiyai fall', () => {
+                    it('handles djiyai fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.DJIYAI ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 2, 2 ],
@@ -395,7 +395,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles ouzd fall', () => {
+                    it('handles ouzd fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.OUZD ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 7, 7 ],
@@ -405,9 +405,9 @@ describe('true contours', () => {
                 })
             })
 
-            describe('summery spring renderings', () => {
-                describe('umowchuwowiest blocks', () => {
-                    it('handles umow summery spring', () => {
+            describe('summery spring renderings', (): void => {
+                describe('umowchuwowiest blocks', (): void => {
+                    it('handles umow summery spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.UMOW ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
@@ -418,7 +418,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles chuwow summery spring', () => {
+                    it('handles chuwow summery spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.CHUWOW ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
@@ -428,7 +428,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles iest summery spring', () => {
+                    it('handles iest summery spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.IEST ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ],
@@ -438,8 +438,8 @@ describe('true contours', () => {
                     })
                 })
 
-                describe('inaidjiyaiouzd blocks', () => {
-                    it('handles inai summery spring', () => {
+                describe('inaidjiyaiouzd blocks', (): void => {
+                    it('handles inai summery spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.INAI ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ],
@@ -449,7 +449,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles djiyai summery spring', () => {
+                    it('handles djiyai summery spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.DJIYAI ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 1, 1 ], [ 3, 1 ],
@@ -458,7 +458,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles ouzd summery spring', () => {
+                    it('handles ouzd summery spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.FIFTEEN ][ BlockStyle.OUZD ][ RenderingName.SUMMERY_SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 1, 1 ], [ 3, 1 ], [ 5, 1 ], [ 7, 1 ], [ 9, 1 ], [ 11, 1 ], [ 13, 1 ],
@@ -469,8 +469,8 @@ describe('true contours', () => {
             })
         })
 
-        describe('of value 24', () => {
-            it('is true that when rendered with certain renderings their values are multiples of 24', () => {
+        describe('of value 24', (): void => {
+            it('is true that when rendered with certain renderings their values are multiples of 24', (): void => {
                 entries(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ])
                     .forEach(
                         ([ blockStyle, contoursByRendering ]: [ BlockStyle, TrueContourPiecesByRenderingName ]): void => {
@@ -501,9 +501,9 @@ describe('true contours', () => {
                         })
             })
 
-            describe('spring renderings', () => {
-                describe('umowchuowiest blocks', () => {
-                    it('handles umow spring', () => {
+            describe('spring renderings', (): void => {
+                describe('umowchuowiest blocks', (): void => {
+                    it('handles umow spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.UMOW ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ],
@@ -515,7 +515,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles chuwow spring', () => {
+                    it('handles chuwow spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.CHUWOW ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
@@ -527,7 +527,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles iest spring', () => {
+                    it('handles iest spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.IEST ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ],
@@ -538,8 +538,8 @@ describe('true contours', () => {
                     })
                 })
 
-                describe('inaidjiyaiouzd blocks', () => {
-                    it('handles inai spring', () => {
+                describe('inaidjiyaiouzd blocks', (): void => {
+                    it('handles inai spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
@@ -553,7 +553,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles djiyai spring', () => {
+                    it('handles djiyai spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.DJIYAI ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ],
@@ -565,7 +565,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles ouzd spring', () => {
+                    it('handles ouzd spring', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.OUZD ][ RenderingName.SPRING ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ -1, 1 ], [ 2, 1 ], [ 3, 1 ], [ 4, 1 ], [ 5, 1 ], [ 6, 1 ], [ 7, 1 ], [ 8, 1 ],
@@ -576,9 +576,9 @@ describe('true contours', () => {
                 })
             })
 
-            describe('summer renderings', () => {
-                describe('umowchuowiest blocks', () => {
-                    it('handles umow summer', () => {
+            describe('summer renderings', (): void => {
+                describe('umowchuowiest blocks', (): void => {
+                    it('handles umow summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.UMOW ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ],
@@ -590,7 +590,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles chuwow summer', () => {
+                    it('handles chuwow summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.CHUWOW ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
@@ -602,7 +602,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles iest summer', () => {
+                    it('handles iest summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.IEST ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ],
@@ -613,8 +613,8 @@ describe('true contours', () => {
                     })
                 })
 
-                describe('inaidjiyaiouzd blocks', () => {
-                    it('handles inai summer', () => {
+                describe('inaidjiyaiouzd blocks', (): void => {
+                    it('handles inai summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
@@ -628,7 +628,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles djiyai summer', () => {
+                    it('handles djiyai summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.DJIYAI ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ],
@@ -640,7 +640,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles ouzd summer', () => {
+                    it('handles ouzd summer', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.OUZD ][ RenderingName.SUMMER ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ -1, 1 ], [ 3, 1 ], [ -1, 1 ], [ 5, 1 ], [ -1, 1 ], [ 7, 1 ], [ -1, 1 ],
@@ -651,9 +651,9 @@ describe('true contours', () => {
                 })
             })
 
-            describe('fall renderings', () => {
-                describe('umowchuowiest blocks', () => {
-                    it('handles umow fall', () => {
+            describe('fall renderings', (): void => {
+                describe('umowchuowiest blocks', (): void => {
+                    it('handles umow fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.UMOW ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 3, 3 ],
@@ -665,7 +665,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles chuwow fall', () => {
+                    it('handles chuwow fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.CHUWOW ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 2, 2 ],
@@ -677,7 +677,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles iest fall', () => {
+                    it('handles iest fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.IEST ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 5, 5 ],
@@ -688,8 +688,8 @@ describe('true contours', () => {
                     })
                 })
 
-                describe('inaidjiyaiouzd blocks', () => {
-                    it('handles inai fall', () => {
+                describe('inaidjiyaiouzd blocks', (): void => {
+                    it('handles inai fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.INAI ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 2, 2 ],
@@ -703,7 +703,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles djiyai fall', () => {
+                    it('handles djiyai fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.DJIYAI ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 2, 2 ],
@@ -715,7 +715,7 @@ describe('true contours', () => {
                             ]))
                     })
 
-                    it('handles ouzd fall', () => {
+                    it('handles ouzd fall', (): void => {
                         expect(contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.OUZD ][ RenderingName.FALL ])
                             .toEqual(as.ContourPiece<PitchValue>([
                                 [ 1, 1 ], [ 7, 7 ],
@@ -726,9 +726,9 @@ describe('true contours', () => {
                 })
             })
 
-            describe('other renderings', () => {
-                it('handles inaiii variety', () => {
-                    const pieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
+            describe('other renderings', (): void => {
+                it('handles inaiii variety', (): void => {
+                    const pieces: AlmostTrueContourPieces = thunkAlmostTrueContourPieces()
 
                     expect(pieces.inaiiiVariety)
                         .toEqual(as.ContourPiece<PitchValue>([
@@ -745,7 +745,7 @@ describe('true contours', () => {
             })
         })
 
-        it('gets the right set of contours out of its stash', () => {
+        it('gets the right set of contours out of its stash', (): void => {
             expect(getTrueContours(BlockStyle.DJIYAI, BarTarget.TWENTYFOUR, RenderingName.SUMMER))
                 .toEqual(
                     contourPiecesByBarTargetThenBlockStyleThenRendering[ BarTarget.TWENTYFOUR ][ BlockStyle.DJIYAI ][ RenderingName.SUMMER ],

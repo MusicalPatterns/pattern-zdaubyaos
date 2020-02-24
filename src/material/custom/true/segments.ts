@@ -1,14 +1,14 @@
 // tslint:disable max-file-line-count
 
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, negative, Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, negative, Pitch, Scalar, Thunk } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { TrueContourWholes, TrueSegments } from './types'
-import { computeTrueContourWholes } from './wholes'
+import { thunkTrueContourWholes } from './wholes'
 
-const computeTrueSegments: () => TrueSegments =
+const thunkTrueSegments: Thunk<TrueSegments> =
     (): TrueSegments => {
-        const trueContourWholes: TrueContourWholes = computeTrueContourWholes()
+        const trueContourWholes: TrueContourWholes = thunkTrueContourWholes()
 
         const springAllYaosUmowchuwowiest: Segment = computeSegment(
             [
@@ -17,7 +17,7 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.yaosUmowchuwowiestSpringToSummer,
             ],
             [
-                { },
+                {},
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
@@ -56,7 +56,7 @@ const computeTrueSegments: () => TrueSegments =
                 trueContourWholes.zdaubTrem,
             ],
             [
-                { },
+                {},
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
                 { scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(2) },
             ],
@@ -111,5 +111,5 @@ const computeTrueSegments: () => TrueSegments =
     }
 
 export {
-    computeTrueSegments,
+    thunkTrueSegments,
 }

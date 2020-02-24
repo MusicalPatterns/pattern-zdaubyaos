@@ -19,10 +19,10 @@ import {
 } from '@musical-patterns/utilities'
 import { FIFTEEN, TWENTYFOUR } from '../../constants'
 import {
-    FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
     FIFTEEN_BONY_BLOCKS,
-    TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR,
+    FIFTEEN_BONY_BLOCK_COUNT_PER_BAR,
     TWENTYFOUR_BONY_BLOCKS,
+    TWENTYFOUR_BONY_BLOCK_COUNT_PER_BAR,
 } from './constants'
 
 const getBarCountIsTrickyBecauseWeKnowItDividesEvenlyButTypesDoNot:

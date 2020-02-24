@@ -1,14 +1,14 @@
 import { PitchValue, Rendering } from '@musical-patterns/material'
-import { ContourPiece } from '@musical-patterns/utilities'
-import { computeRenderings, RenderingName, Renderings } from '../../rendering'
-import { computeThirtyfiveBlocks } from './blocks'
+import { ContourPiece, Thunk } from '@musical-patterns/utilities'
+import { RenderingName, Renderings, thunkRenderings } from '../../rendering'
+import { thunkThirtyfiveBlocks } from './blocks'
 import { ThirtyfiveBlocks, ThirtyfiveContourPieces } from './types'
 
-const computeThirtyfiveContourPieces: () => ThirtyfiveContourPieces =
+const thunkThirtyfiveContourPieces: Thunk<ThirtyfiveContourPieces> =
     (): ThirtyfiveContourPieces => {
-        const blocks: ThirtyfiveBlocks = computeThirtyfiveBlocks()
+        const blocks: ThirtyfiveBlocks = thunkThirtyfiveBlocks()
 
-        const renderings: Renderings = computeRenderings()
+        const renderings: Renderings = thunkRenderings()
         const glis: Rendering<PitchValue> = renderings[ RenderingName.GLIS ]
 
         const yaosBass: ContourPiece<PitchValue> = glis(blocks.yaosBass)
@@ -25,5 +25,5 @@ const computeThirtyfiveContourPieces: () => ThirtyfiveContourPieces =
     }
 
 export {
-    computeThirtyfiveContourPieces,
+    thunkThirtyfiveContourPieces,
 }

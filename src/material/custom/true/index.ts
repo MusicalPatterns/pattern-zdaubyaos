@@ -1,6 +1,6 @@
 export { getTrueContours } from './pieces'
-export { computeTrueSegments } from './segments'
-export { computeTrueBlocks } from './blocks'
+export { thunkTrueSegments } from './segments'
+export { thunkTrueBlocks } from './blocks'
 
 export {
     TrueBlocksByBarTargetThenBlockStyle,

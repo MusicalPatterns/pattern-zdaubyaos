@@ -5,8 +5,8 @@ import { applyIntensityScalar } from '../../../../src/indexForTest'
 const testNote: (intensity: Scalar<Intensity>) => Note =
     (intensity: Scalar<Intensity>): Note => ({ intensity: { scalar: intensity } })
 
-describe('apply intensity scalar', () => {
-    it('scales the intensity of every note', () => {
+describe('apply intensity scalar', (): void => {
+    it('scales the intensity of every note', (): void => {
         const notes: Note[] = [
             testNote(as.Scalar<Intensity>(1)),
             testNote(as.Scalar<Intensity>(0.666)),

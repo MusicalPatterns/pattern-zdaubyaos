@@ -1,7 +1,7 @@
-import { as, Block } from '@musical-patterns/utilities'
+import { as, Block, Thunk } from '@musical-patterns/utilities'
 import { AlmostTrueBlocks } from './types'
 
-const computeAlmostTrueBlocks: () => AlmostTrueBlocks =
+const thunkAlmostTrueBlocks: Thunk<AlmostTrueBlocks> =
     (): AlmostTrueBlocks => {
         const trueGlisVariant: Block = as.Block([
             4, 5, 6,
@@ -19,5 +19,5 @@ const computeAlmostTrueBlocks: () => AlmostTrueBlocks =
     }
 
 export {
-    computeAlmostTrueBlocks,
+    thunkAlmostTrueBlocks,
 }

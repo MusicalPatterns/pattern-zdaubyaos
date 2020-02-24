@@ -1,14 +1,14 @@
 import { PitchValue, Rendering } from '@musical-patterns/material'
-import { ContourPiece } from '@musical-patterns/utilities'
-import { computeRenderings, RenderingName, Renderings } from '../../rendering'
-import { computeOtherBlocks } from './blocks'
+import { ContourPiece, Thunk } from '@musical-patterns/utilities'
+import { RenderingName, Renderings, thunkRenderings } from '../../rendering'
+import { thunkOtherBlocks } from './blocks'
 import { OtherBlocks, OtherContourPieces } from './types'
 
-const computeOtherContourPieces: () => OtherContourPieces =
+const thunkOtherContourPieces: Thunk<OtherContourPieces> =
     (): OtherContourPieces => {
-        const blocks: OtherBlocks = computeOtherBlocks()
+        const blocks: OtherBlocks = thunkOtherBlocks()
 
-        const renderings: Renderings = computeRenderings()
+        const renderings: Renderings = thunkRenderings()
 
         const glis: Rendering<PitchValue> = renderings[ RenderingName.GLIS ]
         const flatline: Rendering<PitchValue> = renderings[ RenderingName.FLATLINE ]
@@ -34,5 +34,5 @@ const computeOtherContourPieces: () => OtherContourPieces =
     }
 
 export {
-    computeOtherContourPieces,
+    thunkOtherContourPieces,
 }

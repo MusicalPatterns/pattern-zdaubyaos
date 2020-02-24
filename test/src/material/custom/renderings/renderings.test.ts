@@ -1,15 +1,15 @@
 import { PitchValue, Rendering } from '@musical-patterns/material'
 import { as } from '@musical-patterns/utilities'
-import { computeRenderings, RenderingName, Renderings } from '../../../../../src/indexForTest'
+import { RenderingName, Renderings, thunkRenderings } from '../../../../../src/indexForTest'
 
-describe('rendering functions', () => {
+describe('rendering functions', (): void => {
     let renderings: Renderings
-    beforeEach(() => {
-        renderings = computeRenderings()
+    beforeEach((): void => {
+        renderings = thunkRenderings()
     })
 
-    describe('spring', () => {
-        it('ascends from 1, by 1, muting the 1 itself', () => {
+    describe('spring', (): void => {
+        it('ascends from 1, by 1, muting the 1 itself', (): void => {
             const spring: Rendering<PitchValue> = renderings[ RenderingName.SPRING ]
             expect(spring(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([
@@ -38,8 +38,8 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('summer', () => {
-        it('ascends from 1, by 1, muting all evens', () => {
+    describe('summer', (): void => {
+        it('ascends from 1, by 1, muting all evens', (): void => {
             const summer: Rendering<PitchValue> = renderings[ RenderingName.SUMMER ]
             expect(summer(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([
@@ -68,8 +68,8 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('fall', () => {
-        it('first note pitch and value 1, second note with the remaining value and matching pitch', () => {
+    describe('fall', (): void => {
+        it('first note pitch and value 1, second note with the remaining value and matching pitch', (): void => {
             const fall: Rendering<PitchValue> = renderings[ RenderingName.FALL ]
             expect(fall(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([
@@ -98,8 +98,8 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('summery spring', () => {
-        it('has the same pattern of mutes as spring with the pitches from summer', () => {
+    describe('summery spring', (): void => {
+        it('has the same pattern of mutes as spring with the pitches from summer', (): void => {
             const summerySpring: Rendering<PitchValue> = renderings[ RenderingName.SUMMERY_SPRING ]
             expect(summerySpring(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([
@@ -128,8 +128,8 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('springy summer', () => {
-        it('has the same pattern of mutes as summer with the pitches from spring', () => {
+    describe('springy summer', (): void => {
+        it('has the same pattern of mutes as summer with the pitches from spring', (): void => {
             const springySummer: Rendering<PitchValue> = renderings[ RenderingName.SPRINGY_SUMMER ]
             expect(springySummer(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([
@@ -158,8 +158,8 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('glis', () => {
-        it('sustains a single note the entire block', () => {
+    describe('glis', (): void => {
+        it('sustains a single note the entire block', (): void => {
             const glis: Rendering<PitchValue> = renderings[ RenderingName.GLIS ]
             expect(glis(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([
@@ -188,8 +188,8 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('trem', () => {
-        it('fills the block with x notes of value 1 with pitch x each', () => {
+    describe('trem', (): void => {
+        it('fills the block with x notes of value 1 with pitch x each', (): void => {
             const trem: Rendering<PitchValue> = renderings[ RenderingName.TREM ]
             expect(trem(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([
@@ -218,9 +218,9 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('bony', () => {
-        describe('when the sum of the blocks is 15', () => {
-            it('alternates rhythmically 1 and 2', () => {
+    describe('bony', (): void => {
+        describe('when the sum of the blocks is 15', (): void => {
+            it('alternates rhythmically 1 and 2', (): void => {
                 const bony: Rendering<PitchValue> = renderings[ RenderingName.BONY ]
                 expect(bony(as.Block([ 1, 2, 3, 4, 5 ])))
                     .toEqual(as.ContourPiece<PitchValue>([
@@ -229,8 +229,8 @@ describe('rendering functions', () => {
             })
         })
 
-        describe('when the sum of the blocks is 24', () => {
-            it('alternates rhythmically 1 and 3', () => {
+        describe('when the sum of the blocks is 24', (): void => {
+            it('alternates rhythmically 1 and 3', (): void => {
                 const bony: Rendering<PitchValue> = renderings[ RenderingName.BONY ]
                 expect(bony(as.Block([ 9, 7, 5, 3 ])))
                     .toEqual(as.ContourPiece<PitchValue>([
@@ -240,8 +240,8 @@ describe('rendering functions', () => {
         })
     })
 
-    describe('flatline', () => {
-        it('sustains a single note the entire block, but sets the pitch index to one', () => {
+    describe('flatline', (): void => {
+        it('sustains a single note the entire block, but sets the pitch index to one', (): void => {
             const flatline: Rendering<PitchValue> = renderings[ RenderingName.FLATLINE ]
             expect(flatline(as.Block([ 2 ])))
                 .toEqual(as.ContourPiece<PitchValue>([

@@ -2,40 +2,44 @@
 
 import {
     AbstractName,
-    computeFlatValueScale,
     computeHarmonicSeriesScale,
     computeSubharmonicSeriesScale,
     MaterializeScales,
     materializeStandardScales,
     Scales,
+    thunkFlatValueScale,
 } from '@musical-patterns/material'
 import {
-    computeDubparticularSeriesScalars,
-    computeDuperparticularSeriesScalars,
-    computeSubparticularSeriesScalars,
-    computeSuperparticularSeriesScalars,
+    thunkDubduperparticularSeriesScalars,
+    thunkDuperparticularSeriesScalars,
+    thunkSubsuperparticularSeriesScalars,
+    thunkSuperparticularSeriesScalars,
 } from '@musical-patterns/pattern-xenharmonic-series'
 import { Specs } from '@musical-patterns/spec'
-import { Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, Pitch, Scalar } from '@musical-patterns/utilities'
+import { NOT_TRUE_SUBSUPERPARTICULAR_INITIAL_PITCH, NOT_TRUE_SUPERPARTICULAR_INITIAL_PITCH } from './constants'
 
 const materializeScales: MaterializeScales =
     // tslint:disable-next-line no-any
     (specs: Specs): Scales => {
-        const superparticularSeriesScalars: Array<Scalar<Pitch>> = computeSuperparticularSeriesScalars()
-        const duperparticularSeriesScalars: Array<Scalar<Pitch>> = computeDuperparticularSeriesScalars()
-        const subparticularSeriesScalars: Array<Scalar<Pitch>> = computeSubparticularSeriesScalars()
-        const dubparticularSeriesScalars: Array<Scalar<Pitch>> = computeDubparticularSeriesScalars()
+        const superparticularSeriesScalars: Array<Scalar<Pitch>> = thunkSuperparticularSeriesScalars()
+        const duperparticularSeriesScalars: Array<Scalar<Pitch>> = thunkDuperparticularSeriesScalars()
+        const subsuperparticularSeriesScalars: Array<Scalar<Pitch>> = thunkSubsuperparticularSeriesScalars()
+        const dubduperparticularSeriesScalars: Array<Scalar<Pitch>> = thunkDubduperparticularSeriesScalars()
+
+        superparticularSeriesScalars.unshift(NOT_TRUE_SUPERPARTICULAR_INITIAL_PITCH)
+        subsuperparticularSeriesScalars.unshift(NOT_TRUE_SUBSUPERPARTICULAR_INITIAL_PITCH)
 
         // tslint:disable-next-line no-any
         const standardScales: Scales = materializeStandardScales(
             specs,
-            { valueScalars: computeFlatValueScale().scalars, pitchScalars: subparticularSeriesScalars },
+            { valueScalars: thunkFlatValueScale().scalars, pitchScalars: subsuperparticularSeriesScalars },
         )
 
         standardScales[ AbstractName.PITCH ]!.push(
             {
                 basis: standardScales[ AbstractName.PITCH ]![ 0 ].basis,
-                scalars: dubparticularSeriesScalars,
+                scalars: dubduperparticularSeriesScalars,
                 translation: standardScales[ AbstractName.PITCH ]![ 0 ].translation,
             })
         standardScales[ AbstractName.PITCH ]!.push(

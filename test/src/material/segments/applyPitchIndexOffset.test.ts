@@ -5,8 +5,8 @@ import { applyPitchIndexShift } from '../../../../src/indexForTest'
 const testNote: (pitch: Ordinal<Array<Scalar<Pitch>>>) => Note =
     (pitch: Ordinal<Array<Scalar<Pitch>>>): Note => ({ pitch: { index: pitch } })
 
-describe('apply pitch index shift', () => {
-    it('shifts the pitch index of every note', () => {
+describe('apply pitch index shift', (): void => {
+    it('shifts the pitch index of every note', (): void => {
         const notes: Note[] = [
             testNote(as.Ordinal<Array<Scalar<Pitch>>>(1)),
             testNote(as.Ordinal<Array<Scalar<Pitch>>>(2)),

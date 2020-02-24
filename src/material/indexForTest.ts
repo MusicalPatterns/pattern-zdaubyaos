@@ -1,20 +1,20 @@
 // tslint:disable no-reaching-imports
 
-export { computeNotes } from './notes'
+export { thunkNotes } from './notes'
 export { materializeEntities } from './entities'
 export { computeNote } from './features'
 export { materializeScales } from './scales'
 export {
-    computeRenderings,
+    thunkRenderings,
     RenderingName,
     Renderings,
 } from './rendering/indexForTest'
 export {
-    computeOtherContourPieces,
-    computeThirtyfiveContourPieces,
+    thunkOtherContourPieces,
+    thunkThirtyfiveContourPieces,
     getTrueContours,
-    computeTrueContourPieces,
-    computeAlmostTrueContourPieces,
+    thunkTrueContourPieces,
+    thunkAlmostTrueContourPieces,
     TrueContourPiecesByRenderingName,
     TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName,
     AlmostTrueContourPieces,

@@ -1,12 +1,12 @@
 import { Note, Segment } from '@musical-patterns/material'
-import { use } from '@musical-patterns/utilities'
+import { Thunk, use } from '@musical-patterns/utilities'
 import { SEGMENT_A, SEGMENT_B, SEGMENT_C } from '../constants'
-import { computeSegments } from './segment'
+import { thunkSegments } from './segment'
 import { ZdaubyaosNotes } from './types'
 
-const computeNotes: () => ZdaubyaosNotes =
+const thunkNotes: Thunk<ZdaubyaosNotes> =
     (): ZdaubyaosNotes => {
-        const segments: Segment[] = computeSegments()
+        const segments: Segment[] = thunkSegments()
 
         let subpartSuperpart: Note[] = []
         let dubpartDuperpart: Note[] = []
@@ -29,5 +29,5 @@ const computeNotes: () => ZdaubyaosNotes =
     }
 
 export {
-    computeNotes,
+    thunkNotes,
 }

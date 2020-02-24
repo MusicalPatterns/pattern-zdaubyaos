@@ -1,4 +1,4 @@
-export { computeRenderings } from './renderings'
+export { thunkRenderings } from './renderings'
 export {
     Renderings,
     RenderingName,

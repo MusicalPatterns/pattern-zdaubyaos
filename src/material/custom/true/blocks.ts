@@ -1,8 +1,8 @@
-import { as, repeat } from '@musical-patterns/utilities'
+import { as, repeat, Thunk } from '@musical-patterns/utilities'
 import { BarTarget, BlockStyle } from '../../types'
 import { TrueBlocksByBarTargetThenBlockStyle } from './types'
 
-const computeTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
+const thunkTrueBlocks: Thunk<TrueBlocksByBarTargetThenBlockStyle> =
     (): TrueBlocksByBarTargetThenBlockStyle =>
         ({
             [ BarTarget.FIFTEEN ]: {
@@ -46,5 +46,5 @@ const computeTrueBlocks: () => TrueBlocksByBarTargetThenBlockStyle =
         })
 
 export {
-    computeTrueBlocks,
+    thunkTrueBlocks,
 }

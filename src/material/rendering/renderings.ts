@@ -1,5 +1,5 @@
 import { PitchValue, Rendering, RenderingByBlockElement } from '@musical-patterns/material'
-import { as, Block, ContourPiece, flatten } from '@musical-patterns/utilities'
+import { as, Block, ContourPiece, flatten, Thunk } from '@musical-patterns/utilities'
 import { bonyRendering } from './bony'
 import { fallRendering } from './fall'
 import { flatlineRendering } from './flatline'
@@ -17,7 +17,7 @@ const renderByBlockElement:
         (block: Block): ContourPiece<PitchValue> =>
             as.ContourPiece<PitchValue>(flatten(block.map(renderingByBlockElement)))
 
-const computeRenderings: () => Renderings =
+const thunkRenderings: Thunk<Renderings> =
     (): Renderings => ({
         [ RenderingName.GLIS ]: (block: Block): ContourPiece<PitchValue> =>
             renderByBlockElement(glisRendering)(block),
@@ -39,5 +39,5 @@ const computeRenderings: () => Renderings =
     })
 
 export {
-    computeRenderings,
+    thunkRenderings,
 }

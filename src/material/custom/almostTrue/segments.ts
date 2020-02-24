@@ -1,12 +1,12 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, Intensity, Pitch } from '@musical-patterns/utilities'
+import { as, Intensity, Pitch, Thunk } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { AlmostTrueContourWholes, AlmostTrueSegments } from './types'
-import { computeAlmostTrueContourWholes } from './wholes'
+import { thunkAlmostTrueContourWholes } from './wholes'
 
-const computeAlmostTrueSegments: () => AlmostTrueSegments =
+const thunkAlmostTrueSegments: Thunk<AlmostTrueSegments> =
     (): AlmostTrueSegments => {
-        const wholes: AlmostTrueContourWholes = computeAlmostTrueContourWholes()
+        const wholes: AlmostTrueContourWholes = thunkAlmostTrueContourWholes()
 
         const fallAllYaosBothBlockStrategiesBonyJigIntroHappyGoLuckyRandomFeeling: Segment = computeSegment(
             [
@@ -55,5 +55,5 @@ const computeAlmostTrueSegments: () => AlmostTrueSegments =
     }
 
 export {
-    computeAlmostTrueSegments,
+    thunkAlmostTrueSegments,
 }

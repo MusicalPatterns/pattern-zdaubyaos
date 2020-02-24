@@ -1,10 +1,4 @@
-import {
-    FULL_GAIN,
-    Note,
-    PitchValue,
-    SILENT,
-    STANDARD_PITCH_INDEX_INDICATING_REST,
-} from '@musical-patterns/material'
+import { FULL_GAIN, Note, PitchValue, SILENT, STANDARD_PITCH_INDEX_INDICATING_REST } from '@musical-patterns/material'
 import {
     as,
     ContourElement,

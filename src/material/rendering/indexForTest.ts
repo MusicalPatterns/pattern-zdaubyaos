@@ -1,6 +1,6 @@
 // tslint:disable no-reaching-imports
 
-export { computeRenderings } from './renderings'
+export { thunkRenderings } from './renderings'
 export {
     Renderings,
     RenderingName,

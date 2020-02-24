@@ -1,5 +1,5 @@
-export { computeAlmostTrueSegments } from './segments'
-export { computeAlmostTrueContourPieces } from './pieces'
+export { thunkAlmostTrueSegments } from './segments'
+export { thunkAlmostTrueContourPieces } from './pieces'
 
 export {
     AlmostTrueContourPieces,

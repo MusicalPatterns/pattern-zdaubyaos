@@ -1,12 +1,12 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, Intensity, negative, Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, Intensity, negative, Pitch, Scalar, Thunk } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { OtherContourWholes, OtherSegments } from './types'
-import { computeOtherContourWholes } from './wholes'
+import { thunkOtherContourWholes } from './wholes'
 
-const computeOtherSegments: () => OtherSegments =
+const thunkOtherSegments: Thunk<OtherSegments> =
     (): OtherSegments => {
-        const otherContourWholes: OtherContourWholes = computeOtherContourWholes()
+        const otherContourWholes: OtherContourWholes = thunkOtherContourWholes()
 
         const secretLongChord: Segment = computeSegment(
             [
@@ -75,5 +75,5 @@ const computeOtherSegments: () => OtherSegments =
     }
 
 export {
-    computeOtherSegments,
+    thunkOtherSegments,
 }

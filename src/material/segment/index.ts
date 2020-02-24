@@ -1,5 +1,5 @@
 export { computeSegment } from './segment'
-export { computeSegments } from './segments'
+export { thunkSegments } from './segments'
 
 export {
     NoteStyle,

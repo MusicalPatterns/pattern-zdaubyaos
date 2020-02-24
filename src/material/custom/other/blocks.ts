@@ -1,7 +1,7 @@
-import { as, Block, repeat } from '@musical-patterns/utilities'
+import { as, Block, repeat, Thunk } from '@musical-patterns/utilities'
 import { OtherBlocks } from './types'
 
-const computeOtherBlocks: () => OtherBlocks =
+const thunkOtherBlocks: Thunk<OtherBlocks> =
     (): OtherBlocks => {
         const backboneFifteen: Block = as.Block(repeat([ 1, 2 ], as.Cardinal<number[]>(5)))
 
@@ -52,5 +52,5 @@ const computeOtherBlocks: () => OtherBlocks =
     }
 
 export {
-    computeOtherBlocks,
+    thunkOtherBlocks,
 }

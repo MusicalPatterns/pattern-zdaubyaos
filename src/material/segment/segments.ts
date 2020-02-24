@@ -1,26 +1,26 @@
 import { Segment } from '@musical-patterns/material'
-import { as, INITIAL, Ordinal, slice } from '@musical-patterns/utilities'
+import { as, INITIAL, Ordinal, slice, Thunk } from '@musical-patterns/utilities'
 import { ZDAUBYAOS_SEGMENT_COUNT } from '../../constants'
 import {
     AlmostTrueSegments,
     BreatherSegments,
-    computeAlmostTrueSegments,
-    computeBreatherSegments,
-    computeOtherSegments,
-    computeThirtyfiveSegments,
-    computeTrueSegments,
     OtherSegments,
     ThirtyfiveSegments,
+    thunkAlmostTrueSegments,
+    thunkBreatherSegments,
+    thunkOtherSegments,
+    thunkThirtyfiveSegments,
+    thunkTrueSegments,
     TrueSegments,
 } from '../custom'
 
-const computeSegments: () => Segment[] =
+const thunkSegments: Thunk<Segment[]> =
     (): Segment[] => {
-        const almostTrueSegments: AlmostTrueSegments = computeAlmostTrueSegments()
-        const breatherSegments: BreatherSegments = computeBreatherSegments()
-        const otherSegments: OtherSegments = computeOtherSegments()
-        const thirtyfiveSegments: ThirtyfiveSegments = computeThirtyfiveSegments()
-        const trueSegments: TrueSegments = computeTrueSegments()
+        const almostTrueSegments: AlmostTrueSegments = thunkAlmostTrueSegments()
+        const breatherSegments: BreatherSegments = thunkBreatherSegments()
+        const otherSegments: OtherSegments = thunkOtherSegments()
+        const thirtyfiveSegments: ThirtyfiveSegments = thunkThirtyfiveSegments()
+        const trueSegments: TrueSegments = thunkTrueSegments()
 
         return slice(
             [
@@ -58,5 +58,5 @@ const computeSegments: () => Segment[] =
     }
 
 export {
-    computeSegments,
+    thunkSegments,
 }

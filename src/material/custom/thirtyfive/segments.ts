@@ -1,12 +1,12 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, Intensity, Pitch } from '@musical-patterns/utilities'
+import { as, Intensity, Pitch, Thunk } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { ThirtyfiveContourWholes, ThirtyfiveSegments } from './types'
-import { computeThirtyfiveContourWholes } from './wholes'
+import { thunkThirtyfiveContourWholes } from './wholes'
 
-const computeThirtyfiveSegments: () => ThirtyfiveSegments =
+const thunkThirtyfiveSegments: Thunk<ThirtyfiveSegments> =
     (): ThirtyfiveSegments => {
-        const contourWholes: ThirtyfiveContourWholes = computeThirtyfiveContourWholes()
+        const contourWholes: ThirtyfiveContourWholes = thunkThirtyfiveContourWholes()
 
         const thirtyfiveSegment: Segment = computeSegment(
             [
@@ -27,5 +27,5 @@ const computeThirtyfiveSegments: () => ThirtyfiveSegments =
     }
 
 export {
-    computeThirtyfiveSegments,
+    thunkThirtyfiveSegments,
 }

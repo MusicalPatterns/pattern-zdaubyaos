@@ -1,16 +1,16 @@
 import { PitchValue, pitchValueRest } from '@musical-patterns/material'
-import { as, ContourPiece, ContourWhole, repeat } from '@musical-patterns/utilities'
+import { as, ContourPiece, ContourWhole, repeat, Thunk } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
-import { AlmostTrueContourPieces, computeAlmostTrueContourPieces } from '../almostTrue'
-import { computeOtherContourPieces, OtherContourPieces } from '../other'
+import { AlmostTrueContourPieces, thunkAlmostTrueContourPieces } from '../almostTrue'
+import { OtherContourPieces, thunkOtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
 import { BreatherContourWholes } from './types'
 
-const computeBreatherContourWholes: () => BreatherContourWholes =
+const thunkBreatherContourWholes: Thunk<BreatherContourWholes> =
     (): BreatherContourWholes => {
-        const almostTruePieces: AlmostTrueContourPieces = computeAlmostTrueContourPieces()
-        const otherPieces: OtherContourPieces = computeOtherContourPieces()
+        const almostTruePieces: AlmostTrueContourPieces = thunkAlmostTrueContourPieces()
+        const otherPieces: OtherContourPieces = thunkOtherContourPieces()
 
         const rest: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(pitchValueRest(24))
         const spring: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(getTrueContours(
@@ -46,5 +46,5 @@ const computeBreatherContourWholes: () => BreatherContourWholes =
     }
 
 export {
-    computeBreatherContourWholes,
+    thunkBreatherContourWholes,
 }

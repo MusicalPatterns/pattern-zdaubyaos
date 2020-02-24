@@ -1,8 +1,8 @@
 import { PitchValue } from '@musical-patterns/material'
-import { as, ContourPiece, ContourWhole, repeatCall, sequence } from '@musical-patterns/utilities'
+import { as, ContourPiece, ContourWhole, repeatCall, sequence, Thunk } from '@musical-patterns/utilities'
 import { RenderingName } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
-import { computeOtherContourPieces, OtherContourPieces } from '../other'
+import { OtherContourPieces, thunkOtherContourPieces } from '../other'
 import { getTrueContours } from '../true'
 import { AlmostTrueContourWholes } from './types'
 
@@ -10,21 +10,23 @@ const almostTrueExtendedEndingZdaubContourWhole: (renderingName: RenderingName) 
     (renderingName: RenderingName): ContourWhole<PitchValue> =>
         as.ContourWhole<PitchValue>(sequence(
             repeatCall(
-                () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName),
+                (): ContourPiece<PitchValue> =>
+                    getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, renderingName),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
             ),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.SCEND, BarTarget.FIFTEEN, renderingName),
             getTrueContours(BlockStyle.LIMIN, BarTarget.TWENTYFOUR, renderingName),
             repeatCall(
-                () => getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, renderingName),
+                (): ContourPiece<PitchValue> =>
+                    getTrueContours(BlockStyle.NODLE, BarTarget.TWENTYFOUR, renderingName),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(5),
             ),
         ))
 
-const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
+const thunkAlmostTrueContourWholes: Thunk<AlmostTrueContourWholes> =
     (): AlmostTrueContourWholes => {
-        const otherContourPieces: OtherContourPieces = computeOtherContourPieces()
+        const otherContourPieces: OtherContourPieces = thunkOtherContourPieces()
 
         const extendedEndingZdaubTrem: ContourWhole<PitchValue> =
             almostTrueExtendedEndingZdaubContourWhole(RenderingName.TREM)
@@ -35,18 +37,19 @@ const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
 
         const yetOfBackbone: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeatCall(
-                () => otherContourPieces.backboneFifteen,
+                (): ContourPiece<PitchValue> => otherContourPieces.backboneFifteen,
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(8),
             ),
             repeatCall(
-                () => otherContourPieces.backboneTwentyfour,
+                (): ContourPiece<PitchValue> => otherContourPieces.backboneTwentyfour,
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
             ),
         ))
 
         const zdaubBonyWithSuperinscape: ContourWhole<PitchValue> = as.ContourWhole<PitchValue>(sequence(
             repeatCall(
-                () => getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY),
+                (): ContourPiece<PitchValue> =>
+                    getTrueContours(BlockStyle.NODLE, BarTarget.FIFTEEN, RenderingName.BONY),
                 as.Cardinal<Array<() => ContourPiece<PitchValue>>>(3),
             ),
             getTrueContours(BlockStyle.LIMIN, BarTarget.FIFTEEN, RenderingName.BONY),
@@ -80,5 +83,5 @@ const computeAlmostTrueContourWholes: () => AlmostTrueContourWholes =
     }
 
 export {
-    computeAlmostTrueContourWholes,
+    thunkAlmostTrueContourWholes,
 }

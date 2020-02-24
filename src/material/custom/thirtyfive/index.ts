@@ -1,4 +1,4 @@
-export { computeThirtyfiveSegments } from './segments'
+export { thunkThirtyfiveSegments } from './segments'
 
 export {
     ThirtyfiveSegments,

@@ -1,6 +1,6 @@
 // tslint:disable no-reaching-imports
 
-export { computeAlmostTrueContourPieces } from './pieces'
+export { thunkAlmostTrueContourPieces } from './pieces'
 
 export {
     AlmostTrueContourPieces,

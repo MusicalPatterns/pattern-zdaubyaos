@@ -3,7 +3,7 @@ import { as, Scalar, translateFromZeroIndexedToOneIndexed, Value } from '@musica
 
 const computeTotalZdaubyaosValue: (notes: Note[]) => number =
     (notes: Note[]): number => {
-        const notesWithValueIndicesAdjustedToBeOneIndexed: Note[] = notes.map((note: Note) => ({
+        const notesWithValueIndicesAdjustedToBeOneIndexed: Note[] = notes.map((note: Note): Note => ({
             ...note,
             value: {
                 ...note.value,

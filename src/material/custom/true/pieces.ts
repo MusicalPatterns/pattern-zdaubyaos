@@ -1,9 +1,9 @@
 import { PitchValue, Rendering } from '@musical-patterns/material'
-import { Block, ContourPiece, entries } from '@musical-patterns/utilities'
-import { computeRenderings, RenderingName, Renderings } from '../../rendering'
+import { Block, ContourPiece, entries, Thunk } from '@musical-patterns/utilities'
+import { RenderingName, Renderings, thunkRenderings } from '../../rendering'
 import { BarTarget, BlockStyle } from '../../types'
 import { countUsage } from '../contourUsage'
-import { computeTrueBlocks } from './blocks'
+import { thunkTrueBlocks } from './blocks'
 import {
     ComputeTrueContourPieceParameters,
     GetTrueContourPieces,
@@ -42,11 +42,11 @@ const computeTrueContourPiece: (parameters: {
             contourPiece
     }
 
-const computeTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName =
+const thunkTrueContourPieces: Thunk<TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName> =
     (): TrueContourPiecesByBarTargetThenBlockStyleThenRenderingName => {
-        const renderings: Renderings = computeRenderings()
+        const renderings: Renderings = thunkRenderings()
 
-        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = computeTrueBlocks()
+        const trueBlocks: TrueBlocksByBarTargetThenBlockStyle = thunkTrueBlocks()
         entries(trueBlocks)
             .forEach(
                 ([ barTarget, blocksBy ]: [ BarTarget, TrueBlocksByBlockStyle ]): void => {
@@ -75,7 +75,7 @@ const computeTrueContourPieces: () => TrueContourPiecesByBarTargetThenBlockStyle
 
 const getTrueContours: GetTrueContourPieces =
     (blockStyle: BlockStyle, barTarget: BarTarget, renderingName: RenderingName): ContourPiece<PitchValue> => {
-        computeTrueContourPieces()
+        thunkTrueContourPieces()
 
         countUsage(barTarget, blockStyle, renderingName)
 
@@ -83,6 +83,6 @@ const getTrueContours: GetTrueContourPieces =
     }
 
 export {
-    computeTrueContourPieces,
+    thunkTrueContourPieces,
     getTrueContours,
 }

@@ -1,7 +1,7 @@
-import { as, Block, repeat, sequence } from '@musical-patterns/utilities'
+import { as, Block, repeat, sequence, Thunk } from '@musical-patterns/utilities'
 import { ThirtyfiveBlocks } from './types'
 
-const computeThirtyfiveBlocks: () => ThirtyfiveBlocks =
+const thunkThirtyfiveBlocks: Thunk<ThirtyfiveBlocks> =
     (): ThirtyfiveBlocks => {
         const yaosBass: Block = as.Block([
             1, 5,
@@ -41,5 +41,5 @@ const computeThirtyfiveBlocks: () => ThirtyfiveBlocks =
     }
 
 export {
-    computeThirtyfiveBlocks,
+    thunkThirtyfiveBlocks,
 }

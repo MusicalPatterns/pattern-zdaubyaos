@@ -1,12 +1,12 @@
 import { Scale, Segment } from '@musical-patterns/material'
-import { as, Intensity, negative, Pitch, Scalar } from '@musical-patterns/utilities'
+import { as, Intensity, negative, Pitch, Scalar, Thunk } from '@musical-patterns/utilities'
 import { computeSegment } from '../../segment'
 import { BreatherContourWholes, BreatherSegments } from './types'
-import { computeBreatherContourWholes } from './wholes'
+import { thunkBreatherContourWholes } from './wholes'
 
-const computeBreatherSegments: () => BreatherSegments =
+const thunkBreatherSegments: Thunk<BreatherSegments> =
     (): BreatherSegments => {
-        const breatherContourWholes: BreatherContourWholes = computeBreatherContourWholes()
+        const breatherContourWholes: BreatherContourWholes = thunkBreatherContourWholes()
 
         const spring: Segment = computeSegment(
             [
@@ -16,8 +16,8 @@ const computeBreatherSegments: () => BreatherSegments =
             ],
             [
                 { intensityScalar: as.NormalScalar<Intensity>(0.5) },
-                { },
-                { },
+                {},
+                {},
             ],
         )
 
@@ -28,9 +28,9 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.rest,
             ],
             [
-                { },
+                {},
                 { intensityScalar: as.NormalScalar<Intensity>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(4) },
-                { },
+                {},
             ],
         )
 
@@ -41,8 +41,8 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.doubleFall,
             ],
             [
-                { },
-                { },
+                {},
+                {},
                 {
                     intensityScalar: as.NormalScalar<Intensity>(0.5),
                     pitchIndexShift: as.Transition<Array<Scalar<Pitch>>>(negative(1)),
@@ -58,9 +58,9 @@ const computeBreatherSegments: () => BreatherSegments =
                 breatherContourWholes.rest,
             ],
             [
-                { },
+                {},
                 { intensityScalar: as.NormalScalar<Intensity>(0.5), scaleIndex: as.Ordinal<Array<Scale<Pitch>>>(1) },
-                { },
+                {},
             ],
         )
 
@@ -87,5 +87,5 @@ const computeBreatherSegments: () => BreatherSegments =
     }
 
 export {
-    computeBreatherSegments,
+    thunkBreatherSegments,
 }

@@ -1,14 +1,14 @@
 import { computeTotalPitchValueContourValue, PitchValue } from '@musical-patterns/material'
 import { as, dividesEvenly } from '@musical-patterns/utilities'
-import { computeThirtyfiveContourPieces, ThirtyfiveContourPieces } from '../../../../../../src/indexForTest'
+import { ThirtyfiveContourPieces, thunkThirtyfiveContourPieces } from '../../../../../../src/indexForTest'
 
-describe('thirtyfive contour pieces', () => {
+describe('thirtyfive contour pieces', (): void => {
     let thirtyfiveContourPieces: ThirtyfiveContourPieces
-    beforeEach(() => {
-        thirtyfiveContourPieces = computeThirtyfiveContourPieces()
+    beforeEach((): void => {
+        thirtyfiveContourPieces = thunkThirtyfiveContourPieces()
     })
 
-    it('handles yaos bass', () => {
+    it('handles yaos bass', (): void => {
         expect(thirtyfiveContourPieces.yaosBass)
             .toEqual(as.ContourPiece<PitchValue>([
                 [ 1, 1 ], [ 5, 5 ],
@@ -21,7 +21,7 @@ describe('thirtyfive contour pieces', () => {
             ]))
     })
 
-    it('handles yaos accident inspired', () => {
+    it('handles yaos accident inspired', (): void => {
         expect(thirtyfiveContourPieces.yaosAccidentInspired)
             .toEqual(as.ContourPiece<PitchValue>([
                 [ 1, 1 ], [ 2, 2 ], [ 3, 3 ],
@@ -33,7 +33,7 @@ describe('thirtyfive contour pieces', () => {
 
     })
 
-    it('handles zdaub', () => {
+    it('handles zdaub', (): void => {
         expect(thirtyfiveContourPieces.zdaub)
             .toEqual(as.ContourPiece<PitchValue>([
                 [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ], [ 4, 4 ], [ 1, 1 ],
@@ -45,7 +45,7 @@ describe('thirtyfive contour pieces', () => {
             ]))
     })
 
-    it('handles only wiggle', () => {
+    it('handles only wiggle', (): void => {
         expect(thirtyfiveContourPieces.zdaubOnlyWiggle)
             .toEqual(as.ContourPiece<PitchValue>([
                 [ 4, 4 ], [ 1, 1 ],
@@ -58,7 +58,7 @@ describe('thirtyfive contour pieces', () => {
             ]))
     })
 
-    it('is the case that they are all actually length multiples of 35', () => {
+    it('is the case that they are all actually length multiples of 35', (): void => {
         expect(dividesEvenly(computeTotalPitchValueContourValue(thirtyfiveContourPieces.yaosBass), 35))
             .toBeTruthy()
         expect(dividesEvenly(computeTotalPitchValueContourValue(thirtyfiveContourPieces.yaosAccidentInspired), 35))
