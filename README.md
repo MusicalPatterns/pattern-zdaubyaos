@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/MusicalPatterns/pattern-zdaubyaos.svg?branch=master)](https://travis-ci.com/MusicalPatterns/pattern-zdaubyaos)
-
 # Zdaubyaos
 
 fun with the superparticular series & variants, plus stepwise motion within recurring bounds
